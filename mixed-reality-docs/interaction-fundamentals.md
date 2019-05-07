@@ -1,138 +1,187 @@
 ---
-title: 상호 작용 기본 사항
-description: HoloLens에서 환경을 구축한 대로 (첫 번째 gen) HoloLens 2 및 몰입 형 헤드셋을 공유 하는 데 유용 알게 몇 가지 작업을 기록 시작 했습니다.
-author: rwinj
-ms.author: jennyk
-ms.date: 02/24/2019
+title: 조직의 다중 모달 방식 상호 작용 개요
+description: 조직의 다중 모달 방식 상호 작용의 개요
+author: shengkait
+ms.author: shengkait
+ms.date: 04/11/2019
 ms.topic: article
-keywords: 혼합 현실을, 상호 작용 디자인
-ms.openlocfilehash: d594126529b6314a4706f8b6b6af856058c3280a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
+ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597550"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993600"
 ---
-# <a name="interaction-fundamentals"></a><span data-ttu-id="8ca12-104">상호 작용 기본 사항</span><span class="sxs-lookup"><span data-stu-id="8ca12-104">Interaction fundamentals</span></span>
+# <a name="introducing-instinctual-interactions"></a><span data-ttu-id="77513-104">소개 instinctual 상호 작용</span><span class="sxs-lookup"><span data-stu-id="77513-104">Introducing instinctual interactions</span></span>
+<span data-ttu-id="77513-105">간단 하 고 instinctual 상호 작용의 원리는 혼합 현실 Microsoft 플랫폼 전체 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-105">The philosophy of simple, instinctual interactions is woven throughout the Microsoft Mixed Reality platform.</span></span>  <span data-ttu-id="77513-106">응용 프로그램 디자이너와 개발자가 고객에 게 쉽고 직관적인 상호 작용에 제공할 수 있는지 확인 하는 세 단계 살펴보았으며, 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-106">We've taken three steps to ensure that application designers and developers can provide easy and intuitive interactions for their customers.</span></span> 
 
-<span data-ttu-id="8ca12-105">HoloLens 및 몰입 형 헤드셋 환경을 구축한으로 공유 하는 데 유용 알게 몇 가지 작업을 기록 시작 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-105">As we've built experiences across HoloLens and immersive headsets, we've started writing down some things we found useful to share.</span></span> <span data-ttu-id="8ca12-106">이러한 혼합된 현실 상호 작용 디자인을 위한 기본적인 빌딩 블록으로 간주 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-106">Think of these as the fundamental building blocks for mixed reality interaction design.</span></span>
+<span data-ttu-id="77513-107">먼저이 놀라운 센서 및 입력된 기술을 직접 추적, 시선 추적, 자연 언어 등 조직의 다중 모달 방식 상호 작용을 원활 하 게 모델 결합 해야 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-107">First, we've made sure our amazing sensors and input technology, including hand tracking, eye tracking, and natural language, combine into seamless multimodal interaction models.</span></span>  <span data-ttu-id="77513-108">디자인 및 multimodally-개발 하 고 단일 입력을 기반으로 하지는 연구에 기초한-instinctual 환경을 만드는 키입니다.</span><span class="sxs-lookup"><span data-stu-id="77513-108">Based on our research, designing and developing multimodally -- and not based on single inputs -- is the key to creating instinctual experiences.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="8ca12-107">장치 지원</span><span class="sxs-lookup"><span data-stu-id="8ca12-107">Device support</span></span>
+<span data-ttu-id="77513-109">둘째, 인식 많은 개발자가 여러 장치를 대상으로 HoloLens 2 및 HoloLens 즉 여부 (첫 번째 gen) HoloLens 및 VR 또는 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-109">Secondly, we recognize that many developers target multiple devices, whether that means HoloLens 2 and HoloLens (1st gen) or HoloLens and VR.</span></span>  <span data-ttu-id="77513-110">따라서 (경우에 입력된 기술을 각 장치에 따라 달라 집니다) 장치에서 작동 하도록 상호 작용 모델 디자인 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-110">So we've designed our interaction models to work across devices (even if the input technology varies on each device).</span></span>  <span data-ttu-id="77513-111">예를 들어 6DOF 컨트롤러와 Windows 몰입 형 헤드셋에서 먼 상호 작용 및 HoloLens 2 모두에 먼 상호 작용 패턴을 쉽게 장치 간 응용 프로그램에 대 한 확인 하 고 동일한 affordances를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-111">For example, far interaction on a Windows Immersive headset with a 6DOF controller and far interaction on a HoloLens 2 both use the identical affordances and patterns, making it easy for cross-device applications.</span></span> <span data-ttu-id="77513-112">뿐만 아니라이 편리 개발자 및 디자이너, 하지만 최종 사용자에 게 자연스럽 게 받아들이며에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-112">Not only is this convenient for developers and designers, but it feels natural to end users.</span></span> 
 
-<span data-ttu-id="8ca12-108">에 적용 되는 상호 작용 디자인 문서를 사용할 수 있는 장치 유형 또는 형식의 개요는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-108">Here's an outline of the available Interaction design articles and which device type or types they apply to.</span></span>
+<span data-ttu-id="77513-113">마지막으로, 효율적이 고 흥미로운 수천 개의 마법의 상호 작용 MR에서 가능한 개는 의도적으로 사용 하는 단일 상호 작용 모델의 종단 간 인식 하는 동안 응용 프로그램은 가장 좋은 방법은 사용자가 성공적으로 확인 하 고 훌륭한 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-113">Lastly, while we recognize that there are thousands of effective, engaging, and magical interactions possible in MR, we have found that intentionally employing a single interaction model end to end in an application is the best way to ensure users are successful and have a great experience.</span></span>  <span data-ttu-id="77513-114">이 위해 다음 세 가지가 상호 작용 지침에 포함 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-114">To that end, we've included three things in this interaction guidance:</span></span>
+* <span data-ttu-id="77513-115">에서는 세 가지 기본 상호 작용 모델 및 구성 요소와 각각에 대해 필요한 패턴을 기반으로 한이 지침을 구조화 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-115">We've structured this guidance around the three primary interaction models and the components and patterns required for each</span></span>
+* <span data-ttu-id="77513-116">플랫폼 제공 하는 기타 혜택에 대 한 추가 지침 포함 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-116">We've included supplemental guidance on other benefits that our platform provides</span></span>
+* <span data-ttu-id="77513-117">시나리오에 대 한 적절 한 상호 작용 모델을 선택 하는 데 유용한 지침 포함 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-117">We've included guidance to help select the appropriate interaction model for your scenario</span></span>
+
+
+## <a name="three-multimodal-interaction-models"></a><span data-ttu-id="77513-118">세 가지 조직의 다중 모달 방식 상호 작용 모델</span><span class="sxs-lookup"><span data-stu-id="77513-118">Three multimodal interaction models</span></span>
+<span data-ttu-id="77513-119">이 연구 및 고객 날짜를 사용 하 여 작업에 따라에서는 세 가지 기본 상호 작용 모델 대부분의 혼합 현실 환경에 맞게를 발견 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-119">Based on our research and work with customers to date, we've discovered that three primary interaction models suit the majority of Mixed Reality experiences.</span></span>
+
+<span data-ttu-id="77513-120">다양 한 방법으로 상호 작용 모델은 해당 흐름을 완료 하는 것에 대 한 사용자의 멘 탈 모델.</span><span class="sxs-lookup"><span data-stu-id="77513-120">In many ways, the interaction model  is the user's mental model for completing their flows.</span></span>  <span data-ttu-id="77513-121">고객 요구 사항 집합에 대해 최적화 된 이러한 상호 작용 모델의 각 이며 각 편리 하 게 강력 하 고 그 자체로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-121">Each of these interaction models is optimized for a set of customer needs, and each is convenient, powerful, and usable in its own right.</span></span> 
+
+<span data-ttu-id="77513-122">아래 차트는 간소화 된 개요입니다.</span><span class="sxs-lookup"><span data-stu-id="77513-122">The chart below is a simplified overview.</span></span>  <span data-ttu-id="77513-123">각 상호 작용 모델을 사용 하 여에 대 한 자세한 정보는 이미지 및 코드 샘플을 사용 하 여 아래 페이지에 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="77513-123">Detailed information for using each interaction model is linked in the pages below with images and code samples.</span></span>  
+
 <br>
 
 <table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><span data-ttu-id="77513-124"><strong>Model</strong></span><span class="sxs-lookup"><span data-stu-id="77513-124"><strong>Model</strong></span></span></td>
+        <td><span data-ttu-id="77513-125"><strong>예제 시나리오</strong></span><span class="sxs-lookup"><span data-stu-id="77513-125"><strong>Example scenarios</strong></span></span></td>
+        <td><span data-ttu-id="77513-126"><strong>Fit</strong></span><span class="sxs-lookup"><span data-stu-id="77513-126"><strong>Fit</strong></span></span></td>
+        <td><span data-ttu-id="77513-127"><strong>하드웨어</strong></span><span class="sxs-lookup"><span data-stu-id="77513-127"><strong>Hardware</strong></span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-128"><a href="hands-and-tools.md">실습 및 도구</a></span><span class="sxs-lookup"><span data-stu-id="77513-128"><a href="hands-and-tools.md">Hands and tools</a></span></span></td>
+        <td><span data-ttu-id="77513-129">3D 공간 환경</span><span class="sxs-lookup"><span data-stu-id="77513-129">3D spatial experiences</span></span><br><span data-ttu-id="77513-130">예: 공간 레이아웃 및 디자인, 콘텐츠 조작 또는 시뮬레이션</span><span class="sxs-lookup"><span data-stu-id="77513-130">e.g. spatial layout and design, content manipulation, or simulation</span></span></td>
+        <td><span data-ttu-id="77513-131">새 사용자에 대 한 유용한</span><span class="sxs-lookup"><span data-stu-id="77513-131">Great for new users</span></span><br><span data-ttu-id="77513-132">낮은 학습 곡선</span><span class="sxs-lookup"><span data-stu-id="77513-132">Low learning curve</span></span><br><span data-ttu-id="77513-133">쉽게 visual affordances 없으며</span><span class="sxs-lookup"><span data-stu-id="77513-133">Grounded in easy visual affordances</span></span><br><span data-ttu-id="77513-134">직접 추적 및 6 DoF 컨트롤러 간에 일관 된 UX</span><span class="sxs-lookup"><span data-stu-id="77513-134">Consistent UX across hand tracking and 6 DoF controllers</span></span><br><span data-ttu-id="77513-135">음성, 시각 추적 또는 헤드 게이즈와 결합 하면 유용한</span><span class="sxs-lookup"><span data-stu-id="77513-135">Great when coupled with voice, eye tracking, or head gaze</span></span></td>
+        <td><span data-ttu-id="77513-136">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="77513-136">HoloLens 2</span></span><br><span data-ttu-id="77513-137">6DOF 컨트롤러를 포함 하는 몰입 형 Windows</span><span class="sxs-lookup"><span data-stu-id="77513-137">Windows Immersive w/ 6DOF Controllers</span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-138"><a href="hands-free.md">핸 즈 프리</a></span><span class="sxs-lookup"><span data-stu-id="77513-138"><a href="hands-free.md">Hands-free</a></span></span></td>
+        <td><span data-ttu-id="77513-139">작업을 학습 하 고 유지 관리는 사용자의 손에 예: 하 게 사용 하는 상황에 맞는 환경</span><span class="sxs-lookup"><span data-stu-id="77513-139">Contextual experiences where a user's hands are occupied e.g. on the-job learning, maintenance</span></span></td>
+        <td><span data-ttu-id="77513-140">일부 학습</span><span class="sxs-lookup"><span data-stu-id="77513-140">Some learning required</span></span><br><span data-ttu-id="77513-141">실습을 사용할 수 없는 경우</span><span class="sxs-lookup"><span data-stu-id="77513-141">If hands are unavailable</span></span><br><span data-ttu-id="77513-142">음성 및 자연 언어 쌍</span><span class="sxs-lookup"><span data-stu-id="77513-142">pairs well with voice and natural language</span></span></td>
+        <td><span data-ttu-id="77513-143">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="77513-143">HoloLens 2</span></span><br><span data-ttu-id="77513-144">HoloLens (첫 번째 범용)</span><span class="sxs-lookup"><span data-stu-id="77513-144">HoloLens (1st gen)</span></span><br> <span data-ttu-id="77513-145">Windows Immersive</span><span class="sxs-lookup"><span data-stu-id="77513-145">Windows Immersive</span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-146"><a href="gaze-and-commit.md">헤드 게이즈 및 커밋</a></span><span class="sxs-lookup"><span data-stu-id="77513-146"><a href="gaze-and-commit.md">Head-gaze and commit</a></span></span></td>
+        <td><span data-ttu-id="77513-147">클릭 광고 환경을 예: 3D 프레젠테이션, 데모</span><span class="sxs-lookup"><span data-stu-id="77513-147">Click-through experiences e.g. 3D presentations, demos</span></span></td>
+        <td><span data-ttu-id="77513-148">Mobile에는 없지만 HMDs에서 교육이 필요</span><span class="sxs-lookup"><span data-stu-id="77513-148">Requires training on HMDs but not on mobile</span></span><br><span data-ttu-id="77513-149">액세스할 수 있는 컨트롤러에 대 한 가장</span><span class="sxs-lookup"><span data-stu-id="77513-149">Best for accessible controllers</span></span><br><span data-ttu-id="77513-150">HoloLens에 가장 적합 한 (첫 번째 범용)</span><span class="sxs-lookup"><span data-stu-id="77513-150">Best for HoloLens (1st gen)</span></span></td>
+        <td><span data-ttu-id="77513-151">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="77513-151">HoloLens 2</span></span><br><span data-ttu-id="77513-152">HoloLens (첫 번째 범용)</span><span class="sxs-lookup"><span data-stu-id="77513-152">HoloLens (1st gen)</span></span><br> <span data-ttu-id="77513-153">Windows Immersive</span><span class="sxs-lookup"><span data-stu-id="77513-153">Windows Immersive</span></span><br> <span data-ttu-id="77513-154">모바일 AR</span><span class="sxs-lookup"><span data-stu-id="77513-154">Mobile AR</span></span></td>
+    </tr>
+</table>
+<br>
 
-<th>
-<tr>
+<span data-ttu-id="77513-155">간격 또는 환경에 대 한 상호 작용에 구멍이 없는지 확인 하는 가장 좋은 방법은 처음부터 끝까지에서 단일 모델에 대 한 지침을 따르는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="77513-155">The best way to ensure there are no gaps or holes in the interaction for your experience is to follow the guidance for a single model from beginning to end.</span></span> 
 
-<td style="width:150px;"><span data-ttu-id="8ca12-109"><strong>입력</strong></span><span class="sxs-lookup"><span data-stu-id="8ca12-109"><strong>Input</strong></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-110"><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></span><span class="sxs-lookup"><span data-stu-id="8ca12-110"><a href="hololens-hardware-details.md"><strong>HoloLens (1st gen)</strong></a></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-111"><strong>HoloLens 2</strong></span><span class="sxs-lookup"><span data-stu-id="8ca12-111"><strong>HoloLens 2</strong></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-112"><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></span><span class="sxs-lookup"><span data-stu-id="8ca12-112"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></span></span></td>
-</tr>
-</th>
+<span data-ttu-id="77513-156">디자인 및 개발 속도 자세한 정보와 이미지 및 코드 샘플에 대 한 링크는 광범위 한 각 모델 내에서 포함 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-156">To speed design and development, we've included detailed information and links to images and code samples within our coverage of each model.</span></span>
+
+<span data-ttu-id="77513-157">하지만 먼저 아래 섹션에서는 과정을 선택 하 고 이러한 상호 작용 모델 중 하나를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-157">But first, the sections below walk through the steps of selecting and implementing one of these interaction models.</span></span>  
  
-<tr>
-<td> <span data-ttu-id="8ca12-113"><a href="gestures.md">명확 하 고 실습</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-113"><a href="gestures.md">Articulated hands</a></span></span></td><td style="text-align: center;"></td><td style="text-align: center;"><span data-ttu-id="8ca12-114">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-114">✔️</span></span></td><td></td>
+### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a><span data-ttu-id="77513-158">이 페이지를 마치면에서 지침을 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-158">By the end of this page, you will understand our guidance on:</span></span>
+ 
+* <span data-ttu-id="77513-159">고객을 위해 상호 작용 모델을 선택</span><span class="sxs-lookup"><span data-stu-id="77513-159">Choosing an interaction model for your customer</span></span>
+* <span data-ttu-id="77513-160">상호 작용 모델 지침을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="77513-160">Using the interaction model guidance</span></span>
+* <span data-ttu-id="77513-161">상호 작용 모델 간 전환</span><span class="sxs-lookup"><span data-stu-id="77513-161">Transitioning between interaction models</span></span>
+* <span data-ttu-id="77513-162">다음 단계를 디자인 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-162">Design next steps</span></span>
 
-</tr><tr>
-<td> <span data-ttu-id="8ca12-115"><a href="gaze-targeting.md">모니터링 대상</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-115"><a href="gaze-targeting.md">Eye targeting</a></span></span></td><td style="text-align: center;"></td><td style="text-align: center;"><span data-ttu-id="8ca12-116">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-116">✔️</span></span></td><td style="text-align: center;"></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-117"><a href="gaze-targeting.md">대상으로 응시</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-117"><a href="gaze-targeting.md">Gaze targeting</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-118">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-118">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-119">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-119">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-120">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-120">✔️</span></span></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-121"><a href="gestures.md">제스처</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-121"><a href="gestures.md">Gestures</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-122">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-122">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-123">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-123">✔️</span></span></td><td></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-124"><a href="voice-design.md">음성 디자인</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-124"><a href="voice-design.md">Voice design</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-125">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-125">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-126">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-126">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-127">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-127">✔️</span></span></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-128">게임 패드</span><span class="sxs-lookup"><span data-stu-id="8ca12-128">Gamepad</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-129">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-129">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-130">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-130">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-131">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-131">✔️</span></span></td>
-</tr>
-<tr>
-<td> <span data-ttu-id="8ca12-132"><a href="motion-controllers.md">컨트롤러 동작</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-132"><a href="motion-controllers.md">Motion controllers</a></span></span></td><td></td><td style="text-align: center;"></td><td style="text-align: center;"><span data-ttu-id="8ca12-133">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-133">✔️</span></span></td>
+## <a name="choosing-an-interaction-model-for-your-customer"></a><span data-ttu-id="77513-163">고객을 위해 상호 작용 모델을 선택</span><span class="sxs-lookup"><span data-stu-id="77513-163">Choosing an interaction model for your customer</span></span>
 
-</tr>
-<th>
-<tr>
-<td style="width:150px;"><span data-ttu-id="8ca12-134"><strong>인식 및 공간 기능</strong></span><span class="sxs-lookup"><span data-stu-id="8ca12-134"><strong>Perception and spatial features</strong></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-135"><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></span><span class="sxs-lookup"><span data-stu-id="8ca12-135"><a href="hololens-hardware-details.md"><strong>HoloLens (1st gen)</strong></a></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-136"><strong>HoloLens 2</strong></span><span class="sxs-lookup"><span data-stu-id="8ca12-136"><strong>HoloLens 2</strong></span></span></td>
-<td style="width:150px; text-align: center;"><span data-ttu-id="8ca12-137"><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></span><span class="sxs-lookup"><span data-stu-id="8ca12-137"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></span></span></td>
-</tr>
-</th>
-<tr>
+<span data-ttu-id="77513-164">대부분의 경우 개발자와 작성자 이미 몇 가지 아이디어 상호 작용 환경 사용자에 게 원하는 유형의 염두 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-164">Most likely, developers and creators already have some ideas in mind of the kinds of interaction experience they want for their users.</span></span>
+<span data-ttu-id="77513-165">고객 중심 접근 방법을 디자인 하는 것이 좋습니다, 아래 지침을 따르도록를 좋습니다 고객을 위해 최적화 된 상호 작용 모델을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-165">To encourage a customer-focused approach to design, we recommend following the guidance below to select the interaction model that's optimized for your customer.</span></span>
 
-<td> <span data-ttu-id="8ca12-138"><a href="spatial-sound-design.md">공간 적절 하 게 디자인</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-138"><a href="spatial-sound-design.md">Spatial sound design</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-139">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-139">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-140">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-140">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-141">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-141">✔️</span></span></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-142"><a href="spatial-mapping-design.md">공간 매핑 디자인</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-142"><a href="spatial-mapping-design.md">Spatial mapping design</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-143">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-143">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-144">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-144">✔️</span></span></td><td></td>
-</tr><tr>
-<td> <span data-ttu-id="8ca12-145"><a href="hologram.md">홀로그램</a></span><span class="sxs-lookup"><span data-stu-id="8ca12-145"><a href="hologram.md">Holograms</a></span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-146">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-146">✔️</span></span></td><td style="text-align: center;"><span data-ttu-id="8ca12-147">✔️</span><span class="sxs-lookup"><span data-stu-id="8ca12-147">✔️</span></span></td><td></td>
-</tr>
+### <a name="why-follow-this-guidance"></a><span data-ttu-id="77513-166">이 지침을 수행 하는 이유</span><span class="sxs-lookup"><span data-stu-id="77513-166">Why follow this guidance?</span></span>
 
+* <span data-ttu-id="77513-167">상호 작용 모델은 목표와 실제 및 cognitive 노력, 사용 편이성을 learnability 등 주관적인 기준에 대 한 테스트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="77513-167">Our interaction models are tested for objective and subjective criteria such as physical and cognitive effort, intuitiveness, and learnability.</span></span> 
+* <span data-ttu-id="77513-168">상호 작용 다르므로 visual 및 오디오 affordances 동작과 개체 상호 작용 모델 간에 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-168">Because interaction differs, visual and audio affordances and object behavior may also differ between the interaction models.</span></span>  
+* <span data-ttu-id="77513-169">여러 상호 작용 모델의 파트를 결합 위험 등 동시 직접 광선 게이즈 커서를 압도 하 고 사용자를 혼동 하는 경쟁 affordances 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="77513-169">Combining parts of multiple interaction models together creates the risk of competing affordances, such as simultaneous hand rays and a gaze cursor, which overwhelm and confuse users.</span></span>
+
+<span data-ttu-id="77513-170">Affordances 동작과 각 상호 작용 모델에 대해 최적화 된 방법의 몇 가지 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-170">Here are some examples of how affordances and behaviors are optimized for each interaction model.</span></span>  <span data-ttu-id="77513-171">종종 볼 새 사용자로도 비슷한 질문이 같은 "시스템 작동을 알고 수행 하는 방법을 어떻게 알 수 있습니까 수행할 수 있는 작업을 어떻게 알 수 있습니까 방금 수행한 이해 하는 경우 및?"</span><span class="sxs-lookup"><span data-stu-id="77513-171">We often see new users as similar questions, such as "how do I know the system is working, how do I know what I can do, and how do I know if it understood what I just did?"</span></span>
+
+<br>
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><span data-ttu-id="77513-172"><strong>Model</strong></span><span class="sxs-lookup"><span data-stu-id="77513-172"><strong>Model</strong></span></span></td>
+        <td><span data-ttu-id="77513-173"><strong>어떻게이 작업은?</strong></span><span class="sxs-lookup"><span data-stu-id="77513-173"><strong>How do I know it's working?</strong></span></span></td>
+        <td><span data-ttu-id="77513-174"><strong>확인 하려면 어떤 어떻게 해야 합니까?</strong></span><span class="sxs-lookup"><span data-stu-id="77513-174"><strong>How do I know what can I do?</strong></span></span></td>
+        <td><span data-ttu-id="77513-175"><strong>방금 필자 어떻게 알 수 있나요?</strong></span><span class="sxs-lookup"><span data-stu-id="77513-175"><strong>How do I know what I just did?</strong></span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-176"><a href="hands-and-tools.md">실습 및 도구</a></span><span class="sxs-lookup"><span data-stu-id="77513-176"><a href="hands-and-tools.md">Hands and tools</a></span></span></td>
+        <td><span data-ttu-id="77513-177">메시 손 모양 표시, 손끝 유도성 또는 직접 표시 / 컨트롤러 광선 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-177">I see a hand mesh, I see a fingertip affordance or hand/ controller rays.</span></span></td>
+        <td><span data-ttu-id="77513-178">Grabbable 핸들이 나 손을 때 표시 경계 상자를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-178">I see grabbable handles or a bounding box appear when my hand is near.</span></span></td>
+        <td><span data-ttu-id="77513-179">청각적 들릴 했으며 잡기 릴리스에 애니메이션을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="77513-179">I hear audible tones and see animations on grab and release.</span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-180"><a href="gaze-and-commit.md">헤드 게이즈 및 커밋</a></span><span class="sxs-lookup"><span data-stu-id="77513-180"><a href="gaze-and-commit.md">Head-gaze and commit</a></span></span></td>
+        <td><span data-ttu-id="77513-181">보기 내 필드의 가운데에 커서를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-181">I see a cursor in the center of my field of view.</span></span></td>
+        <td><span data-ttu-id="77513-182">응시 커서 특정 개체에 대해 작업 하는 경우 상태를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-182">The gaze cursor changes state when over certain objects.</span></span></td>
+        <td><span data-ttu-id="77513-183">I/I 조치를 취할 때 시청각 확인을 들.</span><span class="sxs-lookup"><span data-stu-id="77513-183">I see/ hear visual and audible confirmations when I take action.</span></span></td>
+    </tr>   
+    <tr>
+        <td><span data-ttu-id="77513-184"><a href="hands-free.md">핸 즈 (게이즈 및 유지)</a></span><span class="sxs-lookup"><span data-stu-id="77513-184"><a href="hands-free.md">Hands-free (Gaze and dwell)</a></span></span></td>
+        <td><span data-ttu-id="77513-185">보기 내 필드의 가운데에 커서를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-185">I see a cursor in the center of my field of view.</span></span></td>
+        <td><span data-ttu-id="77513-186">부분 있습니까 상호 작용할 수 없는 개체에 고민 하는 경우 진행률 표시기가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="77513-186">I see a progress indicator when I dwell on an interactable object.</span></span></td>
+        <td><span data-ttu-id="77513-187">I/I 조치를 취할 때 시청각 확인을 들.</span><span class="sxs-lookup"><span data-stu-id="77513-187">I see/ hear visual and audible confirmations when I take action.</span></span></td>
+    </tr>
+    <tr>
+        <td><span data-ttu-id="77513-188"><a href="hands-free.md">핸 즈 프리 (음성 명령 실행)</a></span><span class="sxs-lookup"><span data-stu-id="77513-188"><a href="hands-free.md">Hands-free (Voice commanding)</a></span></span></td>
+        <td><span data-ttu-id="77513-189">수신 대기 표시기 및 캡션을 시스템 들어 본 적 표시 하는 것이 보입니다.</span><span class="sxs-lookup"><span data-stu-id="77513-189">I see a listening indicator and captions that show what the system heard.</span></span></td>
+        <td><span data-ttu-id="77513-190">내가 음성 안내 및 힌트.</span><span class="sxs-lookup"><span data-stu-id="77513-190">I get voice prompts and hints.</span></span>  <span data-ttu-id="77513-191">"어떤 말할 수 있는" 말하는 경우</span><span class="sxs-lookup"><span data-stu-id="77513-191">When I say "what can I say?"</span></span> <span data-ttu-id="77513-192">사용자 의견을 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="77513-192">I see feedback.</span></span></td>
+        <td><span data-ttu-id="77513-193">I/명령을 제공 하거나 필요할 때 UX 명확성을 가져올 때 시청각 확인을 듣고 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-193">I see/ hear visual and audible confirmations when I give a command, or get disambiguation UX when needed.</span></span></a></td>
+    </tr>
 </table>
 
-## <a name="the-user-is-the-camera"></a><span data-ttu-id="8ca12-148">사용자가 카메라</span><span class="sxs-lookup"><span data-stu-id="8ca12-148">The user is the camera</span></span>
+### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a><span data-ttu-id="77513-194">찾았습니다. 도움말 팀 선택 상호 작용 모델을 질문에는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-194">Below are the questions that we've found help teams select an interaction model:</span></span>
+ 
+1.  <span data-ttu-id="77513-195">Q:  사용자에 게 홀로그램 touch 및 전체 자릿수 holographic 조작을 수행 하 시겠습니까?</span><span class="sxs-lookup"><span data-stu-id="77513-195">Q:  Do my users want to touch holograms and perform precision holographic manipulations?</span></span>
+<span data-ttu-id="77513-196">A:  만약 그렇다면 전체 자릿수가 대상 지정 및 실습 또는 동작 컨트롤러를 사용 하 여 조작에 대 한 실습 및 도구 상호 작용 모델 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-196">A:  If so, check out the Hands and Tools interaction model for precision targeting and manipulation with hands or motion controllers.</span></span>
+ 
+2.  <span data-ttu-id="77513-197">Q:  내 사용자가 실제 작업에 대 한 무료가 바늘을 유지 해야 하나요?</span><span class="sxs-lookup"><span data-stu-id="77513-197">Q:  Do my users need to keep their hands free, for real-world tasks?</span></span>
+<span data-ttu-id="77513-198">A:  그렇다면 살펴보겠습니다 핸 즈 프리 상호 작용 하는 모델을 응시 및 음성 기반 상호 작용을 통해 유용한 핸 즈 프리 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-198">A:  If so, take a look at the Hands-Free interaction model, which provides a great hands-free experience through gaze- and voice-based interactions.</span></span>
+ 
+3.  <span data-ttu-id="77513-199">Q:  내 사용자가 혼합된 현실 응용 프로그램에 대 한 상호 작용을 배울 시간이 없거나 필요도 가장 낮은 학습 곡선을 사용 하 여 상호 작용 수 있습니까?</span><span class="sxs-lookup"><span data-stu-id="77513-199">Q:  Do my users have time to learn interactions for my mixed reality application, or do they need the interactions with the lowest learning curve possible?</span></span>
+<span data-ttu-id="77513-200">A:  사용자 상호 작용에 대 한 대응을 사용할 수 없게 되는 가장 낮은 학습 곡선 및 가장 직관적인 상호 작용에 대 한 실습 및 도구 모델을 권장 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-200">A:  We recommend the Hands and Tools model for the lowest learning curve and most intuitive interactions, as long as users are able to use their hands for interaction.</span></span>
+ 
+4.  <span data-ttu-id="77513-201">Q:  내 사용자가 가리키는 및 조작에 대 한 동작 컨트롤러를 사용 합니까?</span><span class="sxs-lookup"><span data-stu-id="77513-201">Q:  Do my users use motion controllers for pointing and manipulation?</span></span>
+<span data-ttu-id="77513-202">A:  실습 및 도구 모델 동작 컨트롤러 환경을 개선에 대 한 모든 지침을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-202">A:  The Hands and Tools model includes all guidance for a great experience with motion controllers.</span></span>
+ 
+5.  <span data-ttu-id="77513-203">Q:  내 사용자는 내게 필요한 옵션 컨트롤러나를 clicker 같은 일반적인 Bluetooth 컨트롤러를 사용 하려면?</span><span class="sxs-lookup"><span data-stu-id="77513-203">Q:  Do my users use an accessibility controller or a common Bluetooth controller, such as a clicker?</span></span>
+<span data-ttu-id="77513-204">A:  모든 비 추적 컨트롤러에 대 한 헤드 게이즈 모델과 커밋 모델을 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-204">A:  We recommend the Head-gaze and commit model for all non-tracked controllers.</span></span>  <span data-ttu-id="77513-205">간단한 "대상 및 커밋" 정비공을 사용 하 여 전체 환경을 통과 하는 사용자를 허용 하도록 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-205">It's designed to allow a user to traverse an entire experience with a simple "target and commit" mechanic.</span></span> 
+ 
+6.  <span data-ttu-id="77513-206">Q: 내 사용자만 진행 마세요 환경을 통해 "를 클릭 하 여" (예를 들어 환경의 3d 슬라이드쇼), UI 컨트롤의 짙은 레이아웃을 탐색 하는 대신?</span><span class="sxs-lookup"><span data-stu-id="77513-206">Q: Do my users only progress through an experience by "clicking through" (for example in a 3d slideshow-like environment), as opposed to navigating dense layouts of UI controls?</span></span>
+<span data-ttu-id="77513-207">A:  사용자 UI 많은 제어 하지 않아도, 헤드 게이즈 및 커밋 사용자를 대상으로 하는 방법에 대 한 걱정 없는 수행 learnable 옵션을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-207">A:  If users do not need to control a lot of UI, Head-gaze and commit offers a learnable option where users do not have to worry about targeting.</span></span> 
+ 
+7.  <span data-ttu-id="77513-208">Q:  내 사용자가 모두 HoloLens 사용 (첫 번째 gen) 및 HoloLens 2 / a Windows 몰입 형 (VR 헤드셋):  헤드 게이즈 및 커밋에 HoloLens에 대 한 상호 작용 모델 이므로 (첫 번째 gen) 좋습니다 HoloLens를 지 원하는 작성자 (첫 번째 gen) Head 게이즈를 사용 하 고 모든 기능 또는 사용자는 HoloLens에 발생할 수 있는 모드에 대 한 커밋을 (첫 번째 gen) 헤드셋 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-208">Q:  Do my users use both HoloLens (1st gen) and HoloLens 2/ Windows Immersive (VR headsets) A:  Since Head-gaze and commit is the interaction model for HoloLens (1st gen), we recommend that creators who support HoloLens (1st gen) use Head-gaze and commit for any features or modes that users may experience on a HoloLens (1st gen) headset.</span></span>  <span data-ttu-id="77513-209">아래 다음 섹션을 참조 하십시오 온 *상호 작용 모델을 전환* 여러 HoloLens 세대에 대 한 뛰어난 환경을 만들기 위해 세부 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-209">Please see the next section below on *Transitioning interaction models* for details on making a great experience for multiple HoloLens generations.</span></span>
+ 
+8.  <span data-ttu-id="77513-210">Q: (많은 공간을 다루는 또는 공간 간에 이동), 일반적으로 모바일 사용자에 게 어떤 작업에 대 한 단일 공간에서 작동 하는 사용자와?</span><span class="sxs-lookup"><span data-stu-id="77513-210">Q: What about for users who are generally mobile (covering a large space or moving between spaces), versus users who tend to work in a single space?</span></span>  
+<span data-ttu-id="77513-211">A:  이러한 사용자에 대 한 상호 작용 모델의 모든 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-211">A:  Any of the interaction models will work for these users.</span></span>  
 
-![사용자가 카메라](images/useriscamera-640px.jpg)
+> [!NOTE]
+> <span data-ttu-id="77513-212">앱 디자인에 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.</span><span class="sxs-lookup"><span data-stu-id="77513-212">More guidance specific to app design [coming soon](index.md#news-and-notes).</span></span>
 
-<span data-ttu-id="8ca12-150">항상 해당 실제 및 가상 환경에 대 한 이동 사용자 관점에 대 한 디자인에 대 한 생각 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-150">Always think about design for your user's point of view as they move about their real and virtual worlds.</span></span>
 
-<span data-ttu-id="8ca12-151">**몇 가지 질문**</span><span class="sxs-lookup"><span data-stu-id="8ca12-151">**Some questions to ask**</span></span>
-* <span data-ttu-id="8ca12-152">이 사용자 앉아 안락, 준비, 이거나 환경을 사용 하는 동안 walking?</span><span class="sxs-lookup"><span data-stu-id="8ca12-152">Is the user sitting, reclining, standing, or walking while using your experience?</span></span>
-* <span data-ttu-id="8ca12-153">다른 위치로 콘텐츠 조정 하는 방법</span><span class="sxs-lookup"><span data-stu-id="8ca12-153">How does your content adjust to different positions?</span></span>
-* <span data-ttu-id="8ca12-154">사용자 조정할 수 있습니까?</span><span class="sxs-lookup"><span data-stu-id="8ca12-154">Can the user adjust it?</span></span>
-* <span data-ttu-id="8ca12-155">사용자 앱을 사용 하 여 편리 하 게 되나요?</span><span class="sxs-lookup"><span data-stu-id="8ca12-155">Will the user be comfortable using your app?</span></span>
+## <a name="transition-interaction-models"></a><span data-ttu-id="77513-213">전환 상호 작용 모델</span><span class="sxs-lookup"><span data-stu-id="77513-213">Transition interaction models</span></span>
+<span data-ttu-id="77513-214">둘 이상의 상호 작용 모델을 활용 하는 사용 사례에 필요할 수 있습니다 위치 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-214">There are also cases where your use cases may require that utilizing more than one interaction model.</span></span>  <span data-ttu-id="77513-215">예를 들어 흐름 앱의 "만들기" 실습 및 도구 상호 작용 모델을 활용 하지만 핸 즈 프리 모드 적용 되어 현장 기술자를 사용 하려는.</span><span class="sxs-lookup"><span data-stu-id="77513-215">For example, your app's "creation flow" utilizes the Hands and tools interaction model, but you want to employ a Hands-free mode for field technicians.</span></span>  
 
-<span data-ttu-id="8ca12-156">**모범 사례**</span><span class="sxs-lookup"><span data-stu-id="8ca12-156">**Best practices**</span></span>
-* <span data-ttu-id="8ca12-157">사용자가 카메라와 움직임을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-157">The user is the camera and they control the movement.</span></span> <span data-ttu-id="8ca12-158">이러한 드라이브 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-158">Let them drive.</span></span>
-* <span data-ttu-id="8ca12-159">사실상 사용자를 전송 해야 할 경우 vestibular 뜨거움 관련 된 문제에 중요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-159">If you need to virtually transport the user, be sensitive to issues around vestibular discomfort.</span></span>
-* <span data-ttu-id="8ca12-160">사용 하 여 더 짧은 애니메이션</span><span class="sxs-lookup"><span data-stu-id="8ca12-160">Use shorter animations</span></span>
-* <span data-ttu-id="8ca12-161">왼쪽/오른쪽 아래로에서 애니메이션을 적용 하거나 Z 대신 페이드</span><span class="sxs-lookup"><span data-stu-id="8ca12-161">Animate from down/left/right or fade in instead of Z</span></span>
-* <span data-ttu-id="8ca12-162">타이밍 속도가 저하</span><span class="sxs-lookup"><span data-stu-id="8ca12-162">Slow down timing</span></span>
-* <span data-ttu-id="8ca12-163">사용자가 백그라운드에서 전 세계를 참조 하도록 허용</span><span class="sxs-lookup"><span data-stu-id="8ca12-163">Allow user to see the world in the background</span></span>
+<span data-ttu-id="77513-216">환경을 여러 상호 작용 모델에 필요 하 고, 많은 최종 사용자가 특히 최종 사용자가 접하는 MR-다른 모델에서 전환 하는 데 문제가 발생할 수 있습니다를 발견 했습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-216">If your experience does require multiple interaction models, we've found that many end users may encounter difficulty transitioning from one model to another -- especially end users who are new to MR.</span></span>
 
-<span data-ttu-id="8ca12-164">**피해 야 할 사항**</span><span class="sxs-lookup"><span data-stu-id="8ca12-164">**What to avoid**</span></span>
-* <span data-ttu-id="8ca12-165">카메라 흔들기 하지 않거나 3DOF에 의도적으로 잠글 (만 방향, 변환이 수행 되지 않음) 불편 한 사용자가 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-165">Don't shake the camera or purposely lock it to 3DOF (only orientation, no translation), it can make users feel uncomfortable.</span></span>
-* <span data-ttu-id="8ca12-166">갑작스러운 이동 되지 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-166">No abrupt movement.</span></span> <span data-ttu-id="8ca12-167">사용자의 콘텐츠를 표시 해야 할 경우 느린와 원활 하 게 쪽으로 이동 하 최대 편안 함에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-167">If you need to bring content to or from the user, move it slowly and smoothly toward them for maximum comfort.</span></span> <span data-ttu-id="8ca12-168">사용자가 반응 하에서 제공 하는 큰 메뉴 하 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-168">Users will react to large menus coming at them.</span></span>
-* <span data-ttu-id="8ca12-169">가속화 또는 사용자의 카메라를 설정 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="8ca12-169">Don't accelerate or turn the user's camera.</span></span> <span data-ttu-id="8ca12-170">사용자는 가속 (angular 및 변환)에 민감합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-170">Users are sensitive to acceleration (both angular and translational).</span></span>
+> [!Note]
+> <span data-ttu-id="77513-217">가이드 디자이너 및 MR의 어려울 수 있는 선택 항목을 통해 개발자를 위해 여러 상호 작용 모델을 사용 하기 위한 자세한 지침에 최선을 다하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77513-217">To help guide designers and developers through choices that can be difficult in MR, we're working on more guidance for using multiple interaction models.</span></span>
+ 
 
-## <a name="leverage-the-users-perspective"></a><span data-ttu-id="8ca12-171">사용자의 관점을 활용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-171">Leverage the user's perspective</span></span>
-
-<span data-ttu-id="8ca12-172">사용자는 몰입 형 및 holographic 장치에 표시를 통해 혼합된 현실 세계를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="8ca12-172">Users see the world of mixed reality through displays on immersive and holographic devices.</span></span> <span data-ttu-id="8ca12-173">HoloLens,이 표시 라고 합니다 [holographic 프레임](holographic-frame.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-173">On the HoloLens, this display is called the [holographic frame](holographic-frame.md).</span></span>
-
-<span data-ttu-id="8ca12-174">2D 개발에 자주 콘텐츠 및 설정을 쉽게 액세스할 수 있도록 화면 모서리에 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-174">In 2D development, frequently accessed content and settings may be placed in the corners of a screen to make them easily accessible.</span></span> <span data-ttu-id="8ca12-175">그러나 holographic 앱에서 사용자 보기의 모서리에 있는 콘텐츠 않을 편리 하 게 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-175">However, in holographic apps, content in the corners of the user's view may be uncomfortable to access.</span></span> <span data-ttu-id="8ca12-176">이 경우 holographic 프레임의 가운데에는 콘텐츠에 대 한 프라임 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-176">In this case, the center of the holographic frame is the prime location for content.</span></span>
-
-<span data-ttu-id="8ca12-177">사용자가 즉시 보기 이외의 개체나 중요 한 이벤트를 찾으려면의 안내를 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-177">The user may need to be guided to help locate important events or objects beyond their immediate view.</span></span> <span data-ttu-id="8ca12-178">화살표, 연한 내역, 문자 헤드 이동, 사고 거품, 포인터, 공간 소리 및 음성 안내 앱의 중요 한 내용을 안내 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-178">You can use arrows, light trails, character head movement, thought bubbles, pointers, spatial sound, and voice prompts to help guide the user to important content in your app.</span></span>
-
-<span data-ttu-id="8ca12-179">사용자의 편안 하 게 화면 잠금 콘텐츠 하지 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-179">It is recommended to not lock content to the screen for the user's comfort.</span></span> <span data-ttu-id="8ca12-180">보기 콘텐츠를 유지 하는 경우 전 세계에 놓고 "tag-along" 시작 메뉴와 같은 콘텐츠를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-180">If you need to keep content in view, place it in the world and make the content "tag-along" like the Start menu.</span></span> <span data-ttu-id="8ca12-181">사용자 관점 함께 끌어오는 콘텐츠 환경에서 자연스럽 게 느낄 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-181">Content that gets pulled along with the user's perspective will feel more natural in the environment.</span></span>
-
-<span data-ttu-id="8ca12-182">![프레임의 가장자리에 도달 하면 시작 메뉴가 따릅니다 사용자 보기](images/tagalong-1000px.jpg)</span><span class="sxs-lookup"><span data-stu-id="8ca12-182">![The start menu follows the user's view when it reaches the edge of the frame](images/tagalong-1000px.jpg)</span></span><br>
-<span data-ttu-id="8ca12-183">*프레임의 가장자리에 도달 하면 시작 메뉴가 따릅니다 사용자 보기*</span><span class="sxs-lookup"><span data-stu-id="8ca12-183">*The Start menu follows the user's view when it reaches the edge of the frame*</span></span>
-
-<span data-ttu-id="8ca12-184">HoloLens에서 홀로그램 잘려 가져오려면 하지 되므로 holographic 프레임 내에 맞을 때 실제 생각 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-184">On HoloLens, holograms feel real when they fit within the holographic frame since they don't get cut off.</span></span> <span data-ttu-id="8ca12-185">사용자는 프레임 내에서 홀로그램의 범위를 확인 하기 위해 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-185">Users will move in order to see the bounds of a hologram within the frame.</span></span> <span data-ttu-id="8ca12-186">HoloLens, 사용자의 뷰 내에 주 작업에 집중을 유지 하 여 UI를 간소화 하기 위해 중요 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-186">On HoloLens, it's important to simplify your UI to fit within the user's view and keep your focus on the main action.</span></span> <span data-ttu-id="8ca12-187">몰입 형 헤드셋 장치 보기 필드 내에서 영구적 가상 세계의 효과 유지 하기 위해 중요 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-187">For immersive headsets, it's important to maintain the illusion of a persistent virtual world within the device's field of view.</span></span>
-
-## <a name="user-comfort"></a><span data-ttu-id="8ca12-188">사용자 편안 함</span><span class="sxs-lookup"><span data-stu-id="8ca12-188">User comfort</span></span>
-
-<span data-ttu-id="8ca12-189">최대 되도록 [쾌적](comfort.md) 표시 머리에 만들고 사람은 3D 도형 및 자연에서 개체의 상대 위치를 해석 하는 방법을 비슷한 방식으로 콘텐츠를 제공 하는 디자이너 및 개발자를 위한 중요 한 것 전 세계입니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-189">To ensure maximum [comfort](comfort.md) on head-mounted displays, it’s important for designers and developers to create and present content in a way that mimics how humans interpret 3D shapes and the relative position of objects in the natural world.</span></span> <span data-ttu-id="8ca12-190">실제 관점에서 arm의 목 fatiguing 동작이 필요 하지 않은 콘텐츠를 설계 해야 이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-190">From a physical perspective, it is also important to design content that does not require fatiguing motions of the neck or arms.</span></span>
-
-<span data-ttu-id="8ca12-191">HoloLens 또는 몰입 형 헤드셋 개발 인지 모두 눈에 대 한 시각적 개체를 렌더링 하는 것이 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-191">Whether developing for HoloLens or immersive headsets, it is important to render visuals for both eyes.</span></span> <span data-ttu-id="8ca12-192">한 눈에 헤 즈 업 디스플레이 렌더링만 어려울 수 있습니다 인터페이스 이해 사용자의 눈을 뇌 uneasiness 발생 하기.</span><span class="sxs-lookup"><span data-stu-id="8ca12-192">Rendering a heads-up display in one eye only can make an interface hard to understand, as well as causing uneasiness to the user's eye and brain.</span></span>
-
-## <a name="share-your-experience"></a><span data-ttu-id="8ca12-193">사용자 경험 공유</span><span class="sxs-lookup"><span data-stu-id="8ca12-193">Share your experience</span></span>
-
-<span data-ttu-id="8ca12-194">사용 하 여 [혼합 현실 캡처](mixed-reality-capture.md), 사진 또는 비디오 언제 든 지 해당 환경의 사용자 캡처할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-194">Using [mixed reality capture](mixed-reality-capture.md), users can capture a photo or video of their experience at any time.</span></span> <span data-ttu-id="8ca12-195">스냅숏 또는 비디오를 권장 하려는 앱의 환경을 고려해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-195">Consider experiences in your app where you may want to encourage snapshots or videos.</span></span>
-
-## <a name="leverage-basic-ui-elements-of-the-windows-mixed-reality-home"></a><span data-ttu-id="8ca12-196">Windows Mixed Reality 홈의 기본 UI 요소를 활용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-196">Leverage basic UI elements of the Windows Mixed Reality home</span></span>
-
-<span data-ttu-id="8ca12-197">Windows PC 환경을 바탕 화면에서 시작 하는 것 처럼 Windows Mixed Reality 홈으로 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-197">Just like the Windows PC experience starts with the desktop, Windows Mixed Reality starts with the home.</span></span> <span data-ttu-id="8ca12-198">합니다 [Windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md) 타고 이해 하 고 3D 위치를 탐색 하는 능력을 활용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-198">The [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) leverages our innate ability to understand and navigate 3D places.</span></span> <span data-ttu-id="8ca12-199">HoloLens를 사용 하 여 집에 실제 공간이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-199">With HoloLens, your home is your physical space.</span></span> <span data-ttu-id="8ca12-200">몰입 형 헤드셋을 사용 하 여 집 가상 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-200">With immersive headsets, your home is a virtual place.</span></span>
-
-<span data-ttu-id="8ca12-201">집 여기서 사용할지 시작 메뉴를 열고 앱 및 콘텐츠를 배치할 이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-201">Your home is also where you’ll use the Start menu to open and place apps and content.</span></span> <span data-ttu-id="8ca12-202">혼합된 현실 콘텐츠로 홈을 입력 하 고 동시에 여러 앱을 사용 하 여 멀티 태스크 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-202">You can fill your home with mixed reality content and multitask by using multiple apps at the same time.</span></span> <span data-ttu-id="8ca12-203">장치를 다시 시작 하는 경우에 집에 배치 작업을 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ca12-203">The things you place in your home stay there, even if you restart your device.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="8ca12-204">참조</span><span class="sxs-lookup"><span data-stu-id="8ca12-204">See also</span></span>
-* [<span data-ttu-id="8ca12-205">대상으로 응시</span><span class="sxs-lookup"><span data-stu-id="8ca12-205">Gaze targeting</span></span>](gaze-targeting.md)
-* [<span data-ttu-id="8ca12-206">제스처</span><span class="sxs-lookup"><span data-stu-id="8ca12-206">Gestures</span></span>](gestures.md)
-* [<span data-ttu-id="8ca12-207">음성 디자인</span><span class="sxs-lookup"><span data-stu-id="8ca12-207">Voice design</span></span>](voice-design.md)
-* [<span data-ttu-id="8ca12-208">컨트롤러 동작</span><span class="sxs-lookup"><span data-stu-id="8ca12-208">Motion controllers</span></span>](motion-controllers.md)
-* [<span data-ttu-id="8ca12-209">공간 적절 하 게 디자인</span><span class="sxs-lookup"><span data-stu-id="8ca12-209">Spatial sound design</span></span>](spatial-sound-design.md)
-* [<span data-ttu-id="8ca12-210">공간 매핑 디자인</span><span class="sxs-lookup"><span data-stu-id="8ca12-210">Spatial mapping design</span></span>](spatial-mapping-design.md)
-* [<span data-ttu-id="8ca12-211">Comfort</span><span class="sxs-lookup"><span data-stu-id="8ca12-211">Comfort</span></span>](comfort.md)
-* [<span data-ttu-id="8ca12-212">Windows Mixed Reality 홈 탐색</span><span class="sxs-lookup"><span data-stu-id="8ca12-212">Navigating the Windows Mixed Reality home</span></span>](navigating-the-windows-mixed-reality-home.md)
+## <a name="see-also"></a><span data-ttu-id="77513-218">참조</span><span class="sxs-lookup"><span data-stu-id="77513-218">See also</span></span>
+* [<span data-ttu-id="77513-219">헤드 게이즈 및 커밋</span><span class="sxs-lookup"><span data-stu-id="77513-219">Head-gaze and commit</span></span>](gaze-and-commit.md)
+* [<span data-ttu-id="77513-220">직접 조작</span><span class="sxs-lookup"><span data-stu-id="77513-220">Direct manipulation</span></span>](direct-manipulation.md)
+* [<span data-ttu-id="77513-221">지점 및 커밋</span><span class="sxs-lookup"><span data-stu-id="77513-221">Point and commit</span></span>](point-and-commit.md)
+* [<span data-ttu-id="77513-222">응시 대상 지정</span><span class="sxs-lookup"><span data-stu-id="77513-222">Gaze targeting</span></span>](gaze-targeting.md)
+* [<span data-ttu-id="77513-223">제스처</span><span class="sxs-lookup"><span data-stu-id="77513-223">Gestures</span></span>](gestures.md)
+* [<span data-ttu-id="77513-224">음성 디자인</span><span class="sxs-lookup"><span data-stu-id="77513-224">Voice design</span></span>](voice-design.md)
+* [<span data-ttu-id="77513-225">모션 컨트롤러</span><span class="sxs-lookup"><span data-stu-id="77513-225">Motion controllers</span></span>](motion-controllers.md)
+* [<span data-ttu-id="77513-226">공간 음향 디자인</span><span class="sxs-lookup"><span data-stu-id="77513-226">Spatial sound design</span></span>](spatial-sound-design.md)
+* [<span data-ttu-id="77513-227">공간 매핑 디자인</span><span class="sxs-lookup"><span data-stu-id="77513-227">Spatial mapping design</span></span>](spatial-mapping-design.md)
+* [<span data-ttu-id="77513-228">편안함</span><span class="sxs-lookup"><span data-stu-id="77513-228">Comfort</span></span>](comfort.md)
