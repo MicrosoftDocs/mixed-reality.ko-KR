@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 09/27/2018
 ms.topic: article
 keywords: HoloLens, wifi, 무선 인터넷, ip, ip 주소
-ms.openlocfilehash: 0440c3dad48d73db51e7d730e79d6eb1e74a5694
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b064514124d861c0734ca51b3878d4a68b592fab
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604110"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670113"
 ---
 # <a name="connecting-to-wi-fi-on-hololens"></a>HoloLens에 Wi-fi에 연결
 
@@ -40,7 +40,7 @@ HoloLens 802.11ac는 포함-2 Wi-fi 라디오 x 지 원하는 경우 2입니다.
 5. "Off" 위치로 이동 하려면 Wi-fi 슬라이더 스위치를 선택 합니다. Wi-fi 라디오 RF 구성 요소를 해제 되 고 HoloLens에 모든 Wi-fi 기능을 사용 하지 않도록 설정 됩니다. 
 
     >[!WARNING]
-    >HoloLens 자동으로 로드할 수 없습니다 하 [공간](environment-considerations-for-hololens.md#spaces) Wi-fi 라디오 사용을 하지 않도록 설정 합니다.
+    >HoloLens 자동으로 로드할 수 없습니다 하 [공간](environment-considerations-for-hololens.md#WiFi fingerprint considerations) Wi-fi 라디오 사용을 하지 않도록 설정 합니다.
     
 6. 슬라이더 스위치 Wi-fi 라디오 설정 하 고 Microsoft HoloLens Wi-fi 기능을 복원 하려면 "On" 위치로 이동 합니다. 선택한 Wi-fi 라디오 상태 ("설정"의 "끄기"로) 재부팅 간에 유지 됩니다.
 

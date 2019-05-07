@@ -1,138 +1,187 @@
 ---
-title: 상호 작용 기본 사항
-description: HoloLens에서 환경을 구축한 대로 (첫 번째 gen) HoloLens 2 및 몰입 형 헤드셋을 공유 하는 데 유용 알게 몇 가지 작업을 기록 시작 했습니다.
-author: rwinj
-ms.author: jennyk
-ms.date: 02/24/2019
+title: 조직의 다중 모달 방식 상호 작용 개요
+description: 조직의 다중 모달 방식 상호 작용의 개요
+author: shengkait
+ms.author: shengkait
+ms.date: 04/11/2019
 ms.topic: article
-keywords: 혼합 현실을, 상호 작용 디자인
-ms.openlocfilehash: d594126529b6314a4706f8b6b6af856058c3280a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
+ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597550"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993600"
 ---
-# <a name="interaction-fundamentals"></a>상호 작용 기본 사항
+# <a name="introducing-instinctual-interactions"></a>소개 instinctual 상호 작용
+간단 하 고 instinctual 상호 작용의 원리는 혼합 현실 Microsoft 플랫폼 전체 연결 되어 있습니다.  응용 프로그램 디자이너와 개발자가 고객에 게 쉽고 직관적인 상호 작용에 제공할 수 있는지 확인 하는 세 단계 살펴보았으며, 합니다. 
 
-HoloLens 및 몰입 형 헤드셋 환경을 구축한으로 공유 하는 데 유용 알게 몇 가지 작업을 기록 시작 했습니다. 이러한 혼합된 현실 상호 작용 디자인을 위한 기본적인 빌딩 블록으로 간주 합니다.
+먼저이 놀라운 센서 및 입력된 기술을 직접 추적, 시선 추적, 자연 언어 등 조직의 다중 모달 방식 상호 작용을 원활 하 게 모델 결합 해야 했습니다.  디자인 및 multimodally-개발 하 고 단일 입력을 기반으로 하지는 연구에 기초한-instinctual 환경을 만드는 키입니다.
 
-## <a name="device-support"></a>장치 지원
+둘째, 인식 많은 개발자가 여러 장치를 대상으로 HoloLens 2 및 HoloLens 즉 여부 (첫 번째 gen) HoloLens 및 VR 또는 합니다.  따라서 (경우에 입력된 기술을 각 장치에 따라 달라 집니다) 장치에서 작동 하도록 상호 작용 모델 디자인 했습니다.  예를 들어 6DOF 컨트롤러와 Windows 몰입 형 헤드셋에서 먼 상호 작용 및 HoloLens 2 모두에 먼 상호 작용 패턴을 쉽게 장치 간 응용 프로그램에 대 한 확인 하 고 동일한 affordances를 사용 합니다. 뿐만 아니라이 편리 개발자 및 디자이너, 하지만 최종 사용자에 게 자연스럽 게 받아들이며에 대 한 합니다. 
 
-에 적용 되는 상호 작용 디자인 문서를 사용할 수 있는 장치 유형 또는 형식의 개요는 다음과 같습니다.
+마지막으로, 효율적이 고 흥미로운 수천 개의 마법의 상호 작용 MR에서 가능한 개는 의도적으로 사용 하는 단일 상호 작용 모델의 종단 간 인식 하는 동안 응용 프로그램은 가장 좋은 방법은 사용자가 성공적으로 확인 하 고 훌륭한 환경을 제공 합니다.  이 위해 다음 세 가지가 상호 작용 지침에 포함 되었습니다.
+* 에서는 세 가지 기본 상호 작용 모델 및 구성 요소와 각각에 대해 필요한 패턴을 기반으로 한이 지침을 구조화 했습니다.
+* 플랫폼 제공 하는 기타 혜택에 대 한 추가 지침 포함 했습니다.
+* 시나리오에 대 한 적절 한 상호 작용 모델을 선택 하는 데 유용한 지침 포함 했습니다.
+
+
+## <a name="three-multimodal-interaction-models"></a>세 가지 조직의 다중 모달 방식 상호 작용 모델
+이 연구 및 고객 날짜를 사용 하 여 작업에 따라에서는 세 가지 기본 상호 작용 모델 대부분의 혼합 현실 환경에 맞게를 발견 했습니다.
+
+다양 한 방법으로 상호 작용 모델은 해당 흐름을 완료 하는 것에 대 한 사용자의 멘 탈 모델.  고객 요구 사항 집합에 대해 최적화 된 이러한 상호 작용 모델의 각 이며 각 편리 하 게 강력 하 고 그 자체로 사용할 수 있습니다. 
+
+아래 차트는 간소화 된 개요입니다.  각 상호 작용 모델을 사용 하 여에 대 한 자세한 정보는 이미지 및 코드 샘플을 사용 하 여 아래 페이지에 연결 됩니다.  
+
 <br>
 
 <table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Model</strong></td>
+        <td><strong>예제 시나리오</strong></td>
+        <td><strong>Fit</strong></td>
+        <td><strong>하드웨어</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">실습 및 도구</a></td>
+        <td>3D 공간 환경<br>예: 공간 레이아웃 및 디자인, 콘텐츠 조작 또는 시뮬레이션</td>
+        <td>새 사용자에 대 한 유용한<br>낮은 학습 곡선<br>쉽게 visual affordances 없으며<br>직접 추적 및 6 DoF 컨트롤러 간에 일관 된 UX<br>음성, 시각 추적 또는 헤드 게이즈와 결합 하면 유용한</td>
+        <td>HoloLens 2<br>6DOF 컨트롤러를 포함 하는 몰입 형 Windows</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">핸 즈 프리</a></td>
+        <td>작업을 학습 하 고 유지 관리는 사용자의 손에 예: 하 게 사용 하는 상황에 맞는 환경</td>
+        <td>일부 학습<br>실습을 사용할 수 없는 경우<br>음성 및 자연 언어 쌍</td>
+        <td>HoloLens 2<br>HoloLens (첫 번째 범용)<br> Windows Immersive</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">헤드 게이즈 및 커밋</a></td>
+        <td>클릭 광고 환경을 예: 3D 프레젠테이션, 데모</td>
+        <td>Mobile에는 없지만 HMDs에서 교육이 필요<br>액세스할 수 있는 컨트롤러에 대 한 가장<br>HoloLens에 가장 적합 한 (첫 번째 범용)</td>
+        <td>HoloLens 2<br>HoloLens (첫 번째 범용)<br> Windows Immersive<br> 모바일 AR</td>
+    </tr>
+</table>
+<br>
 
-<th>
-<tr>
+간격 또는 환경에 대 한 상호 작용에 구멍이 없는지 확인 하는 가장 좋은 방법은 처음부터 끝까지에서 단일 모델에 대 한 지침을 따르는 것입니다. 
 
-<td style="width:150px;"><strong>입력</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
-</tr>
-</th>
+디자인 및 개발 속도 자세한 정보와 이미지 및 코드 샘플에 대 한 링크는 광범위 한 각 모델 내에서 포함 했습니다.
+
+하지만 먼저 아래 섹션에서는 과정을 선택 하 고 이러한 상호 작용 모델 중 하나를 구현 합니다.  
  
-<tr>
-<td> <a href="gestures.md">명확 하 고 실습</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td></td>
+### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>이 페이지를 마치면에서 지침을 이해할 수 있습니다.
+ 
+* 고객을 위해 상호 작용 모델을 선택
+* 상호 작용 모델 지침을 사용 하 여
+* 상호 작용 모델 간 전환
+* 다음 단계를 디자인 합니다.
 
-</tr><tr>
-<td> <a href="gaze-targeting.md">모니터링 대상</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td style="text-align: center;"></td>
-</tr><tr>
-<td> <a href="gaze-targeting.md">대상으로 응시</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gestures.md">제스처</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-design.md">음성 디자인</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> 게임 패드</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
-<tr>
-<td> <a href="motion-controllers.md">컨트롤러 동작</a></td><td></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
+## <a name="choosing-an-interaction-model-for-your-customer"></a>고객을 위해 상호 작용 모델을 선택
 
-</tr>
-<th>
-<tr>
-<td style="width:150px;"><strong>인식 및 공간 기능</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
-</tr>
-</th>
-<tr>
+대부분의 경우 개발자와 작성자 이미 몇 가지 아이디어 상호 작용 환경 사용자에 게 원하는 유형의 염두 합니다.
+고객 중심 접근 방법을 디자인 하는 것이 좋습니다, 아래 지침을 따르도록를 좋습니다 고객을 위해 최적화 된 상호 작용 모델을 선택 합니다.
 
-<td> <a href="spatial-sound-design.md">공간 적절 하 게 디자인</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping-design.md">공간 매핑 디자인</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="hologram.md">홀로그램</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
+### <a name="why-follow-this-guidance"></a>이 지침을 수행 하는 이유
 
+* 상호 작용 모델은 목표와 실제 및 cognitive 노력, 사용 편이성을 learnability 등 주관적인 기준에 대 한 테스트 됩니다. 
+* 상호 작용 다르므로 visual 및 오디오 affordances 동작과 개체 상호 작용 모델 간에 달라질 수 있습니다.  
+* 여러 상호 작용 모델의 파트를 결합 위험 등 동시 직접 광선 게이즈 커서를 압도 하 고 사용자를 혼동 하는 경쟁 affordances 만듭니다.
+
+Affordances 동작과 각 상호 작용 모델에 대해 최적화 된 방법의 몇 가지 예는 다음과 같습니다.  종종 볼 새 사용자로도 비슷한 질문이 같은 "시스템 작동을 알고 수행 하는 방법을 어떻게 알 수 있습니까 수행할 수 있는 작업을 어떻게 알 수 있습니까 방금 수행한 이해 하는 경우 및?"
+
+<br>
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Model</strong></td>
+        <td><strong>어떻게이 작업은?</strong></td>
+        <td><strong>확인 하려면 어떤 어떻게 해야 합니까?</strong></td>
+        <td><strong>방금 필자 어떻게 알 수 있나요?</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">실습 및 도구</a></td>
+        <td>메시 손 모양 표시, 손끝 유도성 또는 직접 표시 / 컨트롤러 광선 합니다.</td>
+        <td>Grabbable 핸들이 나 손을 때 표시 경계 상자를 표시 합니다.</td>
+        <td>청각적 들릴 했으며 잡기 릴리스에 애니메이션을 참조 하세요.</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">헤드 게이즈 및 커밋</a></td>
+        <td>보기 내 필드의 가운데에 커서를 표시 합니다.</td>
+        <td>응시 커서 특정 개체에 대해 작업 하는 경우 상태를 변경 합니다.</td>
+        <td>I/I 조치를 취할 때 시청각 확인을 들.</td>
+    </tr>   
+    <tr>
+        <td><a href="hands-free.md">핸 즈 (게이즈 및 유지)</a></td>
+        <td>보기 내 필드의 가운데에 커서를 표시 합니다.</td>
+        <td>부분 있습니까 상호 작용할 수 없는 개체에 고민 하는 경우 진행률 표시기가 표시 됩니다.</td>
+        <td>I/I 조치를 취할 때 시청각 확인을 들.</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">핸 즈 프리 (음성 명령 실행)</a></td>
+        <td>수신 대기 표시기 및 캡션을 시스템 들어 본 적 표시 하는 것이 보입니다.</td>
+        <td>내가 음성 안내 및 힌트.  "어떤 말할 수 있는" 말하는 경우 사용자 의견을 표시 됩니다.</td>
+        <td>I/명령을 제공 하거나 필요할 때 UX 명확성을 가져올 때 시청각 확인을 듣고 합니다.</a></td>
+    </tr>
 </table>
 
-## <a name="the-user-is-the-camera"></a>사용자가 카메라
+### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>찾았습니다. 도움말 팀 선택 상호 작용 모델을 질문에는 다음과 같습니다.
+ 
+1.  Q:  사용자에 게 홀로그램 touch 및 전체 자릿수 holographic 조작을 수행 하 시겠습니까?
+A:  만약 그렇다면 전체 자릿수가 대상 지정 및 실습 또는 동작 컨트롤러를 사용 하 여 조작에 대 한 실습 및 도구 상호 작용 모델 확인 합니다.
+ 
+2.  Q:  내 사용자가 실제 작업에 대 한 무료가 바늘을 유지 해야 하나요?
+A:  그렇다면 살펴보겠습니다 핸 즈 프리 상호 작용 하는 모델을 응시 및 음성 기반 상호 작용을 통해 유용한 핸 즈 프리 환경을 제공 합니다.
+ 
+3.  Q:  내 사용자가 혼합된 현실 응용 프로그램에 대 한 상호 작용을 배울 시간이 없거나 필요도 가장 낮은 학습 곡선을 사용 하 여 상호 작용 수 있습니까?
+A:  사용자 상호 작용에 대 한 대응을 사용할 수 없게 되는 가장 낮은 학습 곡선 및 가장 직관적인 상호 작용에 대 한 실습 및 도구 모델을 권장 합니다.
+ 
+4.  Q:  내 사용자가 가리키는 및 조작에 대 한 동작 컨트롤러를 사용 합니까?
+A:  실습 및 도구 모델 동작 컨트롤러 환경을 개선에 대 한 모든 지침을 포함합니다.
+ 
+5.  Q:  내 사용자는 내게 필요한 옵션 컨트롤러나를 clicker 같은 일반적인 Bluetooth 컨트롤러를 사용 하려면?
+A:  모든 비 추적 컨트롤러에 대 한 헤드 게이즈 모델과 커밋 모델을 사용 하는 것이 좋습니다.  간단한 "대상 및 커밋" 정비공을 사용 하 여 전체 환경을 통과 하는 사용자를 허용 하도록 설계 되었습니다. 
+ 
+6.  Q: 내 사용자만 진행 마세요 환경을 통해 "를 클릭 하 여" (예를 들어 환경의 3d 슬라이드쇼), UI 컨트롤의 짙은 레이아웃을 탐색 하는 대신?
+A:  사용자 UI 많은 제어 하지 않아도, 헤드 게이즈 및 커밋 사용자를 대상으로 하는 방법에 대 한 걱정 없는 수행 learnable 옵션을 제공 합니다. 
+ 
+7.  Q:  내 사용자가 모두 HoloLens 사용 (첫 번째 gen) 및 HoloLens 2 / a Windows 몰입 형 (VR 헤드셋):  헤드 게이즈 및 커밋에 HoloLens에 대 한 상호 작용 모델 이므로 (첫 번째 gen) 좋습니다 HoloLens를 지 원하는 작성자 (첫 번째 gen) Head 게이즈를 사용 하 고 모든 기능 또는 사용자는 HoloLens에 발생할 수 있는 모드에 대 한 커밋을 (첫 번째 gen) 헤드셋 합니다.  아래 다음 섹션을 참조 하십시오 온 *상호 작용 모델을 전환* 여러 HoloLens 세대에 대 한 뛰어난 환경을 만들기 위해 세부 정보에 대 한 합니다.
+ 
+8.  Q: (많은 공간을 다루는 또는 공간 간에 이동), 일반적으로 모바일 사용자에 게 어떤 작업에 대 한 단일 공간에서 작동 하는 사용자와?  
+A:  이러한 사용자에 대 한 상호 작용 모델의 모든 작동 합니다.  
 
-![사용자가 카메라](images/useriscamera-640px.jpg)
+> [!NOTE]
+> 앱 디자인에 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
 
-항상 해당 실제 및 가상 환경에 대 한 이동 사용자 관점에 대 한 디자인에 대 한 생각 합니다.
 
-**몇 가지 질문**
-* 이 사용자 앉아 안락, 준비, 이거나 환경을 사용 하는 동안 walking?
-* 다른 위치로 콘텐츠 조정 하는 방법
-* 사용자 조정할 수 있습니까?
-* 사용자 앱을 사용 하 여 편리 하 게 되나요?
+## <a name="transition-interaction-models"></a>전환 상호 작용 모델
+둘 이상의 상호 작용 모델을 활용 하는 사용 사례에 필요할 수 있습니다 위치 하는 경우가 있습니다.  예를 들어 흐름 앱의 "만들기" 실습 및 도구 상호 작용 모델을 활용 하지만 핸 즈 프리 모드 적용 되어 현장 기술자를 사용 하려는.  
 
-**모범 사례**
-* 사용자가 카메라와 움직임을 제어 합니다. 이러한 드라이브 수 있습니다.
-* 사실상 사용자를 전송 해야 할 경우 vestibular 뜨거움 관련 된 문제에 중요할 수 있습니다.
-* 사용 하 여 더 짧은 애니메이션
-* 왼쪽/오른쪽 아래로에서 애니메이션을 적용 하거나 Z 대신 페이드
-* 타이밍 속도가 저하
-* 사용자가 백그라운드에서 전 세계를 참조 하도록 허용
+환경을 여러 상호 작용 모델에 필요 하 고, 많은 최종 사용자가 특히 최종 사용자가 접하는 MR-다른 모델에서 전환 하는 데 문제가 발생할 수 있습니다를 발견 했습니다.
 
-**피해 야 할 사항**
-* 카메라 흔들기 하지 않거나 3DOF에 의도적으로 잠글 (만 방향, 변환이 수행 되지 않음) 불편 한 사용자가 수행할 수 있습니다.
-* 갑작스러운 이동 되지 있습니다. 사용자의 콘텐츠를 표시 해야 할 경우 느린와 원활 하 게 쪽으로 이동 하 최대 편안 함에 대 한 합니다. 사용자가 반응 하에서 제공 하는 큰 메뉴 하 게 됩니다.
-* 가속화 또는 사용자의 카메라를 설정 하지 마세요. 사용자는 가속 (angular 및 변환)에 민감합니다.
-
-## <a name="leverage-the-users-perspective"></a>사용자의 관점을 활용 합니다.
-
-사용자는 몰입 형 및 holographic 장치에 표시를 통해 혼합된 현실 세계를 참조 하십시오. HoloLens,이 표시 라고 합니다 [holographic 프레임](holographic-frame.md)합니다.
-
-2D 개발에 자주 콘텐츠 및 설정을 쉽게 액세스할 수 있도록 화면 모서리에 배치할 수 있습니다. 그러나 holographic 앱에서 사용자 보기의 모서리에 있는 콘텐츠 않을 편리 하 게 액세스 합니다. 이 경우 holographic 프레임의 가운데에는 콘텐츠에 대 한 프라임 위치입니다.
-
-사용자가 즉시 보기 이외의 개체나 중요 한 이벤트를 찾으려면의 안내를 해야 합니다. 화살표, 연한 내역, 문자 헤드 이동, 사고 거품, 포인터, 공간 소리 및 음성 안내 앱의 중요 한 내용을 안내 하는 데 사용할 수 있습니다.
-
-사용자의 편안 하 게 화면 잠금 콘텐츠 하지 하는 것이 좋습니다. 보기 콘텐츠를 유지 하는 경우 전 세계에 놓고 "tag-along" 시작 메뉴와 같은 콘텐츠를 확인 합니다. 사용자 관점 함께 끌어오는 콘텐츠 환경에서 자연스럽 게 느낄 됩니다.
-
-![프레임의 가장자리에 도달 하면 시작 메뉴가 따릅니다 사용자 보기](images/tagalong-1000px.jpg)<br>
-*프레임의 가장자리에 도달 하면 시작 메뉴가 따릅니다 사용자 보기*
-
-HoloLens에서 홀로그램 잘려 가져오려면 하지 되므로 holographic 프레임 내에 맞을 때 실제 생각 합니다. 사용자는 프레임 내에서 홀로그램의 범위를 확인 하기 위해 이동 합니다. HoloLens, 사용자의 뷰 내에 주 작업에 집중을 유지 하 여 UI를 간소화 하기 위해 중요 한 것입니다. 몰입 형 헤드셋 장치 보기 필드 내에서 영구적 가상 세계의 효과 유지 하기 위해 중요 한 것입니다.
-
-## <a name="user-comfort"></a>사용자 편안 함
-
-최대 되도록 [쾌적](comfort.md) 표시 머리에 만들고 사람은 3D 도형 및 자연에서 개체의 상대 위치를 해석 하는 방법을 비슷한 방식으로 콘텐츠를 제공 하는 디자이너 및 개발자를 위한 중요 한 것 전 세계입니다. 실제 관점에서 arm의 목 fatiguing 동작이 필요 하지 않은 콘텐츠를 설계 해야 이기도 합니다.
-
-HoloLens 또는 몰입 형 헤드셋 개발 인지 모두 눈에 대 한 시각적 개체를 렌더링 하는 것이 중요 합니다. 한 눈에 헤 즈 업 디스플레이 렌더링만 어려울 수 있습니다 인터페이스 이해 사용자의 눈을 뇌 uneasiness 발생 하기.
-
-## <a name="share-your-experience"></a>사용자 경험 공유
-
-사용 하 여 [혼합 현실 캡처](mixed-reality-capture.md), 사진 또는 비디오 언제 든 지 해당 환경의 사용자 캡처할 수 있습니다. 스냅숏 또는 비디오를 권장 하려는 앱의 환경을 고려해 야 합니다.
-
-## <a name="leverage-basic-ui-elements-of-the-windows-mixed-reality-home"></a>Windows Mixed Reality 홈의 기본 UI 요소를 활용 합니다.
-
-Windows PC 환경을 바탕 화면에서 시작 하는 것 처럼 Windows Mixed Reality 홈으로 시작 합니다. 합니다 [Windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md) 타고 이해 하 고 3D 위치를 탐색 하는 능력을 활용 합니다. HoloLens를 사용 하 여 집에 실제 공간이 없습니다. 몰입 형 헤드셋을 사용 하 여 집 가상 위치입니다.
-
-집 여기서 사용할지 시작 메뉴를 열고 앱 및 콘텐츠를 배치할 이기도 합니다. 혼합된 현실 콘텐츠로 홈을 입력 하 고 동시에 여러 앱을 사용 하 여 멀티 태스크 수 있습니다. 장치를 다시 시작 하는 경우에 집에 배치 작업을 유지 합니다.
+> [!Note]
+> 가이드 디자이너 및 MR의 어려울 수 있는 선택 항목을 통해 개발자를 위해 여러 상호 작용 모델을 사용 하기 위한 자세한 지침에 최선을 다하고 있습니다.
+ 
 
 ## <a name="see-also"></a>참조
-* [대상으로 응시](gaze-targeting.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
+* [직접 조작](direct-manipulation.md)
+* [지점 및 커밋](point-and-commit.md)
+* [응시 대상 지정](gaze-targeting.md)
 * [제스처](gestures.md)
 * [음성 디자인](voice-design.md)
-* [컨트롤러 동작](motion-controllers.md)
-* [공간 적절 하 게 디자인](spatial-sound-design.md)
+* [모션 컨트롤러](motion-controllers.md)
+* [공간 음향 디자인](spatial-sound-design.md)
 * [공간 매핑 디자인](spatial-mapping-design.md)
-* [Comfort](comfort.md)
-* [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
+* [편안함](comfort.md)

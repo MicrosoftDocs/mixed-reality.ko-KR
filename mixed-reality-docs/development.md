@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: 혼합 현실을, 개발, 개발, HoloLens, directx, unity
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597500"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993589"
 ---
 # <a name="development-launchpad"></a>개발 실행 패드
 
@@ -38,7 +38,7 @@ ms.locfileid: "59597500"
                             <a href="install-the-tools.md">도구 설치</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">자습서 및 샘플 앱</a>
+                            <a href="mrlearning-base-ch1.md">MR 학습: HoloLens 2 및 MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ ms.locfileid: "59597500"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>장치</h3>
+                        <h3>기기</h3>
                           <p>
                             <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
                         </p>
@@ -132,10 +132,10 @@ Unreal-서비스 예정!
                     <div class="cardText">
                         <h3>포팅 가이드</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">최신 Mixed로 업데이트 하는 중<br>실제로 도구 키트 (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">2 HoloLens에 앱을 업데이트 하는 중입니다.<br>HoloLens에서 (첫 번째 범용)</a>
                         </p>
                         <p>
-HoloLens (첫 번째 gen) HoloLens 2<br>- 개봉박두!
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">혼합된 현실 도구 키트 (MRTK)<br>API 포팅 가이드</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">몰입 형 헤드셋 앱</a>
@@ -202,13 +202,13 @@ HoloLens (첫 번째 gen) HoloLens 2<br>- 개봉박두!
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">컨트롤러 동작</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">모션 컨트롤러</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th style="width:175px">인식 및 공간 기능</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
 </tr><tr>
 <td> <a href="coordinate-systems.md">세계 좌표</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">소리 공간</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">공간 음향</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-mapping.md">공간 매핑</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>

@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: 시작, 시작된 기본 사항, HoloLens, HoloLens 2 몰입 형 헤드셋, unity, visual studio
-ms.openlocfilehash: 1d23e458477cc23252ccd4c44f67c400aa356965
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605112"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873987"
 ---
 # <a name="development-overview"></a>개발 개요
 
@@ -41,13 +41,13 @@ Unity와 같은 미들웨어 도구 가져오기, 혼합된 현실 환경 현재
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="motion-controllers.md">컨트롤러 동작</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
+<td> <a href="motion-controllers.md">모션 컨트롤러</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <th> 인식 및 공간 기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
 </tr><tr>
 <td> <a href="coordinate-systems.md">세계 좌표</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">소리 공간</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">공간 음향</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-mapping.md">공간 매핑</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>
@@ -80,8 +80,8 @@ Windows, 마우스, 키보드, 게임 패드 등 사용 가능한 입력된 에�
 ## <a name="see-also"></a>참조
 * [도구 설치](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">혼합된 현실 서비스</a>
-* [혼합된 현실 자습서](academy.md)
+* [혼합된 현실 자습서](tutorials.md)
 * [오픈 소스 프로젝트](open-source-projects.md)
-* [MR Basics 100: Unity를 사용 하 여 시작](holograms-100.md)
+* [MR 기본 100: Unity 시작](holograms-100.md)
 * [Windows Mixed Reality 최소 PC 하드웨어 호환성 지침](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Windows 스토어에 앱 제출](submitting-an-app-to-the-microsoft-store.md)

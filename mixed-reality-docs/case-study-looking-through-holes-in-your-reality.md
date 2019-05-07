@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, magic 창, 시차
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600750"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873932"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>사례 연구-구멍에 실제로 탐색
 
@@ -93,7 +93,7 @@ HoloLens 있고 직접 효과 사용 하 시겠습니까? (코딩할 필요 없�
 
 Unity 편집기에서이 모델을 보기는 flowerpot 주위에 큰 검은색 상자 표시 됩니다. 상자가 사라집니다, HoloLens에서 매직 창 효과를 방법을 제공 합니다.
 
-이 기술을 사용 하는 앱을 빌드 하려는 경우 체크 아웃 합니다 [MR 기본 사항 101 자습서](holograms-101.md) 에 [혼합 현실 Academy](academy.md)합니다. 7 장 (위의 그림)로 숨겨진된 지 표시 하 여 층에 끝납니다. 자습서가 지루한 라고?
+이 기술을 사용 하는 앱을 빌드 하려는 경우 체크 아웃 합니다 [MR 기본 사항 101 자습서](holograms-101.md) 에 [혼합 현실 자습서](tutorials.md)합니다. 7 장 (위의 그림)로 숨겨진된 지 표시 하 여 층에 끝납니다. 자습서가 지루한 라고?
 
 다음은 몇 가지 아이디어를 작성할 수 있는이 다음의:
 * 대화형 가상 구멍 내부 콘텐츠를 확인 하는 방법을 생각할 수 있습니다. 사용자가 해당 경계를 넘어 몇 가지 영향을 미칠 수 불가사의이 트릭을 제공할 수 있는의 의미 실제로 향상 시킬 수 있습니다.
@@ -109,7 +109,7 @@ Unity 편집기에서이 모델을 보기는 flowerpot 주위에 큰 검은색 �
 </table>
 
 ## <a name="see-also"></a>참조
-* [MR Basics 101: 장치를 사용 하 여 전체 프로젝트](holograms-101.md)
+* [MR 기본 101: 디바이스를 사용하는 완전한 프로젝트](holograms-101.md)
 * [좌표계](coordinate-systems.md)
 * [공간 앵커](spatial-anchors.md)
 * [공간 매핑](spatial-mapping.md)

@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600680"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873921"
 ---
+# <a name="gaze-and-dwell"></a>응시 및 유지
+확인 하는 다양 한 방법의 많은 _커밋_ 사용 하 여 게이즈를 조합 하는 등 _음성_ 또는 _제스처를 전달_합니다.
+일부의 사용자 시나리오가 있습니다 하지만 사용자에 게 사용 중인 숫자일 수 또는 추적할 수 없습니다 (예: 너무 큰된 대량의 gloves 사용 하 여 팩터리 근로자). 음성 입력 하지 사용자 기본 설정, 소셜 컨텍스트 또는 클라우드 환경으로 인해 사용할 수도 있습니다.
+대체 (fallback) 솔루션으로 다른 옵션을 수행을 _커밋_ 으로 참조 하는 UI 요소에 적절히 유지 하는 것 _타이_합니다.
+A _타이_ head 또는 눈 게이즈를 사용 하 여 수행할 수 있습니다. 개념은 간단 하며 다음과 같은 단계로 세분화 될 수 있습니다. 
+1. 사용자가 gazing holographic 단추에서 시작
+
+2. 간략 한 발병 지연 (예: 150 밀리초) 후에 몇 가지 시각적 피드백 애니메이션 시작 됩니다. 발병 지연 즉시 표시 하 여 피드백 항상 사용자 과부하를 피하기 위해 사용 됩니다.
+    - 에 대 한 _응시_, 시각적 개체의 디자인에 대해 다음 피드백을 유지 하는 것이 좋습니다.
+      - **이 blend**: 완전 불투명 처음에 약간만 표시에서 사용자 의견에 혼합 원활 하 게 됩니다. 이 피드백을 사용 하면 덜 방해 고 overwhleming과 원활 하 게 하려면이 단추를 사용 하 여 참여 하려는 사용자는 시스템에는 신뢰도 정렬 합니다.
+      - **끌어오기**: 크기가 감소 하 고 사용자의 visual 이목을 끌어오는 대상의 중심 쪽으로 이동 하는 보다 시각적 피드백을 만듭니다. 
+
+3. 미리 정의 된 지속 기간 (예: 800 밀리초) 후 완료 되는 유지 하 고 연결된 된 이벤트가 트리거됩니다.
+    - 청각 종료 일부 제공 또는 시각적 피드백을 실제로 홈 하는 항목이 이제 선택 되었습니다.
+
+![상태를 유지 합니다.](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>대상으로 응시
 
 모든 상호 작용은 입력된 형식에 관계 없이 상호 작용 하려는 요소를 대상 하는 사용자의 기능을 기반으로 합니다. Windows Mixed Reality에서 일반적으로 이렇게 사용자 게이즈를 사용 하 여 합니다.
@@ -32,7 +50,7 @@ ms.locfileid: "59600680"
 </table>
 
 > [!NOTE]
-> HoloLens 2 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+> HoloLens 2 관련 된 자세한 지침 [예정](index.md)합니다.
 
 ## <a name="target-sizing-and-feedback"></a>대상 크기 조정 및 피드백
 

@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality 실제로 혼합 HoloLens, 몰입 형, vr, mr, 시작, 홀로그램 academy, 자습서
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597560"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993616"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -97,7 +97,7 @@ Unity 주 카메라 헤드 추적 및 stereoscopic 렌더링을 처리 합니다
 
 HoloLens에 높은 프레임 속도 유지 관리 하므로 중요 한 이므로 가장 빠른 성능을 위해 조정 품질 설정 하려고 합니다. 성능 정보를 자세한 [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)합니다.
 1. 선택 **편집 > 프로젝트 설정 > 품질**
-2. 선택 합니다 **드롭다운** 아래를 **Windows 스토어** 로고 및 선택 **매우 낮음**합니다. Windows 스토어 열 및 빠른 행의 상자에 녹색 때 설정이 올바르게 적용 됩니다 것을 알 수 있습니다.
+2. 선택 합니다 **드롭다운** 아래를 **Windows 스토어** 로고 및 선택 **매우 낮음**합니다. 설정을 때 적용 되 올바르게 알 수 있습니다 Windows Store 열에 있는 상자 및 **매우 낮음** 행은 녹색입니다.
 
 **폐색 표시를 대상으로 하는 혼합된 현실 응용 프로그램에 대 한**, 품질 설정을 기본값으로 두면 됩니다.
 
@@ -220,6 +220,6 @@ USB 케이블을 통해 장치 연결 되어 있는지 확인 합니다.
 
 ## <a name="see-also"></a>참조
 * [Unity 개발 개요](unity-development-overview.md)
-* [Unity 및 Visual Studio를 사용 하 여 작업에 대 한 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
+* [Unity 및 Visual Studio 사용 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
 * [MR Basics 101](holograms-101.md)
 * [MR Basics 101E](holograms-101e.md)

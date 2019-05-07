@@ -1,17 +1,17 @@
 ---
 title: Windows Mixed Reality 시뮬레이터를 사용 하 여
 description: Windows Mixed Reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰입 형 헤드셋 없이 PC에서 혼합된 현실 앱을 테스트할 수 있습니다.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows는 시뮬레이터를 실제로 테스트 혼합
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603638"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580698"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Windows Mixed Reality 시뮬레이터를 사용 하 여
 
@@ -28,7 +28,7 @@ Windows Mixed Reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰
    4. 클릭 **설정** 선택을 확인 하려면
 4. 클릭 합니다 **개발자를 위한** 혼합 현실 포털의 왼쪽에 단추
 5. 시뮬레이션 토글 스위치를 전환 하 고 **에서**
-   * 이렇게 하려면 관리자 권한 및 사용자 계정 컨트롤 대화 상자가 나타나면 받아들여야 합니다.
+   * 설치 하 고 왼쪽된 시뮬레이션된 6-DOF 컨트롤러에서는 기본적으로 시뮬레이션을 사용 하도록 설정 합니다.  이전 Windows 10 월 2019 업데이트를 시뮬레이션 된 6 DOF 컨트롤러를 설치 관리자 권한이 필요 합니다.  사용자 계정 컨트롤 대화 상자가 나타나면 동의 해야 합니다.
 
 이제 시뮬레이션을 사용 하 여 실행 해야!
 
@@ -50,14 +50,16 @@ Windows Mixed Reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰
 ## <a name="tracked-controllers"></a>추적된 컨트롤러
 
 혼합 현실 시뮬레이터는 최대 2 명의 핸드헬드 추적된 동작 컨트롤러를 시뮬레이션할 수 있습니다. 혼합 현실 포털의 설정/해제 스위치를 사용 하 여 사용 하도록 설정 합니다. 시뮬레이션 된 각 컨트롤러에 있습니다.
-* 공간 내의 위치
+* 위치와 방향을 공간에서
 * 홈 버튼
-* 메뉴 버튼
+* 메뉴 단추
 * 그립 단추
 * 터치 패드
+* 엄지 스틱
+* 배터리 수준
 
 ## <a name="see-also"></a>참조
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
 * [혼합된 현실 시뮬레이터 입력 고급](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
-* [Unity에서 공간 매핑](spatial-mapping-in-unity.md)
+* [Unity의 공간 매핑](spatial-mapping-in-unity.md)
 * [DirectX의 공간 매핑](spatial-mapping-in-directx.md)

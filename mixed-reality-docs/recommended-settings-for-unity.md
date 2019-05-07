@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: unity, 설정, 혼합된 현실
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600155"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993605"
 ---
 # <a name="recommended-settings-for-unity"></a>Unity에 대 한 권장된 설정
 
@@ -19,13 +19,24 @@ Unity에는 모든 플랫폼에 대 한 평균 사례는 일반적으로 기본 
 
 ## <a name="performant-environment-set-up"></a>고성능 환경 설정
 
-### <a name="low-quality-setting"></a>저품질 설정
+### <a name="low-quality-settings"></a>저품질 설정
 
-수정 해야 합니다 **Unity 품질 설정을** 사용자 환경에 대 한 **"가장 빠른"** 합니다. 응용 프로그램에서 적절 한 framerate를 성능 기준에 맞게 실행 중인지 확인 하는 데 도움이 됩니다. 이 Hololens 개발에 대 한 매우 중요 합니다. 몰입 형 헤드셋, VR 환경을 강화 데스크톱의 사양에 따라 개발에 대 한 가장 낮은 품질 매개 변수 없이 framerate 여전히 얻을 수 있습니다. 
+수정 해야 합니다 **Unity 품질 설정을** 사용자 환경에 대 한 **매우 낮음**합니다. 응용 프로그램에서 적절 한 framerate를 성능 기준에 맞게 실행 중인지 확인 하는 데 도움이 됩니다. 이 Hololens 개발에 대 한 매우 중요 합니다. 몰입 형 헤드셋, VR 환경을 강화 데스크톱의 사양에 따라 개발에 대 한 가장 낮은 품질 매개 변수 없이 framerate 여전히 얻을 수 있습니다. 
 
 Unity 2018 LTS 이상, 프로젝트의 품질 수준 설정할 수 있습니다.
 
-아래 **편집** > **프로젝트 설정** > **품질** > 설정 합니다 **기본** 클릭 하 여는 아래쪽 화살표를 **Fastest** 품질 수준
+아래 **편집** > **프로젝트 설정** > **품질** > 설정 합니다 **기본** 클릭 하 여는 아래쪽 화살표를 **매우 낮음** 품질 수준
+
+### <a name="lighting-settings"></a>조명 설정
+
+품질 장면 설정 마찬가지로 것이 중요 혼합 현실 응용 프로그램에 대 한 최적의 조명 설정을 설정할 수 있습니다. 장면에서 가장 큰 성능 영향을 해야 일반적으로 조명 설정의 Unity **실시간 전역 조명을**합니다. 이 해제할 수 있습니다 이동 하 여 **창을** > **렌더링** > **조명 설정** > **실시간 전역 조명을**합니다. 
+
+다른 조명 설정이 **전역 조명을 반영**합니다. 이 설정은 몰입 형 헤드셋에서 성능 및 시각적으로 놀라운 결과 제공할 수 있지만 일반적으로 적용 되지 않습니다 HoloLens 개발. **전역 Illumniation 반영** 알 수 없는 및 변경 환경의 특성상 HoloLens 장면에 일반적으로 제공 하지 않는 정적 Gameobject에 대해서만 계산 됩니다.
+
+읽어보세요 [Unity에서 전역 조명을](https://docs.unity3d.com/Manual/GIIntro.html) 자세한 내용은 합니다. 
+
+>[!NOTE]
+> **실시간 전역 조명을** 설정할지 **장면 당** 개발자가 자신의 프로젝트에서 모든 Unity 장면에 대 한이 속성을 저장 해야 합니다는 따라서 합니다. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>단일 패스 인스턴스 렌더링 경로
 
@@ -88,8 +99,8 @@ holographic 시작 화면 설정/해제 합니다.
 
 |  Unity 시작 화면을 표시  |  Holographic 시작 이미지  |  동작 |
 |----------|----------|----------|
-|  켜짐  |  없음  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. | 
-|  켜짐  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
+|  Windows  |  없음  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. | 
+|  Windows  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
 |  끄기  |  없음  |  앱이 로드 될 때까지 투명 한 검은색 (nothing)를 표시 합니다. | 
 |  끄기  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
 
@@ -119,7 +130,7 @@ holographic 시작 화면 설정/해제 합니다.
 
 파일을 추적 손실 될 때 사용자 지정 동작을 정의 하려면 전역 처리할 [손실 이벤트 추적](tracking-loss-in-unity.md)합니다.
 
-### <a name="capabilities"></a>기능
+### <a name="capabilities"></a>접근 권한 값
 
 특정 기능을 활용 하려면 앱 매니페스트에서 적절 한 기능 선언 해야 합니다. 매니페스트 선언 되므로 모든 후속 프로젝트 내보내기에 포함 된 Unity에서 만들 수 있습니다. 
 
@@ -135,10 +146,10 @@ Holographic 앱에 대 한 자주 사용 되는 Api를 사용 하도록 설정 �
 |  SpatialPerception  |  SurfaceObserver | 
 |  웹캠  |  PhotoCapture 및 VideoCapture | 
 |  PicturesLibrary / VideosLibrary  |  PhotoCapture 또는 VideoCapture, 각각 (저장할 때 캡처된 콘텐츠) | 
-|  마이크  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
+|  Microphone  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
 |  InternetClient  |  DictationRecognizer (및 Unity Profiler 사용) | 
 
 ## <a name="see-also"></a>참조
 * [Unity 개발 개요](unity-development-overview.md)
 * [혼합 현실 용 Understaing 성능](understanding-performance-for-mixed-reality.md)
-* [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)
+* [Unity의 권장 성능](performance-recommendations-for-unity.md)

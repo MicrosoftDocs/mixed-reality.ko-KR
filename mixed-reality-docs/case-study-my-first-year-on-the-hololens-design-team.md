@@ -6,12 +6,12 @@ ms.author: haejinl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 디자인, 편집, 개인
-ms.openlocfilehash: e16be57d42bdc003fd601b94e054c7c25ebd290e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 050645e6096559a4f37b033e5ddfdc5444039c08
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605032"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873951"
 ---
 # <a name="case-study---my-first-year-on-the-hololens-design-team"></a>사례 연구-내 첫 번째 해에는 HoloLens 디자인 팀
 
@@ -105,7 +105,7 @@ MR/VR 개발 중간 여전히 이기 때문에 어느 정도의 skeuomorphism �
 
 **"얼마나 밀접 하 게 합니까 살펴본 3d에서 장면에 관계 없이 헤드셋에서 실제 환경에서 거의 발생 하지 않는다는 스케치 동일. 이유는 것이 중요 장면에 대상 헤드셋을 테스트 하려면 "-Hae Jin lee 공저**
 
-제공 되는 모든 자습서 아웃 보았습니다 HoloLens 프로토타입 제작 [혼합 현실 Academy](academy.md) 를 시작 합니다. 사용 하 여 재생 하기 시작 하면서 [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) Microsoft holographic 응용 프로그램의 개발을 가속화 하는 개발자에 게 제공 하는 합니다. 항목이 있습니까 잘 모 르 겠, 경우 질문을 게시 [HoloLens 질문 및 답변 포럼](https://forums.hololens.com/categories/questions-and-answers/)합니다.
+제공 되는 모든 자습서 아웃 보았습니다 HoloLens 프로토타입 제작 [혼합 현실 자습서](tutorials.md) 를 시작 합니다. 사용 하 여 재생 하기 시작 하면서 [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) Microsoft holographic 응용 프로그램의 개발을 가속화 하는 개발자에 게 제공 하는 합니다. 항목이 있습니까 잘 모 르 겠, 경우 질문을 게시 [HoloLens 질문 및 답변 포럼](https://forums.hololens.com/categories/questions-and-answers/)합니다.
 
 HoloLens 프로토타입 제작의 기본적인 이해를 가져오면 다른 협조할 일 자체적으로 프로토타입에 역량을 강화 하고자 했습니다. 따라서 필자는 HoloLens를 사용 하는 간단한 발사 무기를 개발 하는 방법을 설명 하는 비디오 자습서입니다. 간단히 설명 하겠습니다 기본 개념을도 과정을 따르려면 수 있어야 HoloLens 개발 환경을 0에 있는 경우.
 

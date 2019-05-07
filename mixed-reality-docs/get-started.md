@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: 시작, 기초, HoloLens, 몰입 형 헤드셋, ar, vr, unity, visual studio, 빠른 시작 하는 방법
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601345"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873965"
 ---
 # <a name="get-started"></a>시작
 
@@ -63,7 +63,7 @@ HoloLens, (VR) 헤드셋 몰입 형, 또는 둘 다를 대상으로 하는 혼�
 
 첫 번째 MR 프로젝트를 성공적으로 만든 했으므로 자세한 아마도 배고픈 완료 되었습니다! 해야 하는 데 도움이 되는 일부 리소스는 다음과 같습니다.
 * [혼합 현실 개발자 설명서](mixed-reality.md) -아직 여기 이지만 등 많은 기술 문서, 디자인 지침, 샘플 프로젝트 및 사례 연구를 포함 하 여 확인 합니다.
-* [혼합된 현실 academy](academy.md) -핵심 MR 구성 요소를 구현 하는 데 프로젝트 설정에서 모든 내용을 다루는 자습서를 따라, MR 앱에 클라우드 서비스에 Azure를 통합 합니다.
+* [혼합 현실 자습서](tutorials.md) -핵심 MR 구성 요소를 구현 하는 데 프로젝트 설정에서 모든 내용을 다루는 자습서를 따라, MR 앱에 클라우드 서비스에 Azure를 통합 합니다.
 * [Unity에 알아봅니다](https://unity3d.com/learn) -Unity의 웹 사이트가 학습 과정의 모든 단계에서 작성자에 대 한 자습서, 프로젝트 및 라이브 교육 세션 제공 합니다.
 
 또한 이러한 유용한 커뮤니티 리소스에서 도움말을 얻을 수 있습니다.

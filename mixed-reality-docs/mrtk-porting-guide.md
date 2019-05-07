@@ -1,21 +1,21 @@
 ---
 title: HoloLens 2에 대 한 앱 준비
 description: HoloLens에 기존 앱이 있는 개발자를 목표로 (첫 번째 gen) 및/또는 이전 MRTK를 찾고 MRTK 버전 2 및 HoloLens 2로 이식 해야 합니다.
-author: author:grbury
+author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 keywords: Windows Mixed Reality MRTK MRTK 버전 2, HoloLens 2 테스트
-ms.openlocfilehash: a5a329f69f5f9cc64666483adc92786ae8910b2f
-ms.sourcegitcommit: 07773e094ace2e828e329bd55da759983be3b8c1
+ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59605287"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873910"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>HoloLens 2에 대 한 기존 앱 준비
 
-이 가이드 HoloLens 1 새 HoloLens 2 장치에 대 한 응용 프로그램 포트에 대 한 기존 Unity 앱 개발자를 위해 특별히 조정 됩니다. HoloLens 2 HoloLens 1 Unity 앱을 이식 하는 네 가지 주요 단계 있습니다. 아래 섹션에서는 각 단계에 대 한 정보를 자세히 설명 합니다. 
+이 가이드는 HoloLens에 대 한 기존 Unity 앱이 있는 개발자를 지원 하기 위해 특별히 설계 됩니다 (첫 번째 gen) 새 HoloLens 2 장치에 대 한 응용 프로그램을 이식 합니다. 4 가지 주요 단계는 HoloLens 이식에 (첫 번째 gen) HoloLens 2 Unity 앱. 아래 섹션에서는 각 단계에 대 한 정보를 자세히 설명 합니다. 
 
 | 1단계 | 2단계 | 3단계 | 4단계 |
 |----------|-------------------|-------------------|-------------------|
@@ -31,11 +31,12 @@ ms.locfileid: "59605287"
 
 ## <a name="migrate-project-to-latest-version-of-unity"></a>Unity의 최신 버전으로 프로젝트 마이그레이션
 
-Unity 응용 프로그램을 이식 하는 첫 번째 단계 Unity의 최신 버전에서 열 수 있습니다. 현재 두 가지 옵션에서 선택할 수 있습니다: Unity 2018.3.x 또는 Unity 2019.1.x 베타. 이러한 두 버전 간의 여러 장단점 있지만 significance의 주요 차이점은 ARM64 Unity 2019 +에 대 한 컴파일하는 기능을 합니다. 
+MRTK v2를 사용 하는 경우 Unity 2018 LTS에서 MRTK 또는 Unity의 주요 변경 하지 않고 가장 적합 한 장기 지원 경로 여야 합니다.  권장 되는 Unity 빌드는 위의 "설치" 도구 당 Unity 2018.3 Unity 2018 LTS 릴리스 될 경우  MRTK v2는 항상 Unity 2018 LTS에 대 한 지원을 보장 하지만 반드시 Unity의 모든 반복에 대 한 지원을 보장 또한 2019.x 합니다. 
 
-모든 개발자 평가 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html) 현재에 존재 하는 프로젝트 및 여부는 ARM64 용 이러한 Dll를 빌드할 수 있습니다. ARM64 용 강한 종속성 플러그 인을 빌드할 수 없습니다, 하나는 경우 Unity 2018 LTS를 활용 하 합니다. ARM64로 이식 일반적으로 필요한 경우 가능 하면 다양 한 성능 향상 ARM32 비교 하 여 장치에서 볼 수 있습니다.
+Unity 간의 추가 차이점을 명확 하 게 2018.3.x 또는 Unity에서 Unity 2019 ARM64 용 컴파일하는 기능을 되 significance의 주요 차이점을 사용 하 여 이러한 두 버전 간의 장단점 윤곽선 아래 2019.1.x 합니다. 
 
-또한 혼합 현실 Toolkit V2는 항상 Unity 2018 LTS에 대 한 지원을 보장 하지만 반드시 Unity 2019.x+의 모든 반복에 대 한 지원을 보장. 
+모든 개발자 평가 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html) 현재에 존재 하는 프로젝트 및 여부는 ARM64 용 이러한 Dll를 빌드할 수 있습니다. ARM64 용 강한 종속성 플러그 인을 빌드할 수 없습니다, 하나는 경우 Unity 2018 LTS를 활용 하 합니다.
+
 
 | Unity 2018.3.x | Unity 2019.1+ |
 |----------|-------------------|
@@ -131,6 +132,6 @@ HoloLens 2에 대 한 가장 앱 디자인을 업데이트 하는 단계:
 * [MRTK 버전 2 사용 하 여 시작](mrtk-getting-started.md)
 * [MRTK Version 2 HowTo](https://microsoft.github.io/MixedRealityToolkit-Unity/External/HowTo/README.html)
 * [도구 설치](install-the-tools.md)
-* [Unity에 대 한 권장된 설정](recommended-settings-for-unity.md)
+* [Unity 권장 설정](recommended-settings-for-unity.md)
 * [혼합 현실에 대 한 성능 이해](understanding-performance-for-mixed-reality.md)
 
