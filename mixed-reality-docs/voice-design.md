@@ -1,21 +1,21 @@
 ---
-title: 음성 디자인
+title: 응시 및 음성
 description: 응시, 제스처 및 음성 (GGV)은 기본 HoloLens에서 상호 작용 합니다. 이 문서에서는 음성 디자인 상세한 지침을 제공합니다.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 음성
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604142"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469083"
 ---
-# <a name="voice-design"></a>음성 디자인
+# <a name="gaze-and-voice"></a>응시 및 음성
 
-응시, 제스처 및 음성 (GGV)은 기본 HoloLens에서 상호 작용 합니다. [Gaze](gaze.md) 사용을 [커서](cursors.md) 상호 작용할 준비가 콘텐츠를 대상으로 사용자에 대 한 메커니즘입니다. [제스처](gestures.md) 나 [음성](voice-input.md) 의도 메커니즘입니다. 상호 작용을 완료 하려면 제스처 또는 음성 게이즈를 사용할 수 있습니다.
+응시, 제스처 및 음성 (GGV) HoloLens에서 상호 작용의 주요 방법으로 (첫 번째 gen). [Gaze](gaze.md) 사용을 [커서](cursors.md) 상호 작용할 준비가 콘텐츠를 대상으로 사용자에 대 한 메커니즘입니다. [제스처](gestures.md) 나 [음성](voice-input.md) 의도 메커니즘입니다. 상호 작용을 완료 하려면 제스처 또는 음성 게이즈를 사용할 수 있습니다.
 
 몰입 형 헤드셋 상호 작용의 주요 수단에 응시 커밋 및 지점 커밋 (사용 하 여는 [동작 컨트롤러](motion-controllers.md)). 사용자 음성 기능을 사용 하 여 헤드셋 있으면 작업을 완료할 음성 게이즈 또는 지점 함께 수입니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "59604142"
 <tr>
 <th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
 </tr><tr>
-<td> 음성</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
+<td>응시 및 음성</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Windows Mixed Reality "표시, 말" 음성 모델을 채택 했습니다 위치 
 
 ## <a name="see-also"></a>참조
 * [제스처](gestures.md)
-* [대상으로 응시](gaze-targeting.md)
+* [응시 대상 지정](gaze-targeting.md)

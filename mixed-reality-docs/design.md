@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 스타일, 색, 앱 패턴, 컨트롤, 혼합 현실 도구 키트, MRTK 샘플 앱
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603705"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469088"
 ---
 # <a name="design-for-mixed-reality"></a>혼합된 현실에 대 한 디자인
 
@@ -66,19 +66,19 @@ ms.locfileid: "59603705"
                     <div class="cardText">
                         <h3>상호 작용 디자인</h3>
                         <p>
-                            <a href="interaction-fundamentals.md">상호 작용 기본 사항</a>
-                        </p>
-                        <p>
                             <a href="comfort.md">Comfort</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">대상으로 응시</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Instinctual 상호 작용</a>
                         </p>
                         <p>
-                            <a href="gestures.md">제스처</a>
+                            <a href="hands-and-tools.md">실습 및 컨트롤러</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">핸 즈 프리</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">음성 디자인</a>
+                            <a href="gaze-and-commit.md">헤드 게이즈 및 커밋</a>
                         </p>
                     </div>
                 </div>

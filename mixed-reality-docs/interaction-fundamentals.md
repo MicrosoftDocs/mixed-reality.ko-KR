@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993600"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469103"
 ---
 # <a name="introducing-instinctual-interactions"></a>소개 instinctual 상호 작용
 간단 하 고 instinctual 상호 작용의 원리는 혼합 현실 Microsoft 플랫폼 전체 연결 되어 있습니다.  응용 프로그램 디자이너와 개발자가 고객에 게 쉽고 직관적인 상호 작용에 제공할 수 있는지 확인 하는 세 단계 살펴보았으며, 합니다. 
@@ -55,7 +55,7 @@ ms.locfileid: "64993600"
         <td>HoloLens 2<br>6DOF 컨트롤러를 포함 하는 몰입 형 Windows</td>
     </tr>
     <tr>
-        <td><a href="hands-free.md">핸 즈 프리</a></td>
+        <td><a href="hands-free.md">핸즈프리</a></td>
         <td>작업을 학습 하 고 유지 관리는 사용자의 손에 예: 하 게 사용 하는 상황에 맞는 환경</td>
         <td>일부 학습<br>실습을 사용할 수 없는 경우<br>음성 및 자연 언어 쌍</td>
         <td>HoloLens 2<br>HoloLens (첫 번째 범용)<br> Windows Immersive</td>
@@ -107,7 +107,7 @@ Affordances 동작과 각 상호 작용 모델에 대해 최적화 된 방법의
     <tr>
         <td><strong>Model</strong></td>
         <td><strong>어떻게이 작업은?</strong></td>
-        <td><strong>확인 하려면 어떤 어떻게 해야 합니까?</strong></td>
+        <td><strong>수행할 수 있습니다 어떻게 알 수 있나요?</strong></td>
         <td><strong>방금 필자 어떻게 알 수 있나요?</strong></td>
     </tr>
     <tr>

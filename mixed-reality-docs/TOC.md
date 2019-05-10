@@ -80,21 +80,28 @@
 ## 디자인 시작
 ### [혼합 현실이란?](mixed-reality.md)
 ### [홀로그램이란?](hologram.md)
+### [편안함](Comfort.md)
+### [홀로그램 프레임](Holographic-frame.md)
+### [공간 매핑 디자인](Spatial-mapping-design.md)
+### [공간 음향 디자인](Spatial-sound-design.md)
 ### [디자인 팀에서 보낸 첫해](case-study-my-first-year-on-the-hololens-design-team.md)
 ### [혼합 현실의 디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [보다 개인적인 컴퓨팅을 찾아서](case-study-the-pursuit-of-more-personal-computing.md)
 ### [AfterNow의 프로세스 - 구상, 프로토타입 생성, 빌드](case-study-afternows-process-envisioning,-prototyping,-building.md)
-## 상호 작용 디자인
-### [상호 작용 기본 사항](Interaction-fundamentals.md)
-### [편안함](Comfort.md)
-### [응시 대상 지정](Gaze-targeting.md)
-### [제스처](Gestures.md)
-### [음성 디자인](Voice-design.md)
-### [홀로그램이란?](Hologram.md)
-### [홀로그램 프레임](Holographic-frame.md)
-### [공간 매핑 디자인](Spatial-mapping-design.md)
-### [공간 음향 디자인](Spatial-sound-design.md)
-### [모션 컨트롤러](Motion-controllers.md)
+## MR 디자인 시스템 및 도구
+### [Instinctual 상호 작용](Interaction-fundamentals.md)
+#### [실습 및 모션 컨트롤러](hands-and-tools.md)
+##### [직접 조작](direct-manipulation.md)
+##### [지점 및 커밋](point-and-commit.md)
+##### [모션 컨트롤러](Motion-controllers.md)
+#### [핸즈프리](hands-free.md)
+##### [응시 및 유지](Gaze-and-dwell.md)
+##### [응시 및 음성](Voice-design.md)
+#### [헤드 게이즈 및 커밋](gaze-and-commit.md)
+### 추가 상호 작용
+#### [응시](eye-tracking.md)
+#### [응시 대상 지정](Gaze-targeting.md)
+#### [제스처](Gestures.md)
 ## 스타일
 ### [색, 광원 및 재질](color,-light-and-materials.md)
 ### [공간 음향 디자인](spatial-sound-design.md)
@@ -130,7 +137,8 @@
 ## Unity
 ### [Unity 개발 개요](unity-development-overview.md)
 ### 시작
-#### [혼합 현실 도구 키트](mrtk-getting-started.md)
+#### [Mixed Reality Toolkit v2로 개발 가속화](mrtk-getting-started.md)
+#### [Windows Mixed Reality를 위한 Unity 프로젝트 구성](Configure-Unity-Project.md)
 #### [Unity 권장 설정](recommended-settings-for-unity.md)
 #### [Unity 플레이 모드](unity-play-mode.md)
 #### [Unity Visual Studio 솔루션 내보내기 및 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
@@ -141,6 +149,7 @@
 #### [Unity의 지속성](persistence-in-unity.md)
 #### [Unity의 응시](gaze-in-unity.md)
 #### [Unity의 제스처 및 모션 컨트롤러](gestures-and-motion-controllers-in-unity.md)
+#### [Unity의 직접 및 시선 추적](hand-eye-in-unit.md)
 #### [Unity의 음성 입력](voice-input-in-unity.md)
 #### [Unity의 공간 매핑](spatial-mapping-in-unity.md)
 #### [Unity의 공간 음향](spatial-sound-in-unity.md)
@@ -153,6 +162,7 @@
 ### 고급 항목
 #### [HoloLens용 Unity 앱에서 Windows 네임스페이스 사용](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
+### 레거시 문서(Unity 2017.4/HTK/MRTK v1)
 ## Unreal
 ### HoloLens 2용 Unreal - 출시 예정!
 ## DirectX
@@ -176,9 +186,18 @@
 #### [홀로그램 원격 기능 추가](add-holographic-remoting.md)
 ## WebVR
 ### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
-## [자습서 및 샘플 앱](academy.md)
+## [자습서 및 샘플 앱](tutorials.md)
 ### Unity
-#### 오픈 소스 샘플 앱
+#### MR 학습 모듈
+##### HoloLens 2
+###### [기본 모듈 - 개요 및 목표](mrlearning-base.md)
+####### [프로젝트 초기화 및 첫 번째 애플리케이션](mrlearning-base-ch1.md)
+####### [사용자 인터페이스, 직접 추적 및 혼합 현실 도구 키트 구성](mrlearning-base-ch2.md)
+####### [동적 콘텐츠 배치 및 해결자](mrlearning-base-ch3.md)
+####### [3D 개체 상호 작용](mrlearning-base-ch4.md)
+####### [고급 입력](mrlearning-base-ch5.md)
+####### [데모 앱](mrlearning-base-ch6.md)
+#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
 ##### [원소의 주기율표](periodic-table-of-the-elements.md)
 ##### [달착륙선](lunar-module.md)
 ##### [갤럭시 익스플로러](galaxy-explorer.md)
@@ -266,8 +285,8 @@
 
 # 프로그램 및 이벤트
 ## [혼합 현실 개발자의 날](mr-dev-days.md)
+### [혼합 현실 개발자의 날 세션](mr-dev-days-sessions.md)
 ### [혼합 현실 개발자의 날 FAQ](mr-dev-days-faq.md)
-## [혼합 현실 쇼](realities-show.md)
 ## [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
 ## [CVPR 2018 HoloLens 연구 모드 세션](cvpr-2018.md)
 ## [컴퓨터 비전 연구용 도구 ECCV 2018 HoloLens](eccv-2018.md)
