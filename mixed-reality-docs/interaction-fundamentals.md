@@ -6,19 +6,19 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469103"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524342"
 ---
 # <a name="introducing-instinctual-interactions"></a>소개 instinctual 상호 작용
 간단 하 고 instinctual 상호 작용의 원리는 혼합 현실 Microsoft 플랫폼 전체 연결 되어 있습니다.  응용 프로그램 디자이너와 개발자가 고객에 게 쉽고 직관적인 상호 작용에 제공할 수 있는지 확인 하는 세 단계 살펴보았으며, 합니다. 
 
 먼저이 놀라운 센서 및 입력된 기술을 직접 추적, 시선 추적, 자연 언어 등 조직의 다중 모달 방식 상호 작용을 원활 하 게 모델 결합 해야 했습니다.  디자인 및 multimodally-개발 하 고 단일 입력을 기반으로 하지는 연구에 기초한-instinctual 환경을 만드는 키입니다.
 
-둘째, 인식 많은 개발자가 여러 장치를 대상으로 HoloLens 2 및 HoloLens 즉 여부 (첫 번째 gen) HoloLens 및 VR 또는 합니다.  따라서 (경우에 입력된 기술을 각 장치에 따라 달라 집니다) 장치에서 작동 하도록 상호 작용 모델 디자인 했습니다.  예를 들어 6DOF 컨트롤러와 Windows 몰입 형 헤드셋에서 먼 상호 작용 및 HoloLens 2 모두에 먼 상호 작용 패턴을 쉽게 장치 간 응용 프로그램에 대 한 확인 하 고 동일한 affordances를 사용 합니다. 뿐만 아니라이 편리 개발자 및 디자이너, 하지만 최종 사용자에 게 자연스럽 게 받아들이며에 대 한 합니다. 
+둘째, 인식 많은 개발자가 여러 장치를 대상으로 HoloLens 2 및 HoloLens 즉 여부 (첫 번째 gen) HoloLens 및 VR 또는 합니다.  따라서 (경우에 입력된 기술을 각 장치에 따라 달라 집니다) 장치에서 작동 하도록 상호 작용 모델 디자인 했습니다.  예를 들어 6DoF 컨트롤러와 Windows 몰입 형 헤드셋에서 먼 상호 작용 및 HoloLens 2 모두에 먼 상호 작용 패턴을 쉽게 장치 간 응용 프로그램에 대 한 확인 하 고 동일한 affordances를 사용 합니다. 뿐만 아니라이 편리 개발자 및 디자이너, 하지만 최종 사용자에 게 자연스럽 게 받아들이며에 대 한 합니다. 
 
 마지막으로, 효율적이 고 흥미로운 수천 개의 마법의 상호 작용 MR에서 가능한 개는 의도적으로 사용 하는 단일 상호 작용 모델의 종단 간 인식 하는 동안 응용 프로그램은 가장 좋은 방법은 사용자가 성공적으로 확인 하 고 훌륭한 환경을 제공 합니다.  이 위해 다음 세 가지가 상호 작용 지침에 포함 되었습니다.
 * 에서는 세 가지 기본 상호 작용 모델 및 구성 요소와 각각에 대해 필요한 패턴을 기반으로 한이 지침을 구조화 했습니다.
@@ -51,8 +51,8 @@ ms.locfileid: "65469103"
     <tr>
         <td><a href="hands-and-tools.md">실습 및 도구</a></td>
         <td>3D 공간 환경<br>예: 공간 레이아웃 및 디자인, 콘텐츠 조작 또는 시뮬레이션</td>
-        <td>새 사용자에 대 한 유용한<br>낮은 학습 곡선<br>쉽게 visual affordances 없으며<br>직접 추적 및 6 DoF 컨트롤러 간에 일관 된 UX<br>음성, 시각 추적 또는 헤드 게이즈와 결합 하면 유용한</td>
-        <td>HoloLens 2<br>6DOF 컨트롤러를 포함 하는 몰입 형 Windows</td>
+        <td>새 사용자에 대 한 유용한<br>낮은 학습 곡선<br>쉽게 visual affordances 없으며<br>직접 추적 및 6DoF 컨트롤러 간에 일관 된 UX<br>음성, 시각 추적 또는 헤드 게이즈와 결합 하면 유용한</td>
+        <td>HoloLens 2<br>6DoF 컨트롤러를 포함 하는 몰입 형 Windows</td>
     </tr>
     <tr>
         <td><a href="hands-free.md">핸즈프리</a></td>

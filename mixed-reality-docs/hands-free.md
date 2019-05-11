@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: 핸 즈 프리, gaze, 대상, 상호 작용 디자인 gaze 혼합 현실
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581033"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524325"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>핸 즈 프리에 대 한 앱 최적화
 
@@ -97,6 +97,6 @@ ms.locfileid: "64581033"
 
 
 ## <a name="see-also"></a>참조
-* [응시 및 커밋](gaze-and-commit.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
 * [직접 조작](direct-manipulation.md)
 * [지점 및 커밋](point-and-commit.md)
