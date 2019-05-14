@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Galaxy 탐색기, HoloLens, Windows Mixed Reality 사례 연구 아이디어 공유
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59604832"
@@ -147,7 +147,7 @@ Quads 대신 다이아몬드입니다.
 
 ### <a name="a-bit-of-context-first"></a>비트 컨텍스트의 우선
 
-게임에서 질감을 사용 하는 경우 질감 크기는 거의 사용 하려는 영역을 일치 하지만 다른 종류의 질감 필터링 질감의 픽셀에서 원하는 색을 보간 하는 그래픽 카드를 가져오고을 사용할 수 있습니다 ([질감 필터링<c3/>). 미국 관심 있는 필터링 [쌍선형 필터링](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) 는 가장 인접 한 항목 4를 사용 하 여 픽셀의 값을 계산 됩니다.
+게임에서 질감을 사용 하는 경우 질감 크기는 거의 사용 하려는 영역을 일치 하지만 다른 종류의 질감 필터링 질감의 픽셀에서 원하는 색을 보간 하는 그래픽 카드를 가져오고을 사용할 수 있습니다 ([질감 필터링<c3/>).](https://msdn.microsoft.com/library/dn642451.aspx) 미국 관심 있는 필터링 [쌍선형 필터링](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) 는 가장 인접 한 항목 4를 사용 하 여 픽셀의 값을 계산 됩니다.
 
 ![필터링 하기 전에 원래](images/texture-1.png)
 
