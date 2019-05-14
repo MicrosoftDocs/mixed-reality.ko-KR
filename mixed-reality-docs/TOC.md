@@ -48,11 +48,13 @@
 ### [AfterNow의 프로세스 - 구상, 프로토타입 생성, 빌드](case-study-afternows-process-envisioning,-prototyping,-building.md)
 ### [HoloLens용 공간 레이아웃 및 UX 스케치 앱 HoloSketch 빌드](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [HoloTour 콘텐츠 캡처 및 만들기](case-study-capturing-and-creating-content-for-holotour.md)
-### [혼합 현실에서 은하계 만들기](case-study-creating-a-galaxy-in-mixed-reality.md)
 ### [Fragments의 몰입형 환경 만들기](case-study-creating-an-immersive-experience-in-fragments.md)
 ### [멋진 HoloTour 전망 만들기](case-study-creating-impossible-perspectives-for-holotour.md)
 ### [혼합 현실의 디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [HoloLens의 공간 매핑 기능 확장](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+### 갤럭시 익스플로러
+#### [Hololens(1세대)용 혼합 현실에서 은하계 만들기](case-study-creating-a-galaxy-in-mixed-reality.md)
+#### [HoloLens 2용 갤럭시 익스플로러 업데이트](galaxy-explorer-update.md)
 ### [HoloStudio UI 및 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 ### [Lowe의 주방이 주는 교훈](case-study-lessons-from-the-lowes-kitchen.md)
 ### [현실의 구멍 속 살펴보기](case-study-looking-through-holes-in-your-reality.md)
@@ -190,7 +192,8 @@
 ### Unity
 #### MR 학습 모듈
 ##### HoloLens 2
-###### [기본 모듈 - 개요 및 목표](mrlearning-base.md)
+###### 기본 모듈
+####### [기본 모듈 - 개요 및 목표](mrlearning-base.md)
 ####### [프로젝트 초기화 및 첫 번째 애플리케이션](mrlearning-base-ch1.md)
 ####### [사용자 인터페이스, 직접 추적 및 혼합 현실 도구 키트 구성](mrlearning-base-ch2.md)
 ####### [동적 콘텐츠 배치 및 해결자](mrlearning-base-ch3.md)
