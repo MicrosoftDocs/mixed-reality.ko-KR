@@ -90,20 +90,17 @@
 ### [혼합 현실의 디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [보다 개인적인 컴퓨팅을 찾아서](case-study-the-pursuit-of-more-personal-computing.md)
 ### [AfterNow의 프로세스 - 구상, 프로토타입 생성, 빌드](case-study-afternows-process-envisioning,-prototyping,-building.md)
-## MR 디자인 시스템 및 도구
-### [Instinctual 상호 작용](Interaction-fundamentals.md)
-#### [실습 및 모션 컨트롤러](hands-and-tools.md)
-##### [직접 조작](direct-manipulation.md)
-##### [지점 및 커밋](point-and-commit.md)
-##### [모션 컨트롤러](Motion-controllers.md)
-#### [핸즈프리](hands-free.md)
-##### [응시 및 유지](Gaze-and-dwell.md)
-##### [응시 및 음성](Voice-design.md)
-#### [헤드 게이즈 및 커밋](gaze-and-commit.md)
+## [Instinctual 상호 작용](Interaction-fundamentals.md)
+### [실습 및 모션 컨트롤러](hands-and-tools.md)
+#### [수동으로 직접 조작](direct-manipulation.md)
+#### [수동으로 가리키고 커밋](point-and-commit.md)
+#### [모션 컨트롤러](Motion-controllers.md)
+### [핸즈프리](hands-free.md)
+#### [음성 명령](Voice-design.md)
+#### [헤드 게이즈 및 유지](Gaze-and-dwell.md)
+### [헤드 게이즈 및 커밋](gaze-and-commit.md)
 ### 추가 상호 작용
-#### [응시](eye-tracking.md)
-#### [응시 대상 지정](Gaze-targeting.md)
-#### [제스처](Gestures.md)
+#### [눈 응시](eye-tracking.md)
 ## 스타일
 ### [색, 광원 및 재질](color,-light-and-materials.md)
 ### [공간 음향 디자인](spatial-sound-design.md)
@@ -175,7 +172,8 @@
 #### [DirectX의 렌더링](rendering-in-directx.md)
 ### 핵심 구성 요소
 #### [DirectX의 좌표계](coordinate-systems-in-directx.md)
-#### [DirectX의 응시, 제스처 및 모션 컨트롤러](gaze,-gestures,-and-motion-controllers-in-directx.md)
+#### [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
+#### [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 #### [DirectX의 음성 입력](voice-input-in-directx.md)
 #### [DirectX의 공간 음향](spatial-sound-in-directx.md)
 #### [DirectX의 공간 매핑](spatial-mapping-in-directx.md)
@@ -186,6 +184,7 @@
 ### 고급 항목
 #### [홀로그램 DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
 #### [홀로그램 원격 기능 추가](add-holographic-remoting.md)
+### [OpenXR](openxr.md)
 ## WebVR
 ### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [자습서 및 샘플 앱](tutorials.md)
