@@ -6,13 +6,14 @@ author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 스타일, 색, 앱 패턴, 컨트롤, 혼합 현실 도구 키트, MRTK 샘플 앱
-ms.openlocfilehash: aa7b1ba42823324bf247580781b46a4f4c885d99
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524348"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730842"
 ---
 # <a name="design-for-mixed-reality"></a>혼합된 현실에 대 한 디자인
 
@@ -230,7 +231,7 @@ ms.locfileid: "65524348"
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Galaxy 탐색기</h3>
+                            <h3>갤럭시 익스플로러</h3>
                             <p>Galaxy 탐색기 프로젝트가 준비 합니다. 커뮤니티와 아이디어를 공유, 감시, 앱을 선택한 팀, 빌드 및 소스 코드를 이제 얻을 수 있습니다.</p>
                         </div>
                     </div>

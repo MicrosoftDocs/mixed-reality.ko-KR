@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: 혼합 현실, 입력, 응시 눈 추적
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730772"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>시선 추적 HoloLens 2
 HoloLens 2에서는 컨텍스트 및 사람이 이해는 Holographic 내에서 완전히 새로운 수준에 대 한 사용자에서 원하는 것에 대 한 정보를 사용 하 여 놀라운 기능을 사용 하 여 개발자가 제공 하 여 환경입니다. 이 페이지에는 개발자가 다양 한 사용 사례에 대 한 눈 모양 추적에서 이점을 얻을 수 있습니다 하는 방법 및 눈-게이즈 기반 사용자 인터페이스를 디자인할 때 살펴봐야 할 간략히를 설명 합니다. 

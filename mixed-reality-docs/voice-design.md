@@ -1,25 +1,23 @@
 ---
-title: 응시 및 음성
+title: 음성 명령 실행
 description: 응시, 제스처 및 음성 (GGV)은 기본 HoloLens에서 상호 작용 합니다. 이 문서에서는 음성 디자인 상세한 지침을 제공합니다.
-author: grbury
-ms.author: grbury
+author: shentan
+ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 음성
-ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730795"
 ---
-# <a name="gaze-and-voice"></a>응시 및 음성
+# <a name="voice-commanding"></a>음성 명령 실행
 
-응시, 제스처 및 음성 (GGV) HoloLens에서 상호 작용의 주요 방법으로 (첫 번째 gen). [Gaze](gaze.md) 사용을 [커서](cursors.md) 상호 작용할 준비가 콘텐츠를 대상으로 사용자에 대 한 메커니즘입니다. [제스처](gestures.md) 나 [음성](voice-input.md) 의도 메커니즘입니다. 상호 작용을 완료 하려면 제스처 또는 음성 게이즈를 사용할 수 있습니다.
+음성 명령을 사용 하는 경우 게이즈는 일반적으로 대상 mechaninism,으로 여부를 포인터로 사용 ("select") 또는 응용 프로그램에 명령을 보내기 위해 ("표시, 말"). 물론, 일부 음성 명령을 "시작"또는 "Hey, Cortana."와 같은 전혀 대상 필요가
 
-몰입 형 헤드셋 상호 작용의 주요 수단에 응시 커밋 및 지점 커밋 (사용 하 여는 [동작 컨트롤러](motion-controllers.md)). 사용자 음성 기능을 사용 하 여 헤드셋 있으면 작업을 완료할 음성 게이즈 또는 지점 함께 수입니다.
-
-앱을 디자인 하는 동안 어떻게 함께 잘 작동 하는 이러한 상호 작용 하도록 고려해 야 합니다.
 
 ## <a name="device-support"></a>장치 지원
 
@@ -27,7 +25,7 @@ ms.locfileid: "65469083"
 <tr>
 <th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
 </tr><tr>
-<td>응시 및 음성</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
+<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
 </tr>
 </table>
 
@@ -51,13 +49,16 @@ ms.locfileid: "65469083"
    * "Hey Cortana"
    * [선택]
 
-### <a name="what-users-can-say"></a>사용자가 무엇 일까요?
+### <a name="select"></a>[선택]
 
-사용자 게이즈 또는 가리키는 통해 모든 단추를 대상으로 하는 대로 단어를 말할 수 있습니다 **"Select"** 해당 단추를 활성화 합니다. "선택"에 대 한 항상 수신 대기 하는 저전력 키워드 중 하나입니다. 계속 진행 합니다 사용자도 사용할 수 "단추 문법" 시스템 또는 앱에서. 예를 들어, 앱을 보고 하는 동안 사용자 말할 수 명령을 "제거" 합니다 (앱 바에서) 환경에서 앱을 제거 하려면.
+언제 든 지 "select" 라는 게이즈 커서가 가리키는 무엇이 든 활성화 됩니다. 
+
+>참고: HoloLens 2에서는 먼저 호출할 수는 마디 게이즈 커서 요구 사항 "select"입니다. 예를 들어, "" 다시 활성화 하려면 클릭 합니다. 응시 커서를 숨기려면 손으로-airtap 또는 개체를 터치 하기만 하면 됩니다. 
 
 ### <a name="see-it-say-it"></a>표시, 말
 
 Windows Mixed Reality "표시, 말" 음성 모델을 채택 했습니다 위치 **단추에서 레이블이 연결된 음성 명령에 동일**합니다. 레이블 및 음성 명령 간에 모든 dissonance 없는, 때문에 사용자가 더 잘 이해 하기 시스템을 제어 하 게 합니다. 생각을 단추에 잠기거나 그럴 하는 동안이 강화 하는 **"음성은 tip를 유지 하는 데 사용"** 단추는 사용 하도록 설정 하는 음성 통신에 표시 됩니다.
+
 
 ![예제 1 말 표시](images/voice-seeitsayit1-640px.jpg)
 

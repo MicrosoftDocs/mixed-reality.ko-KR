@@ -6,13 +6,14 @@ author: grbury
 ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: 혼합 현실을, 개발, 개발, HoloLens, directx, unity
-ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 59b41c6b71e546bac6e3b76c038229d6de45b535
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993589"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730791"
 ---
 # <a name="development-launchpad"></a>개발 실행 패드
 
@@ -55,7 +56,7 @@ ms.locfileid: "64993589"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>기기</h3>
+                        <h3>장치</h3>
                           <p>
                             <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
                         </p>

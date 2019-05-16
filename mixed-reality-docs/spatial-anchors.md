@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: 좌표계, 공간 좌표계, 전 세계 규모, 환경, 확장, 위치, 방향, 앵커, 공간 앵커, world 잠긴, 전 세계 잠금, 지 속성 공유
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605107"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730856"
 ---
 # <a name="spatial-anchors"></a>공간 앵커
 
@@ -74,8 +75,8 @@ ms.locfileid: "59605107"
 
 ## <a name="see-also"></a>참조
 * [좌표계](coordinate-systems.md)
-* [혼합된 현실 환경 공유했습니다](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 공간 앵커</a>
-* [Unity의 지 속성](persistence-in-unity.md)
+* [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [Unity의 지속성](persistence-in-unity.md)
 * [DirectX의 공간 앵커](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [사례 연구-구멍에 실제로 탐색](case-study-looking-through-holes-in-your-reality.md)

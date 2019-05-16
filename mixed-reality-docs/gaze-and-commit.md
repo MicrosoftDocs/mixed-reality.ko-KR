@@ -1,17 +1,18 @@
 ---
-title: 응시 및 커밋
-description: 응시 및 커밋 입력된 모델 개요
+title: 헤드 게이즈 및 커밋
+description: Head 게이즈 및 커밋 입력된 모델 개요
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873980"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730818"
 ---
 # <a name="head-gaze-and-commit"></a>헤드 게이즈 및 커밋
 헤드 게이즈 커밋 이며 앞으로 가리키는 머리 (헤드-방향)의 방향 사용 하 여 개체를 대상으로 하는 입력된 모델 및 등을 입력 한 다음 보조를 사용 하 여 역할에 어 탭 손 제스처 또는 음성 명령을 "Select"입니다. 콘텐츠는 arm 이외의 도달 하는 상호 작용 하기 위한 가장 적합 하므로 간접 조작을 사용 하 여 "훨씬" 입력된 모델을 간주 됩니다.
@@ -53,14 +54,14 @@ ms.locfileid: "64873980"
 - Xbox 게임 패드에서 'A' 단추를 누릅니다.
 - Xbox 적응 컨트롤러에 'A' 단추를 누릅니다.
 
-### <a name="gaze-and-air-tap-gesture"></a>응시 및 air 탭 하기 제스처
+### <a name="head-gaze-and-air-tap-gesture"></a>헤드 게이즈 및 air 탭 하기 제스처
 어 탭에는 수직 보유 손으로 탭 제스처입니다. 어 탭을 수행 하려면 준비 위치로 집게 손가락을 발생 시키는 엄지 손가락으로 축소 하 고 해제 하려면 백업 집게 손가락을 발생 시킵니다. HoloLens 1 어 탭에는 가장 일반적인 보조 입력 합니다.
 
 ![준비 위치에 다음을 탭 하거나 클릭 동작 손가락](images/readyandpress.jpg)<br>
 
 어 탭 HoloLens 2에서 제공 되며 원본 버전에서 완화 되었습니다. 손 모양 아이콘이 수직 및를 보유 하는 여전히으로 거의 모든 유형의 pinches 이제 지원 됩니다. 이 훨씬 쉽게 배우고 제스처를 수행 하는 사용자에 대 한 합니다.  이 새 어 탭 하므로 기존 응용 프로그램에서는 새 동작을 자동으로 가져옵니다 HoloLens 2에 대 한 다시 컴파일한 후 동일한 API 통해 기존을 대체 합니다.
 
-### <a name="gaze-and-select-voice-command"></a>응시 및 음성 명령 [선택]
+### <a name="head-gaze-and-select-voice-command"></a>헤드 게이즈 및 "선택" 음성 명령
 음성 명령 혼합 현실에서 기본 상호 작용 메서드 중 하나입니다. 시스템을 제어 하는 매우 강력한 "제공 가능한" 메커니즘을 제공 합니다. 음성 상호 작용 모델의 같지만 종류가 있습니다.
 
 - "Select"는 일반 명령 "클릭" 폐쇄 또는 커밋 보조 입력으로 수행할 수 있습니다.
@@ -72,7 +73,7 @@ ms.locfileid: "64873980"
 사용 가능한 명령 및 사용 하는 방법의 comprenhesive 목록과 자세한 세부 정보를 찾으려면 체크 아웃 우리의 [디자인 음성](voice-design.md) 지침입니다.
 
 
-### <a name="gaze-and-hololens-clicker"></a>응시 및 HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>헤드 게이즈 및 HoloLens Clicker
 HoloLens Clicker HoloLens 위해 특별히 구축 된 첫 번째 주변 장치 이며 1 HoloLens Development Edition에 포함 합니다. HoloLens Clicker 사용자를를 최소 손 동작을 사용 하 여 클릭 하 고 보조 입력으로 커밋할 수 있습니다. HoloLens clicker HoloLens 1 또는 2 Bluetooth Low Energy (BTLE)를 사용 하 여 연결 합니다.
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ HoloLens Clicker
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>응시 및 Xbox 무선 컨트롤러
+### <a name="head-gaze-and-xbox-wireless-controller"></a>헤드 게이즈 및 Xbox 무선 컨트롤러
 Xbox 무선 컨트롤러 "클릭" 폐쇄 A 단추를 사용 하 여 입력 보조로 수행할 수 있습니다. 장치는 이동 하는 데 도움이 되는 작업 및 제어 시스템의 기본 집합에 매핑됩니다. 컨트롤러를 사용자 지정 하려는 경우 Xbox 무선 컨트롤러를 구성 하는 Xbox Accesories 앱을 사용 합니다.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Xbox 무선 컨트롤러
 [PC와 Xbox 컨트롤러를 연결합니다.](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>적응 게이즈 및 Xbox 컨트롤러
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>적응 헤드 게이즈 및 Xbox 컨트롤러
 를 주로 부자유 게이머의 요구를 충족 하도록 디자인 Xbox 적응 컨트롤러는 혼합 현실 더 쉽게 액세스할 수 있도록 장치에 대 한 통합된 허브 이지요.
 
 Xbox 적응 컨트롤러 "클릭" 폐쇄 A 단추를 사용 하 여 입력 보조로 수행할 수 있습니다. 장치는 이동 하는 데 도움이 되는 작업 및 제어 시스템의 기본 집합에 매핑됩니다. 컨트롤러를 사용자 지정 하려는 경우 적응 Xbox 컨트롤러를 구성 하는 Xbox Accesories 앱을 사용 합니다.
@@ -110,16 +111,11 @@ Xbox 적응 컨트롤러 포트
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Xbox 사이트에서 사용할 수 있는 자세한 정보</a>
 
 
-# <a name="device-support"></a>장치 지원
-헤드 gaze 이며 커밋 모든 혼합된 현실 헤드셋에서 사용할 수 있습니다. HoloLens v1에서 기본 입력된 모델이입니다. 다른 헤드셋 일반적으로 직접 기반 포인팅는 메커니즘이 포함 되어, 예: 동작 컨트롤러 또는 추적 직접 명시 합니다. 이러한 장치에서 응용 프로그램을 선호 해야 [지점 커밋](point-and-commit.md) 가능 하면 끝 상호 작용에 대 한 합니다.
-
-응시 및 커밋 HoloLens 2에서 사용할 수 있지만 기본 입력된 모델 아닙니다. 경우에 적합할 수 있습니다 응용 프로그램에 대 한 설명은 "눈 게이즈 디자인 지침" 섹션으로 이동 합니다.
-
-# <a name="head-gaze-design-guidelines"></a>헤드 gaze 디자인 지침
+# <a name="head-gaze-design-guidelines"></a>헤드 게이즈 디자인 지침
 > [!NOTE]
 > 자세한 지침은 디자인 gaze 관련이 [예정](index.md)합니다.
 
-## <a name="gaze-targeting"></a>대상으로 응시
+## <a name="head-gaze-targeting"></a>헤드 게이즈 대상 지정
 모든 상호 작용은 입력된 형식에 관계 없이 상호 작용 하려는 요소를 대상 하는 사용자의 기능을 기반으로 합니다. Windows Mixed Reality에서 일반적으로 이렇게 사용자 게이즈를 사용 하 여 합니다.
 사용자는 환경에서 성공적으로 작업할 수 있도록 사용자의 의도 한 사용자의 실제 의도 시스템의 계산된 이해 최대한 가깝게 정렬 되어야 합니다. 수준에 해당 하는 시스템에서 사용자의 의도 한 동작을 해석 하는 올바르게 만족도 증가 하 고 성능 향상 됩니다.
 
@@ -142,7 +138,7 @@ Xbox 적응 컨트롤러 포트
 ## <a name="improving-targeting-behaviors"></a>대상 동작 개선
 대상 작업으로 사용자의 의도 또는 수 있으면 결정 (밀접 하 게 근사화), "near miss" 올바르게 대상 지정 된 것 처럼 상호 작용에서 시도 허용 하도록 하는 데 매우 유용할 수 있습니다. 혼합된 현실 환경에 통합할 수 있는 성공적인 방법 중 몇 가지가 있습니다.
 
-### <a name="gaze-stabilization-gravity-wells"></a>응시 안정화 ("중력 웰")
+### <a name="head-gaze-stabilization-gravity-wells"></a>헤드 게이즈 안정화 ("중력 웰")
 이 켤 것인지 대부분 또는 모든 시간입니다. 이 기술은 사용자가 있을 수 있는 자연 스러운 head/목 jitter를 제거 합니다. 또한 이동 사용 하 여 확인 하 고 말하기 동작으로 인해입니다.
 
 ### <a name="closest-link-algorithms"></a>가장 가까운 링크 알고리즘

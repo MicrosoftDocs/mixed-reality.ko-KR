@@ -5,13 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: unity, 자습서, hololens, 혼합된 현실
-ms.openlocfilehash: 1530fd1a1ee06d01e8ab0cc009dfba03873c3427
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 1800d36b7292b9cb53b09fdd4b9c4fb763d49e79
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993638"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730948"
 ---
 # <a name="mr-learning-base-module---user-interface-hand-tracking-and-mixed-reality-toolkit-configuration"></a>MR 학습 자료 모듈-사용자 인터페이스를 직접 추적 하 고 혼합 현실 도구 키트 구성
 

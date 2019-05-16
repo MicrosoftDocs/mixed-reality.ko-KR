@@ -6,13 +6,14 @@ author: varnauld
 ms.author: vanesa
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: e36c903f93cc13d941a93331164cff6b4db4980e
-ms.sourcegitcommit: ff7eb8b92170eb8107935de4bd96b236087395ac
+ms.openlocfilehash: ed319e2abf61caed5f36b425a4cc609ca9501dec
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "65030578"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730886"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality 설명서
 

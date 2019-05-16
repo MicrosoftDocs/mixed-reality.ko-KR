@@ -5,22 +5,20 @@ author: yoyozilla
 ms.author: yoyozilla
 ms.date: 2/11/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: 최신 도구, 시작, 도구 키트, visual studio, unity, 기본 사항
-ms.openlocfilehash: da924d98f6869fadb9736000f666616f1372faa3
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 03a310457bf5ef498a6369a158b697c7fa59d6d9
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605122"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730876"
 ---
 # <a name="install-the-tools"></a>도구 설치
 
 Windows Mixed Reality 몰입 형 (VR) 헤드셋 및 Microsoft HoloLens 용 앱 개발 하는 데 필요한 도구를 가져옵니다. 별도 SDK에 대 한 Windows Mixed Reality 개발 작업 없이; Windows 10 SDK를 사용 하 여 Visual Studio를 사용 합니다.
 
-혼합된 현실 장치가 없으세요? 설치할 수 있습니다는 [HoloLens (첫 번째 gen) 에뮬레이터](using-the-hololens-emulator.md) 는 HoloLens 하지 않고 혼합된 현실 앱의 일부 기능을 테스트 합니다. 사용할 수도 있습니다는 [Windows Mixed Reality 시뮬레이터](using-the-windows-mixed-reality-simulator.md) 몰입 형 헤드셋에 대 한 혼합된 현실 앱을 테스트 합니다.
-
-> [!NOTE]
-> HoloLens 2 에뮬레이터에 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+혼합된 현실 장치가 없으세요? 설치할 수는 [HoloLens 에뮬레이터](using-the-hololens-emulator.md) 는 HoloLens 하지 않고 혼합된 현실 앱의 일부 기능을 테스트 합니다. 사용할 수도 있습니다는 [Windows Mixed Reality 시뮬레이터](using-the-windows-mixed-reality-simulator.md) 몰입 형 헤드셋에 대 한 혼합된 현실 앱을 테스트 합니다.
 
 그러나 빌드할 수도 있습니다 DirectX에 대 한 사용자 지정 엔진을 사용 하려는 경우, 혼합 현실 앱 만들기 시작 하는 가장 쉬운 방법은으로 Unity 게임 엔진을 설치 하는 것이 좋습니다.
 
@@ -38,8 +36,8 @@ Windows Mixed Reality 몰입 형 (VR) 헤드셋 및 Microsoft HoloLens 용 앱 �
 |---------|---------|---------|
 | ![Windows 로고](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**<br>(수동 설치 링크)</a> | PC의 운영 체제는 혼합된 현실 앱을 빌드하는 플랫폼을 일치 하도록 Windows 10의 최신 버전을 설치 합니다. | **Windows 10 설치** <br> <ul><li>설정에서 또는 설치 미디어 (왼쪽된 열에서 링크 사용)를 만들어 Windows Update를 통해 Windows 10의 최신 버전을 설치할 수 있습니다.<li>참조 [현재 릴리스](release-notes-october-2018.md) 최신에 대 한 정보에 대 한 각 릴리스의 Windows 10을 사용 하 여 실제로 기능을 사용할 수 있는 혼합 합니다.</ul> **PC에서 개발자 모드가 사용 하도록 설정** 설정 > 업데이트 및 보안 > 개발자를 위한 합니다. <br><br> **엔터프라이즈 및 회사 관리 되는 Pc에 대 한 참고:** PC 관리 하는 경우는 조직의 IT 부서를 업데이트 하기 위해 연결할 해야 할 수 있습니다. <br><br> **Windows의 ' n ' 버전:** Windows Mixed Reality 몰입 형 (VR) 헤드셋 ' n ' 버전의 Windows에서 지원 되지 않습니다. |
 | ![Visual Studio 로고](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2017**<br>(설치 링크)</a> | Windows 및 기타 정보에 대 한 완전 한 기능을 갖춘 통합된 개발 환경 (IDE)입니다. Visual Studio 코드를 작성, 디버그, 테스트 및 배포를 사용 합니다. | **설치할 워크 로드:** <ul><li>사용한 데스크톱 개발C++</li><li>유니버설 Windows 플랫폼 개발</li></ul>**Unity에 대 한 정보:** 특정 목적을 위해 Unity의 최신 (비-LTS) 버전을 설치 하려는 의도적으로 하지 않는 한 것이 좋습니다 *되지* Unity 워크 로드의 일부로 설치할 때 Visual Studio를 설치 하 고 대신 2018.3 LTS를 설치 아래 설명 된 대로 Unity의 스트림입니다.<br> <br>**참고:** 현재 Visual Studio 2019에서 혼합된 현실 개발의 몇 가지 알려진된 문제가 있습니다.  이제 Visual Studio 2017을 사용 하 여 계속 진행 하는 것이 좋습니다. |
-| ![Windows 로고](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windowsinsiderpreviewSDK" target="_blank">**Windows SDK Insider Preview 18362**<br>(수동 설치 링크)</a> | HoloLens 2에서 Windows 10 앱을 빌드하기 위한 최신 헤더, 라이브러리, 메타 데이터 및 도구를 제공 합니다. | HoloLens 2 앱을 빌드하려면 해야 <a href="https://insider.windows.com">Windows Insider 될</a> 및 Windows SDK Insider Preview 빌드 18362 이상을 설치 합니다.<br> <br> Windows Mixed Reality 헤드셋 데스크톱 또는 HoloLens 용 앱 개발 하 고만 경우 (첫 번째 gen) Visual Studio 2017에서 설치 된 Windows SDK를 사용할 수 있습니다. |
-| ![Visual Studio 로고](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens (첫 번째 gen) 에뮬레이터 및 Holographic 프로젝트 템플릿**<br>(설치 링크: 10.0.17763.253)</a> | 에뮬레이터를 사용 하면는 HoloLens에 앱을 실행할 수 있습니다 (첫 번째 gen) 실제 HoloLens 하지 않고 가상 머신 이미지입니다.<br> <br> 이 패키지에도 Visual Studio 용 holographic DirectX 프로젝트 템플릿을 포함 합니다. | 참조 [HoloLens 에뮬레이터를 사용 하 여](using-the-hololens-emulator.md) 에뮬레이터를 시작 하기 대 한 자세한 내용은 합니다.<br> <br> **시스템에서 Hyper-v를 지원 해야** 에뮬레이터 설치가 제대로 되려면 합니다. 자세한 내용은 아래 시스템 요구 사항 섹션을 참조 하세요. 원하는 경우에 에뮬레이터가 없어도 템플릿만 설치를 선택할 수 있습니다.<br> <br> 자세한 지침은 HoloLens 2 에뮬레이터 관련이 [예정](index.md#news-and-notes)합니다. |
+| ![Windows 로고](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK (10.0.18362.0)**<br>(수동 설치 링크)</a> | HoloLens 2에서 Windows 10 앱을 빌드하기 위한 최신 헤더, 라이브러리, 메타 데이터 및 도구를 제공 합니다. | HoloLens 2 앱을 빌드하려면 Windows SDK 빌드 18362 이상을 설치 해야 합니다.<br> <br> Windows Mixed Reality 헤드셋 데스크톱 또는 HoloLens 용 앱 개발 하 고만 경우 (첫 번째 gen) Visual Studio 2017에서 설치 된 Windows SDK를 사용할 수 있습니다. |
+| ![Visual Studio 로고](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2087187" target="_blank">**HoloLens 2 Emulator**<br>(설치 링크: 10.0.18362.1005)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens (첫 번째 gen) 에뮬레이터**<br>(설치 링크: 10.0.17763.253)</a> | 에뮬레이터를 사용 하면 실제 HoloLens 하지 않고 HoloLens 가상 머신 이미지에서 앱을 실행할 수 있습니다.<br> <br> 이 패키지에도 Visual Studio 용 holographic DirectX 프로젝트 템플릿을 포함 합니다. | 참조 [HoloLens 에뮬레이터를 사용 하 여](using-the-hololens-emulator.md) 에뮬레이터를 시작 하기 대 한 자세한 내용은 합니다.<br> <br> **시스템에서 Hyper-v를 지원 해야** 에뮬레이터 설치가 제대로 되려면 합니다. 자세한 내용은 아래 시스템 요구 사항 섹션을 참조 하세요. 원하는 경우에 에뮬레이터가 없어도 템플릿만 설치를 선택할 수 있습니다.<br>|
 | ![Unity 로고](images/unity_logo.png)<br><br><a href="https://unity3d.com/get-unity/download" target="_blank">**Unity 2018.3**<br>(설치 링크)</a> | Unity 게임 엔진은 Windows Mixed Reality 기능에 대 한 기본 제공 지원으로 혼합된 현실 환경을 만드는 가장 쉬운 방법입니다. | 일반적으로 권장 Unity LTS (긴 용어 지원) 스트림 하는 새 프로젝트를 시작 하는 데 사용할 가장 적합 한 버전으로를 안정적인 최신 수정 프로그램을 선택 하는 최신 버전으로 업데이트 합니다.<br> <br> 현재 권장 사항을 사용 하는 것 **Unity 2018.3.x**, 아래 MRTK v2에 대 한 필요한 빌드하고 Unity의 2018 LTS 될 예정입니다. <br> <br> 일부 개발자는 특정 이유로 다른 버전의 Unity 사용 하려고 합니다. 이러한 경우 Unity는 서로 다른 버전의 side-by-side-설치를 지원합니다. |
 | ![MRTK 로고](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Unity 용 혼합된 현실 도구 키트 (MRTK v2)**</a> | Unity에 대 한 MRTK v2는 오픈 소스 플랫폼 간 개발 키트 혼합된 현실 응용 프로그램에 대 한 경우<br><br> Microsoft HoloLens, (VR) 헤드셋을 몰입 형 Windows Mixed Reality 및 OpenVR 플랫폼을 대상으로 하는 응용 프로그램의 개발을 가속화 MRTK v2 것입니다. 프로젝트는 혼합된 현실 응용 프로그램을 만드는 항목에는 barrier를 줄이기 위한 및 증가 우리가 커뮤니티에 다시 기여 합니다. | 프로젝트의 방문에 대해 MRTK v2 자세히 알아보세요 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">GitHub wiki</a>합니다. |
 
@@ -59,10 +57,7 @@ Windows 10 SDK는 Windows 10 운영 체제에 적합합니다. 또한이 SDK는 
 
 HoloLens 개발을 위한 개발 PC 설정할 때 했는지의 시스템 요구 사항을 모두 충족 <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> 하 고 <a href="https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs" target="_blank">Visual Studio</a>합니다. HoloLens 사용 하려는 경우 (첫 번째 gen)에 PC 충족 하는지 확인 하려는 에뮬레이터 합니다 [HoloLens 에뮬레이터 시스템 요구 사항](using-the-hololens-emulator.md#hololens-emulator-system-requirements) 도 합니다.
 
-HoloLens를 시작 하려면 (첫 번째 gen) 에뮬레이터를 참조 하세요 [HoloLens 에뮬레이터를 사용 하 여](using-the-hololens-emulator.md)입니다.
-
-> [!NOTE]
-> HoloLens 2 에뮬레이터에 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+HoloLens emulator 시작을 참조 하세요 [HoloLens 에뮬레이터를 사용 하 여](using-the-hololens-emulator.md)입니다.
 
 HoloLens와 Windows Mixed Reality 몰입 형 (VR) 헤드셋에 대 한 개발 하려는 경우 한 시스템 권장 사항 및 요구 사항 아래 섹션에 사용 하세요.
 
@@ -96,7 +91,7 @@ HoloLens와 Windows Mixed Reality 몰입 형 (VR) 헤드셋에 대 한 개발 �
 </tr><tr>
 <td> 메모리</td><td> 8&#160;GB RAM 이상</td><td> 16GB RAM 이상</td>
 </tr><tr>
-<td> 스토리지</td><td colspan="2"> &gt;사용 가능한 공간이 추가로 10GB</td>
+<td> 저장 공간</td><td colspan="2"> &gt;사용 가능한 공간이 추가로 10GB</td>
 </tr><tr>
 <td> USB 포트</td><td colspan="2"> 1 개 사용할 수 있는 USB 헤드셋 (USB 3.0 Type-A)에 대 한 포트 <b>참고 합니다. USB은 900mA 최소를 제공 해야 합니다.</b></td>
 </tr><tr>
@@ -108,7 +103,7 @@ HoloLens와 Windows Mixed Reality 몰입 형 (VR) 헤드셋에 대 한 개발 �
 
 * [개발 개요](development-overview.md)
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
-* [Windows Mixed Reality 시뮬레이터를 사용 하 여](using-the-windows-mixed-reality-simulator.md)
+* [Windows Mixed Reality 시뮬레이션 사용](using-the-windows-mixed-reality-simulator.md)
 * [Unity 개발 개요](unity-development-overview.md)
 * [DirectX 개발 개요](directx-development-overview.md)
 * [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md)
