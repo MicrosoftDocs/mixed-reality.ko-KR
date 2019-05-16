@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 혼합된 현실 게이즈, 상호 작용 디자인
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604972"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629104"
 ---
 # <a name="gaze"></a>응시
 
@@ -62,5 +62,5 @@ HoloLens 2에서 상호 작용 통해 근처 또는 훨씬 상호 작용을 제�
 
 ## <a name="see-also"></a>참조
 * [MR 입력 210: 응시](holograms-210.md)
-* [응시, 제스처 및 DirectX에서 동작 컨트롤러](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Unity에서 gaze](gaze-in-unity.md)
+* [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
+* [Unity의 응시](gaze-in-unity.md)

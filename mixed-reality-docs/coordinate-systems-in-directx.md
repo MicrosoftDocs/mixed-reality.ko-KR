@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 코드, 이미지 안정화, 공간 앵커, 앵커 저장소 공간, 추적 손실, 연습 샘플 혼합 현실을, 공간 로케이터 공간 참조 프레임, 공간 좌표계, 공간 단계
-ms.openlocfilehash: c8cdb39cbf4634edb4ed0a595381fc70f1388ce4
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605152"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628980"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX의 좌표계
 
@@ -622,7 +622,7 @@ From **HolographicTagAlongSampleMain.cpp**:
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
 ```
 
-이 SpatialPointerPose에 따라 홀로그램을 배치 하는 데 필요한 정보에는 [사용자의 현재 머리글](gaze,-gestures,-and-motion-controllers-in-directx.md)합니다.
+이 SpatialPointerPose에 따라 홀로그램을 배치 하는 데 필요한 정보에는 [사용자의 현재 머리글](gaze-in-directx.md)합니다.
 
 사용자와 쾌적의 이유로 시간 동안 발생 하는 위치 변경 완만 하 게 선형 보간을 ("lerp")을 사용 합니다. 이것이 더 편리 하 게 사용자 자신의 게이즈를 홀로그램 잠금 보다입니다. Lerping tag-along 홀로그램의 위치 수 있습니다. 이동; 빨라져 여를 홀로그램 안정화 이 빨라져 하는 것은 하지 않은, 경우 사용자는 어떤 일반적으로 간주 됩니다 육안 식별 되지 않는 사용자의 헤드 이동으로 인해 지터 홀로그램을 표시 됩니다.
 
@@ -797,6 +797,7 @@ From **HolographicTagAlongSampleMain::Render**:
 ## <a name="see-also"></a>참조
 * [좌표계](coordinate-systems.md)
 * [공간 앵커](spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 공간 앵커</a>
-* [응시, 제스처 및 DirectX에서 동작 컨트롤러](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
+* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
 * [DirectX의 공간 매핑](spatial-mapping-in-directx.md)

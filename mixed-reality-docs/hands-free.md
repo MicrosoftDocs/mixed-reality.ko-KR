@@ -1,19 +1,19 @@
 ---
-title: 핸 즈 프리에 대 한 앱 최적화
+title: 핸즈프리
 description: 핸 즈 프리에 대 한 앱 최적화
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: 핸 즈 프리, gaze, 대상, 상호 작용 디자인 gaze 혼합 현실
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524325"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629017"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>핸 즈 프리에 대 한 앱 최적화
+# <a name="hands-free"></a>핸즈프리
 
 
 
@@ -31,18 +31,16 @@ ms.locfileid: "65524325"
 
 ## <a name="hands-free-modalities"></a>핸 즈 프리 형식
 
-### <a name="voice-commanding"></a>음성 명령 실행
+### <a name="voice-commandingvoice-designmd"></a>[음성 명령 실행](voice-design.md)
 
 사용자 handsfree, 작동 하지만 또한 여러 단계를 건너뛸 수 있도록 뿐 아니라 명령 및 컨트롤 인터페이스 수에 음성을 사용 하 여 합니다. 이 형식 사용 하기 작업을 수행할 수 있는 에이전트를 사용 하 여 대화에 참조-it-예를 들어-it와 같이,이 활성화 하려면 소리내어 단순히 모든 단추의 이름을 읽을 수 있도록에서 까지입니다.
 
-* [음성 디자인](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>헤드 게이즈 및 유지
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[헤드 게이즈 및 유지](gaze-and-dwell.md)
 
 핸 즈 프리 경우도 음성을 사용 하 여 없는 이상적인 또는 수도 있습니다. 큰 팩터리 환경, 개인 정보 보호 또는 소셜 표준 모든 제약 조건을 수 있습니다. 헤드 gaze + 자세히 다루지는 모델 가리키도록, 느린을 하는 동안 해당 헤드 벡터를 사용 하 여 앱을 이동할 수 있도록 하거나 생각 단추에 잠기거나 그럴는 활성화를 특정 시간 후에 (일반적으로 약 1 초 정도). 
 
-* [응시 및 유지](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>핸 즈 프리 내부 및 외부로 전환
 

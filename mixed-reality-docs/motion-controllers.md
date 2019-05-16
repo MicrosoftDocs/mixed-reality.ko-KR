@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof 컨트롤러, 컨트롤러 동작
-ms.openlocfilehash: b44964ab872bd080349ecf1b04b3f7082b521a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604962"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629117"
 ---
 # <a name="motion-controllers"></a>컨트롤러 동작
 
@@ -230,10 +230,10 @@ Unity에서 동적으로 컨트롤러 모델을 로드 하는 방법에 대 한 
 [의견을 보내 주십시오](give-us-feedback.md) 피드백 허브에서 "혼합된 현실 입력을->" 범주를 사용 합니다.
 
 ## <a name="see-also"></a>참조
-* [제스처와 Unity의 동작 컨트롤러](gestures-and-motion-controllers-in-unity.md)
-* [응시, 제스처 및 DirectX에서 동작 컨트롤러](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Unity의 제스처 및 모션 컨트롤러](gestures-and-motion-controllers-in-unity.md)
+* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
 * [제스처](gestures.md)
-* [MR 입력 213: 컨트롤러 동작](mixed-reality-213.md)
+* [MR 입력 213: 모션 컨트롤러](mixed-reality-213.md)
 * [전문가 가이드: 홈 사용자 Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [전문가 가이드: Windows Mixed Reality에서 게임 및 앱 사용](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [추적 내부 스케일 아웃의 작동 원리](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

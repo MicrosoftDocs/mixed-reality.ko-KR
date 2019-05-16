@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 홀로그램, 렌더링, 3D 그래픽, HolographicFrame, 렌더링 루프 업데이트 루프, 연습, 샘플 코드
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605162"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629031"
 ---
 # <a name="rendering-in-directx"></a>DirectX의 렌더링
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>프로세스 게이즈 및 입력 제스처
 
-[Gaze](gaze.md) 하 고 [제스처](gestures.md) 입력 시간 기반 되지 않으며 따라서 업데이트 하지 않아도 합니다 **StepTimer** 함수입니다. 그러나 [이 입력](gaze,-gestures,-and-motion-controllers-in-directx.md) 앱에서 각 프레임에서 표시 해야 하는 것입니다.
+[Gaze](gaze-in-directx.md) 하 고 [손](hands-and-motion-controllers-in-directx.md) 입력 시간 기반 되지 않으며 따라서 업데이트 하지 않아도 합니다 **StepTimer** 함수. 그러나이 입력은 앱에서 각 프레임에서 표시 해야 하는 것입니다.
 
 ### <a name="process-time-based-updates"></a>처리 시간을 기준으로 업데이트
 

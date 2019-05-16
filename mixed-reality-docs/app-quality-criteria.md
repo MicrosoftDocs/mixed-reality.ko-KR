@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱 품질 기준에 혼합 현실을, 혼합 현실 앱
-ms.openlocfilehash: 8070a434be462a636b314527c59f299ca77fb6d4
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602380"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628981"
 ---
 # <a name="app-quality-criteria"></a>앱 품질 기준
 
@@ -61,7 +61,7 @@ ms.locfileid: "59602380"
 * [혼합된 현실에 대 한 성능 이해](understanding-performance-for-mixed-reality.md)
 * [홀로그램 안정성 및 프레임 속도](hologram-stability.md#frame-rate)
 * [자산 성능 예산이](asset-creation-process.md)
-* [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)
+* [Unity의 권장 성능](performance-recommendations-for-unity.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 
@@ -119,7 +119,7 @@ ms.locfileid: "59602380"
 * [홀로그램 안정성 및 프레임 속도](hologram-stability.md#frame-rate)
 * [안정화 평면을 사용 하 여 사례 연구](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
 * [혼합된 현실에 대 한 성능 이해](understanding-performance-for-mixed-reality.md)
-* [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)
+* [Unity의 권장 성능](performance-recommendations-for-unity.md)
 * [공간 앵커](spatial-anchors.md)
 * [추적 오류 처리](coordinate-systems.md#handling-tracking-errors)
 * [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference)
@@ -168,7 +168,7 @@ ms.locfileid: "59602380"
 * [검색 프로세스 공간](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [공간 앵커에 대 한 유용한 정보](spatial-anchors.md#best-practices)
 * [추적 오류 처리](coordinate-systems.md#handling-tracking-errors)
-* [Unity에서 공간 매핑](spatial-mapping-in-unity.md)
+* [Unity의 공간 매핑](spatial-mapping-in-unity.md)
 * [Vuforia 개발 개요](vuforia-development-overview.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
@@ -225,7 +225,7 @@ ms.locfileid: "59602380"
 ### <a name="resources"></a>리소스
 
 * [거리를 렌더링 합니다.](hologram-stability.md#hologram-render-distances)
-* [Unity의 포커스 지점](focus-point-in-unity.md)
+* [Unity의 포커스 포인트](focus-point-in-unity.md)
 * [확장을 사용 하 여 실험](scale.md#experimenting-with-scale)
 * [텍스트, 권장 글꼴 크기](typography.md#recommended-font-size)
 
@@ -260,7 +260,7 @@ ms.locfileid: "59602380"
 ### <a name="resources"></a>리소스
 
 * [거리를 렌더링 합니다.](hologram-stability.md#hologram-render-distances)
-* [Unity의 포커스 지점](focus-point-in-unity.md)
+* [Unity의 포커스 포인트](focus-point-in-unity.md)
 
 ## <a name="use-of-spatial-sound"></a>소리 공간 사용
 
@@ -300,15 +300,15 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 #### <a name="documentation"></a>설명서
 
-* [소리 공간](spatial-sound.md)
-* [공간 적절 하 게 디자인](spatial-sound-design.md)
-* [Unity에서 공간 소리](spatial-sound-in-unity.md)
+* [공간 음향](spatial-sound.md)
+* [공간 음향 디자인](spatial-sound-design.md)
+* [Unity의 공간 음향](spatial-sound-in-unity.md)
 * [사례 연구, HoloTour에 대 한 소리 공간](case-study-spatial-sound-design-for-holotour.md)
 * [RoboRaid에서 공간 소리를 사용 하 여 사례 연구](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 
-* [MR 공간 220: 소리 공간](holograms-220.md)
+* [MR 공간 220: 공간 음향](holograms-220.md)
 * [MRToolkit, 공간 오디오](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Holographic 프레임 (FOV) 경계에 집중
@@ -348,7 +348,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 #### <a name="documentation"></a>설명서
 
-* [Holographic 프레임](holographic-frame.md)
+* [홀로그램 프레임](holographic-frame.md)
 * [사례 연구, HoloStudio UI와 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
 * [개체 및 환경의 확장](scale.md)
 * [커서를 시각 신호](cursors.md#visual-cues)
@@ -402,7 +402,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 * [상호 작용 디자인](hologram.md)
 * [색, 광원 및 재질](color,-light-and-materials.md)
-* [빌보드 및 tag-along](billboarding-and-tag-along.md)
+* [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [상호 작용 기본 사항](interaction-fundamentals.md)
 * [동작 자체 및 사용자 locomotion](comfort.md#self-motion-and-user-locomotion)
 
@@ -453,20 +453,21 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 * [Windows MR 상호 작용 기본 사항](interaction-fundamentals.md)
 * [상호 작용할 수 없는 개체](interactable-object.md)
-* [대상으로 응시](gaze-targeting.md)
+* [응시 대상 지정](gaze-targeting.md)
 * [커서](cursors.md)
 * [편안 함과 응시](comfort.md#gaze-direction)
 * [제스처](gestures.md)
-* [음성 입력](voice-input.md)
+* [음성 입력 ](voice-input.md)
 * [음성 디자인](voice-design.md)
-* [컨트롤러 동작](motion-controllers.md)
-* [포팅 가이드 Unity에 대 한 입력](input-porting-guide-for-unity.md)
+* [모션 컨트롤러](motion-controllers.md)
+* [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Unity의 키보드 입력](keyboard-input-in-unity.md)
-* [Unity에서 gaze](gaze-in-unity.md)
-* [제스처와 Unity의 동작 컨트롤러](gestures-and-motion-controllers-in-unity.md)
-* [Unity에서 음성 입력](voice-input-in-unity.md)
-* [키보드, 마우스 및 DirectX에서 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [응시, 제스처 및 DirectX에서 컨트롤러 동작](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Unity의 응시](gaze-in-unity.md)
+* [Unity의 제스처 및 모션 컨트롤러](gestures-and-motion-controllers-in-unity.md)
+* [Unity의 음성 입력](voice-input-in-unity.md)
+* [DirectX의 키보드, 마우스 및 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
+* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
 * [DirectX의 음성 입력](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
@@ -515,8 +516,8 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 #### <a name="documentation"></a>설명서
 
-* [상호 작용할 수 없는 개체](interactable-object.md)
-* [Unity에서 텍스트](text-in-unity.md)
+* [상호 작용 가능한 개체](interactable-object.md)
+* [Unity의 텍스트](text-in-unity.md)
 * [앱 바 및 경계 상자](app-bar-and-bounding-box.md)
 * [음성 디자인](voice-design.md)
 
@@ -560,7 +561,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 #### <a name="documentation"></a>설명서
 
-* [대화방 검색 시각화](room-scan-visualization.md)
+* [실내 스캔 시각화](room-scan-visualization.md)
 * [사례 연구: HoloLens의 공간 매핑 기능을 확장](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [사례 연구: HoloTour 공간 적절 하 게 디자인](case-study-spatial-sound-design-for-holotour.md)
 * [사례 연구: 조각에는 몰입 형 환경을 만들기](case-study-creating-an-immersive-experience-in-fragments.md)
@@ -600,7 +601,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 ### <a name="resources"></a>리소스
 
-* [Holographic 프레임](holographic-frame.md)
+* [홀로그램 프레임](holographic-frame.md)
 
 ## <a name="data-loading"></a>데이터 로드
 
