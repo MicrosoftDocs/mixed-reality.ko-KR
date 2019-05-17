@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holographic 앱, 새 앱을 UWP 앱, 템플릿 앱, 홀로그램, 새 프로젝트, 연습, 다운로드, 샘플 코드
-ms.openlocfilehash: 7d1ea0246cf823f74e68b4e67fbcfc275d081688
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: a7eac9d8056fe5f7bcc442d6441f71331fa96cf6
+ms.sourcegitcommit: 19c9bff21061d485821b61c9f3498daef8fa8235
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605097"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65828121"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Holographic DirectX 프로젝트 만들기
 
@@ -33,18 +33,23 @@ DirectX 11 holographic UWP 앱 템플릿을 DirectX 11 UWP 앱 템플릿을;를 
 
 ## <a name="creating-a-uwp-project"></a>UWP 프로젝트 만들기
 
-도구 설치 되 면 다음 holographic DirectX UWP 프로젝트를 만들 수 있습니다. 새 프로젝트를 만들려면:
+한 번 합니다 [도구가 설치 되어](install-the-tools.md) holographic DirectX UWP 프로젝트를 만들 수 있습니다.
+
+새 프로젝트를 만들려면:
 1. 시작 **Visual Studio**합니다.
 2. **파일** 메뉴에서 **새로 만들기** 선택한 **프로젝트** 상황에 맞는 메뉴에서. 합니다 **새 프로젝트** 대화 상자가 열립니다.
 3. 확장 **설치 됨** 왼쪽 확장를 **시각적 C++**  언어 노드.
 4. 로 이동 합니다 **Windows 유니버설 > Holographic** 노드와 선택 **Holographic DirectX 11 앱 (유니버설 Windows) (C++/WinRT)** 합니다.
+   ![Holographic DirectX 11의 스크린샷 C++Visual Studio에서 WinRT UWP 앱 프로젝트 템플릿](images/holographic-directx-app-cpp-new-project.png)<br>
+   *DirectX 11 holographic C++Visual Studio에서 WinRT UWP 앱 프로젝트 템플릿*
    >[!IMPORTANT]
    >프로젝트 템플릿의 이름을 포함 해야 "(C++/WinRT)".  그렇지 않은 경우 설치 된 holographic 프로젝트 템플릿의 이전 버전이 있습니다.  최신 프로젝트 템플릿을 가져오려는 [최신 HoloLens 에뮬레이터를 설치할](using-the-hololens-emulator.md)합니다.
 5. 입력 합니다 **이름** 및 **위치** 텍스트 상자 및 클릭 하거나 탭 **확인**합니다. Holographic 앱 프로젝트가 만들어집니다.
-6. 개발을 위한 HoloLens 2만 대상 지정 되어 있는지 확인 합니다 **대상 버전** 및 **최소 버전** 으로 설정 됩니다 **Windows 10 버전 1903**합니다.  HoloLens도 대상으로 하는 경우 (첫 번째 gen) 하거나 설정할 수 있습니다 데스크톱 Windows Mixed Reality 헤드셋 **최소 버전** 하 **Windows 10 버전 1809** 대신 일부 해야 하지만 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> 버전 adapative 검사</a> HoloLens 2의 새로운 기능을 사용 하는 경우 코드에서.
-
-![Visual Studio에서 holographic 앱 프로젝트 템플릿의 스크린샷](images/holographic-directx-app-cpp-new-project.png)<br>
-*Visual Studio에서 holographic 앱 프로젝트 템플릿*
+6. 개발을 위한 HoloLens 2만 대상 지정 되어 있는지 확인 합니다 **대상 버전** 및 **최소 버전** 으로 설정 됩니다 **Windows 10 버전 1903**합니다.  HoloLens도 대상으로 하는 경우 (첫 번째 gen) 하거나 설정할 수 있습니다 데스크톱 Windows Mixed Reality 헤드셋 **최소 버전** 하 **Windows 10 버전 1809** 대신 일부 해야 하지만 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> 버전 적응 검사</a> HoloLens 2의 새로운 기능을 사용 하는 경우 코드에서.
+   ![Windows 10 버전 1903 대상 및 최소 버전으로 설정 하는 스크린샷](images/new-uwp-project.png)<br>
+   *설정 **Windows 10 버전 1903** 대상 및 최소 버전*
+   >[!IMPORTANT]
+   >표시 되지 않으면 **Windows 10 버전 1903** 옵션이 없는 최신 Windows 10 SDK를 설치 합니다.  표시 하려면이 옵션을 가져오려는 <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">10.0.18362.0 버전을 설치 또는 Windows 10 SDK의 뒷부분에 나오는</a>합니다.
 
 템플릿을 사용 하 여 프로젝트 생성 <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, Windows 런타임 Api를 지 원하는 모든 표준 호환 C + + 17 컴파일러의 C + + 17 개의 언어 프로젝션 합니다.  프로젝트에는 사용자 로부터 두 미터를 배치에 전 세계 잠긴 큐브를 만드는 방법을 보여 줍니다. 사용자 수 [어 탭](gestures.md#air-tap) 큐브에 사용자 지정 된 다른 위치에 배치 하려면 컨트롤러에서 단추를 누르거나 [gaze](gaze.md)합니다. 혼합된 현실 앱을 만들려면이 프로젝트를 수정할 수 있습니다.
 
@@ -151,9 +156,9 @@ int APIENTRY wWinMain(
 **렌더링** 에서 메서드 `AppMain.cpp` 는 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 하 고 각 holographic 카메라 위치 지정 공간 상태 확인 하 고 현재 앱에 따라 현재 프레임을 렌더링 합니다.
 
 ## <a name="see-also"></a>참조
-* [HolographicSpace 가져오기](getting-a-holographicspace.md)
+* [HolographicSpace 받기](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [DirectX의 렌더링](rendering-in-directx.md)
-* [Visual Studio를 사용 하 여 배포 및 디버깅](using-visual-studio.md)
+* [Visual Studio를 사용하여 앱 배포 및 디버깅](using-visual-studio.md)
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
-* [Holographic DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
+* [홀로그램 DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
