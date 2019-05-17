@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: 혼합 현실을, 실습, 동작 controlles, 상호 작용 디자인
-ms.openlocfilehash: 4f4231dd816dc71e42d16aca1b518ad03440116e
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629023"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65813977"
 ---
 # <a name="hands-and-motion-controllers"></a>실습 및 동작 컨트롤러
 ## <a name="scenarios"></a>시나리오
@@ -25,10 +25,10 @@ ms.locfileid: "65629023"
 * 위치 기반 서비스 및 배경으로 실제 세계를 사용 하 여 게임
 
 ## <a name="hands-and-motion-controllers-modalities"></a>실습 및 동작 컨트롤러 형식
-### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[실습을 사용 하 여 직접 조작](direct-manipulation.md)
-손으로, 사용자와 접촉 하 고는 홀로그램을 직접 조작 수 있는 기능을 활용 하는 형식입니다. Leaveraging 이니셔티브를 일상 생활 환경을 적절 한 시각적 affordances 제공, 사용자 가상 애니메이션과 상호 작용을 실제 대상 개체를 조작 하는 동일한 방식으로 사용할 수 있습니다. 합니다.   
+### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[수동으로 직접 조작](direct-manipulation.md)
+손으로, 사용자와 접촉 하 고는 홀로그램을 직접 조작 수 있는 기능을 활용 하는 형식입니다. Leaveraging 이니셔티브를 일상 생활 환경을 적절 한 시각적 affordances 제공, 사용자 가상 애니메이션과 상호 작용을 실제 개체를 조작 하는 동일한 방식으로 사용할 수 있습니다. 합니다.   
 
-### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[지점 및 실습을 사용 하 여 커밋](point-and-commit.md)
+### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[수동으로 가리키고 커밋](point-and-commit.md)
 이 형식을 사용 하면 거리에서 홀로그램 상호 작용할 수 있습니다. 사용자가 환경 최대한 활용할 수 있도록 수 있습니다. 사용자 제공을 원하는 위치에 배치할 수 및 모든 거리에서 여전히 액세스할 수 있습니다. 멘 탈 모델 및 제어 하 고 조작 2D 및 3D 홀로그램 제스처를 항상 동기화 되었는지와 직접 조작 합니다.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[모션 컨트롤러](motion-controllers.md)

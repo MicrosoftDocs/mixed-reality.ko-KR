@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: unity, 자습서, hololens, 혼합된 현실
-ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730935"
+ms.locfileid: "65814008"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>MR 학습 자료 모듈-프로젝트 초기화 및 첫 번째 응용 프로그램
 
@@ -83,7 +83,7 @@ ms.locfileid: "65730935"
 4. 페이지를 만들고 응용 프로그램에 대 한 새 폴더 이름을 지정 합니다. 폴더 이름 사용 하 여 아래 이미지에서 "App" 응용 프로그램을 포함 하기 위해 만들어졌습니다. 새로 만든된 폴더에 빌드를 시작 하려면 "폴더 선택"을 클릭 합니다. 빌드가 완료 된 후에 Unity에서 "빌드 설정" 창을 닫을 수 있습니다. 
     ![1 단원 Chapter5 4 단계](images/Lesson1Chapter5Step4.JPG)
 
-  > 참고: 빌드에 실패 하는 경우 빌드 다시 시도 또는 Unity를 다시 시작 하 고 다시 작성 합니다. 와 같은 오류를 표시 하는 경우 "오류: CS0246 = "XX"를 찾을 수 없는 tyoe 또는 네임 스페이스 이름 (사용 하는 누락 된 지시문 또는 어셈블리 참조가?) "를 설치 해야 할 수 있습니다 [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+  > 참고: 빌드에 실패 하는 경우 빌드 다시 시도 또는 Unity를 다시 시작 하 고 다시 작성 합니다. 와 같은 오류를 표시 하는 경우 "오류: CS0246 = "XX"를 찾을 수 없는 형식 또는 네임 스페이스 이름 (사용 하는 누락 된 지시문 또는 어셈블리 참조가?) "를 설치 해야 할 수 있습니다 [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
   >
 
 5. 빌드가 완료 된 후 새로 빌드된 응용 프로그램 파일이 들어 새로 만든된 폴더를 엽니다. 두 번 클릭 "MixedRealityBase.sln" 솔루션 (또는 해당 이름, 프로젝트에 대 한 대체 이름을 사용 하는 경우) Visual Studio에서 솔루션 파일을 엽니다.

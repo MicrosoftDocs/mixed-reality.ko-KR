@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실을 응시, 유지, 상호 작용 디자인
-ms.openlocfilehash: 9f9fa89d7730e21e89bd24ce3b483d129c8a16db
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730775"
+ms.locfileid: "65813988"
 ---
 # <a name="head-gaze-and-dwell"></a>헤드 게이즈 및 유지
 
@@ -92,9 +92,9 @@ ms.locfileid: "65730775"
 ### <a name="high-frequency-buttons"></a>높은 빈도 단추
 ![Microsoft Dynamics 365 가이드 다음 단추](images/GuideNextButton.png "Microsoft Dynamics 365 가이드 다음 단추") 빈도가 높은 단추는 응용 프로그램을 통해 일반적으로 사용 되는 단추입니다. 이러한 좋은 예는 Microsoft Dynamics 365 가이드의 다음 및 뒤로 단추가 있습니다.
 
-* 높은 빈도 단추 해야 하는 중...
-  * 큰 단추를 더 쉬워질 헤드 게이즈를 사용 하 여 적중
-  * 눈 높이 인체 범주인 방지를 거의 유지 합니다.
+높은 빈도 단추 해야 하는 중...
+* 큰 단추를 더 쉬워질 헤드 게이즈를 사용 하 여 적중
+* 눈 높이 인체 범주인 방지를 거의 유지 합니다.
 
 ### <a name="low-frequency-buttons"></a>낮은 빈도 단추
 낮은 빈도 단추는 됩니다 하지 상호 작용으로 정기적으로 응용 프로그램에 걸쳐 있는 단추가 있습니다. 좋은 예로 설정 메뉴에 액세스 하는 단추 또는 모든 작업의 선택을 취소 하는 단추 수 있습니다.
