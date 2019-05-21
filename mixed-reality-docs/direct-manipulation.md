@@ -7,19 +7,15 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인, near 바늘 HoloLens
-ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: 412d77a1d7446f82ddf43f051fdb149cb1fd559c
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65814002"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940769"
 ---
 # <a name="direct-manipulation-with-hands"></a>실습을 사용 하 여 직접 조작
 직접 조작은 홀로그램을 손으로 직접 터치를 포함 하는 입력된 모델. 직접 조작을 사용 하 여 목적은 개체는 실제 환경에서와 마찬가지로 작동 한다는 점입니다. 단순히 키를 눌러 해당 단추를 활성화할 수 있습니다, 개체를 통해 선택할 수 있습니다 및 2D 콘텐츠 가상 터치 스크린이 처럼 동작 합니다.  이 때문에 직접 조작에 알아보려면 사용자가 쉽게 및 너무 재미의 합니다.  "근처" 입력된 모델은 군비 확장 내에 도달 하는 콘텐츠를 사용 하 여 상호 작용 하기 위한 가장 적합 하므로 간주 됩니다.
-
-HoloLens 2에 홀로그램을 손으로 직접 터치 하면를 직접 조작 입력된 모델이 있습니다. 직접 조작 하는 목적 실제에서 것 처럼 동작 하는 개체입니다. 있습니다 수 단추를 눌러서, 활성화 및도 및 승차를 잡은 개체를 이동 합니다. 이러한 시나리오에서 2D 콘텐츠 가상 터치 스크린이 처럼 동작합니다.
-
-조작이 사용자가 쉽게 배울 수 있고 직접 너무 재미 있는 예입니다. Arm의 범위 내에 있는 콘텐츠를 사용 하 여 상호 작용 하기 위한 가장 적합 의미 하는 "거의 전달" 입력된 모델을 간주 됩니다.
 
 직접 조작은 유도성을 기반으로 사용자 친숙을 의미 합니다. 사용자를 교육 하려면 기호화 된 제스처 없음 있습니다. 모든 상호 작용 터치 하거나 가져오는 수 있는 시각적 요소 중심으로 구축 됩니다.
 
@@ -148,6 +144,6 @@ HoloLens를 사용 하 여 (첫 번째 gen)에서는 수업 사용자 Bloom 및 
 ## <a name="see-also"></a>참조
 
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [지점 및 커밋](point-and-commit.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 

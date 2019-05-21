@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트
-ms.openlocfilehash: 4ee81eca25109da428d7b3addf59e102ddc5c5cf
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993535"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940756"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Windows Mixed Reality 용 새 Unity 프로젝트 구성 
 
@@ -36,6 +36,9 @@ Unity 내보내기 하려는 앱을 만들어야 알 수 있도록 해야 합니
 4. 에 **xr 하이 설정** 섹션을 **가상 현실 지원** 추가 확인란을를 **가상 현실 장치용** 목록.
 5. 에 **xr 하이 설정을** 그룹에서 확인 **"Windows Mixed Reality"** 지원 되는 장치로 나열 됩니다. (이 나타날 수 있습니다 "Windows Holographic"으로 Unity의 이전 버전)
 
+![Unity 품질 설정](images/getting-started-unity-quality-settings.jpg)<br>
+*Unity xr 하이 설정*
+
 기본 holographic 렌더링 및 공간 입력에 이제 앱이 수행할 수 있습니다. 진행 하 고 특정 기능을 활용 하려면 앱 매니페스트에서 적절 한 기능을 선언 해야 합니다. 매니페스트 선언 되므로 모든 후속 프로젝트 내보내기에 포함 된 Unity에서 만들 수 있습니다. 설정에 포함 됩니다 **플레이어 설정 > 유니버설 Windows 플랫폼에 대 한 설정 > 게시 설정 > 기능**합니다. 혼합 현실에 대 한 일반적으로 사용 되는 Unity Api를 사용 하도록 설정 하는 것에 대 한 해당 기능은 다음과 같습니다.
 
 |  기능  |  기능을 요구 하는 Api | 
@@ -43,12 +46,12 @@ Unity 내보내기 하려는 앱을 만들어야 알 수 있도록 해야 합니
 |  SpatialPerception  |  SurfaceObserver (에 대 한 액세스 [공간 매핑](spatial-mapping.md) HoloLens에 메시)&mdash;*헤드셋의 일반 공간 추적에 필요한 기능이 없습니다* | 
 |  웹캠  |  PhotoCapture 및 VideoCapture | 
 |  PicturesLibrary / VideosLibrary  |  PhotoCapture 또는 VideoCapture, 각각 (저장할 때 캡처된 콘텐츠) | 
-|  Microphone  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
+|  마이크  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
 |  InternetClient  |  DictationRecognizer (및 Unity Profiler 사용) | 
 
 **Unity 품질 설정**
 
-![Unity 품질 설정](images/unityqualitysettings-350px.png)<br>
+![Unity 품질 설정](images/getting-started-unity-quality-settings.jpg)<br>
 *Unity 품질 설정*
 
 HoloLens는 mobile 클래스 GPU에 있습니다. 앱은 HoloLens를 대상으로 하는 경우 전체 프레임 속도 유지 하 고 확인 하려면 품질 설정을 가장 빠른 성능을 위해 조정 해야:

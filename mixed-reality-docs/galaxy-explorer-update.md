@@ -1,6 +1,6 @@
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>HoloLens 2에 대 한 Galaxy 탐색기의 할 일은
 
-HoloLens 2 Galaxy 탐색기 업데이트 하는 방법의 경험에 오신 것을 환영 합니다. [Galaxy 탐색기](https://docs.microsoft.com/en-us/windows/mixed-reality/galaxy-explorer "Galaxy 탐색기") HoloLens에 대 한 오픈 소스 응용 프로그램으로 개발 되었습니다 (첫 번째 gen) Your 아이디어 공유 프로그램을 통해 많은 사람들이 하는 첫 번째 혼합된 현실 환경 중 하나입니다. 업데이트에 대 한 되므로 이제 합니다 [HoloLens 2의 새롭고 흥미로운 기능](https://www.microsoft.com/en-gb/hololens/hardware)합니다.
+HoloLens 2 Galaxy 탐색기 업데이트 하는 방법의 경험에 오신 것을 환영 합니다. [Galaxy 탐색기](https://docs.microsoft.com/windows/mixed-reality/galaxy-explorer "Galaxy 탐색기") HoloLens에 대 한 오픈 소스 응용 프로그램으로 개발 되었습니다 (첫 번째 gen) Your 아이디어 공유 프로그램을 통해 많은 사람들이 하는 첫 번째 혼합된 현실 환경 중 하나입니다. 업데이트에 대 한 되므로 이제 합니다 [HoloLens 2의 새롭고 흥미로운 기능](https://www.microsoft.com/hololens/hardware)합니다.
 
 Microsoft 혼합 현실 Studios(1) 중 하나로에서는 일반적으로 상용 등급 솔루션을 개발 하는 개발 및 creative 및 개발 프로세스 전반에서 대상 플랫폼에서 테스트 합니다. 에서는 이제 고유 이런 HoloLens 2 장치에 대 한 액세스 권한이 아직 없는 위치 있지만 Galaxy 탐색기에 업데이트를 시작할 기대 됩니다. 프레임 워크 및 도구를 활용 하 여이 프로젝트에서 시작 하는 것 (같은 [MRTK v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)) 및-커뮤니티에서 사용할 수와 함께 경험해 제공 하고자 합니다.
 
