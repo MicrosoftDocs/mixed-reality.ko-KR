@@ -8,7 +8,7 @@ ms.topic: article
 keywords: azure, 인식, 몰입 형, hololens, vr 얼굴 혼합 현실, academy, unity, 자습서, api,
 ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59603809"
@@ -112,11 +112,11 @@ ms.locfileid: "59603809"
 
     6. 이 서비스에 적용 되는 조건에 이해는 확인 해야 합니다.
 
-    7. 선택 **만들기 * 합니다.**
+    7. 선택 **만들기*합니다.** 
 
         ![만들 api 서비스를 직면 합니다.](images/AzureLabs-Lab4-03.png)
 
-5.  클릭 한 후 **만들기 *** 만들려는 서비스에 대 한 대기 해야, 1 분이 걸릴 수 있습니다.
+5.  클릭 한 후 **만들기*** 만들려는 서비스에 대 한 대기 해야, 1 분이 걸릴 수 있습니다.
 
 6.  서비스 인스턴스가 생성 되 면 포털에서 알림이 표시 됩니다.
 

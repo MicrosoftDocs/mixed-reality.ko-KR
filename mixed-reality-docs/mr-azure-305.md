@@ -8,7 +8,7 @@ ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, 함수, 저장소, hololens, vr, 몰입 형
 ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59598300"
@@ -469,7 +469,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 1.  추가 된 **.unitypackage** Unity 사용 하 여 파일을 **자산 > 패키지 가져오기 > 사용자 지정 패키지** 메뉴 옵션입니다.
 
-2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인* > * 저장소 * * 합니다. 이 과정에 대 한 필요 하지 않을 때 나머지 작업은 모두 선택 취소 합니다.
+2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인* > *저장소**합니다. 이 과정에 대 한 필요 하지 않을 때 나머지 작업은 모두 선택 취소 합니다.
 
     ![패키지 가져오기](images/AzureLabs-Lab5-45.png)
 
