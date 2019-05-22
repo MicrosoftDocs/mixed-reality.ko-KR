@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 입력, 응시 눈 추적
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730772"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974761"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>시선 추적 HoloLens 2
 HoloLens 2에서는 컨텍스트 및 사람이 이해는 Holographic 내에서 완전히 새로운 수준에 대 한 사용자에서 원하는 것에 대 한 정보를 사용 하 여 놀라운 기능을 사용 하 여 개발자가 제공 하 여 환경입니다. 이 페이지에는 개발자가 다양 한 사용 사례에 대 한 눈 모양 추적에서 이점을 얻을 수 있습니다 하는 방법 및 눈-게이즈 기반 사용자 인터페이스를 디자인할 때 살펴봐야 할 간략히를 설명 합니다. 
@@ -127,7 +127,7 @@ HoloLens 2에서는 컨텍스트 및 사람이 이해는 Holographic 내에서 �
 5. **Imprecision에 대 한 계정:** Imprecision 사용자에 게 눈에 두 가지 유형의 구분 했습니다. 오프셋 및 지터 합니다. 주소 오프셋 하는 가장 쉬운 방법은 상호 작용을 충분히 큰 목표를 제공 하는 것 (참조로 visual 각도 – > 2 °: 축소판 그림은 약 2 visual 각도에서 arm (1)를 확장 하는 경우). 따라서 다음 지침:
     - 작은 대상을 선택할 수 있는 사용자를 강제 하지 않습니다. 연구에 따르면 목표는 충분히 큰과 시스템이 잘 디자인 된 경우 사용자 설명 있으므로 간편 하 고 마법으로 상호 작용 합니다. 대상 너무 작은 경우, 사용자 fatiguing와 불편 함을 느끼게 경험에 설명 합니다.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>눈 게이즈 디자인 지침 (자리 표시자)
+# <a name="eye-gaze-design-guidelines"></a>눈 게이즈 디자인 지침
 
 HoloLens 2를 사용 하 여 훌륭한 기회를 응시 & 빠르고 보다 편리 하 게 커밋 헤드 게이즈 대신 응시를 사용 하 여 했습니다. 그러나 응시 헤드 게이즈 몇 가지에서 매우 다른 방식으로 작동 하 고 고유한 챌린지 횟수 따라서 제공 됩니다. 눈 Gaze 디자인 지침에서는 요약 일반 장점과 holographic 앱에는 입력된 미디어로 눈 추적을 사용 하는 경우 고려해 야 할 문제를 해결 합니다. 이 섹션에서는 응시 커밋에 대 한 특정 디자인 고려 사항에 집중 합니다. 먼저, 눈 매우 빠르게 이동 하 고 되므로 신속 하 고 보기를 대상으로 하는 데 유용 합니다. 이렇게 하면 눈 빠른 게이즈 적합 gaze &를 어 탭 또는 단추 누르기와 같은 고속 커밋으로 결합 하는 경우에 특히 작업을 커밋합니다.
 
@@ -138,9 +138,8 @@ HoloLens 2를 사용 하 여 훌륭한 기회를 응시 & 빠르고 보다 편�
 응시 및 커밋 신호 동기화 찾습니다. 입력된 신호 동기화 하므로 간단한 게이즈 & 커밋 어려워집니다 작을 수 있으며, 걱정 하지 마세요! 긴 음성 명령 또는 복잡 한 손 제스처 포함 될 수는 있지만 더 복잡 한 커밋 작업을 사용 하려는 경우에 대 한 확인해 볼 것입니다. 대상 확인 하 고 긴 음성 명령을 장모님 한다고 가정 합니다. 이야기 하는 데 필요한 시간과 말씀 하 신 내용을 검색 하는 데 필요한 시스템 계정으로 수행에 응시가 일반적으로 장기 이동 장면에서 몇 가지 새 대상으로 합니다. 따라서 하거나 사용자가 명령을 인식 된 될 때까지 대상 살펴보면 유지 해야 합니다. 또는 명령 및 새로운 사용자가에 대해 살펴보고 다음 다시 시작을 결정 하는 방법에 대 한 입력을 처리할 수를 확인 합니다.
 
 ## <a name="see-also"></a>참조
-* [응시 및 커밋](gaze-and-commit.md)
-* [대상으로 하는 헤드 응시](gaze-targeting.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
 * [제스처](gestures.md)
-* [음성 디자인](voice-design.md)
+* [음성 명령](voice-design.md)
 * [모션 컨트롤러](motion-controllers.md)
 * [편안함](comfort.md)

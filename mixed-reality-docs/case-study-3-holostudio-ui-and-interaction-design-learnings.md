@@ -6,12 +6,12 @@ ms.author: marcghal
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 혼합 현실을 HoloStudio, HoloLens, Windows
-ms.openlocfilehash: 217c489fed3c0588dae1c2753db6ba15da3522c8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e01e2ea888398e9982b56fd95f90ef0731ec6bc2
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603209"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974824"
 ---
 # <a name="case-study---3-holostudio-ui-and-interaction-design-learnings"></a>사례 연구-3 HoloStudio UI와 상호 작용 디자인 학습
 
@@ -75,6 +75,6 @@ ms.locfileid: "59603209"
 </table>
 
 ## <a name="see-also"></a>참조
-* [상호 작용 기본 사항](interaction-fundamentals.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
 
  

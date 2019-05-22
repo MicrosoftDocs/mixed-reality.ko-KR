@@ -6,18 +6,19 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 보정, 쾌적, 시각적 개체, 품질, ipd
-ms.openlocfilehash: 91af069bc4ae5e49d9eb9c529f0d0db7b1567fc8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604792"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974810"
 ---
-# <a name="calibration"></a>보정
-
-프로그램 IPD (interpupillary 거리) 보정 시각적 개체의 품질을 향상 시킬 수 있습니다. HoloLens와 Windows Mixed Reality 몰입 형 헤드셋 IPD 사용자 지정 하는 방법을 제공 합니다.
+# <a name="improve-visual-quality-and-comfort"></a>시각적 품질 및 편안 하 게 개선
+HoloLens, HoloLens 2 및 Windows Mixed Reality 몰입 형 헤드셋 시각적 효과의 품질을 개선 하는 다양 한 방법 제공 합니다. 
 
 ## <a name="hololens"></a>HoloLens
+
+프로그램 IPD (interpupillary 거리) 보정 시각적 개체의 품질을 향상 시킬 수 있습니다.
 
 ### <a name="during-setup"></a>설치 중
 
@@ -54,10 +55,21 @@ Cortana 자신를 도입 하는 후 첫 번째 설치 단계는 보정 합니다
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> HoloLens 2 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+### <a name="calibration"></a>보정 
 
-## <a name="immersive-headsets"></a>몰입 형 헤드셋
+HoloLens 2에서 장치 설치 하는 동안 시각적 개체를 보정 하 라는 메시지가 됩니다. 사용자는 고정 대상 집합 확인 해야 합니다. 이 정확 하 게 배치 홀로그램 보기 경험 하는 보다 편리한 3D 되도록 사용자에 대 한 홀로그램 렌더링에 맞게 장치를 통해 표시 품질 향상. 모든 조정 수동 튜닝에 대 한 필요 없이 즉석에서 발생합니다. 
+
+### <a name="calibration-when-sharing-a-device"></a>장치를 공유 하는 경우 보정 
+
+Hololens 2 장치는 장치 설치 프로그램을 통해 이동 하는 각 사용자에 대 한 필요 없이 사용자 간에 공유할 수 있습니다. Hololens 2에는 사용자가 장치에 새 장치는 head에 적용 되는 경우 시각적 개체를 보정 하 라는 메시지가 나타납니다. 사용자가 장치에서 시각적 개체를 보정 이미, 표시 원활 하 게 조정 됩니다 품질과 편안 하 게 시청할에 대 한 사용자 시작 부분에 장치를 배치 하는 경우.  
+
+### <a name="launching-the-calibration-app-from-settings"></a>설정에서 보정 앱 시작
+1. 시작 메뉴를 이동 하려면 시작 제스처를 사용 합니다.
+2. 선택 **+** 하는 경우 모든 앱을 보려면 **설정을** 시작에 고정 되지 않습니다.
+3. 시작할 **설정을**합니다.
+4. 이동할 **시스템** > **유틸리티** 선택한 **열기 보정**합니다.
+
+## <a name="immersive-headsets"></a>몰입형 헤드셋
 
 IPD 헤드셋 내를 변경 하려면 설정 앱 열고 이동할 **혼합 현실을** > **헤드셋 표시** 슬라이더 컨트롤을 이동 합니다. 헤드셋에서 변경 내용을 실시간으로 표시 됩니다. 프로그램 IPD을 알고 있는 경우 아마도 optometrist, 방문에서 입력할 수 있습니다도 직접.
 
@@ -66,4 +78,4 @@ IPD 헤드셋 내를 변경 하려면 설정 앱 열고 이동할 **혼합 현�
 헤드셋 IPD 사용자 지정을 지원 하지 않는 경우이 설정은 비활성화 됩니다.
 
 ## <a name="see-also"></a>참조
-* [HoloLens에 대 한 환경 고려 사항](environment-considerations-for-hololens.md)
+* [HoloLens의 환경 고려 사항](environment-considerations-for-hololens.md)

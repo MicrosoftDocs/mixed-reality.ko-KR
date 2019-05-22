@@ -24,6 +24,7 @@
 #### [사진 보기](see-your-photos.md)
 #### [센서 튜닝](sensor-tuning.md)
 #### [HoloLens 업데이트](updating-hololens.md)
+#### [디바이스 공유](device-sharing.md)
 #### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
 ### 몰입형 헤드셋
 #### [몰입형 헤드셋 하드웨어 세부 정보](immersive-headset-hardware-details.md)
@@ -160,6 +161,7 @@
 #### [Unity의 키보드 입력](keyboard-input-in-unity.md)
 ### 고급 항목
 #### [HoloLens용 Unity 앱에서 Windows 네임스페이스 사용](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+#### [Unity의 혼합 현실 기본 개체](unity-xrdevice-advanced.md)
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 ### 레거시 문서(Unity 2017.4/HTK/MRTK v1)
 ## Unreal

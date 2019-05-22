@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 게이즈 게이즈 상호 작용을 대상으로 디자인, hololens, MMR, multimodal
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730829"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974901"
 ---
 # <a name="introducing-instinctual-interactions"></a>소개 instinctual 상호 작용
 
@@ -141,12 +141,13 @@ A:  이러한 사용자에 대 한 상호 작용 모델의 모든 작동 합니�
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [직접 조작](direct-manipulation.md)
-* [지점 및 커밋](point-and-commit.md)
-* [응시 대상 지정](gaze-targeting.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
 * [제스처](gestures.md)
-* [음성 디자인](voice-design.md)
+* [음성 명령](voice-design.md)
 * [모션 컨트롤러](motion-controllers.md)
 * [공간 음향 디자인](spatial-sound-design.md)
 * [공간 매핑 디자인](spatial-mapping-design.md)
 * [편안함](comfort.md)
+

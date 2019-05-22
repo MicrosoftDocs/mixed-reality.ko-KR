@@ -8,7 +8,7 @@ ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, media services에서 스트리밍 비디오를 360, 몰입 형, vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59599485"
@@ -96,7 +96,7 @@ ms.locfileid: "59599485"
 
     3.  에 대 한 **계정 종류**를 선택 **저장소 (범용 v1)** 합니다.
 
-    4.  에 대 한 **성능**, 선택 **Standard * 합니다.**
+    4.  에 대 한 **성능**, 선택 **Standard* 합니다.**
 
     5.  에 대 한 **복제** 선택 **로컬 중복 저장소 (LRS)** 합니다.
 
@@ -226,7 +226,7 @@ Azure 미디어 서비스를 사용 하려면 (여기서는 계정 보유자는 
 
     ![Azure Portal](images/AzureLabs-Lab6-21.png)
 
-20. 다른와 함께 동영상을 보면 * * 자산 형식 * 다중 비트 전송률 MP4 * 합니다.
+20. 다른와 함께 동영상을 보면 **자산 형식 *다중 비트 전송률 MP4* 합니다.
 
     ![Azure Portal](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ Azure 미디어 서비스를 사용 하려면 (여기서는 계정 보유자는 
 
 8.  이러한 변경 했다면 닫습니다 합니다 **빌드 설정** 창입니다.
 
-9.  프로젝트를 저장 합니다 **파일* * 프로젝트 * * 저장 합니다.
+9.  프로젝트를 저장 합니다 **파일* *프로젝트 **저장 합니다.
 
 
 
@@ -625,7 +625,7 @@ Unity 자산 패키지를 다운로드 해야 합니다.이 코스 이라는 [ *
 
 1.  로 이동 합니다 **스크립트** 이전에 만든 폴더입니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **프로젝트** 패널 **만듭니다* * C\# 스크립트 * * 합니다. 스크립트 이름을 **Gaze**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **프로젝트** 패널 **만듭니다* *C\# 스크립트** 합니다. 스크립트 이름을 **Gaze**합니다.
 
 3.  두 번 클릭 하 여 새 ***Gaze*** 스크립트를 사용 하 여 열고 **Visual Studio 2017.**
 

@@ -6,12 +6,12 @@ ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
 keywords: vr lbe, 위치 기반 엔터테인먼트, vr 아케이드 아케이드, 몰입도 qr, qr 코드
-ms.openlocfilehash: b0f4480496c15f811979f76143acbd456d89e249
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: e6588552c0cfa8bffa19ac2be5c247c5f73dc19c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605117"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974894"
 ---
 # <a name="qr-code-tracking"></a>QR 코드 추적
 
@@ -176,7 +176,7 @@ QRTracking 플러그 인 QR 코드를 추적 하기 위한 Api를 노출 합니�
 혼합 현실 도구 키트의 QR 추적 API를 사용 하는 방법에 대 한 예제를 찾을 수 있습니다 [GitHub 사이트](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker)합니다.
 
 MRTK 사용 현황 추적 QR simpilify에 필요한 스크립트를 구현 했습니다. QR 추적 앱을 개발 하는 데 필요한 모든 자산 "QRTracker" 폴더에 있습니다. 두 장면 가지: 첫 번째는 단순히 감지 된와 두 번째 홀로그램 표시할 QR 코드를 연결할 좌표계를 사용 하는 방법에 설명 QR 코드의 세부 정보를 표시 하는 샘플입니다.
-prefab "QRScanner"는 필요한 모든 scrips QRCodes 데 장면에 추가 하는 경우 스크립트 QRCodeManager 클래스인 singileton 있습니다 장면에 추가할 수 있습니다 QRCode API를 구현 하는 합니다. 스크립트 "AttachToQRCode" 홀로그램 QR 코드 coodridnate 시스템에 연결 하는,이 스크립트는 사용자 제공 중 하나에 추가할 수 있습니다. "SpatialGraphCoordinateSystem" QRCode 좌표계를 사용 하는 방법을 보여 줍니다. 사용자 프로젝트 장면에는 이러한 스크립트를 사용할 수 있습니다 하거나 직접 사용 하 여 플러그 인을 위에 설명 된 대로 작성할 수 있습니다.
+prefab "QRScanner" QRCodes 데 장면에 필요한 모든 스크립트를 추가 하는 경우 QRCodeManager 스크립트는 QRCode API를 구현 하는 단일 클래스입니다. 이 장면에 추가 해야 합니다. 스크립트 "AttachToQRCode" 홀로그램 QR 코드 좌표 시스템에 연결 하는,이 스크립트는 사용자 제공 중 하나에 추가할 수 있습니다. "SpatialGraphCoordinateSystem" QRCode 좌표계를 사용 하는 방법을 보여 줍니다. 으로 이러한 스크립트를 사용할 수 있습니다-는 프로젝트에서 장면을 하거나 작성할 수 직접 사용 하 여 플러그 인을 위에 설명 된 대로 합니다.
 
 ### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>QR 코드 MRTK 없이 Unity에서 추적 구현
 

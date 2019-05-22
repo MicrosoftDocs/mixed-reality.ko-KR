@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱 품질 기준에 혼합 현실을, 혼합 현실 앱
-ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 756bc148f290aa3406c9ac8bb7003d463c62772c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628981"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974746"
 ---
 # <a name="app-quality-criteria"></a>앱 품질 기준
 
@@ -403,7 +403,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 * [상호 작용 디자인](hologram.md)
 * [색, 광원 및 재질](color,-light-and-materials.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
-* [상호 작용 기본 사항](interaction-fundamentals.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
 * [동작 자체 및 사용자 locomotion](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
@@ -451,14 +451,14 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 #### <a name="documentation"></a>설명서
 
-* [Windows MR 상호 작용 기본 사항](interaction-fundamentals.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
 * [상호 작용할 수 없는 개체](interactable-object.md)
-* [응시 대상 지정](gaze-targeting.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
 * [커서](cursors.md)
 * [편안 함과 응시](comfort.md#gaze-direction)
 * [제스처](gestures.md)
 * [음성 입력 ](voice-input.md)
-* [음성 디자인](voice-design.md)
+* [음성 명령](voice-design.md)
 * [모션 컨트롤러](motion-controllers.md)
 * [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Unity의 키보드 입력](keyboard-input-in-unity.md)
@@ -467,7 +467,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 * [Unity의 음성 입력](voice-input-in-unity.md)
 * [DirectX의 키보드, 마우스 및 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
 * [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
-* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
+* [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 * [DirectX의 음성 입력](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
@@ -519,7 +519,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 * [상호 작용 가능한 개체](interactable-object.md)
 * [Unity의 텍스트](text-in-unity.md)
 * [앱 바 및 경계 상자](app-bar-and-bounding-box.md)
-* [음성 디자인](voice-design.md)
+* [음성 명령](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 

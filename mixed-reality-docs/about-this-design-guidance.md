@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 소개, 지침
-ms.openlocfilehash: b4f128c001a2fa6ed72e1548ef82693ad1488099
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ca69118dfeb766c1386420cd81053b9acb485ba7
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598935"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974852"
 ---
 # <a name="about-this-design-guidance"></a>이 디자인 지침에 대 한
 
@@ -31,7 +31,7 @@ ms.locfileid: "59598935"
 
 이 디자인 지침 구성 방법의 간략 한 개요는 다음과 같습니다. 여러 문서에 대 한 링크로 이러한 영역 중 각각에 대 한 섹션을 찾을 수 있습니다.
 * **[디자인을 사용 하 여 시작](mixed-reality.md)**  -는 높은 수준의 생각 읽고 따릅니다 원칙을 이해 합니다.
-* **[상호 작용 디자인](interaction-fundamentals.md)**  -입력, 명령, 탐색 및 앱을 디자인 하기 위한 기타 상호 작용 기본 사항에 알아봅니다.
+* **[Instinctual 상호 작용](interaction-fundamentals.md)**  -입력, 명령, 탐색 및 앱을 디자인 하기 위한 기타 상호 작용 기본 사항에 알아봅니다.
 * **[스타일](typography.md)**  -색, 입력 체계, 및 동작을 사용 하 여 매력적인 앱을 확인 합니다.
 * **[앱 패턴](types-of-mixed-reality-apps.md)**  -앱 몰입도 및 실제 환경에서 시나리오에 걸쳐 수 하는 방법에 대해 알아봅니다.
 * **[컨트롤](interactable-object.md)**  -을 고유한 앱을 만드는 구성 요소 처럼 컨트롤 및 패턴을 사용 합니다.

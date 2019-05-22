@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실을 응시, 유지, 상호 작용 디자인
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813988"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974861"
 ---
 # <a name="head-gaze-and-dwell"></a>헤드 게이즈 및 유지
 
@@ -124,8 +124,8 @@ ms.locfileid: "65813988"
 * 다시 동일한 패턴을 UX 경험을 설정 하는 가능한 한 자주 사용
  
  ## <a name="see-also"></a>참조
-* [직접 조작](direct-manipulation.md)
-* [지점 및 커밋](point-and-commit.md)
-* [상호 작용 기본 사항](interaction-fundamentals.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [응시 및 음성](voice-design.md)
+* [음성 명령](voice-design.md)

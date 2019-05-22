@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인, near 바늘 HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730509"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974752"
 ---
 # <a name="direct-manipulation"></a>직접 조작
 
@@ -143,6 +143,6 @@ HoloLens와 달리 (첫 번째 gen)에서는 수업 사용자 Bloom 및 Air 탭�
 
 ## <a name="see-also"></a>참조
 
-* [응시 및 커밋](gaze-and-commit.md)
-* [지점 및 커밋](point-and-commit.md)
-* [상호 작용 기본 사항](interaction-fundamentals.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)

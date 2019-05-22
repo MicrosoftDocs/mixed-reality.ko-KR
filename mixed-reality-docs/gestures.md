@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 혼합된 현실 등 제스처와 상호 작용, 디자인
-ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629061"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974881"
 ---
 # <a name="gestures"></a>제스처
 
@@ -110,9 +110,9 @@ HoloLens에 제스처를 손 모양 아이콘이 프레임 내 에서"제스처"
 * 제스처 프레임 경계를 중단에 따른 최소화 해야 합니다. 일반적으로 제스처의 결과 경계에서 중지 되었지만 반대로 수행 되지 않았다는 의미입니다. 예를 들어, 사용자는 대화방에서 일부 holographic 개체 이동 하는 경우 이동 중지할지 제스처 프레임을 초과할 때 하지만 **되지** 시작점을 반환 합니다. 사용자 그런 다음 일부 불만이 발생할 수 있지만 경계를 보다 신속 하 게 이해 및 때마다 해당 전체 의도 된 작업을 다시 시작 하지 않아도 수 있습니다.
 
 ## <a name="see-also"></a>참조
-* [응시 대상 지정](gaze-targeting.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
 * [음성 디자인](voice-design.md)
 * [MR 입력 211: 제스처](holograms-211.md)
 * [Unity의 제스처 및 모션 컨트롤러](gestures-and-motion-controllers-in-unity.md)
-* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
+* [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 * [모션 컨트롤러](motion-controllers.md)

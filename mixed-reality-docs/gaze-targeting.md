@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873921"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974925"
 ---
 # <a name="gaze-and-dwell"></a>응시 및 유지
 확인 하는 다양 한 방법의 많은 _커밋_ 사용 하 여 게이즈를 조합 하는 등 _음성_ 또는 _제스처를 전달_합니다.
@@ -99,5 +99,5 @@ A _타이_ head 또는 눈 게이즈를 사용 하 여 수행할 수 있습니�
 
 ## <a name="see-also"></a>참조
 * [제스처](gestures.md)
-* [음성 디자인](voice-design.md)
+* [음성 명령](voice-design.md)
 * [커서](cursors.md)

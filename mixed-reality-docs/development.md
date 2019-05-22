@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실을, 개발, 개발, HoloLens, directx, unity
-ms.openlocfilehash: 59b41c6b71e546bac6e3b76c038229d6de45b535
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730791"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974818"
 ---
 # <a name="development-launchpad"></a>개발 실행 패드
 
@@ -158,7 +158,7 @@ Unreal-서비스 예정!
                     <div class="cardText">
                         <h3>개발 기본 사항</h3>
                         <p>
-                            <a href="Interaction-fundamentals.md">상호 작용</a>
+                            <a href="Interaction-fundamentals.md">Instinctual 상호 작용</a>
                         </p>
                         <p>
                             <a href="rendering.md">Holographic 렌더링</a>

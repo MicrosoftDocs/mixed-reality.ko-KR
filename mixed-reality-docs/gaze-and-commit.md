@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실을 응시, 상호 작용을 대상으로 응시 디자인
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730818"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974873"
 ---
 # <a name="head-gaze-and-commit"></a>헤드 게이즈 및 커밋
 헤드 게이즈 커밋 이며 앞으로 가리키는 머리 (헤드-방향)의 방향 사용 하 여 개체를 대상으로 하는 입력된 모델 및 등을 입력 한 다음 보조를 사용 하 여 역할에 어 탭 손 제스처 또는 음성 명령을 "Select"입니다. 콘텐츠는 arm 이외의 도달 하는 상호 작용 하기 위한 가장 적합 하므로 간접 조작을 사용 하 여 "훨씬" 입력된 모델을 간주 됩니다.
@@ -70,7 +70,7 @@ ms.locfileid: "65730818"
 - 사용자 인터페이스 대화 또는 엔터티는 AI 자연 언어 기능이 있는 Cortana를 선호 합니다.
 - 사용자 지정 commnads
 
-사용 가능한 명령 및 사용 하는 방법의 comprenhesive 목록과 자세한 세부 정보를 찾으려면 체크 아웃 우리의 [디자인 음성](voice-design.md) 지침입니다.
+사용 가능한 명령 및 사용 하는 방법의 comprenhesive 목록과 자세한 세부 정보를 찾으려면 체크 아웃 우리의 [음성 명령](voice-design.md) 지침입니다.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>헤드 게이즈 및 HoloLens Clicker
@@ -204,11 +204,11 @@ HoloLens에 제스처를 손 모양 아이콘이 프레임 내 에서"제스처"
 
 
 ## <a name="see-also"></a>참조
-* [직접 조작](direct-manipulation.md)
-* [지점 및 커밋](point-and-commit.md)
-* [상호 작용 기본 사항](interaction-fundamentals.md)
-* [응시 및 유지](gaze-targeting.md)
-* [응시 및 음성](voice-design.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
+* [음성 명령](voice-design.md)
 
 
 

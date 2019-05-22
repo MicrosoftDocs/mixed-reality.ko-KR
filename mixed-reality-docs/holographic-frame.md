@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality holographic 프레임 보기 필드
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598790"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974919"
 ---
 # <a name="holographic-frame"></a>Holographic 프레임
 
@@ -127,8 +127,8 @@ HoloLens 게임 조각에 있습니다 거실에 앉고에 앉아서 담 벼 락
 현실적인 표현의 소식 강력한 초점을 담당 하 고,을 말하는 것 처럼 느낄 사용자 쪽으로 대화를 설정 하기 위해 미묘한 기술을 전체를 제공 합니다. 사용자 환경에 대해 이동, 소식 전환 됩니다 앞쪽 임계값 사용자 자신의 주변 멀리 벗어나는 경우 중립적인 상태로 돌아가기 전에 합니다. 사용자 대화에서 완전히 (예를 들어 장면에서 다른 곳에서 살펴볼)으로 표시 되 면 다시 소식, 내레이터의 방향 위치는 한 번에 다시 초점을 맞춰야 사용자입니다. 다음과 같은 기술을 집중 교육의 강력한 의미를 제공 하 고 holographic 프레임 내에서 과도 한 헤드 이동 줄이고 승격 초점은 만듭니다 [사용자와 쾌적](comfort.md)합니다.
 
 ## <a name="see-also"></a>참조
-* [상호 작용 기본 사항](interaction-fundamentals.md)
-* [Comfort](comfort.md)
+* [Instinctual 상호 작용](interaction-fundamentals.md)
+* [편안함](comfort.md)
 * [소수 자릿수](scale.md)
-* [대상으로 응시](gaze-targeting.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
 * [홀로그램 안정성](hologram-stability.md)
