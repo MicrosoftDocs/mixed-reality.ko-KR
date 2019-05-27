@@ -8,12 +8,12 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 스타일, 색, 앱 패턴, 컨트롤, 혼합 현실 도구 키트, MRTK 샘플 앱
-ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730842"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039206"
 ---
 # <a name="design-for-mixed-reality"></a>혼합된 현실에 대 한 디자인
 
@@ -73,7 +73,7 @@ ms.locfileid: "65730842"
                             <a href="interaction-fundamentals.md">Instinctual 상호 작용</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">실습 및 컨트롤러</a>
+                            <a href="hands-and-tools.md">실습 및 동작 컨트롤러</a>
                         </p>
                         <p>
                             <a href="hands-free.md">핸 즈 프리</a>
