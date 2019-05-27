@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: 혼합 현실을, 실습, 동작 controlles, 상호 작용 디자인
-ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813977"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039172"
 ---
 # <a name="hands-and-motion-controllers"></a>실습 및 동작 컨트롤러
 ## <a name="scenarios"></a>시나리오
@@ -38,7 +38,7 @@ ms.locfileid: "65813977"
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [(근처 직접 상호 작용)을 직접 조작](direct-manipulation.md)
-* [지점 및 커밋 (극동 직접 상호 작용)](point-and-commit.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
 * [핸즈프리](hands-free.md)
-* [응시 및 유지](gaze-targeting.md)

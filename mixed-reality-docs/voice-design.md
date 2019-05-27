@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 음성
-ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730795"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039187"
 ---
 # <a name="voice-commanding"></a>음성 명령 실행
 
@@ -103,4 +103,4 @@ Windows Mixed Reality "표시, 말" 음성 모델을 채택 했습니다 위치 
 
 ## <a name="see-also"></a>참조
 * [제스처](gestures.md)
-* [응시 대상 지정](gaze-targeting.md)
+* [헤드 게이즈 및 유지](gaze-and-dwell.md)

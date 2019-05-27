@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 3/18/2019
 ms.topic: article
 keywords: 혼합된 현실 OpenXR 개발자 미리 보기
-ms.openlocfilehash: c5ac87145ca23e4a6fbe578a285e27d50f1f22a1
-ms.sourcegitcommit: 36192101052666da01dd6c59cad4cfabd4ecb6f9
+ms.openlocfilehash: 723b0b85785d4b6dd735430aa76a24b9ce05b5c7
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048502"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039178"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ HoloLens 2에서 혼합 현실 OpenXR Developer Preview를 사용 하 여 시작
 
 데스크톱 PC에서 혼합 현실 OpenXR Developer Preview를 사용 하 여 시작 하기:
 
-1. 실행 하는 최소 Windows 해야 10 년 10 월 2018 (1809)을 업데이트 합니다.  이전 버전의 Windows 10를 사용 하는 경우 년 10 월 2018로 업그레이드할 수 있습니다 사용 하 여 업데이트 합니다 [Windows 10 업데이트 도우미](https://www.microsoft.com/en-us/software-download/windows10)합니다.  관심이 있으면 모험을 설치할 수는 [월 2019의 Windows 10 Insider Preview 빌드 업데이트 (1903)](https://insider.windows.com)합니다.
+1. Windows를 실행 하는 해야 10 년 10 월 2018 Update (1809) 또는 Windows 10 2019 업데이트할 수 (1903).  Windows 10의 이전 버전의 경우 월 2019로 업그레이드할 수 있습니다 사용 하 여 업데이트 합니다 [Windows 10 업데이트 도우미](https://www.microsoft.com/en-us/software-download/windows10)합니다.
 1. Windows Mixed Reality 헤드셋을 설정 하거나 지침에 따라 [Windows Mixed Reality 시뮬레이터를 사용 하도록 설정](using-the-windows-mixed-reality-simulator.md)합니다.
 1. 설치 합니다 [OpenXR 개발자 혼합된 현실 앱 미리 보기](https://www.microsoft.com/store/productId/9n5cvvl23qbt)합니다.  이 앱에서는 설정 OpenXR 런타임 미리 보기를 사용 하 여 windows 10 년 10 월 2018 Update (1809) 이상.  이 앱을 설치한 후 Windows 스토어는 런타임이 최신 상태로 유지 합니다.
 1. 시작 메뉴에서 혼합 현실 OpenXR 개발자 미리 보기 앱을 실행 하 고 런타임 활성화 하려면 지침을 따릅니다.  곧이 앱 뿐만 아니라 다른 OpenXR 디버그 정보를 확인할 수 됩니다.
@@ -45,7 +45,9 @@ HoloLens 2에서 혼합 현실 OpenXR Developer Preview를 사용 하 여 시작
 
 ### <a name="support-for-windows-10-october-2018-update"></a>Windows 10 년 10 월 2018 Update에 대 한 지원
 
-사용 하기 위해 혼합 현실 OpenXR Developer Preview windows 데스크톱 PC에서 10 년 10 월 2018 Update (1809 현재 버전의 Windows), 몇 가지 자세한 단계를 수행 해야 합니다.
+Windows를 실행 하는 경우 (1903) 업데이트 하 고 위의 단계를 수행 하는 10 월 2019, 혼합 현실 OpenXR Developer Preview를 사용할 준비가 됩니다!
+
+라면 준비가 [월 2019를 데스크톱 PC를 업그레이드 업데이트](https://www.microsoft.com/en-us/software-download/windows10), windows 작업할 수 있습니다 10 년 10 월 2018 하나 더 많은 단계를 수행 하 여 (1809) 업데이트:
 
 1. 혼합 현실 OpenXR Developer Preview를 설치 하려면 위의 단계를 수행 합니다.
 1. 혼합 현실 OpenXR Developer Preview 시스템의 현재 OpenXR runtime을 설정 하려면 다음을 설치 합니다 [혼합 현실 OpenXR 개발자 미리 보기 호환성 팩](https://aka.ms/openxr-compat)합니다.
@@ -56,7 +58,7 @@ HoloLens 2에서 혼합 현실 OpenXR Developer Preview를 사용 하 여 시작
 
 Win32와 UWP 프로젝트 파일은 별도 패키징 및 배포, 각 프로젝트 내에서 응용 프로그램 코드의 차이로 인해는 100% 동일 note!
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>사용자 의견
 
 피드백을 제공 하는 [OpenXR 임시 0.90 사양](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)를 방문 하십시오 합니다 [Khronos OpenXR 포럼](https://community.khronos.org/c/openxr), [#openxr Slack 채널](https://khr.io/slack) 및 [사양 문제 추적기](https://github.com/KhronosGroup/OpenXR-Docs/issues)합니다.
 
@@ -70,7 +72,7 @@ OpenXR 앱이 실행 시 Windows Mixed Reality 시작 되지 않음, 경우 혼�
 
 ### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>혼합된 현실 OpenXR 개발자 미리 보기 앱을 설치할 수 없습니다. 
 
-실행 하는 최소 Windows 해야 10 년 10 월 2018 (1809)을 업데이트 합니다.  이전 버전의 Windows 10를 사용 하는 경우 년 10 월 2018로 업그레이드할 수 있습니다 사용 하 여 업데이트 합니다 [Windows 10 업데이트 도우미](https://www.microsoft.com/en-us/software-download/windows10)합니다.
+실행 하는 최소 Windows 해야 10 년 10 월 2018 (1809)을 업데이트 합니다.  Windows 10의 이전 버전의 경우 월 2019로 업그레이드할 수 있습니다 (1903) 사용 하 여 업데이트 합니다 [Windows 10 업데이트 도우미](https://www.microsoft.com/en-us/software-download/windows10)합니다.
 
 혼합 현실 OpenXR 개발자 미리 보기 앱에서 단추를 설치 하는 경우는 Windows에서 아무 작업도 수행 10 년 10 월 2018 업데이트, 시스템 앱에 대 한 오래 된 시스템 요구 사항 캐싱되어 있습니다.  명령을 실행할 수 있습니다 `wsreset.exe` 캐시를 지우려면 명령 프롬프트에서.
 
