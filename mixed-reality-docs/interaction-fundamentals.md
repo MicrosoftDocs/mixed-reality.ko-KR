@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 게이즈 게이즈 상호 작용을 대상으로 디자인, hololens, MMR, multimodal
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974901"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270381"
 ---
 # <a name="introducing-instinctual-interactions"></a>소개 instinctual 상호 작용
 
@@ -36,11 +36,11 @@ Microsoft 혼합 현실 (MMR) 플랫폼 전체에서 소프트웨어에는 하�
 
 이러한 상호 작용 모델의 각 강력 하 고 고유한 권한을 사용할 수 있는 편리한 이며 모든 고객의 요구 사항 집합에 대해 최적화 됩니다. 아래, 시나리오, 예제 및 각 상호 작용 모델의 이점에 대 한 차트를 봅니다.  
 
-**Model** | **[실습 및 도구](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[핸 즈 프리](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[응시 및 커밋](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Model** | **[실습 및 동작 컨트롤러](hands-and-tools.md)** | **[핸 즈 프리](hands-free.md)** | **[헤드 게이즈 및 커밋](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **예제 시나리오** | 예를 들어 공간 레이아웃과 디자인을 3D 공간 환경이 콘텐츠 조작 또는 시뮬레이션 | 여기서 사용자의 손에 꽉 찼을, 예: the 작업 학습, 유지 관리 하는 상황에 맞는 환경| 클릭 광고 환경을, 3D 프레젠테이션, 데모 예:
-**Fit** | 새 사용자를 결합 된 wit 음성에 대 한 멋진 시각 추적 또는 헤드 응시 합니다. 낮은 학습 곡선입니다. 직접 추적 및 6 DoF 컨트롤러 간에 일관 된 UX 합니다. | 일부 학습 합니다. 음성 및 자연어 쌍을 사용할 수 없는 경우 | Mobile에는 없지만 HMDs에서 학습에 필요합니다. 액세스할 수 있는 컨트롤러 HoloLens에 가장 적합 (첫 번째 범용) |
-**하드웨어** | HoloLens 2 몰입 형 헤드셋 | HoloLens 2 HoloLens (첫 번째 gen) 몰입 형 헤드셋 | HoloLens 2 몰입 형 헤드셋 | HoloLens 2 HoloLens (첫 번째 gen) 몰입 형 헤드셋 Mobile AR |
+**Fit** | 새 사용자를 결합 된 wit 음성에 대 한 멋진 시각 추적 또는 헤드 응시 합니다. 낮은 학습 곡선입니다. 직접 추적 및 6 DoF 컨트롤러 간에 일관 된 UX 합니다. | 일부 학습 합니다. 음성 및 자연어 쌍을 사용할 수 없는 경우 | Mobile에는 없지만 HMDs에서 학습에 필요합니다. 액세스할 수 있는 컨트롤러에 대 한 가장 합니다. HoloLens에 가장 적합 한 (첫 번째 gen). |
+**하드웨어** | HoloLens 2 <br>몰입형 헤드셋 | HoloLens 2 <br>HoloLens (첫 번째 범용) <br>몰입형 헤드셋 | HoloLens 2 <br>몰입형 헤드셋 | HoloLens 2 <br>HoloLens (첫 번째 범용) <br>몰입형 헤드셋 <br>모바일 AR |
 
 각 상호 작용 모델에서 원활 하 게 함께 사용 하는 모든 사용 가능한 입력에 대 한 자세한 내용은 다음에 오는 페이지, 그림 및 샘플 콘텐츠는 Unity MRTK에서 링크 켜져 있습니다.
 
@@ -75,7 +75,7 @@ Affordances 동작과 각 상호 작용 모델에 대해 최적화 된 방법의
         <td><strong>방금 필자 어떻게 알 수 있나요?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">실습 및 도구</a></td>
+        <td><a href="hands-and-tools.md">실습 및 모션 컨트롤러</a></td>
         <td>메시 손 모양 표시, 손끝 유도성 또는 직접 표시 / 컨트롤러 광선 합니다.</td>
         <td>Grabbable 핸들이 나 손을 때 표시 경계 상자를 표시 합니다.</td>
         <td>청각적 들릴 했으며 잡기 릴리스에 애니메이션을 참조 하세요.</td>

@@ -6,17 +6,21 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 렌더링, HoloLens, 원격 홀로그램 네트워크, 원격 렌더링, holographic remoting, 홀로그램
-ms.openlocfilehash: 4726c6af43fe1b89fc8298e459a1af9dfa5fc667
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605127"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270351"
 ---
 # <a name="add-holographic-remoting"></a>Holographic 원격 추가
 
+## <a name="hololens-2"></a>HoloLens 2
+
 > [!NOTE]
 > HoloLens 2 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+
+HoloLens 개발자 Holographic Remoting을 사용 하 여 HoloLens 2와 호환 되도록 하려면 해당 앱을 업데이트 해야 합니다.  공개적으로 사용할 수 없는 아직 Holographic 원격 NuGet 패키지의 새 버전을 해야 합니다.  HoloLens NuGet 패키지를 사용 하 여 응용 프로그램, HoloLens 2 Holographic 원격 플레이어에 게 연결 하는 경우 연결이 실패 합니다.  HoloLens 2 NuGet 패키지를 사용할 수 있으면이 페이지에서 업데이트를 시청 하세요.
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Holographic 원격 데스크톱 또는 UWP 앱 추가
 

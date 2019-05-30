@@ -7,12 +7,12 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality MRTK MRTK 버전 2, HoloLens 2 테스트
-ms.openlocfilehash: 98fde1a597bcc20b14037176748258d35ef99ab9
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 02dabd21b7a6add2ce53fe291a447e49057184d0
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730863"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270390"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>HoloLens 2에 대 한 기존 앱 준비
 
@@ -54,6 +54,7 @@ Unity를 업데이트 한 후 2018.3.x 또는 Unity 2019 +, 것이 좋습니다 
 
 > [!NOTE]
 > IL2CPP 스크립팅 백 엔드 Unity에서 Visual studio에 빌드 시간이 더를 일으킬 수 있으며 개발자는 개발자 컴퓨터를 설정 해야 하므로 [IL2CPP 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)합니다.
+> 또한 설치 하는 데 도움이 될 수 있습니다는 [캐시 서버](https://docs.unity3d.com/Manual/CacheServer.html), 특히 대용량 자산 (스크립트 파일 제외) 또는 지속적으로 사용 하 여 Unity 프로젝트의 백그라운드 에서/자산을 변경 합니다. 프로젝트를 열 때 Unity 개발자 컴퓨터의 내부 캐시 형식으로 한정 자산을 저장 합니다. 항목 다시 가져올 하 고 있으므로 수정 될 때 다시 처리 해야 합니다. 이 프로세스는 한 번 수행 및 캐시 서버에 저장 된 고 결과적으로 모든 개발자를 다시 가져오는 새 변경 내용을 로컬로 처리 하는 대신 시간 절약을 위해 다른 개발자와 공유 될 수 있습니다.
 
 업데이트 된 Unity 버전으로 이동 하 고 나면 주요 변경 내용이 해결을 한 후 개발자는 빌드 및 테스트 HoloLens에서 자신의 현재 앱 (첫 번째 gen). 또한 만들고 소스 제어에 대 한 커밋을 저장 하는 적절 한 지점입니다. 
 

@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 원격, Holographic 원격
-ms.openlocfilehash: 16add6c72b594822cacbef6c92ce196ab9b13429
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605002"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270310"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting 플레이어
 
@@ -19,8 +19,7 @@ Holographic 원격 플레이어는 PC 앱과 게임 Holographic 원격 지에 �
 
 Holographic 원격 플레이어 Holographic 원격을 지원 하도록 특별히 설계 된 PC 앱만 사용할 수 있습니다.
 
-> [!NOTE]
-> HoloLens 2 관련 된 자세한 지침 [예정](index.md#news-and-notes)합니다.
+Holographic 원격 플레이어는 HoloLens 및 HoloLens 2 모두에 대해 사용할 수 있습니다.  HoloLens Holographic 원격 기능을 지 원하는 PC 앱 Holographic Remtoing HoloLens 2를 지원 하도록 업데이트 해야 합니다.  버전은 지원에 대 한 질문이 있는 경우 앱 공급자에 게 문의 하세요.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Holographic 원격 플레이어에 게 연결
 
@@ -48,10 +47,10 @@ Holographic 원격 연결이 보면 **암호화 되지 않은**합니다. 항상
 메인 화면에서 말하면 **"진단 사용 안 함"** 진단을 해제 하려면.
 
 ## <a name="pc-system-requirements"></a>PC 시스템 요구 사항
-* PC **해야** Windows 10 1 주년 업데이트 실행 중 이어야 합니다.
+* PC **해야** 실행 Windows 10 1 주년 업데이트 이상.
 * GeForce GTX 970 또는 AMD Radeon R9 290 더 나은 그래픽 카드는 것이 좋습니다.
 * PC를 통해 무선 홉 수를 줄이기 위해 이더넷 네트워크에 연결 하는 것이 좋습니다.
 
 ## <a name="see-also"></a>관련 항목
-* [Holographic 원격 소프트웨어 사용 조건](microsoft-holographic-remoting-software-license-terms.md)
+* [홀로그램 원격 소프트웨어 사용 조건](microsoft-holographic-remoting-software-license-terms.md)
 * [Microsoft 개인정보취급방침](https://go.microsoft.com/fwlink/?LinkId=521839)

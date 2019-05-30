@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: unity, 설정, 혼합된 현실
-ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993605"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270371"
 ---
 # <a name="recommended-settings-for-unity"></a>Unity에 대 한 권장된 설정
 
@@ -84,6 +84,9 @@ Unity 스크립팅 백 엔드 및 활용 하는 것이 좋습니다 개발자가
 
 읽어보세요 [IL2CPP에 대 한 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) 자세한 정보에 대 한 합니다.
 
+> [!NOTE]
+> 또한 설치 하는 데 도움이 될 수 있습니다는 [캐시 서버](https://docs.unity3d.com/Manual/CacheServer.html), 특히 대용량 자산 (스크립트 파일 제외) 또는 지속적으로 사용 하 여 Unity 프로젝트의 백그라운드 에서/자산을 변경 합니다. 프로젝트를 열 때 Unity 개발자 컴퓨터의 내부 캐시 형식으로 한정 자산을 저장 합니다. 항목 다시 가져올 하 고 있으므로 수정 될 때 다시 처리 해야 합니다. 이 프로세스는 한 번 수행 및 캐시 서버에 저장 된 고 결과적으로 모든 개발자를 다시 가져오는 새 변경 내용을 로컬로 처리 하는 대신 시간 절약을 위해 다른 개발자와 공유 될 수 있습니다.
+
 ## <a name="publishing-properties"></a>게시 속성
 
 ### <a name="holographic-splash-screen"></a>Holographic 시작 화면
@@ -99,8 +102,8 @@ holographic 시작 화면 설정/해제 합니다.
 
 |  Unity 시작 화면을 표시  |  Holographic 시작 이미지  |  동작 |
 |----------|----------|----------|
-|  Windows  |  없음  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. | 
-|  Windows  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
+|  켜짐  |  없음  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. | 
+|  켜짐  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
 |  끄기  |  없음  |  앱이 로드 될 때까지 투명 한 검은색 (nothing)를 표시 합니다. | 
 |  끄기  |  사용자 지정  |  5 초 또는 더 오래 걸리는 작업이 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. | 
 
@@ -130,7 +133,7 @@ holographic 시작 화면 설정/해제 합니다.
 
 파일을 추적 손실 될 때 사용자 지정 동작을 정의 하려면 전역 처리할 [손실 이벤트 추적](tracking-loss-in-unity.md)합니다.
 
-### <a name="capabilities"></a>접근 권한 값
+### <a name="capabilities"></a>기능
 
 특정 기능을 활용 하려면 앱 매니페스트에서 적절 한 기능 선언 해야 합니다. 매니페스트 선언 되므로 모든 후속 프로젝트 내보내기에 포함 된 Unity에서 만들 수 있습니다. 
 
@@ -146,7 +149,7 @@ Holographic 앱에 대 한 자주 사용 되는 Api를 사용 하도록 설정 �
 |  SpatialPerception  |  SurfaceObserver | 
 |  웹캠  |  PhotoCapture 및 VideoCapture | 
 |  PicturesLibrary / VideosLibrary  |  PhotoCapture 또는 VideoCapture, 각각 (저장할 때 캡처된 콘텐츠) | 
-|  Microphone  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
+|  마이크  |  VideoCapture (오디오 캡처) 하는 경우, DictationRecognizer, GrammarRecognizer, 및 KeywordRecognizer | 
 |  InternetClient  |  DictationRecognizer (및 Unity Profiler 사용) | 
 
 ## <a name="see-also"></a>참조
