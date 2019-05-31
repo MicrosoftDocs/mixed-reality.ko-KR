@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: 핸 즈 프리, gaze, 대상, 상호 작용 디자인 gaze 혼합 현실
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629017"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402337"
 ---
 # <a name="hands-free"></a>핸즈프리
 
@@ -31,7 +31,7 @@ ms.locfileid: "65629017"
 
 ## <a name="hands-free-modalities"></a>핸 즈 프리 형식
 
-### <a name="voice-commandingvoice-designmd"></a>[음성 명령 실행](voice-design.md)
+### <a name="voice-commandingvoice-designmd"></a>[음성 명령](voice-design.md)
 
 사용자 handsfree, 작동 하지만 또한 여러 단계를 건너뛸 수 있도록 뿐 아니라 명령 및 컨트롤 인터페이스 수에 음성을 사용 하 여 합니다. 이 형식 사용 하기 작업을 수행할 수 있는 에이전트를 사용 하 여 대화에 참조-it-예를 들어-it와 같이,이 활성화 하려면 소리내어 단순히 모든 단추의 이름을 읽을 수 있도록에서 까지입니다.
 
@@ -96,5 +96,5 @@ ms.locfileid: "65629017"
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [직접 조작](direct-manipulation.md)
-* [지점 및 커밋](point-and-commit.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)

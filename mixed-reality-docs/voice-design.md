@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality를 디자인, 상호 작용, 음성
-ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039187"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402374"
 ---
 # <a name="voice-commanding"></a>음성 명령 실행
 
@@ -25,7 +25,7 @@ ms.locfileid: "66039187"
 <tr>
 <th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
 </tr><tr>
-<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
+<td>음성 명령 실행</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 연결 된 헤드셋) ✔️</td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ Windows Mixed Reality "표시, 말" 음성 모델을 채택 했습니다 위치 
 ![커서에 대 한 음성 피드백 상태](images/voicefeedbackstates.png)<br>
 *커서에 대 한 음성 피드백 상태*
 
-## <a name="top-things-users-should-know-about-speech-on-windows-mixed-reality"></a>사용자가 가장 중요 한 가지 "speech" Windows Mixed Reality를 알아야 합니다.
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>혼합된 현실에서 "speech"에 대 한 가장 중요 한 가지 사용자 알아야
 * 예를 들어 **"Select"** (사용할 수 있습니다이 어디서 나 단추를 클릭) 단추를 대상으로 합니다.
 * 말할 수는 **앱 모음 단추의 레이블 이름** 작업을 수행 하는 일부 앱에서 합니다. 예를 들어, 앱을 보고 하는 동안 사용자 수 명령을 말합니다 "제거" 전 세계에서 앱을 제거 하려면 (손으로 클릭 하지 않아도이 저장 시간).
 * Cortana 하면 수신 대기를 시작할 수 있습니다 **"Hey Cortana"입니다.** 자신의 질문 ("Hey Cortana를 높이 Eiffel tower"), ("Hey Cortana를 열고 Netflix"), 앱을 열려면 테 또는 시작 메뉴 ("Hey Cortana, me 홈 수행")를 표시 한 테 등입니다.

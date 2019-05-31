@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인, near 바늘 HoloLens
-ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: bb44244a3cb932a56703f84ba129def5ee5f9b67
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974752"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402365"
 ---
 # <a name="direct-manipulation"></a>직접 조작
 
@@ -25,7 +25,7 @@ HoloLens 2에 터치를 손으로 홀로그램 dircly 있습니다를 직접 조
 
 | 입력된 모델 | [HoloLens (첫 번째 범용)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[몰입 형 헤드셋](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
-| 직접 조작 | 지원 되지 않습니다 ❌ | 권장 ✔️ | ➕ 대안 [가리키고 커밋](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) 것이 좋습니다.
+| 직접 조작 | 지원 되지 않습니다 ❌ | 권장 ✔️ | 대신은 ➕ [가리키고 실습을 사용 하 여 커밋](point-and-commit.md) 것이 좋습니다.
 
 직접 조작은 HoloLens 2에서 기본 입력된 모델 및 새 명확 하 고 직접 추적 시스템을 활용 합니다. 입력된 모델도 동작 컨트롤러를 사용 하 여 몰입 형 헤드셋에서 사용할 수 있지만 개체 조작 외부 상호 작용 하는 기본 수단으로 권장 되지 않습니다.  직접 manipluation HoloLens v1에서 제공 되지 않습니다.
 

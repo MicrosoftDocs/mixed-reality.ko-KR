@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 지금까지 가리키고 커밋 혼합 현실을, 상호 작용, 디자인, hololens, 실습,
-ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730810"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402379"
 ---
 # <a name="point-and-commit-with-hands"></a>지점 및 실습을 사용 하 여 커밋
 지점 및 실습을 사용 하 여 커밋은 사용자가 대상으로 선택 하 고 거리의 2D 콘텐츠 및 3D 개체를 조작할 수 있는 입력된 모델. 이 "훨씬" 상호 작용 방법이 혼합된 현실에 고유한 및 방식으로 사용자를 자연스럽 게은 실제 세계와 intereact 합니다. 슈퍼 hero 동영상에 예를 들어 *X Men*, 문자 [마그네틱](https://en.wikipedia.org/wiki/Magneto_(comics)) 연락 박수를 사용 하 여 거리가 먼 개체를 조작할 수 있습니다. 이 사람이 실제로 수행할 수 있습니다. HoloLens (AR) 및 혼합 현실 VR ()에서 주요 holographic 콘텐츠로 매력적인 환경을 뿐만 아니라 더 효과적이 고 효율적인 상호 작용 하도록 실제 세계의 물리적 제한을이 마법의 power 사용 하 여 사용자를 장착할 했습니다.
@@ -21,7 +21,7 @@ ms.locfileid: "65730810"
 
 입력된 모델 | [HoloLens (첫 번째 범용)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [몰입 형 헤드셋](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-지점 및 커밋 (맨 위 상호 작용) | 지원 되지 않습니다 ❌ | 권장 ✔️ | 권장 ✔️
+지점 및 실습을 사용 하 여 커밋 | 지원 되지 않습니다 ❌ | 권장 ✔️ | 권장 ✔️
 
 지점 및 커밋 라고도 바늘까지 중 하나인 새 명확 하 고 직접 추적 시스템을 활용 하는 새로운 기능입니다. 이 입력된 모델 동작 컨트롤러를 사용 하 여 몰입 형 헤드셋에서 기본 입력된 모델 이기도합니다.
 
@@ -92,6 +92,6 @@ HoloLens 2에는 팜의 가운데에서 발사 직접 광선을 만들었습니�
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [실습을 사용 하 여 직접 조작](direct-manipulation.md)
+* [수동으로 직접 조작](direct-manipulation.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 
