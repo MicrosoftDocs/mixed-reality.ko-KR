@@ -165,7 +165,7 @@
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 ### 레거시 문서(Unity 2017.4/HTK/MRTK v1)
 ## Unreal
-### HoloLens 2용 Unreal - 출시 예정!
+### [HoloLens 2용 Unreal 조기 액세스](https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access)
 ## DirectX
 ### [DirectX 개발 개요](directx-development-overview.md)
 ### 시작
