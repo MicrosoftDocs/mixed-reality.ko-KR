@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 모델링 지침 자산 요구 사항, 지침, 표시 아이콘, 3D 표시 아이콘, 질감, 자료, 복잡성, 삼각형, 메시, 다각형, polycount, 제작 3D 모델링 제한
-ms.openlocfilehash: 209a92a8e7070ca23bcb9402d8716f3f91747a96
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598875"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692288"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>집에서 사용할 3D 모델 만들기
 
@@ -29,11 +29,11 @@ Windows Mixed Reality에 대 한 3D 모델을 만들 때 모든 자산을 충족
 
 ## <a name="detailed-guidance"></a>자세한 지침
 
-## <a name="exporting-models"></a>모델 내보내기
+### <a name="exporting-models"></a>모델 내보내기
 
 Windows Mixed Reality 홈.glb 파일 형식을 사용 하 여 포함 된 이미지 및 이진 데이터를 사용 하 여 3D 자산을 예상 합니다. Glb 사용료를 지불 인 glTF 형식의 이진 버전이 Khronos 그룹에 의해 유지 관리 하는 3D 자산 배달에 대 한 무료 개방형 표준입니다. Windows 앱 및 환경에서 형식에 대 한 Microsoft의 지원 됩니다 glTF 업계 상호 운용 가능한 3D 콘텐츠에 대 한 표준으로 발전 합니다. 찾으려면 먼저 glTF 자산을 만들지 않은 경우는 [지원 되는 내보내기 도구 목록과 변환기](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) glTF 작업 그룹 github 페이지입니다.  
 
-## <a name="modeling-guidelines"></a>모델링 지침
+### <a name="modeling-guidelines"></a>모델링 지침
 
 Windows 홈 혼합 현실 환경 호환성을 위해 다음 모델링 지침에 따라 생성 되는 자산에 필요 합니다. 선택한 프로그램에서 모델링을 수행할 때 다음 권장 사항 및 제한 사항을 염두에:
 1. 최대 축 "Y"로 설정 해야 합니다.
@@ -191,7 +191,7 @@ LODs는 Windows Mixed Reality 각 LOD 설정 화면 검사 값에 의해 구동 
 
 혼합된 현실 홈 HoloLens 및 몰입 형 (VR) 헤드셋 애니메이션된 glTF 개체를 지원합니다. 모델에서 애니메이션 트리거 하려는 경우에 glTF 형식에 애니메이션 맵 확장을 사용 해야 합니다. 이 확장을 사용 하면 전 세계의 사용자 현재 상태에 따라 glTF 모델에서 애니메이션 트리거, 사용자에서 검색 하는 동안 또는 개체에 가까운 경우 애니메이션을 예를 들어 트리거를 수행할 수 있습니다. GlTF 개체에 애니메이션 트리거를 정의 하지 않는 경우 애니메이션 다시 재생 되지 않습니다. 아래 섹션에서는 모든 애니메이션된 glTF 개체를이 트리거를 추가 하기 위한 하나의 워크플로 설명 합니다.
 
-### <a name="tools"></a>Tools
+### <a name="tools"></a>도구
 먼저 이미 이러한 권한이 없는 경우에 다음 도구를 다운로드 합니다. 이러한 도구는 쉽게 glTF 모델을 열고, 미리, 변경 및 glTF 또는.glb 다시 저장 합니다.
 1. [Visual Studio Code](https://code.visualstudio.com/)
 2. [Visual Studio Code 용 glTF 도구](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
@@ -279,6 +279,6 @@ UV 꼭 짓 점 특성이 한 개만 지원 됩니다.
 
 ## <a name="see-also"></a>참조
 
-* [3D 앱 시작 관리자 (UWP 앱)를 구현 합니다.](implementing-3d-app-launchers.md)
-* [3D 앱 시작 관리자 (Win32 앱)를 구현 합니다.](implementing-3d-app-launchers-win32.md)
+* [3D 앱 시작 관리자(UWP 앱) 구현](implementing-3d-app-launchers.md)
+* [3D 앱 시작 관리자(Win32 앱) 구현](implementing-3d-app-launchers-win32.md)
 * [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
