@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 공간 소리, 디자인, 스타일
-ms.openlocfilehash: c8f5268faf5eef779401c046947c3137d177cb89
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597610"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750309"
 ---
 # <a name="spatial-sound-design"></a>공간 적절 하 게 디자인
 
@@ -26,12 +26,23 @@ ms.locfileid: "59597610"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 공간 음향</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>공간 적절 하 게 디자인</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
+
 
 ## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>혼합된 현실 개발을 위한 4 가지 공간 소리가 않습니다.
 
@@ -96,5 +107,5 @@ ms.locfileid: "59597610"
 혼합된 현실 등 최상의 사용자 환경을 위해 3D 오디오 레거시 3D 오디오 기술 보다는 공간 소리를 사용 하 여 수행할 수 해야 합니다. 일반적으로 향상 된 공간화 가치가 작은 CPU 비용 사운드 표준 3D 위에 있습니다. 표준 3D 오디오 우선 순위가 낮은 소리, spatialized 있지만 실제 또는 가상 개체에 연결 하지 않을 소리 및 사용자 되지 필요를 찾는 앱과 상호 작용 하는 개체에 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참조
-* [소리 공간](spatial-sound.md)
+* [공간 음향](spatial-sound.md)
 * [공간 매핑](spatial-mapping.md)

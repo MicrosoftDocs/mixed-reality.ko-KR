@@ -1,17 +1,17 @@
 ---
 title: Unity를 사용 하 여 Vuforia를 사용 하 여
 description: Windows Mixed Reality Unity 응용 프로그램을 빌드하는 Vuforia를 활용 합니다.
-author: ChimeraScorn
-ms.author: cwhite
-ms.date: 03/21/2018
+author: ailyadis
+ms.author: ''
+ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, 표식, 좌표, 프레임의 참조 추적
-ms.openlocfilehash: 43a74989b931fee898af0aeae9e240303b2eef01
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603174"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750344"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Unity를 사용 하 여 Vuforia 엔진을 사용 하 여
 
@@ -93,8 +93,8 @@ Vuforia 엔진에서는 HoloLens 공간 좌표계에 확장 된 추적을 사용
 * [도구 설치](install-the-tools.md)
 * [좌표계](coordinate-systems.md)
 * [공간 매핑](spatial-mapping.md)
-* [Unity에서 카메라](camera-in-unity.md)
-* [내보내기 및 Unity Visual Studio 솔루션 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
+* [Unity의 카메라](camera-in-unity.md)
+* [Unity Visual Studio 솔루션 내보내기 및 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Vuforia 설명서: Unity에서 Windows 10 용 개발](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
 * [Vuforia 설명서: Vuforia Unity 확장을 설치 하는 방법](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
 * [Vuforia 설명서: Unity에서 HoloLens 샘플 사용](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)

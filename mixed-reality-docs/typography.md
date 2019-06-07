@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 스타일, 글꼴, 입력 체계, ui, ux
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692379"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750339"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -67,9 +67,9 @@ HoloLens에서 홀로그램 가산적 간단한 시스템을 사용 하 여 생�
 
 ## <a name="recommended-font-size"></a>권장 되는 글꼴 크기
 
-예상할 수 있듯이 PC 또는 태블릿 장치 (일반적으로 12 – 32pt) 사이 사용 하는 형식 크기 2 미터 거리 만큼 떨어진 좁습니다 찾습니다. 각 글꼴의 특성에 다르지만 0.35°-0.4°/12.21-13.97mm 사용자 연구 조사의에 따라 권장 되는 보기 각도 및 읽기 쉽도록 코멘트가 글꼴 높이 최소는 일반적입니다. 위에 소개 된 배율 인수를 사용 하 여 35 40pt는. 
+예상할 수 있듯이 PC 또는 태블릿 장치 (일반적으로 12 – 32pt) 사이 사용 하는 형식 크기 2 미터 거리 만큼 떨어진 좁습니다 찾습니다. 각 글꼴의 특성에 다르지만 0.35°-0.4°/12.21-13.97mm 사용자 연구 조사의에 따라 권장 되는 보기 각도 및 읽기 쉽도록 코멘트가 글꼴 높이 최소는 일반적입니다. 에 도입 된 배율 인수를 사용 하 여 35 40pt 것 [Unity에서 텍스트](text-in-unity.md) 페이지입니다. 
 
-거의 상호 작용 0.45m(45cm)에 최소 읽을 수 글꼴 각도 높이 0.4 °-0.5 ° / 3.14 – 3.9 mm 합니다. 위에 소개 된 배율 인수를 사용 하 여 9 12pt는.
+거의 상호 작용 0.45m(45cm)에 최소 읽을 수 글꼴 각도 높이 0.4 °-0.5 ° / 3.14 – 3.9 mm 합니다. 에 도입 된 배율 인수를 사용 하 여 9 12pt 것 [Unity에서 텍스트](text-in-unity.md)합니다.
 
 ![가까운과 먼 상호 작용 범위](images/typography-distance-1000px.jpg)
 *근처에서 콘텐츠와 먼 상호 작용 범위*
