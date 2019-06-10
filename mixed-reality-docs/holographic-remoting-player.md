@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 원격, Holographic 원격
-ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: b8354295f9752e73cc9b34c1769254e49808b63f
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270310"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813715"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting 플레이어
 
@@ -52,5 +52,5 @@ Holographic 원격 연결이 보면 **암호화 되지 않은**합니다. 항상
 * PC를 통해 무선 홉 수를 줄이기 위해 이더넷 네트워크에 연결 하는 것이 좋습니다.
 
 ## <a name="see-also"></a>관련 항목
-* [홀로그램 원격 소프트웨어 사용 조건](microsoft-holographic-remoting-software-license-terms.md)
+* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 개인정보취급방침](https://go.microsoft.com/fwlink/?LinkId=521839)

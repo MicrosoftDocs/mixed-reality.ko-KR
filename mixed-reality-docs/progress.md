@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, ux, ui, 컨트롤, 디자인
-ms.openlocfilehash: 9edddc7800f0d7334d1ceba97b9a06fd6d4580ac
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603214"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813739"
 ---
 # <a name="displaying-progress"></a>진행률 표시
 
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
-![HoloLens에 진행률 링 예제](images/640px-progress-hero.jpg)<br>
+![HoloLens에 진행률 링 예제](images/HoloLens2_Loader.gif)<br>
 *HoloLens에 진행률 링 예제*
 
 ## <a name="types-of-progress"></a>진행률 유형
@@ -47,7 +47,8 @@ ms.locfileid: "59603214"
 * 항상 사용자에 게 상황에 대 한 상태 정보를 제공 하는 것이 적합 합니다. 진행률 prefab 상태를 제공 하는 데 Windows 표준 링 형식 진행 상황 비롯 한 다양 한 시각적 스타일을 제공 합니다. 또한 앱의 브랜드에 맞게 진행 상황의 스타일을 원하는 경우 애니메이션을 사용 하 여 메시를 사용자 지정을 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참조
-* [스크립트 및 혼합 현실 도구 키트에는 진행률에 대 한 prefabs](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ProgressExample.md)
-* [상호 작용할 수 없는 개체](interactable-object.md)
+* [진행률 스크립트 및 혼합 현실 도구 키트에서 prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
+* [경계 상자](app-bar-and-bounding-box.md)
+* [상호 작용 가능한 개체](interactable-object.md)
 * [개체 컬렉션](object-collection.md)
-* [빌보드 및 tag-along](billboarding-and-tag-along.md)
+* [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
