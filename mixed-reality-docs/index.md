@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: ed319e2abf61caed5f36b425a4cc609ca9501dec
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813749"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality 설명서
 
@@ -171,10 +171,10 @@ ms.locfileid: "65730886"
 <td>HoloLens 2용 MRTK의 새 기능 미리 보기</td><td>2019년 4월</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>MRTK 문서</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-getting-started>MRTK v2 시작</a></td>
 </tr>
 <tr>
-<td>HoloLens 2 디자인 및 개발 지침</td><td>2019년 4월</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>도구 설치</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>HoloLens 2 에뮬레이터</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Instinctual 상호 작용 디자인 지침</a>
+<td>HoloLens 2 디자인 및 개발 지침</td><td>2019년 4월</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>도구 설치</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>HoloLens 2 에뮬레이터</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Instinctual 상호 작용 디자인 지침</a></td>
 </tr>
 <tr>
-  <td>Unreal에 대한 자세한 정보</td><td>2019년 5월</td><td></td>
+  <td>Unreal에 대한 자세한 정보</td><td>2019년 5월</td><td> <ul><li><a href=https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access>Unreal Engine 4 조기 액세스</a></td>
 </tr>
 </table>
 
