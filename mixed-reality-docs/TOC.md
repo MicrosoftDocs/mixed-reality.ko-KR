@@ -133,7 +133,7 @@
 ## 혼합 현실 클라우드 서비스
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ### [홀로그램 원격 플레이어](holographic-remoting-player.md)
-### [홀로그램 원격 소프트웨어 사용 조건](microsoft-holographic-remoting-software-license-terms.md)
+### [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Unity 개발 개요](unity-development-overview.md)
 ### 시작
