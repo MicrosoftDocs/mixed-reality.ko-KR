@@ -6,12 +6,12 @@ ms.author: befolsom
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 홀로그램, 디자인, 상호 작용
-ms.openlocfilehash: 5a6cc4df764b1f92f6bea2d7d6e6effe2164e4d6
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 714b08db23aa641252291aebe89fa3059c209a6f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597835"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829785"
 ---
 # <a name="what-is-a-hologram"></a>홀로그램이란?
 
@@ -24,11 +24,24 @@ HoloLens 만들 수 있습니다 **홀로그램**조명의 개체 한 사운드 
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 홀로그램</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>홀로그램</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="a-hologram-is-made-of-light-and-sound"></a>빛과 소리를 홀로그램이 됩니다.
@@ -85,5 +98,5 @@ Holographic 개발자와 관련해 서 전 세계 및 2D 화면에서 창의력�
 ![거실 holographic 허수 world](images/designoverview.jpg)
 
 ## <a name="see-also"></a>참조
-* [소리 공간](spatial-sound.md)
+* [공간 음향](spatial-sound.md)
 * [색, 광원 및 재질](color,-light-and-materials.md)

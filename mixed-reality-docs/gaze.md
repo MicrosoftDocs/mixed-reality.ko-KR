@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용 mixed, 디자인
-ms.openlocfilehash: 9e50067f9dfeacf3dce5ea9a928990d1b142e4d0
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453714"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829742"
 ---
 # <a name="gaze"></a>응시
 
@@ -29,13 +29,30 @@ HoloLens에 (첫 번째 gen) 해당 사용자의 헤드 게이즈를에서 타�
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 헤드 응시</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> 응시</td><td></td><td style="text-align: center;">✔️</td><td></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>헤드 응시</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+     <tr>
+        <td>응시</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 > [!NOTE]

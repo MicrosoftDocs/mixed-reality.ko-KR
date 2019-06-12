@@ -1,17 +1,17 @@
 ---
-title: 앱 바 및 경계 상자
+title: 경계 상자과 앱 표시줄
 description: 앱 바에 일련의 단추를 홀로그램 경계 아래쪽 가장자리에 표시 하는 포함 된 개체 수준 메뉴입니다.
 author: radicalad
 ms.author: adlinv
-ms.date: 03/21/2018
+ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 경계 상자 막대는 앱
-ms.openlocfilehash: ab472e1c988e6bdfb0a69d90e90280082b3db759
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813871"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829677"
 ---
 # <a name="bounding-box-and-app-bar"></a>경계 상자과 앱 표시줄
 ![경계는 혼합 현실에서 개체를 조작 하기 위한 표준 인터페이스입니다.](images/640px-boundingbox-hero.jpg)<br>

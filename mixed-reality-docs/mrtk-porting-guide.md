@@ -1,139 +1,139 @@
 ---
-title: HoloLens 2에 대 한 앱 준비
-description: HoloLens에 기존 앱이 있는 개발자를 목표로 (첫 번째 gen) 및/또는 이전 MRTK를 찾고 MRTK 버전 2 및 HoloLens 2로 이식 해야 합니다.
+title: HoloLens 2를 위한 앱 준비
+description: HoloLens(1세대) 및/또는 이전 MRTK에 기존 앱이 있으며 MRTK 버전 2 및 HoloLens 2로 이식하려는 개발자를 대상으로 합니다.
 author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality MRTK MRTK 버전 2, HoloLens 2 테스트
+keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
 ms.openlocfilehash: 02dabd21b7a6add2ce53fe291a447e49057184d0
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66270390"
 ---
-# <a name="getting-your-existing-app-ready-for-hololens-2"></a>HoloLens 2에 대 한 기존 앱 준비
+# <a name="getting-your-existing-app-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 앱 준비
 
-이 가이드는 HoloLens에 대 한 기존 Unity 앱이 있는 개발자를 지원 하기 위해 특별히 설계 됩니다 (첫 번째 gen) 새 HoloLens 2 장치에 대 한 응용 프로그램을 이식 합니다. 4 가지 주요 단계는 HoloLens 이식에 (첫 번째 gen) HoloLens 2 Unity 앱. 아래 섹션에서는 각 단계에 대 한 정보를 자세히 설명 합니다. 
+이 가이드는 HoloLens(1세대)용 기존 Unity 앱이 있는 개발자가 새 HoloLens 2 디바이스용 애플리케이션을 이식하는 것을 지원하기 위해 특수하게 고안되었습니다. HoloLens(1세대) Unity 앱을 HoloLens 2로 이식하기 위한 핵심 단계에는 4가지가 있습니다. 아래 섹션에서는 각 단계에 대한 정보를 자세히 설명합니다. 
 
 | 1단계 | 2단계 | 3단계 | 4단계 |
 |----------|-------------------|-------------------|-------------------|
 | ![Visual Studio 로고](images/visualstudio_logo.png) | ![Unity 로고](images/unity_logo.png)| ![Unity 아이콘](images/hololens2_icon.jpg) | ![MRTK 로고](images/MRTKIcon.jpg) |
-| 최신 도구 다운로드 | Unity 프로젝트를 업데이트 합니다. | ARM에 대 한 컴파일 | MRTK v2로 마이그레이션
+| 최신 도구 다운로드 | Unity 프로젝트 업데이트 | ARM용 컴파일 | MRTK v2로 마이그레이션
 
-것 **좋습니다** , 이식 프로세스를 시작 하기 전에 개발자가 활용 하는 앱의 원래 상태 스냅숏을 저장 하려면 소스 제어 합니다. 또한 것이 좋습니다 *저장할* 프로세스 중 여러 지점에서 검사점 상태입니다. 또한 포트 프로세스 side by side 비교 가능 하도록 하려면 원래 앱의 다른 Unity 인스턴스가 있어야 하는 데 매우 유용할 수 있습니다. 
+개발자는 이식 프로세스를 시작하기 전에 소스 제어를 활용하여 앱의 원래 상태 스냅샷을 저장하는 것이 **좋습니다**. 또한 이 프로세스의 다양한 시점에서 검사점 상태를 *저장*하는 것이 좋습니다. 또한 이식 프로세스 동안 나란히 비교할 수 있도록 원래 앱의 다른 Unity 인스턴스를 유지하는 것이 매우 유용할 수 있습니다. 
 
 > [!NOTE]
-> 이식 하기 전에 Windows Mixed Reality 개발에 대 한 설치 된 최신 도구 했는지를 확인 합니다. 대부분의 기존 HoloLens 개발자를 위한 주로 여기서 최신 Visual Studio 2017로 업데이트 하 고 적절 한 Windows SDK를 설치 합니다. 아래의 콘텐츠를 살펴보고 다른 Unity 버전 및 혼합 현실 도구 키트 버전 2에 추가 합니다.
+> 이식하기 전에 Windows Mixed Reality 개발을 위한 최신 도구를 설치했는지 확인합니다. 대부분의 기존 HoloLens 개발자의 경우 이 작업을 위해 최신 Visual Studio 2017로 업데이트하고 적절한 Windows SDK를 설치하게 됩니다. 아래의 내용은 여러 다른 Unity 버전과 Mixed Reality Toolkit 버전 2를 좀 더 자세히 알아봅니다.
 >
-> 자세한 내용은 참조 하십시오 [도구를 설치](install-the-tools.md)합니다.
+> 자세한 내용은 [도구 설치](install-the-tools.md)를 참조하세요.
 
-## <a name="migrate-project-to-latest-version-of-unity"></a>Unity의 최신 버전으로 프로젝트 마이그레이션
+## <a name="migrate-project-to-latest-version-of-unity"></a>최신 버전의 Unity로 프로젝트 마이그레이션
 
-MRTK v2를 사용 하는 경우 Unity 2018 LTS에서 MRTK 또는 Unity의 주요 변경 하지 않고 가장 적합 한 장기 지원 경로 여야 합니다.  권장 되는 Unity 빌드는 위의 "설치" 도구 당 Unity 2018.3 Unity 2018 LTS 릴리스 될 경우  MRTK v2는 항상 Unity 2018 LTS에 대 한 지원을 보장 하지만 반드시 Unity의 모든 반복에 대 한 지원을 보장 또한 2019.x 합니다. 
+MRTK v2를 사용하는 경우 Unity 2018 LTS는 Unity 또는 MRTK가 획기적으로 변경되지 않는 가장 적합한 장기적인 지원 경로가 될 것입니다.  위의 "도구 설치"에 따르면 권장되는 Unity 빌드는 Unity 2018.3으로, Unity 2018용 LTS 릴리스가 될 것입니다.  그뿐 아니라 MRTK v2는 항상 Unity 2018 LTS를 지원할 예정이지만 모든 Unity 2019.x를 반드시 지원할 것으로 보장할 수 없습니다. 
 
-Unity 간의 추가 차이점을 명확 하 게 2018.3.x 또는 Unity에서 Unity 2019 ARM64 용 컴파일하는 기능을 되 significance의 주요 차이점을 사용 하 여 이러한 두 버전 간의 장단점 윤곽선 아래 2019.1.x 합니다. 
+Unity 2018.3.x 또는 Unity 2019.1.x 간의 추가적인 차이점을 명확히 나타내기 위해 아래에서는 이러한 두 버전 간의 장단점을 대략적으로 설명합니다. 두 버전의 중대한 주요 차이점은 Unity 2019에서는 ARM64용 컴파일을 수행할 수 있도록 지원된다는 것입니다. 
 
-모든 개발자 평가 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html) 현재에 존재 하는 프로젝트 및 여부는 ARM64 용 이러한 Dll를 빌드할 수 있습니다. ARM64 용 강한 종속성 플러그 인을 빌드할 수 없습니다, 하나는 경우 Unity 2018 LTS를 활용 하 합니다.
+개발자는 현재 해당 프로젝트에 존재하는[플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)과 이러한 DLL을 ARM64용으로 빌드할 수 있는지 여부를 평가해야 합니다. ARM64용으로 강한 종속성 플러그 인을 빌드할 수 없는 경우 Unity 2018 LTS를 활용해야 합니다.
 
 
 | Unity 2018.3.x | Unity 2019.1+ |
 |----------|-------------------|
 | ARM32 빌드 지원 | ARM64 및 ARM32 빌드 지원 |
 | 안정적인 LTS 릴리스 빌드 | 베타 안정성 |
-| [.NET 스크립트 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) *사용 되지 않음* | [.NET 스크립트 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) *제거* |
-| UNET 네트워킹 *사용 되지 않음* | UNET 네트워킹 *제거* |
+| [.NET 스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) *사용되지 않음* | [.NET 스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) *제거됨* |
+| UNET 네트워킹 *사용되지 않음* | UNET 네트워킹 *제거됨* |
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Unity에서 장면/프로젝트 설정 업데이트
 
-Unity를 업데이트 한 후 2018.3.x 또는 Unity 2019 +, 것이 좋습니다 최적의 결과 장치에 대 한 Unity에서 특정 설정을 업데이트 합니다. 이러한 설정은 아래에서 자세히 설명 되어 있습니다  **[Unity에 대 한 설정을 권장](Recommended-settings-for-Unity.md)** 합니다.
+Unity 2018.3.x 또는 Unity 2019+로 업데이트한 후에는 디바이스에서 최적의 결과를 얻기 위해 Unity에서 특정 설정을 업데이트하는 것이 좋습니다. 이러한 설정은 **[Unity의 권장 설정](Recommended-settings-for-Unity.md)** 아래에서 자세히 설명되어 있습니다.
 
-다시 반복 해야 하는 [스크립팅 하는.NET 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) Unity 2018 년에 되지 및 *제거* Unity 2019에 따라서 개발자가 고려해 야 로프로젝트를전환[ IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html)합니다. 
+다시 말하지만 [.NET 스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html)는 Unity 2018에서 더 이상 사용되지 않고 Unity 2019에서 *제거*되었으므로 개발자는 프로젝트를 [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html)로 전환할 것을 강력히 고려해야 합니다. 
 
 > [!NOTE]
-> IL2CPP 스크립팅 백 엔드 Unity에서 Visual studio에 빌드 시간이 더를 일으킬 수 있으며 개발자는 개발자 컴퓨터를 설정 해야 하므로 [IL2CPP 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)합니다.
-> 또한 설치 하는 데 도움이 될 수 있습니다는 [캐시 서버](https://docs.unity3d.com/Manual/CacheServer.html), 특히 대용량 자산 (스크립트 파일 제외) 또는 지속적으로 사용 하 여 Unity 프로젝트의 백그라운드 에서/자산을 변경 합니다. 프로젝트를 열 때 Unity 개발자 컴퓨터의 내부 캐시 형식으로 한정 자산을 저장 합니다. 항목 다시 가져올 하 고 있으므로 수정 될 때 다시 처리 해야 합니다. 이 프로세스는 한 번 수행 및 캐시 서버에 저장 된 고 결과적으로 모든 개발자를 다시 가져오는 새 변경 내용을 로컬로 처리 하는 대신 시간 절약을 위해 다른 개발자와 공유 될 수 있습니다.
+> IL2CPP 스크립팅 백 엔드는 Unity에서 Visual Studio로의 빌드 시간이 더 오래 걸리도록 할 수 있으므로 개발자는 [IL2CPP 빌드 시간을 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)하도록 개발자 컴퓨터를 설정해야 합니다.
+> 또한 대용량 자산(스크립트 파일 제외) 또는 지속적으로 변화하는 장면/자산을 포함하는 Unity 프로젝트에 맞게 [캐시 서버](https://docs.unity3d.com/Manual/CacheServer.html)를 설정하는 것도 유용할 수 있습니다. 프로젝트를 열 때 Unity는 정식 자산을 개발자 컴퓨터에 내부 캐시 형식으로 저장합니다. 따라서 항목이 수정되면 다시 가져온 후 다시 처리해야 합니다. 모든 개발자가 새 변경 내용을 로컬로 다시 가져오지 않고, 이 프로세스를 한 번 수행한 후 캐시 서버에 저장하고, 이후에 다른 개발자와 공유할 수 있으므로 시간을 절약할 수 있습니다.
 
-업데이트 된 Unity 버전으로 이동 하 고 나면 주요 변경 내용이 해결을 한 후 개발자는 빌드 및 테스트 HoloLens에서 자신의 현재 앱 (첫 번째 gen). 또한 만들고 소스 제어에 대 한 커밋을 저장 하는 적절 한 지점입니다. 
+업데이트된 Unity 버전으로 이동한 후에 주요 변경 내용을 처리한 다음, HoloLens(1세대)에서 현재 앱을 빌드하고 테스트해야 합니다. 또한 이때 소스 제어를 위한 커밋을 만들고 저장하는 것이 좋습니다. 
 
-## <a name="compile-dependenciesplugins-for-arm-processor"></a>ARM 프로세서에 대 한 종속성/플러그 인 컴파일
+## <a name="compile-dependenciesplugins-for-arm-processor"></a>ARM 프로세서에 대한 종속성/플러그 인 컴파일
 
-HoloLens (첫 번째 gen) x86 응용 프로그램을 실행할 새 HoloLens 2 장치는 ARM 프로세서를 활용 하는 동안 프로세서. 따라서 기존 응용 프로그램 ARM을 지원 하도록 이식 해야 합니다. 앞에서 설명한 대로 Unity 2018 Unity 2019 + ARM64 앱에 대 한 컴파일 지원 하지만 ARM32 앱에 대 한 컴파일을 지원 합니다. 재료는 성능 차이 ARM64 응용 프로그램에 대 한 개발 하는 것은 일반적으로 기본 설정입니다. 그러나이 위해서는 모든 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html) ARM64 용 빌드할 수도 있습니다. 
+HoloLens(1세대)은 x86 프로세서에서 애플리케이션을 실행했지만, 새 HoloLens 2 디바이스는 ARM 프로세서를 활용합니다. 따라서 기존 애플리케이션을 ARM을 지원하도록 이식해야 합니다. 앞에서 설명한 대로 Unity 2018은 ARM32 앱 컴파일을 지원하지만, Unity 2019+는 ARM64 앱 컴파일을 지원합니다. 구체적인 성능상 차이는 없으므로 ARM64 애플리케이션 개발이 일반적으로 선호됩니다. 그러나 이 경우 ARM64에 대해 모든 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)도 빌드해야 합니다. 
 
-현재 응용 프로그램에서 모든 DLL 종속성을 검토 합니다. 종속성을 더 이상 필요한 경우에 프로젝트에서 제거 하려면이 좋습니다. 필요한 나머지 플러그 인에 대 한 Unity 프로젝트에 해당 ARM32 또는 ARM64 이진 파일을 수집 합니다. 
+현재 애플리케이션에서 모든 DLL 종속성을 검토하세요. 종속성이 더 이상 필요하지 않으면 프로젝트에서 제거하는 것이 좋습니다. 필요한 나머지 플러그 인의 경우 해당 ARM32 또는 ARM64 이진 파일을 Unity 프로젝트로 수집합니다. 
 
-관련 Dll을 수집, 후 Unity에서 Visual Studio 솔루션을 구축 하 고 ARM 프로세서에 대 한 응용 프로그램을 작성할 수 있는지를 테스트 하려면 Visual Studio에서 ARM에 대 한 AppX를 컴파일하십시오. 소스 제어 솔루션에서 커밋 저장할 것은 권장이 다른 지점입니다. 
+관련 DLL을 수집한 후에는 Unity에서 Visual Studio 솔루션을 빌드한 후 Visual Studio에서 ARM용 AppX를 컴파일하여 ARM 프로세서용으로 애플리케이션을 빌드할 수 있는지 테스트합니다. 이러한 목적으로 소스 제어 솔루션에서 커밋을 저장하는 것도 유용합니다. 
 
-## <a name="update-to-mrtk-version-2"></a>MRTK 버전 2 업데이트
+## <a name="update-to-mrtk-version-2"></a>MRTK 버전 2로 업데이트
 
-MRTK 버전 2는 두 HoloLens 지원 되는 Unity 기반으로 새 도구 키트 (첫 번째 gen) 및 HoloLens 2 하 고 있는 새 HoloLens 2 기능을 모두 추가한와 같은 상호 작용을 제공할 시각 추적 합니다.
+MRTK 버전 2는 두 HoloLens(1세대) 및 HoloLens 2를 둘 다 지원하는 Unity 기반의 새 도구 키트로, 손 조작 및 시선 추적과 같은 새로운 HoloLens 2 기능이 모두 추가되었습니다.
 
-### <a name="prepare-for-the-migration"></a>마이그레이션을 위한 준비
+### <a name="prepare-for-the-migration"></a>마이그레이션 준비
 
-새 수집 하기 전에 [MRTK v2에 대 한 *.unitypackage 파일](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)를 인벤토리 하는 것이 좋습니다 **MRTK v1을 사용 하 여 통합 하는 1) 사용자 지정 코드** 및 **2) 사용자 지정 코드 입력된 상호 작용 또는 UX 구성 요소에 대 한**합니다. 가장 일반적이 고 널리 알려진 충돌 새 MRTK v2 수집 혼합 현실 개발자에 대 한 입력 및 상호 작용에 포함 됩니다. 따라서 것이 좋습니다. 읽기 시작할 이해 하 고는 [MRTK v2 입력된 모델](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)합니다.
+새 [MRTK v2용 *.unitypackage 파일](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)을 삽입하기 전에 **1) MRTK v1과 통합되는 사용자 지정 코드** 및 **2) 입력 상호 작용 또는 UX 구성 요소에 대한 사용자 지정 코드** 인벤토리를 만드는 것이 좋습니다. 새 MRTK v2를 수집하는 혼합 현실 개발자에게 가장 흔하게 나타나는 충돌은 입력 및 조작과 관련된 것입니다. 따라서 먼저 [MRTK v2 입력 모델](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)을 읽고 이해하는 것이 중요합니다.
 
-마지막으로, 새 MRTK v2 서비스 공급자 아키텍처를 구성 하려면 스크립트 및 관리자 장면에서 개체 모델에서 전환 되었습니다. 이 클리너 장면 계층 구조 및 아키텍처 모델 줄어들지만 학습 곡선 새 구성 프로필을 이해 하는 데 필요 합니다. 따라서 읽어보세요 합니다 [혼합 현실 도구 키트 구성 가이드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html) 다양 한 중요 한 설정 및 프로필 응용 프로그램의 요구에 맞게 조정 하는 데 익숙해지고 시작 합니다. 
+마지막으로, 새 MRTK v2는 스크립트 및 장면 내 관리자 개체에서 구성 및 서비스 공급자 아키텍처로 전환되었습니다. 이로 인해 보다 명확한 장면 계층 구조 및 아키텍처 모델이 구현되지만, 새로운 구성 프로필을 이해하기 위한 학습 곡선이 필요합니다. 따라서 [Mixed Reality Toolkit 구성 가이드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html)를 읽어보고 애플리케이션 요구에 맞게 조정해야 하는 중요한 설정 및 프로필에 익숙해지도록 합니다. 
 
-### <a name="perform-the-migration"></a>마이그레이션을 수행합니다
+### <a name="perform-the-migration"></a>마이그레이션 수행
 
-MRTK v2를 가져온 후 Unity 프로젝트에는 있을 많은 컴파일러 관련 오류입니다. 이 가장 일반적으로 인해 새 네임 스페이스 구조 및 새 구성 요소 이름입니다. 새 네임 스페이스 및 구성 요소에 스크립트를 수정 하 여 이러한 오류를 해결 하려면 계속 진행 합니다. 
+MRTK v2를 가져온 후 Unity 프로젝트에서 많은 컴파일러 관련 오류가 나타날 수 있습니다. 새로운 네임스페이스 구조 및 새로운 구성 요소 이름 때문에 이러한 오류가 발생하는 것이 가장 일반적입니다. 새로운 네임스페이스 및 구성 요소에 맞게 스크립트를 수정하여 이러한 오류를 계속 해결합니다. 
 
-특정 API 차이점과 HTK/MRTK MRTK 버전 2에 대 한 자세한 내용은 포팅 가이드를 참조 합니다 [MRTK 버전 2 wiki](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)합니다.
+HTK/MRTK과 MRTK 버전 2 간의 특정 API 차이점에 대한 자세한 내용은 [MRTK 버전 2 wiki](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)의 이식 가이드를 참조하세요.
 
-### <a name="best-practices"></a>모범 사례
+### <a name="best-practices"></a>최선의 구현 방법
 
-- 표준 MRTK 셰이더 사용을 선호 합니다.
-- 하나의 주요 작업을 변경 유형 (예: IMixedRealityFocusHandler IFocusable)
-- 변경할 때마다 테스트 및 소스 제어를 활용 합니다.
-- 기본값 (단추, 슬레이트, 등) MRTK UX를 사용 가능한 경우
-- MRTK 파일을 직접 수정 하지 않는 것을 대신 MRTK 구성 요소에 대 한 래퍼를 만들려면
-    - 이렇게 하면 이후 MRTK ingestions 및 업데이트에 대해 보호 됩니다.
-- 검토 및 MRTK에 제공 된 샘플 장면을 탐색 (특히 *HandInteractionExamples.scene*)
-- 대신 quads, colliders TextMeshPro 텍스트와 캔버스 기반 UI를 다시 작성
+- 기본적으로 MRTK 표준 셰이더 사용
+- 한 번에 한 가지 중요 변경 유형 처리(예: IFocusable에서 IMixedRealityFocusHandler로의 변경)
+- 변경할 때마다 테스트하고 소스 제어 활용
+- 가능한 경우 기본 MRTK UX(단추, 슬레이트 등) 사용
+- MRTK 파일을 직접 수정하지 않도록 하고, 대신 MRTK 구성 요소에 대해 래퍼 생성
+    - 이를 통해 향후 MRTK 삽입 및 업데이트로부터 보호
+- MRTK에 제공된 샘플 장면(특히 *HandInteractionExamples.scene*)을 검토 및 탐색
+- 대신 quads, colliders 및 TextMeshPro 텍스트를 사용하여 캔버스 기반 UI 다시 빌드
 
-### <a name="testing-your-application"></a>응용 프로그램 테스트
+### <a name="testing-your-application"></a>애플리케이션 테스트
 
-이제는 HoloLens 2 구성 요소 및 기능 MRTK 버전 2에서에서 사용할 수 있는의 일부로 [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1), Unity에서 직접 직접 상호 작용을 시뮬레이션 하 고 직접 상호 작용 및 시선 추적에 대 한 새 Api에 대해 개발할 수 있습니다.  HoloLens 2 장치는 훌륭한 환경을 만드는 데 필요한 도구 및 설명서에 학습을 시작할 수 하나 이상 있지만. 또한 MRTK v2 HoloLens에 개발을 지원 (첫 번째 gen) 및 HoloLens에 어 탭을 통해 선택 계속 테스트할 수와 같은 기존 입력의 모델 즉, (첫 번째 gen) 장치. 
+이제 [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1)부터는 HoloLens 2 구성 요소 및 기능을 MRTK 버전 2에서 사용할 수 있으므로, Unity에서 직접 손 조작을 시뮬레이트하고, 손 조작 및 시선 추적을 위한 새 API를 개발할 수 있습니다.  HoloLens 2 디바이스는 유용한 환경을 만드는 데 필요하지만, 적어도 도구 및 설명서에서 학습을 시작할 수 있습니다. 또한 MRTK v2는 HoloLens(1세대)에서의 개발을 지원하므로, 에어 탭을 통한 선택과 같은 기존 입력 모델을 HoloLens(1세대) 디바이스에서 여전히 테스트할 수 있습니다. 
 
-## <a name="updating-interaction-model-for-hololens-2"></a>HoloLens 2에 대 한 상호 작용 모델을 업데이트 하는 중입니다.
+## <a name="updating-interaction-model-for-hololens-2"></a>HoloLens 2용 조작 모델을 업데이트
 
-이식 및 HoloLens 2에 대 한 준비 앱을 만든 후 상호 작용 모델 및 홀로그램 디자인/배치를 업데이트 하는 것이 좋습니다. 준비가 되었습니다.
-HoloLens에서 오는 (첫 번째 gen) 앱에 게이즈 및 커밋 상호 작용 모델을 사용 하 여 홀로그램 보기의 필드에 맞게 상대적으로 멀리 떨어진 곳입니다.
+HoloLens 2를 앱을 이식하고 위해 준비한 경우 조작 모델 및 홀로그램 디자인/배치를 업데이트할 준비가 된 것입니다.
+HoloLens(1세대)에서 가져온 앱은 시야각에 맞도록 홀로그램이 비교적 멀리 떨어져 있는 응시 및 커밋 조작 모델을 사용할 확률이 높습니다.
 
-HoloLens 2에 대 한 가장 앱 디자인을 업데이트 하는 단계:
-1.  MRTK 구성 요소: 사전 작업 당 MRTK v2를 추가한 경우 다양 한 구성 요소/있는 개의 스크립트가 있으며 활용 하 여 설계 되었으며 HoloLens 2에 대 한 최적화 합니다.
+HoloLens 2에 가장 적합하게 앱 디자인을 업데이트하는 단계:
+1.  MRTK 구성 요소: 사전 작업에 따라, MRTK v2를 추가한 경우 HoloLens 2에 맞게 디자인하고 최적화한 다양한 구성 요소/스크립트를 활용할 수 있습니다.
 
-2.  상호 작용 모델: 상호 작용 모델을 업데이트 하는 것이 좋습니다.  대부분의 시나리오에서 게이즈에서 전환 하는 것이 좋습니다 하 고 실습을 커밋합니다.  연결할 arm에서 일반적으로 되 여 홀로그램을 사용 하 여 바늘으로 전환 먼 상호 작용 포인팅 광선의 결과 제스처를 선택 합니다.
-참고: 핸 즈 프리 상호 작용 모델은 도구를 보유 하는 작업자와 같이 필요한 경우에 대 한 지침이 특정 디자인 하는 시나리오를 가지 있습니다. 
+2.  조작 모델: 조작 모델을 업데이트하는 것이 좋습니다.  대부분의 시나리오에서는 응시 및 커밋에서 손 조작으로 전환하는 것이 좋습니다.  홀로그램이 일반적으로 손에 닿지 않는 경우 손으로 전환하면 먼 거리 조작 포인팅 레이 및 잡기 제스처가 표시됩니다.
+참고: 태스크 작업자가 공구를 잡고 있는 경우와 같이 핸즈프리 조작 모델이 필요한 시나리오가 있으며 이러한 경우에 맞는 특정 디자인 지침이 있습니다. 
 
-3.  홀로그램 배치: 실습 상호 작용 모델에서 전환한 후 이동 일부 홀로그램 가깝게 거의 상호 작용 잡기 제스처를 사용 하 여를 손으로 홀로그램와 직접 상호 작용 하는 것이 좋습니다.  직접 가져오기 또는 상호 작용에 한걸음 권장 홀로그램 유형은 대상 메뉴, 컨트롤, 단추 및 HoloLens 2 보기의 필드 위치와 방향을 잃기를 홀로그램을 검사 하는 경우 내에 맞는 더 작은 제공 합니다.
+3.  홀로그램 배치: 손 조작 모델로 전환한 후에는 근거리 조작 잡기 제스처를 사용하여 손으로 홀로그램을 직접 조작하기 위해 일부 홀로그램을 좀 더 가깝게 이동하는 것이 좋습니다.  직접 잡거나 조작하기 위해 좀 더 가깝게 이동하는 것이 바람직한 홀로그램 유형은 홀로그램을 잡고 조작할 때 HoloLens 2 시야각 내에 잘 맞는 작은 대상 메뉴, 컨트롤, 단추 및 더 작은 홀로그램입니다.
 <br>
-모든 앱 및 시나리오 다른 이며 지속적으로 구체화 하 고 디자인 지침 피드백에 따라 및 학습을 계속 게시할 예정입니다.
+모든 앱 및 시나리오는 다르며, 피드백 및 지속적인 학습을 토대로 디자인 지침을 계속 조정한 후 게시할 예정입니다.
 
 
-## <a name="additional-learnings-from-moving-apps-from-x86-to-arm"></a>앱에서 x86 ARM 이동 추가 학습
+## <a name="additional-learnings-from-moving-apps-from-x86-to-arm"></a>x86에서 ARM으로 앱을 이동하기 위한 추가 학습
 
-- 실행 되 고 ARM appx 번들을 빌드하거나 장치에 직접 배포할 수 있습니다 직선 Unity 앱은 간단 합니다.
-문제는 Unity 앱은 네이티브 플러그 인을 사용 하는 경우에 제공 됩니다.  기본 플러그 인의 모든 VS2017를 업그레이드 하 고, ARM 및 ARM64, Unity 2019 다시 작성 해야 합니다.
+- 직선 Unity 앱은 단순하므로 ARM appx 번들을 빌드하거나 디바이스에 직접 배포한 후 실행할 수 있습니다.
+문제는 Unity 앱이 기본 플러그 인을 사용할 때 발생합니다.  모든 기본 플러그 인은 VS2017로 업그레이드하고, ARM용으로, Unity 2019를 사용할 때는 ARM64용으로 다시 빌드해야 합니다.
 
-- 하나의 앱 Unity에 대 한 AudioKinetic Wwise 플러그 인을 사용 하 고 사용 되는 버전을 UWP ARM 플러그 인 않은 키를 누릅니다. ARM에서 작동 하도록 응용 프로그램에 소리를 다시 작동 하는 데는 며칠이 걸렸습니다.
+- 하나의 앱이 Unity용 AudioKinetic Wwise 플러그 인을 사용했으며 사용된 버전에는 UWP ARM 플러그 인이 없었습니다. 애플리케이션의 소리가 ARM에서 작동하는 데 며칠이 걸렸습니다.
 
-- 다른 경우에서 UWP/ARM 플러그 인을 앱에 필요한 플러그 인을 차단 하는 포트 및 HoloLens 2에서 실행 하는 기능에 대 한 없을 수도 있습니다.  플러그 인 공급자를 사용 하 여 engagement 차단을 해제 하 고 ARM를 지 원하는 데 필요할 수 있습니다.
+- 또 다른 경우에서 앱 필수 플러그 인에 대해 UWP/ARM 플러그 인이 존재하지 않아 HoloLens 2에서 이식 및 실행하지 못할 수 있습니다.  ARM을 차단 해제하고 지원하기 위해 플러그 인 공급자와 계약해야 할 수 있습니다.
 
-- 셰이더는 minfloat (및 변형 min16float, minint, 등...) HoloLens 보다 HoloLen 2에서 다르게 동작할 수 있습니다 (첫 번째 gen). 특히 이러한 보장 "적어도 사용할 비트 수를 지정 된"입니다. Intel/Nvidia Gpu에서 이러한 이라고 할 처리할지를 32 비트입니다. ARM에에서 지정 된 비트 수가 실제로 적용 됩니다. 즉,는 실제로 이러한 숫자 수 범위가 적은 정밀도/HoloLens 2 HoloLens 보다 (첫 번째 gen).
+- 셰이더의 minfloat(및 min16float, minint 등의 변형)은 HoloLen 2에서 HoloLens(1세대)와는 다르게 동작할 수 있습니다. 특히, “적어도 지정된 수의 비트가 사용될 수 있습니다.” Intel/Nvidia GPU에서는 대체적으로 32비트로 처리됩니다. ARM에서는 지정된 비트 수가 실제로 적용됩니다. 즉, 실제로 이러한 수는 HoloLens(1세대)의 경우보다 HoloLens 2에서 전체 자릿수/범위가 더 적을 수 있습니다.
 
-- _Asm 지침 _asm 지침을 사용 하 여 모든 코드 다시 작성 해야 합니다. 즉, ARM에서 작동 하도록 표시 되지 않습니다.
+- _asm 명령은 ARM에서 작동하지 않는 것처럼 나타납니다. 즉, _asm 명령을 사용하는 모든 코드는 다시 작성해야 합니다.
 
-- SIMD 명령 집합 ARM에서 지원 되지 않습니다. 이 xmmintrin.h, emmintrin.h, tmmintrin.h, 및 immintrin.h ARM에서 사용할 수 없는 같은 다양 한 헤더를 의미 합니다.
+- SIMD 명령 집합은 ARM에서 지원되지 않습니다. 즉, xmmintrin.h, emmintrin.h, tmmintrin.h 및 immintrin.h와 같은 다양한 헤더를 ARM에서 사용할 수 없습니다.
 
-- 셰이더의 로드 된 또는 셰이더 것에 의존 하 여 첫 번째 그리기 호출 동안 ARM 실행 시 셰이더 컴파일러 셰이더 로드 시 없습니다 변경 되었습니다. 프레임 속도에 미치는 영향은 셰이더 얼마나 많은 컴파일이 필요에 따라 확실 될 수 있습니다. 이것은 다양 한 방법을 셰이더 처리/패키지/업데이트 HoloLens 2 vs HoloLens에 따라 다르게 이어야 합니다 (첫 번째 gen).
+- ARM의 셰이더 컴파일러는 셰이더 로드 타임이 아니라, 셰이더가 로드되었거나 셰이더가 의존하는 대상이 변경된 이후의 첫 번째 그리기 호출 동안 실행됩니다. 프레임 속도에 미치는 영향은 컴파일해야 하는 셰이더 수에 따라 매우 확실하게 나타날 수 있습니다. 따라서 셰이더를 HoloLens 2와 HoloLens(1세대)에서 다른 방식으로 처리/패키지/업데이트해야 합니다.
 
-## <a name="see-also"></a>참조
-* [MRTK 버전 2 사용 하 여 시작](mrtk-getting-started.md)
-* [MRTK Version 2 HowTo](https://microsoft.github.io/MixedRealityToolkit-Unity/External/HowTo/README.html)
+## <a name="see-also"></a>참고 항목
+* [MRTK 버전 2 시작](mrtk-getting-started.md)
+* [MRTK 버전 2 HowTo](https://microsoft.github.io/MixedRealityToolkit-Unity/External/HowTo/README.html)
 * [도구 설치](install-the-tools.md)
 * [Unity 권장 설정](recommended-settings-for-unity.md)
-* [혼합 현실에 대 한 성능 이해](understanding-performance-for-mixed-reality.md)
+* [혼합 현실의 성능 이해](understanding-performance-for-mixed-reality.md)
 

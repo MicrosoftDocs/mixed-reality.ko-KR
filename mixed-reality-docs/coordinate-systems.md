@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 좌표계, 공간 좌표계, 방향 으로만 이동 가능한 장착 규모, 고정 규모 방-크기 조정, 전 세계 규모의 360도 장착, 고정, 공간, 환경, 확장, 위치, 방향, 고정, 연결 단계, 앵커, 공간 앵커 전 세계 잠긴, 전 세계 잠금, 본문 잠긴, 본문 잠금, 범위, 지 속성, 공유, 공간 앵커 클라우드 손실 추적
-ms.openlocfilehash: fc76a30895a85ab5ca8396540a82965cc35c494e
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605147"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829864"
 ---
 # <a name="coordinate-systems"></a>좌표계
 
@@ -24,19 +24,48 @@ ms.locfileid: "59605147"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stationary-frame-of-reference">고정 참조 프레임</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#attached-frame-of-reference">연결 된 프레임의 참조</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stage-frame-of-reference">단계에서 참조 하는 프레임을</a></td><td style="text-align: center;"> 아직 지원 되지 않습니다.</td><td style="text-align: center;"> 아직 지원 되지 않습니다.</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#spatial-anchors">공간 앵커</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">공간 매핑</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="40%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="20%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">고정 참조 프레임</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">연결 된 프레임의 참조</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">단계에서 참조 하는 프레임을</a></td>
+        <td>아직 지원 되지 않습니다.</td>
+        <td>아직 지원 되지 않습니다.</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#spatial-anchors">공간 앵커</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="spatial-mapping.md">공간 매핑</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>혼합된 현실 환경 확장
@@ -57,7 +86,7 @@ ms.locfileid: "59605147"
 
 | 6DOF 추적 | Floor 정의 | 360 ° 추적 | 범위 정의 | 공간 앵커 | 최대 환경 | 
 |----------|----------|----------|----------|----------|----------|
-|  아니요 |  - |  - |  - |  - |  **방향 전용** | 
+|  아니오 |  - |  - |  - |  - |  **방향 전용** | 
 |  **예** |  아니요 |  - |  - |  - |  **장착** | 
 |  **예** |  **예** |  아니요 |  - |  - |  **-앞으로 준비** | 
 |  **예** |  **예** |  **예** |  아니오 |  - |  **Standing - 360°** | 
@@ -197,6 +226,6 @@ Windows Mixed Reality를 만들 수 있도록 하 여 이전 섹션에서 설명
 * [Unity의 좌표계](coordinate-systems-in-unity.md)
 * [DirectX의 좌표계](coordinate-systems-in-directx.md)
 * [공간 앵커](spatial-anchors.md)
-* [혼합된 현실 환경 공유했습니다](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure 공간 앵커</a>
+* [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [사례 연구-구멍에 실제로 탐색](case-study-looking-through-holes-in-your-reality.md)

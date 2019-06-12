@@ -3,15 +3,15 @@ title: Holographic 원격 추가
 description: 네트워크를 통해는 HoloLens에 홀로그램 렌더링할 Holographic Remoting을 사용 하는 방법에 설명 합니다.
 author: MikeRiches
 ms.author: mriches
-ms.date: 03/21/2018
+ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 렌더링, HoloLens, 원격 홀로그램 네트워크, 원격 렌더링, holographic remoting, 홀로그램
-ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: 8d645f634ff0fc820893f5554fd602aa3a2f38e3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270351"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829624"
 ---
 # <a name="add-holographic-remoting"></a>Holographic 원격 추가
 

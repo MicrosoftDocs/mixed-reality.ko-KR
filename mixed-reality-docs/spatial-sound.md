@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 공간 소리, 서라운드 사운드, 오디오 3d, 3d 공간, 사운드 오디오
-ms.openlocfilehash: ccb236a8b53e757ba632a1c7c6cb2d4f07735910
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600835"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829919"
 ---
 # <a name="spatial-sound"></a>공간 음향
 
@@ -26,13 +26,24 @@ ms.locfileid: "59600835"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-
-<td> 공간 음향</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 헤드폰) ✔️</td>
-
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>공간 음향</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>(사용 하 여 헤드폰) ✔️</td>
+    </tr>
 </table>
 
 ## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>인식 된 위치와 소리의 거리를 시뮬레이션합니다.
@@ -60,6 +71,6 @@ Windows의 공간 사운드 엔진 48 k 샘플링 주기 재생만 지원합니�
 
 ## <a name="see-also"></a>참조
 * [MR Spatial 220](holograms-220.md)
-* [Unity에서 공간 소리](spatial-sound-in-unity.md)
-* [DirectX의 공간 소리](spatial-sound-in-directx.md)
-* [공간 적절 하 게 디자인](spatial-sound-design.md)
+* [Unity의 공간 음향](spatial-sound-in-unity.md)
+* [DirectX의 공간 음향](spatial-sound-in-directx.md)
+* [공간 음향 디자인](spatial-sound-design.md)

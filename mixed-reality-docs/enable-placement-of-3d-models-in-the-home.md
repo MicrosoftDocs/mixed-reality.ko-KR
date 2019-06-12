@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, 모델, 홈에서 위치, 위치, 세계, 모델링, 혼합된 현실 홈, 웹, 앱
-ms.openlocfilehash: 3a50353aae8e03c3ebb3ee9ec2f642f21836e925
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 954086b79e3614e1b75ceb7560f9fc87435530fa
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605022"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829727"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>홈 혼합된 현실에서 3D 모델의 배치를 사용 하도록 설정
 
@@ -25,11 +25,21 @@ ms.locfileid: "59605022"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td>모델 프로토콜 추가</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>모델 프로토콜 추가</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="overview"></a>개요

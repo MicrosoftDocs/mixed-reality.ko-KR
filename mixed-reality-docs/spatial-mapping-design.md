@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 공간 매핑, HoloLens, surface 재구성, 메시
-ms.openlocfilehash: d2ddcbf9458769a60cd3ed2871c5f3405c75f10c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597885"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829965"
 ---
 # <a name="spatial-mapping-design"></a>공간 매핑 디자인
 
@@ -20,11 +20,21 @@ HoloLens 내 공간 매핑의 효과적으로 사용 다양 한 요인의 신중
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 공간 매핑</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>공간 매핑 디자인</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="why-is-spatial-mapping-important"></a>공간 매핑 중요 한 이유는 무엇입니까?
@@ -196,6 +206,6 @@ HoloLens는 사용자가 해당 하는 대로 해당 환경에서 화면에 대 
 * 사용할 수 없습니다는 HoloLens 또는 응용 프로그램에서 수행 하는 동일한 방식 때문에 실제 (및 해제 coached 이상적) 사용자를 사용 하 여 테스트를 수행 하는 것이 좋습니다. 실제로 다소 놀라운 분기 하는 방법을 사람들의 동작, 기술 및 가정 될 수 있습니다!
 
 ## <a name="see-also"></a>참조
-* [대화방 검색 시각화](room-scan-visualization.md)
-* [공간 적절 하 게 디자인](spatial-sound-design.md)
-* [Unity의 지 속성](persistence-in-unity.md)
+* [실내 스캔 시각화](room-scan-visualization.md)
+* [공간 음향 디자인](spatial-sound-design.md)
+* [Unity의 지속성](persistence-in-unity.md)

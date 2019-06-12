@@ -3,15 +3,15 @@ title: Unity에서 텍스트
 description: Unity에서 텍스트를 표시 하는 두 가지 유형의 텍스트 구성 요소를 사용할 수 있습니다-UI 텍스트 및 텍스트를 3D 메시입니다.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 컨트롤, ux, ui, 입력 체계, 글꼴
-ms.openlocfilehash: a601ab5ab5168f286a0935ca06eeec13022e1eee
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 7d40db2e0571e835e28e444c7921e1a086800936
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692348"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829969"
 ---
 # <a name="text-in-unity"></a>Unity에서 텍스트
 

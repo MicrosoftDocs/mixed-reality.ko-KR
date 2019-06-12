@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 혼합 현실, 가상 현실, VR, MR, 홈, 사용자 지정 환경, 위치, cliff 집, skyloft, 사용자 만들기
-ms.openlocfilehash: ef140efd88aa0d3329ae2aa7e5b202c3bfe77c0a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597520"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829643"
 ---
 # <a name="add-custom-home-environments"></a>사용자 지정 홈 환경 추가
 
@@ -25,11 +25,21 @@ ms.locfileid: "59597520"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 사용자 지정 홈 환경</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>사용자 지정 홈 환경</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="trying-a-sample-environment"></a>샘플 환경을 시도
@@ -86,7 +96,7 @@ Windows Mixed Reality를 다양 한 환경의 부하 시간을 크게 줄일 수
 
 변환기는 현재 다양 한 최적화가 정확한 동작을 조정 하는 플래그를 지원 합니다. 최상의 결과 위해 다음 플래그를 사용 하 여 실행을 사용 하는 것이 좋습니다.
 
-플래그|권장된 값|설명
+Flag|권장된 값|설명
 ---|---|---
 -max-texture-size|1024 또는 2048| 질감의 품질을 개선 하기 위해이 조정, 기본값은 512 x 512입니다. 더 큰 값을 환경 파일 크기를 크게 영향을 참고 따라서 염두 256mb 제한
 -최소 버전|1803|사용자 지정 환경 버전의 windows 에서만 지원 됩니다 > 1803 =. 이 플래그는 이전 버전의 질감을 제거 하 고 최종 자산의 파일 크기를 줄이기

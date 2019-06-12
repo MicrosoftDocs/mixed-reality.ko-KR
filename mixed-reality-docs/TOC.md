@@ -119,7 +119,7 @@
 ### [상호 작용 가능한 개체](interactable-object.md)
 ### [개체 컬렉션](object-collection.md)
 ### [진행률 표시](progress.md)
-### [앱 바 및 경계 상자](app-bar-and-bounding-box.md)
+### [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
 ## 혼합 현실 집 디자인
 ### [3D 앱 시작 관리자 디자인 지침](3d-app-launcher-design-guidance.md)
 ### [집에서 사용할 3D 모델 만들기](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

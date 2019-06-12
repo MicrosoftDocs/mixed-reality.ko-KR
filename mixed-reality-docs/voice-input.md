@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: ggv, 음성, cortana 음성 입력
-ms.openlocfilehash: 7fb5618c13ff1ed446241f744b598cfe2484ea45
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604742"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829952"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -26,11 +26,24 @@ ms.locfileid: "59604742"
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 음성 입력</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> (사용 하 여 마이크) ✔️</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>음성 입력</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>(사용 하 여 마이크) ✔️</td>
+    </tr>
 </table>
 
 ## <a name="the-select-command"></a>"Select" 명령
@@ -113,5 +126,5 @@ Windows Mixed Reality Developer Edition 2017 릴리스의 경우 오디오 끝�
 
 ## <a name="see-also"></a>참조
 * [DirectX의 음성 입력](voice-input-in-directx.md)
-* [Unity에서 음성 입력](voice-input-in-unity.md)
+* [Unity의 음성 입력](voice-input-in-unity.md)
 * [MR 입력 212: 음성](holograms-212.md)

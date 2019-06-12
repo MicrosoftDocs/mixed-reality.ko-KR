@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용을 대상으로 응시 mixed 디자인
-ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974925"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829842"
 ---
 # <a name="gaze-and-dwell"></a>응시 및 유지
 확인 하는 다양 한 방법의 많은 _커밋_ 사용 하 여 게이즈를 조합 하는 등 _음성_ 또는 _제스처를 전달_합니다.
@@ -40,13 +40,30 @@ A _타이_ head 또는 눈 게이즈를 사용 하 여 수행할 수 있습니�
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 대상으로 응시</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️ </td>
-</tr><tr>
-<td> 모니터링 대상</td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>대상으로 응시</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+     <tr>
+        <td>모니터링 대상</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 > [!NOTE]

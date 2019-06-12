@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: 8b9935d6b64abfd22e2e856e0142c953a6366008
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600965"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829998"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows Device Portal 사용 하 여
 
@@ -36,7 +36,7 @@ HoloLens에 대 한 Windows Device Portal 사용 하 여 구성 하 고 Wi-fi �
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
 7. [아래로 스크롤하여](gestures.md#composite-gestures) 높이고 **장치 포털**합니다.
-8. 설정 하는 Windows Device Portal USB 또는 Wifi를 통해이 HoloLens에 앱을 배포할 수 있도록, 클릭 **쌍** 하 [페어링 PIN을 생성](using-visual-studio.md#pairing-your-device-hololens)합니다. 첫 번째 배포 하는 동안 Visual Studio에 PIN을 입력할 때까지 설정 앱을 PIN 팝업 그대로 둡니다.
+8. 설정 하는 Windows Device Portal USB 또는 Wifi를 통해이 HoloLens에 앱을 배포할 수 있도록, 클릭 **쌍** 하 [페어링 PIN을 생성](using-visual-studio.md)합니다. 첫 번째 배포 하는 동안 Visual Studio에 PIN을 입력할 때까지 설정 앱을 PIN 팝업 그대로 둡니다.
 
    ![Windows Holographic에 대 한 설정 앱에서 개발자 모드가 사용 하도록 설정](images/deviceportalsettings.png)
 
@@ -56,7 +56,7 @@ HoloLens에 대 한 Windows Device Portal 사용 하 여 구성 하 고 Wi-fi �
 
 ## <a name="connecting-to-an-emulator"></a>에뮬레이터에 연결
 
-에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 장치 포털에 연결 하려면 사용 합니다 [도구 모음](using-the-hololens-emulator.md#anatomy-of-the-hololens-emulator)합니다. 다음 아이콘을 클릭합니다. ![열기 장치 포털 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS에 대 한 Windows Device Portal 엽니다.
+에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 장치 포털에 연결 하려면 사용 합니다 [도구 모음](using-the-hololens-emulator.md)합니다. 다음 아이콘을 클릭합니다. ![열기 장치 포털 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS에 대 한 Windows Device Portal 엽니다.
 
 ## <a name="creating-a-username-and-password"></a>사용자 이름 및 암호 만들기
 
@@ -71,7 +71,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 5. 암호를 입력하고 확인합니다. 암호는 7자 이상이어야 합니다. MSA 또는 도메인 암호일 필요는 없습니다.
 6. 클릭 **쌍** Windows Device Portal HoloLens에 연결할 수 있습니다.
 
-언제 든 지가 사용자 이름 또는 암호를 변경 하려는 경우 중 하나를 클릭 하 여 장치 보안 페이지를 방문 하 여이 과정을 반복 합니다 **보안** 오른쪽 또는 탐색 하려면 맨 위에 있는 링크: https://<YOUR_HOLOLENS_IP_ 주소 > / devicesecurity.htm 합니다.
+언제 든 지가 사용자 이름 또는 암호를 변경 하려는 경우으로 이동 하 여 장치 보안 페이지를 방문 하 여이 프로세스를 반복할 수 있습니다: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm 합니다.
 
 ## <a name="security-certificate"></a>보안 인증서
 
@@ -80,7 +80,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 각 HoloLens는 해당 SSL 연결에 대한 고유의 자체 서명된 인증서를 생성합니다. 기본적으로 이 인증서는 PC의 웹 브라우저에서 신뢰하지 않아 "인증서 오류"가 발생할 수 있습니다. 신뢰하는 Wi-Fi 네트워크 또는 USB를 통해 HoloLens에서 이 인증서를 다운로드하고 PC에서 신뢰할 수 있도록 만들어 안전하게 디바이스에 연결할 수 있습니다.
 1. **보안 네트워크 (USB 또는 신뢰 하는 Wi-fi 네트워크)에 있는지 확인 합니다.**
 2. 장치 포털에서 "보안" 페이지에서이 장치의 인증서를 다운로드 합니다.
-   * 클릭 합니다 **보안** 아이콘의 오른쪽 위 목록에서 연결 하거나 이동할: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm
+   * 이동할: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm
 3. 에 "신뢰할 수 있는 루트 인증 기관" 저장소 PC에서 인증서를 설치 합니다.
    * Windows 메뉴에서 다음을 입력 합니다. 컴퓨터 인증서를 관리 하 고 애플릿을 시작 합니다.
    * 확장 된 **신뢰할 수 있는 루트 인증 기관** 폴더입니다.
@@ -132,7 +132,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
   * **Floor 표시**: 체크 무늬 floor 평면에 표시 됩니다.
   * **꼭지점이 절 두 체 표시**: 하면 보기 프러스텀을 표시합니다.
   * **안정화 평면 표시**: HoloLens 안정화 동작을 사용 하는 평면에 표시 됩니다.
-  * **메시를 보여 줍니다.**: 사용자 환경을 나타내는 공간 매핑 메시를 표시 합니다.
+  * **메시를 보여 줍니다.** : 사용자 환경을 나타내는 공간 매핑 메시를 표시 합니다.
   * **공간 앵커 표시**: 현재 앱에 대 한 공간 앵커를 표시합니다. 가져오고 앵커를 새로 고치려면 [업데이트] 단추를 클릭 해야 합니다.
   * **세부 정보 표시**: 표시를 실시간으로 변경 될 때 해당 위치, 헤드 회전 쿼터 니 및 장치 원본 벡터를 전달 합니다.
   * **전체 화면 단추**: 전체 화면 모드에서 3D 뷰를 보여 줍니다. 전체 화면 보기를 종료하려면 ESC 키를 누릅니다.

@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 앱 패턴을 디자인, HoloLens, 공간 검색, 공간 재구성, 화면 매핑을 메시
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604647"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829908"
 ---
 # <a name="room-scan-visualization"></a>대화방 검색 시각화
 
@@ -27,11 +27,21 @@ Note는 이러한 모든 경우에서 탐색 하는 동안 수집 되는 실제 
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 대화방 검색 시각화</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>대화방 검색 시각화</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -85,4 +95,4 @@ Note는 이러한 모든 경우에서 탐색 하는 동안 수집 되는 실제 
 ## <a name="see-also"></a>참조
 * [공간 매핑 디자인](spatial-mapping-design.md)
 * [좌표계](coordinate-systems.md)
-* [공간 적절 하 게 디자인](spatial-sound-design.md)
+* [공간 음향 디자인](spatial-sound-design.md)

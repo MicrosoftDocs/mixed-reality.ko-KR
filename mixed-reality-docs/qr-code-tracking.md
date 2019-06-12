@@ -6,12 +6,12 @@ ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
 keywords: vr lbe, 위치 기반 엔터테인먼트, vr 아케이드 아케이드, 몰입도 qr, qr 코드
-ms.openlocfilehash: e6588552c0cfa8bffa19ac2be5c247c5f73dc19c
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: 465056cf645a8b9dc9e0e2d3f9dacf887df67c52
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974894"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829980"
 ---
 # <a name="qr-code-tracking"></a>QR 코드 추적
 
@@ -23,11 +23,21 @@ QR 코드를 추적 (VR) 헤드셋 몰입 형 Windows Mixed Reality 드라이버
 ## <a name="device-support"></a>장치 지원
 
 <table>
-<tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> QR 코드 추적</td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>QR 코드 추적</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>설정 및 해제 QR 코드 헤드셋에 대 한 추적
