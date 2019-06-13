@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: 혼합 현실을, 디자인, 쾌적, HoloLens 2, HoloLens (첫 번째 범용)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974773"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024446"
 ---
 # <a name="comfort"></a>편안 함
 
@@ -63,7 +63,7 @@ IPD 삼아, 또는 개인의 눈의 센터 간의 거리를 가리킵니다. VO 
 
 ### <a name="guidance-for-holographic-devices"></a>Holographic 장치에 대 한 지침
 
-#### <a name="hololens-1st-gen"></a>HoloLens (첫 번째 범용)
+#### <a name="hololens-1st-gen"></a>HoloLens(1세대)
 
 HoloLens에 대 한 (첫 번째 gen) IPD 예상 되며 장치 중에 설정할 [보정](calibration.md)합니다. 새 사용자가 이미 설정된에 대 한 장치, 보정을 실행 해야 합니다 또는 IPD 수동으로 설정 해야 합니다. VO에 맞게 장치에 따라 완전히 달라 집니다. 특히 VO을 최소화 하려면 장치를 표시 하는 수준을 축 자신의 눈에는 같은 사용자의 헤드 놓여 수 해야 합니다. 
 
@@ -127,11 +127,13 @@ Windows Mixed Reality 몰입 형 HMDs IPD 또는 VO 자동 보정 없는 경우 
 
 일반적으로 읽기 쉽도록 코멘트가 특정 응용 프로그램을 테스트 하 고 편리 하 게 환경을 위해 가능 하면 큰 글꼴 크기를 만드는 것이 좋습니다. 다음 개발을 위한 시작 점으로 일반적인 지침을 제공합니다. 모든 글꼴 크기는 각도 (도)의 보고 [visual 각도](https://en.wikipedia.org/wiki/Visual_angle) 특정 실제 크기 대신 제공 하는 최적의 홀로그램 배치 영역 내에서 어떤 거리에 대 한 지침의 크기에 대 한 계정 하기 때문에 텍스트 및 거리 뷰어에 표시 됩니다. 
 
+참조 [입력 체계](typography.md) 하 고 [Unity에서 텍스트](text-in-unity.md) 자세한 지침에 대 한 페이지입니다.
+
 ### <a name="guidance-for-holographic-devices"></a>Holographic 장치에 대 한 지침
 
 Holographic 장치에 대 한 허용/리소스 사용량이 적음 배경에 검정/진한 텍스트 렌더링 배경을 렌더링 뒤 실제 간섭을 채워집니다는 하므로 가장 일관적인 대비 비율은 제공 합니다. 검정/어두운 배경에 흰색/리소스 사용량이 적음 텍스트 렌더링을 통해 표시할 텍스트 가독성을 방해할 수 있는 실제 환경에 많은 수 있습니다. 
 
-#### <a name="hololens-1st-gen"></a>HoloLens (첫 번째 범용)
+#### <a name="hololens-1st-gen"></a>HoloLens(1세대)
 
 (어센더를 글꼴 기준선에서 측정) 읽을 수 있는 최소 글꼴 크기는 약 0.35 ° 이며 편리 하 게 글꼴 크기를 사용자에 게 거리 2 분의 표시 내용 읽는 데 약 적어도 0.5 ° 합니다. 
 

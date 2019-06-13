@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱 품질 기준에 혼합 현실을, 혼합 현실 앱
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750322"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024488"
 ---
 # <a name="app-quality-criteria"></a>앱 품질 기준
 
@@ -37,7 +37,7 @@ ms.locfileid: "66750322"
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -100,7 +100,7 @@ ms.locfileid: "66750322"
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -162,7 +162,7 @@ ms.locfileid: "66750322"
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -226,7 +226,7 @@ ms.locfileid: "66750322"
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -283,7 +283,7 @@ ms.locfileid: "66750322"
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -326,7 +326,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -385,7 +385,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -441,7 +441,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -504,7 +504,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -584,7 +584,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -618,7 +618,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
 
 * [상호 작용 가능한 개체](interactable-object.md)
 * [Unity의 텍스트](text-in-unity.md)
-* [앱 바 및 경계 상자](app-bar-and-bounding-box.md)
+* [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
 * [음성 명령](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
@@ -639,7 +639,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -694,7 +694,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -737,7 +737,7 @@ Windows Mixed Reality 오디오 엔진 3D 방향, 거리 및 환경 시뮬레이
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
         <td></td>
     </tr>
      <tr>

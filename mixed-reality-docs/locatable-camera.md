@@ -1,17 +1,17 @@
 ---
 title: 찾을 수 있는 카메라
-description: HoloLens 프런트 연결 카메라에 대 한 일반 정보입니다.
+description: HoloLens 전면 카메라, 작동 방법 및 프로필에 대 한 일반 정보 및 해결 방법을 개발자에 게 제공 합니다.
 author: wguyman
 ms.author: wguyman
-ms.date: 02/24/2019
+ms.date: 06/12/2019
 ms.topic: article
-keywords: 카메라, hololens, 색 카메라 프런트 연결
-ms.openlocfilehash: ffcd6faf15dd8556db393237d468a3cdf60e4bdb
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: 카메라, hololens, 색 카메라, 연결, hololens 2, 컴퓨터 비전, fiducial cv 앞, 표식, qr 코드, qr, 사진, 비디오
+ms.openlocfilehash: cadcd0762b8adf1001896c614451d2e1c9776c65
+ms.sourcegitcommit: 79398a6b5b7037babcb05d86a5bcc336fd089ea0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603622"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028607"
 ---
 # <a name="locatable-camera"></a>찾을 수 있는 카메라
 
@@ -21,11 +21,11 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
 
 ### <a name="hololens-first-generation"></a>HoloLens (초기)
 
-* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프를 사용 하 여 고정된 포커스 (PV) 사진/비디오 카메라
+* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프라인을 사용 하 여 고정된 포커스 (PV) 사진/비디오 카메라입니다.
 * 카메라 활성화 될 때마다 전 세계 연결 흰색 개인 LED 켜 집니다.
 * 카메라 30, 24, 20, 15 및 5 fps (모든 모드 16 9 가로 세로 비율을은) 다음과 같은 모드를 지원 합니다.:
 
-  |  비디오  |  미리 보기  |  여전히  |  가로 뷰 필드 (H-FOV) |  제안 된 사용 | 
+  |  비디오  |  Preview  |  여전히  |  가로 뷰 필드 (H-FOV) |  제안 된 사용 | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (비디오 안정화를 통해 기본 모드) | 
   |  해당 사항 없음 |  해당 사항 없음 |  2048x1152 |  67deg |  가장 높은 해상도 여전히 이미지 | 
@@ -35,20 +35,32 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프를 사용 하 여 자동 포커스 (PV) 사진/비디오 카메라
-* 카메라 활성화 될 때마다 전 세계 연결 흰색 개인 LED 켜 집니다.
-* 카메라 (모든 비디오 모드 16 9 가로 세로 비율을은)는 다음과 같은 모드를 지원 합니다.:
+* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프라인을 사용 하 여 자동 포커스 (PV) 사진/비디오 카메라입니다.
+* 전 세계 연결 흰색 개인 LED 카메라 활성화 될 때마다 켜 집니다.
+* HoloLens 2 다른 카메라 프로필을 지원합니다. 설명 하는 방법 [검색 하 고 카메라 기능을 선택](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* 카메라 다음 프로필과 (모든 비디오 모드 16 9 가로 세로 비율을은)는 해상도 지원 합니다.:
+  
+  | 프로필                                         | 비디오     | Preview   | 여전히     | 프레임 속도 | 가로 뷰 필드 (H-FOV) | 제안 된 사용                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | 레거시, 0 BalancedVideoAndPhoto 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
+  | 레거시, 0 BalancedVideoAndPhoto 100             |           |           | 3904x2196 |             | 64.69                            | 고품질 사진 캡처                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | 긴 기간 시나리오                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | 긴 기간 시나리오                     |
+  | 비디오 회의 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1128x635  |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 960 x 540   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 760x428   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 640x360   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 500x282   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 424x240   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
 
-  >[!NOTE]
-  >이러한 모드는 HoloLens 2 일반 공급 전에 변경 될 수 있습니다.
-
-  |  비디오  |  미리 보기  |  여전히  |  프레임 속도  |  가로 뷰 필드 (H-FOV) |  제안 된 사용 | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  해당 사항 없음 |  30, 15 fps  |  54deg  |  (비디오 안정화를 통해 기본 모드) | 
-  |  해당 사항 없음 |  해당 사항 없음 |  3904X2196 |  해당 사항 없음  |  64deg |  가장 높은 해상도 여전히 이미지 | 
-  |  2272x1278 |  2272x1278 |  해당 사항 없음 |  30, 15 fps  |  64deg |  비디오 안정화 전에 오버 스캔 (패딩) 확인 | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 fps  |  64deg |  고품질 스트리밍 | 
-  |  1280x720 |  1280x720 |  해당 사항 없음 |  30, 15, 5 fps  |  64deg |  스트리밍 및 이미지 처리 작업에 대 한 저해상도 전원 모드 | 
+>[!NOTE]
+>활용할 수 있습니다 [혼합 현실 캡처](mixed-reality-capture.md) 홀로그램 및 비디오 안정화를 포함 하는 앱의 사진 또는 비디오를 수행 합니다.
+>
+>개발자는 고객 콘텐츠를 캡처할 때 최적의 상태로 표시 되도록 하려는 경우 앱을 만들 때 고려해 야 하는 고려 사항이 있습니다. 또한 (를 사용자 지정) 응용 프로그램 내에서 직접에서 혼합된 현실 캡처. 자세히 알아보세요 [현실 캡처 개발자를 위한 혼합](mixed-reality-capture-for-developers.md)합니다.
 
 ## <a name="locating-the-device-camera-in-the-world"></a>전 세계에서 장치 카메라를 찾기
 
@@ -276,8 +288,8 @@ private void OnRenderImage(RenderTexture source, RenderTexture destination)
 * 식별 하 고 (예: 위치 holographic 대화 상대 카드 얼굴을 통해) 대화방 참가자를 인식 합니다.
 
 ## <a name="see-also"></a>참조
-* [DirectX에서 찾을 수 있는 카메라](locatable-camera-in-directx.md)
-* [Unity에서 찾을 수 있는 카메라](locatable-camera-in-unity.md)
-* [혼합된 현실 캡처](mixed-reality-capture.md)
-* [개발자를 위한 실제로 캡처 혼합](mixed-reality-capture-for-developers.md)
+* [DirectX의 위치를 찾을 수 있는 카메라](locatable-camera-in-directx.md)
+* [Unity의 위치를 찾을 수 있는 카메라](locatable-camera-in-unity.md)
+* [혼합 현실 캡처](mixed-reality-capture.md)
+* [개발자를 위한 혼합 현실 캡처](mixed-reality-capture-for-developers.md)
 * [미디어 캡처 소개](https://msdn.microsoft.com/library/windows/apps/mt243896.aspx)

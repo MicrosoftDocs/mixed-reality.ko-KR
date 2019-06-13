@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof 컨트롤러, 컨트롤러 동작
-ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: fc6b0dcf7f338224af9ea9bc59e07187c33adda2
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629117"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024557"
 ---
 # <a name="motion-controllers"></a>컨트롤러 동작
 
@@ -23,10 +23,23 @@ ms.locfileid: "65629117"
 ## <a name="device-support"></a>장치 지원
 
 <table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
 <tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
-</tr><tr>
-<td> 컨트롤러 동작</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
+     <td><strong>기능</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
+</tr>
+<tr>
+     <td>컨트롤러 동작</td>
+     <td>❌</td>
+     <td>❌</td>
+     <td>✔️</td>
 </tr>
 </table>
 
@@ -231,7 +244,7 @@ Unity에서 동적으로 컨트롤러 모델을 로드 하는 방법에 대 한 
 
 ## <a name="see-also"></a>참조
 * [Unity의 제스처 및 모션 컨트롤러](gestures-and-motion-controllers-in-unity.md)
-* [실습 및 DirectX에서 컨트롤러 동작](hands-and-motion-controllers-in-directx.md)
+* [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 * [제스처](gestures.md)
 * [MR 입력 213: 모션 컨트롤러](mixed-reality-213.md)
 * [전문가 가이드: 홈 사용자 Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)

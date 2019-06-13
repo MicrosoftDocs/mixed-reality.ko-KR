@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 혼합 현실, 가상 현실, VR, MR, 홈, 사용자 지정 환경, 위치, cliff 집, skyloft, 사용자 만들기
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829643"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024533"
 ---
 # <a name="add-custom-home-environments"></a>사용자 지정 홈 환경 추가
 
@@ -33,7 +33,7 @@ ms.locfileid: "66829643"
     <tr>
         <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
         <td>사용자 지정 홈 환경</td>
@@ -150,6 +150,5 @@ Windows Mixed Reality 환경을 로드할 때 glTF 단위 1 미터를 변환 합
 사용자 지정 환경을 만들면 사용자가 만든 실제 공간 일치 하지 않는 소음 렌더링 시뮬레이션을 사용 됩니다. Sound 잘못 된 방향에서 가져올 수 있습니다 및 들리지만 muffled 합니다. 
 
 ## <a name="see-also"></a>참조
-* [실제로 홈 혼합 Windows 탐색](#navigating-the-windows-mixed-reality-home.md)
 * [Windows 혼합 현실 자산 변환기 (github)](https://github.com/Microsoft/glTF-Toolkit/releases)
 
