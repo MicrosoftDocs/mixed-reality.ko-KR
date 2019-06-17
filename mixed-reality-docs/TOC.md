@@ -1,9 +1,9 @@
 # [도구 설치](install-the-tools.md)
 # [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
-# [검색](index.md)
+# 검색
+## [Mixed Reality 설명서](index.md)
 ## [혼합 현실이란?](mixed-reality.md)
 ## [홀로그램이란?](hologram.md)
-
 ## 하드웨어
 ### HoloLens
 #### [HoloLens 2 하드웨어 세부 정보](https://www.microsoft.com/hololens/hardware)
@@ -78,7 +78,8 @@
 ### [릴리스 정보 - 2016년 5월](release-notes-may-2016.md)
 ### [릴리스 정보 - 2016년 3월](release-notes-march-2016.md)
 
-# [디자인](design.md)
+# 디자인
+## [혼합 현실을 위한 디자인](design.md)
 ## [이 디자인 지침에 대한 정보](about-this-design-guidance.md)
 ## 디자인 시작
 ### [혼합 현실이란?](mixed-reality.md)
@@ -129,7 +130,8 @@
 ### [HoloSketch](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [자산 생성 프로세스](asset-creation-process.md)
 
-# [개발](development.md)
+# 개발
+## [개발 실행 패드](development.md)
 ## 혼합 현실 클라우드 서비스
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ### [홀로그램 원격 플레이어](holographic-remoting-player.md)
