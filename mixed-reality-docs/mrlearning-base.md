@@ -1,17 +1,17 @@
 ---
 title: MR 학습 자료 모듈 소개
-description: 혼합된 현실 응용 프로그램에서 Azure Face recognition 얼굴 인식을 구현 하는 방법을 알아보려면이 과정을 완료 합니다.
+description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: unity, 자습서, hololens, 혼합된 현실
-ms.openlocfilehash: 2fe07efe87086e9a8c06e1953fcef8544b03c80a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: d4220527a7de8e596f2825fd9d199d536510b972
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148632"
 ---
 # <a name="mr-learning-base-module-overview--objectives"></a>모듈 개요 MR 학습 자료 및 목표
 
@@ -26,9 +26,9 @@ ms.locfileid: "66829877"
     </colgroup>
     <tr>
         <td><strong>과정</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://www.microsoft.com/en-us/hololens/hardware"><strong>HoloLens 2</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
         <td></td>

@@ -1,17 +1,17 @@
 ---
 title: Unity에서 공간 매핑
 description: 렌더링 및 unity에서와 관련해 서 실제 형상와 충돌 합니다.
-author: thetuvix
-ms.author: alexturn
+author: davidkline-ms
+ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity 공간 매핑, 렌더러, collider, 메시, 검색, 구성 요소
-ms.openlocfilehash: f938f5921cb2c06342a9ebcd376d690c10584df9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148645"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity에서 공간 매핑
 

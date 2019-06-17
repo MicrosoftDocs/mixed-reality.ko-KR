@@ -6,20 +6,37 @@ ms.author: mazeller
 ms.date: 04/1/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: a92ab52c899de44f9c5c8c86ebb6f9cd8433d395
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148701"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
 이것이 현재 HoloLens에 영향을 주는 개발자를 위한 알려진된 문제 목록입니다. 보려면 여기를 확인 한 부적절 한 동작 표시 되는 경우. 이 목록은 새로운 문제는 발견 되거나 보고 또는 이후 HoloLens 소프트웨어 업데이트 문제를 해결 하는 대로 업데이트 된 유지 됩니다.
 
+## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>연결을 Visual Studio를 통해 HoloLens에 배포할 수 없습니다.
+
+>[!NOTE]
+>마지막 업데이트 날짜: 6/14 오후 6 시-@ 문제 조사 중입니다.
+
+HoloLens 및 Visual Studio 팀은 사용자가 Visual Studio를 통해 HoloLens 장치에 배포 하지 못하게 할 수 있는 문제를 조사 합니다.
+ 
+배포 단계에서 사용자가 보고할 HoloLens 장치 나누고 개발자 컴퓨터에도 불구 하 고 다음 오류 메시지가 *개발자 모드* 사용 하도록 설정 합니다.
+
+*DEP0100: 대상 장치에 개발자 모드가 사용 하도록 설정 해야 합니다. 개발자 라이선스를 얻지 못했습니다 <device IP> 80004005 오류로 인해 합니다.*
+ 
+**해결 방법**: 
+ 
+사용자가 해당 문제를 해결 하는 장치를 다시 설정 하는 모든 경우에 작동을 보장할 수 없습니다를 보고 합니다. 장치를 재설정 하는 방법을 찾을 수 있습니다 [여기](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens)합니다.
+ 
+문제는 근본 원인인 즉시 업데이트로 제공 됩니다. 
+
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Microsoft Store 및 HoloLens에 앱을 시작 하는 문제
 
->[!IMPORTANT]
+>[!NOTE]
 >마지막 업데이트 날짜: 4 월 2 @ 오전 10 시-문제를 해결 합니다. 
 
 Microsoft Store 및 HoloLens에 앱을 시작 하려고 할 때 문제가 발생할 수 있습니다. 백그라운드 앱 업데이트 중 하나는 특정 시퀀스에서 프레임 워크 패키지의 최신 버전을 배포 또는 해당 종속 된 앱 중 계속 실행 하는 경우 문제가 발생 하 확인 했습니다. 이 경우 새 버전 (버전 10.0.25531를 10.0.27413)는.NET 네이티브 프레임 워크의 배달 자동 앱 업데이트 잘못 프레임 워크의 이전 버전을 사용 하는 모든 실행 중인 앱에 대 한 업데이트를 실행 하는 앱을 발생 합니다.  프레임 워크 업데이트에 대 한 흐름은 다음과 같습니다.-
@@ -37,10 +54,10 @@ Microsoft Store 및 HoloLens에 앱을 시작 하려고 할 때 문제가 발생
 
 1.  "설정" 앱으로 이동 하 고 "업데이트 및 보안"을 엽니다
 2.  "업데이트 확인"을 클릭 합니다.
-3.  17763.380 업데이트를 사용할 수 있는 경우 업데이트 하세요 앱 중단 버그 픽스를 받으려면이 빌드에
+3.  17763\.380 업데이트를 사용할 수 있는 경우 업데이트 하세요 앱 중단 버그 픽스를 받으려면이 빌드에
 4.  운영 체제의이 버전으로 업데이트 되 면 앱은 예상 대로 작동 해야 합니다.
 
-또한 모든 HoloLens OS 릴리스를 사용 하 여 마찬가지로에서는 게시 된 FFU 이미지는 Microsoft 다운로드 센터 https://aka.ms/hololensdownload/10.0.17763.380합니다. 
+또한 모든 HoloLens OS 릴리스를 사용 하 여 마찬가지로에서는 게시 된 FFU 이미지는 Microsoft 다운로드 센터 https://aka.ms/hololensdownload/10.0.17763.380 합니다. 
 
 업데이트 하려는 경우 3/29 일부 터 Microsoft Store UWP 앱의 새 버전을 릴리스 했습니다. 있다면 저장소의 업데이트 된 버전.
 
@@ -74,7 +91,7 @@ Bluetooth 키보드를 사용 하 여 긴 암호를 입력 하는 것이 좋습�
 
 ## <a name="visual-studio"></a>Visual Studio
 * 참조 [도구를 설치](install-the-tools.md) HoloLens 개발에 권장 되는 Visual Studio의 최신 버전에 대 한 합니다.
-* 에 HoloLens에 Visual Studio에서 앱을 배포할 때 오류가 표시 될 수 있습니다. **사용자 매핑 섹션 열려 있는 파일에서 요청된 된 작업을 수행할 수 없습니다. (예외가 발생한 HRESULT: 0x800704C8)**. 이 경우 다시 시도 및 배포는 일반적으로 성공 합니다.
+* 에 HoloLens에 Visual Studio에서 앱을 배포할 때 오류가 표시 될 수 있습니다. **사용자 매핑 섹션 열려 있는 파일에서 요청된 된 작업을 수행할 수 없습니다. (예외가 발생한 HRESULT: 0x800704C8)** . 이 경우 다시 시도 및 배포는 일반적으로 성공 합니다.
 
 ## <a name="emulator"></a>에뮬레이터
 * Microsoft Store 모든 앱을 에뮬레이터와 호환 됩니다. 예를 들어 Young Conker 및 조각이 없는 에뮬레이터에서 재생할 수 있습니다.

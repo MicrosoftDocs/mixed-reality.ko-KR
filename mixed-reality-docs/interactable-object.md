@@ -3,15 +3,15 @@ title: 상호 작용할 수 없는 개체
 description: 2D 추상 전 세계에서 이벤트를 트리거하는 데 사용 하는 비유를 오랫동안 단추입니다. 3 차원 혼합된 현실 세계에서 추상화를 더 이상이 환경으로 제한 될 필요가 없습니다.
 author: cre8ivepark
 ms.author: jennyk
-ms.date: 02/24/2019
+ms.date: 06/06/2019
 ms.topic: article
 keywords: 혼합된 현실 "," 컨트롤 "," 상호 작용 "," ui "," ux
-ms.openlocfilehash: eea7eff6c591a9319b920936ce2be511cecb7496
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148762"
 ---
 # <a name="interactable-object"></a>상호 작용할 수 없는 개체
 
@@ -84,20 +84,51 @@ HoloLens 2에서는 깊이 perception에서 사용자의 신뢰도 개선 하는
 
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="음성 명령에 대 한 도구 설명" width="350"><br/>*음성 명령에 대 한 도구 설명*
 
+## <a name="sizing"></a>크기 조정
+쉽게 상호 작용할 수 없는 모든 개체 수 있는지 확인 하기 위해 사용자가 연결 된 것이 좋습니다 상호 작용할 수 없는 충족 최소 (종종 visual 각도도 단위로 측정 됨)에 따라 크기를 사용자에 게 있어 거리를 확인 합니다. Visual 각도 (도) 사용자와 개체 간의 거리 기반으로 하며 대상의 실제 크기는 거리로 사용자 변경 내용에서 변경 될 수 있지만 상수를 유지 합니다. 고 수준에서 거리를 기준으로 개체의 필요한 실제 크기를 확인 하려면 visual 각도와 같은 계산기를 사용해 보세요. http://elvers.us/perception/visualAngle/
+
+다음은 상호 작용할 수 없는 콘텐츠의 최소 크기에 대 한 권장 사항
+
+### <a name="target-size-for-direct-hand-interaction"></a>직접 직접 상호 작용에 대 한 대상 크기
+| 거리 | 각도 | 크기 |
+|---------|---------|---------|
+| 45cm  | 2 ° 최소 크기 | 1.6 x 1.6 cm |
+
+![직접 직접 상호 작용에 대 한 대상 크기](images/TargetSizingNear.jpg)<br>
+*직접 직접 상호 작용에 대 한 대상 크기*
+
+직접 상호 작용에 대 한 단추를 만들 때 아이콘을 포함 하도록 충분 한 공간 및 잠재적으로 일부 텍스트 * * 더 큰 크기는 최소입니다 3.2 x 3.2 cm 확인 되는 것이 좋습니다.
+
+| 거리 | 최소 크기 |
+|---------|---------|
+| 45cm  | 3.2 x 3.2 cm |
+
+![단추에 대 한 대상 크기](images/TargetSizingButtons.png)<br>
+*단추에 대 한 대상 크기*
+
+
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>대상으로 직접 광선의 크기 또는 상호 작용 gaze
+| 거리 | 각도 | 크기 |
+|---------|---------|---------|
+| 2m  | 1도 이상 | 3.5 x 3.5 cm |
+
+![대상으로 직접 광선의 크기 또는 상호 작용 gaze](images/TargetSizingFar.jpg)<br>
+*대상으로 직접 광선의 크기 또는 상호 작용 gaze*
+
 ## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>혼합 현실 도구 키트 (MRTK)을 사용 하 여 상호 작용할 수 없는 개체 만들기
 
 에  **[혼합 현실 Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , 일련의 Unity 스크립트를 찾을 수 있습니다 및 prefabs 도움이 되는 상호 작용할 수 없는 개체를 만듭니다. 다양 한 유형의 입력된 상호 작용 상태에 응답 하는 개체를 사용할 수 있습니다.
 
-* **[Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)**
-* **[Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)**
-* **[직접 상호 작용 예제 장면](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)**
+* [상호 작용할 수 없는](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [직접 상호 작용 예제 장면](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 MixedRealityToolkit의 표준 셰이더와 같은 다양 한 옵션을 제공 **근접 light** 를 시각적 및 오디오 큐를 만들 수 있습니다.
-* **[MRTK 표준 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)**
+* [MRTK 표준 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>참조
 
-* **[경계 상자](app-bar-and-bounding-box.md)**
-* **[개체 컬렉션](object-collection.md)**
-* **[빌보드 및 tag-along](billboarding-and-tag-along.md)**
+* [경계 상자](app-bar-and-bounding-box.md)
+* [개체 컬렉션](object-collection.md)
+* [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
