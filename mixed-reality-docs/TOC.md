@@ -145,6 +145,7 @@
 #### [Unity 플레이 모드](unity-play-mode.md)
 #### [Unity Visual Studio 솔루션 내보내기 및 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
 #### [Unity 및 Visual Studio 사용 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
+#### [Unity IL2CPP를 사용하여 디버깅 관리](managed-debugging-with-unity-il2cpp.md)
 ### 핵심 구성 요소
 #### [Unity의 카메라](camera-in-unity.md)
 #### [Unity의 좌표계](coordinate-systems-in-unity.md)
