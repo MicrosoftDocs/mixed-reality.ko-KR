@@ -25,12 +25,12 @@
 #### [센서 튜닝](sensor-tuning.md)
 #### [HoloLens 업데이트](updating-hololens.md)
 #### [디바이스 공유](device-sharing.md)
-#### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
+#### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
 ### 몰입형 헤드셋
 #### [몰입형 헤드셋 하드웨어 세부 정보](immersive-headset-hardware-details.md)
 #### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [하드웨어 액세서리](hardware-accessories.md)
-### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
+### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
 ## 핵심 구성 요소
 ### [응시](gaze.md)
 ### [제스처](gestures.md)
@@ -57,7 +57,7 @@
 #### [Hololens(1세대)용 혼합 현실에서 은하계 만들기](case-study-creating-a-galaxy-in-mixed-reality.md)
 #### [HoloLens 2용 갤럭시 익스플로러 업데이트](galaxy-explorer-update.md)
 ### [HoloStudio UI 및 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-### [Lowe의 주방이 주는 교훈](case-study-lessons-from-the-lowes-kitchen.md)
+### [Lowe's의 HoloLens 프로젝트](case-study-lessons-from-the-lowes-kitchen.md)
 ### [현실의 구멍 속 살펴보기](case-study-looking-through-holes-in-your-reality.md)
 ### [HoloLens 디자인 팀에서 보낸 첫해](case-study-my-first-year-on-the-hololens-design-team.md)
 ### [혼합 현실의 사람 표현](case-study-representing-humans-in-mixed-reality.md)
