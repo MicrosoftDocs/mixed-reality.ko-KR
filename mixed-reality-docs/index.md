@@ -53,7 +53,7 @@ ms.locfileid: "66813749"
                                           </div>
                                           <div class="cardText">
                                               <h3>개발</h3>
-                                              <p>개발 가이드를 얻고, 기술을 배우고, 과학을 이해하세요.</p>
+                                              <p>개발 가이드를 얻고, 기술을 배우고, 원리를 이해하세요.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -115,7 +115,7 @@ ms.locfileid: "66813749"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">음성 서비스</h3>
-                                                  <p>음성을 텍스트로 변환, 화자 인식, 음성 번역 등의 Azure 기반 음성 기능을 검색하고 애플리케이션에 통합하세요.</p>
+                                                  <p>음성을 텍스트로 변환, 화자 인식, 음성 번역 등의 Azure 기반 음성 기능을 알아보고 애플리케이션에 통합하세요.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,7 +147,7 @@ ms.locfileid: "66813749"
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware)는 몇 분 안에 가치를 제공하는 업계 최고 수준의 솔루션을 통해 현존하는 가장 편안한 몰입형 혼합 현실 환경을 제공하며, 모든 솔루션은 Microsoft 클라우드 및 AI 서비스의 안정성, 보안 및 확장성의 지원을 받습니다. [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers)은 HoloLens 2를 Unity 소프트웨어 평가판과 클라우드 서비스에 대한 Azure 크레딧을 결합한 제품을 통해 혼합 현실 계획을 빠르게 시작할 수 있도록 도와줍니다.
+[HoloLens 2](https://www.microsoft.com/hololens/hardware)는 즉각적으로 앱에 가치를 더하는 업계 최고 수준의 솔루션을 통해 현존하는 가장 편안한 몰입형 혼합 현실 환경을 제공하며, 모든 솔루션은 Microsoft 클라우드 및 AI 서비스의 안정성, 보안 및 확장성의 지원을 받습니다. [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers)은 HoloLens 2를 Unity 소프트웨어 평가판과 클라우드 서비스에 대한 Azure 크레딧을 결합한 제품을 통해 혼합 현실 계획을 빠르게 시작할 수 있도록 도와줍니다.
 
 <h2>뉴스 및 정보</h2>
 
