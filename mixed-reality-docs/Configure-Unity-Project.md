@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트
-ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940756"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326098"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Windows Mixed Reality 용 새 Unity 프로젝트 구성 
 
@@ -21,7 +21,7 @@ ms.locfileid: "65940756"
 
 ## <a name="per-project-settings"></a>프로젝트 설정
 
-Windows Mixed Reality를 대상으로 먼저 유니버설 Windows 플랫폼 앱으로 내보내려면 Unity 프로젝트를 설정 해야 합니다.
+Windows Mixed Reality를 대상으로 먼저 유니버설 Windows 플랫폼 앱으로 내보내려면 Unity 프로젝트를 설정 해야 합니다. 
 1. 선택 **파일 > 빌드 설정...**
 2. 선택 **유니버설 Windows 플랫폼** 플랫폼에서 나열 하 고 클릭 **플랫폼 전환**
 3. 설정할 **SDK** 에 **유니버설 10**

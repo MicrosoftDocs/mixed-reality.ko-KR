@@ -6,14 +6,14 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 구성 요소, 센서, 기술, 기술, 해체, 해체,
-ms.openlocfilehash: ddbce274a0573ab72e1ff7b523b6ac4b8fbb6ba2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604632"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326197"
 ---
-# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (첫 번째 gen) 하드웨어 세부 정보
+# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (첫 번째 Gen) 하드웨어 세부 정보
 
 ![Microsoft HoloLens](images/see-through-400px.jpg)
 
@@ -21,7 +21,7 @@ Microsoft HoloLens 전 세계의 첫 번째 완전히 클라우드가 holographi
 
 ## <a name="how-to-get-microsoft-hololens"></a>Microsoft HoloLens 가져오는 방법
 
-Microsoft HoloLens 모두를 개발 버전으로 구매할 수 있습니다 및를 포함 하는 추가 보안 및 장치 관리에 대 한 보증 및 엔터프라이즈 기능 Commercial Suite 구성 합니다. 북아메리카의 경우에 파트너를 통해 HoloLens를 대여할 수 있습니다.
+Microsoft HoloLens 모두 개발 버전으로 구입할 수 이며 Commercial Suite 구성에 대 한 보증 및 엔터프라이즈 기능을 포함 하는 보안 및 장치 관리를 추가 합니다. 북아메리카의 경우에 파트너를 통해 HoloLens를 대여할 수 있습니다.
 
 [구매 또는 Microsoft HoloLens 임대에 대 한 자세한 내용은 여기를 클릭 하십시오.](https://www.microsoft.com/hololens/buy)합니다.
 
@@ -64,7 +64,7 @@ Microsoft HoloLens 모두를 개발 버전으로 구매할 수 있습니다 및�
 * 마이크로 USB 2.0
 * Bluetooth 4.1 LE
 
-### <a name="power"></a>Power
+### <a name="power"></a>전원
 * 배터리 수명
 * 현재 사용 하 여 2 ~ 3 시간
 * 대기 시간의 최대 2 주
@@ -78,10 +78,10 @@ Microsoft HoloLens 모두를 개발 버전으로 구매할 수 있습니다 및�
 * 사용자 지정 빌드된 Microsoft Holographic 처리 단위 (HPU 1.0)
 
 ### <a name="weight"></a>Weight
-* 579g
+* 579 g
 
 ### <a name="memory"></a>메모리
-* 64GB Flash
+* 64GB 플래시
 * 2GB RAM
 
 ### <a name="whats-in-the-box"></a>상자에 새로운 기능

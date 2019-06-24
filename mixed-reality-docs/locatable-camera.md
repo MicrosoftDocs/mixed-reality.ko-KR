@@ -1,17 +1,17 @@
 ---
 title: 찾을 수 있는 카메라
 description: HoloLens 전면 카메라, 작동 방법 및 프로필에 대 한 일반 정보 및 해결 방법을 개발자에 게 제공 합니다.
-author: wguyman
-ms.author: wguyman
+author: cdedmonds
+ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
-keywords: 카메라, hololens, 색 카메라, 연결, hololens 2, 컴퓨터 비전, fiducial cv 앞, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: cadcd0762b8adf1001896c614451d2e1c9776c65
-ms.sourcegitcommit: 79398a6b5b7037babcb05d86a5bcc336fd089ea0
+keywords: 카메라, hololens, 색 카메라 프런트 연결
+ms.openlocfilehash: f661fc82fbeab9a870e8ccf7044c9bb375bed7e3
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028607"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326287"
 ---
 # <a name="locatable-camera"></a>찾을 수 있는 카메라
 
@@ -21,7 +21,7 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
 
 ### <a name="hololens-first-generation"></a>HoloLens (초기)
 
-* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프라인을 사용 하 여 고정된 포커스 (PV) 사진/비디오 카메라입니다.
+* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프를 사용 하 여 고정된 포커스 (PV) 사진/비디오 카메라
 * 카메라 활성화 될 때마다 전 세계 연결 흰색 개인 LED 켜 집니다.
 * 카메라 30, 24, 20, 15 및 5 fps (모든 모드 16 9 가로 세로 비율을은) 다음과 같은 모드를 지원 합니다.:
 
@@ -35,150 +35,53 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프라인을 사용 하 여 자동 포커스 (PV) 사진/비디오 카메라입니다.
-* 전 세계 연결 흰색 개인 LED 카메라 활성화 될 때마다 켜 집니다.
-* HoloLens 2 다른 카메라 프로필을 지원합니다. 설명 하는 방법 [검색 하 고 카메라 기능을 선택](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
-* 카메라 다음 프로필과 (모든 비디오 모드 16 9 가로 세로 비율을은)는 해상도 지원 합니다.:
-  
-  | 프로필                                         | 비디오     | Preview   | 여전히     | 프레임 속도 | 가로 뷰 필드 (H-FOV) | 제안 된 사용                             |
-  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
-  | 레거시, 0 BalancedVideoAndPhoto 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
-  | 레거시, 0 BalancedVideoAndPhoto 100             |           |           | 3904x2196 |             | 64.69                            | 고품질 사진 캡처                  |
-  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | 긴 기간 시나리오                     |
-  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | 긴 기간 시나리오                     |
-  | 비디오 회의 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1128x635  |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 960 x 540   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 760x428   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 640x360   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 500x282   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 424x240   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+* 흰색 자동 분산, 자동 노출 및 전체 이미지 처리 파이프를 사용 하 여 자동 포커스 (PV) 사진/비디오 카메라
+* 카메라 활성화 될 때마다 전 세계 연결 흰색 개인 LED 켜 집니다.
+* 카메라 (모든 비디오 모드 16 9 가로 세로 비율을은)는 다음과 같은 모드를 지원 합니다.:
 
->[!NOTE]
->활용할 수 있습니다 [혼합 현실 캡처](mixed-reality-capture.md) 홀로그램 및 비디오 안정화를 포함 하는 앱의 사진 또는 비디오를 수행 합니다.
->
->개발자는 고객 콘텐츠를 캡처할 때 최적의 상태로 표시 되도록 하려는 경우 앱을 만들 때 고려해 야 하는 고려 사항이 있습니다. 또한 (를 사용자 지정) 응용 프로그램 내에서 직접에서 혼합된 현실 캡처. 자세히 알아보세요 [현실 캡처 개발자를 위한 혼합](mixed-reality-capture-for-developers.md)합니다.
+  >[!NOTE]
+  >이러한 모드는 HoloLens 2 일반 공급 전에 변경 될 수 있습니다.
+
+  |  비디오  |  Preview  |  여전히  |  프레임 속도  |  가로 뷰 필드 (H-FOV) |  제안 된 사용 | 
+  |----------|----------|----------|----------|----------|----------|
+  |  1920x1080 |  1920x1080 |  해당 사항 없음 |  30, 15 fps  |  54deg  |  (비디오 안정화를 통해 기본 모드) | 
+  |  해당 사항 없음 |  해당 사항 없음 |  3904X2196 |  해당 사항 없음  |  64deg |  가장 높은 해상도 여전히 이미지 | 
+  |  2272x1278 |  2272x1278 |  해당 사항 없음 |  30, 15 fps  |  64deg |  비디오 안정화 전에 오버 스캔 (패딩) 확인 | 
+  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 fps  |  64deg |  고품질 스트리밍 | 
+  |  1280x720 |  1280x720 |  해당 사항 없음 |  30, 15, 5 fps  |  64deg |  스트리밍 및 이미지 처리 작업에 대 한 저해상도 전원 모드 | 
 
 ## <a name="locating-the-device-camera-in-the-world"></a>전 세계에서 장치 카메라를 찾기
 
-HoloLens 사진 및 비디오를 사용 하는 경우 캡처된 프레임을 원근 투영 카메라를 비롯 하 여 전 세계에 카메라의 위치를 포함 합니다. 이 보강 된 이미징 시나리오에 대 한 실제 환경에서 카메라의 위치에 대 한 이유를 응용 프로그램 수 있습니다. 개발자가 즐겨 찾는 이미지 처리 또는 사용자 지정 컴퓨터 비전 라이브러리를 사용 하 여 고유한 시나리오를 롤백하지 창의적으로 수 있습니다.
+HoloLens 사진 및 비디오를 사용 하는 경우 캡처된 프레임을 카메라의 렌즈 모델 뿐만 아니라 전 세계에서 카메라의 위치를 포함 합니다. 이 보강 된 이미징 시나리오에 대 한 실제 환경에서 카메라의 위치에 대 한 이유를 응용 프로그램 수 있습니다. 개발자가 즐겨 찾는 이미지 처리 또는 사용자 지정 컴퓨터 비전 라이브러리를 사용 하 여 고유한 시나리오를 롤백하지 창의적으로 수 있습니다.
 
 HoloLens 설명서의 다른 위치에서 "카메라"는 "가상 게임 카메라" (으로 렌더링 하면 프러스텀 앱)를 참조할 수 있습니다. 그렇지 않으면 표시 된 경우가 아니면이 페이지에서 "카메라"은 실제 RGB 색 카메라를 가리킵니다.
 
-하지만이 페이지 처리에 대 한 세부 정보 [Media Foundation 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx), 카메라 내장 함수를 사용 하 여 가져오려고 Api도 있습니다 [WinRT Api](https://msdn.microsoft.com/library/windows/apps/windows.media.devices.core.cameraintrinsics)합니다.  
+세부 정보를 사용 하 여이 페이지 덮개를 [MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference) 그러나도 Api 끌어오기 카메라 내장 함수를 사용 하 여 위치 클래스 [Media Foundation 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx)합니다. 참조 하십시오 합니다 [tracking 샘플 Holographic 얼굴](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) 자세한 내용은 합니다.
 
 ### <a name="images-with-coordinate-systems"></a>좌표계를 사용 하 여 이미지
 
-각 이미지 프레임 (여부를 사진 또는 비디오) 좌표계 뿐만 아니라 두 가지 중요 한 변환을 포함 합니다. "View" 카메라에 제공 된 좌표계에서 지도 및 이미지의 픽셀을 "프로젝션" 지도 카메라를 변환합니다. 함께 이러한 변환을 정의할 각 픽셀에 대 한 광선을 그린 photons 픽셀 생성 되는 경로 나타내는 3D 공간에서. 이러한 표면이 다른 좌표 시스템을 프레임의 좌표계에서 변환의 확보 하 여 앱의 다른 콘텐츠에 관련 될 수 있습니다 (예:는 [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference)). 요약 하면, 각 이미지 프레임 다음을 제공 합니다.
+각 이미지 프레임 (여부를 사진 또는 비디오) 포함을 [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) 카메라 캡처를 사용 하 여 액세스할 수 있는 시점에 루트로 합니다 [coordinatesystem입니다](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) 프로그램의속성[MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)합니다. 각 프레임에 있는 카메라 렌즈 모델에 대 한 설명을 포함 하는 또한 합니다 [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 속성입니다. 함께 이러한 변환을 정의할 각 픽셀에 대 한 광선을 그린 photons 픽셀 생성 되는 경로 나타내는 3D 공간에서. 이러한 표면이 다른 좌표 시스템을 프레임의 좌표계에서 변환의 확보 하 여 앱의 다른 콘텐츠에 관련 될 수 있습니다 (예:는 [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference)). 요약 하면, 각 이미지 프레임 다음을 제공 합니다.
 * 픽셀 (형식의 데이터를 RGB/NV12/JPEG/등)
-* 3 가지 메타 데이터 (으로 저장 [IMFAttributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx)) 각 프레임 확인 하는 "찾을 수 있는":
-
-|  특성 이름  |  형식  |  GUID  |  설명 | 
-|----------|----------|----------|----------|
-|  MFSampleExtension_Spatial_CameraCoordinateSystem  |  IUnknown ([SpatialCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.aspx))  |  {9D13C82F-2199-4E67-91CD-D1A4181F2534}  |  저장 된 [좌표계](coordinate-systems-in-directx.md) 캡처된 프레임의 | 
-|  MFSampleExtension_Spatial_CameraViewTransform  |  Blob ([Matrix4x4](https://msdn.microsoft.com/library/windows/apps/windows.foundation.numerics.matrix4x4.aspx))  |  {4E251FA4-830F-4770-859A-4B8D99AA809B}  |  카메라의 외장 변환 좌표 시스템에 저장 | 
-|  MFSampleExtension_Spatial_CameraProjectionTransform  |  Blob ([Matrix4x4](https://msdn.microsoft.com/library/windows/apps/windows.foundation.numerics.matrix4x4.aspx))  |  {47F9FCB5-2A02-4F26-A477-792FDF95886A}  |  카메라의 프로젝션 변환을 저장합니다 | 
-
-프로젝션 변환을를 + 1 X 및 Y 축에-1에서 확장 되는 이미지 평면 매핑된 렌즈의 내장 함수 속성을 (도법의 중심 초점 기울이기)을 나타냅니다.
-
-```
-Matrix4x4 format          Terms
-   m11 m12 m13 m14      fx    0   0   0
-   m21 m22 m23 m24     skew  fy   0   0
-   m31 m32 m33 m34      cx   cy   A  -1
-   m41 m42 m43 m44       0    0   B   0
-```
-
-다른 응용 프로그램에는 다른 좌표 시스템 해야 합니다. 단일 응용 프로그램에 대 한 카메라 픽셀을 찾으려고 흐름의 개요는 다음과 같습니다.
-
-![카메라 좌표계에 적용할 변환](images/pvcameratransform5-500px.png)
+* A [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) 캡처의 위치에서
+* A [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 카메라의 렌즈 모드를 포함 하는 클래스
 
 ### <a name="camera-to-application-specified-coordinate-system"></a>응용 프로그램에서 지정한 좌표계에 카메라
 
-'CameraView' 및 'CameraCoordinateSystem'에서 응용 프로그램/세계 좌표 시스템을 이동 하려면 다음이 필요 합니다.
+'CameraIntrinsics' 및 'CameraCoordinateSystem'에서 응용 프로그램/세계 좌표 시스템을 이동 하려면 다음이 필요 합니다.
 
 [Unity에서 찾을 수 있는 카메라](locatable-camera-in-unity.md): (따라서 CameraCoordinateSystem 변환에 걱정할 필요가 없습니다)에 자동으로 CameraToWorldMatrix PhotoCaptureFrame 클래스에 의해 제공 됩니다.
 
 [DirectX에서 찾을 수 있는 카메라](locatable-camera-in-directx.md): 카메라의 좌표계 및 사용자 고유의 응용 프로그램 coordinate system(s) 간의 변환에 대 한 쿼리를 매우 간단한 방법을 보여 줍니다.
 
-### <a name="application-specified-coordinate-system-to-pixel-coordinates"></a>응용 프로그램에서 지정한 좌표계를 픽셀 좌표
-
-찾거나 카메라 이미지에 특정 된 3d 위치에 그리기 하려고 한다고 가정해 보겠습니다.
-
-뷰 및 프로젝션 변환을 모두 4x4 행렬을 하는 동안 약간 다르게 사용 해야 합니다. 투영을 수행한 후 즉 하나는 'w로 정규화 '할 프로젝션에이 추가 단계가 시뮬레이션 하는 방법을 여러 다른 3d 위치 (즉, 특정 광선을 따라 모든 항목에 표시 됩니다 같은 픽셀) 화면에서 동일한 2d 위치로 중단 될 수 있습니다. 셰이더 코드에서 따라서 핵심 사항:
-
-```
-// Usual 3d math:
- float4x4 WorldToCamera = inverse( CameraToWorld );
- float4 CameraSpacePos = mul( WorldToCamera, float4( WorldSpacePos.xyz, 1 ) ); // use 1 as the W component
- // Projection math:
- float4 ImagePosUnnormalized = mul( CameraProjection, float4( CameraSpacePos.xyz, 1 ) ); // use 1 as the W component
- float2 ImagePosProjected = ImagePosUnnormalized.xy / ImagePosUnnormalized.w; // normalize by W, gives -1 to 1 space
- float2 ImagePosZeroToOne = ( ImagePosProjected * 0.5 ) + float2( 0.5, 0.5 ); // good for GPU textures
- int2 PixelPos = int2( ImagePosZeroToOne.x * ImageWidth, ( 1 - ImagePosZeroToOne.y ) * ImageHeight ); // good for CPU textures
-```
-
-### <a name="pixel-to-application-specified-coordinate-system"></a>응용 프로그램에서 지정한 좌표계를 픽셀
-
-픽셀에서 세계 좌표 이동은 조금 더 까다롭습니다.
-
-```
-float2 ImagePosZeroToOne = float2( PixelPos.x / ImageWidth, 1.0 - (PixelPos.y / ImageHeight ) );
- float2 ImagePosProjected = ( ( ImagePosZeroToOne * 2.0 ) - float2(1,1) ); // -1 to 1 space
- float3 CameraSpacePos = UnProjectVector( Projection, float3( ImagePosProjected, 1) );
- float3 WorldSpaceRayPoint1 = mul( CameraToWorld, float4(0,0,0,1) ); // camera location in world space
- float3 WorldSpaceRayPoint2 = mul( CameraToWorld, CameraSpacePos ); // ray point in world space
-```
-
-여기서 UnProject으로 정의할 수 있습니다.
-
-```
-public static Vector3 UnProjectVector(Matrix4x4 proj, Vector3 to)
- {
-   Vector3 from = new Vector3(0, 0, 0);
-   var axsX = proj.GetRow(0);
-   var axsY = proj.GetRow(1);
-   var axsZ = proj.GetRow(2);
-   from.z = to.z / axsZ.z;
-   from.y = (to.y - (from.z * axsY.z)) / axsY.y;
-   from.x = (to.x - (from.z * axsX.z)) / axsX.x;
-   return from;
- }
-```
-
-지점의 실제 세계 위치를 찾으려면 다음이 필요 합니다: 두 세계 표면이 및 교차점을 찾거나 요소의 크기는 잘 알려져 있습니다.
-
 ### <a name="distortion-error"></a>왜곡 오류
 
-HoloLens에서 비디오 및 여전히 이미지 스트림을 시스템의 이미지 처리 파이프라인의 왜곡 전에 아닌 프레임 (미리 보기 스트림은 원래 왜곡 된 프레임을 포함 하는 데 사용) 응용 프로그램에 제공 됩니다. 투영 행렬만 사용할 수 있으므로 응용 프로그램 이미지 프레임 나타내는 완벽 한 pinhole 카메라 가정해 야으로 가득 하겠지만는 undistortion 이미지 프로세서에서 작동 하는 단 수 여전히 오류가 최대 10 개의 픽셀 투영 행렬을 사용 하는 경우 프레임 메타 데이터입니다. 여러 사용 사례, 예를 들어, 실제 포스터/표식, 홀로그램 맞추려는 및 표시 하는 경우이 오류는 중요 하지는 < 10px 오프셋 (약 홀로그램 2 미터 떨어진 위치에 대 한 11 mm)이이 왜곡 오류가 발생할 수 있습니다.
+HoloLens에서 비디오 및 여전히 이미지 스트림을 시스템의 이미지 처리 파이프라인의 왜곡 전에 아닌 프레임 (미리 보기 스트림은 원래 왜곡 된 프레임을 포함 하는 데 사용) 응용 프로그램에 제공 됩니다. CameraIntrinsics만는 가능 하기 때문에 응용 프로그램 이미지 프레임 나타내는 완벽 한 pinhole 카메라 가정해 야를 undistortion 이미지 프로세서에서 작동 하는 단 수 여전히에서 그대로 오류가 최대 10 개의 픽셀 HoloLens (초기) CameraIntrinsics 프레임 메타 데이터에 사용할 때 여러 사용 사례, 예를 들어, 실제 포스터/표식, 홀로그램 맞추려는 및 표시 하는 경우이 오류는 중요 하지는 < 10px 오프셋 (약 홀로그램 2 미터 떨어진 위치에 대 한 11 mm)이이 왜곡 오류가 발생할 수 있습니다. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>찾을 수 있는 카메라 사용 시나리오
 
 ### <a name="show-a-photo-or-video-in-the-world-where-it-was-captured"></a>캡처된 전 세계에서 사진 또는 비디오 표시
 
 장치 카메라 프레임 이미지를 만든 경우 장치가 정확 하 게 위치를 표시할 수 있는 "카메라를 World" transform을 함께 제공 됩니다. 예를 들어 작은 holographic 아이콘 (CameraToWorld.MultiplyPoint(Vector3.zero)) 및도 그리기는 카메라 직면 하 고 있던 (CameraToWorld.MultiplyVector(Vector3.forward)) 방향의 작은 화살표는이 위치에 배치할 수 있습니다.
-
-### <a name="painting-the-world-using-a-camera-shader"></a>카메라 셰이더를 사용 하 여 전 세계 그리기
-
-이 섹션에서는 만듭니다 재질 '셰이더' 전 세계 장치 카메라의 보기에서 나타난 해당 위치에 따라 해당 색입니다. 모든 꼭 짓 점에 카메라에 상대적인 위치를 파악 하 고 다음 픽셀 마다 '프로젝션 매트릭스' 그림에 활용 됩니다 효과적으로 수행할 아웃 텍셀 연관 된 이미지입니다. 마지막으로, 및 필요에 따라에서는에서는 페이드 아웃 보일 dream 형태의 메모리도 이미지의 모퉁이.
-
-```
-// In the vertex shader:
- float4 worldSpace = mul( ObjectToWorld, float4( vertexPos.xyz, 1));
- float4 cameraSpace = mul( CameraWorldToLocal, float4(worldSpace.xyz, 1));
-
- // In the pixel shader:
- float4 unprojectedTex = mul( CameraProjection, float4( cameraSpace .xyz, 1));
- float2 projectedTex = (unprojectedTex.xy / unprojectedTex.w);
- float2 unitTexcoord = ((projectedTex * 0.5) + float4(0.5, 0.5, 0, 0));
- float4 cameraTextureColor = tex2D(_CameraTex, unitTexcoord);
- // Fade out edges for better look:
- float pctInView = saturate((1.0 - length(projectedTex.xy)) * 3.0);
- float4 finalColor = float4( cameraTextureColor.rgb, pctInView );
-```
 
 ### <a name="tag--pattern--poster--object-tracking"></a>태그 / 패턴 / 포스터 / 추적 개체
 
@@ -206,7 +109,7 @@ HoloLens에서 비디오 및 여전히 이미지 스트림을 시스템의 이�
 
 일부 이미지 표식 시스템만 단일 픽셀 위치를 제공 (다른 모든 변환을 제공이 섹션에서는 필요 하지 않을 경우), 가능한 위치는 빛 동등 합니다. 단일 3d 위치에 연결할 수 있습니다 다음 여러 광선을 활용 하 고 대략적인 교차점에서 최종 결과 찾습니다. 이렇게 하려면를 해야 합니다.
 1. 카메라 이미지가 여러 개 수집 이동 하는 루프를 가져오기
-2. 찾을 합니다 [관련 된 기능 지점](#pixel-to-application-specified-coordinate-system), 및가 전 세계 광선
+2. 관련 된 기능이 지점과 해당 world 광선 찾기
 3. 여러 world 광선을 사용 하 여 각 기능을 사전에 있는 경우 해당 광선의 교집합에 대 한 해결 하기 위해 다음 코드를 사용할 수 있습니다.
 
 ```
@@ -246,40 +149,6 @@ public static Vector3 ClosestPointBetweenRays(
  trans.position += realTags[0].EstimatedWorldPos - modelledTags[0].transform.position;
 ```
 
-### <a name="render-holograms-from-the-cameras-position"></a>카메라의 위치에서 홀로그램 렌더링
-
-참고: 나만의 사이트 생성 하려는 경우 [현실 캡처 (MRC) 혼합](mixed-reality-capture.md)카메라 스트림 사용 하 여 홀로그램을 혼합 하는, 사용할 수는 [MRC 효과](mixed-reality-capture-for-developers.md) showHolograms 속성을 사용 하도록 설정 하거나 [ Unity에서 찾을 수 있는 카메라](locatable-camera-in-unity.md)합니다.
-
-RGB 카메라 stream에서 직접 특수 렌더링을 수행 하려는 경우에 사용자 지정 홀로그램 기록/라이브 미리 보기를 제공 하기 위해 공간에서 카메라의 위치에서 홀로그램 비디오 피드를 사용 하 여 동기화을 렌더링할 수 있습니다.
-
-Skype,이 작업을 수행 하 HoloLens 사용자가 표시 되는 원격 클라이언트를 표시 하 고 동일한 홀로그램 상호 작용할 수 있도록 합니다. Skype 서비스를 통해 각 비디오 프레임을 전송 하기 전에 각 프레임의 해당 하는 카메라 데이터를 가져오는 것입니다. 다음 비디오 프레임을 사용 하 여 카메라의 외부 및 내부 메타 데이터를 패키지 하 고 Skype 서비스에 보내야 합니다.
-
-수신 측에서 Unity를 사용 하 여에서는 했습니다 이미 동기화 모두 동일한 좌표계를 사용 하 여 HoloLens 사용자 공간에서 제공 합니다. 이렇게 하면 카메라의 외부 메타 데이터를 사용 하 여 Unity 카메라 HoloLens 사용자는 비디오 프레임을 캡처한 경우 준비 된 하 여 홀로그램 나머지) (기준 전 세계의 정확한 위치에 배치 하 고 카메라 내장 함수 정보를 사용 하 여 동일한 뷰를 확인 합니다.
-
-적절 하 게 설정 하는 카메라, 있으면 Skype, HoloLens 표시 Graphics.Blit를 사용 하 여의 혼합된 현실 뷰 만들기에서 접수 프레임으로 카메라 게 어떤 홀로그램 결합 합니다.
-
-```cs
-private void OnFrameReceived(Texture frameTexture, Vector3 cameraPosition, Quaternion cameraRotation, Matrix4x4 cameraProjectionMatrix)
-{
-    //set material that will be blitted onto the RenderTexture
-    this.compositeMaterial.SetTexture(CompositeRenderer.CameraTextureMaterialProperty, frameTexture);
-    //set the camera to be that of the HoloLens's device camera
-    this.Camera.transform.position = cameraPosition;
-    this.Camera.transform.rotation = cameraRotation;
-    this.Camera.projectionMatrix = cameraProjectionMatrix;
-    //trigger the Graphics's Blit now that the frame and camera are set up
-    this.TextureReady = false;
-}
-private void OnRenderImage(RenderTexture source, RenderTexture destination)
-{
-    if (!this.TextureReady)
-    {
-        Graphics.Blit(source, destination, this.compositeMaterial);
-        this.TextureReady = true;
-    }
-}
-```
-
 ### <a name="track-or-identify-tagged-stationary-or-moving-real-world-objectsfaces-using-leds-or-other-recognizer-libraries"></a>추적 또는 식별 태그가 지정 된 고정 또는 이동 실제 개체/얼굴 Led 또는 다른 인식기 라이브러리를 사용 하 여
 
 예를 들면 다음과 같습니다.
@@ -293,3 +162,4 @@ private void OnRenderImage(RenderTexture source, RenderTexture destination)
 * [혼합 현실 캡처](mixed-reality-capture.md)
 * [개발자를 위한 혼합 현실 캡처](mixed-reality-capture-for-developers.md)
 * [미디어 캡처 소개](https://msdn.microsoft.com/library/windows/apps/mt243896.aspx)
+* [Holographic 얼굴 추적 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
