@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 2D 앱을 UWP 앱 플랫, HoloLens, 몰입 형 헤드셋을 앱 모델을 다시 앱 바, 단추, dpi, 해상도, 크기 조정
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602185"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414219"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>혼합된 현실에 대 한 2D UWP 앱 업데이트
 
@@ -179,7 +179,7 @@ HoloLens을 UWP 앱을 제공 하는 경우 입력에 대 한 이해 해야 높�
 * [앱 모델](app-model.md)
 * [응시](gaze.md)
 * [제스처](gestures.md)
-* [컨트롤러 동작](motion-controllers.md)
-* [음성](voice-input.md)
-* [Microsoft Store 앱 제출](submitting-an-app-to-the-microsoft-store.md)
+* [모션 컨트롤러](motion-controllers.md)
+* [음성 입력 ](voice-input.md)
+* [Microsoft Store에 앱 제출](submitting-an-app-to-the-microsoft-store.md)
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)

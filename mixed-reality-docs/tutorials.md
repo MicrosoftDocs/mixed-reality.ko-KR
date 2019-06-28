@@ -7,12 +7,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit mixedrealitytoolkit, mixedrealitytoolkit unity, academy, 자습서
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874055"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415405"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
@@ -253,7 +253,7 @@ MR Learning Modules는 데 사용할 수 있도록 개발자 기술 및 혼합�
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Mixed Reality 및 Azure Services 자습서
 
-독립 실행형이 자습서는 Unity 프로젝트에 다른 Azure 서비스를 구현 하는 방법을 배우는 데 적합 합니다.  이 자습서를 기반으로 하거나 HoloLens (첫 번째 Gen) 하거나는 몰입 형 헤드셋 이지만 서비스를 사용 하 여 단원을 대부분의 장치에 전송할 수 있어야 합니다.
+독립 실행형이 자습서는 Unity 프로젝트에 다른 Azure 서비스를 구현 하는 방법을 배우는 데 적합 합니다.  이 자습서를 기반으로 하거나 HoloLens (첫 번째 gen) 하거나는 몰입 형 헤드셋 이지만 서비스를 사용 하 여 단원을 대부분의 장치에 전송할 수 있어야 합니다.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>

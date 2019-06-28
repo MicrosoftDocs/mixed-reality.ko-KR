@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: unity, 설정, 혼합된 현실
-ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148663"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415450"
 ---
 # <a name="recommended-settings-for-unity"></a>Unity에 대 한 권장된 설정
 
@@ -160,5 +160,5 @@ Holographic 앱에 대 한 자주 사용 되는 Api를 사용 하도록 설정 �
 
 ## <a name="see-also"></a>참조
 * [Unity 개발 개요](unity-development-overview.md)
-* [혼합 현실 용 Understaing 성능](understanding-performance-for-mixed-reality.md)
+* [혼합 현실의 성능 이해](understanding-performance-for-mixed-reality.md)
 * [Unity의 권장 성능](performance-recommendations-for-unity.md)

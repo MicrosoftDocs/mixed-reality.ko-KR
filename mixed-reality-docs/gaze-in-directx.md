@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: 응시, 헤드 게이즈, 추적 하는 head, 시선 추적, directx, 입력, 홀로그램
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453737"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414416"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>헤드 및 눈 gaze DirectX의 입력
 
@@ -149,7 +149,7 @@ if (pointerPose)
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋 입력된 모델](gaze-and-commit.md)
-* [시선 추적 HoloLens 2](eye-tracking.md)
+* [HoloLens 2에 응시](eye-tracking.md)
 * [DirectX의 좌표계](coordinate-systems-in-directx.md)
 * [DirectX의 음성 입력](voice-input-in-directx.md)
 * [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)

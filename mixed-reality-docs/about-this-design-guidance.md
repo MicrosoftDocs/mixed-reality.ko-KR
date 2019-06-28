@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality를 디자인, 소개, 지침
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326121"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414157"
 ---
 # <a name="about-this-design-guidance"></a>이 디자인 지침에 대 한
 
@@ -33,7 +33,7 @@ ms.locfileid: "67326121"
 * **[디자인을 사용 하 여 시작](mixed-reality.md)**  -는 높은 수준의 생각 읽고 따릅니다 원칙을 이해 합니다.
 * **[Instinctual 상호 작용](interaction-fundamentals.md)**  -입력, 명령, 탐색 및 앱을 디자인 하기 위한 기타 상호 작용 기본 사항에 알아봅니다.
 * **[스타일](typography.md)**  -색, 입력 체계, 및 동작을 사용 하 여 매력적인 응용 프로그램을 확인 합니다.
-* **[앱 패턴](types-of-mixed-reality-apps.md)**  -알아봅니다 어떻게 앱 ications 몰입도 및 실제 환경에서 시나리오를 걸쳐 있을 수 있습니다.
+* **[앱 패턴](types-of-mixed-reality-apps.md)**  -응용 프로그램 몰입도 및 실제 환경에서 시나리오에 걸쳐 수 하는 방법에 대해 알아봅니다.
 * **[컨트롤](interactable-object.md)**  -빌딩 블록으로 고유한 응용 프로그램 환경을 만들 컨트롤 및 패턴을 사용 합니다.
 * **[샘플 앱](design.md#sample-apps)**  -설계 및 팀에서 만든 샘플에서 뛰어난 환경을 구축 합니다.
 * **[디자인 도구와 리소스](design.md#design-tools)**  -디자인 템플릿 및 도구를 사용 하 여 프로젝트를 빠르게 시작 합니다.

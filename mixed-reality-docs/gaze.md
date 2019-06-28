@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 실제로, 게이즈 상호 작용 mixed, 디자인
-ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829742"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414376"
 ---
 # <a name="gaze"></a>응시
 
@@ -37,9 +37,9 @@ HoloLens에 (첫 번째 gen) 해당 사용자의 헤드 게이즈를에서 타�
     </colgroup>
     <tr>
         <td><strong>기능</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 범용)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입 형 헤드셋</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
         <td>헤드 응시</td>
@@ -84,5 +84,5 @@ HoloLens에 (첫 번째 gen) 해당 사용자의 헤드 게이즈를에서 타�
 * [MR 입력 210: 헤드 응시](holograms-210.md)
 * [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
 * [Unity에서 Head 응시](gaze-in-unity.md)
-* [시선 추적 HoloLens 2](eye-tracking.md)
+* [HoloLens 2에 응시](eye-tracking.md)
 * [혼합 현실 도구 키트를 사용 하 여 Unity의 응시](https://aka.ms/mrtk-eyes)

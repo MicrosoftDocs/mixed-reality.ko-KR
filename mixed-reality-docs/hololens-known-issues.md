@@ -3,15 +3,15 @@ title: HoloLens 알려진 문제
 description: HoloLens 개발자 영향을 줄 수 있는 알려진 문제 목록입니다.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 04/1/2019
+ms.date: 06/14/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: fd70171a908dab016b375e2207436dc11d625af9
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148701"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414347"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
@@ -54,7 +54,7 @@ Microsoft Store 및 HoloLens에 앱을 시작 하려고 할 때 문제가 발생
 
 1.  "설정" 앱으로 이동 하 고 "업데이트 및 보안"을 엽니다
 2.  "업데이트 확인"을 클릭 합니다.
-3.  17763\.380 업데이트를 사용할 수 있는 경우 업데이트 하세요 앱 중단 버그 픽스를 받으려면이 빌드에
+3.  17763.380 업데이트를 사용할 수 있는 경우 업데이트 하세요 앱 중단 버그 픽스를 받으려면이 빌드에
 4.  운영 체제의이 버전으로 업데이트 되 면 앱은 예상 대로 작동 해야 합니다.
 
 또한 모든 HoloLens OS 릴리스를 사용 하 여 마찬가지로에서는 게시 된 FFU 이미지는 Microsoft 다운로드 센터 https://aka.ms/hololensdownload/10.0.17763.380 합니다. 

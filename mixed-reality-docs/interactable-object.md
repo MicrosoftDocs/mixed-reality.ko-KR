@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 혼합된 현실 "," 컨트롤 "," 상호 작용 "," ui "," ux
-ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148762"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415367"
 ---
 # <a name="interactable-object"></a>상호 작용할 수 없는 개체
 
@@ -85,12 +85,12 @@ HoloLens 2에서는 깊이 perception에서 사용자의 신뢰도 개선 하는
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="음성 명령에 대 한 도구 설명" width="350"><br/>*음성 명령에 대 한 도구 설명*
 
 ## <a name="sizing"></a>크기 조정
-쉽게 상호 작용할 수 없는 모든 개체 수 있는지 확인 하기 위해 사용자가 연결 된 것이 좋습니다 상호 작용할 수 없는 충족 최소 (종종 visual 각도도 단위로 측정 됨)에 따라 크기를 사용자에 게 있어 거리를 확인 합니다. Visual 각도 (도) 사용자와 개체 간의 거리 기반으로 하며 대상의 실제 크기는 거리로 사용자 변경 내용에서 변경 될 수 있지만 상수를 유지 합니다. 고 수준에서 거리를 기준으로 개체의 필요한 실제 크기를 확인 하려면 visual 각도와 같은 계산기를 사용해 보세요. http://elvers.us/perception/visualAngle/
+되었는지 확인 하려면 사용자가 상호 작용할 수 없는 개체를 모두 쉽게 다룰 수 있는지 확인 하는 것이 좋습니다 상호 작용할 수 없는 충족 최소 크기 (종종 visual 원호의 각도로 측정 visual 각도) 거리를 기준으로 사용자의 배치 됩니다. Visual 각도 사용자의 눈 개체 사이의 거리를 기반으로 및 대상의 실제 크기는 거리로 사용자 변경 내용에서 변경 될 수 있지만 상수를 유지 합니다. 사용자의 거리를 기준으로 개체의 필요한 실제 크기를 확인 하려면 사용해 visual 각도 계산기와 같은 [이와](http://elvers.us/perception/visualAngle/)합니다.
 
-다음은 상호 작용할 수 없는 콘텐츠의 최소 크기에 대 한 권장 사항
+다음은 상호 작용할 수 없는 콘텐츠의 최소 크기에 대 한 권장 사항입니다.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>직접 직접 상호 작용에 대 한 대상 크기
-| 거리 | 각도 | 크기 |
+| 거리 | 각도 | Size |
 |---------|---------|---------|
 | 45cm  | 2 ° 최소 크기 | 1.6 x 1.6 cm |
 
@@ -108,7 +108,7 @@ HoloLens 2에서는 깊이 perception에서 사용자의 신뢰도 개선 하는
 
 
 ### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>대상으로 직접 광선의 크기 또는 상호 작용 gaze
-| 거리 | 각도 | 크기 |
+| 거리 | 각도 | Size |
 |---------|---------|---------|
 | 2m  | 1도 이상 | 3.5 x 3.5 cm |
 

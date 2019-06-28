@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: 핸 즈 프리, gaze, 대상, 상호 작용 디자인 gaze 혼합 현실
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326148"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414390"
 ---
 # <a name="hands-free"></a>핸즈프리
 
@@ -39,10 +39,10 @@ ms.locfileid: "67326148"
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[헤드 게이즈 및 유지](gaze-and-dwell.md)
 
-핸 즈 프리 경우도 음성을 사용 하 여 없는 이상적인 또는 수도 있습니다. 큰 팩터리 환경, 개인 정보 보호 또는 소셜 표준 모든 제약 조건을 수 있습니다. 헤드 gaze + 자세히 다루지는 모델 가리키도록, 느린을 하는 동안 해당 헤드 벡터를 사용 하 여 앱을 이동할 수 있도록 하거나 생각 단추에 잠기거나 그럴를 활성화 합니다. 특정 시간, 일반적으로 두 번째 또는 따라서 약 1 시간 후 합니다. 
+핸 즈 프리 경우도 음성을 사용 하 여 없는 이상적인 또는 수도 있습니다. 큰 팩터리 환경, 개인 정보 보호 또는 소셜 표준 모든 제약 조건을 수 있습니다. 헤드 gaze + 자세히 다루지는 모델 가리키도록, 느린을 하는 동안 해당 헤드 벡터를 사용 하 여 앱을 이동할 수 있도록 하거나 생각 단추에 잠기거나 그럴를 활성화 합니다. 특정 시간 후 시간, 일반적으로 약 1 초 정도입니다. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>실습 freey 내부 및 외부로 전환
+## <a name="transitioning-in-and-out-of-hands-free"></a>핸 즈 프리 내부 및 외부로 전환
 
 이러한 시나리오에 대 한 응용 프로그램에 종단 간 사용자와의 모든 전환 편의를 운영 하는 절대 요구 사항을 없도록 범위 수 홀로그램 명령 및 탐색에 대 한 상호 작용 하지는 손이 해제 시간입니다. 
 
@@ -54,7 +54,7 @@ ms.locfileid: "67326148"
 예를 들어 사용자 공장 현장에서 자신의 Hololens에 참조를 비디오를 시청 고 작업을 시작 하는 렌치 선택 하기로 결정 하는 경우 자신이 가능성이 것에서 작업을 시작 handsfree는 단추를 눌러 렌치 작성 하지 않고도 합니다. 예를 들어는 "선택" 또는 자신이 호출 음성 명령 사용 하 여 음성 세션 지속을 시작 하는 이미 표시 되는 UI에 자세히 설명 하지을 수 여야 합니다.
 
 사용자 수가 있어야 합니다. 
-* Handsfree 하는 동안 handsfree 전환
+* 핸 즈 프리 하지만 핸 즈 프리로 전환
 * 손으로 바늘으로 전환
 * 컨트롤러를 사용 하는 컨트롤러 전환 
 
@@ -96,5 +96,5 @@ ms.locfileid: "67326148"
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [직접 조작](direct-manipulation.md)
-* [지점 및 커밋](point-and-commit.md)
+* [수동으로 직접 조작](direct-manipulation.md)
+* [수동으로 가리키고 커밋](point-and-commit.md)
