@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813749"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415392"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality 설명서
 
@@ -72,7 +72,7 @@ ms.locfileid: "66813749"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">배포</h3>
-                                                  <p>다른 사용자에게 앱을 제공할 수 있도록 준비하고 3D 시작 관리자를 만드는 방안을 고려해 보세요.</p>
+                                                  <p>다른 사용자에게 애플리케이션을 제공할 수 있도록 준비하고 3D 시작 관리자를 만드는 방안을 고려해 보세요.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -96,7 +96,7 @@ ms.locfileid: "66813749"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Azure Spatial Anchors</h3>
-                                                  <p>Spatial Anchors는 시간이 지나도 디바이스에서 위치를 유지하는 개체를 사용하여 Mixed Reality 환경을 만들 수 있는 플랫폼 간 개발자 서비스입니다.</p>
+                                                  <p>Spatial Anchors는 시간이 지나도 디바이스에서 위치를 유지하는 개체를 사용하여 혼합 현실 경험을 만들 수 있는 플랫폼 간 개발자 서비스입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,11 +147,11 @@ ms.locfileid: "66813749"
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware)는 즉각적으로 앱에 가치를 더하는 업계 최고 수준의 솔루션을 통해 현존하는 가장 편안한 몰입형 혼합 현실 환경을 제공하며, 모든 솔루션은 Microsoft 클라우드 및 AI 서비스의 안정성, 보안 및 확장성의 지원을 받습니다. [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers)은 HoloLens 2를 Unity 소프트웨어 평가판과 클라우드 서비스에 대한 Azure 크레딧을 결합한 제품을 통해 혼합 현실 계획을 빠르게 시작할 수 있도록 도와줍니다.
+[HoloLens 2](https://www.microsoft.com/hololens/hardware)는 즉각적으로 가치를 더하는 업계 최고 수준의 솔루션을 통해 가장 편안한 몰입형 혼합 현실 경험을 제공합니다. 모든 솔루션은 Microsoft 클라우드 및 AI 서비스의 안정성, 보안 및 확장성의 지원을 받습니다. [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers)은 HoloLens 2를 Unity 소프트웨어 평가판과 클라우드 서비스에 대한 Azure 크레딧을 결합한 제품을 통해 혼합 현실 계획을 빠르게 시작할 수 있도록 도와줍니다.
 
 <h2>뉴스 및 정보</h2>
 
-<h3>2019년 4월</h3>
+<h3>2019년 6월</h3>
 
 약속대로 더 많은 혼합 현실 기능을 여러분과 공유하게 되었습니다! 여러분의 피드백을 기다리고 있으며 여러분이 보고 싶은 토픽, 이야기를 듣고 싶은 사람, 여러분에게 필요한 자습서 또는 방법에 대한 [대화에 참여](https://holodevelopersslack.azurewebsites.net/)에 참여하세요. [Twitter](https://twitter.com/MxdRealityDev)를 통해 연락을 취하고, [개발자 프로그램에 가입](https://aka.ms/iwantmr)하여 새 문서, 도구, 이벤트 등을 직접 업데이트할 수도 있습니다. 기대해주세요. 보다 더 추가될 예정입니다!
 
@@ -162,7 +162,7 @@ ms.locfileid: "66813749"
 <tr>
 <td><b>포팅 가이드</b> <br>1. HTK(HoloToolKit)/MRTK(Mixed Reality Toolkit)를 MRTK Version 2로
 <br>2. HoloLens(1세대)를 HoloLens 2로(x86에서 ARM으로, 상호 작용 및 디자인 권장 사항)
-</td></td><td>2019년 3월-5월</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>HoloLens 2를 위한 기존 앱 준비</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit에서 MRTK API로 업그레이드하기</a></td>
+</td></td><td>2019년 3월-5월</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>HoloLens 2를 위한 기존 애플리케이션 준비</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit에서 MRTK API로 업그레이드하기</a></td>
 </tr>
 <tr>
 <td>월별 오픈 소스 개발자 모듈(자습서/샘플 앱)</td><td>2019년 3월-6월</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>MR 학습 기본 모듈</a></td>
@@ -183,4 +183,4 @@ ms.locfileid: "66813749"
 
 
 >[!IMPORTANT]
->이 사이트의 모든 Mixed Reality 개발 자료는 참조 목적으로만 제공됩니다. 앱, 앱 사용, 앱 사용이 최종 사용자에게 미치는 영향은 전적으로 앱 개발자인 여러분의 책임이며 여기에는 앱이 최종 사용자에게 불편, 부상 또는 기타 형태의 피해를 주는 일이 없도록 주의하고 적절한 경고와 법적 고지를 제공하는 것이 포함됩니다. 앱을 개발하고 게시하는 과정에서 항상 적절한 단계를 수행하여 앱을 안전하게 보호하고 [ Microsoft와 맺은 앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 모든 의무를 이행해야 합니다. 
+>이 사이트의 모든 혼합 현실 개발 자료는 참조 목적으로만 제공됩니다. 애플리케이션, 애플리케이션 사용, 애플리케이션 사용이 최종 사용자에게 미치는 영향은 전적으로 애플리케이션 개발자인 여러분의 책임이며 여기에는 앱이 최종 사용자에게 불편, 부상 또는 기타 형태의 피해를 주는 일이 없도록 주의하고 적절한 경고와 법적 고지를 제공하는 것이 포함됩니다. 애플리케이션을 개발하고 게시하는 과정에서 항상 적절한 단계를 수행하여 애플리케이션을 안전하게 보호하고 [Microsoft와 맺은 앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 모든 의무를 이행해야 합니다. 
