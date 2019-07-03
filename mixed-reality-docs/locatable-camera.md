@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 카메라, hololens, 색 카메라, 연결, hololens 2, 컴퓨터 비전, fiducial cv 앞, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415259"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523319"
 ---
 # <a name="locatable-camera"></a>찾을 수 있는 카메라
 
@@ -43,6 +43,7 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
   | 프로필                                         | 비디오     | Preview   | 여전히     | 프레임 속도 | 가로 뷰 필드 (H-FOV) | 제안 된 사용                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | 레거시, 0 BalancedVideoAndPhoto 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
+  | 레거시, 0 BalancedVideoAndPhoto 100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
   | 레거시, 0 BalancedVideoAndPhoto 100             |           |           | 3904x2196 |             | 64.69                            | 고품질 사진 캡처                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | 긴 기간 시나리오                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | 긴 기간 시나리오                     |

@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415273"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523240"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>HoloLens 2 Azure 공간 앵커를 사용 하 여 시작
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커를 사용 하 여 시작
 
 HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전에 해야 하는 모든의 합니다 [필수 구성 요소](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 완료 됩니다. 첫 번째 완료 하지 않은 경우 [기본 모듈입니다.](mrlearning-base.md) 아직 것이 좋습니다 해당 모듈을 먼저 완료 합니다. 새 Unity 프로젝트에서 시작 하는 경우의 새 프로젝트 만들기 단계를 수행 합니다 [기본 모듈입니다.](mrlearning-base.md)합니다. 
 
@@ -40,7 +40,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 > 참고: Azure 공간 앵커, MR 자료 모듈 자산 팩에 대 한 지침이 6 단계 및 3-특정 지침은 4 단계 혼합 현실 도구 키트 (MRKT)에서 가져오는 방법에 대 한 지침이 5 단계를 참조 하세요.
 
-1. 프로젝트에서 새 장면을 만듭니다. 장면 폴더를 마우스 오른쪽 단추로 클릭 하 고 "만들기", 다음 장면을 클릭 합니다. 새 장면을 ASALearningmodule 이름을 지정 합니다.
+1. 프로젝트에서 새 장면을 만듭니다. 장면 폴더를 마우스 오른쪽 단추로 클릭 하 고 만들기, 다음 장면을 클릭 합니다. 새 장면을 ASALearningmodule 이름을 지정 합니다.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> 참고: 포함 된 팝업이 표시 됩니다, 그리고 "혼합된 현실 도구 키트에 대 한 파일을 선택 해야 합니다." 확인을 클릭 하면 4 단계를 제공 합니다.
+> 참고: 라는, 혼합 현실 도구 키트에 대 한 파일을 선택 해야 한다는 팝업이 표시 됩니다. 확인을 클릭 하면 4 단계를 제공 합니다.
 
 4. 선택 된 MRTK에 대 한 파일을 선택 DefaultMixedRealityToolkitConfigurationProfile 합니다.
 
@@ -153,7 +153,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 7. 디바이스로 빌드하기 전에 디바이스가 개발자 모드인지 확인합니다. 이번에 처음으로 HoloLens 2에 배포하는 경우리면 Visual Studio에서 pin 사용하여 HoloLens 2에 연결하도록 요구할 수 있습니다. 따릅니다 [이러한 지침](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) 개발자 모드를 사용 하도록 설정 하거나 Visual Studio를 쌍으로 연결 해야 하는 경우.
 
-8. 릴리스 구성 및 "RM" 아키텍처를 선택 하 여 HoloLens 2에 구성에 대 한 Visual Studio를 구성 합니다.
+8. 릴리스 구성 뿐만 아니라 RM 아키텍처를 선택 하 여 HoloLens 2에 구성에 대 한 Visual Studio를 구성 합니다.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. 마지막 단계는 디버그를 선택 하 여 장치를 빌드할 수 > 디버깅 하지 않고 시작 합니다. 디버깅 하지 않고 시작을 선택 하면 응용 프로그램을 Visual Studio에 표시 되는 성공적인 빌드 다음 디버깅 정보에 따라 장치에 즉시 시작 됩니다. 따라서 HoloLens 2에서 애플리케이션이 실행되는 동안 USB 케이블 연결을 끊어도 애플리케이션이 중지되지 않습니다. 빌드를 선택할 수 있습니다 > 응용 프로그램을 자동으로 시작 하지 않고 장치에 배포할 솔루션을 배포 합니다.
@@ -176,9 +176,9 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
     
     7. Azure 공간 앵커 세션을 시작 합니다.
     
-    8. Azure 공간 aachors를 찾습니다. 
+    8. Azure 공간 앵커를 찾습니다. 
     
-    e 되돌아가야 원래 위치로 있습니다 넣습니다 앵커를 만들 때).
+    e 되돌아가야 원래 위치로 있습니다 앵커를 만들 때 배치 합니다.
     9. Azure 공간 앵커를 삭제 합니다.
     
     10. Azure 세션을 중지 합니다.
@@ -198,7 +198,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
    > 참고: 다양 한 경험을 둘러싸는 경계 상자를 설정/해제, 위치 및 회전 gizmo 사용 재배치 개체 (예: 큐브가이 단계에서 사용)를 사용 하는 단추 사용을 비롯 하 여 환경을 위치에 대 한 사용자 경험 흐름 및 기타 정보입니다.
 
 ## <a name="congratulations"></a>축하합니다.
-이 단원에서는 Azure 공간 앵커의 기본 사항을 알아보았습니다. 이 esson 수 있는 여러 단추를 사용 하 여 시작 하 고 Azure 세션을 중지 하 고 만들기, 업로드 및 단일 장치에서 azure 앵커를 다운로드 하는 데 필요한 다양 한 단계를 살펴보면 제공 합니다. 다음 단원에서는 응용 프로그램 다시 시작 된 후에, 검색에 대 한 여 HoloLens 2 Azure 앵커 Id를 저장 하는 방법을 알아보겠습니다. 시리즈도 배웁니다 공간 맞춤 하 고 다중 사용자 세션 (곧 모듈을 공유 하는 일환으로 제공 합니다.)를 공유 하는 방법에 대 한 알아봅니다를 여러 장치 간에 앵커 Id를 전송 하는 방법
+이 자습서에서는 Azure 공간 앵커의 기본 사항을 알아보았습니다. 이 esson 수 있는 여러 단추를 사용 하 여 시작 하 고 Azure 세션을 중지 하 고 만들기, 업로드 및 단일 장치에서 azure 앵커를 다운로드 하는 데 필요한 다양 한 단계를 살펴보면 제공 합니다. 다음 단원에서는 응용 프로그램 다시 시작 된 후에, 검색에 대 한 여 HoloLens 2 Azure 앵커 Id를 저장 하는 방법을 알아보겠습니다. 시리즈도 배웁니다 공간 맞춤 하 고 다중 사용자 세션을 공유 하는 방법에 대 한 알아봅니다를 여러 장치 간에 앵커 Id를 전송 하는 방법을 공유 자습서의 일부로 곧 제공 됩니다.
 
 [다음 단원: ASA 단원 2](mrlearning-asa-ch2.md)
 

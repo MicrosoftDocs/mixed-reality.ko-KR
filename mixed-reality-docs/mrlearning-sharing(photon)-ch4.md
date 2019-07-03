@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465220"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523198"
 ---
-# <a name="synchronizing-shared-object-movements"></a>동기화 공유 개체 이동
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 공유 개체 이동
 
-이 단원에서는 공유 세션의 모든 참가자가 공동 작업 하 고 다른 사용자 상호 작용을 볼 수 있도록 개체의 움직임을 공유 하는 방법에 알아봅니다. 단원은의 일부로 만든 음력 시작 관리자에이 [자료 모듈 자습서](mrlearning-base.md)합니다.
+이 자습서에서는 공유 세션의 모든 참가자가 공동 작업 하 고 다른 사용자 상호 작용을 볼 수 있도록 개체의 움직임을 공유 하는 방법에 알아봅니다. 단원은의 일부로 만든 음력 시작 관리자에이 [자료 모듈 자습서](mrlearning-base.md)합니다.
 
 목표:
 
@@ -26,7 +26,7 @@ ms.locfileid: "67465220"
 ### <a name="instructions"></a>지침
 
 
-1. 이전 단원 (Control + S)에서 장면을 저장 합니다. 이름을 지정할 수 있습니다 HLSharedProjectMainPart4.unity 쉽게 필요할 때 찾을 수 있도록 합니다.
+1. 이전 단원 (Control + S)에서 장면을 저장 합니다. 이름을 지정할 수 있습니다, HLSharedProjectMainPart4.unity, 쉽게 필요할 때 찾을 수 있도록 합니다.
 
 2. 프로젝트 창에서 자산-> Scripts 폴더에서 Visual Studio 또는 이전 코드에 사용 하는 편집기에서 엽니다 GenericNetSync를 두 번 클릭 합니다.  ![](images/module3chapter4updatestep2.png)
 

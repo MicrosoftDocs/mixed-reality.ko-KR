@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 4625acfcb3353e9537961a444012452139705359
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465212"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523309"
 ---
-# <a name="connecting-multiple-users"></a>**여러 사용자를 연결합니다.** 
+# <a name="connecting-multiple-users"></a>여러 사용자를 연결합니다.
 
 이 단원에서는 라이브를 공유 과정의 일부로 서 여러 사용자를 연결 하는 방법에 알아봅니다. 이 단원에서는 말 구, 조인 하는 각 사람의 표현 나타내는 아바타를 여러 장치에서 응용 프로그램을 열어 수 있습니다. 
 
