@@ -30,7 +30,7 @@
 #### [몰입형 헤드셋 하드웨어 세부 정보](immersive-headset-hardware-details.md)
 #### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [하드웨어 액세서리](hardware-accessories.md)
-### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
+### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
 ## 핵심 구성 요소
 ### [응시](gaze.md)
 ### [제스처](gestures.md)
@@ -57,7 +57,7 @@
 #### [Hololens(1세대)용 혼합 현실에서 은하계 만들기](case-study-creating-a-galaxy-in-mixed-reality.md)
 #### [HoloLens 2용 갤럭시 익스플로러 업데이트](galaxy-explorer-update.md)
 ### [HoloStudio UI 및 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-### [Lowe's의 HoloLens 프로젝트](case-study-lessons-from-the-lowes-kitchen.md)
+### [Lowe의 주방이 주는 교훈](case-study-lessons-from-the-lowes-kitchen.md)
 ### [현실의 구멍 속 살펴보기](case-study-looking-through-holes-in-your-reality.md)
 ### [HoloLens 디자인 팀에서 보낸 첫해](case-study-my-first-year-on-the-hololens-design-team.md)
 ### [혼합 현실의 사람 표현](case-study-representing-humans-in-mixed-reality.md)
@@ -71,7 +71,8 @@
 
 
 ## 혼합 현실 릴리스 정보
-### [최신 릴리스 정보](release-notes-october-2018.md)
+### [최신 릴리스 정보](release-notes-may-2019.md)
+### [릴리스 정보 - 2018년 10월](release-notes-october-2018.md)
 ### [릴리스 정보 - 2018년 4월](release-notes-april-2018.md)
 ### [릴리스 정보 - 2017년 10월](release-notes-october-2017.md)
 ### [릴리스 정보 - 2016년 8월](release-notes-august-2016.md)
@@ -194,16 +195,29 @@
 ### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [자습서 및 샘플 앱](tutorials.md)
 ### Unity
-#### MR 학습 모듈
-##### HoloLens 2
-###### 기본 모듈
-####### [기본 모듈 - 개요 및 목표](mrlearning-base.md)
-####### [프로젝트 초기화 및 첫 번째 애플리케이션](mrlearning-base-ch1.md)
-####### [사용자 인터페이스, 직접 추적 및 혼합 현실 도구 키트 구성](mrlearning-base-ch2.md)
-####### [동적 콘텐츠 배치 및 해결자](mrlearning-base-ch3.md)
-####### [3D 개체 상호 작용](mrlearning-base-ch4.md)
-####### [고급 입력](mrlearning-base-ch5.md)
-####### [데모 앱](mrlearning-base-ch6.md)
+#### HoloLens 2 자습서
+##### 시작 자습서
+###### [1. 개요 및 목표](mrlearning-base.md)
+###### [2. 프로젝트 및 첫 번째 애플리케이션 초기화](mrlearning-base-ch1.md)
+###### [3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 도구 키트 구성](mrlearning-base-ch2.md)
+###### [4. 동적 콘텐츠 배치 및 해결기 사용](mrlearning-base-ch3.md)
+###### [5. 3D 개체와 상호 작용](mrlearning-base-ch4.md)
+###### [6. 고급 입력 옵션 탐색](mrlearning-base-ch5.md)
+###### [7. 달착륙선 샘플 애플리케이션 만들기](mrlearning-base-ch6.md)
+##### Azure Spatial Anchors 자습서
+###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
+###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
+##### Azure Speech Services 자습서
+###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
+###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)
+###### [3. Azure Cognition Services 음성 변환 구성 요소 추가](mrlearning-speechSDK-ch3.md)
+###### [4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
+##### 다중 사용자 기능 자습서
+###### [1. Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
+###### [2. Unity 개발 준비](mrlearning-sharing(photon)-ch2.md)
+###### [3. 여러 사용자 연결](mrlearning-sharing(photon)-ch3.md)
+###### [4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)
+###### [5. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch5.md)
 #### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
 ##### [원소의 주기율표](periodic-table-of-the-elements.md)
 ##### [달착륙선](lunar-module.md)
