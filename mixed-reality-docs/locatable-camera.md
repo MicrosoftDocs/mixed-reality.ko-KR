@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 카메라, hololens, 색 카메라, 연결, hololens 2, 컴퓨터 비전, fiducial cv 앞, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523319"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694534"
 ---
 # <a name="locatable-camera"></a>찾을 수 있는 카메라
 
@@ -43,7 +43,7 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
   | 프로필                                         | 비디오     | Preview   | 여전히     | 프레임 속도 | 가로 뷰 필드 (H-FOV) | 제안 된 사용                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | 레거시, 0 BalancedVideoAndPhoto 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
-  | 레거시, 0 BalancedVideoAndPhoto 100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | 고품질 비디오 기록                |
+  | 레거시, 0 BalancedVideoAndPhoto 100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | 고품질 사진 캡처에 대 한 스트림 미리 보기 |
   | 레거시, 0 BalancedVideoAndPhoto 100             |           |           | 3904x2196 |             | 64.69                            | 고품질 사진 캡처                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | 긴 기간 시나리오                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | 긴 기간 시나리오                     |
@@ -51,7 +51,7 @@ HoloLens 앞면의 사용자에 게 확인 하려면 앱을 사용 하도록 설
   | 비디오 회의 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | 비디오 회의 긴 기간 시나리오 |
   | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
   | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
-  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1128x635  |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
+  | 비디오 회의 100 BalancedVideoAndPhoto 120 | 1128x636  |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
   | 비디오 회의 100 BalancedVideoAndPhoto 120 | 960 x 540   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
   | 비디오 회의 100 BalancedVideoAndPhoto 120 | 760x428   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |
   | 비디오 회의 100 BalancedVideoAndPhoto 120 | 640x360   |           |           | 15,30       | 64.69                            | 비디오 회의 긴 기간 시나리오 |

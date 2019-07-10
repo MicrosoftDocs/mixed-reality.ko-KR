@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, microsoft graph, hololens, 몰입 형, vr
-ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597660"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694522"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -37,7 +37,7 @@ ms.locfileid: "59597660"
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> MR 및 311 Azure: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -123,15 +123,15 @@ ms.locfileid: "59597660"
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집 > 기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  로 이동 **파일 > 빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하려면 단추.
+4.  로 이동 **파일** > **빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하는 단추입니다.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  있는 동안 **파일 > 빌드 설정**, 있는지 확인 합니다.
+5.  있는 동안 **파일** > **빌드 설정**, 있는지 확인 합니다.
 
     1. **장치를 대상** 로 설정 된 **HoloLens**
     2. **빌드 형식** 로 설정 된 **D3D**
@@ -187,7 +187,7 @@ ms.locfileid: "59597660"
 
 9.  닫기 합니다 *빌드 설정* 창입니다.
 
-10.  장면 및 프로젝트 저장 (**파일 > 저장 장면 파일 > 프로젝트 저장**).
+10.  장면 및 프로젝트 저장 (**파일** > **장면 저장 파일** > **프로젝트 저장**).
 
 ## <a name="chapter-3---import-libraries-in-unity"></a>3 장-Unity에서 가져오기 라이브러리
 
@@ -205,7 +205,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 패키지를 가져오려면:
 
-1.  Unity를 사용 하 여 Unity 패키지를 추가 합니다 **자산* > *패키지 가져오기* > *Custom Package** 메뉴 옵션입니다. 방금 다운로드 한 패키지를 선택 합니다.
+1.  Unity를 사용 하 여 Unity 패키지를 추가 합니다 **자산** > **패키지 가져오기** > **Custom Package** 메뉴 옵션입니다. 방금 다운로드 한 패키지를 선택 합니다.
 
 2.  에 **Unity 패키지 가져오기** 표시 되는 상자에서 아래에 있는 포함 하 여 모든 것을 확인 **플러그 인** 을 선택 합니다.
 
@@ -266,12 +266,12 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 이 클래스를 만들려면:
 
-1.  마우스 오른쪽 단추로 클릭 합니다 **자산** 폴더에는 *프로젝트 패널*을 선택한 후 **만들기* > *폴더**합니다. 폴더의 이름을 **스크립트**합니다.
+1.  마우스 오른쪽 단추로 클릭 합니다 **자산** 폴더에는 *프로젝트 패널*을 선택한 후 **만들기** > **폴더**합니다. 폴더의 이름을 **스크립트**합니다.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  엽니다는 **스크립트** 폴더 그런 다음 해당 폴더 내에서 마우스 오른쪽 단추로 클릭, **만들기* > * C\# 스크립트 * * 합니다. 스크립트 이름을 **MeetingsUI 합니다.**
+2.  열기는 **스크립트** 폴더 그런 다음 해당 폴더 내에서 마우스 오른쪽 단추로 클릭 합니다 **만들기**  >   **C# 스크립트**. 스크립트 이름을 **MeetingsUI 합니다.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -548,7 +548,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 9.  다음 두 메서드를 추가 합니다.
 
-    1.  **BuildTodayCalendarEndpoint()**, 빌드 및 예약 된 회의 검색 하는 기간을 지정 하는 URI입니다.
+    1.  **BuildTodayCalendarEndpoint()** , 빌드 및 예약 된 회의 검색 하는 기간을 지정 하는 URI입니다.
 
     2.  **ListMeetingsAsync()** 에 요청에서 예약 된 회의 *Microsoft Graph*합니다.
 
@@ -628,7 +628,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
 
-4.  추가 함께 아래 것과 일치 하도록 네임 스페이스 코드를 변경는 '**\[System.Serializable\]**' 위의 태그에 **GazeInput** 클래스를 serialize 할 수 있도록 합니다.
+4.  추가 함께 아래 것과 일치 하도록 네임 스페이스 코드를 변경는 ' **\[System.Serializable\]** ' 위의 태그에 **GazeInput** 클래스를 serialize 할 수 있도록 합니다.
 
     ```csharp
     using UnityEngine;

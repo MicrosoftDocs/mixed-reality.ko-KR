@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, 기계 학습, 기계 학습, 기계 학습 스튜디오, 몰입 형 hololens, vr
-ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516035"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694549"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -40,7 +40,7 @@ ms.locfileid: "66516035"
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> MR 및 Azure 307: 기계 학습</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -220,7 +220,7 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 2.  빈 실험을 사용 하 여 새 페이지가 표시 됩니다.
 
-3.  왼쪽 패널에서 확장 **저장 된 데이터 집합* > *내 데이터 집합** 끌어서 합니다 **ProductsTableCSV** 에 **실험 캔버스**합니다.
+3.  왼쪽 패널에서 확장 **저장 된 데이터 집합** > **내 데이터 집합** 끌어서 합니다 **ProductsTableCSV** 에 **실험 캔버스**.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-16.png)
 
@@ -236,7 +236,7 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-19.png)
 
-7.  에 **실험** 왼쪽 패널에서 확장 하 고 **Machine Learning* > * 학습 * * 합니다. 끌기 합니다 **모델 학습** 을 실험 캔버스의 항목 축소 합니다. 캔버스와 동일 하 게 같아야 합니다 아래.
+7.  에 **실험** 왼쪽 패널에서 확장 **Machine Learning** > **학습**합니다. 끌기 합니다 **모델 학습** 을 실험 캔버스의 항목 축소 합니다. 캔버스와 동일 하 게 같아야 합니다 아래.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-20.png)
 
@@ -252,21 +252,21 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 11. 학습 하는 것을 **다중 클래스 로지스틱 회귀** 대부분의 판매를 예측 하는 알고리즘 **제품** 요일과 날짜의 시간에 따라 합니다. 하지만 Azure Machine Learning studio에서 제공 되는 다양 한 알고리즘의 세부 정보를 설명 하기 위해이 문서의 범위를 벗어납니다 확인할 수 있습니다에서 더 많은 정보를 [Machine Learning 알고리즘 치트 시트](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. 확장 왼쪽의 실험 항목 패널에서 * **Machine Learning* > *초기화 모델* > * 분류 * 및 끌어서는 **다중 클래스 로지스틱 회귀**  항목 실험 캔버스에 로그온 합니다.
+12. 왼쪽의 실험 항목 패널에서 확장 **Machine Learning** > **초기화 모델** > **분류**를 끌어서 합니다  **다중 클래스 로지스틱 회귀** 항목 실험 캔버스에 로그온 합니다.
 
 13. 아래쪽에서 출력을 연결 합니다 **다중 클래스 로지스틱 회귀**의 왼쪽 위 입력는 **모델 학습** 항목입니다.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-23.png)
 
-14. 왼쪽 패널에서 실험 항목의 목록에서 **Machine Learning* > * 점수 * *, 끌어서 합니다 **모델 점수 매기기** 캔버스에는 항목입니다.
+14. 왼쪽 패널에서 실험 항목의 목록에서 확장 **Machine Learning** > **점수**, 끌어서 합니다 **모델 점수 매기기** 캔버스에는 항목입니다.
 
 15. 아래쪽에서 출력을 연결 합니다 **모델 학습**의 왼쪽 위 입력 합니다 **모델 점수 매기기**.
 
-16. 오른쪽 아래 출력에 연결 **데이터 분할**의 오른쪽 입력 합니다  **모델 점수 매기기* 항목*합니다.
+16. 오른쪽 아래 출력에 연결 **데이터 분할**의 오른쪽 입력 합니다 **모델 점수 매기기** 항목입니다.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-24.png)
 
-17. 목록의 **실험** 왼쪽 패널에서 항목을 확장할 * **Machine Learning* > * 평가 * 및 끌어서 합니다 **모델 평가** 캔버스로 항목입니다.
+17. 목록의 **실험** 왼쪽 패널에서 항목을 확장할 **Machine Learning** > **평가**를 끌어서는 **모델평가** 캔버스로 항목입니다.
 
 18. 출력을 연결 합니다 **모델 점수 매기기** 의 왼쪽 위 입력 합니다 **모델 평가**합니다.
 
@@ -334,9 +334,9 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 1.  오픈 **Unity** 라는 새 Unity 프로젝트를 만들고 **MR\_MachineLearning 합니다.** 프로젝트 형식 설정 되어 있는지 확인 **3D**합니다.
 
-2.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 ***편집할* > *기본 설정*** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+2.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
 
-3.  다음으로 이동 ***파일* > *빌드 설정*** 플랫폼 전환 **유니버설 Windows 플랫폼**를 클릭 하 여 합니다 ***플랫폼 전환*** 단추입니다.
+3.  이동한 다음 **파일** > **빌드 설정** 플랫폼에서 전환 **유니버설 Windows 플랫폼**를 클릭 하 여는 ***플랫폼 전환***  단추입니다.
 
 4.  또한 다음 사항을 확인 합니다
 
@@ -527,7 +527,7 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 1.  로 이동 합니다 **스크립트** 폴더에서 합니다 **프로젝트 패널**합니다.
 
-2.  폴더를 마우스 오른쪽 단추로 클릭 **Create** > **C\# 스크립트**합니다. 스크립트를 호출할 **ProductPrediction**합니다.
+2.  폴더를 마우스 오른쪽 단추로 클릭 **Create**  >   **C# 스크립트**. 스크립트를 호출할 **ProductPrediction**합니다.
 
 3.  두 번 클릭 하 여 새 **ProductPrediction** 스크립트를 사용 하 여 열고 **Visual Studio 2017**합니다.
 
@@ -811,7 +811,7 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 14. 끌어서 합니다 **ProductPrediction** 클래스에서 스크립트를 **스크립트** 폴더에는 **주 카메라** 개체.
 
-15. 장면 및 프로젝트 저장할 **파일** >  ***장면 저장* / *파일***   >  **프로젝트를 저장할**합니다.
+15. 장면 및 프로젝트 저장할 **파일** > **장면/파일 저장** > **프로젝트 저장**합니다.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>10 장-UWP 솔루션 빌드
 
@@ -819,11 +819,11 @@ Azure의 Translator API를 사용 하려면 응용 프로그램에 사용할 수
 
 빌드:
 
-1.  클릭 하 여 현재 장면 저장 **파일** **장면 저장**합니다.
+1.  클릭 하 여 현재 장면 저장 **파일** > **장면 저장**합니다.
 
-2.  로 이동 **파일** **빌드 설정**
+2.  로 이동 **파일** > **빌드 설정**
 
-3.  호출 확인란 **Unity C\# 프로젝트** (이 중요 한 빌드가 완료 된 후 클래스를 편집할 수)입니다.
+3.  호출 확인란 **Unity C# 프로젝트** (이 중요 한 빌드가 완료 된 후 클래스를 편집할 수)입니다.
 
 4.  클릭할 **열고 장면 추가**,
 

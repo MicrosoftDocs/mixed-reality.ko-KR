@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, edge, iot edge, 자습서, api, 알림, 함수, 테이블, 몰입 형 hololens, vr, iot, 가상 머신, ubuntu, python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597570"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694595"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -49,7 +49,7 @@ ms.locfileid: "59597570"
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> MR 및 Azure 313: IoT Hub Service</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -277,7 +277,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
         sudo apt-get install python-pip
     ```
 
-2.  이 장에서 메시지가 나타날 수 있습니다에 의해 *터미널*, 장치 저장소를 사용할 수 있는 권한 및 사용자를 입력할 **y/n** (예 또는 아니요), 형식 **'y'**, 누릅니다는 **Enter** 적용할 키입니다.
+2.  이 장에서 메시지가 나타날 수 있습니다에 의해 *터미널*, 장치 저장소를 사용할 수 있는 권한 및 사용자를 입력할 **y/n** (예 또는 아니요), 형식 **'y'** , 누릅니다는 **Enter** 적용할 키입니다.
 
 3.  명령이 완료 되 면 명령을 사용 하 여 다음 설치 **curl**:
 
@@ -320,7 +320,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
 
     1.  키보드의 화살표 키를 사용 하 여 스크롤합니다 아래로 (해야 간단한 방식으로 아래로 스크롤하여)를 포함 하는 줄에 연결할 ":
 
-        "**\<여기에 장치 연결 문자열 추가 &GT;**"입니다.
+        " **\<여기에 장치 연결 문자열 추가 >** "입니다.
 
     2. 대체 줄 **대괄호를 포함 하 여**를 사용 하 여 합니다 **장치 연결 문자열** 이전에 기록한 합니다.
 
@@ -370,7 +370,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
 
 4. 확장이 설치 되 면 닫았다가 다시 VS Code를 엽니다.
 
-5. VS Code를 사용 하 여 한 번 더를 열고 이동할 **보기 > 통합된 터미널**합니다.
+5. VS Code를 사용 하 여 한 번 더를 열고 이동할 **뷰** > **통합된 터미널**합니다.
 
 6. 이제 설치할 **Cookiecutter**합니다. 터미널에서 다음 bash 명령을 실행합니다.
 
@@ -390,7 +390,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
 
 모듈에 푸시를 사용 하 여 컨테이너를 생성 해야 하는 시점에서 *Container Registry*합니다. 컨테이너 밀어 넣었으면를 사용 하 여는 *IoT Hub Edge* 실행 되는 장치에 배포할 서비스를 *IoT Edge 런타임*합니다.
 
-1. VS Code에서 클릭 **보기 > 명령 팔레트**합니다.
+1. VS Code에서 클릭 **뷰** > **명령 팔레트**합니다.
 
 2. 팔레트에서 검색 하 고 실행 **Azure IoT Edge: 새 Iot Edge 솔루션**합니다.
 
@@ -744,7 +744,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>9 장-패키지의 컨테이너 솔루션
 
-1.  준비가 이제 "" 파일을 컨테이너로 패키징하고 푸시 되도록 하 **Azure Container Registry**합니다. VS Code 내에서 엽니다는 *통합 터미널* (**보기 > 통합 터미널 / CTRL + '**)를 다음 줄에 로그인을 사용 하 여 **Docker** (의 값으로 대체 합니다 자격 증명으로 명령에 **ACR Azure Container Registry ()**):
+1.  준비가 이제 "" 파일을 컨테이너로 패키징하고 푸시 되도록 하 **Azure Container Registry**합니다. VS Code 내에서 엽니다는 *통합 터미널* (**뷰** > **통합 터미널** 하거나 **Ctrl** + **\`** )를 다음 줄에 로그인을 사용 하 여 **Docker** (의 자격 증명을 사용 하 여 명령의 값으로 대체 하 **Azure 컨테이너 레지스트리 (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -916,7 +916,7 @@ Microsoft HoloLens 비롯 한 혼합된 현실 등을 사용 하 여 개발 하�
 
 1. 오픈 **Visual Studio** (**하지** Visual Studio Code).
 
-2. 메뉴에서 클릭 **보기 > 클라우드 탐색기**합니다.
+2. 메뉴에서 클릭 **뷰** > **클라우드 탐색기**합니다.
 
     ![클라우드 탐색기를 열으십시오](images/AzureLabs-Lab313-45.png)
 

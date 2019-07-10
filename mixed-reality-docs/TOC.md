@@ -207,6 +207,7 @@
 ##### Azure Spatial Anchors 자습서
 ###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
 ###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
+###### [3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
 ##### Azure Speech Services 자습서
 ###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
 ###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)

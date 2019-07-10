@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, 알림, 함수, 테이블, notification hubs를 몰입 형, hololens, vr
-ms.openlocfilehash: ed56c936a0498b6e0ac804da15a2c6ec98239d0c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 3b6e930acd81c7d6e3addc107ec0da605d38cad1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604782"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694609"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -46,7 +46,7 @@ ms.locfileid: "59604782"
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> MR 및 Azure 308: 장치 간 알림</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -251,7 +251,7 @@ Notification Hubs 서비스 인스턴스를 만든 후 Azure Portal에서 저장
 
 1.  오픈 **Visual Studio**합니다.
 
-2.  메뉴에서 클릭 **보기 > 클라우드 탐색기**합니다.
+2.  메뉴에서 클릭 **뷰** > **클라우드 탐색기**합니다.
 
     ![클라우드 탐색기를 열으십시오](images/AzureLabs-Lab8-22.png)
 
@@ -651,15 +651,15 @@ Notification Hubs 서비스 인스턴스를 만든 후 Azure Portal에서 저장
 
     ![프로젝트 만들기](images/AzureLabs-Lab8-53.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집 > 기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
 
     ![집합 외부 VS 도구](images/AzureLabs-Lab8-54.png)
 
-4.  이동한 다음 **파일 > 빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하려면 단추.
+4.  이동한 다음 **파일** > **빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환**단추를 선택 항목을 적용 합니다.
 
     ![플랫폼 전환](images/AzureLabs-Lab8-55.png)
 
-5.  있는 동안 **파일 > 빌드 설정**, 있는지 확인 합니다.
+5.  있는 동안 **파일** > **빌드 설정**, 있는지 확인 합니다.
 
     1.  **장치를 대상** 로 설정 된 **모든 장치**
 
@@ -713,7 +713,7 @@ Notification Hubs 서비스 인스턴스를 만든 후 Azure Portal에서 저장
 
 9.  닫기 합니다 **빌드 설정** 창입니다.
 
-10. 장면 및 프로젝트 저장 **파일 > 저장 장면* / * 파일 > 프로젝트 * * 저장 합니다.
+10. 장면 및 프로젝트 저장할 **파일** > **장면 저장 파일** > **프로젝트를 저장할**합니다.
 
     > [!IMPORTANT]
     > 건너뛸 하려는 경우는 *Unity 설정* (데스크톱 앱)이이 프로젝트에 대 한 구성 요소 코드에 바로 계속를 자유롭게 [이.unitypackage 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-Desktop.unitypackage),으로 프로젝트로 가져올를 [ **사용자 지정 패키지**](https://docs.unity3d.com/Manual/AssetPackages.html)를 계속 진행 한 다음 [9 장에서](#chapter-9---create-the-tabletoscene-class-in-the-desktop-unity-project)합니다.  스크립트 구성 요소를 추가 해야 계속 합니다.
@@ -780,7 +780,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 자�
 
 이 클래스를 만들려면:
 
-1.  마우스 오른쪽 단추로 클릭 합니다 **Asset** 폴더는 프로젝트 패널 **만들기 > 폴더**합니다. 폴더의 이름을 **스크립트**합니다.
+1.  마우스 오른쪽 단추로 클릭 합니다 **Asset** 폴더는 프로젝트 패널 **만들기** > **폴더**합니다. 폴더의 이름을 **스크립트**합니다.
 
     ![스크립트 폴더 만들기](images/AzureLabs-Lab8-66.png)
 
@@ -788,7 +788,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 자�
 
 2.  열려는 방금 만든 폴더를 두 번 클릭 합니다.
 
-3.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** **C\# 스크립트**합니다. 스크립트 이름을 **TableToScene**합니다.
+3.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **TableToScene**합니다.
 
     ![새 c# 스크립트](images/AzureLabs-Lab8-68.png)
     ![TableToScene 이름 바꾸기](images/AzureLabs-Lab8-69.png)
@@ -1136,7 +1136,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 자�
 
 이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되었습니다.
 
-1.  이동할 **빌드 설정** (**파일 > 빌드 설정**).
+1.  이동할 **빌드 설정** (**파일** > **빌드 설정**).
 
 2.  **빌드 설정** 창에서 클릭 **빌드**합니다.
 
@@ -1167,15 +1167,15 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 자�
 
     ![name UnityMRNotifHub](images/AzureLabs-Lab8-80.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집 > 기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
 
     ![vs 외부 편집기 설정](images/AzureLabs-Lab8-81.png)
 
-4.  이동한 다음 **파일 > 빌드 설정** 플랫폼 전환 **유니버설 Windows 플랫폼**를 클릭 하 여는 **플랫폼 전환** 단추입니다.
+4.  이동한 다음 **파일** > **빌드 설정** 플랫폼에서 전환 **유니버설 Windows 플랫폼**를 클릭 하 여는 **플랫폼 전환**  단추입니다.
 
     ![UWP 플랫폼 전환](images/AzureLabs-Lab8-82.png)
 
-5.  로 이동 **파일 > 빌드 설정** 되어 있는지 확인 합니다.
+5.  로 이동 **파일** > **빌드 설정** 되어 있는지 확인 합니다.
 
     1.  **장치를 대상** 로 설정 된 **모든 장치**
 
@@ -1229,11 +1229,11 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 자�
 
             ![눈금 인터넷 클라이언트](images/AzureLabs-Lab8-89.png)
 
-8.  년대 **빌드 설정** *Unity C\# 프로젝트* 를 더 이상 사용할 수 없습니다:이 옆의 확인란을 선택 합니다.
+8.  년대 **빌드 설정**를 **Unity C# 프로젝트** 를 더 이상 사용할 수 없습니다:이 옆의 확인란을 선택 합니다.
 
 9.  이러한 변경과 수행할 빌드 설정 창을 닫습니다.
 
-10. 장면 및 프로젝트 저장 **파일* *장면 저장*/ *파일* * 프로젝트 * * 저장 합니다.
+10. 장면 및 프로젝트 저장할 **파일** > **장면 저장 파일** > **프로젝트를 저장할**합니다.
 
     > [!IMPORTANT]
     > 건너뛸 하려는 경우는 *Unity 설정* (혼합 현실 앱)이이 프로젝트에 대 한 구성 요소 코드에 바로 계속를 자유롭게 [이.unitypackage 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-MR.unitypackage),으로 프로젝트로가져올[ **사용자 지정 패키지**](https://docs.unity3d.com/Manual/AssetPackages.html)를 선택한 다음에서 계속 [14 장](#chapter-14---creating-the-tabletoscene-class-in-the-mixed-reality-unity-project)합니다. 스크립트 구성 요소를 추가 해야 계속 합니다.
@@ -1245,9 +1245,9 @@ Unity 라이브러리 (.NET SDK를 사용 하 여 Azure에 대 한)에 대 한 A
 
 사용자 고유의 프로젝트에 SDK를 가져오려면 최신 다운로드 했는지 확인 [.unitypackage](https://aka.ms/azstorage-unitysdk)합니다. 그런 다음 다음을 수행 합니다.
 
-1.  Unity를 사용 하 여 위에서 다운로드 한.unitypackage를 추가 합니다 **자산 > 패키지 가져오기 > 사용자 지정 패키지** 메뉴 옵션입니다.
+1.  Unity를 사용 하 여 위에서 다운로드 한.unitypackage를 추가 합니다 **자산** > **패키지 가져오기** > **Custom Package** 메뉴 옵션 .
 
-2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인 > 저장소**합니다.
+2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인** > **저장소**합니다.
 
     ![패키지 가져오기](images/AzureLabs-Lab8-90.png)
 
@@ -1410,7 +1410,7 @@ Unity 라이브러리 (.NET SDK를 사용 하 여 Azure에 대 한)에 대 한 A
         }
     ```
 
-8.  다음 메서드를 **InitNotificationAsync()**, 초기화 시 알림 허브 서비스를 사용 하 여 응용 프로그램을 등록 합니다. 코드 주석 처리 되어 Unity 프로젝트를 빌드할 수 있습니다. Visual Studio에서 Azure 메시징 Nuget 패키지를 가져올 때 주석을 제거 합니다.
+8.  다음 메서드를 **InitNotificationAsync()** , 초기화 시 알림 허브 서비스를 사용 하 여 응용 프로그램을 등록 합니다. 코드 주석 처리 되어 Unity 프로젝트를 빌드할 수 있습니다. Visual Studio에서 Azure 메시징 Nuget 패키지를 가져올 때 주석을 제거 합니다.
 
     ```csharp
         /// <summary>
@@ -1433,7 +1433,7 @@ Unity 라이브러리 (.NET SDK를 사용 하 여 Azure에 대 한)에 대 한 A
         }
     ```
 
-9.  다음 처리기 **채널\_PushNotificationReceived()**, 알림의 받을 때마다 트리거됩니다. 데스크톱 응용 프로그램을 이동 된 Azure 테이블 엔터티로 이동한 다음 해당 GameObject MR 장면에서 같은 위치에 있는 알림을 역직렬화 하는 것입니다. 
+9.  다음 처리기 **채널\_PushNotificationReceived()** , 알림의 받을 때마다 트리거됩니다. 데스크톱 응용 프로그램을 이동 된 Azure 테이블 엔터티로 이동한 다음 해당 GameObject MR 장면에서 같은 위치에 있는 알림을 역직렬화 하는 것입니다. 
     
     > [!IMPORTANT]
     > 코드를 Visual Studio 내에서 Nuget 패키지 관리자를 사용 하 여 Unity 프로젝트를 빌드한 후 추가 하는 Azure 메시징 라이브러리에 참조 하기 때문에 코드는 주석입니다. 따라서 Unity 프로젝트 주석으로 처리 하지 않는 한 없습니다를 빌드할 수 됩니다. 수는 해야 프로젝트를 빌드 및 Unity에 반환 하려면 해야 **주석 다시** 코드입니다.
@@ -1483,7 +1483,7 @@ Unity 라이브러리 (.NET SDK를 사용 하 여 Azure에 대 한)에 대 한 A
 
 이 장에서 빌드 프로세스는 이전 프로젝트에 대 한 동일 합니다. 이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되 면 Unity에서 작성 하는 시간 이므로 합니다.
 
-1.  이동할 **빌드 설정** ( **파일 > 빌드 설정...**  ).
+1.  이동할 **빌드 설정** ( **파일** > **빌드 설정** ).
 
 2.  **빌드 설정** 메뉴에서 확인 **Unity C# 프로젝트*** 선택 됩니다 (수 있는이 프로젝트의 스크립트는 빌드 후 편집 하려면).
 
@@ -1508,7 +1508,7 @@ Unity 라이브러리 (.NET SDK를 사용 하 여 Azure에 대 한)에 대 한 A
 ## <a name="chapter-17---add-nuget-packages-to-the-unitymrnotifhub-solution"></a>17 장-UnityMRNotifHub 솔루션에 NuGet 패키지 추가
 
 > [!WARNING] 
-> 해제해 서는 다음 NuGet 패키지를 추가 하면 (다음에서 코드를 주석 처리 제거 [장](#chapter-18---edit-unitymrnotifhub-application,-notificationreciever-class)), 코드를 Unity 프로젝트 내에서 다시 열 때 오류가 표시 됩니다. 뒤로 돌아가서 Unity 편집기의 편집을 계속 하려는 경우 해당 errosome 코드를 주석으로 한 Visual Studio에서 다시 되 면 나중에 다시 주석 필요 합니다. 
+> 해제해 서는 다음 NuGet 패키지를 추가 하면 (다음에서 코드를 주석 처리 제거 [장](#chapter-18---edit-unitymrnotifhub-application-notificationreceiver-class)), 코드를 Unity 프로젝트 내에서 다시 열 때 오류가 표시 됩니다. 뒤로 돌아가서 Unity 편집기의 편집을 계속 하려는 경우 해당 errosome 코드를 주석으로 한 Visual Studio에서 다시 되 면 나중에 다시 주석 필요 합니다. 
 
 혼합된 현실 빌드가 완료 되 면 혼합된 현실 프로젝트를 빌드한로 이동 및 Visual Studio 2017을 사용 하 여 솔루션을 열려면 해당 폴더 내의 솔루션 (.sln) 파일을 두 번 클릭 합니다.
 이제 추가 해야 합니다 **WindowsAzure.Messaging.managed** NuGet 패키지를 알림 허브에서 알림을 수신 하는 데 사용 되는 라이브러리입니다.

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, application insights, hololens, 몰입 형, vr
-ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604772"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694566"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -38,7 +38,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> MR 및 Azure 309: Application insights</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -207,7 +207,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
     1.  에 **기타 설정** 탭:
 
-        1.  **스크립팅** **런타임 버전** 해야 **실험적 (.NET 4.6 동등)**, 편집기를 다시 시작 해야 실행 합니다.
+        1.  **스크립팅** **런타임 버전** 해야 **실험적 (.NET 4.6 동등)** , 편집기를 다시 시작 해야 실행 합니다.
 
         2.  **백 엔드를 스크립팅** 있어야 **.NET**
 
@@ -225,11 +225,11 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
         ![Unity 프로젝트 설정](images/AzureLabs-Lab309-21.png)
 
-9.  년대 **빌드 설정**를 **Unity C\# 프로젝트** 가 더 이상 회색;이 옆의 확인란을 선택 합니다.
+9.  년대 **빌드 설정**를 **Unity C# 프로젝트** 가 더 이상 회색;이 옆의 확인란을 선택 합니다.
 
 10.  빌드 설정 창을 닫습니다.
 
-11.  장면 및 프로젝트 저장 (**파일 > 저장 장면 파일 > 프로젝트 저장**).
+11.  장면 및 프로젝트 저장 (**파일** > **장면 저장 파일** > **프로젝트 저장**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>3 장-Unity 패키지 가져오기
@@ -275,7 +275,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 이 장에서 설정한 카메라 및 컨트롤을 확인 하는 장면에서 이동 가능 합니다.
 
-1.  마우스 오른쪽 단추로 클릭 계층 창에서 빈 영역에 다음 **만들기 > 빈**합니다.
+1.  마우스 오른쪽 단추로 클릭 계층 창에서 빈 영역에 다음 **Create** > **빈**합니다.
 
     ![카메라 및 사용자 정의 컨트롤 설정](images/AzureLabs-Lab309-26.png)
 
@@ -377,11 +377,11 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 이 클래스를 만들려면:
 
-1.  마우스 오른쪽 단추로 클릭 합니다 *프로젝트 패널*, 한 다음 **만들기 > 폴더**. 폴더의 이름을 **스크립트**합니다.
+1.  마우스 오른쪽 단추로 클릭 합니다 *프로젝트 패널*, 한 다음 **만들기** > **폴더**. 폴더의 이름을 **스크립트**합니다.
 
     ![ApplicationInsightsTracker 클래스 만들기](images/AzureLabs-Lab309-46.png)  ![ApplicationInsightsTracker 클래스 만들기](images/AzureLabs-Lab309-47.png)
 
-2.  사용 하 여는 **스크립트** 가 만든 폴더를 열려면이 두 번 클릭 합니다. 그런 다음, 해당 폴더 내에서 마우스 오른쪽 단추로 클릭 **만들기 > C\# 스크립트**합니다. 스크립트 이름을 **ApplicationInsightsTracker**합니다.
+2.  사용 하 여는 **스크립트** 가 만든 폴더를 열려면이 두 번 클릭 합니다. 그런 다음, 해당 폴더 내에서 마우스 오른쪽 단추로 클릭 **Create**  >   **C# 스크립트**. 스크립트 이름을 **ApplicationInsightsTracker**합니다.
 
 3.  새 두 번 클릭 **ApplicationInsightsTracker** 스크립트를 사용 하 여 열고 **Visual Studio**합니다.
 
@@ -505,7 +505,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** > **C\# 스크립트**합니다. 스크립트 이름을 **Gaze**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **Gaze**합니다.
 
 3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
 
@@ -699,7 +699,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** **C\# > 스크립트**합니다. 스크립트 이름을 **ObjectTrigger**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **ObjectTrigger**합니다.
 
 3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다. 기존 코드를 다음으로 바꿉니다.
 
@@ -771,7 +771,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** **C\# > 스크립트**합니다. 스크립트 이름을 **DataFromAnalytics**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **DataFromAnalytics**합니다.
 
 3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
 
@@ -923,7 +923,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
         }
     ```
 
-8.  다음 메서드는 **DetermineWinner()**, 목록을 정렬 하는 *GameObject* 하 고 *Int* 가장 높은 이벤트 수에 따라 쌍입니다. 그런 다음의 재질 색 변경 *GameObject* 하 *녹색* (가장 높은 수 있는 것에 대 한 피드백)으로 합니다. 이 분석 결과 사용 하 여 메시지를 표시 합니다.
+8.  다음 메서드는 **DetermineWinner()** , 목록을 정렬 하는 *GameObject* 하 고 *Int* 가장 높은 이벤트 수에 따라 쌍입니다. 그런 다음의 재질 색 변경 *GameObject* 하 *녹색* (가장 높은 수 있는 것에 대 한 피드백)으로 합니다. 이 분석 결과 사용 하 여 메시지를 표시 합니다.
 
     ```csharp
         /// <summary>
@@ -1000,7 +1000,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** > **C\# 스크립트**합니다. 스크립트 이름을 **이동**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **이동**합니다.
 
 3.  사용 하 여 열고 스크립트를 두 번 클릭 *Visual Studio*합니다.
 
@@ -1205,7 +1205,7 @@ Application Insights는 Microsoft 서비스 개발자가 자신의 응용 프로
 
 이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되 면 Unity에서 작성 하는 시간 이므로 합니다.
 
-1.  이동할 **빌드 설정**, **(파일 > 빌드 설정...)** .
+1.  이동할 **빌드 설정**, (**파일** > **빌드 설정**).
 
 2.  **빌드 설정** 창에서 클릭 **빌드**합니다.
 

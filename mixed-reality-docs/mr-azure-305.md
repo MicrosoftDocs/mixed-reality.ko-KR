@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, 혼합 현실, academy, unity, 자습서, api, 함수, 저장소, hololens, vr, 몰입 형
-ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598300"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694554"
 ---
 >[!NOTE]
 >혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -42,7 +42,7 @@ ms.locfileid: "59598300"
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td>MR 및 Azure 305: 함수 및 저장소</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -250,15 +250,15 @@ Azure Function을 만들려면:
 
     ![새 unity 프로젝트에 이름을 부여합니다](images/AzureLabs-Lab5-18.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할* > *기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
 
     ![스크립트 편집기로 visual studio 설정](images/AzureLabs-Lab5-19.png)
 
-4.  이동한 다음 **파일 > 빌드 설정** 플랫폼 전환 **유니버설 Windows 플랫폼**를 클릭 하 여는 **플랫폼 전환** 단추입니다.
+4.  이동한 다음 **파일** > **빌드 설정** 플랫폼에서 전환 **유니버설 Windows 플랫폼**를 클릭 하 여는 **플랫폼 전환**  단추입니다.
 
     ![uwp 플랫폼 전환](images/AzureLabs-Lab5-20.png)
 
-5.  로 이동 **파일 > 빌드 설정** 되어 있는지 확인 합니다.
+5.  로 이동 **파일** > **빌드 설정** 되어 있는지 확인 합니다.
 
     1. **장치를 대상** 로 설정 된 **모든 장치**합니다.
 
@@ -318,7 +318,7 @@ Azure Function을 만들려면:
 
 10.  빌드 설정 창을 닫습니다.
 
-11. 장면 및 프로젝트 저장 (**파일 > 저장 장면 파일 > 프로젝트 저장**).
+11. 장면 및 프로젝트 저장 (**파일** > **장면 저장 파일** > **프로젝트 저장**).
 
 ## <a name="chapter-4---setup-main-camera"></a>4 장-주 카메라 설정
 
@@ -421,7 +421,7 @@ Azure Function을 만들려면:
 
 6.  다음을 만듭니다는 **3D 텍스트** Azure 서비스의 상태에 피드백을 제공 하는 개체입니다.
 
-    마우스 오른쪽 단추로 클릭 합니다 **GazeButton** 계층 구조에서 패널 다시 추가한를 **3D 개체 > 3D 텍스트** 개체를 *자식*합니다.
+    마우스 오른쪽 단추로 클릭 합니다 **GazeButton** 계층 구조에서 패널 다시 추가한를 **3D 개체** > **3D 텍스트** 개체를 *자식*합니다.
 
     ![새 3D 텍스트 개체 만들기](images/AzureLabs-Lab5-42.png)
 
@@ -467,9 +467,9 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 사용자 고유의 프로젝트에 SDK를 가져오려면 최신 다운로드 했는지 확인 [GitHub에서 '.unitypackage'](https://aka.ms/azstorage-unitysdk)합니다. 그런 다음 다음을 수행 합니다.
 
-1.  추가 된 **.unitypackage** Unity 사용 하 여 파일을 **자산 > 패키지 가져오기 > 사용자 지정 패키지** 메뉴 옵션입니다.
+1.  추가 된 **.unitypackage** Unity 사용 하 여 파일을 **자산** > **패키지 가져오기** > **사용자 지정 패키지**메뉴 옵션입니다.
 
-2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인* > *저장소**합니다. 이 과정에 대 한 필요 하지 않을 때 나머지 작업은 모두 선택 취소 합니다.
+2.  에 **Unity 패키지 가져오기** 팝업에서 선택할 수 있는 아래에 있는 모든 상자 **플러그 인** > **저장소**합니다. 이 과정에 대 한 필요 하지 않을 때 나머지 작업은 모두 선택 취소 합니다.
 
     ![패키지 가져오기](images/AzureLabs-Lab5-45.png)
 
@@ -519,7 +519,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 이 클래스 만들려면:
 
-1.  마우스 오른쪽 단추로 클릭 합니다 *Asset* [프로젝트] 패널에 있는 **만들기 > 폴더**합니다. 폴더의 이름을 **스크립트**합니다.
+1.  마우스 오른쪽 단추로 클릭 합니다 *Asset* [프로젝트] 패널에 있는 **만들기** > **폴더**합니다. 폴더의 이름을 **스크립트**합니다.
 
     ![새 폴더 만들기](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 2.  열려는 방금 만든 폴더를 두 번 클릭 합니다.
 
-3.  폴더를 마우스 오른쪽 단추로 클릭 **만들기 > C# 스크립트**합니다. 스크립트를 호출할 *Azureservice*합니다.
+3.  폴더를 마우스 오른쪽 단추로 클릭 **Create**  >   **C# 스크립트**. 스크립트를 호출할 *Azureservice*합니다.
 
 4.  두 번 클릭 하 여 새 *Azureservice* 클래스를 사용 하 여 *Visual Studio*합니다.
 
@@ -637,7 +637,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
     ```
 
     > [!IMPORTANT]
-    > 에 대 한 코드를 입력 했습니다 *CallAzureFunctionForNextShape()* 에 [향후 장](#chapter-10---completing-the-AzureServices-class)합니다.
+    > 에 대 한 코드를 입력 했습니다 *CallAzureFunctionForNextShape()* 에 [향후 장](#chapter-10---completing-the-azureservices-class)합니다.
 
 9.  삭제 합니다 *update ()* 메서드가이 클래스는 사용 하지 것입니다.
 
@@ -657,7 +657,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 1.  로 이동 합니다 **스크립트** 이전에 만든 폴더입니다.
 
-2.  폴더를 마우스 오른쪽 단추로 클릭 **만들기 > C# 스크립트**합니다. 스크립트를 호출할 *ShapeFactory*합니다.
+2.  폴더를 마우스 오른쪽 단추로 클릭 **Create**  >   **C# 스크립트**. 스크립트를 호출할 *ShapeFactory*합니다.
 
 3.  두 번 클릭 하 여 새 *ShapeFactory* 스크립트를 사용 하 여 열고 *Visual Studio*합니다.
 
@@ -767,7 +767,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 1.  로 이동 합니다 **스크립트** 이전에 만든 폴더입니다.
 
-2.  프로젝트 패널을 마우스 오른쪽 단추로 클릭 **만들기 > C# 스크립트**합니다. 스크립트를 호출할 *Gaze*합니다.
+2.  프로젝트 패널을 마우스 오른쪽 단추로 클릭 **만듭니다**  >   **C# 스크립트**. 스크립트를 호출할 *Gaze*합니다.
 
 3.  두 번 클릭 하 여 새 *Gaze* 스크립트를 사용 하 여 열고 *Visual Studio입니다.*
 
@@ -1033,7 +1033,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 현재 위치에서 다른 스크립트를 사용 하 여 이제 수 있기 *완전* 는 *Azureservice* 클래스입니다. 이 통해 수행할 수 됩니다.
 
-1.  라는 새 메서드 추가 *CreateCloudIdentityAsync()*, Azure와의 통신에 필요한 인증 변수를 설정할 수 있습니다.
+1.  라는 새 메서드 추가 *CreateCloudIdentityAsync()* , Azure와의 통신에 필요한 인증 변수를 설정할 수 있습니다.
 
     > 이 메서드는 또한 셰이프 목록을 포함 하는 이전에 저장 된 파일의 존재 여부 확인 됩니다.
     >
@@ -1197,7 +1197,7 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 
 빌드 프로세스를 시작 합니다.
 
-1.  로 이동 **파일 > 빌드 설정**합니다.
+1.  로 이동 **파일** > **빌드 설정**합니다.
 
     ![앱 빌드](images/AzureLabs-Lab5-54.png)
 
@@ -1218,8 +1218,8 @@ Azure Storage for Unity 사용 (자체는.Net 용 Azure SDK를 활용 함). 알�
 3.  에 **솔루션 구성** 선택 **디버그**합니다.
 
     > Microsoft HoloLens 알 수 있습니다 것이 더 쉽게 *원격 컴퓨터*컴퓨터로 테더 링 없습니다 있도록 합니다. 그러나 또한 다음을 수행 해야 합니다.
-    > - 알고는 **IP 주소** 내에서 찾을 수 있는 여 HoloLens의는 *설정 > 네트워크 및 인터넷 > Wi-fi > 고급 옵션*; IPv4는 주소를 사용 해야 합니다. 
-    > - 확인 **개발자 모드** 됩니다 **에**에; *설정 > 업데이트 및 보안 > 개발자를 위한*합니다.
+    > - 알고 있어야 합니다 **IP 주소** 내에서 찾을 수 있는 여 HoloLens의 합니다 **설정** > **네트워크 및 인터넷**  >   **-Fi** > **고급 옵션**; IPv4는 주소를 사용 해야 합니다. 
+    > - 확인 **개발자 모드** 됩니다 **온**;에 **설정** > **업데이트 및 보안**  >  **개발자를 위한**합니다.
 
     ![솔루션 배포](images/AzureLabs-Lab5-55.png)
 

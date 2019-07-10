@@ -6,12 +6,12 @@ ms.author: JLyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Device Portal API
-ms.openlocfilehash: 507ab98734adea80d0aad41d99124e3d91846f28
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59603278"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694427"
 ---
 # <a name="device-portal-api-reference"></a>장치 포털 API 참조
 
@@ -278,17 +278,6 @@ Websocket 업그레이드를 수락 하 고 30fps에서 업데이트를 전송 �
 
 ## <a name="mixed-reality-capture"></a>혼합 현실 캡처
 
-**/api/holographic/mrc/file (삭제)**
-
-장치에서 기록 하는 혼합된 현실을 삭제 합니다.
-
-매개 변수
-* 파일 이름: 삭제할 파일의 인코딩 이름 hex64
-
-**/api/holographic/mrc/settings (GET)**
-
-가져옵니다 기본 혼합 현실을 캡처 설정
-
 **/api/holographic/mrc/file (GET)**
 
 장치에서 혼합된 현실 파일을 다운로드 합니다. 사용 하 여 op = 스트리밍에 대 한 스트림 쿼리 매개 변수입니다.
@@ -297,6 +286,38 @@ Websocket 업그레이드를 수락 하 고 30fps에서 업데이트를 전송 �
 * 파일 이름: 가져올 비디오 파일의 인코딩 이름 hex64
 * op : stream
 
+**/api/holographic/mrc/file (삭제)**
+
+장치에서 기록 하는 혼합된 현실을 삭제 합니다.
+
+매개 변수
+* 파일 이름: 삭제할 파일의 인코딩 이름 hex64
+
+**/api/holographic/mrc/files (GET)**
+
+장치에 저장 하는 혼합된 현실 파일 목록을 반환 합니다.
+
+**/api/holographic/mrc/photo (게시물)**
+
+혼합된 현실 사진을 촬영 하 고 장치에서 파일을 만듭니다.
+
+매개 변수
+* holo: 홀로그램 캡처: true 또는 false (기본값은 false)
+* pv: 캡처 PV 카메라: true 또는 false (기본값은 false)
+* RenderFromCamera : 사진/비디오 카메라의 관점에서 렌더링 (HoloLens 2에만 해당): true 또는 false (기본값: true)
+
+**/api/holographic/mrc/settings (GET)**
+
+가져옵니다 기본 혼합 현실을 캡처 설정
+
+**/api/holographic/mrc/settings (게시물)**
+
+집합 기본 혼합 현실을 캡처 설정 합니다.  이러한 설정 중 일부는 시스템의 MRC 사진 및 비디오 캡처에 적용 됩니다.
+
+**/api/holographic/mrc/status (GET)**
+
+혼합된 현실 기록 (실행, 중지)의 상태를 가져옵니다.
+
 **/api/holographic/mrc/thumbnail (GET)**
 
 지정된 된 파일에 대 한 축소판 이미지를 가져옵니다.
@@ -304,81 +325,56 @@ Websocket 업그레이드를 수락 하 고 30fps에서 업데이트를 전송 �
 매개 변수
 * 파일 이름: 미리 보기 요청 되는 파일의 인코딩 이름 hex64
 
-**/api/holographic/mrc/status (GET)**
-
-혼합된 현실 기록 (실행, 중지)의 상태를 가져옵니다.
-
-**/api/holographic/mrc/files (GET)**
-
-장치에 저장 하는 혼합된 현실 파일 목록을 반환 합니다.
-
-**/api/holographic/mrc/settings (게시물)**
-
-집합 기본 혼합 현실을 캡처 설정
-
 **/api/holographic/mrc/video/control/start (게시물)**
 
 혼합된 현실 녹음/녹화 시작
 
 매개 변수
-* holo: 홀로그램 캡처: true 또는 false
-* pv: 캡처 PV 카메라: true 또는 false
-* mic: 캡처 마이크: true 또는 false
-* 루프백: 앱 오디오 캡처: true 또는 false
+* holo: 홀로그램 캡처: true 또는 false (기본값은 false)
+* pv: 캡처 PV 카메라: true 또는 false (기본값은 false)
+* mic: 캡처 마이크: true 또는 false (기본값은 false)
+* 루프백: 앱 오디오 캡처: true 또는 false (기본값은 false)
+* RenderFromCamera : 사진/비디오 카메라의 관점에서 렌더링 (HoloLens 2에만 해당): true 또는 false (기본값: true)
+* vstab : 사용 비디오 안정화 (HoloLens 2에만 해당): true 또는 false (기본값: true)
+* vstabbuffer: 비디오 안정화 버퍼 대기 시간 (HoloLens 2에만 해당): 0 ~ 30 프레임 (기본값은 15 프레임)
 
 **/api/holographic/mrc/video/control/stop (게시물)**
 
 중지 현재 혼합 현실 기록
 
-**/api/holographic/mrc/photo (게시물)**
+## <a name="mixed-reality-streaming"></a>혼합된 현실 스트리밍
 
-혼합된 현실 사진을 촬영 하 고 장치에서 파일을 만듭니다.
+HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합된 현실의 실시간 미리 보기를 지원합니다.
 
-매개 변수
+혼합된 현실 스트림이 캡처됩니다 제어 하는 매개 변수의 동일한 집합을 공유 합니다.
 * holo: 홀로그램 캡처: true 또는 false
 * pv: 캡처 PV 카메라: true 또는 false
+* mic: 캡처 마이크: true 또는 false
+* 루프백: 앱 오디오 캡처: true 또는 false
 
-혼합된 현실 스트리밍
+지정 된이 없는 경우: 홀로그램, 사진/비디오 카메라 및 앱 오디오를 캡처할 수<br>
+지정 된 경우: 지정 되지 않은 매개 변수를 false로 기본값은
+
+선택적 매개 변수 (HoloLens 2에만 해당)
+* RenderFromCamera: 사진/비디오 카메라의 관점에서 렌더링: true 또는 false (기본값: true)
+* vstab: 비디오 안정화를 사용 하도록 설정: true 또는 false (기본값은 false)
+* vstabbuffer: 비디오 안정화 버퍼 대기 시간: 0 ~ 30 프레임 (기본값은 15 프레임)
 
 **/api/holographic/stream/live.mp4 (GET)**
 
-조각난 mp4의 청크 분할 다운로드를 시작합니다.
-
-매개 변수
-* holo: 홀로그램 캡처: true 또는 false
-* pv: 캡처 PV 카메라: true 또는 false
-* mic: 캡처 마이크: true 또는 false
-* 루프백: 앱 오디오 캡처: true 또는 false
+1280x720p 30fps 5Mbit 스트림입니다.
 
 **/api/holographic/stream/live_high.mp4 (GET)**
 
-조각난 mp4의 청크 분할 다운로드를 시작합니다.
-
-매개 변수
-* holo: 홀로그램 캡처: true 또는 false
-* pv: 캡처 PV 카메라: true 또는 false
-* mic: 캡처 마이크: true 또는 false
-* 루프백: 앱 오디오 캡처: true 또는 false
-
-**/api/holographic/stream/live_low.mp4 (GET)**
-
-조각난 mp4의 청크 분할 다운로드를 시작합니다.
-
-매개 변수
-* holo: 홀로그램 캡처: true 또는 false
-* pv: 캡처 PV 카메라: true 또는 false
-* mic: 캡처 마이크: true 또는 false
-* 루프백: 앱 오디오 캡처: true 또는 false
+1280x720p 30fps 5Mbit 스트림입니다.
 
 **/api/holographic/stream/live_med.mp4 (GET)**
 
-조각난 mp4의 청크 분할 다운로드를 시작합니다.
+854x480p 30fps 2.5Mbit 스트림입니다.
 
-매개 변수
-* holo: 홀로그램 캡처: true 또는 false
-* pv: 캡처 PV 카메라: true 또는 false
-* mic: 캡처 마이크: true 또는 false
-* 루프백: 앱 오디오 캡처: true 또는 false
+**/api/holographic/stream/live_low.mp4 (GET)**
+
+428x240p 15 fps 0.6Mbit 스트림입니다.
 
 ## <a name="networking"></a>네트워킹
 
@@ -419,7 +415,7 @@ Websocket 업그레이드를 수락 하 고 30fps에서 업데이트를 전송 �
 데이터를 반환 합니다.
 * 시스템 정보를 사용 하 여 JSON입니다. CPU, GPU, Memory, Network, IO
 
-## <a name="power"></a>Power
+## <a name="power"></a>전원
 
 **/api/power/battery (GET)**
 
@@ -532,5 +528,5 @@ WPR (성능) 추적 세션 중지
 * 시작 시 WPR 세션 상태를 반환합니다.
 
 ## <a name="see-also"></a>참조
-* [Windows Device Portal 사용 하 여](using-the-windows-device-portal.md)
+* [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 * [장치 포털 core API 참조 (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 4/25/2019
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: 34aee87310cbdfed4e209fbba955db9cf3ff722f
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414399"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694426"
 ---
 HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드-나란히 설치 합니다. 최신 사용 가능한 빌드를 사용 하는 것이 좋습니다 하지만 원하는 또는 이전 에뮬레이터에 대해 앱을 테스트 해야 하는 경우 있을 수 있습니다. 이 페이지는 릴리스 버전에 대 한 링크가 포함 되어 있습니다.
 
@@ -21,7 +21,8 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드-
 
 |  빌드 |  출시 날짜 |  참고 | 
 |----------|----------|----------|
-|  [HoloLens 2 에뮬레이터 10.0.18362.1019 빌드](https://go.microsoft.com/fwlink/?linkid=2095316) | 2019 년 6 월 11 일 | 최신 HoloLens 2 빌드입니다.  더 이상 관리자 권한으로 실행 해야 합니다.  시작 메뉴 바로 가기 추가 합니다. |
+|  [HoloLens 2 에뮬레이터 10.0.18362.1021 빌드](https://go.microsoft.com/fwlink/?linkid=2098508) | 2019 년 7 월 8 일 | 최신 HoloLens 2 빌드입니다.  DiskStream.dll 서명 문제를 해결합니다. |
+|  [HoloLens 2 에뮬레이터 10.0.18362.1019 빌드](https://go.microsoft.com/fwlink/?linkid=2095316) | 2019 년 6 월 11 일 | 더 이상 관리자 권한으로 실행 해야 합니다.  시작 메뉴 바로 가기 추가 합니다. |
 |  [HoloLens 2 에뮬레이터 10.0.18362.1005 빌드](https://go.microsoft.com/fwlink/?linkid=2087187) | 2019 년 4 월 16 일 |  |
 
 

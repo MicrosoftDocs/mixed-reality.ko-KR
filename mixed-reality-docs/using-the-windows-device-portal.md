@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829998"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694589"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows Device Portal 사용 하 여
 
 <table>
 <tr>
-<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (첫 번째 범용)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens(1세대)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -52,11 +52,11 @@ HoloLens에 대 한 Windows Device Portal 사용 하 여 구성 하 고 Wi-fi �
 
 1. [도구 설치](install-the-tools.md) PC에 설치 된 Windows 10 개발자 도구를 사용 하 여 Visual Studio 업데이트 1을에 있는지 확인 합니다. 이렇게 하면 USB 연결을 사용할 수 있습니다.
 2. HoloLens를 마이크로-USB 케이블로 PC에 연결합니다.
-3. PC의 웹 브라우저에서 http://127.0.0.1:10080로 이동합니다.
+3. PC의 웹 브라우저에서 http://127.0.0.1:10080 로 이동합니다.
 
 ## <a name="connecting-to-an-emulator"></a>에뮬레이터에 연결
 
-에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 장치 포털에 연결 하려면 사용 합니다 [도구 모음](using-the-hololens-emulator.md)합니다. 다음 아이콘을 클릭합니다. ![열기 장치 포털 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS에 대 한 Windows Device Portal 엽니다.
+에뮬레이터로 디바이스 포털을 사용할 수도 있습니다. 장치 포털에 연결 하려면 사용 합니다 [도구 모음](using-the-hololens-emulator.md)합니다. 다음 아이콘을 클릭합니다. ![열기 장치 포털 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
 
 ## <a name="creating-a-username-and-password"></a>사용자 이름 및 암호 만들기
 
@@ -144,19 +144,29 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 ![Microsoft HoloLens Windows Device Portal 혼합된 현실 캡처 페이지](images/windows-device-portal-mixed-reality-capture-page-1000px.png)<br>
 *Microsoft HoloLens Windows Device Portal 혼합된 현실 캡처 페이지*
 
-사용 된 [혼합 현실 캡처](mixed-reality-capture.md) 는 HoloLens에서 미디어 스트림 저장 하려면 페이지입니다.
+혼합 현실 캡처 페이지를 사용하여 HoloLens에서 미디어 스트림을 저장합니다.
 * **설정**: 다음 설정을 확인 하 여 캡처되는 미디어 스트림 제어 합니다.
   * **홀로그램**: 비디오 스트림의 holographic 콘텐츠를 캡처합니다. 홀로그램은 스테레오가 아닌 모노로 렌더링됩니다.
   * **PV 카메라**: 사진/비디오 카메라에서 비디오 스트림을 캡처합니다.
   * **Mic 오디오**: 마이크 배열에서 오디오를 캡처합니다.
   * **앱 오디오**: 현재 실행 중인 앱에서 오디오를 캡처합니다.
+  * **카메라에서 렌더링**: 사진/비디오 카메라의 관점에서 캡처를 정렬 하는 경우 [실행 중인 앱에서 지 원하는](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (HoloLens 2에만 해당).
   * **미리 보기 품질 라이브**: 화면 해상도, 프레임 속도 및 스트리밍 속도 대 한 실시간 미리 보기를 선택 합니다.
 * 클릭 하거나 탭 합니다 **실시간 미리 보기** 캡처 stream에 표시할 단추입니다. **실시간 미리 보기 중지** 캡처 스트림을 중지 합니다.
 * 클릭 하거나 탭 **레코드** 혼합 현실 스트림에 기록, 지정 된 설정을 사용 하 여 시작 합니다. **기록을 중지** 녹음/녹화를 종료 하 고 저장 합니다.
 * 클릭 하거나 탭 **Take 사진** 캡처 스트림에서 이미지를 계속 수행 합니다.
 * **비디오 및 사진**: 장치에서 수행 하는 비디오 및 사진 캡처 목록이 표시 됩니다.
 
-HoloLens 앱은 디바이스 포털에서 실시간 미리 보기를 기록 또는 스트리밍하는 동안 MRC 사진 또는 동영상을 캡처할 수 없습니다.
+> [!NOTE]
+> 가지 [동시 MRC 제한이](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
+> * 앱을 Windows Device Portal 비디오를 녹음 하는 동안 사진/비디오 카메라에 액세스 하려고 하는 경우 비디오 녹화 중지 됩니다.
+>   * HoloLens 2 경우 비디오 녹화 중지 되지 것입니다 앱 acesses SharedReadOnly 모드를 사용 하 여 사진/비디오 카메라입니다.
+> * 앱을 사진/비디오 카메라를 사용 중인 Windows Device Portal 사진 또는 비디오 레코드를 사용할 수 있습니다.
+> * 라이브 스트리밍:
+>   * HoloLens (첫 번째 gen) 앱을 Windows Device Portal 라이브 스트리밍을 하는 동안 사진/비디오 카메라에 액세스 하지 못하도록 방지 합니다.
+>   * HoloLens 앱 사진/비디오 카메라 사용 중인 경우 라이브 스트림 (첫 번째 gen) 되지 것입니다.
+>   * HoloLens 2는 자동으로 앱 ExclusiveControl 모드에서 사진/비디오 카메라에 액세스 하려고 하는 경우 라이브 스트리밍을 중지 합니다.
+>   * HoloLens 2는 PV 카메라 앱을 사용 중인 동안에 라이브 스트림을 시작할 수 있습니다.
 
 ### <a name="performance-tracing"></a>성능 추적
 
