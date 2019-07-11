@@ -3,15 +3,15 @@ title: HoloLens 알려진 문제
 description: HoloLens 개발자 영향을 줄 수 있는 알려진 문제 목록입니다.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 06/14/2019
+ms.date: 07/10/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: fd70171a908dab016b375e2207436dc11d625af9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 1ef9e9f411e16d2f604930f3146ede1d03d7c0f6
+ms.sourcegitcommit: c36b8c8573f51afa79504c4a17084e4f55d2f664
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67789485"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
@@ -20,19 +20,61 @@ ms.locfileid: "67414347"
 ## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>연결을 Visual Studio를 통해 HoloLens에 배포할 수 없습니다.
 
 >[!NOTE]
->마지막 업데이트 날짜: 6/14 오후 6 시-@ 문제 조사 중입니다.
+>마지막 업데이트 날짜: 7/8 오후 7시 25분-@ 팀에서 근본 원인을 식별 하 고 작업을 수정 하 고 있습니다. 해결 방법은 아래 사용할 수 있습니다. 
 
-HoloLens 및 Visual Studio 팀은 사용자가 Visual Studio를 통해 HoloLens 장치에 배포 하지 못하게 할 수 있는 문제를 조사 합니다.
- 
-배포 단계에서 사용자가 보고할 HoloLens 장치 나누고 개발자 컴퓨터에도 불구 하 고 다음 오류 메시지가 *개발자 모드* 사용 하도록 설정 합니다.
+이 문제의 근본 원인을 식별할 수 있었습니다. 배포 및 해당 HoloLens에서 응용 프로그램을 디버그 하려면 Visual Studio 2015 또는 Visual Studio 2017의 초기 릴리스를 사용 하 고 다음 이후에 사용 되는 최신 버전의 Visual Studio 2017 또는 Visual Studio 2019 동일한 HoloLens를 사용 하 여 사용자에 게 영향을 받습니다. 
 
-*DEP0100: 대상 장치에 개발자 모드가 사용 하도록 설정 해야 합니다. 개발자 라이선스를 얻지 못했습니다 <device IP> 80004005 오류로 인해 합니다.*
+Visual Studio의 최신 버전의 구성 요소를 새 버전을 배포 하지만 이전 버전의 파일이 최신 버전 실패를 일으키는 장치의 남은 됩니다.  이렇게 하면 다음 오류 메시지: DEP0100: 대상 장치에 개발자 모드가 사용 하도록 설정 해야 합니다. 개발자 라이선스를 얻지 못했습니다 <ip> 80004005 오류로 인해 합니다.
  
 **해결 방법**: 
+
+우리 팀은 현재 수정 프로그램을 개발 합니다. 그동안 문제를 해결 하 여 배포 및 디버깅을 차단 해제 하는 데 도움이 되는 다음 단계를 사용할 수 있습니다.  
+1. Visual Studio를 엽니다.
+2. 파일-> 새로 만들기-> 프로젝트
+3. Visual C# Windows-> 데스크톱 콘솔 앱 (.NET Framework)->
+4. 프로젝트 이름 (예: HoloLensDeploymentFix)를 지정 하 고 프레임 워크 이상으로 설정 되어 있는지 확인.NET Framework 4.5 확인을 클릭 합니다.
+5. 솔루션 탐색기에서 참조 노드를 마우스 오른쪽 단추로 클릭 한 다음 참조를 추가 ('찾아보기' 섹션을 클릭 하 고 '찾아보기...'를 클릭 합니다. button):
+    ```
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Deploy.dll
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\Microsoft.Tools.Connectivity.dll
+    C:\Program Files (x86)\Windows Kits\10\bin\10.0.18362.0\x86\SirepInterop.dll
+    ```
+    >[!NOTE]
+    >설치 10.0.18362.0 없다면 해야 하는 최신 버전을 사용 합니다.
  
-사용자가 해당 문제를 해결 하는 장치를 다시 설정 하는 모든 경우에 작동을 보장할 수 없습니다를 보고 합니다. 장치를 재설정 하는 방법을 찾을 수 있습니다 [여기](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens)합니다.
+6. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 추가 선택-> 기존 항목입니다.
  
-문제는 근본 원인인 즉시 업데이트로 제공 됩니다. 
+7. C:\Program Files (x86) \Windows Kits\10\bin\10.0.18362.0\x86 찾아 필터를 변경 합니다. "모든 파일 (\*.\*)"
+ 
+8. SirepClient.dll와 SshClient.dll를 선택 하 고 [추가]를 클릭 합니다.
+ 
+9. 찾아 (되어야 파일 목록의 아래쪽) 솔루션 탐색기에서 파일을 모두 선택 하 고 "항상 복사"를 "출력 디렉터리로 복사" 속성 창에서 변경
+ 
+10. 파일의 맨 위에 있는 'using' 문을 기존 목록에 다음을 추가 합니다. 
+    ```
+    using Microsoft.Tools.Deploy;
+    using System.Net;
+    ```
+ 
+11. "Static void Main(...)"를 내에서 다음 코드를 추가 합니다.
+    ```
+    RemoteDeployClient client = RemoteDeployClient.CreateRemoteDeployClient();
+    client.Connect(new ConnectionOptions()
+    {
+        Credentials = new NetworkCredential("DevToolsUser", string.Empty),
+        IPAddress = IPAddress.Parse(args[0])
+    });
+    client.RemoteDevice.DeleteFile(@"C:\Data\Users\DefaultAccount\AppData\Local\DevelopmentFiles\VSRemoteTools\x86\CoreCLR\mscorlib.ni.dll");
+    ```
+12. 빌드-> 솔루션 빌드
+ 
+13. 컴파일된.exe (예: C:\MyProjects\HoloLensDeploymentFix\bin\Debug)를 포함 하는 폴더에 명령 프롬프트를 열으십시오
+ 
+14. 실행 파일을 실행 하 고 장치의 IP 주소를 명령줄 인수를 제공 합니다.  (USB를 통해 연결 하는 경우 있습니다 수 127.0.0.1을 사용 하 여, 그렇지 않은 경우 장치의 WiFi IP 주소를 사용 합니다.)  예를 들어 "HoloLensDeploymentFix 127.0.0.1"
+ 
+15. 도구 (밖에 안 걸립니다 몇 초) 아무런 메시지 없이 종료 될 때, 배포 및 Visual Studio 2017에서 디버깅 하는 일을 할 이상 이제 수 있습니다.  도구를 계속된 사용할 필요는 없습니다.
+
+업데이트 사용 가능 해지면 추가로 제공 됩니다.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Microsoft Store 및 HoloLens에 앱을 시작 하는 문제
 
