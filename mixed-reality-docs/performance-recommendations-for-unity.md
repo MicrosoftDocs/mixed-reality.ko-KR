@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, cpu, gpu, hololens, 가비지 컬렉션, 렌더링
-ms.openlocfilehash: 37eac566a0315009330ac7fee96edd82348d6ba3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604912"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843340"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대 한 성능 권장 사항
 
@@ -72,8 +72,9 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 
->[!NOTE] Avoid GetComponent(string) <br/>
-> 사용 하는 경우  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)*, 몇 가지 다른 오버 로드 합니다. 형식 기반 구현 및 되지 문자열 기반 검색 오버 로드를 사용 하는 것이 반드시 합니다. 장면에 대 한 문자열에서 검색 하는 것은 비용 유형별 검색 보다 훨씬 더 합니다. <br/>
+>[!NOTE] 
+> Avoid GetComponent(string) <br/>
+> 사용 하는 경우  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , 몇 가지 다른 오버 로드 합니다. 형식 기반 구현 및 되지 문자열 기반 검색 오버 로드를 사용 하는 것이 반드시 합니다. 장면에 대 한 문자열에서 검색 하는 것은 비용 유형별 검색 보다 훨씬 더 합니다. <br/>
 > (좋음) 구성 요소 GetComponent (형식) <br/>
 > (Good) T GetComponent\<T>() <br/>
 > (불량) 구성 요소 GetComponent(string) > <br/>
@@ -225,24 +226,22 @@ Unity는 GPU 그리기 호출을 줄이기 위해 많은 정적 개체를 일괄
 
 ## <a name="gpu-performance-recommendations"></a>GPU 성능 권장 사항
 
-자세한 내용은 [Unity에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
+자세한 내용은 [Unity에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
 
-#### <a name="reduce-poly-count"></a>예: poly 수 축소
+### <a name="optimize-depth-buffer-sharing"></a>깊이 버퍼 공유 최적화
+
+일반적으로 사용할 수 있도록 좋습니다 **깊이 버퍼 공유** 아래에서 **플레이어 xr 하이 설정** 최적화 하기 위해 [홀로그램 안정성](Hologram-stability.md)합니다. 그러나이 설정을 사용 하 여 최종 단계의 reprojection 깊이 기반을 사용 하도록 설정 하는 경우 것이 좋습니다 선택 **16 비트 수준 형식** 대신 **24 비트 깊이 형식**합니다. 대역폭이 크게 줄어듭니다 (및 따라서 power) 16 비트 수준 버퍼는 깊이 버퍼 트래픽과 관련 된 합니다. 이 큰 힘 win 수는 있지만으로 작은 크기 범위를 사용 하 여 환경에만 적용 됩니다 [z 싸 우기](https://en.wikipedia.org/wiki/Z-fighting) 16 비트 24 비트 보다 발생할 가능성이 높습니다. 이러한 아티팩트를 방지 하려면의 근처/먼 클립 평면을 수정 합니다 [Unity 카메라](https://docs.unity3d.com/Manual/class-Camera.html) 낮은 전체 자릿수를 고려 하 합니다. HoloLens 기반 응용 프로그램에 대 한 Unity 기본 1000 m 대신 50 m의 먼 클립 면과 일반적으로 제거할 수 모든 z-대체 합니다.
+
+### <a name="reduce-poly-count"></a>예: poly 수 축소
 
 일반적으로 다각형 수가으로 감소
 1) 장면에서 개체 제거
 2) 특정된 메시에 대 한 다각형 줄어듭니다 자산 부분 제거
 3) 구현 된 [세부 정보 수준 (LOD) 시스템](https://docs.unity3d.com/Manual/LevelOfDetail.html) 멀리 동일한 기 하 도형의 다각형 낮은 버전을 사용 하 여 개체를 렌더링 하는 응용 프로그램에
 
-#### <a name="limit-overdraw"></a>제한 overdraw
+### <a name="understanding-shaders-in-unity"></a>Unity에서 이해 셰이더
 
-Unity에서 표시할 수 있습니다 하나로 전환 하 여 overdraw가 장면에 대 한 합니다 [ **그리기 모드 메뉴** ](https://docs.unity3d.com/Manual/ViewModes.html) 의 왼쪽된 위 모퉁이에 **장면 보기로** 선택 하 고 **Overdraw** .
-
-일반적으로 overdraw GPU에 전송 되기 전에 미리 개체를 선별 하 여 완화할 수 있습니다. 구현 세부 정보를 제공 하는 unity [폐색 고르기](https://docs.unity3d.com/Manual/OcclusionCulling.html) 해당 엔진에 대 한 합니다.
-
-#### <a name="understanding-shaders-in-unity"></a>Unity에서 이해 셰이더
-
-성능에서 셰이더를 비교할 쉽게 근사치가 각 작업의 평균 수를 확인 하기 위해 런타임 시 실행 합니다. 이 Unity의 매우 쉽게 수행할 수 있습니다.
+성능에서 셰이더를 비교할 쉽게 근사치가 각 작업의 평균 수를 확인 하기 위해 런타임 시 실행 합니다. 이 Unity에서 쉽게 수행할 수 있습니다.
 
 1) 셰이더 자산을 선택 하거나, 재질을 선택한 다음 검사기 창의 오른쪽 위 모서리에서 기어 아이콘을 선택 하 고 다음 **"셰이더 선택"**
 
@@ -255,11 +254,29 @@ Unity에서 표시할 수 있습니다 하나로 전환 하 여 overdraw가 장�
 
     ![Unity 표준 셰이더 작업](images/unity-standard-shader-compilation.png)
 
-##### <a name="unity-standard-shader-alternatives"></a>Unity 표준 셰이더 대안
+#### <a name="optmize-pixel-shaders"></a>최적화 픽셀 셰이더
 
-실제로 기반된 렌더링 (PBR) 또는 다른 고품질 셰이더를 사용 하는 대신 확인는 뛰어난 성능을 활용 하 고 저렴 한 셰이더입니다. [혼합 현실 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity) 제공을 [표준 셰이더](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader) 혼합된 현실 프로젝트에 대 한 최적화 되었습니다.
+위의 메서드를 사용 하 여 컴파일된 통계 결과 보면 합니다 [조각 셰이더](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) 보다 더 많은 작업을 일반적으로 실행 됩니다는 [꼭 짓 점 셰이더](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) 평균입니다. 픽셀 셰이더 라고도 조각 셰이더를 꼭 짓 점 셰이더는만 실행된 꼭 짓 점별 화면으로 그려지고 모든 메시의 출력 화면의 픽셀 당 실행 됩니다. 
+
+따라서 뿐 아니라 조각 셰이더 없는 꼭 짓 점 셰이더 보다 자세한 지침은 모든 조명 계산 때문에, 조각 셰이더는 거의 항상 큰 데이터 집합에서 실행 됩니다. 예를 들어 2 개의 k 이미지별 2k 화면 출력을 사용 하는 경우 다음 조각 셰이더 발생할 수 있습니다 2, 000 * 2, 000 = 4,000,000 실행 시간입니다. 두 눈을 렌더링 하는 경우이 수에는 두 개의 화면 되므로 두 배가 합니다. 혼합된 현실 응용 프로그램을 여러 전달, 전체 화면 효과 사후 처리 또는 같은 픽셀에 여러 메시 렌더링 있으면이 번호는 크게 증가 합니다. 
+
+따라서 조각 셰이더 작업 수가 감소 하므로 일반적으로 제공할 수 훨씬 큰 성능 향상 꼭 짓 점 셰이더에서 최적화를 통해.
+
+#### <a name="unity-standard-shader-alternatives"></a>Unity 표준 셰이더 대안
+
+실제로 기반된 렌더링 (PBR) 또는 다른 고품질 셰이더를 사용 하는 대신 확인는 뛰어난 성능을 활용 하 고 저렴 한 셰이더입니다. [혼합 현실 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity) 제공 합니다 [MRTK 표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) 혼합된 현실 프로젝트에 대 한 최적화 되었습니다.
 
 Unity는 표준 Unity 셰이더에 켜지, 활성화 하는 꼭 짓 점, 훨씬 더 빠르게 비교 하는 간소화 된 셰이더 확산, 및 기타 옵션 또한 제공 합니다. 참조 [사용 및 기본 제공 셰이더 성능](https://docs.unity3d.com/Manual/shader-Performance.html) 좀 더 자세한 내용은 합니다.
+
+#### <a name="shader-preloading"></a>셰이더를 미리 로드
+
+사용 하 여 *셰이더를 미리 로드* 및 최적화 하기 위해 다른 트릭 [셰이더 로드 시간](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html)합니다. 특히 셰이더를 미리 로드 의미 런타임 셰이더 컴파일으로 인해 모든 장애 표시 되지 않습니다.
+
+### <a name="limit-overdraw"></a>제한 overdraw
+
+Unity에서 표시할 수 있습니다 하나로 전환 하 여 overdraw가 장면에 대 한 합니다 [ **그리기 모드 메뉴** ](https://docs.unity3d.com/Manual/ViewModes.html) 의 왼쪽된 위 모퉁이에 **장면 보기로** 선택 하 고 **Overdraw** .
+
+일반적으로 overdraw GPU에 전송 되기 전에 미리 개체를 선별 하 여 완화할 수 있습니다. 구현 세부 정보를 제공 하는 unity [폐색 고르기](https://docs.unity3d.com/Manual/OcclusionCulling.html) 해당 엔진에 대 한 합니다.
 
 ## <a name="memory-recommendations"></a>메모리 권장 사항
 
