@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Spectator View, iPhone, iOS, iPad, OpenCV, 카메라, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, 데모, 레코드
-ms.openlocfilehash: 02088d7b218a25c72f2eb98ae24c85a90e6e5b86
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293602"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387672"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 및 HoloLens Spectator 보기 2
 
@@ -20,7 +20,7 @@ ms.locfileid: "68293602"
 ## <a name="overview"></a>개요
 
 HoloLens를 제공 하는 경우에는 자주 제공 하지 않는 사용자가 불가사의를 경험 하지 못할 수 있습니다. Spectator 보기를 사용 하면 다른 사용자가 해당 지역에서 HoloLens 사용자에 게 표시 되는 2D 화면을 볼 수 있습니다.
-Spectator View는 모바일 장치를 사용 하 여 HD에 holograms을 기록 하는 빠르고 경제적인 접근 방법을 제공 합니다. 또한 holograms에 대 한 전문적인 품질 기록을 제공 합니다.
+Spectator View는 모바일 장치를 사용 하 여 HD에 holograms을 기록 하는 빠르고 경제적인 접근 방법을 제공 합니다. 또한 비디오 카메라를 사용 하 여 holograms에 대 한 전문적인 품질 기록을 제공 합니다.
 
 ## <a name="key-resources"></a>주요 리소스
 
@@ -28,7 +28,7 @@ Spectator View는 모바일 장치를 사용 하 여 HD에 holograms을 기록 �
 * [**마이크로아키텍처**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
 * [**표본의**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 * [**모바일 설정 지침**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**DSLR 설치 지침**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.DSLR.md)
+* [**비디오 카메라 설치 지침**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
 
 ## <a name="use-cases"></a>사용 사례
 * IPhone 또는 Android 장치를 사용 하 여 혼합 현실 환경을 기록할 수 있습니다. 전체 HD를 기록 하 고 holograms 및 그림자에 앤티앨리어싱을 적용 합니다. Holograms 비디오를 빠르게 캡처하는 비용 효율적이 고 빠른 방법입니다.
@@ -48,15 +48,15 @@ Spectator View는 모바일 장치를 사용 하 여 HD에 holograms을 기록 �
 
 다음 표에서는 다양 한 Spectator 뷰 기능 및 해당 기능을 보여 줍니다. 비디오 녹음 요구에 가장 적합 한 옵션을 선택 합니다.
 
-|                                      | 휴대폰                  |                    DSLR 카메라              |
+|                                      | 휴대폰                  |                    비디오 카메라              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
-| HD 품질                           |         전체 HD         |        전문 품질 filming (DSLR에 의해 결정 됨)      |
+| HD 품질                           |         전체 HD         |        전문 품질 filming (비디오 카메라에 의해 결정 됨)      |
 | 간편한 카메라 이동                 |            ✔            |                      ✔                      |
 | 세 번째 사용자 뷰                    |            ✔            |                      ✔                      |
 | 화면에 스트리밍할 수 있습니다.           |            ✔            |                      ✔                      |
 | 이식 가능                             |            ✔            |                                             |
 | 무선                             |            ✔            |                                             |
-| 추가 필수 하드웨어         |     Android 휴대폰, iPhone    | HoloLens + Rig + Tripod + DSLR + PC + Unity |
+| 추가 필수 하드웨어         |     Android 휴대폰, iPhone    | HoloLens + Rig + Tripod + 비디오 카메라 + PC + Unity |
 | 하드웨어 투자                  |           낮음            |                     높음                    |
 | 플랫폼 간                       |           Android, iOS   |                                             |
 | 동기화 된 콘텐츠                 |            ✔            |                      ✔                      |
