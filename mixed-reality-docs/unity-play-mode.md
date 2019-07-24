@@ -5,32 +5,32 @@ author: JonMLyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, 원격, holographic remoting, holographic 원격 플레이어
+keywords: Unity, remoting, holographic remoting, holographic 원격 플레이어
 ms.openlocfilehash: c118c4af61c6eb2706ef851a6654c18ff7313453
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597825"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548720"
 ---
 # <a name="unity-play-mode"></a>Unity 재생 모드
 
-Unity 프로젝트에서 작동 하는 빠른 방법을 "재생 모드"를 사용 하는 것입니다. 이 앱에서 로컬로 실행 Unity 편집기에서 PC. Unity Holographic 원격을 사용 하 여 실제 HoloLens 장치에서 콘텐츠 미리 보기에 빠른 방법을 제공 합니다.
+Unity 프로젝트에서 빠르게 작업 하는 방법은 "재생 모드"를 사용 하는 것입니다. 그러면 PC의 Unity 편집기에서 로컬로 앱이 실행 됩니다. Unity는 Holographic 원격 기능을 사용 하 여 실제 HoloLens 장치에서 콘텐츠를 빠르게 미리 볼 수 있는 방법을 제공 합니다.
 
-## <a name="unity-play-mode-with-holographic-remoting"></a>Holographic Remoting 사용 하 여 unity 재생 모드
+## <a name="unity-play-mode-with-holographic-remoting"></a>Holographic 원격을 사용 하는 Unity 재생 모드
 
-Holographic Remoting을 사용 하 여 PC에 Unity 편집기에서 실행 되는 동안는 HoloLens에 앱을 경험할 수 있습니다. 에 HoloLens 게이즈, 제스처, 음성 및 공간 매핑 입력 사용자 PC에 보내집니다. 렌더링 된 프레임에 HoloLens로 다시 전송 됩니다. 이것이 신속 하 게 빌드하고 전체 프로젝트를 배포 하지 않고 앱을 디버그 하는 좋은 방법입니다.
-1. 에 HoloLens로 이동 합니다 **Microsoft Store** 하 고 설치를 **[Holographic 원격 플레이어](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** 앱.
-2. 에 HoloLens에서 시작 합니다 **Holographic 원격 플레이어** 앱.
-3. Unity로 이동 합니다 **창을** 메뉴를 선택 **Holographic 에뮬레이션**합니다.
-4. 설정할 **에뮬레이션 모드** 하 **장치에 원격**합니다.
-5. 에 대 한 **원격 컴퓨터**, 프로그램 HoloLens의 IP 주소를 입력 합니다.
-6. **연결**을 클릭합니다. 표시 되어야 **연결 상태** 변경 **연결 됨** 이동는 HoloLens에 빈 화면을 표시 합니다.
-7. 클릭 합니다 **재생** 단추 재생 모드를 시작 하 여 HoloLens에 앱을 경험 합니다.
+Holographic Remoting을 사용 하면 PC의 Unity 편집기에서 실행 되는 동안 HoloLens에서 앱을 경험해 볼 수 있습니다. 응시, 제스처, 음성 및 공간 매핑 입력은 HoloLens에서 PC로 전송 됩니다. 그러면 렌더링 된 프레임이 HoloLens로 다시 전송 됩니다. 이 방법은 전체 프로젝트를 빌드하고 배포 하지 않고도 신속 하 게 앱을 디버그할 수 있는 좋은 방법입니다.
+1. HoloLens에서 **Microsoft Store** 로 이동 하 여 **[Holographic Remoting Player](https://www.microsoft.com/store/p/holographic-remoting-player/9nblggh4sv40)** 앱을 설치 합니다.
+2. HoloLens에서 **Holographic Remoting Player** 앱을 시작 합니다.
+3. Unity에서 **창** 메뉴로 이동 하 여 **Holographic 에뮬레이션**을 선택 합니다.
+4. **에뮬레이션 모드** 를 **원격에서 장치로**설정 합니다.
+5. **원격 컴퓨터**의 경우 HOLOLENS의 IP 주소를 입력 합니다.
+6. **연결**을 클릭합니다. **연결 상태가** **연결 됨** 으로 변경 되 고 HoloLens에서 화면이 비어 있는 것을 볼 수 있습니다.
+7. 재생 모드를 시작 하 고 HoloLens에서 앱을 경험 하려면 **재생** 단추를 클릭 합니다.
 
-Holographic Remoting 빠른 PC 및 Wi-fi 연결에 필요합니다. 참조 [Holographic 원격 플레이어](holographic-remoting-player.md) 전체 세부 정보에 대 한 합니다.
+Holographic Remoting을 사용 하려면 고속 PC 및 Wi-fi 연결이 필요 합니다. 자세한 내용은 [Holographic Remoting Player](holographic-remoting-player.md) 를 참조 하세요.
 
-최상의 결과 앱이 올바르게 설정 되었는지 확인 합니다 [지점 집중](focus-point-in-unity.md)합니다. 이렇게 하면 장면 무선 연결의 대기 시간을 가장 잘 맞게 Holographic Remoting 수 있습니다.
+최상의 결과를 위해 앱이 [포커스 지점을](focus-point-in-unity.md)적절히 설정 하는지 확인 합니다. 이렇게 하면 Holographic는 무선 연결의 대기 시간에 맞게 장면을 최적으로 조정 하는 데 도움이 됩니다.
 
 ## <a name="see-also"></a>관련 항목
-* [Holographic Remoting 플레이어](holographic-remoting-player.md)
+* [홀로그램 원격 플레이어](holographic-remoting-player.md)

@@ -1,11 +1,11 @@
 ---
-title: MR 및 311-Microsoft Graph, Azure
-description: Microsoft Graph를 활용 하 고 혼합된 현실 응용 프로그램에서 생산성을 높이 데이터에 연결 하는 방법을 알아보려면이 과정을 완료 합니다.
+title: MR 및 Azure 311-Microsoft Graph
+description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Microsoft Graph 활용 하 고 생산성을 높이는 데이터에 연결 하는 방법을 알아보세요.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure, 혼합 현실, academy, unity, 자습서, api, microsoft graph, hololens, 몰입 형, vr
+keywords: azure, mixed reality, 아카데미, unity, 자습서, api, microsoft graph, hololens, 몰입 형, vr
 ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -14,24 +14,24 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67694522"
 ---
 >[!NOTE]
->혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
-# <a name="mr-and-azure-311---microsoft-graph"></a>MR 및 311-Microsoft Graph, Azure
+# <a name="mr-and-azure-311---microsoft-graph"></a>MR 및 Azure 311-Microsoft Graph
 
-이 과정에서 사용 하는 방법을 배우게 됩니다 *Microsoft Graph* 혼합된 현실 응용 프로그램에서 보안 인증을 사용 하 여 Microsoft 계정에 로그인 합니다. 그런 다음 검색 하 고 예약 된 회의 응용 프로그램 인터페이스에 표시 됩니다.
+이 과정에서는 혼합 현실 응용 프로그램 내에서 보안 인증을 사용 하 여 Microsoft 계정에 로그인 하는 데 *Microsoft Graph* 를 사용 하는 방법을 알아봅니다. 그런 다음 응용 프로그램 인터페이스에서 예약 된 모임을 검색 하 고 표시 합니다.
 
 ![](images/AzureLabs-Lab311-00.png)
 
-*Microsoft Graph* 는 여러 Microsoft 서비스에 액세스할 수 있도록 Api의 집합입니다. Microsoft에 설명 합니다 Microsoft Graph 관계에 의해 연결 된 리소스의 행렬으로 응용 프로그램을 모든 종류의 연결 된 사용자 데이터에 액세스할 수 있도록 의미 합니다. 자세한 내용은 참조는 [Microsoft Graph 페이지](https://developer.microsoft.com/graph)합니다.
+*Microsoft Graph* 은 다양 한 Microsoft 서비스에 액세스할 수 있도록 설계 된 api 집합입니다. Microsoft는 관계를 통해 연결 되는 리소스의 행렬로 Microsoft Graph에 대해 설명 합니다. 즉, 응용 프로그램에서 모든 종류의 연결 된 사용자 데이터에 액세스할 수 있습니다. 자세한 내용은 [Microsoft Graph 페이지](https://developer.microsoft.com/graph)를 참조 하세요.
 
-개발 응시를 안전 하 게 Microsoft 계정에 로그인 하 라는 메시지가 나타납니다 구를 누른 다음에 사용자가 지시 하는 위치는 앱을 만드는 포함 됩니다. 계정에 로그인 한 사용자를 하루에 예약 된 회의의 목록을 볼 수 됩니다.
+개발에는 사용자에 게 암호를 입력 하 라는 메시지가 표시 된 후 구를 탭 하 여 사용자에 게 안전 하 게 Microsoft 계정에 로그인 하 라는 메시지가 표시 되는 앱을 만들 수 있습니다. 자신의 계정에 로그인 한 후에는 사용자가 하루에 예약 된 모임 목록을 볼 수 있습니다.
 
-이 과정을 마치면 다음을 수행 하는 일을 할 수는 HoloLens 응용 프로그램을 혼합된 현실이 제공 됩니다.
+이 과정을 완료 하면 다음과 같은 작업을 수행할 수 있는 혼합 현실 HoloLens 응용 프로그램이 만들어집니다.
 
-1.  사용자 (로그인을 다시 앱으로 다시를 앱 외부로 이동) Microsoft 계정에 로그인 하 라는 메시지를 표시할 개체 탭 탭 제스처를 사용 합니다.
-2.  하루에 예약 된 회의의 목록을 봅니다. 
+1.  탭 제스처를 사용 하 여 개체를 탭 합니다. 그러면 사용자에 게 Microsoft 계정에 로그인 하 라는 메시지가 표시 됩니다 .이를 통해 로그인 하 고 다시 앱으로 다시 이동 합니다.
+2.  하루에 예약 된 모임 목록을 표시 합니다. 
 
-응용 프로그램에서는 사용자의 몫 디자인을 사용 하 여 결과에서는 통합 하는 방법에 대 한 합니다. 이 과정은 Unity 프로젝트를 사용 하 여 Azure 서비스를 통합 하는 방법을 알려 주기 위해 설계 되었습니다. 혼합된 현실 응용 프로그램을 강화 하기 위해이 과정에서 얻는 지식을 사용 하는 것입니다.
+응용 프로그램에서 결과를 디자인과 통합 하는 방법을 사용자가 결정 합니다. 이 과정은 Azure 서비스를 Unity 프로젝트와 통합 하는 방법을 배울 수 있도록 설계 되었습니다. 이 과정에서 얻은 지식을 사용 하 여 혼합 현실 응용 프로그램을 개선 하는 것은 사용자의 작업입니다.
 
 ## <a name="device-support"></a>장치 지원
 
@@ -39,198 +39,198 @@ ms.locfileid: "67694522"
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 311 Azure: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td> MR 및 Azure 311: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 > [!NOTE]
-> 이 자습서는 Unity 사용 하 여 기본 경험이 있는 개발자 용으로 설계 하 고 C#입니다. 또한 주의 필수 구성 요소 및이 문서에서 작성 된 지침을 나타내는 새로운 테스트 되었으며 (2018 년 7 월) 작성 시점에 확인 합니다. 내에서 나열 된 사용 가능한 최신 소프트웨어를 사용 하는 합니다 [도구를 설치](install-the-tools.md) 없습니다 가정이 과정에서 정보를 나열 된 것 보다 최신 소프트웨어에 맞게 보면 일치 완벽 하 게 됩니다 있지만 문서 아래.
+> 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (7 월 2018)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
 
-다음 하드웨어 및 소프트웨어가이 과정에 대 한 것이 좋습니다.
+이 과정에는 다음 하드웨어 및 소프트웨어를 권장 합니다.
 
-- PC 개발
-- [Windows 10 Fall Creators Update (또는 이상) 사용 하도록 설정 하는 개발자 모드를 사용 하 여](install-the-tools.md#installation-checklist)
+- 개발 PC
+- [개발자 모드를 사용 하는 Windows 10이 하 버전의 작성자 업데이트 (또는 이상)](install-the-tools.md#installation-checklist)
 - [최신 Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](install-the-tools.md#installation-checklist)
-- A [Microsoft HoloLens](hololens-hardware-details.md) 개발자 모드를 설정 하 여
-- Azure 설정 및 Microsoft Graph 데이터 검색에 대 한 인터넷 액세스
+- 개발자 모드를 사용 하는 [Microsoft HoloLens](hololens-hardware-details.md)
+- Azure 설정 및 Microsoft Graph 데이터 검색을 위한 인터넷 액세스
 - 유효한 **Microsoft 계정** (개인 또는 회사/학교)
-- 동일한 Microsoft 계정을 사용 하 여 현재 날짜에 대해 예약 된 몇 회의
+- 동일한 Microsoft 계정을 사용 하 여 현재 날짜에 대해 예약 된 몇 개의 모임
 
 ### <a name="before-you-start"></a>시작하기 전 주의 사항
 
-1.  이 프로젝트를 구축 하는 문제 발생을 방지 하려면 것이 좋습니다 루트 또는 루트 거의 폴더에이 자습서에 언급 된 프로젝트를 만든 (오래 폴더 경로 빌드 시에는 문제가 발생할 수 있습니다).
-2.  설정 하 고 여 HoloLens를 테스트 합니다. 에 HoloLens 등록 설정을 지원 해야 하는 경우 [HoloLens 설치 문서를 참조 하도록](https://docs.microsoft.com/hololens/hololens-setup)합니다. 
-3.  (때로는 도움이 각 사용자에 대 한 이러한 작업을 수행) 새 HoloLens 앱 개발을 시작할 때 보정 및 센서 튜닝을 수행 하는 것이 좋습니다. 
+1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
+2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
+3.  새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음). 
 
-보정에 대 한 도움말을 따라이 [HoloLens 보정 문서 링크](calibration.md#hololens)합니다.
+보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.
 
-센서 조정에 대 한 도움말을 따라이 [HoloLens 센서 튜닝 문서 링크](sensor-tuning.md)합니다.
+센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
-## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>1-장 응용 프로그램 등록 포털에서 앱 만들기
+## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>1 장-응용 프로그램 등록 포털에서 앱 만들기
 
-시작 하려면를 만들어 응용 프로그램에 등록 해야 합니다 **응용 프로그램 등록 포털**합니다.
+먼저 응용 프로그램 **등록 포털**에서 응용 프로그램을 만들고 등록 해야 합니다.
 
-이 챕터에 수도 있습니다. 호출을 수행할 수 있도록 서비스 키 *Microsoft Graph* 계정 콘텐츠를 액세스할 수 있습니다.
+이 장에서는 계정 콘텐츠에 액세스 하기 위해 *Microsoft Graph* 에 대 한 호출을 수행할 수 있도록 하는 서비스 키를 찾을 수도 있습니다.
 
-1.  로 이동 합니다 [Microsoft 응용 프로그램 등록 포털](https://apps.dev.microsoft.com) 및 Microsoft 계정으로 로그인 합니다. 로그인 하면, 리디렉션됩니다 하는 **응용 프로그램 등록 포털**합니다.
+1.  [Microsoft 응용 프로그램 등록 포털](https://apps.dev.microsoft.com) 로 이동 하 여 microsoft 계정으로 로그인 합니다. 로그인 하면 **응용 프로그램 등록 포털로**리디렉션됩니다.
 
-2.  에 **내 응용 프로그램** 섹션에서 단추를 클릭 **앱 추가**합니다.
+2.  **내 응용 프로그램** 섹션에서 **앱 추가**단추를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-01.png)![](images/AzureLabs-Lab311-02.png)
 
     > [!IMPORTANT]
-    > 합니다 **응용 프로그램 등록 포털** 여부 이전에 작업을 수행한에 따라 다르게 보일 수 있습니다 *Microsoft Graph*합니다. 아래 스크린샷은 이러한 서로 다른 버전을 표시 합니다.
+    > **응용 프로그램 등록 포털** 은 이전에 *Microsoft Graph*작업을 수행 했는지 여부에 따라 달라질 수 있습니다. 아래 스크린샷에서는 이러한 다양 한 버전을 표시 합니다.
 
-3.  응용 프로그램 및 클릭에 대 한 이름 추가 **만들기**합니다.
+3.  응용 프로그램의 이름을 추가 하 고 **만들기**를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-03.png)
 
-4.  응용 프로그램을 만든 후 응용 프로그램 기본 페이지로 리디렉션됩니다. 복사 합니다 **응용 프로그램 Id** 안전한 곳에이 값을 메모를 코드에서 곧 사용 됩니다.
+4.  응용 프로그램을 만든 후에는 응용 프로그램 기본 페이지로 리디렉션됩니다. **응용 프로그램 Id** 를 복사 하 고 안전한 위치에이 값을 기록해 두어야 합니다. 코드에서 바로 사용 합니다.
 
     ![](images/AzureLabs-Lab311-04.png)
 
-5.  에 **플랫폼** 섹션에, 반드시 **네이티브 응용 프로그램** 표시 됩니다. 하는 경우 *되지* 클릭할 **플랫폼 추가** 선택한 **네이티브 응용 프로그램**합니다.
+5.  **플랫폼** 섹션에서 **네이티브 응용 프로그램이** 표시 되는지 확인 합니다. **플랫폼 추가** *를 클릭 하* 고 **네이티브 응용 프로그램**을 선택 합니다.
 
     ![](images/AzureLabs-Lab311-05.png)
 
-6.  같은 페이지에 이라는 섹션에서 아래로 스크롤하여 **Microsoft Graph 권한** 응용 프로그램에 대 한 사용 권한을 추가 해야 합니다. 클릭할 **추가** 옆에 **위임 된 권한**합니다.
+6.  동일한 페이지에서 아래로 스크롤하고 **Microsoft Graph 권한** 섹션에서 응용 프로그램에 대 한 추가 권한을 추가 해야 합니다. **위임 된 권한**옆의 **추가** 를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-06.png)
 
-7.  사용자의 일정에 액세스 하도록 응용 프로그램을 원하므로 확인란 호출 **Calendars.Read** 클릭 **확인**합니다.
+7.  응용 프로그램에서 사용자의 일정에 액세스 하도록 하려면 일정 확인란을 선택 하 고 **확인**을 클릭 합니다 **.**
 
     ![](images/AzureLabs-Lab311-07.png)
 
-8.  아래로 스크롤하여을 클릭 합니다 **저장** 단추입니다.
+8.  아래쪽으로 스크롤하고 **저장** 단추를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-08.png)
 
-9.  저장을 확인할 수는 및에서 로그 아웃 수를 **응용 프로그램 등록 포털**합니다.
+9.  저장이 확인 되 고 **응용 프로그램 등록 포털**에서 로그 아웃할 수 있습니다.
 
 ## <a name="chapter-2---set-up-the-unity-project"></a>2 장-Unity 프로젝트 설정
 
-다음은 일반적인 등록 혼합된 현실 등을 사용 하 여 개발 하는 것에 대 한와 따라서 다른 프로젝트에 대 한 좋은 템플릿입니다.
+다음은 혼합 현실를 사용 하 여 개발 하기 위한 일반적인 설정으로, 다른 프로젝트에 적합 한 템플릿입니다.
 
-1.  오픈 *Unity* 누릅니다 **새로 만들기**합니다.
+1.  *Unity* 를 열고 **새로 만들기**를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-09.png)
 
-2.  Unity 프로젝트 이름을 제공 해야 합니다. 삽입 **MSGraphMR**합니다. 프로젝트 템플릿은 설정 되어 있는지 확인 **3D**합니다. 설정 된 **위치** 적절 한 위치로 (기억에 루트 디렉터리에 가까울수록이 더 좋습니다). 그런 다음 클릭 **프로젝트 만들기**합니다.
+2.  Unity 프로젝트 이름을 제공 해야 합니다. **Msgraphmr**을 삽입 합니다. 프로젝트 템플릿이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집할** > **기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정** **편집** > 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  로 이동 **파일** > **빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하는 단추입니다.
+4.  **파일**    빌드 설정으로 이동 하 고 유니버설 Windows 플랫폼를 선택한 후 플랫폼 전환 단추를 클릭 하 여 선택 항목을 적용 합니다. > 
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  있는 동안 **파일** > **빌드 설정**, 있는지 확인 합니다.
+5.  **파일** > **빌드 설정**에서 다음을 확인 합니다.
 
-    1. **장치를 대상** 로 설정 된 **HoloLens**
-    2. **빌드 형식** 로 설정 된 **D3D**
-    3. **SDK** 로 설정 된 **가장 최근에 설치 된**
-    4. **Visual Studio 버전** 로 설정 된 **가장 최근에 설치 된**
-    5. **빌드 및 실행** 로 설정 된 **로컬 컴퓨터**
-    6. 장면 저장 하 고 빌드에 추가 합니다.
+    1. **대상 장치가** **HoloLens** 로 설정 됨
+    2. **빌드 형식이** **D3D** 로 설정 됩니다.
+    3. **SDK** 가 **최신 설치** 로 설정 됨
+    4. **Visual Studio 버전이** **최신 설치** 로 설정 됨
+    5. **빌드 및 실행** 이 **로컬 컴퓨터로** 설정 됨
+    6. 장면을 저장 하 고 빌드에 추가 합니다.
 
-        1. 선택 하 여이 작업을 수행할 **열고 장면 추가**합니다. 창 저장 나타납니다.
+        1. 이렇게 하려면 열려 있는 **장면 추가**를 선택 합니다. 저장 창이 표시 됩니다.
 
             ![](images/AzureLabs-Lab311-13.png)
 
-        2. 따라서 모든 미래를 장면에 대 한 새 폴더를 만듭니다. 선택 된 **새 폴더** 새 폴더를 만들려면 단추 이름을 **장면**.
+        2. 이에 대 한 새 폴더 및 향후 장면을 만듭니다. 새 **폴더** 단추를 선택 하 여 새 폴더를 만들고 이름을 **장면**으로 만듭니다.
 
             ![](images/AzureLabs-Lab311-14.png)
 
-        3. 새로 만든 열 **장면** 폴더를 선택한 다음는 *파일 이름*: 텍스트 필드에 입력 **MR_ComputerVisionScene**, 클릭 **저장** .
+        3. 새로 만든 **장면** 폴더를 연 다음 *파일 이름*: 텍스트 필드에 **MR_ComputerVisionScene**를 입력 하 고 **저장**을 클릭 합니다.
 
             ![](images/AzureLabs-Lab311-15.png)
 
             > [!IMPORTANT] 
-            > 주의 내에서 Unity 장면에 저장 해야 합니다 *자산* 폴더를 Unity 프로젝트와 연결 해야 합니다. 백그라운드에서 폴더 (및 다른 유사한 폴더)를 만들기 Unity 프로젝트를 구성 하는 일반적인 방법입니다.
+            > Unity 프로젝트와 연결 되어 있어야 하므로 *자산* 폴더 내에 unity 장면을 저장 해야 합니다. 배경 폴더 (및 기타 유사한 폴더)를 만드는 것은 Unity 프로젝트를 구조화 하는 일반적인 방법입니다.
 
-    7.  설정에 남아 *빌드 설정*, 지금은 기본값으로 유지 해야 합니다.
+    7.  *빌드 설정*의 나머지 설정은 지금은 기본값으로 남겨 두어야 합니다.
 
-6.  에 *빌드 설정* 창을 **플레이어 설정** 단추를 공간에 관련 된 패널이 열립니다이 위치를 *검사기* 위치한. 
+6.  *빌드 설정* 창에서 **플레이어 설정** 단추를 클릭 하면 *검사기* 가 있는 공간에서 관련 패널이 열립니다. 
 
     ![](images/AzureLabs-Lab311-16.png)
 
 7. 이 패널에서 몇 가지 설정을 확인 해야 합니다.
 
-    1. 에 **기타 설정** 탭:
+    1. **기타 설정** 탭에서 다음을 수행 합니다.
 
-        1.  **스크립팅** **런타임 버전** 있어야 **실험적** (.NET 4.6 동등), 편집기를 다시 시작 해야를 트리거하는 합니다.
+        1.  **스크립팅** **런타임 버전** 은 **실험적** (.net 4.6와 동일) 이어야 하며,이 경우 편집기를 다시 시작 해야 합니다.
 
-        2. **백 엔드를 스크립팅** 있어야 **.NET**
+        2. **Scripting 백엔드** 는 **.net** 이어야 합니다.
 
-        3. **API 호환성 수준** 있어야 **.NET 4.6**
+        3. **API 호환성 수준은** **.net 4.6** 이어야 합니다.
 
             ![](images/AzureLabs-Lab311-17.png)
 
-    2.  내 합니다 **게시 설정** 탭의 **기능**, 확인:
+    2.  **게시 설정** 탭의 **기능**아래에서 다음을 확인 합니다.
 
         - **InternetClient**
 
             ![](images/AzureLabs-Lab311-18.png)
 
-    3.  패널을 아래쪽의 **xr 하이 설정을** (아래에서 확인할 **게시 설정**), 확인 **지원 되는 가상 현실**, 있는지 확인 합니다 **Windows Mixed Reality SDK** 추가 됩니다.
+    3.  패널의 아래쪽에서 **XR 설정** ( **게시 설정**아래에 있음)에서 **가상 현실 지원**을 확인 하 고 **Windows Mixed Reality SDK** 가 추가 되었는지 확인 합니다.
 
         ![](images/AzureLabs-Lab311-19.png)
 
-8.  년대 *빌드 설정*를 *Unity C# 프로젝트* 가 더 이상 회색;이 옆의 확인란을 선택 합니다.
+8.  *빌드 설정*으로 돌아가서 *Unity C# 프로젝트가* 더 이상 회색으로 표시 되지 않습니다. 이 옆의 확인란을 선택 합니다.
 
-9.  닫기 합니다 *빌드 설정* 창입니다.
+9.  *빌드 설정* 창을 닫습니다.
 
-10.  장면 및 프로젝트 저장 (**파일** > **장면 저장 파일** > **프로젝트 저장**).
+10.  장면 및 프로젝트를 저장 합니다 (**파일** > **저장 장면/파일** > **저장 프로젝트**).
 
-## <a name="chapter-3---import-libraries-in-unity"></a>3 장-Unity에서 가져오기 라이브러리
+## <a name="chapter-3---import-libraries-in-unity"></a>3 장-Unity에서 라이브러리 가져오기
 
 > [!IMPORTANT]
-> 건너뛸 하려는 경우는 *Unity 설정* 이 구성 요소, 과정 및 코드로 바로 계속, 다운로드 자유롭게 [311.unitypackage-MR-Azure](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage),으로 프로젝트로 가져올를 [ **사용자 지정 패키지**](https://docs.unity3d.com/Manual/AssetPackages.html)를 계속 진행 한 다음 [5 장](#chapter-5---create-meetingsui-class)합니다.
+> 이 과정의 *Unity 설정* 구성 요소를 건너뛰고 계속 해 서 코드를 계속 사용 하려면이 [311. unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/Azure-MR-311.unitypackage)를 다운로드 하 여 프로젝트에 [**사용자 지정 패키지로**](https://docs.unity3d.com/Manual/AssetPackages.html)가져온 후 [5 장에서 계속 진행 합니다. ](#chapter-5---create-meetingsui-class).
 
-사용 하도록 *Microsoft Graph* 해야 하는 Unity 내에서 사용 합니다 **Microsoft.Identity.Client** DLL입니다. 그러나 Microsoft Graph SDK를 사용 하는 것, 즉 프로젝트 post-build 편집 Unity 프로젝트를 구성한 후에 NuGet 패키지를 추가 해야 합니다 합니다. Unity를 직접 필요한 Dll을 가져오는 간단한 간주 됩니다.
+Unity 내에서 *Microsoft Graph* 를 사용 하려면 **Microsoft. Identity. Client** DLL을 사용 해야 합니다. 그러나 Microsoft Graph SDK를 사용할 수 있지만 Unity 프로젝트를 빌드한 후에 NuGet 패키지를 추가 해야 합니다 (프로젝트 빌드 후 편집). 필요한 Dll을 Unity로 직접 가져오는 것이 더 간단 합니다.
 
 > [!NOTE]
-> 플러그 인 가져오기 후 다시 구성 해야 하는 Unity의 알려진된 문제는 현재 합니다. 이러한 단계 (4-7이 단원의) 버그가 해결 된 후 필요한 더 이상.
+> 현재 Unity에는 가져온 후 플러그 인을 다시 구성 해야 하는 알려진 문제가 있습니다. 이러한 단계 (이 섹션에서는 4-7)는 버그가 해결 된 후 더 이상 필요 하지 않습니다.
 
-가져오려는 *Microsoft Graph* 고유한 프로젝트로 [MSGraph_LabPlugins.zip 파일 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage)합니다. 테스트 된 라이브러리의 버전을 사용 하 여이 패키지를 만들었습니다.
+사용자 고유의 프로젝트로 *Microsoft Graph* 를 가져오려면 [MSGraph_LabPlugins 파일을 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20311%20-%20Microsoft%20Graph/MSGraph_LabPlugins.unitypackage)합니다. 이 패키지는 테스트 된 라이브러리 버전을 사용 하 여 만들어졌습니다.
 
-Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 자세한 내용을 원한다 [이 링크를 따라](https://docs.unity3d.com/Manual/UsingDLL.html)합니다.
+Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 자세한 내용을 보려면 [이 링크를 따르세요](https://docs.unity3d.com/Manual/UsingDLL.html).
 
 패키지를 가져오려면:
 
-1.  Unity를 사용 하 여 Unity 패키지를 추가 합니다 **자산** > **패키지 가져오기** > **Custom Package** 메뉴 옵션입니다. 방금 다운로드 한 패키지를 선택 합니다.
+1.  **자산** > **가져오기**패키지사용자 > **지정 패키지** 메뉴 옵션을 사용 하 여 unity 패키지를 unity에 추가 합니다. 방금 다운로드 한 패키지를 선택 합니다.
 
-2.  에 **Unity 패키지 가져오기** 표시 되는 상자에서 아래에 있는 포함 하 여 모든 것을 확인 **플러그 인** 을 선택 합니다.
+2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** 을 포함 하 여 모든 항목을 선택 했는지 확인 합니다.
 
     ![](images/AzureLabs-Lab311-20.png)
 
-3.  클릭 합니다 **가져오기** 프로젝트에 항목을 추가 하려면 단추입니다.
+3.  **가져오기** 단추를 클릭 하 여 프로젝트에 항목을 추가 합니다.
 
-4.  로 이동 합니다 **MSGraph** 아래에 폴더 **플러그 인** 에 *프로젝트 패널* 이라는 플러그 인을 선택 하 고 **Microsoft.Identity.Client**.
+4.  *프로젝트 패널* 에서 **플러그** 인의 **Msgraph** 폴더로 이동 하 고 **Microsoft. Identity. Client**라는 플러그 인을 선택 합니다.
 
     ![](images/AzureLabs-Lab311-21.png)
 
-5.  사용 하 여는 *플러그 인* 되도록 선택 하면 **Any 플랫폼** 이 선택 취소 한 다음 확인 **WSAPlayer** 이 선택도 취소 클릭 **적용**. 이 파일이 올바르게 구성 되어 있는지 확인 합니다.
+5.  *플러그 인* 을 선택 하 고 **모든 플랫폼이** 선택 취소 되어 있는지 확인 한 다음 **WSAPlayer** 도 선택 취소 되어 있는지 확인 하 고 **적용**을 클릭 합니다. 이는 파일이 올바르게 구성 되었는지 확인 하기 위한 것입니다.
 
     ![](images/AzureLabs-Lab311-22.png)
 
     > [!NOTE] 
-    > 이러한 플러그 인을 표시만 Unity 편집기에서 사용 되도록 구성 합니다. 다양 한 Dll 프로젝트가 유니버설 Windows 응용 프로그램으로 Unity에서 내보낸 후 사용 되는 WSA 폴더에 있습니다.
+    > 이러한 플러그 인을 표시 하면 Unity 편집기 에서만 사용 하도록 구성 됩니다. WSA 폴더에는 프로젝트를 Unity에서 유니버설 Windows 응용 프로그램으로 내보낸 후에 사용 되는 다른 Dll 집합이 있습니다.
 
-6.  열어야 할 때 다음에 **WSA** 폴더 내에서 합니다 **MSGraph** 폴더입니다. 방금 구성한 동일한 파일의 복사본을 볼 수 있습니다. 파일을 선택한 다음 검사기:
+6.  다음으로, **Msgraph** 폴더 내에서 **WSA** 폴더를 열어야 합니다. 방금 구성한 파일의 복사본이 표시 됩니다. 파일을 선택한 다음 검사기에서 다음을 수행 합니다.
 
-    -   되도록 **Any 플랫폼** 는 **unchecked**, 하 고 **만** **WSAPlayer** 는 **체크**.
+    -   **모든 플랫폼이** **선택 취소**되어 있고 **WSAPlayer** **만** **선택**되어 있는지 확인 합니다.
 
-    -   확인 **SDK** 로 설정 된 **UWP**, 및 **백 엔드 스크립팅** 로 설정 된 **.net**
+    -   **SDK** 가 **UWP**로 설정 되어 있고 **Scripting 백 엔드가** **Dot** 로 설정 되었는지 확인 합니다.
 
-    -   했는지 **처리 하지** 됩니다 **체크**합니다.
+    -   **처리 안 함** 이 **선택**되어 있는지 확인 합니다.
 
         ![](images/AzureLabs-Lab311-23.png)
 
@@ -238,44 +238,44 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 ## <a name="chapter-4---camera-setup"></a>4 장-카메라 설정
 
-이 장에서 동안 주 카메라 장면의을 설정 합니다.
+이 챕터에서는 장면의 기본 카메라를 설정 합니다.
 
-1.  에 *계층 패널*를 선택 합니다 **주 카메라**합니다.
+1.  *계층 패널*에서 **기본 카메라**를 선택 합니다.
 
-2.  선택한 후에의 모든 구성 요소를 볼 수는 합니다 **주 카메라** 에 *검사기* 패널입니다.
+2.  선택한 후에는 *검사기* 패널에서 **주 카메라** 의 모든 구성 요소를 볼 수 있습니다.
 
-    1.  합니다 **카메라 개체** 이름은 **주 카메라** (맞춤법 참고!)
+    1.  **카메라 개체** 의 이름을 **주 카메라로** 지정 해야 합니다 (철자 확인).
 
-    2.  주 카메라 **태그** 으로 설정 되어 있어야 **MainCamera** (맞춤법 참고!)
+    2.  기본 카메라 **태그** 는 **maincamera** 로 설정 되어야 합니다 (철자 확인).
 
-    3.  있는지 확인 합니다 **변환 위치** 로 설정 된 **0, 0, 0**
+    3.  **변환 위치가** **0, 0, 0** 으로 설정 되어 있는지 확인 합니다.
 
-    4.  설정할 **플래그 지우기** 에 **단색**
+    4.  **Clear 플래그** 를 **Solid 색** 으로 설정
 
-    5.  설정 된 **배경색** 카메라 구성 요소의 **검정, 알파 0** **(코드를 16 진수: #00000000)**
+    5.  카메라 구성 요소의 **배경색** 을 **검은색, 알파 0** **(16 진수 코드: #00000000)** 으로 설정 합니다.
 
         ![](images/AzureLabs-Lab311-24.png)
 
-3.  마지막 개체 구조를 *계층 패널* 아래 이미지에 표시 된 것 처럼 보여야 합니다.
+3.  *계층 패널* 의 최종 개체 구조는 아래 이미지에 표시 된 것과 같아야 합니다.
 
     ![](images/AzureLabs-Lab311-25.png)
 
 ## <a name="chapter-5---create-meetingsui-class"></a>5 장-MeetingsUI 클래스 만들기
 
-생성 해야 하는 첫 번째 스크립트 **MeetingsUI**를 담당 하는 호스팅 및 (환영 메시지, 지침 및 모임 세부 정보) 응용 프로그램의 UI를 채우는 합니다.
+만들어야 하는 첫 번째 스크립트는 **MeetingsUI**입니다 .이 스크립트는 응용 프로그램의 UI (환영 메시지, 지침 및 모임 세부 정보)를 호스트 하 고 채우는 역할을 합니다.
 
 이 클래스를 만들려면:
 
-1.  마우스 오른쪽 단추로 클릭 합니다 **자산** 폴더에는 *프로젝트 패널*을 선택한 후 **만들기** > **폴더**합니다. 폴더의 이름을 **스크립트**합니다.
+1.  *프로젝트 패널*에서 **자산** 폴더를 마우스 오른쪽 단추로 클릭 한 다음**폴더** **만들기** > 를 선택 합니다. 폴더 이름을 **스크립트**로 합니다.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  열기는 **스크립트** 폴더 그런 다음 해당 폴더 내에서 마우스 오른쪽 단추로 클릭 합니다 **만들기**  >   **C# 스크립트**. 스크립트 이름을 **MeetingsUI 합니다.**
+2.  **스크립트** 폴더를 열고 해당 폴더 내에서 **C# 스크립트** **만들기**  >  를 마우스 오른쪽 단추로 클릭 합니다. 스크립트 이름을 **MeetingsUI로 합니다.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
-3.  새 두 번 클릭 **MeetingsUI** 스크립트를 사용 하 여 열고 *Visual Studio*합니다.
+3.  새 **MeetingsUI** 스크립트를 두 번 클릭 하 여 *Visual Studio*에서 엽니다.
 
 4.  다음 네임 스페이스를 삽입 합니다.
 
@@ -298,7 +298,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         private TextMesh _meetingDisplayTextMesh;
     ```
 
-6.  그런 다음 대체는 **start ()** 메서드 추가 **Awake()** 메서드. 이러한 클래스를 초기화할 때 호출 됩니다.
+6.  그런 다음 **Start ()** 메서드를 바꾸고 해제 **()** 메서드를 추가 합니다. 이러한 작업은 클래스가 초기화 될 때 호출 됩니다.
 
     ```csharp    
         /// <summary>
@@ -319,7 +319,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-7.  생성을 담당 하는 메서드를 추가 합니다 *회의 UI* 현재 모임 요청 하는 경우 입력:
+7.  *모임 UI* 만들기를 담당 하는 메서드를 추가 하 고 요청 시 현재 모임으로 채웁니다.
 
     ```csharp    
         /// <summary>
@@ -367,19 +367,19 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-8. **삭제할** 는 **update ()** 메서드 및 **변경 내용을 저장** Unity를 반환 하기 전에 Visual Studio에서. 
+8. **Update ()** 메서드를 **삭제** 하 고 Unity로 반환 하기 전에 Visual Studio에서 **변경 내용을 저장** 합니다. 
 
-## <a name="chapter-6---create-the-graph-class"></a>-6 장 그래프 클래스 만들기
+## <a name="chapter-6---create-the-graph-class"></a>6 장-그래프 클래스 만들기
 
-만들려면 다음 스크립트를 **그래프** 스크립트입니다. 이 스크립트는 사용자를 인증 하 고 사용자의 일정에서 현재 날짜에 대 한 예약 된 회의 검색에 대 한 호출을 담당 합니다.
+만들 다음 스크립트는 **그래프** 스크립트입니다. 이 스크립트는를 호출 하 여 사용자를 인증 하 고 사용자의 일정에서 현재 날짜에 대 한 예약 된 모임을 검색 하는 작업을 담당 합니다.
 
 이 클래스를 만들려면:
 
-1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
+1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **그래프**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 **그래프**의 이름을로 합니다.
 
-3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
+3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
 4.  다음 네임 스페이스를 삽입 합니다.
 
@@ -398,11 +398,11 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
     ```
 
     > [!IMPORTANT]
-    > 이 스크립트의 코드 부분 래핑하는 것을 알 수 있습니다 [미리 컴파일 지시문](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html), Visual Studio 솔루션을 빌드할 때 라이브러리를 사용 하 여 문제를 방지 하기 위해서입니다.
+    > 이 스크립트에 포함 된 코드의 일부는 [미리 컴파일 지시문](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)을 기반으로 하기 때문에 Visual Studio 솔루션을 빌드할 때 라이브러리 문제를 방지할 수 있습니다.
 
-5.  삭제를 **start ()** 하 고 **update ()** 메서드를 사용 되지 것입니다.
+5.  **Start ()** 및 **Update ()** 메서드를 사용 하지 않으므로 삭제 합니다.
 
-6.  외부 합니다 **그래프** 클래스, 매일 예약 된 회의 나타내는 JSON 개체를 deserialize 하는 데 필요한 다음 개체를 삽입 합니다.
+6.  **Graph** 클래스 외부에서 매일 예약 된 모임을 나타내는 JSON 개체를 deserialize 하는 데 필요한 다음 개체를 삽입 합니다.
 
     ```csharp
     /// <summary>
@@ -449,7 +449,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
     }
     ```
 
-7.  내부를 **그래프** 클래스를 다음 변수를 추가 합니다.
+7.  **Graph** 클래스 내에서 다음 변수를 추가 합니다.
 
     ```csharp    
         /// <summary>
@@ -475,9 +475,9 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
     ```
 
     > [!NOTE]
-    > 변경 합니다 **appId** 값을 합니다 **앱 Id** 에서 기록한  **[1 장](#chapter-1---create-your-app-in-the-application-registration-portal), 4 단계**합니다. 이 값에 표시 된 것과 동일 해야 합니다 **응용 프로그램 등록 포털** 응용 프로그램 등록 페이지에 있습니다.
+    > **AppId** 값을  **[1 장](#chapter-1---create-your-app-in-the-application-registration-portal), 4 단계**에서 적어둔 **앱 Id** 로 변경 합니다. 이 값은 응용 프로그램 등록 페이지의 **응용 프로그램 등록 포털** 에 표시 되는 값과 동일 해야 합니다.
 
-8.  내 합니다 **그래프** 클래스, 메서드를 추가 합니다 **SignInAsync()** 및 **AquireTokenAsync()** 는 사용자 로그인 자격 증명을 삽입 하 라는 메시지가 표시 됩니다.
+8.  **Graph** 클래스 내에서 **SignInAsync ()** 및 **AquireTokenAsync ()** 메서드를 추가 하 여 사용자에 게 로그인 자격 증명을 삽입 하 라는 메시지를 표시 합니다.
 
     ```csharp
         /// <summary>
@@ -546,11 +546,11 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-9.  다음 두 메서드를 추가 합니다.
+9.  다음 두 가지 메서드를 추가 합니다.
 
-    1.  **BuildTodayCalendarEndpoint()** , 빌드 및 예약 된 회의 검색 하는 기간을 지정 하는 URI입니다.
+    1.  **BuildTodayCalendarEndpoint ()** -예약 된 모임이 검색 되는 날짜 및 시간 범위를 지정 하는 URI를 작성 합니다.
 
-    2.  **ListMeetingsAsync()** 에 요청에서 예약 된 회의 *Microsoft Graph*합니다.
+    2.  **ListMeetingsAsync ()** - *Microsoft Graph*에서 예약 된 모임을 요청 합니다.
 
     ```csharp
         /// <summary>
@@ -614,21 +614,21 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-10. 이제 완료 합니다 **그래프** 스크립트입니다. **변경 내용을 저장** Unity를 반환 하기 전에 Visual Studio에서.
+10. 이제 **Graph** 스크립트를 완료 했습니다. Unity로 반환 하기 전에 Visual Studio에서 **변경 내용을 저장** 합니다.
 
-## <a name="chapter-7---create-the-gazeinput-script"></a>7-장 GazeInput 스크립트 만들기
+## <a name="chapter-7---create-the-gazeinput-script"></a>7 장-GazeInput 스크립트 만들기
 
-이제 만들려는 합니다 **GazeInput**합니다. 이 클래스는 처리 하 고 사용자의 게이즈를 사용 하는 추적을 **Raycast** 에서 들어오는 합니다 **주 카메라**, 앞으로 프로젝션 합니다.
+이제 **GazeInput**을 만듭니다. 이 클래스는 **기본 카메라**에서 들어오는 **raycast** 를 사용 하 여 앞으로 프로젝션 하는 사용자의 응시를 처리 하 고 추적 합니다.
 
-스크립트를 만들려면:
+스크립트를 만들려면 다음을 수행 합니다.
 
-1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
+1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **GazeInput**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **GazeInput**로 합니다.
 
-3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
+3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
-4.  추가 함께 아래 것과 일치 하도록 네임 스페이스 코드를 변경는 ' **\[System.Serializable\]** ' 위의 태그에 **GazeInput** 클래스를 serialize 할 수 있도록 합니다.
+4.  Serialize 할 수 있도록 **GazeInput** 클래스 **\[위에\]' system.string**' 태그를 추가 하는 것과 함께 아래와 일치 하도록 네임 스페이스 코드를 변경 합니다.
 
     ```csharp
     using UnityEngine;
@@ -641,7 +641,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
     {
     ```
 
-5.  내 합니다 **GazeInput** 클래스를 다음 변수를 추가 합니다.
+5.  **GazeInput** 클래스 내에서 다음 변수를 추가 합니다.
 
     ```csharp    
         [Tooltip("Used to compare whether an object is to be interacted with.")]
@@ -677,7 +677,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         private Vector3 _gazeDirection;
     ```
 
-6.  추가 된 **CreateCursor()** 장면에서 HoloLens 커서를 만들고에서 메서드를 호출 하는 메서드는 **start ()** 메서드:
+6.  **CreateCursor ()** 메서드를 추가 하 여 장면에 HoloLens 커서를 만들고 **Start ()** 메서드에서 메서드를 호출 합니다.
 
     ```csharp    
         /// <summary>
@@ -708,7 +708,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-7.  다음 방법 Raycast 게이즈를 사용 하도록 설정 하 고 추적 합니다 포커스가 있는 개체입니다.
+7.  다음 메서드는 응시 Raycast를 사용 하도록 설정 하 고 포커스가 있는 개체를 추적 합니다.
 
     ```csharp
     /// <summary>
@@ -804,23 +804,23 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-8.  **변경 내용을 저장** Unity를 반환 하기 전에 Visual Studio에서.
+8.  Unity로 반환 하기 전에 Visual Studio에서 **변경 내용을 저장** 합니다.
 
-## <a name="chapter-8---create-the-interactions-class"></a>8-장 상호 작용 클래스 만들기
+## <a name="chapter-8---create-the-interactions-class"></a>8 장-상호 작용 클래스 만들기
 
-만들려는 해야 합니다 **상호 작용** 담당 하는 스크립트:
+이제 다음을 담당 하는 **상호 작용** 스크립트를 만들어야 합니다.
 
--   처리를 **누릅니다** 상호 작용 및 **카메라 Gaze**, "단추" 장면에서 로그를 사용 하 여 상호 작용할 수 있습니다.
+-   사용자가 장면에서 "button"의 로그인과 상호 작용할 수 있도록 하는 **탭** 상호 작용 및 **카메라 응시**를 처리 합니다.
 
--   사용자와 상호 작용 하는 장면에서 개체 "단추"에서 로그를 만듭니다.
+-   사용자가 상호 작용할 수 있도록 장면에 "button" 개체의 로그를 만듭니다.
 
-스크립트를 만들려면:
+스크립트를 만들려면 다음을 수행 합니다.
 
-1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다.
+1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **상호 작용**합니다.
+2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 **상호 작용**의 이름을로 합니다.
 
-3.  스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.
+3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
 4.  다음 네임 스페이스를 삽입 합니다.
 
@@ -829,15 +829,15 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
     using UnityEngine.XR.WSA.Input;
     ```
 
-5.  상속을 변경 합니다 **상호 작용** 에서 클래스 *MonoBehaviour* 에 **GazeInput**합니다.
+5.  **상호 작용** 클래스의 상속을 *MonoBehaviour* 에서 **GazeInput**로 변경 합니다.
 
-    ~~공용 클래스 상호 작용 합니다. MonoBehaviour~~
+    ~~공용 클래스 상호 작용: MonoBehaviour~~
 
     ```csharp
     public class Interactions : GazeInput
     ```
 
-6.  내부를 **상호 작용** 클래스에 다음 변수를 삽입 합니다.
+6.  **상호 작용** 클래스 내에서 다음 변수를 삽입 합니다.
 
     ```csharp
         /// <summary>
@@ -846,7 +846,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         private GestureRecognizer _gestureRecognizer;
     ```
 
-7.  대체는 **시작** 메서드를 '기본' 게이즈 클래스 메서드를 호출 하는 재정의 메서드를 사용 하는 것이 표시 됩니다. **Start ()** 입력된 인식에 대 한 등록 하 고 로그인을 만드는 클래스를 초기화 하는 경우 호출 될 *단추* 장면에서:
+7.  **Start** 메서드를 대체 합니다. ' base ' 응시 클래스 메서드를 호출 하는 재정의 메서드입니다. **Start ()** 는 클래스가 초기화 되 고, 입력 인식을 등록 하 고, 장면에 로그인 *단추* 를 만들 때 호출 됩니다.
 
     ```csharp    
         /// <summary>
@@ -868,7 +868,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-8.  추가 된 **CreateSignInButton()** 로그인을 인스턴스화하는 메서드를 *단추* 장면에서 해당 속성을 설정:
+8.  **CreateSignInButton ()** 메서드를 추가 합니다 .이 메서드는 장면의 로그인 *단추* 를 인스턴스화하고 해당 속성을 설정 합니다.
 
     ```csharp    
         /// <summary>
@@ -889,7 +889,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-9.  추가 합니다 **GestureRecognizer_Tapped()** 메서드 수에 대 한 응답을 *탭* 사용자 이벤트입니다.
+9.  *탭핑* 사용자 이벤트에 대해 응답 하는 **GestureRecognizer_Tapped ()** 메서드를 추가 합니다.
 
     ```csharp   
         /// <summary>
@@ -905,83 +905,83 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
         }
     ```
 
-10. **삭제할** 는 **update ()** 메서드를 차례로 **변경 내용을 저장** Unity를 반환 하기 전에 Visual Studio에서.
+10. **Update ()** 메서드를 **삭제** 한 다음 Unity로 반환 하기 전에 Visual Studio에서 **변경 내용을 저장** 합니다.
 
 ## <a name="chapter-9---set-up-the-script-references"></a>9 장-스크립트 참조 설정
 
-이 챕터에 배치 해야 합니다 **상호 작용** 스크립트에 **주 카메라**합니다. 해당 스크립트는 필요할 수 있는 다른 스크립트를 배치 하는 것을 처리 한 다음 합니다.
+이 장에서는 **기본 카메라**에 **상호 작용** 스크립트를 저장 해야 합니다. 그런 다음이 스크립트는 필요한 위치에 다른 스크립트를 배치 하는 것을 처리 합니다.
 
--  **스크립트** 폴더에는 *프로젝트 패널*, 스크립트를 끌어 **상호 작용** 에 **주 카메라** 개체, 다음 그림과 같이 합니다.
+-  아래 그림과 같이 *프로젝트 패널*의 **Scripts** 폴더에서 스크립트 **상호 작용** 을 **주 카메라** 개체로 끌어 옵니다.
 
     ![](images/AzureLabs-Lab311-29.png)
 
 ## <a name="chapter-10---setting-up-the-tag"></a>10 장-태그 설정
 
-코드를 응시 처리 태그를 사용 하 게 **SignInButton** 개체를 식별 하는 사용자가 상호 작용할에 로그인 하 *Microsoft Graph*합니다.
+응시를 처리 하는 코드는 **SignInButton** 태그를 사용 하 여 사용자가 *Microsoft Graph*에 로그인 하기 위해 상호 작용 하는 개체를 식별 합니다.
 
-태그를 만들려면:
+태그를 만들려면 다음을 수행 합니다.
 
-1.  Unity 편집기에서 클릭 합니다 **주 카메라** 에 *계층 패널*합니다.
+1.  Unity 편집기의 *계층 패널*에서 **주 카메라** 를 클릭 합니다.
 
-2.  에 *검사기 패널* 클릭 합니다 **MainCamera** *태그* 드롭다운 목록을 열지 합니다. 클릭 **태그를 추가 하는 중...**
+2.  *Inspector 패널* 에서 **maincamera** *태그* 를 클릭 하 여 드롭다운 목록을 엽니다. **태그 추가** ...를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-30.png)
 
-3.  클릭 합니다 **+** 단추입니다.
+3.  **+** 단추를 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-31.png)
 
-4.  태그 이름으로 작성할 **SignInButton** 고 저장을 클릭 합니다.
+4.  태그 이름을 **SignInButton** 로 작성 하 고 저장을 클릭 합니다.
 
     ![](images/AzureLabs-Lab311-32.png)
 
-## <a name="chapter-11---build-the-unity-project-to-uwp"></a>11 장-UWP로 Unity 프로젝트 빌드
+## <a name="chapter-11---build-the-unity-project-to-uwp"></a>11 장-UWP에 Unity 프로젝트 빌드
 
-이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되 면 Unity에서 작성 하는 시간 이므로 합니다.
+이제이 프로젝트의 Unity 섹션에 필요한 모든 항목이 완료 되었으므로 Unity에서 빌드할 수 있습니다.
 
 1.  이동할 *빌드 설정* (**파일*>*설정** 빌드).
 
     ![](images/AzureLabs-Lab311-33.png)
 
-2.  경우에 눈금 **Unity C\# 프로젝트**합니다.
+2.  아직 없는 경우 tick **\# Unity C 프로젝트**입니다.
 
-3.  **빌드**를 클릭합니다. Unity가 시작 됩니다는 **파일 탐색기** 창을 만들고 다음에 앱을 빌드하는 폴더를 선택 해야 합니다. 해당 폴더를 이제 만들고 이름을 **앱**합니다. 사용 하 여 다음 합니다 **앱** 폴더를 선택, 클릭 **폴더 선택**합니다.
+3.  **빌드**를 클릭합니다. Unity는 응용 프로그램을 빌드할 폴더를 만들고 선택 해야 하는 **파일 탐색기** 창을 시작 합니다. 이제 해당 폴더를 만들고 이름을 **App**으로 만듭니다. 그런 다음 **앱** 폴더를 선택 하 고 **폴더 선택**을 클릭 합니다.
 
-4.  Unity 프로젝트를 빌드할 예정 된 **앱** 폴더입니다.
+4.  Unity는 **응용** 프로그램 폴더에 대 한 프로젝트 빌드를 시작 합니다.
 
-5.  한 번 Unity (약간의 시간이 걸릴 수 있습니다) 빌드 완료, 열립니다는 **파일 탐색기** 빌드 위치에 있는 창 (작업 표시줄에서 항상 windows에서 위에 나타나지 않을 수 있습니다 있지만 새 추가 대 한 알림을 확인 창)입니다.
+5.  Unity가 빌드를 완료 하면 (시간이 걸릴 수 있음) 빌드 위치에서 **파일 탐색기** 창이 열립니다. (작업 표시줄은 항상 창 위에 표시 되는 것은 아니지만 새 창 추가를 알려 줍니다.)
 
-## <a name="chapter-12---deploy-to-hololens"></a>12-장 HoloLens에 배포
+## <a name="chapter-12---deploy-to-hololens"></a>12 장-HoloLens에 배포
 
-HoloLens에 배포 합니다.
+HoloLens에 배포 하려면:
 
-1.  (배포에 대 한 원격), 여 HoloLens의 IP 주소를 사용 해야 하 고 확인에 HoloLens가 **개발자 모드입니다.** 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드** 에 있는지 확인 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
 
-    1.  에 HoloLens, 착용 하는 동안 엽니다는 **설정을**합니다.
+    1.  HoloLens를 입고 하는 동안 **설정을**엽니다.
 
-    2.  로 이동 **네트워크 및 인터넷** > **Wi-fi** > **고급 옵션**
+    2.  **네트워크 & 인터넷** > **wi-fi** > **고급 옵션** 으로 이동 합니다.
 
-    3.  참고 합니다 **IPv4** 주소입니다.
+    3.  **IPv4** 주소를 적어둡니다.
 
-    4.  다음으로 다시 이동할 **설정을**, 한 다음 **업데이트 및 보안** > **개발자를 위한**
+    4.  그런 다음 **설정**으로 다시 이동한 다음**개발자** 를 위한 **& 보안** > 을 업데이트 합니다.
 
-    5.  설정할 **에서 개발자 모드가**합니다.
+    5.  **에서 개발자 모드를**설정 합니다.
 
-2.  새 Unity 빌드에 이동 (합니다 **앱** 폴더) 사용 하 여 솔루션 파일을 엽니다 **Visual Studio**합니다.
+2.  새 Unity 빌드 ( **앱** 폴더)로 이동 하 여 **Visual Studio**에서 솔루션 파일을 엽니다.
 
-3.  에 **솔루션 구성** 선택 **디버그**합니다.
+3.  **솔루션 구성** 에서 **디버그**를 선택 합니다.
 
-4.  에 **솔루션 플랫폼**를 선택 **x86, 원격 컴퓨터**합니다. 삽입 하 라는 메시지가 표시 됩니다는 **IP 주소** 원격 장치 (여 HoloLens,이 경우 둔).
+4.  **솔루션 플랫폼**에서 **X86, 원격 컴퓨터**를 선택 합니다. 원격 장치의 **IP 주소** (이 경우에는 HoloLens)를 삽입 하 라는 메시지가 표시 됩니다.
 
     ![](images/AzureLabs-Lab311-34.png)
 
-5.  로 이동 **빌드할** 메뉴를 클릭 **솔루션 배포** 을 사이드 로드에 HoloLens에 응용 프로그램입니다.
+5.  **빌드** 메뉴로 이동 하 여 **솔루션 배포** 를 클릭 하 여 응용 프로그램을 HoloLens로 테스트용으로 로드.
 
-6.  앱에 HoloLens 시작할 준비가에 설치 된 앱 목록에 나타나야 합니다.
+6.  이제 앱이 HoloLens에 설치 된 앱 목록에 표시 되어 시작할 준비가 되었습니다!
 
 ## <a name="your-microsoft-graph-hololens-application"></a>Microsoft Graph HoloLens 응용 프로그램
 
-축 하 읽고 사용자 일정 데이터를 표시 하는 Microsoft Graph를 활용 하는 혼합된 현실 앱 빌드 했습니다.
+축 하 합니다. Microsoft Graph를 활용 하 여 사용자 달력 데이터를 읽고 표시 하는 혼합 현실 앱을 빌드 했습니다.
 
 ![](images/AzureLabs-Lab311-00.png)
 
@@ -989,10 +989,10 @@ HoloLens에 배포 합니다.
 
 ### <a name="exercise-1"></a>연습 1
 
-Microsoft Graph를 사용 하 여 사용자에 대 한 다른 정보를 표시 하려면
+Microsoft Graph를 사용 하 여 사용자에 대 한 기타 정보 표시
 
--   사용자 전자 메일 프로필 사진 / 전화 번호
+-   사용자 전자 메일/전화 번호/프로필 사진
 
 ### <a name="exercise-1"></a>연습 1
 
-Microsoft Graph UI 이동할 음성 제어를 구현 합니다.
+음성 컨트롤을 구현 하 여 Microsoft Graph UI를 탐색 합니다.

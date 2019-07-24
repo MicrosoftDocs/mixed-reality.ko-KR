@@ -1,6 +1,6 @@
 ---
 title: HoloLens (첫 번째 gen) 데모 가이드
-description: 맞춤 및 HoloLens를 정리 하는 방법 (첫 번째 gen) 데모 상황에서
+description: 데모 상황에서 HoloLens를 맞추고 정리 하는 방법 (첫 번째 gen)
 author: JesseMcCulloch
 ms.author: jemccull
 ms.date: 12/27/2018
@@ -13,23 +13,23 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64670142"
 ---
-<H1>HoloLens 맞춤 (첫 번째 gen) 데모에 대 한 장치 </H1>
+<H1>데모에 대 한 HoloLens (첫 번째 gen) 장치 맞춤 </H1>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/be3cb527-f2f1-4f85-b4f7-a34fbaba980d]
 
 |     |     |
 |:---:|:---:|
-|1. 약 20-30도 최대 headband를 회전 합니다.|![1 단계](images/FitGuideStep1.png)|
-|2. headband를 다시 푸시하십시오. 시간이 지남에 따라 밴드를 중단할 수 있습니다이 처럼 힌지, 뒤 밴드 조작 하거나 다시 이었기 하지 마십시오.|![2 단계](images/FitGuideStep2.png)|
-|3. headband를 확장 하 고 조정 휠을 돌려까지 아웃 합니다. 사용자가 밴드 해야 흘에서 rest 및 조정 휠 표시할 위치를 보여 줍니다.|![3 단계](images/FitGuideStep3.png)|
-|4. 사용자에 대해 headband 누른 arm 장치를 잡고 해당 헤드에에서 배치 하도록 합니다. 밴드 놓을 올바른 위치에 있는지 확인 하 고 조정 휠 강화할 수 있도록 키를 누릅니다. 하이퍼바이저를 다시 밀어 넣습니다.|![4 단계](images/FitGuideStep4.png)|
-|5. headband를 돌릴 위에 스피커를 사용 하 여 사용자가 선 바로 아래 흘, 맨 위에 있는 배치 해야 합니다. 앞에서 보고를 하 여 눈 상단 lenses는 귀띔해 해야 합니다.|![5 단계](images/FitGuideSetep5.png)|
+|1. 헤드 밴드를 최대 20-30도로 회전 합니다.|![1 단계](images/FitGuideStep1.png)|
+|2. 헤드 밴드를 다시 푸시합니다. 시간이 지남에 따라 대역을 손상 시킬 수 있으므로, 다시 끌어오거나, 힌지 뒤의 대역을 조작 하지 마세요.|![2 단계](images/FitGuideStep2.png)|
+|3. 조정 휠을 사용 하 여 헤드 밴드를 모든 방향으로 확장 합니다. Forehead에서 대역을 남은 사용자를 표시 하 고 조정 휠에 표시 합니다.|![3 단계](images/FitGuideStep3.png)|
+|4. 사용자에 대 한 헤드 밴드를 보유 하 고 장치의 arm을 잡고 헤드에 배치할 수 있습니다. 밴드가 올바른 지점에 있는지 확인 하 고 조정 휠을 강화 하도록 합니다. 센터를 뒤로 이동 합니다.|![4 단계](images/FitGuideStep4.png)|
+|5. 헤드 밴드는 forehead 위쪽에 있고, 선 아래는 선 아래, 귀 위에는 스피커가 있습니다. 앞에서이를 살펴보면 lenses의 중심을 중심으로 설명할 수 있습니다.|![5 단계](images/FitGuideSetep5.png)|
 
 
-<H1>정리는 HoloLens (첫 번째 gen) 간의 데모</H1>
+<H1>데모 간 HoloLens (첫 번째 gen) 정리</H1>
 
 
-- 하이퍼바이저를 정리 하려면 전구 스타일 렌즈 송풍기를 사용 하 여 모든 먼지를 제거 (먼지를 사용 하지 않습니다).
-- 가볍게 약간 나온된 물 또는 이소프로필 주류를 마이크로 파이버 천을 moisten 다음 순환 동작에는 하이퍼바이저를 조심 스럽게 초기화를 사용 합니다. 하이퍼바이저만 이소프로필 주류를 사용 하 여 정리할 수 있습니다 하거나 장치의 나머지를 손상 됩니다.
-- 장치의 나머지 정리, 나온 물 moistened lint 마른 천 사용 하 여 장치와 headband 팔 등을 포함 합니다. 또한 사용 중 headband를 정리 하려면 비-주류 soap moistened towelette를 사용할 수 있습니다. 다음 참가자가 장치를 사용 하기 전에 모든 과도 한 습기를 마 합니다.
-- 장치 간에 데모 충분히 정리할 수 없습니다 하는 경우 추가 장치를 가져오는 것이 좋습니다.
+- 센터를 청소 하려면 전구 스타일의 렌즈 blower (압축 된 공기를 사용 하지 않음)가 있는 먼지를 제거 합니다.
+- 약간의 distilled 물 또는 isopropyl 주류를 사용 하는 마이크로 파이버 천을 moisten 하 고이를 사용 하 여 원형 동작에서 센터를 천천히 지울 수 있습니다. Isopropyl 음주을 사용 하 여 센터를 청소할 수 있습니다. 그렇지 않으면 장치의 나머지 부분이 손상 됩니다.
+- Distilled 온수를 사용 하는 보풀이 없는 마른 천으로 moistened을 포함 하 여 헤드 밴드 및 장치 arm을 포함 한 나머지 장치를 청소 합니다. 비 음주 moistened towelette를 사용 하 여 사용 간의 헤드를 정리할 수도 있습니다. 다음 참가자가 장치를 사용 하기 전에 과도 한 습기을 건조 합니다.
+- 데모 간에 장치를 충분히 정리할 수 없는 경우 추가 장치를 가져오는 것이 좋습니다.

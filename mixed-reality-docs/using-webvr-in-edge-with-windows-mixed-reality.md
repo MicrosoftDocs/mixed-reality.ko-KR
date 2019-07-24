@@ -1,38 +1,38 @@
 ---
-title: Microsoft Edge에서 Windows Mixed Reality WebVR 사용
-description: 사용 하 여 및에서 Windows Mixed Reality WebVR 개발 개요
+title: Windows Mixed Reality와 함께 Microsoft Edge에서 WebVR 사용
+description: Windows Mixed Reality에서 WebVR 사용 및 개발 개요
 author: YashMaster
 ms.author: yabahman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: WebVR, WebXR, WinMR WebAR, vr 웹, xr 하이 웹, mr 웹, ar, 360 웹 360 비디오, 360 비디오, 360 사진, 360 사진, 360 콘텐츠, 몰입 형 웹, immersiveweb, IW
+keywords: WebVR, WebXR, WinMR, WebAR, web vr, web xr, 웹 mr, 웹 ar, 360, 360 비디오, 360 비디오, 360 photo, 360 사진, 360 콘텐츠, 몰입 형 웹, immersiveweb, IW
 ms.openlocfilehash: fab17f4dcecc34d8f1ca4836dce6de90522899cd
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604637"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548763"
 ---
-# <a name="using-webvr-in-microsoft-edge-with-windows-mixed-reality"></a>Microsoft Edge에서 Windows Mixed Reality WebVR 사용
+# <a name="using-webvr-in-microsoft-edge-with-windows-mixed-reality"></a>Windows Mixed Reality와 함께 Microsoft Edge에서 WebVR 사용
 
-## <a name="creating-webvr-content-for-windows-mixed-reality-immersive-headsets"></a>몰입 형 헤드셋 Windows 혼합 현실 용 WebVR 콘텐츠 만들기
+## <a name="creating-webvr-content-for-windows-mixed-reality-immersive-headsets"></a>Windows Mixed reality 모던 헤드셋에 대 한 WebVR 콘텐츠 만들기
 
-WebVR 1.1은 Windows 10 Fall Creators Update 시작 하는 Microsoft Edge에서에서 사용할 수 있습니다. 개발자는이 API는 웹에서 몰입 형 VR 환경을 만들 수 사용 수 있습니다.
+WebVR 1.1은 Microsoft Edge에서 Windows 10이 하 버전의 작성자 업데이트부터 사용할 수 있습니다. 이제 개발자는이 API를 사용 하 여 웹에서 모던 VR 환경을 만들 수 있습니다.
 
-WebVR API는 HMD 돌아가기 스테레오 WebGL 장면 렌더링을 사용할 수 있는 페이지로 HMD 포즈 데이터를 제공 합니다. API 지원에 대 한 세부 정보에서 사용할 수는 [Microsoft Edge 플랫폼 상태 페이지](https://developer.microsoft.com/microsoft-edge/platform/status/webvr/)합니다. WebVR API 노출 영역이 항상 Microsoft Edge 내에 없는 경우 그러나 getVRDisplays() 호출 반환 됩니다 헤드셋 헤드셋 전원을 이거나 시뮬레이터 켜 졌습니다.
+WebVR API는 스테레오 WebGL 장면을 HMD로 다시 렌더링 하는 데 사용할 수 있는 페이지에 HMD 포즈 데이터를 제공 합니다. API 지원에 대 한 자세한 내용은 [Microsoft Edge Platform 상태 페이지](https://developer.microsoft.com/microsoft-edge/platform/status/webvr/)에서 확인할 수 있습니다. WebVR API 노출 영역은 Microsoft Edge 내에서 항상 제공 됩니다. 그러나 getVRDisplays ()를 호출 하면 헤드셋이 연결 되어 있거나 시뮬레이터가 설정 된 경우에만 헤드셋을 반환 합니다.
 
-## <a name="viewing-webvr-content-in-windows-mixed-reality-immersive-headsets"></a>Windows Mixed Reality 몰입 형 헤드셋에서 WebVR 콘텐츠 보기
+## <a name="viewing-webvr-content-in-windows-mixed-reality-immersive-headsets"></a>Windows Mixed Reality 모던 헤드셋에서 WebVR 콘텐츠 보기
 
-몰입 형 헤드셋 WebVR 콘텐츠에 액세스 하기 위한 지침을 찾을 수 있습니다 합니다 [열성적인의 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/webvr)합니다.
+모던 헤드셋의 WebVR 콘텐츠에 액세스 하기 위한 지침은 [열성적인 'S Guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/webvr)(영문)에서 찾을 수 있습니다.
 
 ## <a name="see-also"></a>관련 항목
 * [WebVR 정보](http://webvr.info)
 * [WebVR 사양](https://w3c.github.io/webvr/)
 * [WebVR API](https://msdn.microsoft.com/library/mt806281(v=vs.85).aspx)
 * [WebGL API](https://msdn.microsoft.com/library/bg182648(v=vs.85).aspx)
-* [API Gamepad](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) 고 [확장 Gamepad](https://w3c.github.io/gamepad/extensions.html)
-* [WebGL 컨텍스트에서 손실 처리](https://www.khronos.org/webgl/wiki/HandlingContextLost)
+* [게임 패드 API](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) 및 [게임 패드 확장](https://w3c.github.io/gamepad/extensions.html)
+* [WebGL에서 손실 된 컨텍스트 처리](https://www.khronos.org/webgl/wiki/HandlingContextLost)
 * [Pointerlock](http://www.w3.org/TR/pointerlock/)
-* [glTF](https://www.khronos.org/gltf)
-* [Babylon.js를 지 원하는 WebVR를 사용 하 여](https://docs.microsoft.com/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game)
+* [글 Tf](https://www.khronos.org/gltf)
+* [Babylon를 사용 하 여 WebVR 사용](https://docs.microsoft.com/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game)
 

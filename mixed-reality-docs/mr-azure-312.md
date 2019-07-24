@@ -1,112 +1,112 @@
 ---
-title: MR 및 Azure 312-Bot 통합
-description: 만들고 Microsoft Bot Framework v4를 사용 하 여 봇, 배포 하는 방법을 알아보려면이 과정을 완료 하 고 혼합된 현실 응용 프로그램에서 통신 합니다.
+title: MR 및 Azure 312-봇 통합
+description: 이 과정을 완료 하 여 Microsoft 봇 Framework v4를 사용 하는 bot을 만들어 배포 하 고 혼합 현실 응용 프로그램에서 통신 하는 방법을 알아보세요.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure, 혼합 현실, academy, unity, 자습서, api, 컴퓨터 비전, hololens, vr 몰입도 microsoft bot framework v4, web app 봇, bot framework, microsoft bot
+keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 컴퓨터 비전, hololens, 모던, vr, microsoft 봇 framework v4, 웹 앱 봇, 봇 프레임 워크, microsoft 봇
 ms.openlocfilehash: b828aa4415103d280459bd2c666004c994b3e59d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604982"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63542857"
 ---
 >[!NOTE]
->혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.  따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.  이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.  지원 되는 장치에서 작업을 계속 유지 됩니다. 새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.  게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
-# <a name="mr-and-azure-312-bot-integration"></a>MR 및 Azure 312: 봇 통합
+# <a name="mr-and-azure-312-bot-integration"></a>MR 및 Azure 312: Bot 통합
 
-이 과정을 만들고 Microsoft Bot Framework V4를 사용 하는 봇 배포 및 Windows Mixed Reality 응용 프로그램을 통해 통신 하는 방법을 배웁니다. 
+이 과정에서는 Microsoft 봇 Framework V4를 사용 하 여 봇을 만들어 배포 하 고 Windows Mixed Reality 응용 프로그램을 통해 통신 하는 방법에 대해 설명 합니다. 
 
 ![](images/AzureLabs-Lab312-00.png)
 
-합니다 **Microsoft Bot Framework V4** 개발자 도구를 확장 하 고 확장 가능한 봇 빌드를 제공 하도록 설계 Api 집합을 응용 프로그램입니다. 자세한 내용은 참조는 [Microsoft Bot Framework 페이지](https://dev.botframework.com/) 또는 [V4 Git 리포지토리](https://github.com/Microsoft/botbuilder-dotnet/wiki)합니다.
+**Microsoft Bot Framework V4** 는 개발자에 게 확장 가능 하 고 확장 가능한 봇 응용 프로그램을 빌드할 수 있는 도구를 제공 하도록 설계 된 api 집합입니다. 자세한 내용은 [Microsoft 봇 Framework 페이지](https://dev.botframework.com/) 또는 [V4 Git 리포지토리](https://github.com/Microsoft/botbuilder-dotnet/wiki)를 참조 하세요.
 
-이 과정을 완료 한 후 다음을 수행 하는 일을 할 수 있는 Windows Mixed Reality 응용 프로그램을 빌드한 됩니다.
+이 과정을 완료 한 후 다음을 수행할 수 있는 Windows Mixed Reality 응용 프로그램을 작성 합니다.
 
-1. 사용 하 여는 **탭 제스처** 봇에 사용자 음성에 대 한 수신 대기를 시작 합니다.
-2. 사용자가 내용이 포함 되어 있었습니다, 봇 응답을 제공 하려고 합니다.
-3. 봇 회신 Unity 장면에서 봇, 가까이 배치한 텍스트로 표시 합니다.
+1. **탭 제스처** 를 사용 하 여 사용자 의견을 수신 하는 봇을 시작 합니다.
+2. 사용자가 무언가를 말하면 봇은 응답을 제공 하려고 합니다.
+3. Unity 장면에서 봇 근처에 있는 텍스트로 인공 지능 회신을 표시 합니다.
 
-응용 프로그램에서는 사용자의 몫 디자인을 사용 하 여 결과에서는 통합 하는 방법에 대 한 합니다. 이 과정은 Unity 프로젝트를 사용 하 여 Azure 서비스를 통합 하는 방법을 알려 주기 위해 설계 되었습니다. 혼합된 현실 응용 프로그램을 강화 하기 위해이 과정에서 얻는 지식을 사용 하는 것입니다.
+응용 프로그램에서 결과를 디자인과 통합 하는 방법을 사용자가 결정 합니다. 이 과정은 Azure 서비스를 Unity 프로젝트와 통합 하는 방법을 배울 수 있도록 설계 되었습니다. 이 과정에서 얻은 지식을 사용 하 여 혼합 현실 응용 프로그램을 개선 하는 것은 사용자의 작업입니다.
 
 ## <a name="device-support"></a>장치 지원
 
 <table>
 <tr>
-<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></th>
+<th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 Azure 312: 봇 통합</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR 및 Azure 312: Bot 통합</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
-> 이 과정 HoloLens에 주로 중점을 두고, 하는 동안 Windows Mixed Reality 몰입 형 (VR) 헤드셋을이 과정에서 배운 적용할 수 있습니다. 몰입 형 (VR) 헤드셋에 액세스할 수 있는 카메라 없기 때문에 PC에 연결 하는 외부 카메라를 해야 합니다. 과정을 따라가려면 정보 몰입 형 (VR) 헤드셋을 지원 하기 위해 사용 해야 합니다. 변경 내용에 나타납니다.
+> 이 과정에서 주로 HoloLens에 초점을 맞춘 반면,이 과정에서 배운 내용을 Windows Mixed Reality 모던 (VR) 헤드셋에도 적용할 수 있습니다. 모던 (VR) 헤드셋은 액세스할 수 있는 카메라를 포함 하지 않으므로 PC에 연결 된 외부 카메라가 필요 합니다. 이 과정을 진행 하면서 모던 (VR) 헤드셋을 지원 하기 위해 사용 해야 하는 변경 내용에 대 한 정보를 볼 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 > [!NOTE]
-> 이 자습서는 Unity 사용 하 여 기본 경험이 있는 개발자 용으로 설계 하 고 C#입니다. 또한 주의 필수 구성 요소 및이 문서에서 작성 된 지침을 나타내는 새로운 테스트 되었으며 (2018 년 7 월) 작성 시점에 확인 합니다. 내에서 나열 된 사용 가능한 최신 소프트웨어를 사용 하는 합니다 [도구를 설치](install-the-tools.md) 없습니다 가정이 과정에서 정보를 나열 된 것 보다 최신 소프트웨어에 맞게 보면 일치 완벽 하 게 됩니다 있지만 문서 아래.
+> 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (7 월 2018)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
 
-다음 하드웨어 및 소프트웨어가이 과정에 대 한 것이 좋습니다.
+이 과정에는 다음 하드웨어 및 소프트웨어를 권장 합니다.
 
-- 개발 PC A [Windows Mixed Reality 호환](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) 몰입 형 (VR) 헤드셋 개발용
-- [Windows 10 Fall Creators Update (또는 이상) 사용 하도록 설정 하는 개발자 모드를 사용 하 여](install-the-tools.md#installation-checklist)
+- 모던 (VR) 헤드셋 개발을 위한 [Windows Mixed Reality와 호환 되](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) 는 개발 PC
+- [개발자 모드를 사용 하는 Windows 10이 하 버전의 작성자 업데이트 (또는 이상)](install-the-tools.md#installation-checklist)
 - [최신 Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](install-the-tools.md#installation-checklist)
-- A [Windows Mixed Reality 몰입 형 (VR) 헤드셋](immersive-headset-hardware-details.md) 하거나 [Microsoft HoloLens](hololens-hardware-details.md) 개발자 모드를 설정 하 여
-- Azure Bot 검색 및 Azure에 대 한 인터넷 액세스. 자세한 내용은 [이 링크를 따르세요](https://dev.botframework.com/)합니다.
+- 개발자 모드가 사용 하도록 설정 된 [Windows Mixed Reality 모던 (VR) 헤드셋](immersive-headset-hardware-details.md) 또는 [Microsoft HoloLens](hololens-hardware-details.md)
+- Azure 및 Azure Bot 검색을 위한 인터넷 액세스. 자세한 내용은 [다음 링크](https://dev.botframework.com/)를 참조 하세요.
 
 ### <a name="before-you-start"></a>시작하기 전 주의 사항
 
-1.  이 프로젝트를 구축 하는 문제 발생을 방지 하려면 것이 좋습니다 루트 또는 루트 거의 폴더에이 자습서에 언급 된 프로젝트를 만든 (오래 폴더 경로 빌드 시에는 문제가 발생할 수 있습니다).
-2.  설정 하 고 여 HoloLens를 테스트 합니다. 에 HoloLens 등록 설정을 지원 해야 하는 경우 [HoloLens 설치 문서를 참조 하도록](https://docs.microsoft.com/hololens/hololens-setup)합니다. 
-3.  (때로는 도움이 각 사용자에 대 한 이러한 작업을 수행) 새 HoloLens 앱 개발을 시작할 때 보정 및 센서 튜닝을 수행 하는 것이 좋습니다. 
+1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
+2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
+3.  새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음). 
 
-보정에 대 한 도움말을 따라이 [HoloLens 보정 문서 링크](calibration.md#hololens)합니다.
+보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.
 
-센서 조정에 대 한 도움말을 따라이 [HoloLens 센서 튜닝 문서 링크](sensor-tuning.md)합니다.
+센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
-## <a name="chapter-1--create-the-bot-application"></a>1 장-봇 응용 프로그램 만들기
+## <a name="chapter-1--create-the-bot-application"></a>1 장-Bot 응용 프로그램 만들기
 
-첫 번째 단계 봇을 로컬 ASP.Net Core 웹 응용 프로그램을 만드는 것입니다. 완료 하 고 테스트 후 Azure 포털에 게시 합니다.
+첫 번째 단계는 bot을 로컬 ASP.Net Core 웹 응용 프로그램으로 만드는 것입니다. 이를 완료 하 고 테스트 한 후에는 Azure Portal에 게시 합니다.
 
-1.  Visual Studio를 엽니다. 새 프로젝트를 만듭니다 **ASP NET Core 웹 응용 프로그램** (있습니다 아래 하위 섹션에서는.NET Core) 프로젝트 형식으로 호출 **MyBot**합니다. **확인**을 클릭합니다.
+1.  Visual Studio를 엽니다. 새 프로젝트를 만들고, 프로젝트 형식으로 **ASP NET Core 웹 응용 프로그램** 을 선택 하 고 (하위 섹션 .net core 아래에서 찾을 수 있습니다.) **mybot**를 호출 합니다. **확인**을 클릭합니다.
 
-2.  선택 표시 되는 창의 **빈**합니다. 또한 대상 설정 되어 있는지 확인 **ASP NET Core 2.0** 인증으로 설정 됩니다 **인증 안 함**합니다. **확인**을 클릭합니다.  
+2.  표시 되는 창에서 **비어 있음**을 선택 합니다. 또한 대상이 **ASP NET Core 2.0** 로 설정 되 고 인증이 **인증 없음**으로 설정 되어 있는지 확인 합니다. **확인**을 클릭합니다.  
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-01.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-01.png)
 
-3.  솔루션이 열립니다. 솔루션을 마우스 오른쪽 단추로 클릭 **Mybot** 에 **솔루션 탐색기** 클릭 **솔루션용 NuGet 패키지 관리**합니다. 
+3.  이제 솔루션이 열립니다. **솔루션 탐색기** 에서 솔루션 **mybot** 을 마우스 오른쪽 단추로 클릭 하 고 **솔루션용 NuGet 패키지 관리**를 클릭 합니다. 
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-02.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-02.png)
 
-4.  에 **찾아보기** 탭에서 검색할 **Microsoft.Bot.Builder.Integration.AspNet.Core** (했는지 **시험판 포함** 확인). 패키지 버전을 선택 **4.0.1-preview**, 프로젝트 상자 눈금. 클릭 **설치**합니다. 이제에 필요한 라이브러리를 설치 합니다 **Bot Framework v4**합니다. NuGet 페이지를 닫습니다.
+4.  **찾아보기** 탭에서 **Microsoft** . m a. a. m a. i. 패키지 버전 **4.0.1-미리 보기**를 선택 하 고 프로젝트 상자를 선택 합니다. 그런 다음 **설치**를 클릭 합니다. 이제 **Bot Framework v4**에 필요한 라이브러리를 설치 했습니다. NuGet 페이지를 닫습니다.
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-03.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-03.png)
 
-5.  마우스 오른쪽 단추로 클릭 하 *프로젝트*, **MyBot**에서 합니다 **솔루션 탐색기** 을 클릭할 **추가** **|** **클래스**합니다.
+5.  **솔루션 탐색기** 에서 *프로젝트* **mybot**을 마우스 오른쪽 단추로 클릭 하 고 **클래스** **추가** **|** 를 클릭 합니다.
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-04.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-04.png)
 
-6.  클래스의 이름을 **MyBot** 를 클릭 **추가**합니다.
+6.  클래스 이름을 **Mybot** 로 설정 하 고 **추가**를 클릭 합니다.
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-05.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-05.png)
 
-7.  라는 다른 클래스를 만들려면 이전 점이 반복 **ConversationContext**합니다. 
+7.  이전 지점을 반복 하 여 **ConversationContext**라는 다른 클래스를 만듭니다. 
 
-8.  마우스 오른쪽 단추로 클릭 **wwwroot** 에 **솔루션 탐색기** 클릭 **추가** **|** **새항목**. 선택 **HTML 페이지** (알 수 있을 것 하위 섹션에서는 웹에서). 파일 이름을 **default.html**합니다. **추가**를 클릭합니다.
+8.  **솔루션 탐색기** 에서 **wwwroot** 를 마우스 오른쪽 단추로 클릭 하 고 **새 항목** **추가** **|** 를 클릭 합니다. **HTML 페이지** 를 선택 합니다 .이 페이지는 하위 섹션 웹에서 찾을 수 있습니다. 파일 이름을 **html.actionlink**로 합니다. **추가**를 클릭합니다.
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-06.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-06.png)
 
-9.  클래스의 목록은 개체 / 합니다 **솔루션 탐색기** 아래 이미지와 같습니다.
+9.  **솔루션 탐색기** 의 클래스/개체 목록은 아래 이미지와 같습니다.
 
-    ![봇 응용 프로그램 만들기](images/AzureLabs-Lab312-07.png)
+    ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-07.png)
 
-10. 두 번 클릭 합니다 **ConversationContext** 클래스입니다. 이 클래스는 봇 대화 컨텍스트를 유지 하기 위해 사용 하는 변수를 보유 하는 일을 담당 합니다. 때문에 이러한 대화 컨텍스트 값은이 클래스의 인스턴스에서 유지 관리의 모든 인스턴스를 **MyBot** 클래스 활동 수신 될 때마다 새로 고쳐집니다. 클래스에 다음 코드를 추가 합니다.
+10. **ConversationContext** 클래스를 두 번 클릭 합니다. 이 클래스는 봇에서 대화의 컨텍스트를 유지 하는 데 사용 하는 변수를 보유 합니다. 이러한 대화 컨텍스트 값은이 클래스의 인스턴스에서 유지 관리 됩니다. **Mybot** 클래스의 인스턴스는 활동이 수신 될 때마다 새로 고쳐집니다. 클래스에 다음 코드를 추가 합니다.
 
     ```csharp
     namespace MyBot
@@ -120,7 +120,7 @@ ms.locfileid: "59604982"
     }
     ```
 
-11. 두 번 클릭 합니다 **MyBot** 클래스입니다. 이 클래스는 고객 으로부터 받는 모든 활동에 의해 호출 처리기를 호스팅합니다. 이 클래스에서 봇와 고객 간의 대화를 빌드하는 데 사용 하는 코드를 추가 합니다. 앞에서 설명한 대로이 클래스의 인스턴스는 활동 수신 될 때마다 초기화 됩니다. 이 클래스에 다음 코드를 추가 합니다.
+11. **Mybot** 클래스를 두 번 클릭 합니다. 이 클래스는 고객의 들어오는 활동에 의해 호출 되는 처리기를 호스팅합니다. 이 클래스에서는 봇과 고객 간에 대화를 빌드하는 데 사용 되는 코드를 추가 합니다. 앞에서 설명한 것 처럼이 클래스의 인스턴스는 활동이 수신 될 때마다 초기화 됩니다. 이 클래스에 다음 코드를 추가 합니다.
 
     ```csharp
     using Microsoft.Bot;
@@ -174,7 +174,7 @@ ms.locfileid: "59604982"
     }
     ```
 
-12. 두 번 클릭 합니다 **시작** 클래스입니다. 이 클래스는 봇을 초기화 합니다. 클래스에 다음 코드를 추가 합니다.
+12. **Startup** 클래스를 두 번 클릭 합니다. 이 클래스는 bot를 초기화 합니다. 클래스에 다음 코드를 추가 합니다.
 
     ```csharp
     using Microsoft.AspNetCore.Builder;
@@ -226,7 +226,7 @@ ms.locfileid: "59604982"
     }
     ```
 
-13. 엽니다는 **프로그램** 클래스 파일 및 해당 코드를 다음과 같이 같은지 확인 합니다.
+13. **프로그램** 클래스 파일을 열고 코드의 코드가 다음과 같은지 확인 합니다.
 
     ```csharp
     using Microsoft.AspNetCore;
@@ -249,252 +249,252 @@ ms.locfileid: "59604982"
     }
     ```
 
-14. 로를 위해 변경 내용을 저장 해야 **파일** > **모두 저장**, Visual Studio의 맨 위에 있는 도구 모음에서.
+14. 변경 내용을 저장 해야 합니다. 이렇게 하려면 Visual Studio의 맨 위에 있는 도구 모음에서 **파일** > **모두 저장**으로 이동 합니다.
 
-## <a name="chapter-2---create-the-azure-bot-service"></a>-2 장 Azure Bot Service 만들기
+## <a name="chapter-2---create-the-azure-bot-service"></a>2 장-Azure Bot Service 만들기
 
-인스턴스를 게시 해야 하는 코드 봇에 빌드 합니다 *Web App 봇* Azure Portal에서 서비스 합니다. 이 장에서 만들 azure Bot Service를 구성 하 고 다음 코드를 게시 하는 방법을 보여 줍니다.
+이제 bot에 대 한 코드를 빌드 했으므로 Azure Portal에서 *웹 앱 봇* 서비스의 인스턴스에 게시 해야 합니다. 이 장에서는 Azure에서 봇 서비스를 만들고 구성 하는 방법을 보여 주고 코드를 게시 합니다.
 
-1.  먼저 Azure Portal에 로그인 (https://portal.azure.com)합니다. 
+1.  먼저, Azure Portal ()https://portal.azure.com) 에 로그인 합니다. 
 
-    1. Azure 계정이 아직 없는 경우 새로 만들려면 해야 합니다. 클래스 룸 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 새 계정 설정 도움말에 대 한 여력 중 하나를 요청 합니다.
+    1. 아직 Azure 계정이 없는 경우 새로 만들어야 합니다. 교실 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 proctors 중 하나에 문의 하 여 새 계정을 설정 하는 데 도움이 될 수 있습니다.
 
-2.  일단 로그인 하면 클릭할 **리소스 만들기** 왼쪽 위에서 모서리 및 검색 *Web App 봇*를 클릭 하 고 **Enter**합니다.
+2.  로그인 되 면 왼쪽 위 모서리에서 **리소스 만들기** 를 클릭 하 고 *웹 앱 봇*을 검색 한 다음 **Enter 키**를 누릅니다.
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-08.png)
  
-3.  새 페이지에 대 한 설명을 제공 합니다는 *Web App 봇* 서비스입니다. 선택이 페이지의 왼쪽 아래에 있는 합니다 **만들기** 이 연결 서비스를 만들려면 단추입니다.
+3.  새 페이지에는 *웹 앱 봇* 서비스에 대 한 설명이 제공 됩니다. 이 페이지의 왼쪽 아래에서 **만들기** 단추를 선택 하 여이 서비스와의 연결을 만듭니다.
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-09.png)
  
-4.  클릭 한 후 **만들기**:
+4.  **만들기**를 클릭 하면 다음을 클릭 합니다.
 
-    1. 원하는 삽입 **이름을** 이 서비스 인스턴스에 대 한 합니다.
-    2. 선택 된 **구독**합니다.
-    3. 선택 된 **리소스 그룹** 하거나 새로 만듭니다. 리소스 그룹에는 모니터링, 프로 비전, 액세스 제어 및 Azure 자산 모음에 대 한 청구를 관리 하는 방법을 제공 합니다. 좋습니다 일반적인 리소스 그룹에서 (예: 이러한 교육 과정) 예: 단일 프로젝트와 연결 된 Azure 서비스를 모두 유지).
+    1. 이 서비스 인스턴스의 원하는 **이름을** 삽입 합니다.
+    2. **구독**을 선택 합니다.
+    3. 리소스 그룹을 선택 하거나 새 **리소스 그룹** 을 만듭니다. 리소스 그룹은 Azure 자산의 컬렉션에 대 한 청구를 모니터링 하 고, 액세스를 제어 하 고, 프로 비전 하 고, 관리 하는 방법을 제공 합니다. 단일 프로젝트와 연결 된 모든 Azure 서비스 (예: 이러한 과정)를 공용 리소스 그룹에 유지 하는 것이 좋습니다.
 
-        > 추가 하려는 경우 Azure 리소스 그룹에 대 한 [이 링크를 따르세요.](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)
+        > Azure 리소스 그룹에 대 한 자세한 내용은 [다음 링크](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal) 를 참조 하세요.
 
-    4. (새 리소스 그룹을 만들면) 하는 경우 리소스 그룹의 위치를 결정 합니다. 위치는 응용 프로그램은 실행할 지역의 것이 좋습니다. 일부 Azure 자산은 특정 지역 에서만 사용할 수 있습니다.
-    5. 선택 된 **가격 책정 계층** 첫 번째 경우, 적절 한 시간 만들기는 *Web App 봇* 서비스, 무료 계층 (F0 라는)를 사용할 수 있어야
-    6. **앱 이름** 방금에 남겨둘 수와 동일 합니다 *봇 이름*합니다. 
-    7. 유지 된 *Bot 템플릿을* 으로 **기본 (C#)** 합니다.
-    8. *App service 계획/위치* 계정에 대해 자동으로 채워진 었어야 합니다.
-    9. 설정 합니다 **Azure Storage** 봇을 호스트할 사용 하려고 합니다. 없다면 이미, 여기서 만들 수 있습니다.
-    10. 이 서비스에 적용 되는 조건에 이해는 확인 해야 합니다.
+    4. 새 리소스 그룹을 만드는 경우 리소스 그룹의 위치를 확인 합니다. 위치는 응용 프로그램이 실행 되는 영역에 있는 것이 가장 좋습니다. 일부 Azure 자산은 특정 지역 에서만 사용할 수 있습니다.
+    5. 적절 한 **가격 책정 계층** 을 선택 합니다. *웹 앱 봇* 서비스를 처음 만드는 경우 무료 계층 (명명 된 F0)을 사용할 수 있어야 합니다.
+    6. **앱 이름은** *봇 이름과*동일 하 게 남겨둘 수 있습니다. 
+    7. *Bot 템플릿을* **Basic (C#)** 으로 그대로 둡니다.
+    8. 계정에 대해 *App service 계획/위치* 를 자동으로 채워야 합니다.
+    9. Bot을 호스트 하는 데 사용할 **Azure Storage** 를 설정 합니다. 아직 없는 경우 여기에서 만들 수 있습니다.
+    10. 또한이 서비스에 적용 된 사용 약관을 이해 했는지 확인 해야 합니다.
     11. 만들기를 클릭 합니다.
  
         ![Azure Bot Service 만들기](images/AzureLabs-Lab312-10.png)
 
-5.  클릭 한 후 **만들기**만들려는 서비스에 대 한 대기 해야, 1 분이 걸릴 수 있습니다.
+5.  **만들기**를 클릭 한 후에는 서비스를 만들 때까지 기다려야 합니다 .이 작업이 몇 분 정도 걸릴 수 있습니다.
 
-6.  서비스 인스턴스가 생성 되 면 포털에서 알림이 표시 됩니다.
+6.  서비스 인스턴스를 만든 후 알림이 포털에 표시 됩니다.
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-11.png) 
  
-7.  새 서비스 인스턴스를 탐색 하려면 알림을 클릭 합니다. 
+7.  알림을 클릭 하 여 새 서비스 인스턴스를 탐색 합니다. 
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-12.png)
  
-8. 클릭 합니다 **리소스로 이동** 알림에서 새 서비스 인스턴스를 탐색 하는 단추입니다. 새 Azure 서비스에 연결 됩니다. 
+8. 알림에서 **리소스로 이동** 단추를 클릭 하 여 새 서비스 인스턴스를 탐색 합니다. 새 Azure 서비스 인스턴스로 이동 됩니다. 
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-13.png)
  
-9.  라는 기능을 설치 해야 하는 시점 **직접 회선** 클라이언트 응용 프로그램이이 Bot 서비스와 통신할 수 있도록 합니다. 클릭할 **채널**, 그런 다음는 **추천된 채널 추가** 섹션을 클릭 **구성 직접 회선 채널**합니다.
+9.  이 시점에서 클라이언트 응용 프로그램이이 Bot 서비스와 통신할 수 있도록 **Direct Line** 이라는 기능을 설정 해야 합니다. **채널**을 클릭 한 다음, **추천 채널 추가** 섹션에서 **직접 선 채널 구성**을 클릭 합니다.
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-14.png)
 
-10. 이 페이지에서 찾을 수 있습니다 합니다 **비밀 키** 클라이언트 앱 봇으로 인증할 수 있도록 합니다. 클릭 합니다 **표시** 단추 및 프로젝트에서 나중에이 필요 하므로 하나 표시 키의 복사본을 만듭니다. 
+10. 이 페이지에서는 클라이언트 앱에서 봇으로 인증할 수 있는 **비밀 키** 를 찾을 수 있습니다. **표시** 단추를 클릭 하 고, 프로젝트에서 나중에 필요 하므로 표시 된 키 중 하나를 복사 합니다. 
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-15.png)
 
-## <a name="chapter-3--publish-the-bot-to-the-azure-web-app-bot-service"></a>– 3 장 봇을 Azure Web App 봇 서비스에 게시
+## <a name="chapter-3--publish-the-bot-to-the-azure-web-app-bot-service"></a>3 장 – Azure 웹 앱 봇 서비스에 봇 게시
 
-이제 서비스 준비 되 면 새로 만든된 웹 앱 봇 서비스에 이전에 작성 하는 봇 코드를 게시 해야 합니다.
+이제 서비스가 준비 되었으므로 새로 만든 웹 앱 봇 서비스에 이전에 빌드한 봇 코드를 게시 해야 합니다.
 
 > [!NOTE] 
-> 봇 솔루션에 변경 될 때마다 Azure 서비스에 봇을 게시 해야 / c o d.
+> Bot 솔루션/코드를 변경할 때마다 Azure 서비스에 봇을 게시 해야 합니다.
 
 1.  이전에 만든 Visual Studio 솔루션으로 돌아갑니다. 
-2.  마우스 오른쪽 단추로 클릭 하 **MyBot** 프로젝트를 합니다 **솔루션 탐색기**, 클릭 **게시**합니다.
+2.  **솔루션 탐색기**에서 **mybot** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **게시**를 클릭 합니다.
 
-    ![봇 Azure Web App 봇 서비스에 게시](images/AzureLabs-Lab312-16.png)
+    ![Azure 웹 앱 봇 서비스에 봇 게시](images/AzureLabs-Lab312-16.png)
 
-3.  에 *게시 대상 선택* 페이지에서 **App Service**, 한 다음 **기존 항목 선택**, 마지막 클릭 **프로필 만들기** (해야 할 수 있습니다 옆에 있는 드롭다운 화살표를 클릭 합니다 *게시* 단추에 표시 되지 않는 경우).
+3.  *게시 대상 선택* 페이지에서 **App Service**를 클릭 한 다음 기존 프로필 만들기를 **선택**합니다. 마지막으로 **프로필 만들기** 를 클릭 합니다 (표시 되지 않는 경우 *게시* 단추와 함께 드롭다운 화살표를 클릭 해야 할 수 있음).
 
-    ![봇 Azure Web App 봇 서비스에 게시](images/AzureLabs-Lab312-17.png)
+    ![Azure 웹 앱 봇 서비스에 봇 게시](images/AzureLabs-Lab312-17.png)
 
-4. 하면 로그인 하지 않은 아직 Microsoft 계정으로, 다음 작업을 수행 해야 합니다.
-5. 에 **게시** 동일 하 게 설정 해야 하는 것이 보면 페이지 **구독** 에 사용 하는 합니다 *Web App 봇* 서비스 만들기. 설정한 합니다 **보기** 으로 **리소스 그룹** 드롭다운 폴더 구조 목록에서 선택 합니다 **리소스 그룹** 이전에 만든 합니다. **확인**을 클릭합니다. 
+4. Microsoft 계정에 아직 로그인 하지 않은 경우 여기에서 작업을 수행 해야 합니다.
+5. **게시** 페이지에서 *웹 앱 봇* 서비스 생성에 사용한 것과 동일한 **구독** 을 설정 해야 합니다. 그런 다음 **보기** 를 **리소스 그룹** 으로 설정 하 고 드롭다운 폴더 구조에서 이전에 만든 **리소스 그룹** 을 선택 합니다. **확인**을 클릭합니다. 
 
-    ![봇 Azure Web App 봇 서비스에 게시](images/AzureLabs-Lab312-18.png)
+    ![Azure 웹 앱 봇 서비스에 봇 게시](images/AzureLabs-Lab312-18.png)
 
-6.  클릭 합니다 **게시** 단추 및 봇에 게시 될 때까지 기다립니다 (몇 분 정도 걸릴 수 있습니다).
+6.  이제 **게시** 단추를 클릭 하 고 봇이 게시 될 때까지 기다립니다 (몇 분 정도 걸릴 수 있음).
 
-    ![봇 Azure Web App 봇 서비스에 게시](images/AzureLabs-Lab312-19.png)
+    ![Azure 웹 앱 봇 서비스에 봇 게시](images/AzureLabs-Lab312-19.png)
 
 
 ## <a name="chapter-4--set-up-the-unity-project"></a>4 장-Unity 프로젝트 설정
 
-다음은 일반적인 등록 혼합된 현실 등을 사용 하 여 개발 하는 것에 대 한와 따라서 다른 프로젝트에 대 한 좋은 템플릿입니다.
+다음은 혼합 현실를 사용 하 여 개발 하기 위한 일반적인 설정으로, 다른 프로젝트에 적합 한 템플릿입니다.
 
-1.  오픈 *Unity* 누릅니다 **새로 만들기**합니다. 
+1.  *Unity* 를 열고 **새로 만들기**를 클릭 합니다. 
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-20.png)
 
-2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. 삽입 **Hololens Bot**합니다. 프로젝트 템플릿은 설정 되어 있는지 확인 **3D**합니다. 설정 된 **위치** 적절 한 위치로 (기억에 루트 디렉터리에 가까울수록이 더 좋습니다). 그런 다음 클릭 **프로젝트 만들기**합니다.
+2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. **Hololens 봇**을 삽입 합니다. 프로젝트 템플릿이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-21.png)
 
-3.  Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다. 로 이동 **편집 > 기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다. 변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다. 닫기 합니다 **기본 설정** 창입니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **> 기본 설정 편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-22.png)
 
-4.  이동한 다음 **파일 > 빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하려면 단추.
+4.  그런 다음 **파일 > 빌드 설정** 으로 이동 하 고 **유니버설 Windows 플랫폼**을 선택한 후 **플랫폼 전환** 단추를 클릭 하 여 선택 항목을 적용 합니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-23.png)
 
-5.  여전히 **파일 > 빌드 설정** 되어 있는지 확인 합니다.
+5.  아직 **파일 > 빌드 설정을** 사용 하 고 있는지 확인 합니다.
 
-    1.  **장치를 대상** 로 설정 된 **Hololens**
+    1.  **대상 장치가** **Hololens** 로 설정 됨
 
-        > 몰입 형 헤드셋, 설정 **대상 장치** 하 *모든 장치*합니다.
+        > 모던 헤드셋의 경우 **대상 장치** 를 *모든 장치로*설정 합니다.
 
-    2.  **빌드 형식** 로 설정 된 **D3D**
+    2.  **빌드 형식이** **D3D** 로 설정 됩니다.
 
-    3.  **SDK** 로 설정 된 **가장 최근에 설치 된**
+    3.  **SDK** 가 **최신 설치** 로 설정 됨
 
-    4.  **Visual Studio 버전** 로 설정 된 **가장 최근에 설치 된**
+    4.  **Visual Studio 버전이** **최신 설치** 로 설정 됨
 
-    5.  **빌드 및 실행** 로 설정 된 **로컬 컴퓨터**
+    5.  **빌드 및 실행** 이 **로컬 컴퓨터로** 설정 됨
 
-    6.  장면 저장 하 고 빌드에 추가 합니다. 
+    6.  장면을 저장 하 고 빌드에 추가 합니다. 
 
-        1. 선택 하 여이 작업을 수행할 **열고 장면 추가**합니다. 창 저장 나타납니다.
+        1. 이렇게 하려면 열려 있는 **장면 추가**를 선택 합니다. 저장 창이 표시 됩니다.
         
             ![Unity 프로젝트 설정](images/AzureLabs-Lab312-24.png)
 
-        2. 새 폴더를 만들려면이 고 모든의 미래, 장면에 대 한 다음 선택 합니다 **새 폴더** 새 폴더를 만들려면 단추 이름을 **장면**합니다.
+        2. 이에 대 한 새 폴더를 만들고 나중에 장면을 만든 다음 **새 폴더** 단추를 선택 하 여 새 폴더를 만들고 이름을 **장면을**로 지정한 다음
 
              ![Unity 프로젝트 설정](images/AzureLabs-Lab312-25.png)
 
-        3. 새로 만든 열 **장면** 폴더를 선택한 다음는 *파일 이름*: 텍스트 필드에 입력 **BotScene**, 클릭 **저장**합니다.
+        3. 새로 만든 **장면** 폴더를 연 다음 *파일 이름*: 텍스트 필드에 **BotScene**를 입력 하 고 **저장**을 클릭 합니다.
 
             ![Unity 프로젝트 설정](images/AzureLabs-Lab312-26.png)
 
-    7. 설정에 남아 **빌드 설정**, 지금은 기본값으로 유지 해야 합니다.
+    7. **빌드 설정**의 나머지 설정은 지금은 기본값으로 남겨 두어야 합니다.
 
-6. 에 *빌드 설정* 창을 **플레이어 설정** 단추를 공간에 관련 된 패널이 열립니다이 위치를 *검사기* 위치한. 
+6. *빌드 설정* 창에서 **플레이어 설정** 단추를 클릭 하면 *검사기* 가 있는 공간에서 관련 패널이 열립니다. 
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-27.png)
 
 7. 이 패널에서 몇 가지 설정을 확인 해야 합니다.
 
-    1. 에 **기타 설정** 탭:
+    1. **기타 설정** 탭에서 다음을 수행 합니다.
 
-        1. **스크립팅 런타임 버전** 있어야 **실험적 (NET 4.6 동등)**; 편집기를 다시 시작이를 변경 해야 합니다.
-        2. **백 엔드를 스크립팅** 있어야 **.NET**
-        3. **API 호환성 수준** 있어야 **.NET 4.6**
+        1. **Scripting Runtime 버전** 은 **실험적 (NET 4.6 동급)** 이어야 합니다. 이를 변경 하려면 편집기를 다시 시작 해야 합니다.
+        2. **Scripting 백엔드** 는 **.net** 이어야 합니다.
+        3. **API 호환성 수준은** **.net 4.6** 이어야 합니다.
 
             ![Unity 프로젝트 설정](images/AzureLabs-Lab312-28.png)
       
-    2. 내 합니다 **게시 설정** 탭의 **기능**, 확인:
+    2. **게시 설정** 탭의 **기능**아래에서 다음을 확인 합니다.
 
         - **InternetClient**
-        - **Microphone**
+        - **마이크로**
 
             ![Unity 프로젝트 설정](images/AzureLabs-Lab312-29.png)
 
-    3. 패널을 아래쪽의 **xr 하이 설정을** (아래에서 확인할 **게시 설정**), 눈금 **가상 현실 지원**, 있는지는 **Windows Mixed Reality SDK**  추가 됩니다.
+    3. 패널의 아래쪽에서 **XR 설정** ( **게시 설정**아래에 있음), **지원 되는 틱 가상 현실**, **Windows Mixed reality SDK** 가 추가 되어 있는지 확인 합니다.
 
         ![Unity 프로젝트 설정](images/AzureLabs-Lab312-30.png)
 
-8.  년대 *빌드 설정* _Unity C#_  프로젝트는 더 이상 회색으로;이 옆의 확인란을 선택 합니다. 
+8.  *빌드 설정* 으로 돌아가서 _Unity C#_  프로젝트가 더 이상 회색으로 표시 되지 않습니다. 이 옆의 확인란을 선택 합니다. 
 9.  빌드 설정 창을 닫습니다.
-10. 장면 및 프로젝트 저장 (**파일 > 저장 장면 파일 > 프로젝트 저장**).
+10. 장면 및 프로젝트를 저장 합니다 (**파일 > 장면/파일 저장 > 프로젝트 저장**).
 
 
 ## <a name="chapter-5--camera-setup"></a>5 장-카메라 설정
 
 > [!IMPORTANT]
-> 건너뛸 하려는 경우는 *Unity 설정* 이 구성 요소, 과정 및 코드로 바로 계속, 다운로드 자유롭게 [Azure MR-312 Package.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage)을 로프로젝트로가져올[ **사용자 지정 패키지**](https://docs.unity3d.com/Manual/AssetPackages.html)를 선택한 다음에서 계속 [7 장](#chapter-7-–-create-the-botobjects-class)합니다.
+> 이 과정의 *Unity 설정* 구성 요소를 건너뛰고 계속 해 서 코드를 계속 사용 하려면 [312이 unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage)를 다운로드 하 고 프로젝트에 [**사용자 지정 패키지로**](https://docs.unity3d.com/Manual/AssetPackages.html)가져온 후 다음을 [계속 진행 합니다. 7 장](#chapter-7-–-create-the-botobjects-class).
 
-1.  에 *계층 패널*를 선택 합니다 **주 카메라**합니다. 
-2.  선택한 후에의 모든 구성 요소를 볼 수는 합니다 **주 카메라** 에 *검사기 패널*합니다.
+1.  *계층 패널*에서 **기본 카메라**를 선택 합니다. 
+2.  선택한 후에는 *검사기 패널*에서 **주 카메라** 의 모든 구성 요소를 볼 수 있습니다.
 
-    1. 합니다 **카메라 개체** 이름은 **주 카메라** (맞춤법을 확인 합니다.)
-    2. 주 카메라 **태그** 으로 설정 되어 있어야 **MainCamera** (맞춤법을 확인 합니다.)
-    3. 있는지 확인 합니다 **변환 위치** 로 설정 된 **0, 0, 0**
-    4. 설정 **플래그 지우기** 하 **단색**합니다.
-    5. 설정 된 **백그라운드** 카메라 구성 요소의 색 **검정, 알파 0 (16 진수 코드: #00000000)**
+    1. **카메라 개체** 의 이름을 **주 카메라로** 지정 해야 합니다 (철자 확인).
+    2. 기본 카메라 **태그** 는 **maincamera** 로 설정 되어야 합니다 (철자 확인).
+    3. **변환 위치가** **0, 0, 0** 으로 설정 되어 있는지 확인 합니다.
+    4. **Clear Flags** 를 **Solid 색**으로 설정 합니다.
+    5. 카메라 구성 요소의 **배경색** 을 **검은색, 알파 0 (16 진수 코드: #00000000)** 으로 설정 합니다.
 
     ![카메라 설정](images/AzureLabs-Lab312-31.png)
  
 
-## <a name="chapter-6--import-the-newtonsoft-library"></a>6 장-Newtonsoft 라이브러리 가져오기
+## <a name="chapter-6--import-the-newtonsoft-library"></a>6 장 – Newtonsoft.json 라이브러리 가져오기
 
-봇 서비스에 보내고 받은 개체를 serialize 및 deserialize 하는 데 다운로드 해야 합니다 **Newtonsoft** 라이브러리입니다. 찾을 수 있습니다는 [호환 되는 버전 여기 잘못 Unity 폴더 구조를 사용 하 여 이미 구성](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/NewtonsoftDLL.unitypackage)합니다. 
+받아서 봇 서비스로 전송 되는 개체를 deserialize 하 고 serialize 할 수 있도록 **newtonsoft.json** 라이브러리를 다운로드 해야 합니다. [여기에서 올바른 Unity 폴더 구조를 사용 하 여 이미 구성 된 호환 버전](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/NewtonsoftDLL.unitypackage)을 찾을 수 있습니다. 
 
-Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 제공 된 Unity 패키지를 사용 합니다.
+Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에서 제공 되는 Unity 패키지를 사용 합니다.
 
-1.  추가 된 *.unitypackage* 사용 하 여 Unity에는 **자산** > **패키지 가져오기** > **사용자 지정 패키지** 메뉴 옵션입니다.
+1.  **자산** **가져오기 패키지 사용자 지정** **패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.   >  > 
 
-    ![Newtonsoft 라이브러리 가져오기](images/AzureLabs-Lab312-34.png)
+    ![Newtonsoft.json 라이브러리 가져오기](images/AzureLabs-Lab312-34.png)
 
-2.  에 **Unity 패키지 가져오기** 표시 되는 상자에서 아래에 있는 포함 하 여 모든 것을 확인 **플러그 인** 을 선택 합니다.
+2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** 을 포함 하 여 모든 항목을 선택 했는지 확인 합니다.
 
-    ![Newtonsoft 라이브러리 가져오기](images/AzureLabs-Lab312-35.png)
+    ![Newtonsoft.json 라이브러리 가져오기](images/AzureLabs-Lab312-35.png)
 
-3.  클릭 합니다 **가져오기** 프로젝트에 항목을 추가 하려면 단추입니다.
+3.  **가져오기** 단추를 클릭 하 여 프로젝트에 항목을 추가 합니다.
 
-4.  로 이동 합니다 **Newtonsoft** 아래에 폴더 **플러그 인** 프로젝트 보기를 Newtonsoft 플러그 인을 선택 합니다.
+4.  프로젝트 뷰에서 **플러그** 인의 **newtonsoft.json** 폴더로 이동 하 고 newtonsoft.json 플러그 인을 선택 합니다.
 
     ![](images/AzureLabs-Lab312-35b.png)
 
-5.  선택한 Newtonsoft 플러그 인을 사용 하 여 있는지를 확인 **Any 플랫폼** 는 **unchecked**, 한지 확인 합니다 **WSAPlayer** 이기도 **검사 되지 않은**, 누른 **적용**합니다. 이 파일이 올바르게 구성 되어 있는지 확인 합니다.
+5.  Newtonsoft.json 플러그 인을 선택한 상태에서 **모든 플랫폼이** 선택 **취소**되어 있는지 확인 한 다음 **WSAPlayer** 도 **선택 취소**되어 있는지 확인 하 고 **적용**을 클릭 합니다. 이는 파일이 올바르게 구성 되었는지 확인 하기 위한 것입니다.
 
     ![](images/AzureLabs-Lab312-35c.png)
 
     > [!NOTE]
-    > 이러한 플러그 인을 표시만 Unity 편집기에서 사용 되도록 구성 합니다. Unity에서 프로젝트를 내보낸 후 사용 되는 WSA 폴더에서 다른 집합을 있습니다.
+    > 이러한 플러그 인을 표시 하면 Unity 편집기 에서만 사용 하도록 구성 됩니다. WSA 폴더에는 프로젝트를 Unity에서 내보낸 후에 사용 되는 다른 집합이 있습니다.
 
-6.  열어야 할 때 다음에 **WSA** 폴더 내에서 합니다 **Newtonsoft** 폴더입니다. 방금 구성한 동일한 파일의 복사본을 볼 수 있습니다. 파일을 선택 하 고 [관리자]에서 확인 하는
-    -   **모든 플랫폼** 는 **선택 취소 되어 있음** 
-    -   **만** **WSAPlayer** 는 **확인**
-    -   **처리 하지 않음** 는 **확인**
+6.  다음으로 **newtonsoft.json** 폴더 내에서 **WSA** 폴더를 열어야 합니다. 방금 구성한 파일의 복사본이 표시 됩니다. 파일을 선택 하 고 검사기에서 다음을 확인 합니다.
+    -   **모든 플랫폼이** **선택 취소** 되어 있음 
+    -   **만** **WSAPlayer** **확인** 됨
+    -   **Dont 프로세스** 를 **선택 했습니다** .
 
     ![](images/AzureLabs-Lab312-35d.png)
 
-## <a name="chapter-7--create-the-bottag"></a>7 장 –는 BotTag 만들기
+## <a name="chapter-7--create-the-bottag"></a>7 장-BotTag 만들기
 
-1.  새 **태그** 라는 개체 **BotTag**합니다. 주 카메라 장면에서 선택 합니다. 태그에 대 한 드롭다운 검사기 창에서 메뉴를 클릭 합니다. 클릭할 **태그를 추가**합니다.
+1.  **BotTag**라는 새 **Tag** 개체를 만듭니다. 장면에서 주 카메라를 선택 합니다. 검사기 패널에서 태그 드롭다운 메뉴를 클릭 합니다. **태그 추가**를 클릭 합니다.
 
     ![카메라 설정](images/AzureLabs-Lab312-32.png)
  
-2.  클릭 합니다 **+** 기호입니다. 새 이름을 **태그** 으로 **BotTag**하십시오 *저장*합니다.
+2.  기호를 **+** 클릭 합니다. 새 **태그** 의 이름을 **BotTag**, *Save*로 합니다.
 
     ![카메라 설정](images/AzureLabs-Lab312-33.png)
 
 > [!WARNING] 
-> **하지** 적용 된 **BotTag** 주 카메라입니다. 실수로 수행한 경우이 변경 해야 태그를 주 카메라 *MainCamera*합니다.
+> **BotTag** 를 기본 카메라에 적용 **하지 마십시오** . 실수로이 작업을 수행한 경우 주 카메라 태그를 *Maincamera*로 다시 변경 해야 합니다.
 
-## <a name="chapter-8--create-the-botobjects-class"></a>8 장-BotObjects 클래스 만들기
+## <a name="chapter-8--create-the-botobjects-class"></a>8 장 – BotObjects 클래스 만들기
 
-생성 해야 하는 첫 번째 스크립트는 **BotObjects** 동일한 스크립트 내 일련의 다른 클래스 개체에 저장할 수 있도록 만들고 장면에서 다른 스크립트에서 액세스 하는 빈 클래스 클래스.
+만들어야 하는 첫 번째 스크립트는 **BotObjects** 클래스입니다 .이 클래스는 일련의 다른 클래스 개체를 동일한 스크립트 내에 저장 하 고 장면의 다른 스크립트에서 액세스할 수 있도록 만들어지는 빈 클래스입니다.
 
-이 클래스의 생성은 순수 하 게 아키텍처, 이러한 개체는이 과정의 뒷부분에서 만들 봇 스크립트 대신 호스트 될 수 있습니다.
+이 클래스를 만드는 것은 전적으로 아키텍처를 선택 하는 것입니다. 이러한 개체는이 과정의 뒷부분에서 만들 Bot 스크립트에서 호스팅될 수 있습니다.
 
 이 클래스를 만들려면: 
 
-1.  마우스 오른쪽 단추로 클릭 합니다 *프로젝트 패널*, 한 다음 **만들기 > 폴더**합니다. 폴더의 이름을 **스크립트**합니다. 
+1.  *프로젝트 패널*을 마우스 오른쪽 단추로 클릭 하 고 **> 폴더를 만듭니다**. 폴더 이름을 **스크립트**로 합니다. 
 
     ![스크립트 폴더를 만듭니다.](images/AzureLabs-Lab312-36.png)
 
-2.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다. 해당 폴더를 마우스 오른쪽 단추로 선택 내에서 다음 **만들기 > C# 스크립트**합니다. 스크립트 이름을 **BotObjects**합니다. 
+2.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다. 그런 다음 해당 폴더 내에서를 마우스 오른쪽 단추로 클릭 하 고  **C# > 스크립트 만들기**를 선택 합니다. 스크립트 이름을 **BotObjects**로 합니다. 
 
-3.  새 두 번 클릭 **BotObjects** 스크립트를 사용 하 여 열고 **Visual Studio**합니다.
+3.  새 **BotObjects** 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
-4.  스크립트의 콘텐츠를 삭제 하 고 다음 코드로 바꿉니다.
+4.  스크립트의 내용을 삭제 하 고 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -552,21 +552,21 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     }
     ```
 
-6.  변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.
+6.  *Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.
 
-## <a name="chapter-9--create-the-gazeinput-class"></a>9 장-GazeInput 클래스 만들기
+## <a name="chapter-9--create-the-gazeinput-class"></a>9 장 – GazeInput 클래스 만들기
 
-다음 클래스를 만드는 것은 **GazeInput** 클래스입니다. 이 클래스는 담당 합니다.
+만들려는 다음 클래스는 **GazeInput** 클래스입니다. 이 클래스는 다음을 담당 합니다.
 
-- 커서를 만들기가 나타내는 합니다 *gaze* 플레이어의 합니다.
-- 선수의 게이즈 발생 하는 개체를 검색 하 고 검색 된 개체에 대 한 참조를 보유 합니다.
+- 플레이어의 *응시* 를 나타내는 커서를 만듭니다.
+- 플레이어를 응시 하 고 검색 된 개체에 대 한 참조를 보유 하는 개체를 검색 합니다.
 
 이 클래스를 만들려면: 
 
-1.  로 이동 합니다 **스크립트** 이전에 만든 폴더입니다. 
-2.  폴더를 마우스 오른쪽 단추로 클릭 **만들기 > C# 스크립트**합니다. 스크립트를 호출할 **GazeInput**합니다. 
-3.  새 두 번 클릭 **GazeInput** 스크립트를 사용 하 여 열고 **Visual Studio**합니다.
-4.  클래스 이름에 바로 위에 다음 줄을 삽입 합니다.
+1.  이전에 만든 **스크립트** 폴더로 이동 합니다. 
+2.  폴더 내부를 마우스 오른쪽 단추로 클릭 하 **> C# 스크립트를 만듭니다**. **GazeInput**스크립트를 호출 합니다. 
+3.  새 **GazeInput** 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
+4.  클래스 이름 바로 위에 다음 줄을 삽입 합니다.
 
     ```csharp
     /// <summary>
@@ -576,7 +576,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     public class GazeInput : MonoBehaviour
     ```
 
-5.  다음 내에서 다음 변수를 추가 합니다 **GazeInput** 위의 클래스는 **start ()** 메서드:
+5.  그런 다음 **GazeInput** 클래스 내에서 **Start ()** 메서드 위의 다음 변수를 추가 합니다.
 
     ```csharp
         [Tooltip("Used to compare whether an object is to be interacted with.")]
@@ -612,7 +612,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         private Vector3 _gazeDirection;
     ```
 
-6.  에 대 한 코드 **start ()** 메서드를 추가 해야 합니다. 이 클래스를 초기화할 때 호출 됩니다.
+6.  **Start ()** 메서드에 대 한 코드를 추가 해야 합니다. 클래스가 초기화 될 때 호출 됩니다.
 
     ```csharp
         /// <summary>
@@ -625,7 +625,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-7.  인스턴스화를 응시 커서를 설정 하는 메서드를 구현 합니다. 
+7.  응시 커서를 인스턴스화하고 설정 하는 메서드를 구현 합니다. 
 
     ```csharp
         /// <summary>
@@ -647,7 +647,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-8.  주 카메라에서 Raycast 설정 및는 추적할 현재 포커스가 있는 개체는 메서드를 구현 합니다.
+8.  기본 카메라에서 Raycast를 설정 하 고 현재 포커스가 있는 개체를 추적 하는 메서드를 구현 합니다.
 
     ```csharp
         /// <summary>
@@ -745,25 +745,25 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
  
-9.  변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.
+9.  *Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.
 
-## <a name="chapter-10--create-the-bot-class"></a>10 장-Bot 클래스 만들기
+## <a name="chapter-10--create-the-bot-class"></a>10 장 – Bot 클래스 만들기
 
-이제 만들려는 하려는 스크립트를 호출 **Bot**합니다. 응용 프로그램의 핵심 클래스를 저장 합니다. 
+지금 만들려는 스크립트를 **봇**이라고 합니다. 이 클래스는 응용 프로그램의 핵심 클래스 이며 다음을 저장 합니다. 
 
-- Web App 봇 자격 증명
-- 사용자 음성 명령에서 수집 하는 메서드
-- 웹 응용 프로그램 봇을 사용 하 여 대화를 시작 하는 데 필요한 메서드 
-- 웹 응용 프로그램 봇을에 메시지를 보내는 데 필요한 메서드 
+- 웹 앱 봇 자격 증명
+- 사용자 음성 명령을 수집 하는 메서드
+- 웹 앱 봇에서 대화를 시작 하는 데 필요한 방법 
+- 웹 앱 봇에 메시지를 보내는 데 필요한 방법 
 
-봇 서비스에 메시지를 보내도록 합니다 **SendMessageToBot()** 코 루틴에서 사용자가 보낸 데이터로 Bot Framework에서 인식 하는 개체인 활동을 빌드합니다. 
+Bot Service로 메시지를 보내기 위해 **SendMessageToBot ()** 코 루틴는 사용자가 보낸 데이터로 bot Framework에서 인식 하는 개체인 활동을 빌드합니다. 
  
 이 클래스를 만들려면: 
 
-1. 두 번 클릭 합니다 **스크립트** 폴더를 엽니다. 
-2. 마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **만들기 > C# 스크립트**합니다. 스크립트 이름을 **Bot**합니다. 
-3. Visual Studio를 사용 하 여 열에 새 스크립트를 두 번 클릭 합니다.
-4. 네임 스페이스의 맨 위에 있는 다음과 같을 수를 업데이트 합니다 **Bot** 클래스:
+1. **Scripts** 폴더를 두 번 클릭 하 여 엽니다. 
+2. **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **> C# 스크립트 만들기**를 클릭 합니다. 스크립트의 이름을 **Bot**로 합니다. 
+3. 새 스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
+4. **Bot** 클래스의 위쪽에서 다음과 같이 네임 스페이스를 업데이트 합니다.
 
     ```csharp
     using Newtonsoft.Json;
@@ -774,7 +774,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     using UnityEngine.Windows.Speech;
     ```
  
-5. 내부를 **Bot** 클래스에 다음 변수를 추가 합니다.
+5. **Bot** 클래스 내에서 다음 변수를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -836,9 +836,9 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     ```
 
     > [!NOTE] 
-    > 삽입 해야 하 **Bot 비밀 키** 에 **botSecret** 변수입니다. 가 기록한 사용자 **Bot 비밀 키** 이 과정의 시작 부분에  **[2 장](#chapter-2---create-the-azure-bot-service), 10 단계**합니다.
+    > **BotSecret** 변수에 **봇 비밀 키** 를 삽입 했는지 확인 합니다. 이 과정의 시작 부분에 있는  **[2 장](#chapter-2---create-the-azure-bot-service), 10 단계**에서 **봇 비밀 키** 를 적어 두는 것을 볼 수 있습니다.
 
-7. 에 대 한 코드 **Awake()** 하 고 **start ()** 추가 해야 합니다. 
+7. 이제 해제 **()** 및 **Start ()** 에 대 한 코드를 추가 해야 합니다. 
 
     ```csharp
         /// <summary>
@@ -858,7 +858,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-8. 음성 캡처를 시작 및 종료 하는 경우 음성 라이브러리에서 호출 되는 두 명의 처리기를 추가 합니다. 합니다 *DictationRecognizer* 말하기 중지할 때 사용자 음성 캡처 자동으로 중지 됩니다.
+8. 음성 캡처가 시작 되 고 끝날 때 음성 라이브러리에서 호출 하는 두 처리기를 추가 합니다. *DictationRecognizer* 사용자가 말하기를 중지 하면 자동으로 사용자 음성 캡처가 중지 됩니다.
 
     ```csharp
         /// <summary>
@@ -887,7 +887,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         
     ```
 
-1. 다음 처리기는 사용자 음성 입력의 결과 수집 하 고 웹 앱 봇 서비스에 메시지를 보내는 코 루틴을 호출 합니다.
+1. 다음 처리기는 사용자 음성 입력의 결과를 수집 하 고 웹 앱 봇 서비스에 메시지를 전송 하는 것을 담당 하는 코 루틴을 호출 합니다.
 
     ```csharp
         /// <summary>
@@ -904,7 +904,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }     
     ```
 
-10. 봇에 사용 하 여 대화를 시작 하려면 다음 코 루틴 일 이라고 합니다. 대화 호출이 완료 되 면 호출을 확인할 수 있습니다 합니다 **SendMessageToCoroutine()** 는 일련의 빈 메시지로 Bot Service를 전송할 수 있도록 활동을 설정 하는 매개 변수를 전달 하 여 합니다. Bot Service와 관련 된 대화를 시작 하려면 프롬프트에 수행 됩니다.
+10. 다음 코 루틴는 Bot를 사용 하 여 대화를 시작 하기 위해 호출 됩니다. 대화 호출이 완료 되 면 활동을 **SendMessageToCoroutine ()** 를 호출 하는 일련의 매개 변수를 전달 하 여 해당 활동을 빈 메시지로 전달 하 게 됩니다. 이 작업은 봇 서비스에 대화를 시작 하 라는 메시지를 표시 하기 위해 수행 됩니다.
 
     ```csharp
         /// <summary>
@@ -935,7 +935,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }    
     ```
 
-11. Bot Service를 전송할 수 있도록 활동을 빌드한 다음 코 루틴 일 이라고 합니다. 
+11. 다음 코 루틴는 Bot 서비스로 보낼 활동을 빌드하기 위해 호출 됩니다. 
 
     ```csharp
         /// <summary>
@@ -984,7 +984,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-12. 봇 서비스에 활동을 보낸 후 응답을 요청 하려면 다음 코 루틴 일 이라고 합니다. 
+12. 다음 코 루틴는 작업을 Bot Service로 보낸 후 응답을 요청 하기 위해 호출 됩니다. 
 
     ```csharp
         /// <summary>
@@ -1018,7 +1018,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         } 
     ```
 
-13. 이 클래스에 추가할 마지막 메서드는 장면에서 메시지를 표시 해야 합니다.
+13. 이 클래스에 추가할 마지막 메서드는 장면에 메시지를 표시 하는 데 필요 합니다.
 
     ```csharp
         /// <summary>
@@ -1031,24 +1031,24 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     ```
 
     > [!NOTE] 
-    > Unity 편집기 콘솔 누락 하는 방법에 대 한 오류가 표시 될 수 있습니다 합니다 **SceneOrganiser** 클래스입니다. 자습서의 뒷부분에 나오는이 클래스를 만들기는이 메시지는 무시 합니다.
+    > Unity 편집기 콘솔에 **SceneOrganiser** 클래스 누락에 대 한 오류가 표시 될 수 있습니다. 자습서의 뒷부분에서이 클래스를 만들 때이 메시지는 무시 합니다.
 
-14.  변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.
+14.  *Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.
 
 ## <a name="chapter-11--create-the-interactions-class"></a>11 장-상호 작용 클래스 만들기
 
-클래스를 만드는 것은 이제 라고 **상호 작용**합니다. 이 클래스는 사용자 로부터 HoloLens 탭 입력 검색할 사용 됩니다. 
+지금 만들 클래스를 **상호 작용**이라고 합니다. 이 클래스는 사용자의 HoloLens 탭 입력을 검색 하는 데 사용 됩니다. 
 
-확인 하는 동안 사용자가 누를 경우는 *Bot* 봇 장면에 개체는 음성 입력을 수신 하도록 준비, 봇 개체는 색을 변경 **빨간색** 음성 입력에 대 한 수신 대기를 시작 합니다. 
+장면에서 *봇* 개체를 확인 하는 동안 사용자를 누르면 봇이 음성 입력을 수신할 준비가 되 면 봇 개체가 색을 **빨강** 으로 변경 하 고 음성 입력 수신 대기를 시작 합니다. 
 
-이 클래스에서 상속 된 **GazeInput** 클래스를 참조할 수는 **start ()** 메서드 및 변수를 사용 하 여 표시 되는 클래스에서 **기본**입니다. 
+이 클래스는 **GazeInput** 클래스에서 상속 하므로 **base**를 사용 하는 것으로 표시 된 해당 클래스에서 **Start ()** 메서드 및 변수를 참조할 수 있습니다. 
  
 이 클래스를 만들려면:
 
-1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다. 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **만들기 > C# 스크립트**합니다. 스크립트 이름을 **상호 작용**합니다. 
-3.  Visual Studio를 사용 하 여 열에 새 스크립트를 두 번 클릭 합니다.
-4.  네임 스페이스 및 클래스 상속의 맨 위에 있는 다음과 같을 수를 업데이트 합니다 **상호 작용** 클래스:
+1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다. 
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **> C# 스크립트 만들기**를 클릭 합니다. 스크립트 **상호 작용**의 이름을로 합니다. 
+3.  새 스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
+4.  **상호 작용** 클래스의 위쪽에서 네임 스페이스와 클래스 상속을 다음과 같이 업데이트 합니다.
 
     ```csharp
     using UnityEngine.XR.WSA.Input;
@@ -1057,7 +1057,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
     {
     ```
 
-5.  내 합니다 **상호 작용** 클래스에 다음 변수를 추가 합니다.
+5.  **상호 작용** 클래스 내에서 다음 변수를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1065,7 +1065,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         /// </summary>
         private GestureRecognizer _gestureRecognizer;
     ```
-6.  그런 다음 추가 합니다 **start ()** 메서드:
+6.  그런 다음 **Start ()** 메서드를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1083,7 +1083,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-7.  사용자가 HoloLens 카메라 앞에 탭 제스처를 수행할 때 트리거되는 처리기 추가
+7.  사용자가 HoloLens 카메라 앞에서 탭 제스처를 수행할 때 트리거되는 처리기를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1113,18 +1113,18 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-8. 변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.
+8. *Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.
 
-## <a name="chapter-12--create-the-sceneorganiser-class"></a>12 장-SceneOrganiser 클래스 만들기
+## <a name="chapter-12--create-the-sceneorganiser-class"></a>12 장 – SceneOrganiser 클래스 만들기
 
-이 랩에 필요한 마지막 클래스 라고 **SceneOrganiser**합니다. 이 클래스는 장면에서 해당 개체를 만들고 주 카메라에 구성 요소 및 스크립트를 추가 하 여 장면 프로그래밍 방식으로 설정 합니다.
+이 랩에서 필요한 마지막 클래스를 **SceneOrganiser**라고 합니다. 이 클래스는 기본 카메라에 구성 요소 및 스크립트를 추가 하 고 장면에 적절 한 개체를 만들어 프로그래밍 방식으로 장면을 설정 합니다.
  
 이 클래스를 만들려면:
 
-1.  두 번 클릭 합니다 **스크립트** 폴더를 엽니다. 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **만들기 > C# 스크립트**합니다. 스크립트 이름을 **SceneOrganiser**합니다. 
-3.  Visual Studio를 사용 하 여 열에 새 스크립트를 두 번 클릭 합니다.
-4.  내 합니다 **SceneOrganiser** 클래스에 다음 변수를 추가 합니다.
+1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다. 
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **> C# 스크립트 만들기**를 클릭 합니다. 스크립트 이름을 **SceneOrganiser**로 합니다. 
+3.  새 스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
+4.  **SceneOrganiser** 클래스 내에서 다음 변수를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1138,7 +1138,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         internal TextMesh botResponseText;
     ```
 
-6.  다음 추가 합니다 **Awake()** 하 고 **start ()** 메서드:
+6.  그런 다음, no **()** 및 **Start ()** 메서드를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1165,7 +1165,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-7.  장면에서 봇 개체를 만들고 매개 변수 및 구성 요소 설정에 다음 메서드를 추가 합니다.
+7.  장면에서 봇 개체를 만들고 매개 변수 및 구성 요소를 설정 하는 다음 메서드를 추가 합니다.
 
     ```csharp
         /// <summary>
@@ -1192,7 +1192,7 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-7.  봇의 응답을 나타내는 장면에서 UI 개체를 만드는 다음 메서드를 추가 합니다.
+7.  다음 메서드를 추가 하 여 화면에 UI 개체를 만들고 봇의 응답을 나타냅니다.
 
     ```csharp
         /// <summary>
@@ -1219,73 +1219,73 @@ Newtonsoft 라이브러리를 프로젝트로 가져오는이 과정을 통해 �
         }
     ```
 
-8.  변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.
-9.  Unity 편집기에서 끌어 합니다 **SceneOrganiser** 주 카메라를 Scripts 폴더에서 스크립트입니다. 장면 Organiser 구성 요소 아래 그림과에서 같이 이제 주 카메라 개체에 나타납니다.
+8.  *Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.
+9.  Unity 편집기에서 **SceneOrganiser** 스크립트를 Scripts 폴더에서 주 카메라로 끌어 옵니다. 이제 아래 이미지에 표시 된 것 처럼 장면 Organiser 구성 요소가 기본 카메라 개체에 표시 됩니다.
 
     ![Azure Bot Service 만들기](images/AzureLabs-Lab312-37.png)
 
-## <a name="chapter-13--before-building"></a>13 장-빌드하기 전에
+## <a name="chapter-13--before-building"></a>13 장 – 빌드하기 전
 
-응용 프로그램의 철저 한 테스트를 수행 하려면 해야 테스트용으로 로드 하 여 HoloLens에 있습니다.
-를 수행 하기 전에 확인 합니다.
+응용 프로그램에 대 한 철저 한 테스트를 수행 하려면 HoloLens에 테스트용으로 로드 해야 합니다.
+이렇게 하려면 먼저 다음을 확인 해야 합니다.
 
--   에 언급 된 모든 설정 합니다 [ **4 장** ](#Chapter-4-–-Set-up-the-unity-project) 올바르게 설정 됩니다. 
--   스크립트 **SceneOrganiser** 에 연결할 때 합니다 **주 카메라** 개체입니다. 
--   에 **Bot** 클래스를 넣었습니다 선택 되어 있는지 확인 합니다에 **봇 비밀 키** 에 **botSecret** 변수.
+-   [**4 장**](#Chapter-4-–-Set-up-the-unity-project) 에서 설명한 모든 설정이 올바르게 설정 됩니다. 
+-   **SceneOrganiser** 스크립트는 **주 카메라** 개체에 연결 됩니다. 
+-   **Bot** 클래스에서 **봇 비밀 키** 를 **botSecret** 변수에 삽입 했는지 확인 합니다.
 
-## <a name="chapter-14--build-and-sideload-to-the-hololens"></a>14 장-빌드 및는 HoloLens에 테스트용으로 로드
+## <a name="chapter-14--build-and-sideload-to-the-hololens"></a>14 장 – 테스트용으로 로드에 빌드 및
 
-이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되 면 Unity에서 작성 하는 시간 이므로 합니다.
+이제이 프로젝트의 Unity 섹션에 필요한 모든 항목이 완료 되었으므로 Unity에서 빌드할 수 있습니다.
 
-1.  이동할 **빌드 설정**, **파일 > 빌드 설정...** .
-2.  **빌드 설정** 창에서 클릭 **빌드**합니다.
+1.  **빌드 설정**, **파일 > 빌드 설정**으로 이동 합니다.
+2.  **빌드 설정** 창에서 **빌드**를 클릭 합니다.
 
     ![Unity에서 앱 빌드](images/AzureLabs-Lab312-38.png)
 
-3.  경우에 눈금 **Unity C# 프로젝트**합니다.
-4.  **빌드**를 클릭합니다. Unity가 시작 됩니다는 **파일 탐색기** 창을 만들고 다음에 앱을 빌드하는 폴더를 선택 해야 합니다. 해당 폴더를 이제 만들고 이름을 **앱**합니다. 사용 하 여 다음 합니다 **앱** 폴더를 선택, 클릭 **폴더 선택**합니다. 
-5.  Unity 프로젝트를 빌드할 예정 된 **앱** 폴더입니다. 
-6.  한 번 Unity (약간의 시간이 걸릴 수 있습니다) 빌드 완료, 열립니다는 **파일 탐색기** 빌드 위치에 있는 창 (작업 표시줄에서 항상 windows에서 위에 나타나지 않을 수 있습니다 있지만 새 추가 대 한 알림을 확인 창)입니다.
+3.  아직 없는 경우 tick **Unity C# 프로젝트**입니다.
+4.  **빌드**를 클릭합니다. Unity는 응용 프로그램을 빌드할 폴더를 만들고 선택 해야 하는 **파일 탐색기** 창을 시작 합니다. 이제 해당 폴더를 만들고 이름을 **App**으로 만듭니다. 그런 다음 **앱** 폴더를 선택 하 고 **폴더 선택**을 클릭 합니다. 
+5.  Unity는 **응용** 프로그램 폴더에 대 한 프로젝트 빌드를 시작 합니다. 
+6.  Unity가 빌드를 완료 하면 (시간이 걸릴 수 있음) 빌드 위치에서 **파일 탐색기** 창이 열립니다. (작업 표시줄은 항상 창 위에 표시 되는 것은 아니지만 새 창 추가를 알려 줍니다.)
 
-## <a name="chapter-15--deploy-to-hololens"></a>HoloLens에 장 15-배포
+## <a name="chapter-15--deploy-to-hololens"></a>15 장 – HoloLens에 배포
 
-HoloLens에 배포 합니다.
+HoloLens에 배포 하려면:
 
-1.  (배포에 대 한 원격), 여 HoloLens의 IP 주소를 사용 해야 하 고 중인에 HoloLens 되도록 **개발자 모드**합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
 
-    1. 에 HoloLens, 착용 하는 동안 엽니다는 **설정을**합니다.
-    2. 로 **네트워크 및 인터넷 > Wi-fi > 고급 옵션**
-    3. 참고 합니다 **IPv4** 주소입니다.
-    4. 다음으로 다시 이동할 **설정을**, 다음 **업데이트 및 보안 > 개발자 용** 
-    5. 개발자 모드를 설정 합니다.
+    1. HoloLens를 입고 하는 동안 **설정을**엽니다.
+    2. **네트워크 & 인터넷 > wi-fi > 고급 옵션** 으로 이동 합니다.
+    3. **IPv4** 주소를 적어둡니다.
+    4. 그런 다음 **설정**으로 다시 이동한 다음 **개발자를 위한 & 보안 >를 업데이트** 합니다. 
+    5. 에서 개발자 모드를 설정 합니다.
 
-2.  새 Unity 빌드에 이동 (합니다 **앱** 폴더) 사용 하 여 솔루션 파일을 엽니다 **Visual Studio**합니다.
-3.  에 **솔루션 구성** 선택 **디버그**합니다.
-4.  에 **솔루션 플랫폼**를 선택 **x86**를 **원격 컴퓨터**합니다. 
+2.  새 Unity 빌드 ( **앱** 폴더)로 이동 하 여 **Visual Studio**에서 솔루션 파일을 엽니다.
+3.  **솔루션 구성** 에서 **디버그**를 선택 합니다.
+4.  **솔루션 플랫폼**에서 **X86**, **원격 컴퓨터**를 선택 합니다. 
 
     ![Visual Studio에서 솔루션을 배포 합니다.](images/AzureLabs-Lab312-39.png)
  
-5.  로 이동 합니다 **빌드 메뉴** 클릭 **솔루션 배포**, 응용 프로그램에 HoloLens 테스트용으로 로드 하려면.
-6.  앱에 HoloLens 시작할 준비가에 설치 된 앱 목록에 나타나야 합니다.
+5.  **빌드 메뉴로** 이동 하 여 **솔루션 배포**를 클릭 하 여 응용 프로그램을 HoloLens로 테스트용으로 로드.
+6.  이제 앱이 HoloLens에 설치 된 앱 목록에 표시 되어 시작할 준비가 되었습니다!
 
     > [!NOTE]
-    > 몰입 형 헤드셋을 배포 하려면 설정 합니다 **솔루션 플랫폼** 를 *로컬 컴퓨터*, 설정 및를 **구성** 에 *디버그*, 를사용하여*x86* 으로 **플랫폼**합니다. 로컬 배포 후 컴퓨터를 사용 하 여는 **빌드 메뉴**을 선택 하면 *솔루션 배포*합니다. 
+    > 모던 헤드셋에 배포 하려면 **솔루션 플랫폼** 을 *로컬 컴퓨터*로 설정 하 고 **구성을** *디버그*로 설정 하 고 *x 86* 을 **플랫폼**으로 설정 합니다. 그런 다음 **빌드 메뉴**를 사용 하 여 *솔루션 배포*를 선택 하 여 로컬 컴퓨터에 배포 합니다. 
 
-## <a name="chapter-16--using-the-application-on-the-hololens"></a>16 장-는 HoloLens에서 응용 프로그램을 사용 하 여
+## <a name="chapter-16--using-the-application-on-the-hololens"></a>16 장-HoloLens에서 응용 프로그램 사용
 
-- 응용 프로그램을 시작한 후 사용자 앞에 파란색 구도 봇을 나타납니다.
+- 응용 프로그램을 시작 하면 그 앞에 파란색 구로 봇이 표시 됩니다.
 
-- 사용 된 **탭 제스처** 대화를 시작 하 여 구를에서 gazing 되는 동안. 
+- 구에 gazing 하는 동안 **탭 제스처** 를 사용 하 여 대화를 시작 합니다. 
  
-- 대화를 시작 될 때까지 기다립니다 (UI는 메시지가 표시 되는 경우). 봇에서 소개 메시지를 받게 되 면 탭 다시 봇 빨간색 설정 하 고 의견을 듣기를 시작 하도록 합니다. 
+- 대화가 시작 될 때까지 기다립니다 (UI가 발생 하면 메시지 표시). 봇에서 소개 메시지를 받은 후 봇에서 다시 탭 하 여 빨간색으로 바뀌고 음성 듣기를 시작 합니다. 
 
-- 통신을 중지 하면 응용 프로그램 봇에 메시지를 송신할 후 UI에 표시 되는 응답을 즉시 받습니다. 
+- 통신을 중지 하면 응용 프로그램이 봇으로 메시지를 보내고 UI에 표시 되는 응답을 즉시 받게 됩니다. 
 
-- (해야 될 때마다 메시지 발신자를 누릅니다) 봇을 더 많은 메시지를 보낼 프로세스를 반복 합니다.
+- 프로세스를 반복 하 여 봇에 더 많은 메시지를 보냅니다 (메시지를 send 할 때마다 탭 해야).
 
-이 대화 봇 정보 (이름)을 유지할 수는 방법을 보여 줍니다 (예: 누적 되는 항목) 알려진된 정보를 제공 하는 동안.
+이 대화에서는 봇이 정보 (사용자 이름)를 유지할 수 있는 방법을 보여 주며, 알려진 정보 (예: 보충 항목)도 제공 합니다.
 
-#### <a name="some-questions-to-ask-the-bot"></a>봇에 몇 가지 질문 합니다.
+#### <a name="some-questions-to-ask-the-bot"></a>Bot 질문:
 
 ```
 what do you sell? 
@@ -1295,9 +1295,9 @@ how much are umbrellas?
 how much are raincoats?
 ```
 
-## <a name="your-finished-web-app-bot-v4-application"></a>완성 된 Web App 봇 (v4) 응용 프로그램
+## <a name="your-finished-web-app-bot-v4-application"></a>완료 된 웹 앱 봇 (v4) 응용 프로그램
 
-축 하의 Azure Web App 봇, Microsoft Bot Framework v4를 활용 하는 혼합된 현실 앱 빌드 했습니다.
+축 하 합니다. Azure 웹 앱 봇, Microsoft 봇 Framework v4를 활용 하는 혼합 현실 앱을 빌드 했습니다.
 
 ![최종 제품](images/AzureLabs-Lab312-00.png)
 
@@ -1305,8 +1305,8 @@ how much are raincoats?
 
 ### <a name="exercise-1"></a>연습 1
 
-이 랩에서 대화 구조 매우 기본적인 기능입니다. Microsoft LUIS를 사용 하 여 봇에 자연어 이해 기능.
+이 랩에서 대화 구조는 매우 기본적인 것입니다. Microsoft LUIS를 사용 하 여 인공 자연어 이해 기능을 제공 합니다.
 
 ### <a name="exercise-2"></a>연습 2
 
-이 예제에서는 대화를 종료 하 고 새 암호를 다시 시작 포함 되지 않습니다. 봇 기능 완료를 위해 대화에는 클로저를 구현 하려고 합니다.
+이 예제에서는 대화를 종료 하 고 새 대화를 다시 시작 하는 것을 포함 하지 않습니다. Bot 기능을 완전 하 게 만들려면 대화에 대 한 클로저를 구현 해 보세요.

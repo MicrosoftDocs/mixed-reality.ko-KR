@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: 혼합 현실, 응시, 유지, 상호 작용, 디자인
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516010"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387533"
 ---
 # <a name="head-gaze-and-dwell"></a>헤드 게이즈(head-gaze) 및 드웰(dwell)
 
@@ -90,7 +89,8 @@ ms.locfileid: "66516010"
 ## <a name="ui-patterns"></a>UI 패턴
 
 ### <a name="high-frequency-buttons"></a>높은 빈도 단추
-![Microsoft Dynamics 365 가이드 다음 단추](images/GuideNextButton.png "Microsoft Dynamics 365 가이드 다음 단추") 높은 빈도 단추는 애플리케이션 전반에서 공통적으로 사용되는 단추입니다. Microsoft Dynamics 365 가이드의 다음 및 뒤로 단추가 좋은 예입니다.
+![Microsoft Dynamics 365 가이드 다음 단추](images/GuideNextButton.png "Microsoft Dynamics 365 가이드 다음 단추")<br>
+*높은 빈도 단추는 응용 프로그램 전체에서 일반적으로 사용 되는 단추입니다. 이에 대 한 좋은 예로 Microsoft Dynamics 365 가이드의 다음 및 뒤로 단추가 있습니다.*
 
 높은 빈도 단추는...
 * 크기가 커야 하고, 헤드 게이즈(head-gaze)로 겨냥하기 쉬워야 합니다.
@@ -114,7 +114,8 @@ ms.locfileid: "66516010"
 토글 단추를 사용하려면 다소 미묘한 논리가 제대로 작동해야 합니다. 사람이 토글 단추를 드웰(dwell)하고 활성화하면 단추를 종료했다가 돌아와서 드웰(dwell) 논리를 다시 시작해야 합니다. 토글 가능한 단추는 활성 대비 비활성 상태가 명확해야 합니다. 
 
 ### <a name="list-views"></a>목록 보기
-![Microsoft Dynamics 365 가이드 확인 대화 상자](images/GuidesListView.png "Microsoft Dynamics 365 가이드 확인 대화 상자") 목록 보기의 경우 헤드 게이즈(head-gaze) 및 드웰(dwell) 입력이 특히 어렵습니다. 사용자가 드웰(dwell) 대상 주변에서 조심해야 한다고 느끼지 않으면서 콘텐츠를 훑어볼 수 있어야 합니다. 
+![Microsoft Dynamics 365 가이드 확인 대화 상자](images/GuidesListView.png "Microsoft Dynamics 365 가이드 확인 대화 상자")<br>
+*목록 뷰는 헤드-응시 및 지속 입력에 대 한 특정 챌린지를 제공 합니다. 사용자는 유지 목표를 tiptoe 해야 하는 것과 같은 느낌 없이 콘텐츠를 스캔할 수 있어야 합니다.*
 
 목록 보기 디자인을 위한 팁:
 * 헤드 게이즈(head-gaze) 시 전체 행을 강조 표시하되 헤드 게이즈(head-gaze)가 특정한 드웰(dwell) 대상에 있지 않으면 드웰(dwell)을 시작하지 않습니다.
@@ -123,7 +124,7 @@ ms.locfileid: "66516010"
 * 반복 UI를 피하기 위해 드웰(dwell) 대상을 한 번에 모두 표시하지 않습니다.
 * UX에 친숙해질 수 있도록 동일한 패턴을 되도록 자주 사용합니다.
  
- ## <a name="see-also"></a>참고 항목
+ ## <a name="see-also"></a>참조
 * [수동으로 직접 조작](direct-manipulation.md)
 * [수동으로 가리키고 커밋](point-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
