@@ -1,47 +1,47 @@
 ---
-title: Unity에서 찾을 수 있는 카메라
-description: HoloLens Unity에서 찾을 수 있는 카메라 사용 합니다.
+title: Unity의 과정이 카메라
+description: Unity의 HoloLens 과정이 카메라 사용입니다.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 사진, 비디오, hololens, 카메라, unity, 찾을 수 있는
+keywords: 사진, 비디오, hololens, 카메라, unity, 과정이
 ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601770"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515443"
 ---
-# <a name="locatable-camera-in-unity"></a><span data-ttu-id="bdb5d-104">Unity에서 찾을 수 있는 카메라</span><span class="sxs-lookup"><span data-stu-id="bdb5d-104">Locatable camera in Unity</span></span>
+# <a name="locatable-camera-in-unity"></a><span data-ttu-id="644e8-104">Unity의 과정이 카메라</span><span class="sxs-lookup"><span data-stu-id="644e8-104">Locatable camera in Unity</span></span>
 
-## <a name="enabling-the-capability-for-photo-video-camera"></a><span data-ttu-id="bdb5d-105">사진 비디오 카메라에 대 한 기능을 사용 하도록 설정</span><span class="sxs-lookup"><span data-stu-id="bdb5d-105">Enabling the capability for Photo Video Camera</span></span>
+## <a name="enabling-the-capability-for-photo-video-camera"></a><span data-ttu-id="644e8-105">사진 비디오 카메라 기능 사용</span><span class="sxs-lookup"><span data-stu-id="644e8-105">Enabling the capability for Photo Video Camera</span></span>
 
-<span data-ttu-id="bdb5d-106">"웹캠" 기능을 사용 하는 앱에 대 한 선언 해야 합니다 [카메라](locatable-camera.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-106">The "WebCam" capability must be declared for an app to use the [camera](locatable-camera.md).</span></span>
-1. <span data-ttu-id="bdb5d-107">Unity 편집기에서 "> 프로젝트 설정 > Player 편집" 페이지로 이동 하 여 플레이어 설정으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-107">In the Unity Editor, go to the player settings by navigating to "Edit > Project Settings > Player" page</span></span>
-2. <span data-ttu-id="bdb5d-108">"Windows Store" 탭을 클릭</span><span class="sxs-lookup"><span data-stu-id="bdb5d-108">Click on the "Windows Store" tab</span></span>
-3. <span data-ttu-id="bdb5d-109">"게시 설정 > 기능" 섹션을 확인 합니다 **웹캠** 하 고 **마이크** 기능</span><span class="sxs-lookup"><span data-stu-id="bdb5d-109">In the "Publishing Settings > Capabilities" section, check the **WebCam** and **Microphone** capabilities</span></span>
+<span data-ttu-id="644e8-106">[카메라](locatable-camera.md)를 사용 하려면 앱에 대해 "웹캠" 기능을 선언 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-106">The "WebCam" capability must be declared for an app to use the [camera](locatable-camera.md).</span></span>
+1. <span data-ttu-id="644e8-107">Unity 편집기에서 "> 프로젝트 설정 > 플레이어 편집" 페이지로 이동 하 여 플레이어 설정으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-107">In the Unity Editor, go to the player settings by navigating to "Edit > Project Settings > Player" page</span></span>
+2. <span data-ttu-id="644e8-108">"Windows 스토어" 탭을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-108">Click on the "Windows Store" tab</span></span>
+3. <span data-ttu-id="644e8-109">"게시 설정 > 기능" 섹션에서 **웹캠** 및 **마이크** 기능을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-109">In the "Publishing Settings > Capabilities" section, check the **WebCam** and **Microphone** capabilities</span></span>
 
-<span data-ttu-id="bdb5d-110">단일 작업을 한 번에 카메라를 사용 하 여 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-110">Only a single operation can occur with the camera at a time.</span></span> <span data-ttu-id="bdb5d-111">(사진, 비디오 또는 없음) 모드에서 카메라를 현재 결정할 UnityEngine.XR.WSA.WebCam.Mode를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-111">To determine which mode (photo, video, or none) the camera is currently in, you can check UnityEngine.XR.WSA.WebCam.Mode.</span></span>
+<span data-ttu-id="644e8-110">카메라에서는 한 번에 하나의 작업만 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-110">Only a single operation can occur with the camera at a time.</span></span> <span data-ttu-id="644e8-111">카메라의 현재 모드 (사진, 비디오 또는 없음)를 확인 하려면 UnityEngine. XR을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-111">To determine which mode (photo, video, or none) the camera is currently in, you can check UnityEngine.XR.WSA.WebCam.Mode.</span></span>
 
-## <a name="photo-capture"></a><span data-ttu-id="bdb5d-112">사진 캡처</span><span class="sxs-lookup"><span data-stu-id="bdb5d-112">Photo Capture</span></span>
+## <a name="photo-capture"></a><span data-ttu-id="644e8-112">사진 캡처</span><span class="sxs-lookup"><span data-stu-id="644e8-112">Photo Capture</span></span>
 
-<span data-ttu-id="bdb5d-113">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-113">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span></span><br>
-<span data-ttu-id="bdb5d-114">**형식:** *PhotoCapture*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-114">**Type:** *PhotoCapture*</span></span>
+<span data-ttu-id="644e8-113">**공간** *UnityEngine. XR*</span><span class="sxs-lookup"><span data-stu-id="644e8-113">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span></span><br>
+<span data-ttu-id="644e8-114">**입력할** *사진 캡처*</span><span class="sxs-lookup"><span data-stu-id="644e8-114">**Type:** *PhotoCapture*</span></span>
 
-<span data-ttu-id="bdb5d-115">합니다 *PhotoCapture* 유형을 사진 사진 비디오 카메라를 사용 하 여 계속 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-115">The *PhotoCapture* type allows you to take still photographs with the Photo Video Camera.</span></span> <span data-ttu-id="bdb5d-116">사용 하 여 일반적인 패턴 *PhotoCapture* 사진을 촬영 하는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-116">The general pattern for using *PhotoCapture* to take a photo is as follows:</span></span>
-1. <span data-ttu-id="bdb5d-117">만들기는 *PhotoCapture* 개체</span><span class="sxs-lookup"><span data-stu-id="bdb5d-117">Create a *PhotoCapture* object</span></span>
-2. <span data-ttu-id="bdb5d-118">만들기는 *CameraParameters* 원하는 설정 사용 하 여 개체</span><span class="sxs-lookup"><span data-stu-id="bdb5d-118">Create a *CameraParameters* object with the settings we want</span></span>
-3. <span data-ttu-id="bdb5d-119">시작을 통해 사진 모드 *StartPhotoModeAsync*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-119">Start Photo Mode via *StartPhotoModeAsync*</span></span>
-4. <span data-ttu-id="bdb5d-120">원하는 찍기</span><span class="sxs-lookup"><span data-stu-id="bdb5d-120">Take the desired photo</span></span>
-    * <span data-ttu-id="bdb5d-121">(선택 사항) 해당 그림이 상호 작용</span><span class="sxs-lookup"><span data-stu-id="bdb5d-121">(optional) Interact with that picture</span></span>
-5. <span data-ttu-id="bdb5d-122">사진 모드를 중지 하 고 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="bdb5d-122">Stop Photo Mode and clean up resources</span></span>
+<span data-ttu-id="644e8-115">사진 *캡처* 유형을 사용 하면 사진 비디오 카메라와 사진을 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-115">The *PhotoCapture* type allows you to take still photographs with the Photo Video Camera.</span></span> <span data-ttu-id="644e8-116">사진 *캡처* 를 사용 하 여 사진을 촬영 하는 일반적인 패턴은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-116">The general pattern for using *PhotoCapture* to take a photo is as follows:</span></span>
+1. <span data-ttu-id="644e8-117">*사진 캡처* 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="644e8-117">Create a *PhotoCapture* object</span></span>
+2. <span data-ttu-id="644e8-118">원하는 설정을 사용 하 여 *CameraParameters* 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-118">Create a *CameraParameters* object with the settings we want</span></span>
+3. <span data-ttu-id="644e8-119">*Startphoto Modeasync* 를 통해 사진 모드 시작</span><span class="sxs-lookup"><span data-stu-id="644e8-119">Start Photo Mode via *StartPhotoModeAsync*</span></span>
+4. <span data-ttu-id="644e8-120">원하는 사진 가져오기</span><span class="sxs-lookup"><span data-stu-id="644e8-120">Take the desired photo</span></span>
+    * <span data-ttu-id="644e8-121">필드 해당 사진과 상호 작용</span><span class="sxs-lookup"><span data-stu-id="644e8-121">(optional) Interact with that picture</span></span>
+5. <span data-ttu-id="644e8-122">사진 모드 중지 및 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="644e8-122">Stop Photo Mode and clean up resources</span></span>
 
-### <a name="common-set-up-for-photocapture"></a><span data-ttu-id="bdb5d-123">일반적인 설정 PhotoCapture</span><span class="sxs-lookup"><span data-stu-id="bdb5d-123">Common Set Up for PhotoCapture</span></span>
+### <a name="common-set-up-for-photocapture"></a><span data-ttu-id="644e8-123">사진 캡처에 대 한 일반적인 설정</span><span class="sxs-lookup"><span data-stu-id="644e8-123">Common Set Up for PhotoCapture</span></span>
 
-<span data-ttu-id="bdb5d-124">같은 위의 처음 3 단계 먼저 모든 세 가지 용도로</span><span class="sxs-lookup"><span data-stu-id="bdb5d-124">For all three uses, we start with the same first 3 steps above</span></span>
+<span data-ttu-id="644e8-124">세 가지 용도 모두에서 위의 동일한 첫 3 단계부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-124">For all three uses, we start with the same first 3 steps above</span></span>
 
-<span data-ttu-id="bdb5d-125">만드는 것으로 시작 된 *PhotoCapture* 개체</span><span class="sxs-lookup"><span data-stu-id="bdb5d-125">We start by creating a *PhotoCapture* object</span></span>
+<span data-ttu-id="644e8-125">먼저 *사진 캡처* 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-125">We start by creating a *PhotoCapture* object</span></span>
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-<span data-ttu-id="bdb5d-126">다음은 개체를 저장, 매개 변수를 설정 하 고 사진 모드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-126">Next we store our object, set our parameters, and start Photo Mode</span></span>
+<span data-ttu-id="644e8-126">다음으로 개체를 저장 하 고, 매개 변수를 설정 하 고, 사진 모드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-126">Next we store our object, set our parameters, and start Photo Mode</span></span>
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -70,7 +70,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
    }
 ```
 
-<span data-ttu-id="bdb5d-127">마지막으로도 사용 하 여 여기에 제시 된 코드 정리 동일한</span><span class="sxs-lookup"><span data-stu-id="bdb5d-127">In the end, we will also use the same clean up code presented here</span></span>
+<span data-ttu-id="644e8-127">끝으로 여기에 제공 된 동일한 정리 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-127">In the end, we will also use the same clean up code presented here</span></span>
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -80,13 +80,13 @@ void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-128">이러한 단계 후 캡처하는 사진 유형을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-128">After these steps, you can choose which type of photo to capture.</span></span>
+<span data-ttu-id="644e8-128">이러한 단계를 수행 하 고 나면 캡처할 사진 유형을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-128">After these steps, you can choose which type of photo to capture.</span></span>
 
-### <a name="capture-a-photo-to-a-file"></a><span data-ttu-id="bdb5d-129">파일에 사진을 캡처합니다</span><span class="sxs-lookup"><span data-stu-id="bdb5d-129">Capture a Photo to a File</span></span>
+### <a name="capture-a-photo-to-a-file"></a><span data-ttu-id="644e8-129">파일에 사진 캡처</span><span class="sxs-lookup"><span data-stu-id="644e8-129">Capture a Photo to a File</span></span>
 
-<span data-ttu-id="bdb5d-130">가장 간단한 작업이 파일에 직접 사진을 캡처하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-130">The simplest operation is to capture a photo directly to a file.</span></span> <span data-ttu-id="bdb5d-131">JPG 또는 PNG 사진을 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-131">The photo can be saved as a JPG or a PNG.</span></span>
+<span data-ttu-id="644e8-130">가장 간단한 작업은 파일에 직접 사진을 캡처하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-130">The simplest operation is to capture a photo directly to a file.</span></span> <span data-ttu-id="644e8-131">사진은 JPG 또는 PNG로 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-131">The photo can be saved as a JPG or a PNG.</span></span>
 
-<span data-ttu-id="bdb5d-132">사진 모드를 성공적으로 시작 하는 경우 이제 사진을 촬영 하 고 디스크에 저장</span><span class="sxs-lookup"><span data-stu-id="bdb5d-132">If we successfully started photo mode, we now will take a photo and store it on disk</span></span>
+<span data-ttu-id="644e8-132">사진 모드를 성공적으로 시작 하는 경우 이제 사진을 사용 하 고 디스크에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-132">If we successfully started photo mode, we now will take a photo and store it on disk</span></span>
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -105,7 +105,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-133">디스크에 사진을 캡처한 후 사진 모드를 종료 하 고이 개체 정리</span><span class="sxs-lookup"><span data-stu-id="bdb5d-133">After capturing the photo to disk, we will exit photo mode and then clean up our objects</span></span>
+<span data-ttu-id="644e8-133">사진을 디스크로 캡처한 후 사진 모드를 종료 하 고 개체를 정리 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-133">After capturing the photo to disk, we will exit photo mode and then clean up our objects</span></span>
 
 ```cs
 void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
@@ -122,13 +122,13 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-### <a name="capture-a-photo-to-a-texture2d"></a><span data-ttu-id="bdb5d-134">캡처는 Texture2D에 사진</span><span class="sxs-lookup"><span data-stu-id="bdb5d-134">Capture a Photo to a Texture2D</span></span>
+### <a name="capture-a-photo-to-a-texture2d"></a><span data-ttu-id="644e8-134">Texture2D에 사진 캡처</span><span class="sxs-lookup"><span data-stu-id="644e8-134">Capture a Photo to a Texture2D</span></span>
 
-<span data-ttu-id="bdb5d-135">Texture2D 데이터를 캡처할 때 프로세스를 디스크에 캡처하기 매우 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-135">When capturing data to a Texture2D, the process is extremely similar to capturing to disk.</span></span>
+<span data-ttu-id="644e8-135">Texture2D으로 데이터를 캡처할 때 프로세스는 디스크에 캡처하는 것과 매우 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-135">When capturing data to a Texture2D, the process is extremely similar to capturing to disk.</span></span>
 
-<span data-ttu-id="bdb5d-136">위 프로세스 설정을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-136">We will follow the set up process above.</span></span>
+<span data-ttu-id="644e8-136">위의 설정 프로세스를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-136">We will follow the set up process above.</span></span>
 
-<span data-ttu-id="bdb5d-137">*OnPhotoModeStarted*를 메모리에 프레임을 캡처합니다 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-137">In *OnPhotoModeStarted*, we will capture a frame to memory.</span></span>
+<span data-ttu-id="644e8-137">*Onsale Modestarted*에서 메모리에 프레임을 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-137">In *OnPhotoModeStarted*, we will capture a frame to memory.</span></span>
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-138">다음 질감에 결과 적용 하 고 일반적인 위의 코드 정리를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-138">We will then apply our result to a texture and use the common clean up code above.</span></span>
+<span data-ttu-id="644e8-138">그런 다음 결과를 질감에 적용 하 고 위의 일반적인 정리 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-138">We will then apply our result to a texture and use the common clean up code above.</span></span>
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -163,11 +163,11 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
    }
 ```
 
-### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a><span data-ttu-id="bdb5d-139">원시 바이트를 사용 하 여 사진 및 상호 작용을 캡처</span><span class="sxs-lookup"><span data-stu-id="bdb5d-139">Capture a Photo and Interact with the Raw bytes</span></span>
+### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a><span data-ttu-id="644e8-139">사진 캡처 및 원시 바이트 조작</span><span class="sxs-lookup"><span data-stu-id="644e8-139">Capture a Photo and Interact with the Raw bytes</span></span>
 
-<span data-ttu-id="bdb5d-140">메모리 내의 원시 바이트를 조작할 프레임을 따르 설정 단계 위와 동일 및 *OnPhotoModeStarted* 사진을 캡처하는 Texture2D와 같이 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-140">To interact with the raw bytes of an in memory frame, we will follow the same set up steps as above and *OnPhotoModeStarted* as in capturing a photo to a Texture2D.</span></span> <span data-ttu-id="bdb5d-141">차이점은 *OnCapturedPhotoToMemory* 에서는 수 원시 바이트를 가져오기 하 고 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-141">The difference is in *OnCapturedPhotoToMemory* where we can get the raw bytes and interact with them.</span></span>
+<span data-ttu-id="644e8-140">메모리 프레임에 있는 원시 바이트와 상호 작용 하려면 Texture2D에 대 한 사진 캡처 *에서와 같이* 위와 동일한 설정 단계를 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-140">To interact with the raw bytes of an in memory frame, we will follow the same set up steps as above and *OnPhotoModeStarted* as in capturing a photo to a Texture2D.</span></span> <span data-ttu-id="644e8-141">차이점은 원시 바이트를 가져와 상호 작용할 수 있는 *OnCapturedPhotoToMemory* 입니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-141">The difference is in *OnCapturedPhotoToMemory* where we can get the raw bytes and interact with them.</span></span>
 
-<span data-ttu-id="bdb5d-142">이 예제에서는 만듭니다는 *목록<Color>*  추가 될 수 있는 처리 또는 통해 질감을 적용할 *SetPixels()*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-142">In this example, we will create a *List<Color>* which could be further processed or applied to a texture via *SetPixels()*</span></span>
+<span data-ttu-id="644e8-142">이 예제에서는 *setpixels ()* 을 통해 텍스처에 추가로 처리 하거나 적용할 수 있는 *목록을<Color>*  만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-142">In this example, we will create a *List<Color>* which could be further processed or applied to a texture via *SetPixels()*</span></span>
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -200,20 +200,20 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
    }
 ```
 
-## <a name="video-capture"></a><span data-ttu-id="bdb5d-143">비디오 캡처</span><span class="sxs-lookup"><span data-stu-id="bdb5d-143">Video Capture</span></span>
+## <a name="video-capture"></a><span data-ttu-id="644e8-143">비디오 캡처</span><span class="sxs-lookup"><span data-stu-id="644e8-143">Video Capture</span></span>
 
-<span data-ttu-id="bdb5d-144">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-144">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span></span><br>
-<span data-ttu-id="bdb5d-145">**형식:** *VideoCapture*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-145">**Type:** *VideoCapture*</span></span>
+<span data-ttu-id="644e8-144">**공간** *UnityEngine. XR*</span><span class="sxs-lookup"><span data-stu-id="644e8-144">**Namespace:** *UnityEngine.XR.WSA.WebCam*</span></span><br>
+<span data-ttu-id="644e8-145">**입력할** *VideoCapture*</span><span class="sxs-lookup"><span data-stu-id="644e8-145">**Type:** *VideoCapture*</span></span>
 
-<span data-ttu-id="bdb5d-146">*VideoCapture* 기능이 매우 비슷한 *PhotoCapture*합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-146">*VideoCapture* functions very similarly to *PhotoCapture*.</span></span> <span data-ttu-id="bdb5d-147">두 개의 차이가 프레임 당 두 번째 (FPS) 값을 지정 해야 하 고. mp4 파일로 디스크에 직접 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-147">The only two differences are that you must specify a Frames Per Second (FPS) value and you can only save directly to disk as an .mp4 file.</span></span> <span data-ttu-id="bdb5d-148">사용 하는 단계 *VideoCapture* 는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-148">The steps to use *VideoCapture* are as follows:</span></span>
-1. <span data-ttu-id="bdb5d-149">만들기는 *VideoCapture* 개체</span><span class="sxs-lookup"><span data-stu-id="bdb5d-149">Create a *VideoCapture* object</span></span>
-2. <span data-ttu-id="bdb5d-150">만들기는 *CameraParameters* 원하는 설정 사용 하 여 개체</span><span class="sxs-lookup"><span data-stu-id="bdb5d-150">Create a *CameraParameters* object with the settings we want</span></span>
-3. <span data-ttu-id="bdb5d-151">비디오 모드를 통해 시작 *StartVideoModeAsync*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-151">Start Video Mode via *StartVideoModeAsync*</span></span>
-4. <span data-ttu-id="bdb5d-152">비디오 녹화 시작</span><span class="sxs-lookup"><span data-stu-id="bdb5d-152">Start recording video</span></span>
-5. <span data-ttu-id="bdb5d-153">비디오 녹화 중지</span><span class="sxs-lookup"><span data-stu-id="bdb5d-153">Stop recording video</span></span>
-6. <span data-ttu-id="bdb5d-154">비디오 모드를 중지 하 고 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="bdb5d-154">Stop Video Mode and clean up resources</span></span>
+<span data-ttu-id="644e8-146">*VideoCapture* 은 *사진 캡처와*매우 유사 하 게 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-146">*VideoCapture* functions very similarly to *PhotoCapture*.</span></span> <span data-ttu-id="644e8-147">두 가지 차이점은 FPS (초당 프레임 수) 값을 지정 해야 하 고, mp4 파일로는 디스크에 직접 저장 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-147">The only two differences are that you must specify a Frames Per Second (FPS) value and you can only save directly to disk as an .mp4 file.</span></span> <span data-ttu-id="644e8-148">*VideoCapture* 를 사용 하는 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-148">The steps to use *VideoCapture* are as follows:</span></span>
+1. <span data-ttu-id="644e8-149">*VideoCapture* 개체 만들기</span><span class="sxs-lookup"><span data-stu-id="644e8-149">Create a *VideoCapture* object</span></span>
+2. <span data-ttu-id="644e8-150">원하는 설정을 사용 하 여 *CameraParameters* 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-150">Create a *CameraParameters* object with the settings we want</span></span>
+3. <span data-ttu-id="644e8-151">*Startvideomodeasync* 를 통해 비디오 모드 시작</span><span class="sxs-lookup"><span data-stu-id="644e8-151">Start Video Mode via *StartVideoModeAsync*</span></span>
+4. <span data-ttu-id="644e8-152">비디오 녹화 시작</span><span class="sxs-lookup"><span data-stu-id="644e8-152">Start recording video</span></span>
+5. <span data-ttu-id="644e8-153">비디오 녹화 중지</span><span class="sxs-lookup"><span data-stu-id="644e8-153">Stop recording video</span></span>
+6. <span data-ttu-id="644e8-154">비디오 모드 중지 및 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="644e8-154">Stop Video Mode and clean up resources</span></span>
 
-<span data-ttu-id="bdb5d-155">만드는 것으로 시작 우리의 *VideoCapture* 개체 *VideoCapture m_VideoCapture = null;*</span><span class="sxs-lookup"><span data-stu-id="bdb5d-155">We start by creating our *VideoCapture* object *VideoCapture m_VideoCapture = null;*</span></span>
+<span data-ttu-id="644e8-155">먼저 *VideoCapture* 개체 *VideoCapture m_VideoCapture = null* 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-155">We start by creating our *VideoCapture* object *VideoCapture m_VideoCapture = null;*</span></span>
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-<span data-ttu-id="bdb5d-156">에서는 다음을 설정 기록 및 시작에 사용 하려는 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-156">We then will set up the parameters we will want for the recording and start.</span></span>
+<span data-ttu-id="644e8-156">그런 다음 기록 하 고 시작 하는 데 사용할 매개 변수를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-156">We then will set up the parameters we will want for the recording and start.</span></span>
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -252,7 +252,7 @@ void OnVideoCaptureCreated (VideoCapture videoCapture)
    }
 ```
 
-<span data-ttu-id="bdb5d-157">녹음/녹화 시작 되 면 예정</span><span class="sxs-lookup"><span data-stu-id="bdb5d-157">Once started, we will begin the recording</span></span>
+<span data-ttu-id="644e8-157">시작 되 면 기록을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-157">Once started, we will begin the recording</span></span>
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-158">기록 시작 된 후 중지를 사용 하도록 설정 하려면 UI 또는 동작을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-158">After recording has started, you could update your UI or behaviors to enable stopping.</span></span> <span data-ttu-id="bdb5d-159">여기에서는 로그인</span><span class="sxs-lookup"><span data-stu-id="bdb5d-159">Here we just log</span></span>
+<span data-ttu-id="644e8-158">기록이 시작 된 후에는 중지할 수 있도록 UI 나 동작을 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-158">After recording has started, you could update your UI or behaviors to enable stopping.</span></span> <span data-ttu-id="644e8-159">다음 로그만</span><span class="sxs-lookup"><span data-stu-id="644e8-159">Here we just log</span></span>
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-160">나중에 기록을 중지 하려고 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-160">At a later point, we will want to stop the recording.</span></span> <span data-ttu-id="bdb5d-161">이 타이머 또는 사용자 입력을 예를 들어에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-161">This could happen from a timer or user input, for instance.</span></span>
+<span data-ttu-id="644e8-160">이후 시점에서 기록을 중지할 것입니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-160">At a later point, we will want to stop the recording.</span></span> <span data-ttu-id="644e8-161">이는 예를 들어 타이머 또는 사용자 입력에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-161">This could happen from a timer or user input, for instance.</span></span>
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-<span data-ttu-id="bdb5d-162">녹음/녹화를 중지 되 고 나면 비디오 모드를 중지 하 고 리소스를 정리 합니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-162">Once the recording has stopped, we will stop video mode and clean up our resources.</span></span>
+<span data-ttu-id="644e8-162">기록이 중지 된 후에는 비디오 모드를 중지 하 고 리소스를 정리 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-162">Once the recording has stopped, we will stop video mode and clean up our resources.</span></span>
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -303,9 +303,9 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a><span data-ttu-id="bdb5d-163">문제 해결</span><span class="sxs-lookup"><span data-stu-id="bdb5d-163">Troubleshooting</span></span>
-* <span data-ttu-id="bdb5d-164">사용할 수 없는 해결 방법</span><span class="sxs-lookup"><span data-stu-id="bdb5d-164">No resolutions are available</span></span>
-    * <span data-ttu-id="bdb5d-165">확인 합니다 **웹캠** 기능 프로젝트에 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bdb5d-165">Ensure the **WebCam** capability is specified in your project.</span></span>
+## <a name="troubleshooting"></a><span data-ttu-id="644e8-163">문제 해결</span><span class="sxs-lookup"><span data-stu-id="644e8-163">Troubleshooting</span></span>
+* <span data-ttu-id="644e8-164">사용 가능한 해결 방법이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-164">No resolutions are available</span></span>
+    * <span data-ttu-id="644e8-165">**웹캠** 기능이 프로젝트에 지정 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="644e8-165">Ensure the **WebCam** capability is specified in your project.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bdb5d-166">관련 항목</span><span class="sxs-lookup"><span data-stu-id="bdb5d-166">See Also</span></span>
-* [<span data-ttu-id="bdb5d-167">찾을 수 있는 카메라</span><span class="sxs-lookup"><span data-stu-id="bdb5d-167">Locatable camera</span></span>](locatable-camera.md)
+## <a name="see-also"></a><span data-ttu-id="644e8-166">관련 항목</span><span class="sxs-lookup"><span data-stu-id="644e8-166">See Also</span></span>
+* [<span data-ttu-id="644e8-167">위치를 찾을 수 있는 카메라</span><span class="sxs-lookup"><span data-stu-id="644e8-167">Locatable camera</span></span>](locatable-camera.md)
