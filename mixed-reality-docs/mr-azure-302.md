@@ -1,305 +1,305 @@
 ---
-title: MR 및 Azure 302-Computer vision
-description: 혼합된 현실 응용 프로그램에서 Azure의 Computer Vision을 사용 하 여 제공 된 이미지를 내에서 시각적 콘텐츠를 인식 하는 방법을 알아보려면이 과정을 완료 합니다.
+title: MR 및 Azure 302-컴퓨터 비전
+description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램에서 Azure Computer Vision를 사용 하 여 제공 된 이미지 내의 시각적 콘텐츠를 인식 하는 방법을 알아보세요.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: azure, 혼합 현실, academy, unity, 자습서, api, 컴퓨터 비전, hololens, 몰입 형, vr
+keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 컴퓨터 비전, hololens, 몰입 형, vr
 ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597890"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63552324"
 ---
 >[!NOTE]
-><span data-ttu-id="9623b-104">혼합 현실 Academy 자습서 HoloLens로 설계 되었습니다 (첫 번째 gen) 및 혼합 현실 몰입 형 헤드셋 유의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="9623b-105">따라서 해당 장치에 대 한 개발에 대 한 지침 여전히 알아보려는 개발자를 위한이 자습서를 그대로 둘을 고려해 야 하는 것이 생각 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="9623b-106">이 자습서는 **_없습니다_** 최신 도구 집합 또는 HoloLens 2에 사용 되는 상호 작용을 사용 하 여 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="9623b-107">지원 되는 장치에서 작업을 계속 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="9623b-108">새 자습서 시리즈의 나중에 게시는 HoloLens 2에 대 한 개발 하는 방법을 보여주는 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="9623b-109">게시 된 경우이 알림은 이러한 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
+><span data-ttu-id="14b05-104">혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="14b05-105">따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="14b05-106">이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="14b05-107">지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="14b05-108">향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="14b05-109">이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
 
 <br>
 
-# <a name="mr-and-azure-302-computer-vision"></a><span data-ttu-id="9623b-110">MR 및 Azure 302: 컴퓨터 비전</span><span class="sxs-lookup"><span data-stu-id="9623b-110">MR and Azure 302: Computer vision</span></span>
+# <a name="mr-and-azure-302-computer-vision"></a><span data-ttu-id="14b05-110">MR 및 Azure 302: 컴퓨터 비전</span><span class="sxs-lookup"><span data-stu-id="14b05-110">MR and Azure 302: Computer vision</span></span>
 
-<span data-ttu-id="9623b-111">이 과정에서는 배웁니다는 제공 된 이미지 내에서 시각적 콘텐츠를 인식 하는 방법이 혼합된 현실 응용 프로그램에서 Azure 컴퓨터 비전 기능을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-111">In this course, you will learn how to recognize visual content within a provided image, using Azure Computer Vision capabilities in a mixed reality application.</span></span>
+<span data-ttu-id="14b05-111">이 과정에서는 혼합 현실 응용 프로그램에서 Azure Computer Vision 기능을 사용 하 여 제공 된 이미지 내의 시각적 콘텐츠를 인식 하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-111">In this course, you will learn how to recognize visual content within a provided image, using Azure Computer Vision capabilities in a mixed reality application.</span></span>
 
-<span data-ttu-id="9623b-112">인식 결과 설명 tags로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-112">Recognition results will be displayed as descriptive tags.</span></span> <span data-ttu-id="9623b-113">기계 학습 모델을 학습 하지 않고도이 서비스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-113">You can use this service without needing to train a machine learning model.</span></span> <span data-ttu-id="9623b-114">구현에서 기계 학습 모델을 학습에 필요한 경우 참조 [MR 및 Azure 302b](mr-azure-302b.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-114">If your implementation requires training a machine learning model, see [MR and Azure 302b](mr-azure-302b.md).</span></span>
+<span data-ttu-id="14b05-112">인식 결과는 설명 태그로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-112">Recognition results will be displayed as descriptive tags.</span></span> <span data-ttu-id="14b05-113">Machine learning 모델을 학습 하지 않고도이 서비스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-113">You can use this service without needing to train a machine learning model.</span></span> <span data-ttu-id="14b05-114">구현에서 기계 학습 모델을 학습 해야 하는 경우 [MR 및 Azure 302b](mr-azure-302b.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-114">If your implementation requires training a machine learning model, see [MR and Azure 302b](mr-azure-302b.md).</span></span>
 
 ![랩 결과](images/AzureLabs-Lab2-000.png)
 
-<span data-ttu-id="9623b-116">Microsoft Computer Vision Api 개발자 이미지 처리 및 분석 (사용 하 여 정보를 반환)를 사용 하 여 제공 하도록 설계 된 고급 알고리즘을 사용 하 여 클라우드에서 모든 집합이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-116">The Microsoft Computer Vision is a set of APIs designed to provide developers with image processing and analysis (with return information), using advanced algorithms, all from the cloud.</span></span> <span data-ttu-id="9623b-117">개발자는 이미지 또는 이미지 URL을 업로드 하 고 Microsoft Computer Vision API 알고리즘 분석 시각적 콘텐츠를 입력 한 다음 정보를 반환할 수에 있는 사용자 선택에 따라 얼굴 (검색 등 유형 및 이미지의 품질을 식별 합니다. 해당 좌표)를 반환 하 고, 태그 지정 또는 이미지 분류 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-117">Developers upload an image or image URL, and the Microsoft Computer Vision API algorithms analyze the visual content, based upon inputs chosen the user, which then can return information, including, identifying the type and quality of an image, detect human faces (returning their coordinates), and tagging, or categorizing images.</span></span> <span data-ttu-id="9623b-118">자세한 내용은 참조는 [Azure Computer Vision API 페이지](https://azure.microsoft.com/services/cognitive-services/computer-vision/)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-118">For more information, visit the [Azure Computer Vision API page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).</span></span>
+<span data-ttu-id="14b05-116">Microsoft Computer Vision는 개발자에 게 모든 클라우드에서 고급 알고리즘을 사용 하 여 이미지 처리 및 분석 (반환 정보 포함)을 제공 하도록 설계 된 Api 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-116">The Microsoft Computer Vision is a set of APIs designed to provide developers with image processing and analysis (with return information), using advanced algorithms, all from the cloud.</span></span> <span data-ttu-id="14b05-117">개발자는 이미지 또는 이미지 URL을 업로드 하 고 Microsoft Computer Vision API 알고리즘은 사용자가 선택한 입력에 따라 시각적 콘텐츠를 분석 하 여 이미지의 유형 및 품질을 식별 하 고 사용자 얼굴을 검색 하는 등의 정보를 반환할 수 있습니다. 해당 좌표)를 반환 하 고 이미지를 태그 지정 하거나 범주화 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-117">Developers upload an image or image URL, and the Microsoft Computer Vision API algorithms analyze the visual content, based upon inputs chosen the user, which then can return information, including, identifying the type and quality of an image, detect human faces (returning their coordinates), and tagging, or categorizing images.</span></span> <span data-ttu-id="14b05-118">자세한 내용은 [Azure Computer Vision API 페이지](https://azure.microsoft.com/services/cognitive-services/computer-vision/)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-118">For more information, visit the [Azure Computer Vision API page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).</span></span>
 
-<span data-ttu-id="9623b-119">이 과정을 마치면 다음을 수행 하는 일을 할 수는 HoloLens 응용 프로그램을 혼합된 현실이 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-119">Having completed this course, you will have a mixed reality HoloLens application, which will be able to do the following:</span></span>
+<span data-ttu-id="14b05-119">이 과정을 완료 하면 다음과 같은 작업을 수행할 수 있는 혼합 현실 HoloLens 응용 프로그램이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-119">Having completed this course, you will have a mixed reality HoloLens application, which will be able to do the following:</span></span>
 
-1.  <span data-ttu-id="9623b-120">탭 제스처를 사용 하 여 HoloLens의 카메라는 이미지를 캡처합니다 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-120">Using the Tap gesture, the camera of the HoloLens will capture an image.</span></span>
-2.  <span data-ttu-id="9623b-121">이미지는 Azure Computer Vision API Service에 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-121">The image will be sent to the Azure Computer Vision API Service.</span></span> 
-3.  <span data-ttu-id="9623b-122">인식 개체에서 Unity 장면에 배치 하는 간단한 UI 그룹 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-122">The objects recognized will be listed in a simple UI group positioned in the Unity Scene.</span></span>
+1.  <span data-ttu-id="14b05-120">탭 제스처를 사용 하 여 HoloLens 카메라는 이미지를 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-120">Using the Tap gesture, the camera of the HoloLens will capture an image.</span></span>
+2.  <span data-ttu-id="14b05-121">이미지가 Azure Computer Vision API 서비스로 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-121">The image will be sent to the Azure Computer Vision API Service.</span></span> 
+3.  <span data-ttu-id="14b05-122">인식 된 개체는 Unity 장면에 배치 된 간단한 UI 그룹에 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-122">The objects recognized will be listed in a simple UI group positioned in the Unity Scene.</span></span>
 
-<span data-ttu-id="9623b-123">응용 프로그램에서는 사용자의 몫 디자인을 사용 하 여 결과에서는 통합 하는 방법에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-123">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="9623b-124">이 과정은 Unity 프로젝트를 사용 하 여 Azure 서비스를 통합 하는 방법을 알려 주기 위해 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-124">This course is designed to teach you how to integrate an Azure Service with your Unity project.</span></span> <span data-ttu-id="9623b-125">혼합된 현실 응용 프로그램을 강화 하기 위해이 과정에서 얻는 지식을 사용 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-125">It is your job to use the knowledge you gain from this course to enhance your mixed reality application.</span></span>
+<span data-ttu-id="14b05-123">응용 프로그램에서 결과를 디자인과 통합 하는 방법을 사용자가 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-123">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="14b05-124">이 과정은 Azure 서비스를 Unity 프로젝트와 통합 하는 방법을 배울 수 있도록 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-124">This course is designed to teach you how to integrate an Azure Service with your Unity project.</span></span> <span data-ttu-id="14b05-125">이 과정에서 얻은 지식을 사용 하 여 혼합 현실 응용 프로그램을 개선 하는 것은 사용자의 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-125">It is your job to use the knowledge you gain from this course to enhance your mixed reality application.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="9623b-126">장치 지원</span><span class="sxs-lookup"><span data-stu-id="9623b-126">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="14b05-126">장치 지원</span><span class="sxs-lookup"><span data-stu-id="14b05-126">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="9623b-127">과정</span><span class="sxs-lookup"><span data-stu-id="9623b-127">Course</span></span></th><th style="width:150px"> <span data-ttu-id="9623b-128"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="9623b-128"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="9623b-129"><a href="immersive-headset-hardware-details.md">몰입 형 헤드셋</a></span><span class="sxs-lookup"><span data-stu-id="9623b-129"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="14b05-127">과정</span><span class="sxs-lookup"><span data-stu-id="14b05-127">Course</span></span></th><th style="width:150px"> <span data-ttu-id="14b05-128"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="14b05-128"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="14b05-129"><a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></span><span class="sxs-lookup"><span data-stu-id="14b05-129"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td> <span data-ttu-id="9623b-130">MR 및 Azure 302: 컴퓨터 비전</span><span class="sxs-lookup"><span data-stu-id="9623b-130">MR and Azure 302: Computer vision</span></span></td><td style="text-align: center;"> <span data-ttu-id="9623b-131">✔️</span><span class="sxs-lookup"><span data-stu-id="9623b-131">✔️</span></span></td><td style="text-align: center;"> <span data-ttu-id="9623b-132">✔️</span><span class="sxs-lookup"><span data-stu-id="9623b-132">✔️</span></span></td>
+<td> <span data-ttu-id="14b05-130">MR 및 Azure 302: 컴퓨터 비전</span><span class="sxs-lookup"><span data-stu-id="14b05-130">MR and Azure 302: Computer vision</span></span></td><td style="text-align: center;"> <span data-ttu-id="14b05-131">✔️</span><span class="sxs-lookup"><span data-stu-id="14b05-131">✔️</span></span></td><td style="text-align: center;"> <span data-ttu-id="14b05-132">✔️</span><span class="sxs-lookup"><span data-stu-id="14b05-132">✔️</span></span></td>
 </tr>
 </table>
 
 > [!NOTE]
-> <span data-ttu-id="9623b-133">이 과정 HoloLens에 주로 중점을 두고, 하는 동안 Windows Mixed Reality 몰입 형 (VR) 헤드셋을이 과정에서 배운 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-133">While this course primarily focuses on HoloLens, you can also apply what you learn in this course to Windows Mixed Reality immersive (VR) headsets.</span></span> <span data-ttu-id="9623b-134">몰입 형 (VR) 헤드셋에 액세스할 수 있는 카메라 없기 때문에 PC에 연결 하는 외부 카메라를 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-134">Because immersive (VR) headsets do not have accessible cameras, you will need an external camera connected to your PC.</span></span> <span data-ttu-id="9623b-135">과정을 따라가려면 정보 몰입 형 (VR) 헤드셋을 지원 하기 위해 사용 해야 합니다. 변경 내용에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-135">As you follow along with the course, you will see notes on any changes you might need to employ to support immersive (VR) headsets.</span></span>
+> <span data-ttu-id="14b05-133">이 과정에서 주로 HoloLens에 초점을 맞춘 반면,이 과정에서 배운 내용을 Windows Mixed Reality 모던 (VR) 헤드셋에도 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-133">While this course primarily focuses on HoloLens, you can also apply what you learn in this course to Windows Mixed Reality immersive (VR) headsets.</span></span> <span data-ttu-id="14b05-134">모던 (VR) 헤드셋은 액세스할 수 있는 카메라를 포함 하지 않으므로 PC에 연결 된 외부 카메라가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-134">Because immersive (VR) headsets do not have accessible cameras, you will need an external camera connected to your PC.</span></span> <span data-ttu-id="14b05-135">이 과정을 진행 하면서 모던 (VR) 헤드셋을 지원 하기 위해 사용 해야 하는 변경 내용에 대 한 정보를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-135">As you follow along with the course, you will see notes on any changes you might need to employ to support immersive (VR) headsets.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="9623b-136">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="9623b-136">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="14b05-136">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="14b05-136">Prerequisites</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9623b-137">이 자습서는 Unity 사용 하 여 기본 경험이 있는 개발자 용으로 설계 하 고 C#입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-137">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="9623b-138">또한 주의 필수 구성 요소 및이 문서에서 작성 된 지침을 나타내는 새로운 테스트 되었으며 (2018 년 5 월) 작성 시점에 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-138">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (May 2018).</span></span> <span data-ttu-id="9623b-139">내에서 나열 된 사용 가능한 최신 소프트웨어를 사용 하는 합니다 [도구를 설치](install-the-tools.md) 없습니다 가정이 과정에서 정보를 아래에 나열 된 보다 최신 소프트웨어에서 찾을 수 있는 항목을 일치 완벽 하 게 됩니다 있지만 문서 .</span><span class="sxs-lookup"><span data-stu-id="9623b-139">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you'll find in newer software than what's listed below.</span></span>
+> <span data-ttu-id="14b05-137">이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-137">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="14b05-138">또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-138">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (May 2018).</span></span> <span data-ttu-id="14b05-139">[도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-139">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you'll find in newer software than what's listed below.</span></span>
 
-<span data-ttu-id="9623b-140">다음 하드웨어 및 소프트웨어가이 과정에 대 한 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-140">We recommend the following hardware and software for this course:</span></span>
+<span data-ttu-id="14b05-140">이 과정에는 다음 하드웨어 및 소프트웨어를 권장 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-140">We recommend the following hardware and software for this course:</span></span>
 
-- <span data-ttu-id="9623b-141">개발 PC A [Windows Mixed Reality 호환](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) 몰입 형 (VR) 헤드셋 개발용</span><span class="sxs-lookup"><span data-stu-id="9623b-141">A development PC, [compatible with Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) for immersive (VR) headset development</span></span>
-- [<span data-ttu-id="9623b-142">Windows 10 Fall Creators Update (또는 이상) 사용 하도록 설정 하는 개발자 모드를 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="9623b-142">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9623b-143">최신 Windows 10 SDK</span><span class="sxs-lookup"><span data-stu-id="9623b-143">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9623b-144">Unity 2017.4</span><span class="sxs-lookup"><span data-stu-id="9623b-144">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="9623b-145">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9623b-145">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
-- <span data-ttu-id="9623b-146">A [Windows Mixed Reality 몰입 형 (VR) 헤드셋](immersive-headset-hardware-details.md) 하거나 [Microsoft HoloLens](hololens-hardware-details.md) 개발자 모드를 설정 하 여</span><span class="sxs-lookup"><span data-stu-id="9623b-146">A [Windows Mixed Reality immersive (VR) headset](immersive-headset-hardware-details.md) or [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
-- <span data-ttu-id="9623b-147">카메라 (몰입 형 헤드셋 개발용) PC에 연결</span><span class="sxs-lookup"><span data-stu-id="9623b-147">A camera connected to your PC (for immersive headset development)</span></span>
-- <span data-ttu-id="9623b-148">Azure 설정 및 Computer Vision API 검색에 대 한 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="9623b-148">Internet access for Azure setup and Computer Vision API retrieval</span></span>
+- <span data-ttu-id="14b05-141">모던 (VR) 헤드셋 개발을 위한 [Windows Mixed Reality와 호환 되](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) 는 개발 PC</span><span class="sxs-lookup"><span data-stu-id="14b05-141">A development PC, [compatible with Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) for immersive (VR) headset development</span></span>
+- [<span data-ttu-id="14b05-142">개발자 모드를 사용 하는 Windows 10이 하 버전의 작성자 업데이트 (또는 이상)</span><span class="sxs-lookup"><span data-stu-id="14b05-142">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="14b05-143">최신 Windows 10 SDK</span><span class="sxs-lookup"><span data-stu-id="14b05-143">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="14b05-144">Unity 2017.4</span><span class="sxs-lookup"><span data-stu-id="14b05-144">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="14b05-145">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="14b05-145">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
+- <span data-ttu-id="14b05-146">개발자 모드가 사용 하도록 설정 된 [Windows Mixed Reality 모던 (VR) 헤드셋](immersive-headset-hardware-details.md) 또는 [Microsoft HoloLens](hololens-hardware-details.md)</span><span class="sxs-lookup"><span data-stu-id="14b05-146">A [Windows Mixed Reality immersive (VR) headset](immersive-headset-hardware-details.md) or [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
+- <span data-ttu-id="14b05-147">PC에 연결 된 카메라 (몰입 형 헤드셋 개발용)</span><span class="sxs-lookup"><span data-stu-id="14b05-147">A camera connected to your PC (for immersive headset development)</span></span>
+- <span data-ttu-id="14b05-148">Azure 설정 및 Computer Vision API 검색을 위한 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="14b05-148">Internet access for Azure setup and Computer Vision API retrieval</span></span>
 
-## <a name="before-you-start"></a><span data-ttu-id="9623b-149">시작하기 전 주의 사항</span><span class="sxs-lookup"><span data-stu-id="9623b-149">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="14b05-149">시작하기 전 주의 사항</span><span class="sxs-lookup"><span data-stu-id="14b05-149">Before you start</span></span>
 
-1.  <span data-ttu-id="9623b-150">이 프로젝트를 구축 하는 문제 발생을 방지 하려면 것이 좋습니다 루트 또는 루트 거의 폴더에이 자습서에 언급 된 프로젝트를 만든 (오래 폴더 경로 빌드 시에는 문제가 발생할 수 있습니다).</span><span class="sxs-lookup"><span data-stu-id="9623b-150">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
-2.  <span data-ttu-id="9623b-151">설정 하 고 여 HoloLens를 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-151">Set up and test your HoloLens.</span></span> <span data-ttu-id="9623b-152">에 HoloLens 등록 설정을 지원 해야 하는 경우 [HoloLens 설치 문서를 참조 하도록](https://docs.microsoft.com/hololens/hololens-setup)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-152">If you need support setting up your HoloLens, [make sure to visit the HoloLens setup article](https://docs.microsoft.com/hololens/hololens-setup).</span></span> 
-3.  <span data-ttu-id="9623b-153">(때로는 도움이 각 사용자에 대 한 이러한 작업을 수행) 새 HoloLens 앱 개발을 시작할 때 보정 및 센서 튜닝을 수행 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-153">It is a good idea to perform Calibration and Sensor Tuning when beginning developing a new HoloLens App (sometimes it can help to perform those tasks for each user).</span></span> 
+1.  <span data-ttu-id="14b05-150">이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)</span><span class="sxs-lookup"><span data-stu-id="14b05-150">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
+2.  <span data-ttu-id="14b05-151">HoloLens를 설정 하 고 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-151">Set up and test your HoloLens.</span></span> <span data-ttu-id="14b05-152">HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-152">If you need support setting up your HoloLens, [make sure to visit the HoloLens setup article](https://docs.microsoft.com/hololens/hololens-setup).</span></span> 
+3.  <span data-ttu-id="14b05-153">새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음).</span><span class="sxs-lookup"><span data-stu-id="14b05-153">It is a good idea to perform Calibration and Sensor Tuning when beginning developing a new HoloLens App (sometimes it can help to perform those tasks for each user).</span></span> 
 
-<span data-ttu-id="9623b-154">보정에 대 한 도움말을 따라이 [HoloLens 보정 문서 링크](calibration.md#hololens)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-154">For help on Calibration, please follow this [link to the HoloLens Calibration article](calibration.md#hololens).</span></span>
+<span data-ttu-id="14b05-154">보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-154">For help on Calibration, please follow this [link to the HoloLens Calibration article](calibration.md#hololens).</span></span>
 
-<span data-ttu-id="9623b-155">센서 조정에 대 한 도움말을 따라이 [HoloLens 센서 튜닝 문서 링크](sensor-tuning.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-155">For help on Sensor Tuning, please follow this [link to the HoloLens Sensor Tuning article](sensor-tuning.md).</span></span>
+<span data-ttu-id="14b05-155">센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-155">For help on Sensor Tuning, please follow this [link to the HoloLens Sensor Tuning article](sensor-tuning.md).</span></span>
 
-## <a name="chapter-1--the-azure-portal"></a><span data-ttu-id="9623b-156">1 장-Azure Portal</span><span class="sxs-lookup"><span data-stu-id="9623b-156">Chapter 1 – The Azure Portal</span></span>
+## <a name="chapter-1--the-azure-portal"></a><span data-ttu-id="14b05-156">1 장-Azure Portal</span><span class="sxs-lookup"><span data-stu-id="14b05-156">Chapter 1 – The Azure Portal</span></span>
 
-<span data-ttu-id="9623b-157">사용 하는 *Computer Vision API* 서비스가 Azure에서 응용 프로그램에 사용할 수 있도록 서비스의 인스턴스를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-157">To use the *Computer Vision API* service in Azure, you will need to configure an instance of the service to be made available to your application.</span></span>
+<span data-ttu-id="14b05-157">Azure에서 *Computer Vision API* 서비스를 사용 하려면 응용 프로그램에서 사용할 수 있도록 서비스 인스턴스를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-157">To use the *Computer Vision API* service in Azure, you will need to configure an instance of the service to be made available to your application.</span></span>
 
-1.  <span data-ttu-id="9623b-158">먼저에 로그인 합니다 [Azure Portal](https://portal.azure.com)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-158">First, log in to the [Azure Portal](https://portal.azure.com).</span></span> 
+1.  <span data-ttu-id="14b05-158">먼저 [Azure Portal](https://portal.azure.com)에 로그인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-158">First, log in to the [Azure Portal](https://portal.azure.com).</span></span> 
 
     > [!NOTE]
-    > <span data-ttu-id="9623b-159">Azure 계정이 아직 없는 경우 새로 만들려면 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-159">If you do not already have an Azure account, you will need to create one.</span></span> <span data-ttu-id="9623b-160">클래스 룸 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 새 계정 설정 도움말에 대 한 여력 중 하나를 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-160">If you are following this tutorial in a classroom or lab situation, ask your instructor or one of the proctors for help setting up your new account.</span></span>
+    > <span data-ttu-id="14b05-159">아직 Azure 계정이 없는 경우 새로 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-159">If you do not already have an Azure account, you will need to create one.</span></span> <span data-ttu-id="14b05-160">교실 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 proctors 중 하나에 문의 하 여 새 계정을 설정 하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-160">If you are following this tutorial in a classroom or lab situation, ask your instructor or one of the proctors for help setting up your new account.</span></span>
 
-2.  <span data-ttu-id="9623b-161">일단 로그인 하면 클릭할 **새로 만들기** 왼쪽 위에서 모서리 및 검색 *Computer Vision API*를 클릭 하 고 **Enter**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-161">Once you are logged in, click on **New** in the top left corner, and search for *Computer Vision API*, and click **Enter**.</span></span>
+2.  <span data-ttu-id="14b05-161">로그인 되 면 왼쪽 위 모서리에서 **새로 만들기** 를 클릭 하 고 *Computer Vision API*를 검색 한 다음 **Enter 키**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-161">Once you are logged in, click on **New** in the top left corner, and search for *Computer Vision API*, and click **Enter**.</span></span>
 
     ![Azure에서 새 리소스 만들기](images/AzureLabs-Lab2-00.png)
 
     > [!NOTE]
-    > <span data-ttu-id="9623b-163">단어 **새로 만들기** 로 대체 되었습니다 **리소스 만들기**, 최신 포털에서입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-163">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
+    > <span data-ttu-id="14b05-163">새 단어는 **새** 포털에서 **리소스 만들기**로 대체 되었을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-163">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
  
-3.  <span data-ttu-id="9623b-164">새 페이지에 대 한 설명을 제공 합니다는 *Computer Vision API* 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-164">The new page will provide a description of the *Computer Vision API* service.</span></span> <span data-ttu-id="9623b-165">이 페이지의 왼쪽 아래에 있는 합니다 **만들기** 이 서비스를 사용 하 여 연결을 만들려면 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-165">At the bottom left of this page, select the **Create** button, to create an association with this service.</span></span>
+3.  <span data-ttu-id="14b05-164">새 페이지에 *Computer Vision API* 서비스에 대 한 설명이 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-164">The new page will provide a description of the *Computer Vision API* service.</span></span> <span data-ttu-id="14b05-165">이 페이지의 왼쪽 아래에서 **만들기** 단추를 선택 하 여이 서비스와의 연결을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-165">At the bottom left of this page, select the **Create** button, to create an association with this service.</span></span>
 
-    ![컴퓨터 비전 api 서비스에 대 한](images/AzureLabs-Lab2-01.png)
+    ![컴퓨터 비전 api 서비스 정보](images/AzureLabs-Lab2-01.png)
  
-4.  <span data-ttu-id="9623b-167">클릭 한 후 **만들기**:</span><span class="sxs-lookup"><span data-stu-id="9623b-167">Once you have clicked on **Create**:</span></span>
+4.  <span data-ttu-id="14b05-167">**만들기**를 클릭 하면 다음을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-167">Once you have clicked on **Create**:</span></span>
 
-    1. <span data-ttu-id="9623b-168">원하는 삽입 **이름을** 이 서비스 인스턴스에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-168">Insert your desired **Name** for this service instance.</span></span>
-    2. <span data-ttu-id="9623b-169">선택 된 **구독**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-169">Select a **Subscription**.</span></span>
-    3. <span data-ttu-id="9623b-170">선택 된 **가격 책정 계층** 첫 번째 경우, 적절 한 시간 만들기를 *Computer Vision API* 서비스, 무료 계층 (F0 라는)를 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-170">Select the **Pricing Tier** appropriate for you, if this is the first time creating a *Computer Vision API* Service, a free tier (named F0) should be available to you.</span></span>
-    4. <span data-ttu-id="9623b-171">선택 된 **리소스 그룹** 하거나 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-171">Choose a **Resource Group** or create a new one.</span></span> <span data-ttu-id="9623b-172">리소스 그룹에는 모니터링, 프로 비전, 액세스 제어 및 Azure 자산 모음에 대 한 청구를 관리 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-172">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="9623b-173">것이 좋습니다 (예: 이러한 labs)와 같은 일반적인 리소스 그룹에서 단일 프로젝트와 연결 된 모든 Azure 서비스를 유지).</span><span class="sxs-lookup"><span data-stu-id="9623b-173">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
+    1. <span data-ttu-id="14b05-168">이 서비스 인스턴스의 원하는 **이름을** 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-168">Insert your desired **Name** for this service instance.</span></span>
+    2. <span data-ttu-id="14b05-169">**구독**을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-169">Select a **Subscription**.</span></span>
+    3. <span data-ttu-id="14b05-170">적절 한 **가격 책정 계층** 을 선택 합니다. *Computer Vision API* 서비스를 처음 만드는 경우 무료 계층 (명명 된 F0)을 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-170">Select the **Pricing Tier** appropriate for you, if this is the first time creating a *Computer Vision API* Service, a free tier (named F0) should be available to you.</span></span>
+    4. <span data-ttu-id="14b05-171">리소스 그룹을 선택 하거나 새 **리소스 그룹** 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-171">Choose a **Resource Group** or create a new one.</span></span> <span data-ttu-id="14b05-172">리소스 그룹은 Azure 자산의 컬렉션에 대 한 청구를 모니터링 하 고, 액세스를 제어 하 고, 프로 비전 하 고, 관리 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-172">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="14b05-173">단일 프로젝트와 연결 된 모든 Azure 서비스 (예: 이러한 랩)를 공용 리소스 그룹에 유지 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-173">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
 
-        > <span data-ttu-id="9623b-174">추가 하려는 경우 Azure 리소스 그룹에 대 한 하세요 [리소스 그룹 방문해](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-174">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
+        > <span data-ttu-id="14b05-174">Azure 리소스 그룹에 대 한 자세한 내용을 보려면 [리소스 그룹 문서를 참조](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)하세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-174">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
 
-    5. <span data-ttu-id="9623b-175">(새 리소스 그룹을 만들면) 하는 경우 리소스 그룹의 위치를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-175">Determine the Location for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="9623b-176">위치는 응용 프로그램은 실행할 지역의 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-176">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="9623b-177">일부 Azure 자산은 특정 지역 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-177">Some Azure assets are only available in certain regions.</span></span>
+    5. <span data-ttu-id="14b05-175">새 리소스 그룹을 만드는 경우 리소스 그룹의 위치를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-175">Determine the Location for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="14b05-176">위치는 응용 프로그램이 실행 되는 영역에 있는 것이 가장 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-176">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="14b05-177">일부 Azure 자산은 특정 지역 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-177">Some Azure assets are only available in certain regions.</span></span>
 
-    6. <span data-ttu-id="9623b-178">이 서비스에 적용 되는 조건에 이해는 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-178">You will also need to confirm that you have understood the Terms and Conditions applied to this Service.</span></span>
-    7. <span data-ttu-id="9623b-179">만들기를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-179">Click Create.</span></span>
+    6. <span data-ttu-id="14b05-178">또한이 서비스에 적용 된 사용 약관을 이해 했는지 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-178">You will also need to confirm that you have understood the Terms and Conditions applied to this Service.</span></span>
+    7. <span data-ttu-id="14b05-179">만들기를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-179">Click Create.</span></span>
 
-        ![서비스 만들기 정보](images/AzureLabs-Lab2-02.png)
+        ![서비스 생성 정보](images/AzureLabs-Lab2-02.png)
 
-5.  <span data-ttu-id="9623b-181">클릭 한 후 **만들기**만들려는 서비스에 대 한 대기 해야, 1 분이 걸릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-181">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
-6.  <span data-ttu-id="9623b-182">서비스 인스턴스가 생성 되 면 포털에서 알림이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-182">A notification will appear in the portal once the Service instance is created.</span></span>
+5.  <span data-ttu-id="14b05-181">**만들기**를 클릭 한 후에는 서비스를 만들 때까지 기다려야 합니다 .이 작업이 몇 분 정도 걸릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-181">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
+6.  <span data-ttu-id="14b05-182">서비스 인스턴스를 만든 후 알림이 포털에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-182">A notification will appear in the portal once the Service instance is created.</span></span>
 
-    ![새 서비스에 대 한 새 알림이 나타납니다.](images/AzureLabs-Lab2-03.png) 
+    ![새 서비스에 대 한 새 알림 확인](images/AzureLabs-Lab2-03.png) 
  
-7.  <span data-ttu-id="9623b-184">새 서비스 인스턴스를 탐색 하려면 알림을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-184">Click on the notification to explore your new Service instance.</span></span> 
+7.  <span data-ttu-id="14b05-184">알림을 클릭 하 여 새 서비스 인스턴스를 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-184">Click on the notification to explore your new Service instance.</span></span> 
 
-    ![리소스를 이동 단추를 선택 합니다.](images/AzureLabs-Lab2-04.png)
+    ![리소스로 이동 단추를 선택 합니다.](images/AzureLabs-Lab2-04.png)
  
-8. <span data-ttu-id="9623b-186">클릭 합니다 **리소스로 이동** 알림에서 새 서비스 인스턴스를 탐색 하는 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-186">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="9623b-187">새 Computer Vision API 서비스 인스턴스로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-187">You will be taken to your new Computer Vision API service instance.</span></span> 
+8. <span data-ttu-id="14b05-186">알림에서 **리소스로 이동** 단추를 클릭 하 여 새 서비스 인스턴스를 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-186">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="14b05-187">새 Computer Vision API 서비스 인스턴스로 이동 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-187">You will be taken to your new Computer Vision API service instance.</span></span> 
 
     ![새 Computer Vision API 서비스](images/AzureLabs-Lab2-05.png)
  
-9.  <span data-ttu-id="9623b-189">이 자습서에서 응용 프로그램 서비스의 구독 키를 사용 하 여 수행 하는 서비스에 대 한 호출을 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-189">Within this tutorial, your application will need to make calls to your service, which is done through using your service’s Subscription Key.</span></span>
-10. <span data-ttu-id="9623b-190">*빠른 시작* 페이지의 프로그램 *Computer Vision API* 서비스에서 첫 번째 단계로 이동 *키 가져오기*, 클릭 **키** ( 또한 이렇게 하려면 열쇠 아이콘을 가리키는 서비스 탐색 메뉴에 있는 파란색 하이퍼링크 키를 클릭 하 여).</span><span class="sxs-lookup"><span data-stu-id="9623b-190">From the *Quick start* page, of your *Computer Vision API* service, navigate to the first step, *Grab your keys*, and click **Keys** (you can also achieve this by clicking the blue hyperlink Keys, located in the services navigation menu, denoted by the key icon).</span></span> <span data-ttu-id="9623b-191">이 서비스를 줄이면 *키*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-191">This will reveal your service *Keys*.</span></span>
-11. <span data-ttu-id="9623b-192">프로젝트에서 나중에이 필요 하므로 표시 된 키 중 하나가 복사본을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-192">Take a copy of one of the displayed keys, as you will need this later in your project.</span></span> 
+9.  <span data-ttu-id="14b05-189">이 자습서에서 응용 프로그램은 서비스에 대 한 호출을 수행 해야 하며, 서비스의 구독 키를 사용 하 여 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-189">Within this tutorial, your application will need to make calls to your service, which is done through using your service’s Subscription Key.</span></span>
+10. <span data-ttu-id="14b05-190">*Computer Vision API* 서비스의 *빠른 시작* 페이지에서 첫 번째 단계로 이동 하 고 *키*를 클릭 한 다음 **키** 를 클릭 합니다 .이를 위해 서비스 탐색 메뉴에 있는 파란색 하이퍼링크 키를 클릭 하 여이를 수행할 수도 있습니다. 키 아이콘으로 표시 됨).</span><span class="sxs-lookup"><span data-stu-id="14b05-190">From the *Quick start* page, of your *Computer Vision API* service, navigate to the first step, *Grab your keys*, and click **Keys** (you can also achieve this by clicking the blue hyperlink Keys, located in the services navigation menu, denoted by the key icon).</span></span> <span data-ttu-id="14b05-191">이렇게 하면 서비스 *키*가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-191">This will reveal your service *Keys*.</span></span>
+11. <span data-ttu-id="14b05-192">프로젝트에서 나중에 필요 하므로 표시 된 키 중 하나를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-192">Take a copy of one of the displayed keys, as you will need this later in your project.</span></span> 
 
-12. <span data-ttu-id="9623b-193">로 다시 이동 합니다 *빠른 시작* 페이지 및 여기에서 끝점을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-193">Go back to the *Quick start* page, and from there, fetch your endpoint.</span></span> <span data-ttu-id="9623b-194">회원님의 지역에 따라 다를 수 있습니다 (있는 경우 나중에 코드 변경 확인 해야 합니다).</span><span class="sxs-lookup"><span data-stu-id="9623b-194">Be aware yours may be different, depending on your region (which if it is, you will need to make a change to your code later).</span></span> <span data-ttu-id="9623b-195">사용 하 여 나중에이 끝점의 복사본을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-195">Take a copy of this endpoint for use later:</span></span>
+12. <span data-ttu-id="14b05-193">*빠른 시작* 페이지로 돌아가 여기에서 끝점을 인출 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-193">Go back to the *Quick start* page, and from there, fetch your endpoint.</span></span> <span data-ttu-id="14b05-194">사용자는 지역에 따라 다를 수 있습니다 (이 경우 나중에 코드를 변경 해야 하는 경우).</span><span class="sxs-lookup"><span data-stu-id="14b05-194">Be aware yours may be different, depending on your region (which if it is, you will need to make a change to your code later).</span></span> <span data-ttu-id="14b05-195">나중에 사용 하기 위해이 끝점의 복사본을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-195">Take a copy of this endpoint for use later:</span></span>
 
     ![새 Computer Vision API 서비스](images/AzureLabs-Lab2-05-5.png)
 
     > [!TIP]
-    > <span data-ttu-id="9623b-197">다양 한 끝점은 무엇을 확인할 수 있습니다 [여기](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-197">You can check what the various endpoints are [HERE](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).</span></span> 
+    > <span data-ttu-id="14b05-197">다양 한 끝점이 [여기](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)에 있는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-197">You can check what the various endpoints are [HERE](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).</span></span> 
 
-## <a name="chapter-2--set-up-the-unity-project"></a><span data-ttu-id="9623b-198">2 장-Unity 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="9623b-198">Chapter 2 – Set up the Unity project</span></span>
+## <a name="chapter-2--set-up-the-unity-project"></a><span data-ttu-id="14b05-198">2 장-Unity 프로젝트 설정</span><span class="sxs-lookup"><span data-stu-id="14b05-198">Chapter 2 – Set up the Unity project</span></span>
 
-<span data-ttu-id="9623b-199">다음은 일반적인 등록 혼합된 현실 등을 사용 하 여 개발 하는 것에 대 한와 따라서 다른 프로젝트에 대 한 좋은 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-199">The following is a typical set up for developing with mixed reality, and as such, is a good template for other projects.</span></span>
+<span data-ttu-id="14b05-199">다음은 혼합 현실를 사용 하 여 개발 하기 위한 일반적인 설정으로, 다른 프로젝트에 적합 한 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-199">The following is a typical set up for developing with mixed reality, and as such, is a good template for other projects.</span></span>
 
-1.  <span data-ttu-id="9623b-200">오픈 *Unity* 누릅니다 **새로 만들기**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-200">Open *Unity* and click **New**.</span></span> 
+1.  <span data-ttu-id="14b05-200">*Unity* 를 열고 **새로 만들기**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-200">Open *Unity* and click **New**.</span></span> 
 
     ![새 Unity 프로젝트를 시작 합니다.](images/AzureLabs-Lab2-06.png)
 
-2.  <span data-ttu-id="9623b-202">이제 Unity 프로젝트 이름을 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-202">You will now need to provide a Unity Project name.</span></span> <span data-ttu-id="9623b-203">삽입 **MR_ComputerVision**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-203">Insert **MR_ComputerVision**.</span></span> <span data-ttu-id="9623b-204">프로젝트 형식 설정 되어 있는지 확인 **3D**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-204">Make sure the project type is set to **3D**.</span></span> <span data-ttu-id="9623b-205">설정 된 **위치** 적절 한 위치로 (기억에 루트 디렉터리에 가까울수록이 더 좋습니다).</span><span class="sxs-lookup"><span data-stu-id="9623b-205">Set the **Location** to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="9623b-206">그런 다음 클릭 **프로젝트 만들기**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-206">Then, click **Create project**.</span></span>
+2.  <span data-ttu-id="14b05-202">이제 Unity 프로젝트 이름을 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-202">You will now need to provide a Unity Project name.</span></span> <span data-ttu-id="14b05-203">**MR_ComputerVision**을 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-203">Insert **MR_ComputerVision**.</span></span> <span data-ttu-id="14b05-204">프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-204">Make sure the project type is set to **3D**.</span></span> <span data-ttu-id="14b05-205">위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-205">Set the **Location** to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="14b05-206">그런 다음 **프로젝트 만들기**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-206">Then, click **Create project**.</span></span>
 
     ![새 Unity 프로젝트에 대 한 세부 정보를 제공 합니다.](images/AzureLabs-Lab2-07.png)
 
-3.  <span data-ttu-id="9623b-208">Unity 열기를 사용 하 여 기본 검사 가치가 **스크립트 편집기** 로 설정 된 **Visual Studio**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-208">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="9623b-209">로 이동 **편집 > 기본 설정** 로 이동한 다음 새 창에서 **외부 도구**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-209">Go to **Edit > Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="9623b-210">변경 **외부 스크립트 편집기** 하 **Visual Studio 2017**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-210">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="9623b-211">닫기 합니다 **기본 설정** 창입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-211">Close the **Preferences** window.</span></span>
+3.  <span data-ttu-id="14b05-208">Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-208">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="14b05-209">**> 기본 설정 편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-209">Go to **Edit > Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="14b05-210">**외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-210">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="14b05-211">**기본 설정** 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-211">Close the **Preferences** window.</span></span>
 
     ![스크립트 편집기 기본 설정을 업데이트 합니다.](images/AzureLabs-Lab2-08.png)
 
-4.  <span data-ttu-id="9623b-213">이동한 다음 **파일 > 빌드 설정** 선택한 **유니버설 Windows 플랫폼**를 클릭 합니다 **플랫폼 전환** 선택 항목을 적용 하려면 단추.</span><span class="sxs-lookup"><span data-stu-id="9623b-213">Next, go to **File > Build Settings** and select **Universal Windows Platform**, then click on the **Switch Platform** button to apply your selection.</span></span>
+4.  <span data-ttu-id="14b05-213">그런 다음 **파일 > 빌드 설정** 으로 이동 하 고 **유니버설 Windows 플랫폼**을 선택한 후 **플랫폼 전환** 단추를 클릭 하 여 선택 항목을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-213">Next, go to **File > Build Settings** and select **Universal Windows Platform**, then click on the **Switch Platform** button to apply your selection.</span></span>
 
-    ![빌드 설정 창, uwp 플랫폼 전환 합니다.](images/AzureLabs-Lab2-10.png)
+    ![빌드 설정 창에서 플랫폼을 UWP로 전환 합니다.](images/AzureLabs-Lab2-10.png)
 
-5.  <span data-ttu-id="9623b-215">여전히 **파일 > 빌드 설정** 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-215">While still in **File > Build Settings** and make sure that:</span></span>
+5.  <span data-ttu-id="14b05-215">아직 **파일 > 빌드 설정을** 사용 하 고 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-215">While still in **File > Build Settings** and make sure that:</span></span>
 
-    1. <span data-ttu-id="9623b-216">**장치를 대상** 로 설정 된 **HoloLens**</span><span class="sxs-lookup"><span data-stu-id="9623b-216">**Target Device** is set to **HoloLens**</span></span>
+    1. <span data-ttu-id="14b05-216">**대상 장치가** **HoloLens** 로 설정 됨</span><span class="sxs-lookup"><span data-stu-id="14b05-216">**Target Device** is set to **HoloLens**</span></span>
 
-        > <span data-ttu-id="9623b-217">몰입 형 헤드셋, 설정 **대상 장치** 하 *모든 장치*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-217">For the immersive headsets, set **Target Device** to *Any Device*.</span></span>
+        > <span data-ttu-id="14b05-217">모던 헤드셋의 경우 **대상 장치** 를 *모든 장치로*설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-217">For the immersive headsets, set **Target Device** to *Any Device*.</span></span>
 
-    2. <span data-ttu-id="9623b-218">**빌드 형식** 로 설정 된 **D3D**</span><span class="sxs-lookup"><span data-stu-id="9623b-218">**Build Type** is set to **D3D**</span></span>
-    3. <span data-ttu-id="9623b-219">**SDK** 로 설정 된 **가장 최근에 설치 된**</span><span class="sxs-lookup"><span data-stu-id="9623b-219">**SDK** is set to **Latest installed**</span></span>
-    4. <span data-ttu-id="9623b-220">**Visual Studio 버전** 로 설정 된 **가장 최근에 설치 된**</span><span class="sxs-lookup"><span data-stu-id="9623b-220">**Visual Studio Version** is set to **Latest installed**</span></span>
-    5. <span data-ttu-id="9623b-221">**빌드 및 실행** 로 설정 된 **로컬 컴퓨터**</span><span class="sxs-lookup"><span data-stu-id="9623b-221">**Build and Run** is set to **Local Machine**</span></span>
-    6. <span data-ttu-id="9623b-222">장면 저장 하 고 빌드에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-222">Save the scene and add it to the build.</span></span>
+    2. <span data-ttu-id="14b05-218">**빌드 형식이** **D3D** 로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-218">**Build Type** is set to **D3D**</span></span>
+    3. <span data-ttu-id="14b05-219">**SDK** 가 **최신 설치** 로 설정 됨</span><span class="sxs-lookup"><span data-stu-id="14b05-219">**SDK** is set to **Latest installed**</span></span>
+    4. <span data-ttu-id="14b05-220">**Visual Studio 버전이** **최신 설치** 로 설정 됨</span><span class="sxs-lookup"><span data-stu-id="14b05-220">**Visual Studio Version** is set to **Latest installed**</span></span>
+    5. <span data-ttu-id="14b05-221">**빌드 및 실행** 이 **로컬 컴퓨터로** 설정 됨</span><span class="sxs-lookup"><span data-stu-id="14b05-221">**Build and Run** is set to **Local Machine**</span></span>
+    6. <span data-ttu-id="14b05-222">장면을 저장 하 고 빌드에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-222">Save the scene and add it to the build.</span></span>
 
-        1. <span data-ttu-id="9623b-223">선택 하 여이 작업을 수행할 **열고 장면 추가**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-223">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="9623b-224">창 저장 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-224">A save window will appear.</span></span>
+        1. <span data-ttu-id="14b05-223">이렇게 하려면 열려 있는 **장면 추가**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-223">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="14b05-224">저장 창이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-224">A save window will appear.</span></span>
         
-            ![추가 백그라운드에서 열기 단추를 클릭](images/AzureLabs-Lab2-11.png)
+            ![열린 장면 추가 단추를 클릭 합니다.](images/AzureLabs-Lab2-11.png)
 
-        2. <span data-ttu-id="9623b-226">새 폴더를 만들려면이 고 모든의 미래, 장면에 대 한 다음 선택 합니다 **새 폴더** 새 폴더를 만들려면 단추 이름을 **장면**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-226">Create a new folder for this, and any future, scene, then select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
+        2. <span data-ttu-id="14b05-226">이에 대 한 새 폴더를 만들고 나중에 장면을 만든 다음 **새 폴더** 단추를 선택 하 여 새 폴더를 만들고 이름을 **장면을**로 지정한 다음</span><span class="sxs-lookup"><span data-stu-id="14b05-226">Create a new folder for this, and any future, scene, then select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
 
             ![새 스크립트 폴더 만들기](images/AzureLabs-Lab2-12.png)
 
-        3. <span data-ttu-id="9623b-228">새로 만든 열 **장면** 폴더를 선택한 다음는 *파일 이름*: 텍스트 필드에 입력 **MR_ComputerVisionScene**, 클릭 **저장** .</span><span class="sxs-lookup"><span data-stu-id="9623b-228">Open your newly created **Scenes** folder, and then in the *File name*: text field, type **MR_ComputerVisionScene**, then click **Save**.</span></span>
+        3. <span data-ttu-id="14b05-228">새로 만든 **장면** 폴더를 연 다음 *파일 이름*: 텍스트 필드에 **MR_ComputerVisionScene**를 입력 하 고 **저장**을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-228">Open your newly created **Scenes** folder, and then in the *File name*: text field, type **MR_ComputerVisionScene**, then click **Save**.</span></span>
 
             ![새 장면에 이름을 지정 합니다.](images/AzureLabs-Lab2-13.png)
 
-            > <span data-ttu-id="9623b-230">주의 내에서 Unity 장면에 저장 해야 합니다 *자산* 폴더를 Unity 프로젝트와 연결 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-230">Be aware, you must save your Unity scenes within the *Assets* folder, as they must be associated with the Unity Project.</span></span> <span data-ttu-id="9623b-231">백그라운드에서 폴더 (및 다른 유사한 폴더)를 만들기 Unity 프로젝트를 구성 하는 일반적인 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-231">Creating the scenes folder (and other similar folders) is a typical way of structuring a Unity project.</span></span>
+            > <span data-ttu-id="14b05-230">Unity 프로젝트와 연결 되어 있어야 하므로 *자산* 폴더 내에 unity 장면을 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-230">Be aware, you must save your Unity scenes within the *Assets* folder, as they must be associated with the Unity Project.</span></span> <span data-ttu-id="14b05-231">배경 폴더 (및 기타 유사한 폴더)를 만드는 것은 Unity 프로젝트를 구조화 하는 일반적인 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-231">Creating the scenes folder (and other similar folders) is a typical way of structuring a Unity project.</span></span>
 
-    7. <span data-ttu-id="9623b-232">설정에 남아 *빌드 설정*, 지금은 기본값으로 유지 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-232">The remaining settings, in *Build Settings*, should be left as default for now.</span></span>
+    7. <span data-ttu-id="14b05-232">*빌드 설정*의 나머지 설정은 지금은 기본값으로 남겨 두어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-232">The remaining settings, in *Build Settings*, should be left as default for now.</span></span>
 
-6. <span data-ttu-id="9623b-233">에 *빌드 설정* 창을 **플레이어 설정** 단추를 공간에 관련 된 패널이 열립니다이 위치를 *검사기* 위치한.</span><span class="sxs-lookup"><span data-stu-id="9623b-233">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span> 
+6. <span data-ttu-id="14b05-233">*빌드 설정* 창에서 **플레이어 설정** 단추를 클릭 하면 *검사기* 가 있는 공간에서 관련 패널이 열립니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-233">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span> 
 
-    ![플레이어 설정 열기](images/AzureLabs-Lab2-14.png)
+    ![플레이어 설정을 엽니다.](images/AzureLabs-Lab2-14.png)
 
-7. <span data-ttu-id="9623b-235">이 패널에서 몇 가지 설정을 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-235">In this panel, a few settings need to be verified:</span></span>
+7. <span data-ttu-id="14b05-235">이 패널에서 몇 가지 설정을 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-235">In this panel, a few settings need to be verified:</span></span>
 
-    1. <span data-ttu-id="9623b-236">에 **기타 설정** 탭:</span><span class="sxs-lookup"><span data-stu-id="9623b-236">In the **Other Settings** tab:</span></span>
+    1. <span data-ttu-id="14b05-236">**기타 설정** 탭에서 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-236">In the **Other Settings** tab:</span></span>
 
-        1. <span data-ttu-id="9623b-237">**스크립팅 런타임 버전** 있어야 **안정적인** (.NET 3.5와 같음).</span><span class="sxs-lookup"><span data-stu-id="9623b-237">**Scripting Runtime Version** should be **Stable** (.NET 3.5 Equivalent).</span></span>
-        2. <span data-ttu-id="9623b-238">**백 엔드를 스크립팅** 있어야 **.NET**</span><span class="sxs-lookup"><span data-stu-id="9623b-238">**Scripting Backend** should be **.NET**</span></span>
-        3. <span data-ttu-id="9623b-239">**API 호환성 수준** 있어야 **.NET 4.6**</span><span class="sxs-lookup"><span data-stu-id="9623b-239">**API Compatibility Level** should be **.NET 4.6**</span></span>
+        1. <span data-ttu-id="14b05-237">**Scripting Runtime 버전** 은 **안정적** 이어야 합니다 (.net 3.5 해당).</span><span class="sxs-lookup"><span data-stu-id="14b05-237">**Scripting Runtime Version** should be **Stable** (.NET 3.5 Equivalent).</span></span>
+        2. <span data-ttu-id="14b05-238">**Scripting 백엔드** 는 **.net** 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-238">**Scripting Backend** should be **.NET**</span></span>
+        3. <span data-ttu-id="14b05-239">**API 호환성 수준은** **.net 4.6** 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-239">**API Compatibility Level** should be **.NET 4.6**</span></span>
 
             ![다른 설정을 업데이트 합니다.](images/AzureLabs-Lab2-15.png)
       
-    2. <span data-ttu-id="9623b-241">내 합니다 **게시 설정** 탭의 **기능**, 확인:</span><span class="sxs-lookup"><span data-stu-id="9623b-241">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
+    2. <span data-ttu-id="14b05-241">**게시 설정** 탭의 **기능**아래에서 다음을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-241">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
 
-        1. <span data-ttu-id="9623b-242">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="9623b-242">**InternetClient**</span></span>
-        2. <span data-ttu-id="9623b-243">**웹캠**</span><span class="sxs-lookup"><span data-stu-id="9623b-243">**Webcam**</span></span>
+        1. <span data-ttu-id="14b05-242">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="14b05-242">**InternetClient**</span></span>
+        2. <span data-ttu-id="14b05-243">**웹캠**</span><span class="sxs-lookup"><span data-stu-id="14b05-243">**Webcam**</span></span>
 
-            ![게시 설정을 업데이트 합니다.](images/AzureLabs-Lab2-16.png)
+            ![게시 설정을 업데이트 하는 중입니다.](images/AzureLabs-Lab2-16.png)
 
-    3. <span data-ttu-id="9623b-245">패널을 아래쪽의 **xr 하이 설정을** (아래에서 확인할 **게시 설정**), 눈금 **가상 현실 지원**, 있는지는 **Windows Mixed Reality SDK**  추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-245">Further down the panel, in **XR Settings** (found below **Publish Settings**), tick **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
+    3. <span data-ttu-id="14b05-245">패널의 아래쪽에서 **XR 설정** ( **게시 설정**아래에 있음), **지원 되는 틱 가상 현실**, **Windows Mixed reality SDK** 가 추가 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-245">Further down the panel, in **XR Settings** (found below **Publish Settings**), tick **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
 
         ![X R 설정을 업데이트 합니다.](images/AzureLabs-Lab2-17.png)
 
-8.  <span data-ttu-id="9623b-247">년대 *빌드 설정* _Unity C#_  프로젝트는 더 이상 회색으로;이 옆의 확인란을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-247">Back in *Build Settings* _Unity C#_ Projects is no longer greyed out; tick the checkbox next to this.</span></span> 
-9.  <span data-ttu-id="9623b-248">빌드 설정 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-248">Close the Build Settings window.</span></span>
-10. <span data-ttu-id="9623b-249">장면 및 프로젝트 저장 (**파일 > 저장 장면 파일 > 프로젝트 저장**).</span><span class="sxs-lookup"><span data-stu-id="9623b-249">Save your Scene and Project (**FILE > SAVE SCENE / FILE > SAVE PROJECT**).</span></span>
+8.  <span data-ttu-id="14b05-247">*빌드 설정* 으로 돌아가서 _Unity C#_  프로젝트가 더 이상 회색으로 표시 되지 않습니다. 이 옆의 확인란을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-247">Back in *Build Settings* _Unity C#_ Projects is no longer greyed out; tick the checkbox next to this.</span></span> 
+9.  <span data-ttu-id="14b05-248">빌드 설정 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-248">Close the Build Settings window.</span></span>
+10. <span data-ttu-id="14b05-249">장면 및 프로젝트를 저장 합니다 (**파일 > 장면/파일 저장 > 프로젝트 저장**).</span><span class="sxs-lookup"><span data-stu-id="14b05-249">Save your Scene and Project (**FILE > SAVE SCENE / FILE > SAVE PROJECT**).</span></span>
 
-## <a name="chapter-3--main-camera-setup"></a><span data-ttu-id="9623b-250">3 장-주 카메라 설정</span><span class="sxs-lookup"><span data-stu-id="9623b-250">Chapter 3 – Main Camera setup</span></span>
+## <a name="chapter-3--main-camera-setup"></a><span data-ttu-id="14b05-250">3 장-기본 카메라 설정</span><span class="sxs-lookup"><span data-stu-id="14b05-250">Chapter 3 – Main Camera setup</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9623b-251">건너뛸 하려는 경우는 *Unity 설정* 이 구성 요소, 과정 및 코드로 바로 계속, 다운로드 자유롭게 [.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage),으로 프로젝트로 가져올는 [사용자 지정 패키지 ](https://docs.unity3d.com/Manual/AssetPackages.html)를 계속 진행 한 다음 [5 장](#chapter-5--create-the-resultslabel-class)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-251">If you wish to skip the *Unity Set up* component of this course, and continue straight into code, feel free to download this [.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage), import it into your project as a [Custom Package](https://docs.unity3d.com/Manual/AssetPackages.html), and then continue from [Chapter 5](#chapter-5--create-the-resultslabel-class).</span></span>
+> <span data-ttu-id="14b05-251">이 과정의 *Unity 설정* 구성 요소를 건너뛰고 계속 해 서 코드를 계속 사용 하려면 [unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage)를 다운로드 하 여 프로젝트에 [사용자 지정 패키지로](https://docs.unity3d.com/Manual/AssetPackages.html)가져온 후 [5 장](#chapter-5--create-the-resultslabel-class)에서 계속 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-251">If you wish to skip the *Unity Set up* component of this course, and continue straight into code, feel free to download this [.unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage), import it into your project as a [Custom Package](https://docs.unity3d.com/Manual/AssetPackages.html), and then continue from [Chapter 5](#chapter-5--create-the-resultslabel-class).</span></span>
 
-1.  <span data-ttu-id="9623b-252">에 *계층 패널*를 선택 합니다 **주 카메라**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-252">In the *Hierarchy Panel*, select the **Main Camera**.</span></span> 
-2.  <span data-ttu-id="9623b-253">선택한 후에의 모든 구성 요소를 볼 수는 합니다 **주 카메라** 에 *검사기 패널*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-253">Once selected, you will be able to see all the components of the **Main Camera** in the *Inspector Panel*.</span></span>
+1.  <span data-ttu-id="14b05-252">*계층 패널*에서 **기본 카메라**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-252">In the *Hierarchy Panel*, select the **Main Camera**.</span></span> 
+2.  <span data-ttu-id="14b05-253">선택한 후에는 *검사기 패널*에서 **주 카메라** 의 모든 구성 요소를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-253">Once selected, you will be able to see all the components of the **Main Camera** in the *Inspector Panel*.</span></span>
 
-    1. <span data-ttu-id="9623b-254">합니다 **카메라 개체** 이름은 **주 카메라** (맞춤법 참고!)</span><span class="sxs-lookup"><span data-stu-id="9623b-254">The **Camera object** must be named **Main Camera** (note the spelling!)</span></span>
-    2. <span data-ttu-id="9623b-255">주 카메라 **태그** 으로 설정 되어 있어야 **MainCamera** (맞춤법 참고!)</span><span class="sxs-lookup"><span data-stu-id="9623b-255">The Main Camera **Tag** must be set to **MainCamera** (note the spelling!)</span></span>
-    3. <span data-ttu-id="9623b-256">있는지 확인 합니다 **변환 위치** 로 설정 된 **0, 0, 0**</span><span class="sxs-lookup"><span data-stu-id="9623b-256">Make sure the **Transform Position** is set to **0, 0, 0**</span></span>
-    4. <span data-ttu-id="9623b-257">설정할 **플래그 지우기** 하 **단색** (이 대 한 무시 몰입 형 헤드셋).</span><span class="sxs-lookup"><span data-stu-id="9623b-257">Set **Clear Flags** to **Solid Color** (ignore this for immersive headset).</span></span>
-    5. <span data-ttu-id="9623b-258">설정 된 **백그라운드** 카메라 구성 요소의 색 **검정, 알파 0 (16 진수 코드: #00000000)** (이 대 한 무시 몰입 형 헤드셋).</span><span class="sxs-lookup"><span data-stu-id="9623b-258">Set the **Background** Color of the Camera Component to **Black, Alpha 0 (Hex Code: #00000000)** (ignore this for immersive headset).</span></span>
+    1. <span data-ttu-id="14b05-254">**카메라 개체** 의 이름을 **주 카메라로** 지정 해야 합니다 (철자 확인).</span><span class="sxs-lookup"><span data-stu-id="14b05-254">The **Camera object** must be named **Main Camera** (note the spelling!)</span></span>
+    2. <span data-ttu-id="14b05-255">기본 카메라 **태그** 는 **maincamera** 로 설정 되어야 합니다 (철자 확인).</span><span class="sxs-lookup"><span data-stu-id="14b05-255">The Main Camera **Tag** must be set to **MainCamera** (note the spelling!)</span></span>
+    3. <span data-ttu-id="14b05-256">**변환 위치가** **0, 0, 0** 으로 설정 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-256">Make sure the **Transform Position** is set to **0, 0, 0**</span></span>
+    4. <span data-ttu-id="14b05-257">**Clear 플래그** 를 **단색** 으로 설정 합니다. 몰입 형 헤드셋의 경우이를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-257">Set **Clear Flags** to **Solid Color** (ignore this for immersive headset).</span></span>
+    5. <span data-ttu-id="14b05-258">카메라 구성 요소의 **배경색** 을 **검은색, 알파 0 (16 진수 코드: #00000000)** 으로 설정 합니다 (몰입 형 헤드셋의 경우 무시).</span><span class="sxs-lookup"><span data-stu-id="14b05-258">Set the **Background** Color of the Camera Component to **Black, Alpha 0 (Hex Code: #00000000)** (ignore this for immersive headset).</span></span>
 
         ![카메라 구성 요소를 업데이트 합니다.](images/AzureLabs-Lab2-18.png)
  
-3.  <span data-ttu-id="9623b-260">에 연결 하는 간단한 "Cursor" 개체를 만들 해야 하는 다음에 **주 카메라**는 이미지 분석을 배치 하는 도움말을 출력 응용 프로그램을 실행 중인 경우.</span><span class="sxs-lookup"><span data-stu-id="9623b-260">Next, you will have to create a simple “Cursor” object attached to the **Main Camera**, which will help you position the image analysis output when the application is running.</span></span> <span data-ttu-id="9623b-261">이 커서는 카메라 포커스의 중심점을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-261">This Cursor will determine the center point of the camera focus.</span></span>
+3.  <span data-ttu-id="14b05-260">다음으로, **주 카메라**에 연결 된 간단한 "커서" 개체를 만들어야 합니다. 그러면 응용 프로그램을 실행할 때 이미지 분석 출력을 배치 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-260">Next, you will have to create a simple “Cursor” object attached to the **Main Camera**, which will help you position the image analysis output when the application is running.</span></span> <span data-ttu-id="14b05-261">이 커서는 카메라 포커스의 중심점을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-261">This Cursor will determine the center point of the camera focus.</span></span>
 
-<span data-ttu-id="9623b-262">커서를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="9623b-262">To create the Cursor:</span></span>
+<span data-ttu-id="14b05-262">커서를 만들려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-262">To create the Cursor:</span></span>
 
-1.  <span data-ttu-id="9623b-263">에 *계층 패널*를 마우스 오른쪽 단추로 클릭 합니다 **주 카메라**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-263">In the *Hierarchy Panel*, right-click on the **Main Camera**.</span></span> <span data-ttu-id="9623b-264">아래 **3D 개체**, 클릭 **구체**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-264">Under **3D Object**, click on **Sphere**.</span></span>
+1.  <span data-ttu-id="14b05-263">*계층 패널*에서 **기본 카메라**를 마우스 오른쪽 단추로 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-263">In the *Hierarchy Panel*, right-click on the **Main Camera**.</span></span> <span data-ttu-id="14b05-264">**3D 개체**에서 **구**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-264">Under **3D Object**, click on **Sphere**.</span></span>
 
     ![커서 개체를 선택 합니다.](images/AzureLabs-Lab2-19.png)
  
-2.  <span data-ttu-id="9623b-266">이름 바꾸기는 **구체** 에 **커서** (커서 개체를 두 번 클릭 하거나 선택한 개체를 사용 하 여 'F2' 키보드 단추를 눌러)를 자식으로 있는 인지 확인 하 고는 **주 카메라**.</span><span class="sxs-lookup"><span data-stu-id="9623b-266">Rename the **Sphere** to **Cursor** (double click the Cursor object or press the ‘F2’ keyboard button with the object selected), and make sure it is located as child of the **Main Camera**.</span></span>
+2.  <span data-ttu-id="14b05-266">**구의** 이름을 **커서로** 변경 합니다 (커서 개체를 두 번 클릭 하거나 선택한 개체가 있는 ' F2 ' 키보드 단추를 누름). **기본 카메라**의 자식으로 배치 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-266">Rename the **Sphere** to **Cursor** (double click the Cursor object or press the ‘F2’ keyboard button with the object selected), and make sure it is located as child of the **Main Camera**.</span></span>
 
-3.  <span data-ttu-id="9623b-267">에 *계층 패널*, 마우스 왼쪽 단추로 클릭 합니다 **커서**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-267">In the *Hierarchy Panel*, left click on the **Cursor**.</span></span> <span data-ttu-id="9623b-268">선택 커서를 사용 하 여에서 다음 변수를 조정 합니다 *검사기 패널*:</span><span class="sxs-lookup"><span data-stu-id="9623b-268">With the Cursor selected, adjust the following variables in the *Inspector Panel*:</span></span>
+3.  <span data-ttu-id="14b05-267">*계층 패널*에서 **커서**를 마우스 왼쪽 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-267">In the *Hierarchy Panel*, left click on the **Cursor**.</span></span> <span data-ttu-id="14b05-268">커서를 선택 하 고 *검사기 패널*에서 다음 변수를 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-268">With the Cursor selected, adjust the following variables in the *Inspector Panel*:</span></span>
 
-    1. <span data-ttu-id="9623b-269">설정 된 *위치를 변환* 에 **0, 0, 5**</span><span class="sxs-lookup"><span data-stu-id="9623b-269">Set the *Transform Position* to **0, 0, 5**</span></span>
-    2. <span data-ttu-id="9623b-270">설정 된 *크기 조정* 에 **0.02, 0.02, 0.02**</span><span class="sxs-lookup"><span data-stu-id="9623b-270">Set the *Scale* to **0.02, 0.02, 0.02**</span></span>
+    1. <span data-ttu-id="14b05-269">*변환 위치* 를 **0, 0, 5** 로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-269">Set the *Transform Position* to **0, 0, 5**</span></span>
+    2. <span data-ttu-id="14b05-270">*소수 자릿수* 를 **0.02, 0.02, 0.02** 로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-270">Set the *Scale* to **0.02, 0.02, 0.02**</span></span>
 
-        ![변환 위치 및 배율을 업데이트 합니다.](images/AzureLabs-Lab2-20.png)
+        ![변환 위치 및 소수 자릿수를 업데이트 합니다.](images/AzureLabs-Lab2-20.png)
   
-## <a name="chapter-4--setup-the-label-system"></a><span data-ttu-id="9623b-272">4 장-레이블 시스템 설치</span><span class="sxs-lookup"><span data-stu-id="9623b-272">Chapter 4 – Setup the Label system</span></span>
+## <a name="chapter-4--setup-the-label-system"></a><span data-ttu-id="14b05-272">4 장-레이블 시스템 설정</span><span class="sxs-lookup"><span data-stu-id="14b05-272">Chapter 4 – Setup the Label system</span></span>
 
-<span data-ttu-id="9623b-273">HoloLens' 카메라를 사용 하 여 이미지를 캡처한 후 해당 이미지에 전송 됩니다 하 *Azure Computer Vision API* 분석에 대 한 서비스 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="9623b-273">Once you have captured an image with the HoloLens’ camera, that image will be sent to your *Azure Computer Vision API* Service instance for analysis.</span></span> 
+<span data-ttu-id="14b05-273">HoloLens 카메라를 사용 하 여 이미지를 캡처한 후 해당 이미지는 분석을 위해 *Azure Computer Vision API* 서비스 인스턴스로 전송 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-273">Once you have captured an image with the HoloLens’ camera, that image will be sent to your *Azure Computer Vision API* Service instance for analysis.</span></span> 
 
-<span data-ttu-id="9623b-274">해당 분석 결과를 호출 하는 인식할 수 있는 개체 목록이 됩니다 **태그**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-274">The results of that analysis will be a list of recognized objects called **Tags**.</span></span> 
+<span data-ttu-id="14b05-274">이 분석의 결과는 **태그**라고 하는 인식 된 개체의 목록이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-274">The results of that analysis will be a list of recognized objects called **Tags**.</span></span> 
 
-<span data-ttu-id="9623b-275">사진의 찍을 때 위치에서 이러한 태그를 표시할 레이블 (세계 좌표 공간에서 3D 텍스트)를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-275">You will use Labels (as a 3D text in world space) to display these Tags at the location the photo was taken.</span></span>
+<span data-ttu-id="14b05-275">레이블 (세계 공간에서 3D 텍스트로)을 사용 하 여 사진이 만들어진 위치에 이러한 태그를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-275">You will use Labels (as a 3D text in world space) to display these Tags at the location the photo was taken.</span></span>
 
-<span data-ttu-id="9623b-276">다음 단계에서는 보여 설정 하는 방법의 **레이블** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-276">The following steps will show how to setup the **Label** object.</span></span>
+<span data-ttu-id="14b05-276">다음 단계에서는 **Label** 개체를 설정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-276">The following steps will show how to setup the **Label** object.</span></span>
 
-1.  <span data-ttu-id="9623b-277">계층 구조 창에서 (위치 상관 없이 시점에서)에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 **3D 개체**, 추가 된 **3D 텍스트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-277">Right-click anywhere in the Hierarchy Panel (the location does not matter at this point), under **3D Object**, add a **3D Text**.</span></span> <span data-ttu-id="9623b-278">이름을 **LabelText**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-278">Name it **LabelText**.</span></span>
+1.  <span data-ttu-id="14b05-277">계층 패널에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 (위치는이 시점에서 중요 하지 않음) **3D 개체**에서 **3d 텍스트**를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-277">Right-click anywhere in the Hierarchy Panel (the location does not matter at this point), under **3D Object**, add a **3D Text**.</span></span> <span data-ttu-id="14b05-278">**레이블 텍스트**를 이름으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-278">Name it **LabelText**.</span></span>
 
     ![3D 텍스트 개체를 만듭니다.](images/AzureLabs-Lab2-21.png)
  
-2.  <span data-ttu-id="9623b-280">에 *계층 패널*, 마우스 왼쪽 단추로 클릭 합니다 **LabelText**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-280">In the *Hierarchy Panel*, left click on the **LabelText**.</span></span> <span data-ttu-id="9623b-281">사용 하 여 합니다 **LabelText** 에서 다음 변수를 조정 옵션을 선택 합니다 *검사기 패널*:</span><span class="sxs-lookup"><span data-stu-id="9623b-281">With the **LabelText** selected, adjust the following variables in the *Inspector Panel*:</span></span>
+2.  <span data-ttu-id="14b05-280">*계층 패널*에서 **레이블 텍스트**를 마우스 왼쪽 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-280">In the *Hierarchy Panel*, left click on the **LabelText**.</span></span> <span data-ttu-id="14b05-281">**Labeltext** 를 선택한 상태에서 *검사기 패널*의 다음 변수를 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-281">With the **LabelText** selected, adjust the following variables in the *Inspector Panel*:</span></span>
 
-    1. <span data-ttu-id="9623b-282">설정 된 **위치** 에 **0,0,0**</span><span class="sxs-lookup"><span data-stu-id="9623b-282">Set the **Position** to **0,0,0**</span></span>
-    2. <span data-ttu-id="9623b-283">설정 된 **크기 조정** 에 **0.01, 0.01, 0.01**</span><span class="sxs-lookup"><span data-stu-id="9623b-283">Set the **Scale** to **0.01, 0.01, 0.01**</span></span>
-    3. <span data-ttu-id="9623b-284">구성 요소의 **텍스트 메시**:</span><span class="sxs-lookup"><span data-stu-id="9623b-284">In the component **Text Mesh**:</span></span>
-    4. <span data-ttu-id="9623b-285">내에서 모든 텍스트를 바꿉니다 **텍스트**, "..."를 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="9623b-285">Replace all the text within **Text**, with "..."</span></span>        
-    5. <span data-ttu-id="9623b-286">설정 된 **앵커** 에 **중간 Center**</span><span class="sxs-lookup"><span data-stu-id="9623b-286">Set the **Anchor** to **Middle Center**</span></span>
-    6. <span data-ttu-id="9623b-287">설정 된 **맞춤** 에 **Center**</span><span class="sxs-lookup"><span data-stu-id="9623b-287">Set the **Alignment** to **Center**</span></span>
-    7. <span data-ttu-id="9623b-288">설정 된 **탭 크기** 에 **4**</span><span class="sxs-lookup"><span data-stu-id="9623b-288">Set the **Tab Size** to **4**</span></span>
-    8. <span data-ttu-id="9623b-289">설정 된 **글꼴 크기** 에 **50**</span><span class="sxs-lookup"><span data-stu-id="9623b-289">Set the **Font Size** to **50**</span></span>
-    9. <span data-ttu-id="9623b-290">설정 된 **Color** 에 **#FFFFFFFF**</span><span class="sxs-lookup"><span data-stu-id="9623b-290">Set the **Color** to **#FFFFFFFF**</span></span>
+    1. <span data-ttu-id="14b05-282">**위치** 를 **0, 0, 0** 으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-282">Set the **Position** to **0,0,0**</span></span>
+    2. <span data-ttu-id="14b05-283">**소수 자릿수** 를 **0.01, 0.01, 0.01** 로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-283">Set the **Scale** to **0.01, 0.01, 0.01**</span></span>
+    3. <span data-ttu-id="14b05-284">구성 요소 **텍스트 메시**에서 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-284">In the component **Text Mesh**:</span></span>
+    4. <span data-ttu-id="14b05-285">**텍스트**에 있는 모든 텍스트를 "..."로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-285">Replace all the text within **Text**, with "..."</span></span>        
+    5. <span data-ttu-id="14b05-286">**앵커** 를 **중간 가운데로** 설정</span><span class="sxs-lookup"><span data-stu-id="14b05-286">Set the **Anchor** to **Middle Center**</span></span>
+    6. <span data-ttu-id="14b05-287">맞춤을 **가운데** **맞춤** 으로 설정</span><span class="sxs-lookup"><span data-stu-id="14b05-287">Set the **Alignment** to **Center**</span></span>
+    7. <span data-ttu-id="14b05-288">**탭 크기** 를 **4** 로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-288">Set the **Tab Size** to **4**</span></span>
+    8. <span data-ttu-id="14b05-289">**글꼴 크기** 를 **50** 으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-289">Set the **Font Size** to **50**</span></span>
+    9. <span data-ttu-id="14b05-290">**색** 을 **#FFFFFFFF** 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-290">Set the **Color** to **#FFFFFFFF**</span></span>
 
     ![텍스트 구성 요소](images/AzureLabs-Lab2-21-5.png)
 
-3.  <span data-ttu-id="9623b-292">끌어서 합니다 **LabelText** 에서 *계층 패널*에 *자산 폴더*내에서에서 *프로젝트 패널*.</span><span class="sxs-lookup"><span data-stu-id="9623b-292">Drag the **LabelText** from the *Hierarchy Panel*, into the *Asset Folder*, within in the *Project Panel*.</span></span> <span data-ttu-id="9623b-293">이렇게 하면 합니다 **LabelText** Prefab을 한다는 코드에서 인스턴스화될 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-293">This will make the **LabelText** a Prefab, so that it can be instantiated in code.</span></span>
+3.  <span data-ttu-id="14b05-292">*계층 패널*의 **Labeltext** 를 *프로젝트 패널*내의 *Asset 폴더로*끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-292">Drag the **LabelText** from the *Hierarchy Panel*, into the *Asset Folder*, within in the *Project Panel*.</span></span> <span data-ttu-id="14b05-293">이렇게 하면 **레이블 텍스트가** Prefab로 설정 되어 코드에서 인스턴스화될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-293">This will make the **LabelText** a Prefab, so that it can be instantiated in code.</span></span>
 
     ![LabelText 개체의 prefab을 만듭니다.](images/AzureLabs-Lab2-22.png)
  
-4.  <span data-ttu-id="9623b-295">삭제 해야 합니다 **LabelText** 에서 합니다 *계층 패널*여 장면에서 표시 되지 것입니다 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-295">You should delete the **LabelText** from the *Hierarchy Panel*, so that it will not be displayed in the opening scene.</span></span> <span data-ttu-id="9623b-296">호출에서 개별 인스턴스에 대 한 자산 폴더에서는 prefab을 지금 그대로 장면 내에 유지 되도록 않아도가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-296">As it is now a prefab, which you will call on for individual instances from your Assets folder, there is no need to keep it within the scene.</span></span> 
-5.  <span data-ttu-id="9623b-297">마지막 개체 구조를 *계층 패널* 아래 이미지에 표시 된 것 처럼 보여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-297">The final object structure in the *Hierarchy Panel* should be like the one shown in the image below:</span></span>
+4.  <span data-ttu-id="14b05-295">열이 표시 되는 장면에 표시 되지 않도록 *계층 패널*에서 **labeltext** 를 삭제 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-295">You should delete the **LabelText** from the *Hierarchy Panel*, so that it will not be displayed in the opening scene.</span></span> <span data-ttu-id="14b05-296">이제 자산 폴더의 개별 인스턴스에 대해를 호출 하는 prefab 장면 내에서 보관할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-296">As it is now a prefab, which you will call on for individual instances from your Assets folder, there is no need to keep it within the scene.</span></span> 
+5.  <span data-ttu-id="14b05-297">*계층 패널* 의 최종 개체 구조는 아래 이미지에 표시 된 것과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-297">The final object structure in the *Hierarchy Panel* should be like the one shown in the image below:</span></span>
 
-    ![계층 구조 패널의 최종 구조입니다.](images/AzureLabs-Lab2-23.png)
+    ![계층 패널의 최종 구조입니다.](images/AzureLabs-Lab2-23.png)
 
-## <a name="chapter-5--create-the-resultslabel-class"></a><span data-ttu-id="9623b-299">5 장-ResultsLabel 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="9623b-299">Chapter 5 – Create the ResultsLabel class</span></span>
+## <a name="chapter-5--create-the-resultslabel-class"></a><span data-ttu-id="14b05-299">5 장-ResultsLabel 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="14b05-299">Chapter 5 – Create the ResultsLabel class</span></span>
 
-<span data-ttu-id="9623b-300">생성 해야 하는 첫 번째 스크립트는 *ResultsLabel* 다음 담당 하는 클래스:</span><span class="sxs-lookup"><span data-stu-id="9623b-300">The first script you need to create is the *ResultsLabel* class, which is responsible for the following:</span></span> 
+<span data-ttu-id="14b05-300">만들어야 하는 첫 번째 스크립트는 다음을 담당 하는 *ResultsLabel* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-300">The first script you need to create is the *ResultsLabel* class, which is responsible for the following:</span></span> 
 
-- <span data-ttu-id="9623b-301">적절 한 전 세계 공간의 카메라의 위치를 기준으로 레이블을 만드는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-301">Creating the Labels in the appropriate world space, relative to the position of the Camera.</span></span>
-- <span data-ttu-id="9623b-302">이미지 중심이 되에서 태그를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-302">Displaying the Tags from the Image Anaysis.</span></span>
+- <span data-ttu-id="14b05-301">카메라의 위치를 기준으로 적절 한 세계 공간에 레이블 만들기</span><span class="sxs-lookup"><span data-stu-id="14b05-301">Creating the Labels in the appropriate world space, relative to the position of the Camera.</span></span>
+- <span data-ttu-id="14b05-302">이미지 분석에서 태그를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-302">Displaying the Tags from the Image Anaysis.</span></span>
 
-<span data-ttu-id="9623b-303">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="9623b-303">To create this class:</span></span> 
+<span data-ttu-id="14b05-303">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="14b05-303">To create this class:</span></span> 
 
-1.  <span data-ttu-id="9623b-304">마우스 오른쪽 단추로 클릭 합니다 *프로젝트 패널*, 한 다음 **만들기 > 폴더**.</span><span class="sxs-lookup"><span data-stu-id="9623b-304">Right-click in the *Project Panel*, then **Create > Folder**.</span></span> <span data-ttu-id="9623b-305">폴더의 이름을 **스크립트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-305">Name the folder **Scripts**.</span></span> 
+1.  <span data-ttu-id="14b05-304">*프로젝트 패널*을 마우스 오른쪽 단추로 클릭 하 고 **> 폴더를 만듭니다**.</span><span class="sxs-lookup"><span data-stu-id="14b05-304">Right-click in the *Project Panel*, then **Create > Folder**.</span></span> <span data-ttu-id="14b05-305">폴더 이름을 **스크립트**로 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-305">Name the folder **Scripts**.</span></span> 
 
     ![스크립트 폴더를 만듭니다.](images/AzureLabs-Lab2-24.png)
 
-2.  <span data-ttu-id="9623b-307">사용 하 여 합니다 **스크립트** 폴더 만들기, 두 번 클릭 하 여 엽니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-307">With the **Scripts** folder create, double click it to open.</span></span> <span data-ttu-id="9623b-308">해당 폴더를 마우스 오른쪽 단추로 선택 내에서 다음 **만들기 >** 한 다음  **C# 스크립트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-308">Then within that folder, right-click, and select **Create >** then **C# Script**.</span></span> <span data-ttu-id="9623b-309">스크립트 이름을 *ResultsLabel*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-309">Name the script *ResultsLabel*.</span></span> 
+2.  <span data-ttu-id="14b05-307">**Scripts** 폴더 만들기를 사용 하 여 두 번 클릭 하 여 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-307">With the **Scripts** folder create, double click it to open.</span></span> <span data-ttu-id="14b05-308">그런 다음 해당 폴더 내에서를 마우스 오른쪽 단추로 클릭 하 고 **> 만들기** 를 선택 하 고  **C# 스크립트**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-308">Then within that folder, right-click, and select **Create >** then **C# Script**.</span></span> <span data-ttu-id="14b05-309">스크립트 이름을 *ResultsLabel*로 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-309">Name the script *ResultsLabel*.</span></span> 
 
-3.  <span data-ttu-id="9623b-310">두 번 클릭 하 여 새 *ResultsLabel* 스크립트를 사용 하 여 열고 **Visual Studio**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-310">Double click on the new *ResultsLabel* script to open it with **Visual Studio**.</span></span>
+3.  <span data-ttu-id="14b05-310">새 *ResultsLabel* 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-310">Double click on the new *ResultsLabel* script to open it with **Visual Studio**.</span></span>
 
-4.  <span data-ttu-id="9623b-311">클래스 내에 다음 코드를 삽입 합니다 *ResultsLabel* 클래스:</span><span class="sxs-lookup"><span data-stu-id="9623b-311">Inside the Class insert the following code in the *ResultsLabel* class:</span></span>
+4.  <span data-ttu-id="14b05-311">클래스 내에서 *ResultsLabel* 클래스에 다음 코드를 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-311">Inside the Class insert the following code in the *ResultsLabel* class:</span></span>
 
     ```csharp
         using System.Collections.Generic;
@@ -357,30 +357,30 @@ ms.locfileid: "59597890"
         }
     ```
 
-6.  <span data-ttu-id="9623b-312">변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-312">Be sure to save your changes in *Visual Studio* before returning to *Unity*.</span></span>
-7.  <span data-ttu-id="9623b-313">다시는 *Unity 편집기*, 클릭 하 고 끌어를 *ResultsLabel* 에서 클래스를 **스크립트** 폴더를 **주 카메라** 개체에는  *계층 패널*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-313">Back in the *Unity Editor*, click and drag the *ResultsLabel* class from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
-8.  <span data-ttu-id="9623b-314">클릭 합니다 **주 카메라** 확인 합니다 *검사기 패널*.</span><span class="sxs-lookup"><span data-stu-id="9623b-314">Click on the **Main Camera** and look at the *Inspector Panel*.</span></span>
+6.  <span data-ttu-id="14b05-312">*Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-312">Be sure to save your changes in *Visual Studio* before returning to *Unity*.</span></span>
+7.  <span data-ttu-id="14b05-313">*Unity 편집기*로 돌아가서 **Scripts** 폴더의 *ResultsLabel* 클래스를 클릭 하 여 *계층 패널*의 **기본 카메라** 개체로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-313">Back in the *Unity Editor*, click and drag the *ResultsLabel* class from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
+8.  <span data-ttu-id="14b05-314">**주 카메라** 를 클릭 하 고 *검사기 패널*을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-314">Click on the **Main Camera** and look at the *Inspector Panel*.</span></span>
 
-<span data-ttu-id="9623b-315">카메라에 끌어 놓을 스크립트에서 두 필드는 알 수 있습니다. **커서** 하 고 **Prefab 레이블을**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-315">You will notice that from the script you just dragged into the Camera, there are two fields: **Cursor** and **Label Prefab**.</span></span>
+<span data-ttu-id="14b05-315">방금 카메라 안으로 끌어온 스크립트에서 두 개의 필드가 있습니다. **커서** 및 **레이블 Prefab**.</span><span class="sxs-lookup"><span data-stu-id="14b05-315">You will notice that from the script you just dragged into the Camera, there are two fields: **Cursor** and **Label Prefab**.</span></span>
 
-9.  <span data-ttu-id="9623b-316">호출 된 개체를 끌어 **커서** 에서 합니다 *계층 패널* 명명 된 슬롯에 **커서**아래 이미지에서 보여준 것 처럼 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-316">Drag the object called **Cursor** from the *Hierarchy Panel* to the slot named **Cursor**, as shown in the image below.</span></span>
-10. <span data-ttu-id="9623b-317">호출 된 개체를 끌어 **LabelText** 에서 *Assets 폴더* 에 *프로젝트 패널* 명명 된 슬롯에 **레이블 Prefab**에서처럼는 아래 이미지입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-317">Drag the object called **LabelText** from the *Assets Folder* in the *Project Panel* to the slot named **Label Prefab**, as shown in the image below.</span></span> 
+9.  <span data-ttu-id="14b05-316">아래 이미지에 표시 된 것 처럼 *계층 패널* **에서 커서** 라는 개체를 **커서**라는 슬롯으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-316">Drag the object called **Cursor** from the *Hierarchy Panel* to the slot named **Cursor**, as shown in the image below.</span></span>
+10. <span data-ttu-id="14b05-317">아래 이미지에 표시  된 것 처럼 *프로젝트 패널* 의 *자산 폴더* 에서 **레이블 Prefab**이라는 개체를 끌어 레이블 이름이 지정 된 슬롯으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-317">Drag the object called **LabelText** from the *Assets Folder* in the *Project Panel* to the slot named **Label Prefab**, as shown in the image below.</span></span> 
 
     ![Unity 내에서 참조 대상을 설정 합니다.](images/AzureLabs-Lab2-25.png)
 
-## <a name="chapter-6--create-the-imagecapture-class"></a><span data-ttu-id="9623b-319">6 장-ImageCapture 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="9623b-319">Chapter 6 – Create the ImageCapture class</span></span>
+## <a name="chapter-6--create-the-imagecapture-class"></a><span data-ttu-id="14b05-319">6 장 – ImageCapture 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="14b05-319">Chapter 6 – Create the ImageCapture class</span></span>
 
-<span data-ttu-id="9623b-320">다음 클래스를 만드는 것은 *ImageCapture* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-320">The next class you are going to create is the *ImageCapture* class.</span></span> <span data-ttu-id="9623b-321">이 클래스는 담당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-321">This class is responsible for:</span></span>
+<span data-ttu-id="14b05-320">만들려는 다음 클래스는 *ImageCapture* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-320">The next class you are going to create is the *ImageCapture* class.</span></span> <span data-ttu-id="14b05-321">이 클래스는 다음을 담당 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-321">This class is responsible for:</span></span>
 
--   <span data-ttu-id="9623b-322">HoloLens 카메라를 사용 하 여 앱 폴더에 저장 하는 이미지를 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-322">Capturing an Image using the HoloLens Camera and storing it in the App Folder.</span></span>
--   <span data-ttu-id="9623b-323">사용자에서 탭 제스처를 캡처합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-323">Capturing Tap gestures from the user.</span></span>
+-   <span data-ttu-id="14b05-322">HoloLens 카메라를 사용 하 여 이미지를 캡처하고 앱 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-322">Capturing an Image using the HoloLens Camera and storing it in the App Folder.</span></span>
+-   <span data-ttu-id="14b05-323">사용자 로부터 탭 제스처를 캡처하는 경우</span><span class="sxs-lookup"><span data-stu-id="14b05-323">Capturing Tap gestures from the user.</span></span>
 
-<span data-ttu-id="9623b-324">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="9623b-324">To create this class:</span></span> 
+<span data-ttu-id="14b05-324">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="14b05-324">To create this class:</span></span> 
 
-1.  <span data-ttu-id="9623b-325">로 이동 합니다 **스크립트** 이전에 만든 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-325">Go to the **Scripts** folder you created previously.</span></span> 
-2.  <span data-ttu-id="9623b-326">폴더를 마우스 오른쪽 단추로 클릭 **만들기 > C# 스크립트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-326">Right-click inside the folder, **Create > C# Script**.</span></span> <span data-ttu-id="9623b-327">스크립트를 호출할 *ImageCapture*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-327">Call the script *ImageCapture*.</span></span> 
-3.  <span data-ttu-id="9623b-328">두 번 클릭 하 여 새 *ImageCapture* 스크립트를 사용 하 여 열고 **Visual Studio**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-328">Double click on the new *ImageCapture* script to open it with **Visual Studio**.</span></span>
-4.  <span data-ttu-id="9623b-329">파일의 맨 위에 다음 네임 스페이스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-329">Add the following namespaces to the top of the file:</span></span>
+1.  <span data-ttu-id="14b05-325">이전에 만든 **스크립트** 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-325">Go to the **Scripts** folder you created previously.</span></span> 
+2.  <span data-ttu-id="14b05-326">폴더 내부를 마우스 오른쪽 단추로 클릭 하 **> C# 스크립트를 만듭니다**.</span><span class="sxs-lookup"><span data-stu-id="14b05-326">Right-click inside the folder, **Create > C# Script**.</span></span> <span data-ttu-id="14b05-327">*ImageCapture*스크립트를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-327">Call the script *ImageCapture*.</span></span> 
+3.  <span data-ttu-id="14b05-328">새 *ImageCapture* 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-328">Double click on the new *ImageCapture* script to open it with **Visual Studio**.</span></span>
+4.  <span data-ttu-id="14b05-329">파일의 맨 위에 다음 네임 스페이스를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-329">Add the following namespaces to the top of the file:</span></span>
 
     ```csharp
         using System.IO;
@@ -390,7 +390,7 @@ ms.locfileid: "59597890"
         using UnityEngine.XR.WSA.WebCam;
     ```
 
-5.  <span data-ttu-id="9623b-330">다음 내에서 다음 변수를 추가 합니다 *ImageCapture* 위의 클래스는 *start ()* 메서드:</span><span class="sxs-lookup"><span data-stu-id="9623b-330">Then add the following variables inside the *ImageCapture* class, above the *Start()* method:</span></span>
+5.  <span data-ttu-id="14b05-330">그런 다음 *ImageCapture* 클래스 내에서 *Start ()* 메서드 위의 다음 변수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-330">Then add the following variables inside the *ImageCapture* class, above the *Start()* method:</span></span>
 
     ```csharp
         public static ImageCapture instance; 
@@ -400,9 +400,9 @@ ms.locfileid: "59597890"
         private bool currentlyCapturing = false;
     ```
  
-<span data-ttu-id="9623b-331">합니다 **tapsCount** 변수에 사용자에서 캡처한 탭 제스처의 번호를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-331">The **tapsCount** variable will store the number of tap gestures captured from the user.</span></span> <span data-ttu-id="9623b-332">이 숫자는 캡처된 이미지의 이름 지정에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-332">This number is used in the naming of the images captured.</span></span>
+<span data-ttu-id="14b05-331">**TapsCount** 변수는 사용자에 게 캡처된 탭 제스처 수를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-331">The **tapsCount** variable will store the number of tap gestures captured from the user.</span></span> <span data-ttu-id="14b05-332">이 숫자는 캡처된 이미지의 이름을 지정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-332">This number is used in the naming of the images captured.</span></span>
 
-6.  <span data-ttu-id="9623b-333">에 대 한 코드 *Awake()* 하 고 *start ()* 메서드는 이제 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-333">Code for *Awake()* and *Start()* methods now needs to be added.</span></span> <span data-ttu-id="9623b-334">이러한 클래스를 초기화할 때 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-334">These will be called when the class initializes:</span></span>
+6.  <span data-ttu-id="14b05-333">이제 *활성 ()* 및 *Start ()* 메서드에 대 한 코드를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-333">Code for *Awake()* and *Start()* methods now needs to be added.</span></span> <span data-ttu-id="14b05-334">이러한 작업은 클래스가 초기화 될 때 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-334">These will be called when the class initializes:</span></span>
 
     ```csharp
         private void Awake()
@@ -421,7 +421,7 @@ ms.locfileid: "59597890"
         }
     ```
 
-7.  <span data-ttu-id="9623b-335">탭 제스처 발생할 때 호출 되는 처리기를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-335">Implement a handler that will be called when a Tap gesture occurs.</span></span> 
+7.  <span data-ttu-id="14b05-335">탭 제스처가 발생할 때 호출 되는 처리기를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-335">Implement a handler that will be called when a Tap gesture occurs.</span></span> 
 
     ```csharp
         /// <summary>
@@ -446,11 +446,11 @@ ms.locfileid: "59597890"
         }
     ```
  
-<span data-ttu-id="9623b-336">합니다 *TapHandler()* 메서드 사용자에서 캡처한 탭의 수를 증가 시키고 현재 커서 위치를 사용 하 여 새 레이블을 배치 하려면 위치를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-336">The *TapHandler()* method increments the number of taps captured from the user and uses the current Cursor position to determine where to position a new Label.</span></span>
+<span data-ttu-id="14b05-336">*TapHandler ()* 메서드는 사용자 로부터 캡처된 탭의 수를 늘리고 현재 커서 위치를 사용 하 여 새 레이블을 배치할 위치를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-336">The *TapHandler()* method increments the number of taps captured from the user and uses the current Cursor position to determine where to position a new Label.</span></span>
 
-<span data-ttu-id="9623b-337">이 메서드를 호출 합니다 *ExecuteImageCaptureAndAnalysis()* 이 응용 프로그램의 핵심 기능을 시작 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="9623b-337">This method then calls the *ExecuteImageCaptureAndAnalysis()* method to begin the core functionality of this application.</span></span>
+<span data-ttu-id="14b05-337">그런 다음이 메서드는 *ExecuteImageCaptureAndAnalysis ()* 메서드를 호출 하 여이 응용 프로그램의 핵심 기능을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-337">This method then calls the *ExecuteImageCaptureAndAnalysis()* method to begin the core functionality of this application.</span></span>
 
-8.  <span data-ttu-id="9623b-338">이미지 캡처 되었으며 저장 되 면 다음 처리기가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-338">Once an Image has been captured and stored, the following handlers will be called.</span></span> <span data-ttu-id="9623b-339">프로세스가 성공 하면 결과에 전달 됩니다 합니다 *VisionManager* (만들려면 아직 된)는 분석용입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-339">If the process is successful, the result is passed to the *VisionManager* (which you are yet to create) for analysis.</span></span>
+8.  <span data-ttu-id="14b05-338">이미지를 캡처 및 저장 한 후에는 다음 처리기가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-338">Once an Image has been captured and stored, the following handlers will be called.</span></span> <span data-ttu-id="14b05-339">프로세스가 성공적으로 실행 되 면 분석을 위해 결과가 아직 생성 중이 *VisionManager* 에 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-339">If the process is successful, the result is passed to the *VisionManager* (which you are yet to create) for analysis.</span></span>
 
     ```csharp
         /// <summary>
@@ -473,7 +473,7 @@ ms.locfileid: "59597890"
         }
     ```
  
-9.  <span data-ttu-id="9623b-340">그런 다음 응용 프로그램 이미지 캡처 프로세스를 시작 하 고 이미지를 저장 하는 데 사용 하는 메서드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-340">Then add the method that the application uses to start the Image capture process and store the image.</span></span>
+9.  <span data-ttu-id="14b05-340">그런 다음 응용 프로그램이 이미지 캡처 프로세스를 시작 하 고 이미지를 저장 하는 데 사용 하는 메서드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-340">Then add the method that the application uses to start the Image capture process and store the image.</span></span>
 
     ```csharp    
         /// <summary>    
@@ -515,25 +515,25 @@ ms.locfileid: "59597890"
     ```
  
 > [!WARNING] 
-> <span data-ttu-id="9623b-341">이 시점에 표시 되는 오류를 확인할 수 있습니다 합니다 *Unity 편집기 콘솔 패널이*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-341">At this point you will notice an error appearing in the *Unity Editor Console Panel*.</span></span> <span data-ttu-id="9623b-342">코드를 참조 하기 때문에 이것이 합니다 *VisionManager* 만든 다음 장에서 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-342">This is because the code references the *VisionManager* class which you will create in the next Chapter.</span></span>
+> <span data-ttu-id="14b05-341">이 시점에서 *Unity 편집기 콘솔 패널*에 오류가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-341">At this point you will notice an error appearing in the *Unity Editor Console Panel*.</span></span> <span data-ttu-id="14b05-342">코드는 다음 챕터에서 만들 *VisionManager* 클래스를 참조 하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-342">This is because the code references the *VisionManager* class which you will create in the next Chapter.</span></span>
 
-## <a name="chapter-7--call-to-azure-and-image-analysis"></a><span data-ttu-id="9623b-343">7 장-Azure 및 이미지 분석 호출</span><span class="sxs-lookup"><span data-stu-id="9623b-343">Chapter 7 – Call to Azure and Image Analysis</span></span>
+## <a name="chapter-7--call-to-azure-and-image-analysis"></a><span data-ttu-id="14b05-343">7 장 – Azure 및 이미지 분석 호출</span><span class="sxs-lookup"><span data-stu-id="14b05-343">Chapter 7 – Call to Azure and Image Analysis</span></span>
 
-<span data-ttu-id="9623b-344">만들어야 하는 마지막 스크립트를 *VisionManager* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-344">The last script you need to create is the *VisionManager* class.</span></span> 
+<span data-ttu-id="14b05-344">생성 해야 하는 마지막 스크립트는 *VisionManager* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-344">The last script you need to create is the *VisionManager* class.</span></span> 
 
-<span data-ttu-id="9623b-345">이 클래스는 담당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-345">This class is responsible for:</span></span>
+<span data-ttu-id="14b05-345">이 클래스는 다음을 담당 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-345">This class is responsible for:</span></span>
 
--   <span data-ttu-id="9623b-346">캡처된 바이트의 배열로 최신 이미지를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-346">Loading the latest image captured as an array of bytes.</span></span>
--   <span data-ttu-id="9623b-347">보내는 바이트 배열에 *Azure Computer Vision API* 분석에 대 한 서비스 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="9623b-347">Sending the byte array to your *Azure Computer Vision API* Service instance for analysis.</span></span>
--   <span data-ttu-id="9623b-348">JSON 문자열로 응답을 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-348">Receiving the response as a JSON string.</span></span>
--   <span data-ttu-id="9623b-349">응답을 역직렬화 하 고 결과 태그를 전달 합니다 *ResultsLabel* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-349">Deserializing the response and passing the resulting Tags to the *ResultsLabel* class.</span></span>
+-   <span data-ttu-id="14b05-346">캡처된 최신 이미지를 바이트 배열로 로드 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-346">Loading the latest image captured as an array of bytes.</span></span>
+-   <span data-ttu-id="14b05-347">분석을 위해 바이트 배열을 *Azure Computer Vision API* 서비스 인스턴스로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-347">Sending the byte array to your *Azure Computer Vision API* Service instance for analysis.</span></span>
+-   <span data-ttu-id="14b05-348">JSON 문자열로 응답을 수신 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-348">Receiving the response as a JSON string.</span></span>
+-   <span data-ttu-id="14b05-349">응답을 deserialize 하 고 결과 태그를 *ResultsLabel* 클래스에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-349">Deserializing the response and passing the resulting Tags to the *ResultsLabel* class.</span></span>
  
-<span data-ttu-id="9623b-350">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="9623b-350">To create this class:</span></span>
+<span data-ttu-id="14b05-350">이 클래스를 만들려면:</span><span class="sxs-lookup"><span data-stu-id="14b05-350">To create this class:</span></span>
 
-1.  <span data-ttu-id="9623b-351">두 번 클릭 합니다 **스크립트** 폴더를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-351">Double click on the **Scripts** folder, to open it.</span></span> 
-2.  <span data-ttu-id="9623b-352">마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **만들기 > C# 스크립트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-352">Right-click inside the **Scripts** folder, click **Create > C# Script**.</span></span> <span data-ttu-id="9623b-353">스크립트 이름을 *VisionManager*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-353">Name the script *VisionManager*.</span></span> 
-3.  <span data-ttu-id="9623b-354">새 스크립트를 Visual Studio를 사용 하 여 열을 두 번 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-354">Double click on the new script to open it with Visual Studio.</span></span>
-4.  <span data-ttu-id="9623b-355">네임 스페이스의 맨 위에 있는 다음과 같을 수를 업데이트 합니다 *VisionManager* 클래스:</span><span class="sxs-lookup"><span data-stu-id="9623b-355">Update the namespaces to be the same as the following, at the top of the *VisionManager* class:</span></span>
+1.  <span data-ttu-id="14b05-351">**스크립트** 폴더를 두 번 클릭 하 여 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-351">Double click on the **Scripts** folder, to open it.</span></span> 
+2.  <span data-ttu-id="14b05-352">**Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **> C# 스크립트 만들기**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-352">Right-click inside the **Scripts** folder, click **Create > C# Script**.</span></span> <span data-ttu-id="14b05-353">스크립트 이름을 *VisionManager*로 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-353">Name the script *VisionManager*.</span></span> 
+3.  <span data-ttu-id="14b05-354">새 스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-354">Double click on the new script to open it with Visual Studio.</span></span>
+4.  <span data-ttu-id="14b05-355">*VisionManager* 클래스의 맨 위에서 다음과 같이 네임 스페이스를 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-355">Update the namespaces to be the same as the following, at the top of the *VisionManager* class:</span></span>
 
     ```csharp
         using System;
@@ -544,7 +544,7 @@ ms.locfileid: "59597890"
         using UnityEngine.Networking;
     ```
  
-5.  <span data-ttu-id="9623b-356">스크립트의 맨 위에 있는 *내* 는 *VisionManager* 클래스 (위에 합니다 *start ()* 메서드), 두 개를 생성 해야 *클래스* 는 Azure에서 deserialize 된 JSON 응답을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-356">At the top of your script, *inside* the *VisionManager* class (above the *Start()* method), you now need to create two *Classes* that will represent the deserialized JSON response from Azure:</span></span>
+5.  <span data-ttu-id="14b05-356">스크립트의 맨 위에 있는 *VisionManager* 클래스  ( *Start ()* 메서드 위의)에서, 이제 Azure에서 deserialize 된 JSON 응답을 나타내는 두 개의 *클래스* 를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-356">At the top of your script, *inside* the *VisionManager* class (above the *Start()* method), you now need to create two *Classes* that will represent the deserialized JSON response from Azure:</span></span>
 
     ```csharp
         [System.Serializable]
@@ -564,9 +564,9 @@ ms.locfileid: "59597890"
     ```
 
     > [!NOTE] 
-    > <span data-ttu-id="9623b-357">*TagData* 하 고 *AnalysedObject* 클래스 해야 합니다 *[System.Serializable]* Unity를 사용 하 여 deserialize 할 수 있으려면 선언 앞에 추가 하는 특성 라이브러리입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-357">The *TagData* and *AnalysedObject* classes need to have the *[System.Serializable]* attribute added before the declaration to be able to be deserialized with the Unity libraries.</span></span>
+    > <span data-ttu-id="14b05-357">*TagData* 및 *AnalysedObject* 클래스에는 Unity 라이브러리를 사용 하 여 deserialize 할 수 있도록 선언 앞에 *[]* 특성이 추가 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-357">The *TagData* and *AnalysedObject* classes need to have the *[System.Serializable]* attribute added before the declaration to be able to be deserialized with the Unity libraries.</span></span>
 
-6.  <span data-ttu-id="9623b-358">VisionManager 클래스에 다음 변수를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-358">In the VisionManager class, you should add the following variables:</span></span>
+6.  <span data-ttu-id="14b05-358">VisionManager 클래스에서 다음 변수를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-358">In the VisionManager class, you should add the following variables:</span></span>
 
     ```csharp
         public static VisionManager instance;
@@ -582,15 +582,15 @@ ms.locfileid: "59597890"
     ```
 
     > [!WARNING] 
-    > <span data-ttu-id="9623b-359">삽입 해야 하 **인증 키** 에 **authorizationKey** 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-359">Make sure you insert your **Auth Key** into the **authorizationKey** variable.</span></span> <span data-ttu-id="9623b-360">가 기록한 사용자 **인증 키** 이 과정의 시작 부분 [1 장](#chapter-1--the-azure-portal)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-360">You will have noted your **Auth Key** at the beginning of this course, [Chapter 1](#chapter-1--the-azure-portal).</span></span>
+    > <span data-ttu-id="14b05-359">**Authorizationkey** 변수에 **인증 키** 를 삽입 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-359">Make sure you insert your **Auth Key** into the **authorizationKey** variable.</span></span> <span data-ttu-id="14b05-360">이 과정의 시작 부분에 [1 장](#chapter-1--the-azure-portal)에서 **인증 키** 를 기록 했습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-360">You will have noted your **Auth Key** at the beginning of this course, [Chapter 1](#chapter-1--the-azure-portal).</span></span>
 
     > [!WARNING] 
-    > <span data-ttu-id="9623b-361">합니다 **visionAnalysisEndpoint** 변수이 예제에 지정 된 것과에서 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-361">The **visionAnalysisEndpoint** variable might differ from the one specified in this example.</span></span> <span data-ttu-id="9623b-362">합니다 **서 부-us** 엄격 하 게 미국 서 부 지역에 대해 만든 서비스 인스턴스를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-362">The **west-us** strictly refers to Service instances created for the West US region.</span></span> <span data-ttu-id="9623b-363">사용 하 여이 업데이트 하 [끝점 URL](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa); 여기는 몇 가지 예는 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-363">Update this with your [endpoint URL](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa); here are some examples of what that might look like:</span></span>
-    > - <span data-ttu-id="9623b-364">유럽 서 부: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="9623b-364">West Europe: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
-    > - <span data-ttu-id="9623b-365">동남 아시아의 경우: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="9623b-365">Southeast Asia: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
-    > - <span data-ttu-id="9623b-366">오스트레일리아 동부: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="9623b-366">Australia East: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
+    > <span data-ttu-id="14b05-361">**VisionAnalysisEndpoint** 변수는이 예제에서 지정한 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-361">The **visionAnalysisEndpoint** variable might differ from the one specified in this example.</span></span> <span data-ttu-id="14b05-362">미국 **서 부** 는 미국 서 부 지역에 대해 만든 서비스 인스턴스를 엄격히 의미 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-362">The **west-us** strictly refers to Service instances created for the West US region.</span></span> <span data-ttu-id="14b05-363">이를 [끝점 URL](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)로 업데이트 합니다. 다음과 같은 몇 가지 예가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-363">Update this with your [endpoint URL](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa); here are some examples of what that might look like:</span></span>
+    > - <span data-ttu-id="14b05-364">유럽 서부:`https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="14b05-364">West Europe: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
+    > - <span data-ttu-id="14b05-365">동남 아시아:`https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="14b05-365">Southeast Asia: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
+    > - <span data-ttu-id="14b05-366">오스트레일리아 동부:`https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span><span class="sxs-lookup"><span data-stu-id="14b05-366">Australia East: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`</span></span>
 
-7.  <span data-ttu-id="9623b-367">Awake에 대 한 코드는 이제 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-367">Code for Awake now needs to be added.</span></span> 
+7.  <span data-ttu-id="14b05-367">이제 절전 모드에 대 한 코드를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-367">Code for Awake now needs to be added.</span></span> 
 
     ```csharp
         private void Awake()
@@ -600,7 +600,7 @@ ms.locfileid: "59597890"
         }
     ```
 
-8.  <span data-ttu-id="9623b-368">그런 다음에 의해 캡처된 이미지의 분석 결과 얻을 코 루틴 (정적 스트림 메서드를 사용 하면 아래)를 추가 합니다 *ImageCapture* 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-368">Next, add the coroutine (with the static stream method below it), which will obtain the results of the analysis of the image captured by the *ImageCapture* Class.</span></span> 
+8.  <span data-ttu-id="14b05-368">그런 다음 *ImageCapture* 클래스에 의해 캡처된 이미지의 분석 결과를 얻을 수 있는 코 루틴 (아래 정적 스트림 메서드 포함)를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-368">Next, add the coroutine (with the static stream method below it), which will obtain the results of the analysis of the image captured by the *ImageCapture* Class.</span></span> 
 
     ```csharp
         /// <summary>
@@ -676,69 +676,69 @@ ms.locfileid: "59597890"
         }  
     ```
 
-9.  <span data-ttu-id="9623b-369">변경 내용을 저장 해야 *Visual Studio* 를 반환 하기 전에 *Unity*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-369">Be sure to save your changes in *Visual Studio* before returning to *Unity*.</span></span>
-10. <span data-ttu-id="9623b-370">다시 Unity 편집기에서 클릭 하 고 끌어서 합니다 *VisionManager* 및 *ImageCapture* 에서 클래스를 **스크립트** 폴더를 **주 카메라**개체를 *계층 패널*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-370">Back in the Unity Editor, click and drag the *VisionManager* and *ImageCapture* classes from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span> 
+9.  <span data-ttu-id="14b05-369">*Unity*로 반환 하기 전에 *Visual Studio* 에서 변경 내용을 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-369">Be sure to save your changes in *Visual Studio* before returning to *Unity*.</span></span>
+10. <span data-ttu-id="14b05-370">Unity 편집기로 돌아가서 **Scripts** 폴더에서 *VisionManager* 및 *ImageCapture* 클래스를 클릭 하 여 *계층 패널*의 **기본 카메라** 개체로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-370">Back in the Unity Editor, click and drag the *VisionManager* and *ImageCapture* classes from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span> 
 
-## <a name="chapter-8--before-building"></a><span data-ttu-id="9623b-371">8 장-빌드하기 전에</span><span class="sxs-lookup"><span data-stu-id="9623b-371">Chapter 8 – Before building</span></span>
+## <a name="chapter-8--before-building"></a><span data-ttu-id="14b05-371">8 장 – 빌드하기 전</span><span class="sxs-lookup"><span data-stu-id="14b05-371">Chapter 8 – Before building</span></span>
 
-<span data-ttu-id="9623b-372">응용 프로그램의 철저 한 테스트를 수행 하려면 해야 테스트용으로 로드 하 여 HoloLens에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-372">To perform a thorough test of your application you will need to sideload it onto your HoloLens.</span></span>
-<span data-ttu-id="9623b-373">를 수행 하기 전에 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-373">Before you do, ensure that:</span></span>
+<span data-ttu-id="14b05-372">응용 프로그램에 대 한 철저 한 테스트를 수행 하려면 HoloLens에 테스트용으로 로드 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-372">To perform a thorough test of your application you will need to sideload it onto your HoloLens.</span></span>
+<span data-ttu-id="14b05-373">이렇게 하려면 먼저 다음을 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-373">Before you do, ensure that:</span></span>
 
--   <span data-ttu-id="9623b-374">에 언급 된 모든 설정이 [Chapter 2](#chapter-2--set-up-the-unity-project) 올바르게 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-374">All the settings mentioned in [Chapter 2](#chapter-2--set-up-the-unity-project) are set correctly.</span></span> 
--   <span data-ttu-id="9623b-375">에 연결 된 모든 스크립트를 **주 카메라** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-375">All the scripts are attached to the **Main Camera** object.</span></span> 
--   <span data-ttu-id="9623b-376">모든 필드를 *주 카메라 검사기 패널* 올바르게 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-376">All the fields in the *Main Camera Inspector Panel* are assigned properly.</span></span>
--   <span data-ttu-id="9623b-377">삽입 해야 하 **인증 키** 에 **authorizationKey** 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-377">Make sure you insert your **Auth Key** into the **authorizationKey** variable.</span></span>
--   <span data-ttu-id="9623b-378">또한 체크 인 끝점을 확인 하 *VisionManager* 스크립트 및에 맞도록 *에* 지역 (이 문서에서는 *서 부-us* 기본적으로).</span><span class="sxs-lookup"><span data-stu-id="9623b-378">Ensure that you have also checked your endpoint in your *VisionManager* script, and that it aligns to *your* region (this document uses *west-us* by default).</span></span>
+-   <span data-ttu-id="14b05-374">[2 장](#chapter-2--set-up-the-unity-project) 에서 설명한 모든 설정이 올바르게 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-374">All the settings mentioned in [Chapter 2](#chapter-2--set-up-the-unity-project) are set correctly.</span></span> 
+-   <span data-ttu-id="14b05-375">모든 스크립트는 **주 카메라** 개체에 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-375">All the scripts are attached to the **Main Camera** object.</span></span> 
+-   <span data-ttu-id="14b05-376">*기본 카메라 검사기 패널* 의 모든 필드가 제대로 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-376">All the fields in the *Main Camera Inspector Panel* are assigned properly.</span></span>
+-   <span data-ttu-id="14b05-377">**Authorizationkey** 변수에 **인증 키** 를 삽입 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-377">Make sure you insert your **Auth Key** into the **authorizationKey** variable.</span></span>
+-   <span data-ttu-id="14b05-378">*VisionManager* 스크립트에서 끝점을 확인 하 고 *사용자* 의 지역에 부합 하는지 확인 합니다 .이 문서에서는 기본적으로 *미국 서 부* 를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-378">Ensure that you have also checked your endpoint in your *VisionManager* script, and that it aligns to *your* region (this document uses *west-us* by default).</span></span>
 
-## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a><span data-ttu-id="9623b-379">9-장 UWP 솔루션 및 테스트용으로 로드 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="9623b-379">Chapter 9 – Build the UWP Solution and sideload the application</span></span>
-<span data-ttu-id="9623b-380">이 프로젝트의 Unity 섹션에 필요한 모든 항목이 이제 완료 되 면 Unity에서 작성 하는 시간 이므로 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-380">Everything needed for the Unity section of this project has now been completed, so it is time to build it from Unity.</span></span>
+## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a><span data-ttu-id="14b05-379">9 장-UWP 솔루션 빌드 및 응용 프로그램 테스트용으로 로드</span><span class="sxs-lookup"><span data-stu-id="14b05-379">Chapter 9 – Build the UWP Solution and sideload the application</span></span>
+<span data-ttu-id="14b05-380">이제이 프로젝트의 Unity 섹션에 필요한 모든 항목이 완료 되었으므로 Unity에서 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-380">Everything needed for the Unity section of this project has now been completed, so it is time to build it from Unity.</span></span>
 
-1.  <span data-ttu-id="9623b-381">이동할 *빌드 설정* - **파일 > 빌드 설정...**</span><span class="sxs-lookup"><span data-stu-id="9623b-381">Navigate to *Build Settings* - **File > Build Settings…**</span></span>
-2.  <span data-ttu-id="9623b-382">*빌드 설정* 창에서 클릭 **빌드**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-382">From the *Build Settings* window, click **Build**.</span></span>
+1.  <span data-ttu-id="14b05-381">빌드 설정  - **파일 > 빌드 설정** 으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-381">Navigate to *Build Settings* - **File > Build Settings…**</span></span>
+2.  <span data-ttu-id="14b05-382">*빌드 설정* 창에서 **빌드**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-382">From the *Build Settings* window, click **Build**.</span></span>
 
     ![Unity에서 앱 빌드](images/AzureLabs-Lab2-26.png)
 
-3.  <span data-ttu-id="9623b-384">경우에 눈금 **Unity C# 프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-384">If not already, tick **Unity C# Projects**.</span></span>
-4.  <span data-ttu-id="9623b-385">**빌드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-385">Click **Build**.</span></span> <span data-ttu-id="9623b-386">Unity가 시작 됩니다는 *파일 탐색기* 창을 만들고 다음에 앱을 빌드하는 폴더를 선택 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-386">Unity will launch a *File Explorer* window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="9623b-387">해당 폴더를 이제 만들고 이름을 *앱*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-387">Create that folder now, and name it *App*.</span></span> <span data-ttu-id="9623b-388">사용 하 여 다음 합니다 *앱* 폴더 선택 키를 눌러 **폴더 선택**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-388">Then with the *App* folder selected, press **Select Folder**.</span></span> 
-5.  <span data-ttu-id="9623b-389">Unity 프로젝트를 빌드할 예정 된 *앱* 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-389">Unity will begin building your project to the *App* folder.</span></span> 
-6.  <span data-ttu-id="9623b-390">한 번 Unity (약간의 시간이 걸릴 수 있습니다) 빌드 완료, 열립니다는 *파일 탐색기* 빌드 위치에 있는 창 (작업 표시줄에서 항상 windows에서 위에 나타나지 않을 수 있습니다 있지만 새 추가 대 한 알림을 확인 창)입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-390">Once Unity has finished building (it might take some time), it will open a *File Explorer* window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
+3.  <span data-ttu-id="14b05-384">아직 없는 경우 tick **Unity C# 프로젝트**입니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-384">If not already, tick **Unity C# Projects**.</span></span>
+4.  <span data-ttu-id="14b05-385">**빌드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-385">Click **Build**.</span></span> <span data-ttu-id="14b05-386">Unity는 응용 프로그램을 빌드할 폴더를 만들고 선택 해야 하는 *파일 탐색기* 창을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-386">Unity will launch a *File Explorer* window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="14b05-387">이제 해당 폴더를 만들고 이름을 *App*으로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-387">Create that folder now, and name it *App*.</span></span> <span data-ttu-id="14b05-388">그런 다음 *앱* 폴더를 선택 하 고 **폴더 선택**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-388">Then with the *App* folder selected, press **Select Folder**.</span></span> 
+5.  <span data-ttu-id="14b05-389">Unity는 *응용* 프로그램 폴더에 대 한 프로젝트 빌드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-389">Unity will begin building your project to the *App* folder.</span></span> 
+6.  <span data-ttu-id="14b05-390">Unity가 빌드를 완료 하면 (시간이 걸릴 수 있음) 빌드 위치에서 *파일 탐색기* 창이 열립니다. (작업 표시줄은 항상 창 위에 표시 되는 것은 아니지만 새 창 추가를 알려 줍니다.)</span><span class="sxs-lookup"><span data-stu-id="14b05-390">Once Unity has finished building (it might take some time), it will open a *File Explorer* window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
 
-## <a name="chapter-10--deploy-to-hololens"></a><span data-ttu-id="9623b-391">HoloLens에 장 10-배포</span><span class="sxs-lookup"><span data-stu-id="9623b-391">Chapter 10 – Deploy to HoloLens</span></span>
+## <a name="chapter-10--deploy-to-hololens"></a><span data-ttu-id="14b05-391">10 장 – HoloLens에 배포</span><span class="sxs-lookup"><span data-stu-id="14b05-391">Chapter 10 – Deploy to HoloLens</span></span>
 
-<span data-ttu-id="9623b-392">HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-392">To deploy on HoloLens:</span></span>
+<span data-ttu-id="14b05-392">HoloLens에 배포 하려면:</span><span class="sxs-lookup"><span data-stu-id="14b05-392">To deploy on HoloLens:</span></span>
 
-1.  <span data-ttu-id="9623b-393">(배포에 대 한 원격), 여 HoloLens의 IP 주소를 사용 해야 하 고 중인에 HoloLens 되도록 **개발자 모드**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-393">You will need the IP Address of your HoloLens (for Remote Deploy), and to ensure your HoloLens is in **Developer Mode**.</span></span> <span data-ttu-id="9623b-394">가상 하드 디스크 파일에 대한 중요 정보를 제공하려면</span><span class="sxs-lookup"><span data-stu-id="9623b-394">To do this:</span></span>
+1.  <span data-ttu-id="14b05-393">HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-393">You will need the IP Address of your HoloLens (for Remote Deploy), and to ensure your HoloLens is in **Developer Mode**.</span></span> <span data-ttu-id="14b05-394">가상 하드 디스크 파일에 대한 중요 정보를 제공하려면</span><span class="sxs-lookup"><span data-stu-id="14b05-394">To do this:</span></span>
 
-    1. <span data-ttu-id="9623b-395">에 HoloLens, 착용 하는 동안 엽니다는 **설정을**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-395">Whilst wearing your HoloLens, open the **Settings**.</span></span>
-    2. <span data-ttu-id="9623b-396">로 **네트워크 및 인터넷 > Wi-fi > 고급 옵션**</span><span class="sxs-lookup"><span data-stu-id="9623b-396">Go to **Network & Internet > Wi-Fi > Advanced Options**</span></span>
-    3. <span data-ttu-id="9623b-397">참고 합니다 **IPv4** 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-397">Note the **IPv4** address.</span></span>
-    4. <span data-ttu-id="9623b-398">다음으로 다시 이동할 **설정을**, 다음 **업데이트 및 보안 > 개발자 용**</span><span class="sxs-lookup"><span data-stu-id="9623b-398">Next, navigate back to **Settings**, and then to **Update & Security > For Developers**</span></span> 
-    5. <span data-ttu-id="9623b-399">개발자 모드를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-399">Set Developer Mode On.</span></span>
+    1. <span data-ttu-id="14b05-395">HoloLens를 입고 하는 동안 **설정을**엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-395">Whilst wearing your HoloLens, open the **Settings**.</span></span>
+    2. <span data-ttu-id="14b05-396">**네트워크 & 인터넷 > wi-fi > 고급 옵션** 으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-396">Go to **Network & Internet > Wi-Fi > Advanced Options**</span></span>
+    3. <span data-ttu-id="14b05-397">**IPv4** 주소를 적어둡니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-397">Note the **IPv4** address.</span></span>
+    4. <span data-ttu-id="14b05-398">그런 다음 **설정**으로 다시 이동한 다음 **개발자를 위한 & 보안 >를 업데이트** 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-398">Next, navigate back to **Settings**, and then to **Update & Security > For Developers**</span></span> 
+    5. <span data-ttu-id="14b05-399">에서 개발자 모드를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-399">Set Developer Mode On.</span></span>
 
-2.  <span data-ttu-id="9623b-400">새 Unity 빌드에 이동 (합니다 *앱* 폴더) 사용 하 여 솔루션 파일을 엽니다 *Visual Studio*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-400">Navigate to your new Unity build (the *App* folder) and open the solution file with *Visual Studio*.</span></span>
-3.  <span data-ttu-id="9623b-401">솔루션 구성 선택에서 **디버그**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-401">In the Solution Configuration select **Debug**.</span></span>
-4.  <span data-ttu-id="9623b-402">솔루션 플랫폼에서 선택 **x86**하십시오 **원격 컴퓨터**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-402">In the Solution Platform, select **x86**, **Remote Machine**.</span></span> 
+2.  <span data-ttu-id="14b05-400">새 Unity 빌드 ( *앱* 폴더)로 이동 하 여 *Visual Studio*에서 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-400">Navigate to your new Unity build (the *App* folder) and open the solution file with *Visual Studio*.</span></span>
+3.  <span data-ttu-id="14b05-401">솔루션 구성에서 **디버그**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-401">In the Solution Configuration select **Debug**.</span></span>
+4.  <span data-ttu-id="14b05-402">솔루션 플랫폼에서 **x86**, **원격 컴퓨터**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-402">In the Solution Platform, select **x86**, **Remote Machine**.</span></span> 
 
     ![Visual Studio에서 솔루션을 배포 합니다.](images/AzureLabs-Lab2-27.png)
  
-5.  <span data-ttu-id="9623b-404">로 이동 합니다 **빌드 메뉴** 클릭 **솔루션 배포**, 응용 프로그램에 HoloLens 테스트용으로 로드 하려면.</span><span class="sxs-lookup"><span data-stu-id="9623b-404">Go to the **Build menu** and click on **Deploy Solution**, to sideload the application to your HoloLens.</span></span>
-6.  <span data-ttu-id="9623b-405">앱에 HoloLens 시작할 준비가에 설치 된 앱 목록에 나타나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-405">Your App should now appear in the list of installed apps on your HoloLens, ready to be launched!</span></span>
+5.  <span data-ttu-id="14b05-404">**빌드 메뉴로** 이동 하 여 **솔루션 배포**를 클릭 하 여 응용 프로그램을 HoloLens로 테스트용으로 로드.</span><span class="sxs-lookup"><span data-stu-id="14b05-404">Go to the **Build menu** and click on **Deploy Solution**, to sideload the application to your HoloLens.</span></span>
+6.  <span data-ttu-id="14b05-405">이제 앱이 HoloLens에 설치 된 앱 목록에 표시 되어 시작할 준비가 되었습니다!</span><span class="sxs-lookup"><span data-stu-id="14b05-405">Your App should now appear in the list of installed apps on your HoloLens, ready to be launched!</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9623b-406">몰입 형 헤드셋을 배포 하려면 설정 합니다 **솔루션 플랫폼** 를 *로컬 컴퓨터*, 설정 및를 **구성** 에 *디버그*, 를사용하여*x86* 으로 **플랫폼**합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-406">To deploy to immersive headset, set the **Solution Platform** to *Local Machine*, and set the **Configuration** to *Debug*, with *x86* as the **Platform**.</span></span> <span data-ttu-id="9623b-407">로컬 배포 후 컴퓨터를 사용 하 여는 **빌드 메뉴**을 선택 하면 *솔루션 배포*합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-407">Then deploy to the local machine, using the **Build menu**, selecting *Deploy Solution*.</span></span> 
+> <span data-ttu-id="14b05-406">모던 헤드셋에 배포 하려면 **솔루션 플랫폼** 을 *로컬 컴퓨터*로 설정 하 고 **구성을** *디버그*로 설정 하 고 *x 86* 을 **플랫폼**으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-406">To deploy to immersive headset, set the **Solution Platform** to *Local Machine*, and set the **Configuration** to *Debug*, with *x86* as the **Platform**.</span></span> <span data-ttu-id="14b05-407">그런 다음 **빌드 메뉴**를 사용 하 여 *솔루션 배포*를 선택 하 여 로컬 컴퓨터에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-407">Then deploy to the local machine, using the **Build menu**, selecting *Deploy Solution*.</span></span> 
 
-## <a name="your-finished-computer-vision-api-application"></a><span data-ttu-id="9623b-408">완성 된 Computer Vision API 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="9623b-408">Your finished Computer Vision API application</span></span>
+## <a name="your-finished-computer-vision-api-application"></a><span data-ttu-id="14b05-408">완성 된 Computer Vision API 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="14b05-408">Your finished Computer Vision API application</span></span>
 
-<span data-ttu-id="9623b-409">축, 실제 개체 인식 신뢰도를 표시 된 것을 표시 하는 Azure Computer Vision API를 활용 하는 혼합된 현실 앱을 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-409">Congratulations, you built a mixed reality app that leverages the Azure Computer Vision API to recognize real world objects, and display confidence of what has been seen.</span></span>
+<span data-ttu-id="14b05-409">축 하 합니다. Azure Computer Vision API를 활용 하 여 실제 개체를 인식 하 고 표시 되는 내용에 대 한 확신을 표시 하는 혼합 현실 앱을 빌드 했습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-409">Congratulations, you built a mixed reality app that leverages the Azure Computer Vision API to recognize real world objects, and display confidence of what has been seen.</span></span>
 
 ![랩 결과](images/AzureLabs-Lab2-000.png)
 
-## <a name="bonus-exercises"></a><span data-ttu-id="9623b-411">보너스 연습</span><span class="sxs-lookup"><span data-stu-id="9623b-411">Bonus exercises</span></span>
+## <a name="bonus-exercises"></a><span data-ttu-id="14b05-411">보너스 연습</span><span class="sxs-lookup"><span data-stu-id="14b05-411">Bonus exercises</span></span>
 
-### <a name="exercise-1"></a><span data-ttu-id="9623b-412">연습 1</span><span class="sxs-lookup"><span data-stu-id="9623b-412">Exercise 1</span></span>
+### <a name="exercise-1"></a><span data-ttu-id="14b05-412">연습 1</span><span class="sxs-lookup"><span data-stu-id="14b05-412">Exercise 1</span></span>
 
-<span data-ttu-id="9623b-413">사용한 마찬가지로 *태그* 매개 변수 (내에서 볼 수 있듯이 *끝점* 내에서 사용 합니다 *VisionManager*)을 다른 정보를 검색 하는 앱을 확장 합니다. 살펴보겠습니다 에 액세스할 수 있는 다른 매개 변수 [여기](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-413">Just as you have used the *Tags* parameter (as evidenced within the *endpoint* used within the *VisionManager*), extend the app to detect other information; have a look at what other parameters you have access to [HERE](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).</span></span>
+<span data-ttu-id="14b05-413">*Tags* 매개 변수 ( *VisionManager*내에서 사용 되는 *끝점* 내에서 복합적로)를 사용 하는 것 처럼 앱을 확장 하 여 다른 정보를 검색 합니다. [여기](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)에 액세스할 수 있는 다른 매개 변수를 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="14b05-413">Just as you have used the *Tags* parameter (as evidenced within the *endpoint* used within the *VisionManager*), extend the app to detect other information; have a look at what other parameters you have access to [HERE](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).</span></span>
 
-### <a name="exercise-2"></a><span data-ttu-id="9623b-414">연습 2</span><span class="sxs-lookup"><span data-stu-id="9623b-414">Exercise 2</span></span>
+### <a name="exercise-2"></a><span data-ttu-id="14b05-414">연습 2</span><span class="sxs-lookup"><span data-stu-id="14b05-414">Exercise 2</span></span>
 
-<span data-ttu-id="9623b-415">숫자를 숨기기 아마도 더 편안 하 고 읽기 쉬운 방식으로 반환된 된 Azure 데이터를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-415">Display the returned Azure data, in a more conversational, and readable way, perhaps hiding the numbers.</span></span> <span data-ttu-id="9623b-416">처럼 봇 사용자 소통할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9623b-416">As though a bot might be speaking to the user.</span></span>
+<span data-ttu-id="14b05-415">반환 된 Azure 데이터를 보다 잘 이해 하 고 읽을 수 있는 방법으로 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-415">Display the returned Azure data, in a more conversational, and readable way, perhaps hiding the numbers.</span></span> <span data-ttu-id="14b05-416">사용자에 게 사용자에 게 문의 하 고 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14b05-416">As though a bot might be speaking to the user.</span></span>
