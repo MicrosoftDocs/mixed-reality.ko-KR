@@ -6,74 +6,74 @@ ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
 ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604652"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516253"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Windows Mixed Reality 개발자 설명서에 기여
 
-시작 합니다 [Windows Mixed Reality 개발자 설명서에 대 한 공용 리포지토리](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)! 만들기 또는 편집이 리포지토리의 모든 문서 **공개적으로 표시 됩니다.** 
+[Windows Mixed Reality 개발자 설명서에 대 한 공용 리포지토리](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)를 시작 합니다. 이 리포지토리에서 만들거나 편집 하는 모든 문서는 **공용에 표시 됩니다.** 
 
-Windows Mixed Reality docs (Markdig 기능)와 GitHub 지원 Markdown을 사용 하는 docs.microsoft.com 플랫폼에서 됩니다. 에 표시 되는 서식이 지정 되 고 스타일이 지정 된 페이지에이 리포지토리에서 편집 내용을 설정 기본적 https://docs.microsoft.com/windows/mixed-reality합니다. 
+Windows Mixed Reality 문서는 이제 GitHub-flavored Markdown (Markdig 기능 포함)를 사용 하는 docs.microsoft.com 플랫폼에 있습니다. 기본적으로이 리포지토리에서 편집 하는 콘텐츠는에 https://docs.microsoft.com/windows/mixed-reality 표시 되는 서식이 지정 되 고 스타일이 지정 된 페이지로 전환 됩니다. 
 
-이 페이지 기본 단계 및 영향을 주는에 대 한 지침 뿐만 아니라 Markdown 기본 사항에 연결 합니다. 작성 글을 주셔서 감사 합니다!
+이 페이지에서는 Markdown 기본 사항에 대 한 링크 뿐만 아니라 기여에 대 한 기본 단계 및 지침을 설명 합니다. 기여를 주셔서 감사 합니다.
 
 ## <a name="before-you-start"></a>시작하기 전 주의 사항
 
-해야 하면 이미 계정이 없는 경우 [GitHub 계정을 만듭니다](https://github.com/join)합니다.
+아직 없는 경우 [GitHub 계정을 만들어야](https://github.com/join)합니다.
 
 >[!NOTE]
->가 Microsoft 직원인 경우 GitHub 계정에 Microsoft 별칭에 연결 합니다 [Microsoft 오픈 소스 포털](https://repos.opensource.microsoft.com/)합니다. 조인 합니다 **"Microsoft"** 하 고 **"MicrosoftDocs"** 조직).
+>Microsoft 직원 인 경우 microsoft [오픈 소스 포털](https://repos.opensource.microsoft.com/)의 microsoft 별칭에 GitHub 계정을 연결 하세요. **"Microsoft"** 및 **"MicrosoftDocs"** 조직에 참여 합니다.
 
-GitHub 계정에 설정 하는 경우 이러한 보안 예방 조치를 좋습니다.
-- 만들기는 [Github 계정에 대 한 강력한 암호](https://github.com/settings/admin)합니다.
-- 사용 하도록 설정 [2 단계 인증](https://github.com/settings/two_factor_authentication/configure)합니다.
-- 저장 하 [복구 코드](https://github.com/settings/auth/recovery-codes) 안전한 곳에 있습니다.
-- 업데이트 프로그램 [공개 프로필 설정은](https://github.com/settings/profile)합니다.
-   - 사용자 이름을 설정 하 고 설정을 고려 하 *공용 메일* 를 *내 전자 메일 주소를 표시 안 함*합니다.
-   - 사용자가 참여 하는 문서 페이지의 축소판 그림과 같이 프로필 사진을 업로드 것이 좋습니다.
-- 명령줄 워크플로 사용 하려는 경우를 설정 하십시오 [Windows 용 Git 자격 증명 관리자](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) 기 고물 할 때마다 암호를 입력 하지 않아도 되도록 합니다.
+GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 합니다.
+- [Github 계정에 대 한 강력한 암호](https://github.com/settings/admin)를 만듭니다.
+- [2 단계 인증](https://github.com/settings/two_factor_authentication/configure)을 사용 하도록 설정 합니다.
+- [복구 코드](https://github.com/settings/auth/recovery-codes) 를 안전한 장소에 저장 합니다.
+- [공개 프로필 설정을](https://github.com/settings/profile)업데이트 합니다.
+   - 사용자의 이름을 설정 하 고 *전자 메일 주소를 표시 하지 않도록* *공용 전자 메일* 을 설정 하는 것이 좋습니다.
+   - 사용자가 참여 하는 문서 페이지에 미리 보기가 표시 되므로 프로필 그림을 업로드 하는 것이 좋습니다.
+- 명령줄 워크플로를 사용 하려는 경우 기여를 할 때마다 암호를 입력할 필요가 없도록 [Windows 용 Git 자격 증명 관리자](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) 를 설정 하는 것이 좋습니다.
 
-다음이 단계를 수행 하는 것이 중요 합니다 게시 시스템은 GitHub에 연결 하 고 작성자 또는 참여자 GitHub 별칭을 사용 하 여 각 문서에 나열 됩니다.
+이러한 단계를 수행 하는 것이 중요 합니다. 게시 시스템이 GitHub에 연결 되어 있으므로 GitHub 별칭을 사용 하 여 각 아티클에 작성자 또는 참가자로 나열 됩니다.
 
 ## <a name="editing-an-existing-article"></a>기존 문서 편집
 
-에 대 한 업데이트를 위해 다음 워크플로를 사용 *기존 아티클을* 웹 브라우저에서 GitHub를 통해:
+웹 브라우저에서 GitHub를 통해 *기존 문서* 를 업데이트 하려면 다음 워크플로를 사용 합니다.
 
-1. "혼합 현실-문서" 폴더에서 편집 하려는 문서를 탐색 합니다.
-2. 오른쪽 위에 있는 편집 단추 (연필 아이콘)를 선택 합니다. 자동으로 '마스터' 분기를 삭제할 수 있는 분기를 분기는이 합니다.
+1. "Mixed reality-docs" 폴더에서 편집 하려는 문서로 이동 합니다.
+2. 오른쪽 위에 있는 편집 단추 (연필 아이콘)를 선택 합니다. 이렇게 하면 ' master ' 분기에서 삭제 가능한 분기가 자동으로 분기 합니다.
 
    ![문서를 편집 합니다.](images/editpage.png)
-3. 문서의 콘텐츠를 편집 (참고 ["Markdown 기본 사항"](#markdown-basics) 아래 지침에 대 한).
-4. 각 문서의 맨 위에 있는 관련 메타 데이터를 업데이트 합니다.
-   * 제목: 문서를 보고 하는 경우 브라우저 탭에 표시 되는 페이지 제목입니다. 하지 않는 한 제목을 변경 하지 않아야 SEO 및 인덱싱에 대 한이 사용 되는, (있지만 이것이 덜 중요 한 문서 공개 되기 전에) 필요 합니다.
-   * description: 간략 한 설명은 항목의 콘텐츠를 작성 합니다. 이 따른 SEO 및 검색에 도움이 됩니다.
-   * 작성자: 페이지의 기본 소유자 라면 여기 GitHub 별칭을 추가 합니다.
-   * ms.author: 페이지의 기본 소유자 인 경우 추가 Microsoft 별칭 여기 (필요가 @microsoft.com, 별칭만).
-   * ms.date: 문법, 서식 지정, 설명이 같은 수정 하지 않고 페이지에서 주요 콘텐츠를 추가 하거나 맞춤법 검사 하는 경우 날짜를 업데이트 합니다.
-   * 키워드: 키워드는 SEO (검색 엔진 최적화)에 도움이 됩니다. 쉼표 및 공백을 구분 하 여, 문서 (하지만 마지막 키워드 목록에 다음 문장 부호 없는); 관련 된 키워드 추가 다른 곳에서 관리 되는 것, 모든 문서에 적용 되는 전역 키워드를 추가할 필요가 없습니다. 
-5. 문서 편집을 완료 한 경우 아래로 스크롤하여을 클릭 합니다 **파일 변경 내용 제안** 단추입니다.
-6. 다음 페이지에서 클릭 **끌어오기 요청 만들기** 'master'. 자동으로 만들어진 분기 병합
-7. 편집 하려면 다음 문서에 대 한 위의 단계를 반복 합니다.
+3. 문서의 내용을 편집 합니다 (지침은 아래의 ["Markdown 기본 사항"](#markdown-basics) 참조).
+4. 각 아티클의 위쪽에서 메타 데이터를 관련 항목으로 업데이트 합니다.
+   * 제목과 문서를 볼 때 브라우저 탭에 표시 되는 페이지 제목입니다. 이는 SEO 및 인덱싱에 사용 되므로 필요 하지 않은 경우에는 제목을 변경 하지 않아야 합니다. 단, 설명서를 공개 하기 전에는이 작업이 중요 하지 않습니다.
+   * 한 문서 내용에 대 한 간략 한 설명을 작성 합니다. 이는 SEO 및 검색을 지원 합니다.
+   * 자신이 페이지의 주 소유자 인 경우 여기에 GitHub 별칭을 추가 합니다.
+   * ms author: 페이지의 주 소유자 인 경우 여기에 Microsoft 별칭을 추가 합니다 (필요 @microsoft.com하지 않음, 별칭만).
+   * ms. 날짜: 주요 콘텐츠를 페이지에 추가 하는 경우에는 날짜를 업데이트 합니다. 자세한 내용은 설명, 서식 지정, 문법 또는 맞춤법과 같은 수정 사항은 업데이트 하지 않습니다.
+   * 어 SEO의 키워드 지원 (검색 엔진 최적화). 문서와 관련 된 키워드를 쉼표와 공백으로 구분 하 여 추가 합니다 (목록에서 마지막 키워드 뒤에 문장 부호는 없음). 모든 문서에 적용 되는 전역 키워드는 다른 곳에서 관리 되므로 추가할 필요가 없습니다. 
+5. 문서 편집을 완료 한 후 아래로 스크롤하여 **파일 변경 내용 제안** 단추를 클릭 합니다.
+6. 다음 페이지에서 **끌어오기 요청 만들기** 를 클릭 하 여 자동으로 만들어진 분기를 ' 마스터 '에 병합 합니다.
+7. 편집 하려는 다음 문서에 대해 위의 단계를 반복 합니다.
 
 ## <a name="creating-a-new-article"></a>새 문서 만들기
 
-다음 워크플로를 사용 하 여 *새 문서를 만들* 웹 브라우저에서 GitHub 통해 설명서 리포지토리에서:
+웹 브라우저에서 GitHub를 통해 설명서 리포지토리에서 *새 문서를 만들려면* 다음 워크플로를 사용 합니다.
 
-1. MicrosoftDocs/혼합 현실 '마스터' 분기는 분기를 만듭니다 (사용 하는 **포크** 오른쪽 위에 있는 단추).
+1. 오른쪽 위에 있는 **포크** 단추를 사용 하 여 MicrosoftDocs/mixed reality ' master ' 분기에서 포크를 만듭니다.
 
    ![마스터 분기를 포크 합니다.](images/forkbranch.png)
-2. "혼합 현실-문서" 폴더를 클릭 합니다 **새 파일 만들기** 오른쪽 위에 있는 단추입니다.
-3. 아티클에 대 한 페이지 이름을 만듭니다 (하이픈을 사용 하 여 공백 대신 및 문장 부호 또는 아포스트로피 사용 하지 마세요) 및 ".md"를 추가 합니다.
+2. "Mixed reality-docs" 폴더의 오른쪽 위에 있는 **새 파일 만들기** 단추를 클릭 합니다.
+3. 문서에 대 한 페이지 이름 (공백 대신 하이픈을 사용 하 고 구두점 또는 아포스트로피를 사용 하지 않음)을 만든 후 ".ma"를 추가 합니다.
 
-   ![새 페이지를 이름을 지정 합니다.](images/newpagetitle.PNG)
+   ![새 페이지의 이름을로 합니다.](images/newpagetitle.PNG)
    
    >[!IMPORTANT]
-   >"혼합 현실-문서" 폴더 내에서 새 항목을 만드는 하는지 확인 합니다. 확인 하 여이 확인할 수 있습니다 "혼합 현실-문서 / /" 새 파일 이름 줄에서.
+   >"Mixed reality-docs" 폴더 내에서 새 문서를 만들어야 합니다. 새 파일 이름 줄에서 "/mixed-reality-docs/"를 확인 하 여이를 확인할 수 있습니다.
 
-4. 새 페이지의 맨 위에 있는 다음 메타 데이터 블록을 추가 합니다.
+4. 새 페이지 위쪽에 다음 메타 데이터 블록을 추가 합니다.
 
    ```md
    ---
@@ -87,117 +87,117 @@ GitHub 계정에 설정 하는 경우 이러한 보안 예방 조치를 좋습�
    ---
    ```
 
-5. 지침에 따라 관련 메타 데이터 필드를 입력 합니다 [위의 섹션](#editing-an-existing-article)합니다.
-6. 쓰기 문서 콘텐츠를 사용 하 여 [Markdown 기본 사항](#markdown-basics)합니다.
-7. 추가 된 `## See also` 다른 관련 된 문서에 대 한 링크를 사용 하 여 문서의 맨 아래에 섹션입니다.
-8. 완료 되 면, 클릭 **커밋 새 파일**합니다.
-9. 클릭 **새 끌어오기 요청** MicrosoftDocs/혼합 현실 '마스터' 분기의 '마스터' 분기 병합 및 (화살표는 올바른 방법은 가리키고 있는지 확인).
+5. [위의 섹션](#editing-an-existing-article)에 설명 된 지침에 따라 관련 메타 데이터 필드를 입력 합니다.
+6. [Markdown 기본 사항을](#markdown-basics)사용 하 여 문서 콘텐츠를 작성 합니다.
+7. 문서의 맨 `## See also` 아래에 있는 섹션을 다른 관련 문서에 대 한 링크와 함께 추가 합니다.
+8. 완료 되 면 **새 파일 커밋**을 클릭 합니다.
+9. **새 끌어오기 요청** 을 클릭 하 고 분기의 ' 마스터 ' 분기를 MicrosoftDocs/mixed-현실 ' master '에 병합 합니다. 화살표가 올바른 방법을 가리키고 있는지 확인 합니다.
 
-   ![MicrosoftDocs/혼합 현실에 포크에서 끌어오기 요청 만들기](images/pr_to_master.PNG)
+   ![포크에서 MicrosoftDocs/mixed reality로 끌어오기 요청 만들기](images/pr_to_master.PNG)
 
 ## <a name="markdown-basics"></a>Markdown 기본 사항
 
-다음 리소스를 사용 하는 Markdown 언어를 사용 하 여 문서를 편집 하는 방법을 알아봅니다 도움이 됩니다.
+다음 리소스는 Markdown 언어를 사용 하 여 문서를 편집 하는 방법을 배우는 데 도움이 됩니다.
 
 - [Markdown 기본 사항](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-- [Markdown에서-요약 참조 포스터](images/MarkdownPoster.pdf)
-- [Docs.microsoft.com 용 Markdown 작성을 위한 추가 리소스](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [한눈에 Markdown 참조 포스터](images/MarkdownPoster.pdf)
+- [Docs.microsoft.com에 대 한 Markdown 쓰기에 대 한 추가 리소스](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>테이블 추가
 
-방법은 docs.microsoft.com 스타일 테이블이 없기 테두리 또는 사용자 지정 스타일을 인라인 CSS를 시도 하는 경우에 합니다. 짧은 기간에 대해 작동 하는 것이 나타납니다. 하지만 결국 플랫폼에서는 테이블에서 외부 스타일을 제거 합니다. 따라서 미리 계획 하 고 테이블을 단순하게 유지 합니다. [Markdown 테이블을 더 쉽게 하는 사이트 같습니다](http://www.tablesgenerator.com/markdown_tables)합니다.
+스타일 docs.microsoft.com 스타일을 지정 하는 방식 때문에 인라인 CSS를 시도 하더라도 테두리나 사용자 지정 스타일은 없습니다. 짧은 시간 동안 작동 하는 것 처럼 보이지만 결국 플랫폼은 테이블에서 스타일을 제거 합니다. 따라서 미리 계획 하 고 테이블을 단순하게 유지 합니다. [Markdown 테이블을 쉽게 만들 수 있는 사이트는 다음과 같습니다](http://www.tablesgenerator.com/markdown_tables).
 
-합니다 [Visual Studio Code 용 Docs Markdown 확장](https://docs.microsoft.com/teamblog/docs-extension) 사용 하는 경우 사용 하면 쉽게 생성 테이블도 [Visual Studio Code (아래 참조)](#using-visual-studio-code) 설명서를 편집할 수 있습니다.
+[Visual Studio Code에 대 한 Docs Markdown 확장](https://docs.microsoft.com/teamblog/docs-extension) 은 [Visual Studio Code (아래 참조)](#using-visual-studio-code) 를 사용 하 여 문서를 편집 하는 경우에도 테이블을 쉽게 생성할 수 있습니다.
 
 ### <a name="adding-images"></a>이미지 추가
 
-리포지토리에서 "혼합 현실-docs/이미지" 폴더에 이미지를 업로드 하 고 해당 문서의 적절히 참조 해야 합니다. 이미지는 자동으로 표시에서 큰, 즉이 문서의 전체 너비를 드리겠습니다 이미지 큰 경우. 따라서 미리 업로드 하기 전에 이미지를 크기 조정 하는 것이 좋습니다. 크기를 지정 해야 위로 또는 아래로 있으면 조밀한 스크린샷 또는 스크린샷의 분수 각각 있지만 700 600 픽셀, 권장 되는 너비가입니다.
+리포지토리의 "mixed reality-docs/images" 폴더에 이미지를 업로드 한 다음 문서에서 적절 하 게 참조 해야 합니다. 이미지가 자동으로 전체 크기로 표시 됩니다. 즉, 이미지가 크면 아티클의 전체 너비를 채웁니다. 따라서 이미지를 업로드 하기 전에 미리 크기를 조정 하는 것이 좋습니다. 권장 되는 너비는 600 픽셀에서 700 픽셀 사이 이지만, 조밀한 스크린샷 또는 스크린 샷의 분수 인 경우 크기를 조정 하거나 축소 해야 합니다.
 
 >[!IMPORTANT]
->만 병합 하기 전에 분기 된 리포지토리에 이미지를 업로드할 수 있습니다. 따라서 문서에 이미지를 추가 하려는 경우 해야 [Visual Studio Code를 사용 하 여](#using-visual-studio-code) 먼저 포크의 "이미지" 폴더에 이미지를 추가 하려면 웹 브라우저에서 다음을 수행한 있는지 확인:
+>병합 하기 전에 분기 리포지토리에만 이미지를 업로드할 수 있습니다. 따라서 문서에 이미지를 추가 하려면 먼저 [Visual Studio Code를 사용](#using-visual-studio-code) 하 여 포크의 "images" 폴더에 이미지를 추가 하거나 웹 브라우저에서 다음을 수행 해야 합니다.
 >
->1. MicrosoftDocs/혼합 현실 리포지토리를 포크 합니다.
->2. 포크에서 문서를 편집 합니다.
->3. 포크에서 "혼합 현실-docs/이미지" 폴더에 문서에서 참조 하는 이미지를 업로드 합니다.
->4. 생성을 **끌어오기 요청** 포크 MicrosoftDocs/혼합 현실 '마스터' 분기에 병합 합니다.
+>1. MicrosoftDocs/mixed reality 리포지토리를 분기 합니다.
+>2. 포크에서 문서를 편집 했습니다.
+>3. 문서에서 참조 하는 이미지를 포크의 "mixed reality-docs/images" 폴더에 업로드 했습니다.
+>4. 분기를 MicrosoftDocs/mixed-현실 ' master ' 분기에 병합 하는 **끌어오기 요청** 을 만들었습니다.
 >
->사용자 고유의 분기 된 리포지토리를 설정 하는 방법에 알아보려면 지침을 따르세요 [새 아티클을 만들](#creating-a-new-article)합니다.
+>사용자 고유의 분기 리포지토리를 설정 하는 방법을 알아보려면 [새 문서 만들기](#creating-a-new-article)에 대 한 지침을 따르세요.
 
 ## <a name="previewing-your-work"></a>작업 미리 보기
 
-웹 브라우저를 통해 GitHub에서 편집 하는 동안 클릭 수를 **미리 보기** 커밋하기 전에 작업 미리 보기 페이지의 위쪽 탭 합니다. 
+웹 브라우저를 통해 GitHub에서 편집 하는 동안 페이지 위쪽의 **미리 보기** 탭을 클릭 하 여 커밋하기 전에 작업을 미리 볼 수 있습니다. 
 
 >[!NOTE]
->Microsoft 직원 에게만 제공 되 review.docs.microsoft.com 대 한 변경 내용을 미리 보기
+>Microsoft 직원만 review.docs.microsoft.com에서 변경 내용을 미리 볼 수 있습니다.
 
-Microsoft 직원이: 설명서 모양을에서 공용 이동 하기 전에 볼 수 '마스터' 분기에 병합 된 글을 면 https://review.docs.microsoft.com/windows/mixed-reality?branch=master (왼쪽된 열에서 목차를 사용 하 여 문서 찾기).
+Microsoft 직원: 기여를 ' 마스터 ' 분기에 병합 한 후에는에서 https://review.docs.microsoft.com/windows/mixed-reality?branch=master 공개 되기 전에 설명서의 모양을 확인할 수 있습니다 (왼쪽 열의 목차를 사용 하 여 문서 찾기).
 
-## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>데스크톱 클라이언트를 사용 하 여 편집 및 브라우저에서 편집
+## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>브라우저에서 편집 및 데스크톱 클라이언트를 사용 하 여 편집
 
-그러나 빠르게 변경 하는 가장 쉬운 방법은 브라우저에서 편집이, 몇 가지 단점이 있습니다.
+브라우저에서 편집은 빠른 변경을 수행 하는 가장 쉬운 방법 이지만 다음과 같은 몇 가지 단점이 있습니다.
 
-- 맞춤법 검사를 활용할 수 없습니다.
-- 모든 스마트 링크 (해야 수동으로 문서 파일 이름 입력) 다른 문서에 활용할 수 없습니다.
-- 업로드 하 고 이미지를 참조 번거로울 수 있습니다.
+- 맞춤법 검사를 받을 수 없습니다.
+- 다른 문서에 대 한 스마트 링크를 얻을 수 없습니다 (문서의 파일 이름을 직접 입력 해야 함).
+- 이미지를 업로드 하 고 참조 하는 것이 더 나을 수 있습니다.
 
-와 같은 데스크톱 클라이언트를 사용 하 여 좋습니다 하지 이러한 문제를 사용 하 여 처리 대신 하는 경우 [Visual Studio Code](https://code.visualstudio.com/) 담아 [유용한 확장](#useful-extensions) 설명서에 기여 하 합니다.
+이러한 문제를 해결 하는 것이 아닌 경우 설명서에 기여 하는 데 도움이 되는 몇 가지 [유용한 확장과](#useful-extensions) 함께 [Visual Studio Code](https://code.visualstudio.com/) 와 같은 데스크톱 클라이언트를 사용 하는 것이 좋습니다.
 
-## <a name="using-visual-studio-code"></a>Visual Studio Code를 사용 하 여
+## <a name="using-visual-studio-code"></a>Visual Studio Code 사용
 
-나열 된 이유로 [위에](#editing-in-the-browser-vs-editing-with-a-desktop-client), 데스크톱 클라이언트를 사용 하 여 웹 브라우저를 대신 문서를 편집 하는 것이 좋습니다. 사용 하는 것이 좋습니다 [Visual Studio Code](https://code.visualstudio.com/)합니다.
+[위에](#editing-in-the-browser-vs-editing-with-a-desktop-client)나열 된 이유 때문에 웹 브라우저가 아닌 데스크톱 클라이언트를 사용 하 여 문서를 편집 하는 것이 좋습니다. [Visual Studio Code](https://code.visualstudio.com/)를 사용 하는 것이 좋습니다.
 
 ### <a name="setup"></a>설치 프로그램
 
-이 리포지토리를 사용 하려면 Visual Studio Code를 구성 하려면 다음이 단계를 수행 합니다.
+이 리포지토리를 사용 하도록 Visual Studio Code를 구성 하려면 다음 단계를 수행 합니다.
 
-1. 웹 브라우저:
-    1. 설치할 [PC에 대 한 Git](https://git-scm.com/downloads)합니다.
-    2. 설치할 [Visual Studio Code](https://code.visualstudio.com/)합니다.
-    3. [분기 MicrosoftDocs/혼합 현실](#creating-a-new-article) 아직 없는 경우.
-    4. 포크, 포크에서 클릭 **복제 또는 다운로드** URL을 복사 합니다.
+1. 웹 브라우저에서 다음을 수행 합니다.
+    1. [PC 용 Git를](https://git-scm.com/downloads)설치 합니다.
+    2. [Visual Studio Code](https://code.visualstudio.com/)를 설치 합니다.
+    3. [분기 MicrosoftDocs/mixed-현실](#creating-a-new-article) . 아직 없는 경우.
+    4. 포크에서 **복제 또는 다운로드** 를 클릭 하 고 URL을 복사 합니다.
 2. Visual Studio Code에서 포크의 로컬 클론을 만듭니다.
-    1. **뷰** 메뉴에서 **명령 팔레트**합니다.
-    2. 형식 "Git:Clone."
-    3. 방금 복사한 URL을 붙여넣습니다.
-    4. PC에서 복제본을 저장할 위치를 선택 합니다.
-    5. 클릭 **열고 리포지토리** 팝업에서 합니다.
+    1. **보기** 메뉴에서 **명령 팔레트**를 선택 합니다.
+    2. "Git: Clone"을 입력 합니다.
+    3. 방금 복사한 URL을 붙여 넣습니다.
+    4. PC에서 클론을 저장할 위치를 선택 합니다.
+    5. 팝업에서 **리포지토리 열기** 를 클릭 합니다.
 
-### <a name="editing-documentation"></a>문서를 편집합니다.
+### <a name="editing-documentation"></a>문서 편집
 
-다음 워크플로 사용 하 여 Visual Studio Code를 사용 하 여 문서를 변경 하려면:
+Visual Studio Code를 사용 하 여 설명서를 변경 하려면 다음 워크플로를 사용 합니다.
 
 >[!NOTE]
->에 대 한 모든 지침 [편집](#editing-an-existing-article) 하 고 [만들기](#creating-a-new-article) 문서 및 [Markdown 편집의 기본 사항을](#markdown-basics), 위의 경우에 Visual Studio Code를 사용 하 여 적용 됩니다.
+>Visual Studio Code 사용 하는 경우에는 문서 [편집](#editing-an-existing-article) 및 [만들기](#creating-a-new-article) 에 대 한 모든 지침과 위에서 [Markdown 편집의 기본](#markdown-basics)사항이 적용 됩니다.
 
-1. 복제 된 포크 공식 리포지토리를 사용 하 여 최신 상태 인지 확인 합니다.
-   1. 웹 브라우저에서 포크에 MicrosoftDocs/혼합 현실 'master'에서 다른 참여자의 최근 변경 내용을 동기화 하려면 끌어오기 요청 만들기 (화살표가 올바른 방법으로 있는지 확인).
+1. 복제 된 분기가 공식 리포지토리를 사용 하 여 최신 상태 인지 확인 합니다.
+   1. 웹 브라우저에서 끌어오기 요청을 만들어 MicrosoftDocs/mixed reality의 다른 참가자의 최근 변경 내용을 포크에 동기화 합니다. 화살표가 올바른 방법을 가리키고 있는지 확인 합니다.
       
-      ![포크에 MicrosoftDocs/혼합 현실에서 변경 내용을 동기화](images/sync_repos.PNG)
-   2. Visual Studio Code에서 로컬 클론으로 새롭게 업데이트 된 분기를 동기화 할 동기화 단추를 클릭 합니다.
+      ![MicrosoftDocs/mixed-현실에서 포크로 변경 내용 동기화](images/sync_repos.PNG)
+   2. Visual Studio Code에서 동기화 단추를 클릭 하 여 새로 업데이트 된 포크를 로컬 클론에 동기화 합니다.
       
       ![동기화 단추를 클릭 합니다.](images/sync_clone.png)
-2. 만들거나 Visual Studio Code를 사용 하 여 복제 된 리포지토리에서 문서를 편집 합니다.
-   1. (이미지 "이미지" 폴더에 필요한 경우 추가) 하는 하나 이상의 문서를 편집 합니다.
-   2. **저장할** 변경 **탐색기**합니다.
+2. Visual Studio Code를 사용 하 여 복제 된 리포지토리에서 문서를 만들거나 편집 합니다.
+   1. 하나 이상의 문서 (필요한 경우 "images" 폴더에 이미지 추가)를 편집 합니다.
+   2. **탐색기**에서 변경 내용을 **저장** 합니다.
       
-      ![탐색기에서 "모든 저장" 선택](images/explorer_save.png)
-   3. **모두 커밋** 변경 **소스 제어** (메시지가 표시 되 면 커밋 메시지 쓰기).
+      ![탐색기에서 "모두 저장"을 선택 합니다.](images/explorer_save.png)
+   3. **소스 제어** 의 모든 변경 내용 **커밋** (메시지가 표시 되 면 쓰기 커밋 메시지).
       
-      !["모두 커밋" 소스 제어에서 선택](images/source_control_commit.png)
-   4. 클릭 합니다 **동기화** (GitHub의 분기) 원본에 변경 내용을 다시 동기화 하는 단추입니다.
+      ![소스 제어에서 "모두 커밋"을 선택 합니다.](images/source_control_commit.png)
+   4. **동기화** 단추를 클릭 하 여 변경 내용을 다시 원본 (GitHub의 포크)으로 동기화 합니다.
       
       ![동기화 단추를 클릭 합니다.](images/sync_back.png)
-3. 웹 브라우저에서 MicrosoftDocs/혼합 현실 'master' 돌아가기 포크에 새로운 변경 내용을 동기화 하려면 끌어오기 요청 만들기 (화살표는 올바른 방법은 가리키고 있는지 확인).
+3. 웹 브라우저에서 끌어오기 요청을 만들어 분기의 새 변경 내용을 MicrosoftDocs/mixed-현실 ' master '로 다시 동기화 합니다. 화살표가 올바른 방법을 가리키고 있는지 확인 합니다.
 
-   ![MicrosoftDocs/혼합 현실에 포크에서 끌어오기 요청 만들기](images/pr_to_master.PNG)
+   ![포크에서 MicrosoftDocs/mixed reality로 끌어오기 요청 만들기](images/pr_to_master.PNG)
 
 ### <a name="useful-extensions"></a>유용한 확장
 
-다음 Visual Studio Code 확장 설명서를 편집할 때 매우 유용 합니다.
+다음 Visual Studio Code 확장은 설명서를 편집할 때 매우 유용 합니다.
 
-- [Visual Studio Code 용 docs Markdown 확장](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) -사용 **Alt + M** 문서 작성 등의 옵션 메뉴를 표시 합니다.
-   - 검색 및 참조 이미지를 업로드 합니다.
-   - 목록, 테이블, 같은 서식 지정 및 docs 특정 설명을 추가 `>[!NOTE]`합니다.
-   - 검색 하 고 내부 링크와 책갈피 (페이지 내에서 특정 섹션에 대 한 링크)를 참조 합니다.
-   - 서식 오류가 강조 표시 됩니다 (자세한 내용은 오류 위로 마우스를 가져가서).
-- [맞춤법 검사기 코드](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) -맞춤법이 틀린된 단어 밑줄이 표시 됩니다; 그리고 변경 또는 사전에 저장 하려면 맞춤법이 틀린된 단어를 마우스 오른쪽 단추로 클릭 합니다.
+- [Visual Studio Code 용 Docs Markdown 확장](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) - **Alt + M** 을 사용 하 여 다음과 같은 docs 제작 옵션 메뉴를 표시 합니다.
+   - 업로드 한 이미지를 검색 하 고 참조 합니다.
+   - 목록과 같이 `>[!NOTE]`목록, 테이블 및 문서 특정 호출 등의 서식을 추가 합니다.
+   - 내부 링크와 책갈피를 검색 하 고 참조 합니다 (페이지 내의 특정 섹션에 대 한 링크).
+   - 서식 지정 오류가 강조 표시 됩니다. 자세한 내용은 오류를 마우스로 가리키십시오.
+- [코드 맞춤법 검사기](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) -철자가 잘못 된 단어에는 밑줄이 그어집니다. 철자가 잘못 된 단어를 마우스 오른쪽 단추로 클릭 하 여 변경 하거나 사전에 저장 합니다.

@@ -1,11 +1,11 @@
 ---
-title: Perception 시뮬레이션
-description: 몰입 형 응용 프로그램에 대 한 시뮬레이션 된 입력을 자동화 하는 Perception 시뮬레이션 라이브러리를 사용 하는 데
+title: 인식 시뮬레이션
+description: 인식 시뮬레이션 라이브러리를 사용 하 여 몰입 형 응용 프로그램의 시뮬레이션 된 입력을 자동화 하는 방법에 대 한 지침
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
-keywords: HoloLens, 시뮬레이션 테스트
+keywords: HoloLens, 시뮬레이션, 테스트
 ms.openlocfilehash: 8152181bdbe8c83d2b706b34f1f2fb5d51f4c880
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -13,40 +13,40 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67414527"
 ---
-# <a name="perception-simulation"></a>Perception 시뮬레이션
+# <a name="perception-simulation"></a>인식 시뮬레이션
 
-앱에 대 한 자동화 된 테스트를 작성 하 시겠습니까? 구성 요소 수준 단위 테스트 뿐만 아니라 실제로 사용자 앱에 종단 간 연습을 테스트 하 시겠습니까? Perception 시뮬레이션은 원하는 것입니다. Perception 시뮬레이션 라이브러리 휴먼 보내고 world 테스트를 자동화할 수 있도록 앱에 데이터를 입력 합니다. 예를 들어 휴먼 구체적이 고 반복 가능한 위치로 확인 및 제스처를 수행 하는 다음 또는 동작 컨트롤러를 사용 하 여 입력을 시뮬레이션할 수 있습니다.
+앱에 대 한 자동화 된 테스트를 빌드 하시 겠어요? 테스트를 구성 요소 수준 단위 테스트 이상으로 전환 하 고 응용 프로그램을 종단 간에 실행 하 시겠습니까? 인식 시뮬레이션은 원하는 것입니다. 인식 시뮬레이션 라이브러리는 테스트를 자동화할 수 있도록 사용자 및 세계 입력 데이터를 앱에 보냅니다. 예를 들어, 반복 가능한 특정 위치를 찾고 제스처를 수행 하거나 동작 컨트롤러를 사용 하 여 사용자의 입력을 시뮬레이션할 수 있습니다.
 
-Perception 시뮬레이션 실제 HoloLens, HoloLens 에뮬레이터에 이와 같은 시뮬레이션 된 입력을 보낼 수 있습니다 (첫 번째 gen) HoloLens 혼합 현실 포털을 사용 하 여 PC를 2 에뮬레이터를 설치 합니다. Perception 혼합 현실 장치에서 실시간 센서를 무시 하 고 전송 하는 시뮬레이션 장치에서 실행 중인 응용 프로그램에 대 한 입력을 시뮬레이션 합니다. 응용 프로그램은 항상 사용 하 고 실제 센서와 Perception 시뮬레이션을 사용 하 여 실행을 사용 하 여 실행 차이 구별할 수 없습니다. 동일한 Api 통해 이러한 입력된 이벤트를 수신 합니다. Perception 시뮬레이션은 시뮬레이션 된 입력 HoloLens 가상 컴퓨터에 보낼 HoloLens 에뮬레이터에서 사용 하는 동일한 기술입니다.
+인식 시뮬레이션에서는 이와 같은 시뮬레이션 된 입력을 물리적 HoloLens, HoloLens 에뮬레이터 (첫 번째 gen), HoloLens 2 에뮬레이터 또는 혼합 현실 포털이 설치 된 PC에 보낼 수 있습니다. 인식 시뮬레이션은 혼합 현실 장치에서 라이브 센서를 우회 하 고 장치에서 실행 되는 응용 프로그램에 시뮬레이트된 입력을 보냅니다. 응용 프로그램은 항상 사용 하는 것과 동일한 Api를 통해 이러한 입력 이벤트를 수신 하 고, 실제 센서를 사용 하 여 실행 하는 것과 인식 시뮬레이션으로 실행 되는 것 인식 시뮬레이션은 hololens 에뮬레이터에서 HoloLens 가상 컴퓨터에 시뮬레이트된 입력을 보내기 위해 사용 하는 것과 동일한 기술입니다.
 
-코드에서 시뮬레이션을 사용 하려면 IPerceptionSimulationManager 개체를 만들어 시작 합니다. 이 개체에서 속성을 시뮬레이션 된 "사용자"를 헤드 위치, 손 모양 위치 및 제스처를 포함 하 여 제어 하는 명령을 실행할 수 있습니다 및 사용 하도록 설정 하 고 동작 컨트롤러를 조작할 수 있습니다.
+코드에서 시뮬레이션 사용을 시작 하려면 먼저 IPerceptionSimulationManager 개체를 만듭니다. 이 개체에서 위치, 손 모양 및 제스처를 포함 하 여 시뮬레이션 된 "인간"의 속성을 제어 하는 명령을 실행 하 고, 동작 컨트롤러를 사용 하도록 설정 하 고 조작할 수 있습니다.
 
-## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>Perception 시뮬레이션에 대 한 Visual Studio 프로젝트 설정
-1. [HoloLens 에뮬레이터를 설치할](install-the-tools.md) 개발 PC의 합니다. 에뮬레이터는 Perception 시뮬레이션 하는 데 사용할 라이브러리를 포함 합니다.
-2. 새 Visual Studio를 만들려면 C# 데스크톱 프로젝트 (콘솔 프로젝트를 시작 하려면 잘 작동).
-3. 다음 이진 파일을 프로젝트에 참조로 추가 (프로젝트-> 추가-> 참조...). %ProgramFiles (x86) %\Microsoft XDE에서에서 찾을 수 있습니다\\(버전)와 같은 **%ProgramFiles (x86) %\Microsoft XDE\\10.0.18362.0** HoloLens 2 에뮬레이터에 대 한 합니다.  (참고: 이진 파일에는 HoloLens 2 에뮬레이터 포함 되어 있지만 작동 하기도 Windows Mixed Reality에 대 한 바탕 화면입니다.) 합니다. PerceptionSimulationManager.Interop.dll-관리 되는 C# Perception 시뮬레이션에 대 한 래퍼입니다.
-    b. PerceptionSimulationRest.dll-HoloLens 또는 에뮬레이터에 웹 소켓 통신 채널을 설정 하기 위한 라이브러리입니다.
-    c. SimulationStream.Interop.dll-시뮬레이션에 대 한 공유 형식입니다.
-4. 구현을 추가 프로젝트에 이진 PerceptionSimulationManager.dll를 합니다. 먼저 프로젝트에는 이진 형식으로 추가 (프로젝트-> 추가-> 기존 항목...). 프로젝트 소스 폴더에 복사 하지 않습니다 고 링크로 저장 합니다. ![프로젝트에 링크로 PerceptionSimulationManager.dll 추가할](images/saveaslink.png) b. 있는지를 확인 한 다음 빌드 출력 폴더로 복사의 가져올 것입니다. 이진 파일에 대 한 속성 시트입니다. ![출력 디렉터리로 복사할 PerceptionSimulationManager.dll 표시](images/copyalways.png)
-5. 활성 솔루션 플랫폼을 x64로 설정 합니다.  () 사용 하 여 항목을 만드는 플랫폼 x64에 대 한 경우 Configuration Manager 이미 존재 하지 않습니다.
+## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>인식 시뮬레이션에 대 한 Visual Studio 프로젝트 설정
+1. 개발 PC에 [HoloLens 에뮬레이터를 설치](install-the-tools.md) 합니다. 이 에뮬레이터는 인식 시뮬레이션에 사용할 라이브러리를 포함 합니다.
+2. 새 Visual Studio C# 데스크톱 프로젝트를 만듭니다. 콘솔 프로젝트는 시작 하는 데 유용 합니다.
+3. 프로젝트에 다음 이진 파일을 참조 (프로젝트 > 추가 > 참조 ...)로 추가 합니다. % ProgramFiles (x86)% \ microsoft xde\\(버전) (예: HoloLens 2 에뮬레이터의 경우 **% ProgramFiles (x86)% \ microsoft xde\\10.0.18362.0** )에서 찾을 수 있습니다.  (참고: 이진 파일은 HoloLens 2 에뮬레이터의 일부 이지만 바탕 화면에서 Windows Mixed Reality에도 작동 합니다.) 은. 인식 시뮬레이션에 대 한 PerceptionSimulationManager 관리 C# 래퍼입니다.
+    b. PerceptionSimulationRest-HoloLens 또는 에뮬레이터에 웹 소켓 통신 채널을 설정 하기 위한 라이브러리입니다.
+    c. SimulationStream-시뮬레이션에 대 한 공유 형식입니다.
+4. 프로젝트 a에 이진 PerceptionSimulationManager 구현을 추가 합니다. 먼저 프로젝트에 이진으로 추가 합니다 (기존 항목 > 추가 >). 프로젝트 원본 폴더에 복사 하지 않도록 링크를 링크로 저장 합니다. ![PerceptionSimulationManager을 프로젝트에 링크](images/saveaslink.png) b로 추가 합니다. 그런 다음 빌드 시 출력 폴더에 복사 되었는지 확인 합니다. 이는 이진의 속성 시트에 있습니다. ![PerceptionSimulationManager를 출력 디렉터리에 복사 하도록 표시 합니다.](images/copyalways.png)
+5. 활성 솔루션 플랫폼을 x 64로 설정 합니다.  (아직 없는 경우 Configuration Manager를 사용 하 여 x 64에 대 한 플랫폼 항목을 만듭니다.)
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>IPerceptionSimulation Manager 개체 만들기
 
-시뮬레이션을 제어 하려면 IPerceptionSimulationManager 개체에서 검색 된 개체에 업데이트를 실행할 수 있습니다. 첫 번째 단계는 해당 개체를 가져오고 대상 장치 또는 에뮬레이터에 연결 하는 것입니다. 장치 포털 단추를 클릭 하 여 에뮬레이터의 IP 주소를 가져올 수 있습니다는 [도구 모음](using-the-hololens-emulator.md)
+시뮬레이션을 제어 하기 위해 IPerceptionSimulationManager 개체에서 검색 된 개체에 대 한 업데이트를 실행 합니다. 첫 번째 단계는 해당 개체를 가져와 대상 장치 또는 에뮬레이터에 연결 하는 것입니다. [도구 모음](using-the-hololens-emulator.md) 에서 장치 포털 단추를 클릭 하 여 에뮬레이터의 IP 주소를 가져올 수 있습니다.
 
-![열기 장치 포털 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.  Windows Mixed Reality를 검색할 수 있습니다 "업데이트 및 보안" 다음 "개발자"에 대 한 설정 앱에서에 "를 사용 하 여 연결:" "사용 장치 포털" 섹션  IP 주소와 포트를 모두 확인 해야 합니다.
+![장치 포털 열기 아이콘](images/emulator-deviceportal.png) **장치 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.  Windows Mixed Reality의 경우 "업데이트 & 보안" 아래의 설정 앱에서 "장치 포털 사용"의 "연결 사용:" 섹션에 있는 "개발자 용" 섹션에서 검색할 수 있습니다.  IP 주소와 포트를 모두 기록해 두어야 합니다.
 
-먼저 RestSimulationStreamSink 개체를 가져오는 RestSimulationStreamSink.Create 부르겠습니다. 이 대상 장치 또는 에뮬레이터는 http 연결을 통해 제어 됩니다. 명령을 전달 되며에서 처리 합니다 [Windows Device Portal](using-the-windows-device-portal.md) 장치 또는 에뮬레이터에서 실행 합니다. 개체를 만들려고 해야 4 개의 매개 변수는:
-* 대상 장치의 IP 주소 Uri uri (예: "http://123.123.123.123"또는"http://123.123.123.123:50080")
-* System.Net.NetworkCredential 자격 증명-사용자 이름/암호에 연결 합니다 [Windows Device Portal](using-the-windows-device-portal.md) 대상 장치 또는 에뮬레이터에서 합니다. 해당 로컬 주소를 통해 에뮬레이터에 연결 하는 경우 (예를 들어 168.*합니다.* . *)를 같은 PC에서 자격 증명을 모두 허용 됩니다.
-* bool 기본-보통 우선 순위에서 낮은 우선 순위에 대해 false 마찬가지입니다. 일반적으로이 값을 설정 하려는 *true* 테스트를 제어할 수 있는 테스트 시나리오에 대 한 합니다.  에뮬레이터와 Windows Mixed Reality 시뮬레이션 우선 순위가 낮은 연결을 사용합니다.  테스트 연결을 낮은 우선 순위를 사용 하면 가장 최근에 설정 된 컨트롤에 연결 됩니다.
-* System.Threading.CancellationToken 토큰-비동기 작업을 취소할 토큰입니다.
+먼저 RestSimulationStreamSink를 호출 하 여 RestSimulationStreamSink 개체를 가져옵니다. Http 연결을 제어 하는 대상 장치 또는 에뮬레이터입니다. 명령은 장치 또는 에뮬레이터에서 실행 되는 [Windows 장치 포털](using-the-windows-device-portal.md) 에 전달 되 고 처리 됩니다. 개체를 만드는 데 필요한 네 가지 매개 변수는 다음과 같습니다.
+* Uri uri-대상 장치의 IP 주소 (예: "http://123.123.123.123" 또는 "http://123.123.123.123:50080")
+* 시스템 .Net. NetworkCredential 자격 증명-대상 장치 또는 에뮬레이터의 [Windows 장치 포털](using-the-windows-device-portal.md) 에 연결 하기 위한 사용자 이름/암호입니다. 로컬 주소를 통해 에뮬레이터에 연결 하는 경우 (예:*168 ...* *) 같은 PC에서 모든 자격 증명이 허용 됩니다.
+* bool normal-보통 우선 순위의 경우 True, 낮은 우선 순위의 경우 false 일반적으로 테스트 시나리오의 경우이를 *true* 로 설정 하 여 테스트를 제어할 수 있도록 합니다.  에뮬레이터 및 Windows Mixed Reality 시뮬레이션에서는 낮은 우선 순위의 연결을 사용 합니다.  또한 테스트에서 낮은 우선 순위의 연결을 사용 하는 경우 가장 최근에 설정 된 연결이 제어 됩니다.
+* CancellationToken 토큰-비동기 작업을 취소 하는 토큰입니다.
 
-두 번째는 IPerceptionSimulationManager 만들게 됩니다. 시뮬레이션을 제어 하는 데 개체입니다. 이 비동기 메서드에서 수행도 해야 함을 note 합니다.
+두 번째는 IPerceptionSimulationManager를 만듭니다. 시뮬레이션을 제어 하는 데 사용 하는 개체입니다. 비동기 메서드에서도이 작업을 수행 해야 합니다.
 
-## <a name="control-the-simulated-human"></a>시뮬레이션 된 사람을 제어 합니다.
+## <a name="control-the-simulated-human"></a>시뮬레이션 된 사용자 제어
 
-IPerceptionSimulationManager ISimulatedHuman 개체를 반환 하는 사람이 속성을 있습니다. 시뮬레이션 된 사람을 제어 하려면이 개체에 대 한 작업을 수행 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+IPerceptionSimulationManager에는 ISimulatedHuman 개체를 반환 하는 인적 속성이 있습니다. 시뮬레이션 된 사용자를 제어 하려면이 개체에 대 한 작업을 수행 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```
 manager.Human.Move(new Vector3(0.1f, 0.0f, 0.0f))
@@ -108,7 +108,7 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="extended-sample-c-console-application"></a>샘플 확장 C# 콘솔 응용 프로그램
+## <a name="extended-sample-c-console-application"></a>확장 된 C# 샘플 콘솔 응용 프로그램
 
 ```
 using System;
@@ -216,10 +216,10 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="note-on-6-dof-controllers"></a>6-DOF 컨트롤러에서 note
+## <a name="note-on-6-dof-controllers"></a>6-DOF 컨트롤러에 대 한 참고 사항
 
-모든 속성 시뮬레이션된 6 DOF 컨트롤러에서 메서드를 호출 하기 전에 컨트롤러를 활성화 해야 합니다.  이렇게 하지 않으면 예외가 발생 합니다.  Windows 10부터 2019을 업데이트할 수 있습니다, 그리고 시뮬레이션 된 6 DOF 컨트롤러를 설치 하 고 SimulatedSixDofControllerStatus.Active ISimulatedSixDofController 개체의 Status 속성을 설정 하 여 활성화할 수 있습니다.
-Windows 10 년 10 월 2018에서에서 업데이트 하 고 이전에 개별적으로 먼저 설치 해야 시뮬레이션된 6 DOF 컨트롤러 \Windows\System32 폴더에 있는 PerceptionSimulationDevice 도구를 호출 합니다.  이 도구의 사용은 다음과 같습니다.
+시뮬레이션 된 6 DOF controller의 메서드에 대 한 속성을 호출 하기 전에 컨트롤러를 활성화 해야 합니다.  이렇게 하지 않으면 예외가 발생 합니다.  Windows 10 2019 년 5 월 업데이트부터 ISimulatedSixDofController 개체의 Status 속성을 SimulatedSixDofControllerStatus로 설정 하 여 시뮬레이션 된 6 DOF 컨트롤러를 설치 하 고 활성화할 수 있습니다.
+Windows 10 10 월 2018 업데이트 및 그 이전 버전에서는 \Windows\System32 폴더에 있는 PerceptionSimulationDevice 도구를 호출 하 여 시뮬레이션 된 6-DOF 컨트롤러를 별도로 설치 해야 합니다.  이 도구의 사용법은 다음과 같습니다.
 
 
 ```
@@ -232,29 +232,29 @@ Windows 10 년 10 월 2018에서에서 업데이트 하 고 이전에 개별적�
     PerceptionSimulationDevice.exe i 6dof 1
 ```
 
-지원 되는 동작은 다음과 같습니다.
-* i = install
-* q = query
-* r = remove
+지원 되는 작업은 다음과 같습니다.
+* i = 설치
+* q = 쿼리
+* r = 제거
 
-지원 되는 인스턴스는 됩니다.
-* 1 = 왼쪽된 6 DOF 컨트롤러
-* 2 = 오른쪽 6 DOF 컨트롤러
+지원 되는 인스턴스는 다음과 같습니다.
+* 1 = 왼쪽 6-DOF controller
+* 2 = 오른쪽 6-DOF controller
 
-프로세스의 종료 코드는 (0 값을 반환 하는 데 사용) 하는 성공 또는 실패 (0이 아닌 반환 값) 나타냅니다.  'Q' 작업을 사용 하 여 쿼리는 컨트롤러를 설치 하는 여부를 반환 값 영 (0) 컨트롤러를 아직 설치 하지 않은 경우 또는 됩니다 하나 (1)는 컨트롤러를 설치 하는 경우.
+프로세스의 종료 코드는 성공 (0이 아닌 반환 값) 또는 실패 (0이 아닌 반환 값)를 표시 합니다.  ' Q ' 작업을 사용 하 여 컨트롤러가 설치 되어 있는지 여부를 쿼리하려면 컨트롤러를 아직 설치 하지 않은 경우 반환 값은 0이 고, 컨트롤러가 설치 된 경우에는 (1)입니다.
 
-Windows 컨트롤러를 제거 하는 경우 10 년 10 월 2018 업데이트 또는 이전에 해제 API를 통해 먼저 다음 도구를 호출 하 PerceptionSimulationDevice 해당 상태를 설정 합니다.
+Windows 10 10 월 2018 업데이트 또는 그 이전 버전에서 컨트롤러를 제거 하는 경우 먼저 API를 통해 상태를 Off로 설정한 다음 PerceptionSimulationDevice 도구를 호출 합니다.
 
-이 도구는 관리자 권한으로 실행 해야 하는 참고 합니다.
+이 도구는 관리자 권한으로 실행 해야 합니다.
 
 
 
 
 ## <a name="api-reference"></a>API 참조
 
-### <a name="microsoftperceptionsimulationsimulateddevicetype"></a>Microsoft.PerceptionSimulation.SimulatedDeviceType
+### <a name="microsoftperceptionsimulationsimulateddevicetype"></a>PerceptionSimulation. SimulatedDeviceType
 
-시뮬레이션 된 장치 종류를 설명합니다.
+시뮬레이션 된 장치 유형을 설명 합니다.
 
 ```
 public enum SimulatedDeviceType
@@ -263,13 +263,13 @@ public enum SimulatedDeviceType
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedDeviceType.Reference**
+**PerceptionSimulation. SimulatedDeviceType**
 
-PerceptionSimulationManager에 대 한 기본 장치를 가상의 참조
+PerceptionSimulationManager에 대 한 기본값 인 가상의 참조 장치
 
-### <a name="microsoftperceptionsimulationheadtrackermode"></a>Microsoft.PerceptionSimulation.HeadTrackerMode
+### <a name="microsoftperceptionsimulationheadtrackermode"></a>PerceptionSimulation Ermode
 
-헤드 추적기 모드를 설명합니다.
+헤드 추적 장치 모드를 설명 합니다.
 
 ```
 public enum HeadTrackerMode
@@ -280,21 +280,21 @@ public enum HeadTrackerMode
 }
 ```
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Default**
+**PerceptionSimulation Ermode. 기본값**
 
-기본 헤드를 추적 합니다. 즉, 시스템 관리 모드 런타임 조건에 따라 최상의 헤드를 선택할 수 있습니다.
+기본 헤드 추적입니다. 즉, 시스템에서 런타임 조건에 따라 가장 적합 한 헤드 추적 모드를 선택할 수 있습니다.
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Orientation**
+**PerceptionSimulation입니다. 방향**
 
-추적만 헤드 방향입니다. 즉, 추적된 위치를 신뢰할 수 있는 아닐 헤드 위치에 종속 된 일부 기능을 사용할 수 없습니다.
+방향 전용 헤드 추적입니다. 즉, 추적 된 위치는 신뢰할 수 없으며 헤드 위치에 종속 된 일부 기능을 사용 하지 못할 수 있습니다.
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Position**
+**PerceptionSimulation입니다. 위치**
 
-위치 헤드 추적 합니다. 즉, 추적 된 헤드 위치와 방향을 둘 다 신뢰할 수 있는
+위치 헤드 추적. 즉, 추적 된 헤드 위치와 방향이 모두 안정적 임을 의미 합니다.
 
-### <a name="microsoftperceptionsimulationsimulatedgesture"></a>Microsoft.PerceptionSimulation.SimulatedGesture
+### <a name="microsoftperceptionsimulationsimulatedgesture"></a>PerceptionSimulation. SimulatedGesture
 
-시뮬레이션 된 제스처를 설명합니다.
+시뮬레이션 된 제스처를 설명 합니다.
 
 ```
 public enum SimulatedGesture
@@ -307,29 +307,29 @@ public enum SimulatedGesture
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.None**
+**PerceptionSimulation. SimulatedGesture**
 
-없는 제스처를 나타내는 데 센티널 값입니다.
+제스처를 표시 하는 데 사용 되는 센티널 값입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.FingerPressed**
+**PerceptionSimulation. SimulatedGesture. FingerPressed**
 
-손가락 제스처를 눌렀습니다.
+손가락 누름 제스처입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.FingerReleased**
+**PerceptionSimulation. SimulatedGesture. FingerReleased**
 
-손가락 제스처를 해제 합니다.
+손가락이 해제 된 제스처입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.Home**
+**PerceptionSimulation. SimulatedGesture**
 
 홈/시스템 제스처입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.Max**
+**PerceptionSimulation. SimulatedGesture**
 
 최대 유효 제스처입니다.
 
-### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerstatus"></a>Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus
+### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerstatus"></a>PerceptionSimulation. SimulatedSixDofControllerStatus
 
-시뮬레이션 된 6 DOF 컨트롤러의 가능한 상태입니다.
+시뮬레이션 된 6 DOF controller의 가능한 상태입니다.
 
 ```
 public enum SimulatedSixDofControllerStatus
@@ -340,19 +340,19 @@ public enum SimulatedSixDofControllerStatus
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.Off**
+**PerceptionSimulation. SimulatedSixDofControllerStatus**
 
-6-DOF 컨트롤러 꺼져 있습니다.
+6-DOF 컨트롤러가 꺼져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.Active**
+**PerceptionSimulation. SimulatedSixDofControllerStatus**
 
-6-DOF 컨트롤러 켜져 있고 추적 합니다.
+6-DOF 컨트롤러를 켜고 추적 합니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.TrackingLost**
+**PerceptionSimulation. SimulatedSixDofControllerStatus**
 
-6-DOF 컨트롤러 켜져 있지만 추적할 수 없습니다.
+6-DOF 컨트롤러가 켜져 있지만 추적할 수 없습니다.
 
-### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerbutton"></a>Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton
+### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerbutton"></a>PerceptionSimulation. SimulatedSixDofControllerButton
 
 시뮬레이션 된 6 DOF 컨트롤러에서 지원 되는 단추입니다.
 
@@ -371,46 +371,46 @@ public enum SimulatedSixDofControllerButton
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.None**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
-아니요 단추를 나타내는 데 센티널 값입니다.
+단추를 표시 하지 않는 데 사용 되는 센티널 값입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Home**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
 홈 단추를 눌렀습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Menu**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
 메뉴 단추가 눌러져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Grip**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
 그립 단추가 눌러져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.TouchpadPress**
+**PerceptionSimulation. SimulatedSixDofControllerButton. TouchpadPress**
 
-터치 패드 눌러져 있습니다.
+터치 패드가 눌러져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Select**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
 선택 단추가 눌러져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.TouchpadTouch**
+**PerceptionSimulation. SimulatedSixDofControllerButton. TouchpadTouch**
 
-터치 패드 검사가 수행 됩니다.
+터치 패드가 수행 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Thumbstick**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
-스틱은 눌러져 있습니다.
+엄지 스틱이 눌러져 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Max**
+**PerceptionSimulation. SimulatedSixDofControllerButton**
 
 최대 유효 단추입니다.
 
 
-### <a name="microsoftperceptionsimulationsimulatedeyescalibrationstate"></a>Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState
+### <a name="microsoftperceptionsimulationsimulatedeyescalibrationstate"></a>PerceptionSimulation. SimulatedEyesCalibrationState
 
-시뮬레이션 된 명사 보정 상태
+시뮬레이션 된 눈동자의 보정 상태
 
 ```
 public enum SimulatedGesture
@@ -422,25 +422,25 @@ public enum SimulatedGesture
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Unavailable**
+**PerceptionSimulation. SimulatedEyesCalibrationState**
 
-눈 보정을 사용할 수 없는 경우
+눈동자 보정을 사용할 수 없습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Ready**
+**PerceptionSimulation. SimulatedEyesCalibrationState**
 
-눈 보정 되었습니다.  이것은 기본값입니다.
+눈이 보정 되었습니다.  이것은 기본값입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Configuring**
+**PerceptionSimulation. SimulatedEyesCalibrationState**
 
-눈을 보정 되는 합니다.
+눈이 보정 되 고 있습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.UserCalibrationNeeded**
+**PerceptionSimulation. SimulatedEyesCalibrationState. UserCalibrationNeeded**
 
-눈 위치를 조정 해야 합니다.
+눈동자를 보정 해야 합니다.
 
-### <a name="microsoftperceptionsimulationsimulatedhandjointtrackingaccuracy"></a>Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy
+### <a name="microsoftperceptionsimulationsimulatedhandjointtrackingaccuracy"></a>PerceptionSimulation. SimulatedHandJointTrackingAccuracy
 
-추적의 정확도 손 모양 아이콘이의 연결입니다.
+바늘의 조인트 추적 정확도입니다.
 
 ```
 public enum SimulatedHandJointTrackingAccuracy
@@ -451,21 +451,21 @@ public enum SimulatedHandJointTrackingAccuracy
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Unavailable**
+**PerceptionSimulation. SimulatedHandJointTrackingAccuracy**
 
-연결점 추적 되지 않습니다.
+조인트는 추적 되지 않습니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Approximate**
+**PerceptionSimulation. SimulatedHandJointTrackingAccuracy**
 
-공동 위치 유추 됩니다.
+조인트 위치가 유추 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Visible**
+**PerceptionSimulation. SimulatedHandJointTrackingAccuracy**
 
-연결점 추적 완벽 하 게 됩니다.
+조인트는 완전히 추적 됩니다.
 
-### <a name="microsoftperceptionsimulationsimulatedhandpose"></a>Microsoft.PerceptionSimulation.SimulatedHandPose
+### <a name="microsoftperceptionsimulationsimulatedhandpose"></a>PerceptionSimulation. SimulatedHandPose
 
-추적의 정확도 손 모양 아이콘이의 연결입니다.
+바늘의 조인트 추적 정확도입니다.
 
 ```
 public enum SimulatedHandPose
@@ -478,30 +478,30 @@ public enum SimulatedHandPose
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Closed**
+**PerceptionSimulation. SimulatedHandPose**
 
-손 모양 아이콘이 손가락이 음 닫힌된 포즈를 반영 하도록 구성 됩니다.
+손 모양 손가락 조인트는 닫힌 포즈를 반영 하도록 구성 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Open**
+**PerceptionSimulation. SimulatedHandPose**
 
-손 모양 아이콘이 손가락이 음을 열고 자세를 반영 하도록 구성 됩니다.
+손 모양 손가락 조인트는 열린 포즈를 반영 하도록 구성 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Point**
+**PerceptionSimulation. SimulatedHandPose**
 
-손 모양 아이콘이 손가락이 음 포인팅 포즈를 반영 하도록 구성 됩니다.
+손 모양 손가락 조인트는 포인팅 포즈를 반영 하도록 구성 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Pinch**
+**PerceptionSimulation. SimulatedHandPose**
 
-손 모양 아이콘이 손가락이 음 pinching 포즈를 반영 하도록 구성 됩니다.
+손 모양 손가락 조인트는 집기 포즈를 반영 하도록 구성 됩니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Max**
+**PerceptionSimulation. SimulatedHandPose**
 
 SimulatedHandPose에 대 한 최대 유효 값입니다.
 
 
-### <a name="microsoftperceptionsimulationplaybackstate"></a>Microsoft.PerceptionSimulation.PlaybackState
+### <a name="microsoftperceptionsimulationplaybackstate"></a>PerceptionSimulation.
 
-재생 하는 상태를 설명합니다.
+재생 상태를 설명 합니다.
 
 ```
 public enum PlaybackState
@@ -513,25 +513,25 @@ public enum PlaybackState
 }
 ```
 
-**Microsoft.PerceptionSimulation.PlaybackState.Stopped**
+**PerceptionSimulation. 중지 됨**
 
-녹음/녹화 중지 되 고 재생을 위해 준비 중인 합니다.
+기록이 현재 중지 되었고 재생할 준비가 되었습니다.
 
-**Microsoft.PerceptionSimulation.PlaybackState.Playing**
+**PerceptionSimulation. 재생 중**
 
-현재 녹음/녹화 재생 합니다.
+기록이 현재 재생 중입니다.
 
-**Microsoft.PerceptionSimulation.PlaybackState.Paused**
+**PerceptionSimulation. 일시 중지 됨**
 
-녹음/녹화 현재 일시 중지 됩니다.
+기록이 현재 일시 중지 되었습니다.
 
-**Microsoft.PerceptionSimulation.PlaybackState.End**
+**PerceptionSimulation. 종료**
 
-녹음/녹화 끝에 도달 했습니다.
+기록이 끝에 도달 했습니다.
 
-### <a name="microsoftperceptionsimulationvector3"></a>Microsoft.PerceptionSimulation.Vector3
+### <a name="microsoftperceptionsimulationvector3"></a>PerceptionSimulation. Vector3
 
-점 또는 3D 공간에서 벡터를 설명 하는 3 개 구성 요소가 벡터를 설명 합니다.
+3D 공간에서 점이 나 벡터를 설명할 수 있는 3 개의 구성 요소 벡터에 대해 설명 합니다.
 
 ```
 public struct Vector3
@@ -543,30 +543,30 @@ public struct Vector3
 }
 ```
 
-**Microsoft.PerceptionSimulation.Vector3.X**
+**PerceptionSimulation. Vector3**
 
 벡터의 X 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Vector3.Y**
+**PerceptionSimulation. Vector3**
 
 벡터의 Y 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Vector3.Z**
+**PerceptionSimulation. Vector3**
 
 벡터의 Z 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Vector3.#ctor(System.Single,System.Single,System.Single)**
+**PerceptionSimulation (System.web, system.web, System.web) (#ctor Vector3)**
 
 새 Vector3를 생성 합니다.
 
 매개 변수
-* x 벡터의-x 구성 요소입니다.
-* y 벡터의-y 구성 요소입니다.
-* z 벡터의-z 구성 요소입니다.
+* x-벡터의 x 구성 요소입니다.
+* y-벡터의 y 구성 요소입니다.
+* z-벡터의 z 구성 요소입니다.
 
-### <a name="microsoftperceptionsimulationrotation3"></a>Microsoft.PerceptionSimulation.Rotation3
+### <a name="microsoftperceptionsimulationrotation3"></a>PerceptionSimulation. Rotation3
 
-3 개 구성 요소가 회전을 설명합니다.
+3 개의 구성 요소 회전을 설명 합니다.
 
 ```
 public struct Rotation3
@@ -578,30 +578,30 @@ public struct Rotation3
 }
 ```
 
-**Microsoft.PerceptionSimulation.Rotation3.Pitch**
+**PerceptionSimulation. Rotation3**
 
-회전의 피치 구성 요소 X 축을 중심으로 축소 합니다.
+X 축을 중심으로 하는 회전의 피치 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Rotation3.Yaw**
+**PerceptionSimulation. Rotation3. 요**
 
-Y 축 중심 오른쪽 회전 요 구성 요소입니다.
+Y 축을 중심으로 하는 회전의 요 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Rotation3.Roll**
+**PerceptionSimulation. Rotation3**
 
-Z 축 중심 오른쪽 회전의 롤포워드 구성 요소입니다.
+Z 축을 중심으로 하는 회전의 롤 구성 요소입니다.
 
-**Microsoft.PerceptionSimulation.Rotation3.#ctor(System.Single,System.Single,System.Single)**
+**PerceptionSimulation (System.web, system.web, System.web) (#ctor Rotation3)**
 
 새 Rotation3를 생성 합니다.
 
 매개 변수
-* 피치-피치 구성 요소를 회전 합니다.
-* 요-요 구성 요소를 회전 합니다.
-* 롤포워드-롤포워드 구성 요소를 회전 합니다.
+* 피치-회전의 피치 구성 요소입니다.
+* 요-회전의 요 구성 요소입니다.
+* roll-회전의 롤오버 구성 요소입니다.
 
-### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration
+### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>PerceptionSimulation. SimulatedHandJointConfiguration
 
-시뮬레이션된 손 모양에 대 한 공동 구성을 설명합니다.
+시뮬레이션 된 손으로의 조인트 구성에 대해 설명 합니다.
 
 ```
 public struct SimulatedHandJointConfiguration
@@ -612,22 +612,22 @@ public struct SimulatedHandJointConfiguration
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Position**
+**PerceptionSimulation. SimulatedHandJointConfiguration**
 
-연결점의 위치입니다.
+조인트의 위치입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Rotation**
+**PerceptionSimulation. SimulatedHandJointConfiguration**
 
-연결점의 회전입니다.
+조인트의 회전입니다.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.TrackingAccuracy**
+**PerceptionSimulation. SimulatedHandJointConfiguration**
 
-추적의 정확도 연결점입니다.
+조인트의 추적 정확도입니다.
 
 
-### <a name="microsoftperceptionsimulationfrustum"></a>Microsoft.PerceptionSimulation.Frustum
+### <a name="microsoftperceptionsimulationfrustum"></a>PerceptionSimulation
 
-보기 꼭지점이 절 두 체를, 카메라에서 일반적으로 사용 하는 설명 합니다.
+카메라에서 일반적으로 사용 되는 것과 같은 뷰를 설명 합니다.
 
 ```
 public struct Frustum
@@ -639,25 +639,25 @@ public struct Frustum
 }
 ```
 
-**Microsoft.PerceptionSimulation.Frustum.Near**
+**PerceptionSimulation. Near**
 
-하면 프러스텀에 포함 된 최소 거리입니다.
+가 수에 포함 된 최소 거리입니다.
 
-**Microsoft.PerceptionSimulation.Frustum.Far**
+**PerceptionSimulation.**
 
-하면 프러스텀에 포함 된 최대 거리입니다.
+가 수에 포함 된 최대 거리입니다.
 
-**Microsoft.PerceptionSimulation.Frustum.FieldOfView**
+**PerceptionSimulation. FieldOfView**
 
-가로 보기의 필드 (PI 보다 작음) 라디안에서 하면 프러스텀입니다.
+두 부분을 뺀 값의 가로 필드 (PI 보다 작음)입니다.
 
-**Microsoft.PerceptionSimulation.Frustum.AspectRatio**
+**PerceptionSimulation. AspectRatio**
 
-가로 뷰 필드를 세로 보기 필드의 비율입니다.
+뷰의 가로 필드와 세로 필드의 비율입니다.
 
-### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.IPerceptionSimulationManager
+### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>PerceptionSimulation. IPerceptionSimulationManager
 
-장치를 제어 하는 데 패킷을 생성 하는 것에 대 한 루트입니다.
+장치를 제어 하는 데 사용 되는 패킷을 생성 하는 루트입니다.
 
 ```
 public interface IPerceptionSimulationManager
@@ -668,21 +668,21 @@ public interface IPerceptionSimulationManager
 }
 ```
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Device**
+**PerceptionSimulation. IPerceptionSimulationManager**
 
-시뮬레이션 된 사람 및 시뮬레이션된 세계를 해석 하는 시뮬레이션 된 장치 개체를 검색 합니다.
+시뮬레이션 된 사용자 및 시뮬레이션 된 전 세계를 해석 하는 시뮬레이션 된 장치 개체를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Human**
+**PerceptionSimulation. IPerceptionSimulationManager**
 
-시뮬레이션 된 사람을 제어 하는 개체를 검색 합니다.
+시뮬레이션 된 사용자를 제어 하는 개체를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Reset**
+**PerceptionSimulation. IPerceptionSimulationManager**
 
-시뮬레이션을 기본 상태로 다시 설정합니다.
+시뮬레이션을 기본 상태로 다시 설정 합니다.
 
-### <a name="microsoftperceptionsimulationisimulateddevice"></a>Microsoft.PerceptionSimulation.ISimulatedDevice
+### <a name="microsoftperceptionsimulationisimulateddevice"></a>PerceptionSimulation. ISimulatedDevice
 
-시뮬레이션 된 전 세계 및 시뮬레이션 된 사람을 해석 하는 장치를 설명 하는 인터페이스
+시뮬레이션 된 사람들과 시뮬레이션 된 사용자를 해석 하는 장치를 설명 하는 인터페이스
 
 ```
 public interface ISimulatedDevice
@@ -693,24 +693,24 @@ public interface ISimulatedDevice
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.HeadTracker**
+**PerceptionSimulation. ISimulatedDevice**
 
-시뮬레이션된 된 장치에서 Head Tracker를 검색 합니다.
+시뮬레이션 된 장치에서 헤드 추적 장치를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.HandTracker**
+**PerceptionSimulation. ISimulatedDevice**
 
-시뮬레이션된 된 장치에서 직접 Tracker를 검색 합니다.
+시뮬레이션 된 장치에서 손 트래커를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.SetSimulatedDeviceType(Microsoft.PerceptionSimulation.SimulatedDeviceType)**
+**PerceptionSimulation ISimulatedDevice. SetSimulatedDeviceType (PerceptionSimulation)**
 
-제공 된 장치 유형과 일치 하도록 시뮬레이션 된 장치의 속성을 설정 합니다.
+제공 된 장치 유형과 일치 하도록 시뮬레이트된 장치의 속성을 설정 합니다.
 
 매개 변수
-* 입력-시뮬레이션 된 장치의 새 유형
+* 유형-시뮬레이션 된 장치의 새 유형
 
-### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHeadTracker
+### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>PerceptionSimulation. ISimulatedHeadTracker
 
-시뮬레이션 된 장치를 시뮬레이션 된 사람이의 머리를 추적 하는 부분을 설명 하는 인터페이스입니다.
+시뮬레이션 된 사람의 헤드를 추적 하는 시뮬레이션 된 장치의 부분을 설명 하는 인터페이스입니다.
 
 ```
 public interface ISimulatedHeadTracker
@@ -719,13 +719,13 @@ public interface ISimulatedHeadTracker
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHeadTracker.HeadTrackerMode**
+**PerceptionSimulation. ISimulatedHeadTracker.**
 
-검색 하 고 현재 헤드 추적기 모드를 설정 합니다.
+현재 헤드 추적 모드를 검색 하 고 설정 합니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHandTracker
+### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>PerceptionSimulation. ISimulatedHandTracker
 
-시뮬레이션 된 장치를 시뮬레이션 된 사람을 추적 하는 부분을 설명 하는 인터페이스
+시뮬레이션 된 사람의 손을 추적 하는 시뮬레이션 된 장치의 부분을 설명 하는 인터페이스입니다.
 
 ```
 public interface ISimulatedHandTracker
@@ -738,29 +738,29 @@ public interface ISimulatedHandTracker
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.WorldPosition**
+**PerceptionSimulation. ISimulatedHandTracker. WorldPosition**
 
-미터 단위의 전 세계를 통해 관련 노드의 위치를 검색 합니다.
+전 세계와 관련 하 여 노드의 위치를 미터 단위로 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Position**
+**PerceptionSimulation. ISimulatedHandTracker**
 
-검색 하 고 헤드의 가운데를 기준으로 시뮬레이션 된 직접 추적기의 위치를 설정 합니다.
+헤드의 중심을 기준으로 시뮬레이션 된 손 트래커의 위치를 검색 하 고 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Pitch**
+**PerceptionSimulation. ISimulatedHandTracker**
 
-검색 하 고 시뮬레이션 된 직접 추적기의 아래쪽 피치를 설정 합니다.
+시뮬레이션 된 손 추적기의 하향 피치를 검색 하 고 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.FrustumIgnored**
+**PerceptionSimulation. ISimulatedHandTracker. FrustumIgnored**
 
-검색 및 시뮬레이션 된 직접 추적기의 하면 프러스텀을 무시할지 여부를 설정 합니다. 무시 된 경우 두 게 항상 표시 됩니다. 없습니다 (기본값)를 무시 하는 경우는 표시 직접 추적기의 하면 프러스텀 있는 경우입니다.
+시뮬레이션 된 손 추적기의 하 한을 무시 하는지 여부를 검색 하 고 설정 합니다. 무시 하면 두 손을 항상 표시 됩니다. 무시 되지 않는 경우 (기본값) 손을 트래커의 두 부분에 있는 경우에만 표시 됩니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Frustum**
+**PerceptionSimulation. ISimulatedHandTracker**
 
-검색 및 실습 시뮬레이션된 직접 추적기에 표시 되는지 확인 하는 데 꼭지점이 절 두 체 속성을 설정 합니다.
+손을 시뮬레이션 된 손 추적기에 표시할지 여부를 결정 하는 데 사용 되는 대/그와 같은 속성을 검색 하 고 설정 합니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhuman"></a>Microsoft.PerceptionSimulation.ISimulatedHuman
+### <a name="microsoftperceptionsimulationisimulatedhuman"></a>PerceptionSimulation. ISimulatedHuman
 
-시뮬레이션 된 사람을 제어 하기 위한 상위 수준 인터페이스입니다.
+시뮬레이션 된 사용자를 제어 하기 위한 최상위 인터페이스입니다.
 
 ```
 public interface ISimulatedHuman 
@@ -776,47 +776,47 @@ public interface ISimulatedHuman
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.WorldPosition**
+**PerceptionSimulation. ISimulatedHuman. WorldPosition**
 
-검색 하 고 전 세계를 미터 단위로 통해 관련 노드의 위치를 설정 합니다. 위치는 사람이 feet 중앙 지점에 해당합니다.
+전 세계와 관련 하 여 노드의 위치를 측정 하 고 설정 합니다. 위치는 인간 피트의 중심에 있는 지점에 해당 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Direction**
+**PerceptionSimulation. ISimulatedHuman**
 
-검색 및 전 세계의 방향을 시뮬레이션 된 얼굴을 설정 합니다. 음의 Z 축을 0 라디안 직면 합니다. Y 축에 대 한 양의 라디안을 시계 방향으로 회전 합니다.
+시뮬레이션 된 사람이 직면 하는 방향을 검색 하 고 설정 합니다. 0 라디안은 음의 Z 축을 아래로 내립니다. 양의 라디안은 Y 축에 대해 시계 방향으로 회전 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Height**
+**PerceptionSimulation. ISimulatedHuman**
 
-검색 하 고 미터에서 시뮬레이션 된 사람이의 높이 설정 합니다.
+시뮬레이션 된 인간의 높이를 미터 단위로 검색 하 고 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.LeftHand**
+**PerceptionSimulation. ISimulatedHuman. LeftHand**
 
-시뮬레이션 된 사람이의 왼쪽을 검색 합니다.
+시뮬레이션 된 사람의 왼쪽을 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.RightHand**
+**PerceptionSimulation. ISimulatedHuman. RightHand**
 
-시뮬레이션 된 사람이의 오른쪽 위를 검색 합니다.
+시뮬레이션 된 사람의 오른쪽을 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Head**
+**PerceptionSimulation. ISimulatedHuman**
 
-시뮬레이션 된 사람이의 머리를 검색 합니다.
+시뮬레이션 된 사람의 머리를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Move(Microsoft.PerceptionSimulation.Vector3)**
+**PerceptionSimulation (ISimulatedHuman (PerceptionSimulation. Vector3)**
 
-시뮬레이션 된 사람이 미터 단위로, 현재 위치를 기준으로 이동 합니다.
-
-매개 변수
-* 번역 번역에 현재 위치를 기준으로 이동 합니다.
-
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Rotate(System.Single)**
-
-Y 축에 대 한 시계 방향으로 현재 방향 기준으로 시뮬레이션 된 사람이 회전
+현재 위치를 기준으로 시뮬레이션 된 사용자를 미터 단위로 이동 합니다.
 
 매개 변수
-* 라디안으로-Y 축을 중심으로 회전할 양입니다.
+* translation-현재 위치를 기준으로 이동할 변환입니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>Microsoft.PerceptionSimulation.ISimulatedHuman2
+**PerceptionSimulation. ISimulatedHuman (System.web)**
 
-ISimulatedHuman2 ISimulatedHuman 캐스팅 하 여 추가 속성을 사용할 수
+시뮬레이션 된 사용자를 현재 방향에 상대적으로 회전 하 여 Y 축에 대해 시계 방향으로 회전 합니다.
+
+매개 변수
+* radians-Y 축을 중심으로 회전할 양입니다.
+
+### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>PerceptionSimulation. ISimulatedHuman2
+
+ISimulatedHuman을 ISimulatedHuman2로 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
 
 ```
 public interface ISimulatedHuman2
@@ -827,18 +827,18 @@ public interface ISimulatedHuman2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman2.LeftController**
+**PerceptionSimulation. ISimulatedHuman2**
 
-왼쪽된 6 DOF 컨트롤러를 검색 합니다.
+왼쪽 6-DOF 컨트롤러를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman2.RightController**
+**PerceptionSimulation. ISimulatedHuman2 컨트롤러**
 
-오른쪽 6 DOF 컨트롤러를 검색 합니다.
+오른쪽 6-DOF controller를 검색 합니다.
 
 
-### <a name="microsoftperceptionsimulationisimulatedhand"></a>Microsoft.PerceptionSimulation.ISimulatedHand
+### <a name="microsoftperceptionsimulationisimulatedhand"></a>PerceptionSimulation. ISimulatedHand
 
-시뮬레이션 된 사용자의 직접을 설명 하는 인터페이스
+시뮬레이션 된 사람의 손을 설명 하는 인터페이스
 
 ```
 public interface ISimulatedHand
@@ -853,43 +853,43 @@ public interface ISimulatedHand
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.WorldPosition**
+**PerceptionSimulation. ISimulatedHand. WorldPosition**
 
-미터 단위의 전 세계를 통해 관련 노드의 위치를 검색 합니다.
+전 세계와 관련 하 여 노드의 위치를 미터 단위로 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Position**
+**PerceptionSimulation. ISimulatedHand**
 
-검색 및 미터에서 사람을 기준으로 시뮬레이션 된 손 모양 아이콘이 위치를 설정 합니다.
+미터 단위로 인간을 기준으로 시뮬레이션 된 손의 위치를 검색 하 고 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Activated**
+**PerceptionSimulation. ISimulatedHand**
 
-검색 하 고 손 모양 아이콘이 현재 활성화 되어 있는지 여부를 설정 합니다.
+손이 현재 활성화 되어 있는지 여부를 검색 하 고 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Visible**
+**PerceptionSimulation. ISimulatedHand**
 
-손 모양 아이콘이 (즉, 인지는 HandTracker에서 검색할 수는 위치) SimulatedDevice에 현재 표시 되는지 여부를 검색 합니다.
+손이 현재 SimulatedDevice에 표시 되는지 여부를 검색 합니다 .이는 핸드 트래커에서 검색할 위치에 있는지 여부를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.EnsureVisible**
+**PerceptionSimulation. ISimulatedHand. Ensurevisible\**
 
-SimulatedDevice를 볼 수 있도록 손 모양 아이콘이 이동 합니다.
+SimulatedDevice에 표시 되도록 손을 이동 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Move(Microsoft.PerceptionSimulation.Vector3)**
+**PerceptionSimulation (ISimulatedHand (PerceptionSimulation. Vector3)**
 
-미터 단위로, 현재 위치를 기준으로 시뮬레이션 된 손 모양 아이콘이 위치를 이동 합니다.
-
-매개 변수
-* 변환-시뮬레이션 된 손 모양 아이콘이 변환할 크기입니다.
-
-**Microsoft.PerceptionSimulation.ISimulatedHand.PerformGesture(Microsoft.PerceptionSimulation.SimulatedGesture)**
-
-시뮬레이션 된 손 모양 아이콘이 사용 하 여 제스처를 수행 합니다.  만 검색 됩니다 시스템 손 모양 아이콘이 사용 되는 경우.
+현재 위치를 기준으로 시뮬레이션 된 손의 위치를 미터 단위로 이동 합니다.
 
 매개 변수
-* 제스처-제스처를 수행 합니다.
+* 번역-시뮬레이션 된 손을 변환할 양입니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhand2"></a>Microsoft.PerceptionSimulation.ISimulatedHand2
+**PerceptionSimulation ISimulatedHand. PerformGesture (PerceptionSimulation)**
 
-ISimulatedHand ISimulatedHand2 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
+시뮬레이션 된 손을 사용 하 여 제스처를 수행 합니다.  손을 사용 하도록 설정 된 경우에만 시스템에서 검색 됩니다.
+
+매개 변수
+* 제스처-수행할 제스처입니다.
+
+### <a name="microsoftperceptionsimulationisimulatedhand2"></a>PerceptionSimulation. ISimulatedHand2
+
+ISimulatedHand을 ISimulatedHand2로 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
 ```
 public interface ISimulatedHand2
 {
@@ -898,13 +898,13 @@ public interface ISimulatedHand2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand2.Orientation**
+**PerceptionSimulation. ISimulatedHand2**
 
-검색 또는 시뮬레이션 된 손 모양 아이콘이의 회전 각도 설정 합니다.  양수 라디안 축을 찾을 때 시계 방향으로 회전 합니다.
+시뮬레이션 된 손 각도를 검색 하거나 설정 합니다.  양수 라디안은 축을 따라 볼 때 시계 방향으로 회전 합니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhand3"></a>Microsoft.PerceptionSimulation.ISimulatedHand3
+### <a name="microsoftperceptionsimulationisimulatedhand3"></a>PerceptionSimulation. ISimulatedHand3
 
-ISimulatedHand ISimulatedHand3 캐스팅 하 여 추가 속성을 사용할 수
+ISimulatedHand을 ISimulatedHand3로 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
 ```
 public interface ISimulatedHand3
 {
@@ -915,22 +915,22 @@ public interface ISimulatedHand3
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.GetJointConfiguration**
+**PerceptionSimulation. ISimulatedHand3. GetJointConfiguration**
 
-지정 된 연결점에 대 한 공동 구성을 가져옵니다.
+지정 된 조인트의 조인트 구성을 가져옵니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.SetJointConfiguration**
+**PerceptionSimulation. ISimulatedHand3. SetJointConfiguration**
 
-지정 된 연결점에 대 한 공동 구성을 설정 합니다.
+지정 된 조인트의 조인트 구성을 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.SetHandPose**
+**PerceptionSimulation. ISimulatedHand3. SetHandPose**
 
-손 모양 아이콘이 애니메이션 효과를 주는 선택적 플래그를 사용 하 여 알려진된 포즈를 설정 합니다.  참고: 즉시 해당 최종 joint 구성을 반영 하는 음 바뀌지는지 않습니다 애니메이션 효과 적용 합니다.
+애니메이션 효과를 주는 선택적 플래그를 사용 하 여 손 모양을 알려진 포즈로 설정 합니다.  참고: 애니메이션 효과는 최종 조인트 구성을 즉시 반영 하지 않습니다.
 
 
-### <a name="microsoftperceptionsimulationisimulatedhead"></a>Microsoft.PerceptionSimulation.ISimulatedHead
+### <a name="microsoftperceptionsimulationisimulatedhead"></a>PerceptionSimulation. ISimulatedHead
 
-시뮬레이션 된 사람이의 머리를 설명 하는 인터페이스입니다.
+시뮬레이션 된 사람의 머리를 설명 하는 인터페이스입니다.
 
 ```
 public interface ISimulatedHead
@@ -942,28 +942,28 @@ public interface ISimulatedHead
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.WorldPosition**
+**PerceptionSimulation. ISimulatedHead. WorldPosition**
 
-미터 단위의 전 세계를 통해 관련 노드의 위치를 검색 합니다.
+전 세계와 관련 하 여 노드의 위치를 미터 단위로 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Rotation**
+**PerceptionSimulation. ISimulatedHead**
 
-시뮬레이션 된 헤드의 회전을 검색 합니다. 양수 라디안 축을 찾을 때 시계 방향으로 회전 합니다.
+시뮬레이션 된 헤드의 회전을 검색 합니다. 양수 라디안은 축을 따라 볼 때 시계 방향으로 회전 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Diameter**
+**PerceptionSimulation. ISimulatedHead**
 
-시뮬레이션 된 head의 지름을 검색 합니다. 이 값은 head의 center (회전 지점)를 확인 하려면 사용 합니다.
+시뮬레이션 된 헤드의 지름을 검색 합니다. 이 값은 헤드의 중심 (회전 지점)을 결정 하는 데 사용 됩니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Rotate(Microsoft.PerceptionSimulation.Rotation3)**
+**PerceptionSimulation. ISimulatedHead (PerceptionSimulation. Rotation3)**
 
-현재 회전의 기준으로 시뮬레이션 된 헤드를 회전 합니다. 양수 라디안 축을 찾을 때 시계 방향으로 회전 합니다.
+현재 회전을 기준으로 시뮬레이션 된 헤드를 회전 합니다. 양수 라디안은 축을 따라 볼 때 시계 방향으로 회전 합니다.
 
 매개 변수
-* 회전-으로 회전할 양입니다.
+* 회전-회전할 양입니다.
 
-### <a name="microsoftperceptionsimulationisimulatedhead2"></a>Microsoft.PerceptionSimulation.ISimulatedHead2
+### <a name="microsoftperceptionsimulationisimulatedhead2"></a>PerceptionSimulation. ISimulatedHead2
 
-ISimulatedHead ISimulatedHead2 캐스팅 하 여 추가 속성을 사용할 수
+ISimulatedHead을 ISimulatedHead2로 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
 
 ```
 public interface ISimulatedHead2
@@ -973,11 +973,11 @@ public interface ISimulatedHead2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHead2.Eyes**
+**PerceptionSimulation. ISimulatedHead2**
 
-시뮬레이션 된 사람이의 시점을 검색 합니다.
+시뮬레이션 된 사람의 눈동자를 검색 합니다.
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>PerceptionSimulation. ISimulatedSixDofController
 
 시뮬레이션 된 사용자와 연결 된 6 DOF 컨트롤러를 설명 하는 인터페이스입니다.
 
@@ -996,62 +996,62 @@ public interface ISimulatedSixDofController
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.WorldPosition**
+**PerceptionSimulation. ISimulatedSixDofController. WorldPosition**
 
-미터 단위의 전 세계를 통해 관련 노드의 위치를 검색 합니다.
+전 세계와 관련 하 여 노드의 위치를 미터 단위로 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Status**
+**PerceptionSimulation. ISimulatedSixDofController**
 
-검색 또는 컨트롤러의 현재 상태를 설정 합니다.  컨트롤러의 상태를 Off 이동, 회전 또는 키를 눌러 호출 전에 단추 성공할 이외의 값으로 설정 되어야 합니다.
+컨트롤러의 현재 상태를 검색 하거나 설정 합니다.  이동, 회전 또는 누르기 단추에 대 한 호출이 성공 하기 전에 컨트롤러 상태를 Off 이외의 값으로 설정 해야 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Position**
+**PerceptionSimulation. ISimulatedSixDofController**
 
-검색 또는 미터에서 사람을 기준으로 시뮬레이션 된 컨트롤러의 위치를 설정 합니다.
+사용자를 기준으로 시뮬레이션 된 컨트롤러의 위치를 미터 단위로 검색 하거나 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Orientation**
+**PerceptionSimulation. ISimulatedSixDofController**
 
-검색 또는 시뮬레이션 된 컨트롤러의 방향을 설정 합니다.
+시뮬레이션 된 컨트롤러의 방향을 검색 하거나 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Move(Microsoft.PerceptionSimulation.Vector3)**
+**PerceptionSimulation (ISimulatedSixDofController (PerceptionSimulation. Vector3)**
 
-시뮬레이션 된 컨트롤러의 현재 위치, 미터 단위에서를 기준으로 이동 합니다.
-
-매개 변수
-* 변환-시뮬레이션 된 컨트롤러를 변환할 크기입니다.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.PressButton(SimulatedSixDofControllerButton)**
-
-시뮬레이션 된 컨트롤러에서 단추를 누르십시오.  만 검색 됩니다 시스템에서 컨트롤러를 사용 하는 경우.
+현재 위치를 기준으로 시뮬레이트된 컨트롤러의 위치를 미터 단위로 이동 합니다.
 
 매개 변수
-* 단추-단추를 누릅니다.
+* 번역-시뮬레이트된 컨트롤러를 변환할 양입니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.ReleaseButton(SimulatedSixDofControllerButton)**
+**PerceptionSimulation. ISimulatedSixDofController (SimulatedSixDofControllerButton)**
 
-시뮬레이션 된 컨트롤러에서 단추를 놓습니다.  만 검색 됩니다 시스템에서 컨트롤러를 사용 하는 경우.
-
-매개 변수
-* 단추-해제 하려면 단추입니다.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.GetTouchpadPosition(out float, out float)**
-
-시뮬레이션 된 컨트롤러의 터치 패드에 시뮬레이션 된 손가락의 위치를 가져옵니다.
+시뮬레이션 된 컨트롤러의 단추를 누릅니다.  컨트롤러가 사용 하도록 설정 된 경우에만 시스템에서 검색 됩니다.
 
 매개 변수
-* x 손가락의-가로 위치입니다.
-* y 손가락의-세로 위치입니다.
+* button-단추를 누릅니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.SetTouchpadPosition(float, float)**
+**PerceptionSimulation. ISimulatedSixDofController (SimulatedSixDofControllerButton)**
 
-시뮬레이션 된 컨트롤러의 터치 패드에 시뮬레이트된 손가락의 위치를 설정 합니다.
+시뮬레이션 된 컨트롤러에서 단추를 놓습니다.  컨트롤러가 사용 하도록 설정 된 경우에만 시스템에서 검색 됩니다.
 
 매개 변수
-* x 손가락의-가로 위치입니다.
-* y 손가락의-세로 위치입니다.
+* button-해제할 단추입니다.
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController2
+**PerceptionSimulation ISimulatedSixDofController. GetTouchpadPosition (out float, out float)**
 
-추가 속성 및 메서드를 사용할 수 있습니다는 ISimulatedSixDofController ISimulatedSixDofController2 캐스팅 합니다.
+시뮬레이션 된 컨트롤러의 터치 패드에서 시뮬레이션 된 손가락의 위치를 가져옵니다.
+
+매개 변수
+* x-손가락의 가로 위치입니다.
+* y-손가락의 세로 위치입니다.
+
+**PerceptionSimulation ISimulatedSixDofController. SetTouchpadPosition (float, float)**
+
+시뮬레이션 된 컨트롤러의 터치 패드에서 시뮬레이션 된 손가락의 위치를 설정 합니다.
+
+매개 변수
+* x-손가락의 가로 위치입니다.
+* y-손가락의 세로 위치입니다.
+
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>PerceptionSimulation. ISimulatedSixDofController2
+
+ISimulatedSixDofController를 ISimulatedSixDofController2로 캐스팅 하 여 추가 속성 및 메서드를 사용할 수 있습니다.
 
 ```
 public interface ISimulatedSixDofController2
@@ -1063,30 +1063,30 @@ public interface ISimulatedSixDofController2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.GetThumbstickPosition(out float, out float)**
+**PerceptionSimulation ISimulatedSixDofController2. GetThumbstickPosition (out float, out float)**
 
-시뮬레이션 된 컨트롤러에서 시뮬레이션 된 스틱의 위치를 가져옵니다.
-
-매개 변수
-* x 스틱의-가로 위치입니다.
-* y 스틱의-세로 위치입니다.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.SetThumbstickPosition(float, float)**
-
-시뮬레이션 된 컨트롤러에서 시뮬레이션 된 엄지 스틱의 위치를 설정 합니다.
+시뮬레이트된 컨트롤러에서 시뮬레이션 된 엄지 스틱의 위치를 가져옵니다.
 
 매개 변수
-* x 스틱의-가로 위치입니다.
-* y 스틱의-세로 위치입니다.
+* x-엄지 스틱의 가로 위치입니다.
+* y-엄지 스틱의 세로 위치입니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.BatteryLevel**
+**PerceptionSimulation ISimulatedSixDofController2. SetThumbstickPosition (float, float)**
 
-검색 또는 시뮬레이션 된 컨트롤러의 배터리 수준을 설정 합니다.  값은 0.0 보다 커야 100.0 보다 작거나 같음.
+시뮬레이트된 컨트롤러에서 시뮬레이션 된 엄지 스틱의 위치를 설정 합니다.
+
+매개 변수
+* x-엄지 스틱의 가로 위치입니다.
+* y-엄지 스틱의 세로 위치입니다.
+
+**PerceptionSimulation. ISimulatedSixDofController2. BatteryLevel**
+
+시뮬레이트된 컨트롤러의 배터리 수준을 검색 하거나 설정 합니다.  값은 0.0 보다 크고 100.0 보다 작거나 같아야 합니다.
 
 
-### <a name="microsoftperceptionsimulationisimulatedeyes"></a>Microsoft.PerceptionSimulation.ISimulatedEyes
+### <a name="microsoftperceptionsimulationisimulatedeyes"></a>PerceptionSimulation. ISimulatedEyes
 
-시뮬레이션 된 사람이의 시점을 설명 하는 인터페이스입니다.
+시뮬레이션 된 사람의 눈을 설명 하는 인터페이스입니다.
 
 ```
 public interface ISimulatedEyes
@@ -1098,29 +1098,29 @@ public interface ISimulatedEyes
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotation**
+**PerceptionSimulation. ISimulatedEyes**
 
-시뮬레이션 된 명사 회전을 검색 합니다. 양수 라디안 축을 찾을 때 시계 방향으로 회전 합니다.
+시뮬레이션 된 눈동자의 회전을 검색 합니다. 양수 라디안은 축을 따라 볼 때 시계 방향으로 회전 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotate(Microsoft.PerceptionSimulation.Rotation3)**
+**PerceptionSimulation. ISimulatedEyes (PerceptionSimulation. Rotation3)**
 
-현재 회전의 기준으로 시뮬레이션 된 눈을 회전 합니다. 양수 라디안 축을 찾을 때 시계 방향으로 회전 합니다.
+현재 회전을 기준으로 시뮬레이션 된 눈동자를 회전 합니다. 양수 라디안은 축을 따라 볼 때 시계 방향으로 회전 합니다.
 
 매개 변수
-* 회전-으로 회전할 양입니다.
+* 회전-회전할 양입니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.CalibrationState**
+**PerceptionSimulation. ISimulatedEyes. CalibrationState**
 
-시뮬레이션 된 명사 보정 상태를 가져오거나 검색 합니다.
+시뮬레이션 된 눈동자의 보정 상태를 검색 하거나 설정 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.WorldPosition**
+**PerceptionSimulation. ISimulatedEyes. WorldPosition**
 
-미터 단위의 전 세계를 통해 관련 노드의 위치를 검색 합니다.
+전 세계와 관련 하 여 노드의 위치를 미터 단위로 검색 합니다.
 
 
-### <a name="microsoftperceptionsimulationisimulationrecording"></a>Microsoft.PerceptionSimulation.ISimulationRecording
+### <a name="microsoftperceptionsimulationisimulationrecording"></a>PerceptionSimulation. ISimulationRecording
 
-재생에 대 한 로드를 기록 하는 단일 상호 작용 하기 위한 인터페이스입니다.
+재생을 위해 로드 된 단일 기록과 상호 작용 하기 위한 인터페이스입니다.
 
 ```
 public interface ISimulationRecording
@@ -1134,36 +1134,36 @@ public interface ISimulationRecording
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.DataTypes**
+**PerceptionSimulation. ISimulationRecording**
 
-기록에 대 한 데이터 형식의 목록을 검색합니다.
+기록의 데이터 형식 목록을 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.State**
+**PerceptionSimulation. ISimulationRecording**
 
-기록의 현재 상태를 검색합니다.
+기록의 현재 상태를 검색 합니다.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Play**
+**PerceptionSimulation. ISimulationRecording**
 
-재생을 시작 합니다. 재생을 일시 중지 된 위치에서 다시 시작 됩니다 기록을 일시 중지 하는 경우 중지 하는 경우에 재생 시작 부분에서 시작 됩니다. 이미 재생 하는 경우이 호출은 무시 됩니다.
+재생을 시작 합니다. 기록이 일시 중지 된 경우 일시 중지 된 위치에서 재생이 다시 시작 됩니다. 중지 된 경우 재생이 시작 부분에서 시작 됩니다. 이미를 재생 하는 경우이 호출은 무시 됩니다.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Pause**
+**PerceptionSimulation. ISimulationRecording**
 
-현재 위치에 있는 재생 일시 중지합니다. 녹음/녹화 중지 되 면 호출 무시 됩니다.
+현재 위치에서 재생을 일시 중지 합니다. 기록이 중지 되 면 호출은 무시 됩니다.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Seek(System.UInt64)**
+**PerceptionSimulation (ISimulationRecording).**
 
-검색 기록에 지정된 된 시간 (초부터 100 나노초 간격) 및 해당 위치에서 일시 중지 합니다. 시간 기록의 끝 이면 마지막 프레임에서 일시 중지 됩니다.
+지정 된 시간 (시작부터 100 나노초 간격)에 대 한 기록을 검색 하 고 해당 위치에서 일시 중지 합니다. 시간이 기록의 끝을 초과 하면 마지막 프레임에서 일시 중지 됩니다.
 
 매개 변수
-* 틱-검색 하려는 경우.
+* 틱-검색 하는 시간입니다.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Stop**
+**PerceptionSimulation. ISimulationRecording**
 
-재생을 중지 하 고 시작 부분에 위치를 다시 설정 합니다.
+재생을 중지 하 고 위치를 시작 부분으로 다시 설정 합니다.
 
-### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>Microsoft.PerceptionSimulation.ISimulationRecordingCallback
+### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>PerceptionSimulation. ISimulationRecordingCallback
 
-재생 중 상태 변경 내용을 수신 하는 것에 대 한 인터페이스입니다.
+재생 하는 동안 상태 변경을 수신 하기 위한 인터페이스입니다.
 
 ```
 public interface ISimulationRecordingCallback
@@ -1172,16 +1172,16 @@ public interface ISimulationRecordingCallback
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationRecordingCallback.PlaybackStateChanged(Microsoft.PerceptionSimulation.PlaybackState)**
+**PerceptionSimulation. ISimulationRecordingCallback PlaybackStateChanged (PerceptionSimulation Backstate)**
 
-ISimulationRecording 재생 상태가 변경 되 면 호출 됩니다.
+ISimulationRecording의 재생 상태가 변경 될 때 호출 됩니다.
 
 매개 변수
 * newState-기록의 새 상태입니다.
 
-### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.PerceptionSimulationManager
+### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>PerceptionSimulation. PerceptionSimulationManager
 
-Perception 시뮬레이션 개체를 만들기 위한 루트 개체입니다.
+인식 시뮬레이션 개체를 만들기 위한 루트 개체입니다.
 
 ```
 public static class PerceptionSimulationManager
@@ -1192,56 +1192,56 @@ public static class PerceptionSimulationManager
     public static ISimulationRecording LoadPerceptionSimulationRecording(string path, ISimulationStreamSinkFactory factory, ISimulationRecordingCallback callback);
 ```
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationManager(Microsoft.PerceptionSimulation.ISimulationStreamSink)**
+**PerceptionSimulation PerceptionSimulationManager. CreatePerceptionSimulationManager (PerceptionSimulation)**
 
-시뮬레이션 된 패킷을 생성 하 고 제공 된 싱크에서에 게 배달에 대 한 개체를 만듭니다.
+시뮬레이션 된 패킷을 생성 하 여 제공 된 싱크에 전달 하기 위해 개체에를 만듭니다.
 
 매개 변수
-* 싱크-생성 된 모든 패킷의 받을 싱크입니다.
+* sink-생성 된 모든 패킷을 수신 하는 싱크입니다.
 
 반환 값
 
-만든된 관리자입니다.
+만든 관리자입니다.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationRecording(System.String)**
+**PerceptionSimulation PerceptionSimulationManager. CreatePerceptionSimulationRecording (System.string)**
 
-모든 받은 패킷에 지정된 된 경로에 있는 파일에 저장 하는 싱크를 만듭니다.
+받은 모든 패킷을 파일의 지정 된 경로에 저장 하는 싱크를 만듭니다.
 
 매개 변수
-* 경로-만들려는 파일의 경로입니다.
+* path-만들 파일의 경로입니다.
 
 반환 값
 
-만든된 싱크입니다.
+만든 싱크입니다.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording(System.String,Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory)**
+**PerceptionSimulation. PerceptionSimulationManager, LoadPerceptionSimulationRecording (System.string, PerceptionSimulation)**
 
-지정된 된 파일에서 녹음/녹화를 로드 합니다.
+지정 된 파일에서 기록을 로드 합니다.
 
 매개 변수
-* 경로-로드할 파일의 경로입니다.
-* 팩터리-필요한 경우에 ISimulationStreamSink 만들기에 대 한 기록에서 사용 하는 팩터리입니다.
+* path-로드할 파일의 경로입니다.
+* 팩터리-필요할 때 ISimulationStreamSink를 만들기 위해 기록에서 사용 하는 팩터리입니다.
 
 반환 값
 
-로드 된 기록 합니다.
+로드 된 기록입니다.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording (System.String,Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory, Microsoft.PerceptionSimulation.ISimulationRecordingCallback)**
+**PerceptionSimulation (PerceptionSimulationManager, LoadPerceptionSimulationRecording (System.string, PerceptionSimulation) PerceptionSimulation. ISimulationRecordingCallback)**
 
-지정된 된 파일에서 녹음/녹화를 로드 합니다.
+지정 된 파일에서 기록을 로드 합니다.
 
 매개 변수
-* 경로-로드할 파일의 경로입니다.
-* 팩터리-필요한 경우에 ISimulationStreamSink 만들기에 대 한 기록에서 사용 하는 팩터리입니다.
-* 콜백-수신 하는 콜백을 regrading 기록의 상태 업데이트 합니다.
+* path-로드할 파일의 경로입니다.
+* 팩터리-필요할 때 ISimulationStreamSink를 만들기 위해 기록에서 사용 하는 팩터리입니다.
+* 콜백-녹화 상태를 다시 보고 하는 업데이트를 수신 하는 콜백입니다.
 
 반환 값
 
-로드 된 기록 합니다.
+로드 된 기록입니다.
 
-### <a name="microsoftperceptionsimulationstreamdatatypes"></a>Microsoft.PerceptionSimulation.StreamDataTypes
+### <a name="microsoftperceptionsimulationstreamdatatypes"></a>PerceptionSimulation 데이터 형식
 
-다양 한 유형의 스트림 데이터를 설명합니다.
+다양 한 유형의 스트림 데이터를 설명 합니다.
 
 ```
 public enum StreamDataTypes
@@ -1256,35 +1256,35 @@ public enum StreamDataTypes
 }
 ```
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.None**
+**PerceptionSimulation 데이터 형식입니다.**
 
-스트림 데이터 형식이 없습니다를 나타내는 데 센티널 값입니다.
+스트림 데이터 형식이 없음을 나타내는 데 사용 되는 센티널 값입니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Head**
+**PerceptionSimulation. Head**
 
-위치 및 헤드의 방향에 대 한 데이터의 Stream입니다.
+헤드의 위치와 방향에 대 한 데이터 스트림입니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Hands**
+**PerceptionSimulation. 직접**
 
-손으로 제스처와 위치에 대 한 데이터의 Stream입니다.
+바늘의 위치 및 제스처와 관련 된 데이터 스트림입니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.SpatialMapping**
+**PerceptionSimulation. SpatialMapping**
 
-공간 매핑의 환경에 대 한 데이터의 Stream입니다.
+환경의 공간 매핑에 대 한 데이터 스트림입니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Calibration**
+**PerceptionSimulation. 보정**
 
-장치의 보정에 대 한 데이터의 Stream입니다. 보정 패킷 시스템 원격 모드에만 허용 됩니다.
+장치의 보정에 대 한 데이터 스트림입니다. 원격 모드의 시스템 에서만 보정 패킷을 허용 합니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Environment**
+**PerceptionSimulation. 환경**
 
-장치 환경에 대 한 데이터의 Stream입니다.
+장치 환경에 대 한 데이터 스트림입니다.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.All**
+**PerceptionSimulation 데이터 형식**
 
-모든 기록 된 데이터 형식을 나타내는 데 센티널 값입니다.
+기록 된 모든 데이터 형식을 나타내는 데 사용 되는 센티널 값입니다.
 
-### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>Microsoft.PerceptionSimulation.ISimulationStreamSink
+### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>PerceptionSimulation. ISimulationStreamSink
 
 시뮬레이션 스트림에서 데이터 패킷을 수신 하는 개체입니다.
 
@@ -1295,17 +1295,17 @@ public interface ISimulationStreamSink
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationStreamSink.OnPacketReceived(uint length, byte[] packet)**
+**PerceptionSimulation ISimulationStreamSink. OnPacketReceived (uint length, byte [] packet)**
 
-내부적으로 형식화 된 및 버전 관리 된 단일 패킷을 받습니다.
+는 내부적으로 형식화 되 고 버전이 지정 되는 단일 패킷을 받습니다.
 
 매개 변수
-* length-패킷 길이입니다.
-* 패킷 패킷의 데이터입니다.
+* length-패킷의 길이입니다.
+* packet-패킷의 데이터입니다.
 
-### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory
+### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>PerceptionSimulation. ISimulationStreamSinkFactory
 
-ISimulationStreamSink 만들어지는 개체입니다.
+ISimulationStreamSink을 만드는 개체입니다.
 
 ```
 public interface ISimulationStreamSinkFactory
@@ -1314,10 +1314,10 @@ public interface ISimulationStreamSinkFactory
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory.CreateSimulationStreamSink()**
+**PerceptionSimulation ISimulationStreamSinkFactory. CreateSimulationStreamSink ()**
 
 ISimulationStreamSink의 단일 인스턴스를 만듭니다.
 
 반환 값
 
-만든된 싱크입니다.
+만든 싱크입니다.

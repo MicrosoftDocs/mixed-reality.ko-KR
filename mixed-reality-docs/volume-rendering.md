@@ -1,38 +1,38 @@
 ---
 title: 볼륨 렌더링
-description: 대규모 이미지 불투명도 및 전체 화면으로 쉽게 표현할 수 없는 볼륨에 색을 사용 하 여 다양 한 정보를 포함 합니다. Windows Mixed Reality 내에서 대규모 이미지를 효율적으로 렌더링 하는 방법을 알아봅니다.
+description: 대규모 이미지는 화면으로 쉽게 표현할 수 없는 볼륨 전체에서 불투명도 및 색이 포함 된 다양 한 정보를 포함 합니다. Windows Mixed Reality 내에서 대규모 이미지를 효율적으로 렌더링 하는 방법에 대해 알아봅니다.
 author: KevinKennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 대규모 이미지, 볼륨 렌더링, 성능, 혼합된 현실
+keywords: 대규모 이미지, 볼륨 렌더링, 성능, 혼합 현실
 ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604097"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548636"
 ---
 # <a name="volume-rendering"></a>볼륨 렌더링
 
-의료 MRI 볼륨 엔지니어링 참조 하십시오 [wikipedia 볼륨 렌더링](https://en.wikipedia.org/wiki/Volume_rendering)합니다. 이러한 '대규모 이미지' 불투명도 및 전체 볼륨을 쉽게으로 표현할 수 없는 화면 같은 색을 사용 하 여 다양 한 정보를 포함 [다각형 메시](https://en.wikipedia.org/wiki/Polygon_mesh)합니다.
+의료 MRI 또는 엔지니어링 볼륨의 경우 [위키백과에서 볼륨 렌더링](https://en.wikipedia.org/wiki/Volume_rendering)을 참조 하세요. 이러한 ' 대규모 images '에는 [다각형 메시](https://en.wikipedia.org/wiki/Polygon_mesh)와 같이 표면으로 쉽게 표현 될 수 없는 볼륨 전체에서 불투명도 및 색을 사용 하는 다양 한 정보가 포함 되어 있습니다.
 
-성능 향상을 위해 핵심 솔루션
-1. BAD: 순 진하게: 전체 볼륨을 표시, 일반적으로 너무 늦게 실행
-2. 좋은: Cutting 평면: 볼륨의 단일 조각만 표시
-3. 좋은: Cutting 하위 볼륨: 볼륨의 몇 가지 레이어만 표시
-4. 좋은: 볼륨 렌더링의 해상도 낮은 (' 혼합 해상도 장면 렌더링 ' 참조)
+성능 향상을 위한 주요 솔루션
+1. 올바르지 Naive 접근 방식: 일반적으로 너무 느리게 실행 되는 전체 볼륨 표시
+2. 좋음 절삭 평면: 볼륨의 단일 조각만 표시
+3. 좋음 하위 볼륨을 자르는 중: 볼륨의 일부 레이어만 표시
+4. 좋음 볼륨 렌더링 해상도 낮추기 (' 혼합 해상도 장면 렌더링 ' 참조)
 
-특정 프레임에서 화면으로 응용 프로그램에서 전송 될 수 있는 정보의 특정 메모리만 총 메모리 대역폭입니다. 또한 프레젠테이션에 대 한 데이터를 변환 하는 데 필요한 모든 처리 (또는 '음영') 시간도 필요 합니다. 볼륨 렌더링을 수행할 때 주요 고려 사항은 아래와 같이:
-* 화면 너비 * 화면 높이 * 화면 수 * 볼륨 계층-에-는-픽셀 별 총-볼륨-샘플-프레임당 =
-* 1028 * 720 * 2 * 256 = 378961920 (100%) (전체 res 볼륨: 너무 많은 샘플)
-* 1028 * 720 * 2 * 1 = 1480320 (전체 %0.3) (씬 조각: 픽셀당 1 샘플 원활 하 게 실행 됨)
-* 1028 * 720 * 2 * 10 = 14803200 (전체 3.9%) (하위 볼륨 조각: 픽셀 당 10 개 샘플 매우 원활 하 게 실행, 3d 표시)
-* 200 * 200 * 2 * 256 = 20480000 (전체의 5%) (res 볼륨 낮춤: 적은 픽셀 전체 볼륨은 3d 하지만 약간 blury)
+응용 프로그램에서 특정 프레임의 화면으로 전송 될 수 있는 정보에는 총 메모리 대역폭이 있습니다. 또한 프레젠테이션에 대 한 데이터를 변환 하는 데 필요한 모든 처리 (또는 ' 음영 ')도 시간이 필요 합니다. 볼륨 렌더링을 수행할 때 기본적인 고려 사항은 다음과 같습니다.
+* 화면 너비 * 화면 높이 * 화면 수 * 볼륨-계층-픽셀 = 전체-볼륨-프레임 당 샘플 수
+* 1028 * 720 * 2 * 256 = 378961920 (100%) (전체 res 볼륨: 샘플이 너무 많음)
+* 1028 * 720 * 2 * 1 = 1480320 (전체의 0.3%) (씬 조각: 픽셀당 1 개 샘플, 부드럽게 실행 됨)
+* 1028 * 720 * 2 * 10 = 14803200 (전체의 3.9%) (하위 볼륨 조각: 픽셀당 10 개 샘플, 매우 원활 하 게 실행, 3d 표시
+* 200 * 200 * 2 * 256 = 2048만 (전체의 5%) (더 낮은 res 볼륨: 더 적은 픽셀, 전체 볼륨, 3d로 보이지만 비트 blury)
 
-## <a name="representing-3d-textures"></a>3D 텍스처를 나타내는
+## <a name="representing-3d-textures"></a>3D 질감 표시
 
-Cpu:
+CPU:
 
 ```
 public struct Int3 { public int X, Y, Z; /* ... */ }
@@ -67,7 +67,7 @@ public struct Int3 { public int X, Y, Z; /* ... */ }
  }
 ```
 
-Gpu:
+GPU:
 
 ```
 float3 _VolBufferSize;
@@ -87,7 +87,7 @@ float3 _VolBufferSize;
 
 ## <a name="shading-and-gradients"></a>음영 및 그라데이션
 
-한 볼륨에서 MRI, 같은 유용한 시각화를 위해 음영 처리 하는 방법입니다. 기본 방법은 '강도 창이' 하도록 (min 및 max), 강도 보고 단순히 흑백 강도 확인 하려면 해당 공간으로 확장 하려는 합니다. '색 진입' 해당 범위 내의 값에 적용 및 강도 스펙트럼의 다른 부분에는 서로 다른 색 음영 처리 된 수 있도록 질감으로 저장 될 수 있습니다.
+유용한 시각화를 위해 MRI와 같은 볼륨을 음영 처리 하는 방법입니다. 기본 방법은 강도를 보려는 ' 강도 창 ' (최소 및 최대)을 보유 하는 것이 고, 해당 공간으로 크기를 조정 하 여 검정색과 백색 강도를 확인 하는 것입니다. 그러면 ' 색 램프 '가 해당 범위 내에 있는 값에 적용 되 고 질감으로 저장 될 수 있으므로 강도 스펙트럼의 각 부분이 서로 다른 색으로 음영 처리 될 수 있습니다.
 
 ```
 float4 ShadeVol( float intensity ) {
@@ -98,16 +98,16 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-대부분의 원시 강도 값과 '구분 인덱스'는 볼륨에 저장 하는 것이 응용 프로그램 (다른 파트를 같은 분할 스킨 및 뼈 이러한 세그먼트는 일반적으로 생성의 전용된 도구 전문가가). 다른 색 이나 각 세그먼트는 인덱스에 대 한 다른 색 진입 삽입할 위 방법을 함께 사용할 수 있습니다.
+많은 응용 프로그램에서 원시 강도 값과 ' 조각화 인덱스 '를 모두 볼륨에 저장 합니다 (스킨 및 뼈와 같은 여러 부분을 분할 하기 위해 이러한 세그먼트는 일반적으로 전용 도구의 전문가에 의해 만들어짐). 위의 방법으로 결합 하 여 다른 색 이나 각 세그먼트 인덱스 마다 다른 색 램프를 적용할 수 있습니다.
 
 ```
 // Change color to match segment index (fade each segment towards black):
  color.rgb = SegmentColors[ segment_index ] * color.a; // brighter alpha gives brighter color
 ```
 
-## <a name="volume-slicing-in-a-shader"></a>셰이더에서 조각화 하는 볼륨
+## <a name="volume-slicing-in-a-shader"></a>셰이더의 볼륨 조각화
 
-훌륭한 첫 번째 단계에서 "조각화 평면"를 만들 때 볼륨에서 이동할 수는 ' 해당 '와 각 지점에서 값을 검색 하는 방법. 이 요소를 배치에 대 한 참조로 사용할 수 있는 세계 좌표 공간에서 볼륨이 있는 나타내는 'VolumeSpace' 큐브에 있다고 가정 합니다.
+첫 번째 단계는 볼륨을 이동 하 고, ' 조각화 ' 하 고, 각 지점에서 값을 검색 하는 방법을 "조각화 평면"을 만드는 것입니다. 여기서는 볼륨이 세계 공간에 있는 위치를 나타내는 ' VolumeSpace ' 큐브가 있다고 가정 합니다 .이는 요소를 배치 하기 위한 참조로 사용할 수 있습니다.
 
 ```
 // In the vertex shader:
@@ -122,7 +122,7 @@ float4 ShadeVol( float intensity ) {
 
 ## <a name="volume-tracing-in-shaders"></a>셰이더에서 볼륨 추적
 
-GPU를 사용 하 여 하위 볼륨 추적 (거닐거나 소수의 voxels 심층 다음 계층 데이터 뒤에서 앞으로)를 수행 하는 방법:
+GPU를 사용 하 여 하위 볼륨 추적을 수행 하는 방법 (voxels를 통해 데이터에 대 한 몇 가지 계층 구조를 차례로 이동):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>전체 볼륨 렌더링
 
-위의 하위 볼륨 코드 수정 가져옵니다.
+위의 하위 볼륨 코드를 수정 하면 다음을 얻게 됩니다.
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -177,15 +177,15 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
    int numLoops = min( distanceInVoxels, maxSamples ); // put a min on the voxels to sample
 ```
 
-## <a name="mixed-resolution-scene-rendering"></a>혼합 된 확인 장면 렌더링
+## <a name="mixed-resolution-scene-rendering"></a>혼합 해상도 장면 렌더링
 
-낮은 해상도 사용 하 여 장면의 일부를 렌더링 하 고 현재 위치에 배치 하는 방법:
-1. 각 프레임을 업데이트 하는 각 눈을 수행 하려면 하나 두 화면 밖에 카메라 설정
-2. 이 카메라를 렌더링 하는 저해상도 두 설치 렌더링 대상 (예: 200x200 각),
-3. 사용자 앞에 이동 하는 쿼드를 설정 합니다.
+낮은 해상도로 장면의 일부를 렌더링 하 고 다시 배치 하는 방법입니다.
+1. 각 프레임을 업데이트 하는 각 눈에 따라 하나씩, 두 개의 오프 스크린 카메라를 설정 합니다.
+2. 카메라에서 렌더링 하는 두 가지 저해상도 렌더링 대상 (각각 200 x 200)을 설정 합니다.
+3. 사용자 앞으로 이동 하는 쿼드 설정
 
 각 프레임:
-1. 저해상도에 눈 마다 렌더링 대상 그리기 (예: 볼륨 데이터, 비용이 많이 드는 셰이더)
-2. 일반적으로 전체 해상도로 장면을 그리는 (메시, UI 등.)
-3. 사용자가 앞에 쿼드 장면 위에 그리고는 저해상도 렌더링 프로젝션 합니다.
-4. 결과: 저해상도 이지만 고밀도 볼륨 데이터를 사용 하 여 고해상도 요소의 시각적 조합입니다.
+1. 저해상도 (볼륨 데이터, 비용이 많이 드는 셰이더 등)에서 각 눈에 대 한 렌더링 대상을 그립니다.
+2. 정상적으로 장면을 전체 해상도 (메시, UI 등)로 그리기
+3. 장면에 대해 사용자 앞에 쿼드를 그리고이에 해당 하는 하위 res 렌더링을 프로젝션 합니다.
+4. 결과: 저해상도 이지만 고밀도 볼륨 데이터로 전체 해상도 요소를 시각적으로 조합 합니다.

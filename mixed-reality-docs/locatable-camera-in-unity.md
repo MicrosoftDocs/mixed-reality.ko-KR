@@ -1,47 +1,47 @@
 ---
-title: Unity에서 찾을 수 있는 카메라
-description: HoloLens Unity에서 찾을 수 있는 카메라 사용 합니다.
+title: Unity의 과정이 카메라
+description: Unity의 HoloLens 과정이 카메라 사용입니다.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 사진, 비디오, hololens, 카메라, unity, 찾을 수 있는
+keywords: 사진, 비디오, hololens, 카메라, unity, 과정이
 ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601770"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515443"
 ---
-# <a name="locatable-camera-in-unity"></a>Unity에서 찾을 수 있는 카메라
+# <a name="locatable-camera-in-unity"></a>Unity의 과정이 카메라
 
-## <a name="enabling-the-capability-for-photo-video-camera"></a>사진 비디오 카메라에 대 한 기능을 사용 하도록 설정
+## <a name="enabling-the-capability-for-photo-video-camera"></a>사진 비디오 카메라 기능 사용
 
-"웹캠" 기능을 사용 하는 앱에 대 한 선언 해야 합니다 [카메라](locatable-camera.md)합니다.
-1. Unity 편집기에서 "> 프로젝트 설정 > Player 편집" 페이지로 이동 하 여 플레이어 설정으로 이동 합니다.
-2. "Windows Store" 탭을 클릭
-3. "게시 설정 > 기능" 섹션을 확인 합니다 **웹캠** 하 고 **마이크** 기능
+[카메라](locatable-camera.md)를 사용 하려면 앱에 대해 "웹캠" 기능을 선언 해야 합니다.
+1. Unity 편집기에서 "> 프로젝트 설정 > 플레이어 편집" 페이지로 이동 하 여 플레이어 설정으로 이동 합니다.
+2. "Windows 스토어" 탭을 클릭 합니다.
+3. "게시 설정 > 기능" 섹션에서 **웹캠** 및 **마이크** 기능을 확인 합니다.
 
-단일 작업을 한 번에 카메라를 사용 하 여 발생할 수 있습니다. (사진, 비디오 또는 없음) 모드에서 카메라를 현재 결정할 UnityEngine.XR.WSA.WebCam.Mode를 확인할 수 있습니다.
+카메라에서는 한 번에 하나의 작업만 수행할 수 있습니다. 카메라의 현재 모드 (사진, 비디오 또는 없음)를 확인 하려면 UnityEngine. XR을 확인할 수 있습니다.
 
 ## <a name="photo-capture"></a>사진 캡처
 
-**Namespace:** *UnityEngine.XR.WSA.WebCam*<br>
-**형식:** *PhotoCapture*
+**공간** *UnityEngine. XR*<br>
+**입력할** *사진 캡처*
 
-합니다 *PhotoCapture* 유형을 사진 사진 비디오 카메라를 사용 하 여 계속 수행할 수 있습니다. 사용 하 여 일반적인 패턴 *PhotoCapture* 사진을 촬영 하는 다음과 같습니다.
-1. 만들기는 *PhotoCapture* 개체
-2. 만들기는 *CameraParameters* 원하는 설정 사용 하 여 개체
-3. 시작을 통해 사진 모드 *StartPhotoModeAsync*
-4. 원하는 찍기
-    * (선택 사항) 해당 그림이 상호 작용
-5. 사진 모드를 중지 하 고 리소스 정리
+사진 *캡처* 유형을 사용 하면 사진 비디오 카메라와 사진을 계속 사용할 수 있습니다. 사진 *캡처* 를 사용 하 여 사진을 촬영 하는 일반적인 패턴은 다음과 같습니다.
+1. *사진 캡처* 개체 만들기
+2. 원하는 설정을 사용 하 여 *CameraParameters* 개체를 만듭니다.
+3. *Startphoto Modeasync* 를 통해 사진 모드 시작
+4. 원하는 사진 가져오기
+    * 필드 해당 사진과 상호 작용
+5. 사진 모드 중지 및 리소스 정리
 
-### <a name="common-set-up-for-photocapture"></a>일반적인 설정 PhotoCapture
+### <a name="common-set-up-for-photocapture"></a>사진 캡처에 대 한 일반적인 설정
 
-같은 위의 처음 3 단계 먼저 모든 세 가지 용도로
+세 가지 용도 모두에서 위의 동일한 첫 3 단계부터 시작 합니다.
 
-만드는 것으로 시작 된 *PhotoCapture* 개체
+먼저 *사진 캡처* 개체를 만듭니다.
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-다음은 개체를 저장, 매개 변수를 설정 하 고 사진 모드를 시작 합니다.
+다음으로 개체를 저장 하 고, 매개 변수를 설정 하 고, 사진 모드를 시작 합니다.
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -70,7 +70,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
    }
 ```
 
-마지막으로도 사용 하 여 여기에 제시 된 코드 정리 동일한
+끝으로 여기에 제공 된 동일한 정리 코드를 사용 합니다.
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -80,13 +80,13 @@ void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-이러한 단계 후 캡처하는 사진 유형을 선택할 수 있습니다.
+이러한 단계를 수행 하 고 나면 캡처할 사진 유형을 선택할 수 있습니다.
 
-### <a name="capture-a-photo-to-a-file"></a>파일에 사진을 캡처합니다
+### <a name="capture-a-photo-to-a-file"></a>파일에 사진 캡처
 
-가장 간단한 작업이 파일에 직접 사진을 캡처하는 것입니다. JPG 또는 PNG 사진을 저장할 수 있습니다.
+가장 간단한 작업은 파일에 직접 사진을 캡처하는 것입니다. 사진은 JPG 또는 PNG로 저장할 수 있습니다.
 
-사진 모드를 성공적으로 시작 하는 경우 이제 사진을 촬영 하 고 디스크에 저장
+사진 모드를 성공적으로 시작 하는 경우 이제 사진을 사용 하 고 디스크에 저장 합니다.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -105,7 +105,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-디스크에 사진을 캡처한 후 사진 모드를 종료 하 고이 개체 정리
+사진을 디스크로 캡처한 후 사진 모드를 종료 하 고 개체를 정리 합니다.
 
 ```cs
 void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
@@ -122,13 +122,13 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-### <a name="capture-a-photo-to-a-texture2d"></a>캡처는 Texture2D에 사진
+### <a name="capture-a-photo-to-a-texture2d"></a>Texture2D에 사진 캡처
 
-Texture2D 데이터를 캡처할 때 프로세스를 디스크에 캡처하기 매우 비슷합니다.
+Texture2D으로 데이터를 캡처할 때 프로세스는 디스크에 캡처하는 것과 매우 비슷합니다.
 
-위 프로세스 설정을 따릅니다.
+위의 설정 프로세스를 따릅니다.
 
-*OnPhotoModeStarted*를 메모리에 프레임을 캡처합니다 됩니다.
+*Onsale Modestarted*에서 메모리에 프레임을 캡처합니다.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-다음 질감에 결과 적용 하 고 일반적인 위의 코드 정리를 사용 합니다.
+그런 다음 결과를 질감에 적용 하 고 위의 일반적인 정리 코드를 사용 합니다.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -163,11 +163,11 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
    }
 ```
 
-### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>원시 바이트를 사용 하 여 사진 및 상호 작용을 캡처
+### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>사진 캡처 및 원시 바이트 조작
 
-메모리 내의 원시 바이트를 조작할 프레임을 따르 설정 단계 위와 동일 및 *OnPhotoModeStarted* 사진을 캡처하는 Texture2D와 같이 합니다. 차이점은 *OnCapturedPhotoToMemory* 에서는 수 원시 바이트를 가져오기 하 고 상호 작용 합니다.
+메모리 프레임에 있는 원시 바이트와 상호 작용 하려면 Texture2D에 대 한 사진 캡처 *에서와 같이* 위와 동일한 설정 단계를 수행 합니다. 차이점은 원시 바이트를 가져와 상호 작용할 수 있는 *OnCapturedPhotoToMemory* 입니다.
 
-이 예제에서는 만듭니다는 *목록<Color>*  추가 될 수 있는 처리 또는 통해 질감을 적용할 *SetPixels()*
+이 예제에서는 *setpixels ()* 을 통해 텍스처에 추가로 처리 하거나 적용할 수 있는 *목록을<Color>*  만듭니다.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -202,18 +202,18 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>비디오 캡처
 
-**Namespace:** *UnityEngine.XR.WSA.WebCam*<br>
-**형식:** *VideoCapture*
+**공간** *UnityEngine. XR*<br>
+**입력할** *VideoCapture*
 
-*VideoCapture* 기능이 매우 비슷한 *PhotoCapture*합니다. 두 개의 차이가 프레임 당 두 번째 (FPS) 값을 지정 해야 하 고. mp4 파일로 디스크에 직접 저장할 수 있습니다. 사용 하는 단계 *VideoCapture* 는 다음과 같습니다.
-1. 만들기는 *VideoCapture* 개체
-2. 만들기는 *CameraParameters* 원하는 설정 사용 하 여 개체
-3. 비디오 모드를 통해 시작 *StartVideoModeAsync*
+*VideoCapture* 은 *사진 캡처와*매우 유사 하 게 작동 합니다. 두 가지 차이점은 FPS (초당 프레임 수) 값을 지정 해야 하 고, mp4 파일로는 디스크에 직접 저장 하는 것입니다. *VideoCapture* 를 사용 하는 단계는 다음과 같습니다.
+1. *VideoCapture* 개체 만들기
+2. 원하는 설정을 사용 하 여 *CameraParameters* 개체를 만듭니다.
+3. *Startvideomodeasync* 를 통해 비디오 모드 시작
 4. 비디오 녹화 시작
 5. 비디오 녹화 중지
-6. 비디오 모드를 중지 하 고 리소스 정리
+6. 비디오 모드 중지 및 리소스 정리
 
-만드는 것으로 시작 우리의 *VideoCapture* 개체 *VideoCapture m_VideoCapture = null;*
+먼저 *VideoCapture* 개체 *VideoCapture m_VideoCapture = null* 을 만듭니다.
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-에서는 다음을 설정 기록 및 시작에 사용 하려는 매개 변수입니다.
+그런 다음 기록 하 고 시작 하는 데 사용할 매개 변수를 설정 합니다.
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -252,7 +252,7 @@ void OnVideoCaptureCreated (VideoCapture videoCapture)
    }
 ```
 
-녹음/녹화 시작 되 면 예정
+시작 되 면 기록을 시작 합니다.
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-기록 시작 된 후 중지를 사용 하도록 설정 하려면 UI 또는 동작을 업데이트할 수 있습니다. 여기에서는 로그인
+기록이 시작 된 후에는 중지할 수 있도록 UI 나 동작을 업데이트할 수 있습니다. 다음 로그만
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-나중에 기록을 중지 하려고 됩니다. 이 타이머 또는 사용자 입력을 예를 들어에서 발생할 수 있습니다.
+이후 시점에서 기록을 중지할 것입니다. 이는 예를 들어 타이머 또는 사용자 입력에서 발생할 수 있습니다.
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-녹음/녹화를 중지 되 고 나면 비디오 모드를 중지 하 고 리소스를 정리 합니다.
+기록이 중지 된 후에는 비디오 모드를 중지 하 고 리소스를 정리 합니다.
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -304,8 +304,8 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
 ```
 
 ## <a name="troubleshooting"></a>문제 해결
-* 사용할 수 없는 해결 방법
-    * 확인 합니다 **웹캠** 기능 프로젝트에 지정 됩니다.
+* 사용 가능한 해결 방법이 없습니다.
+    * **웹캠** 기능이 프로젝트에 지정 되어 있는지 확인 합니다.
 
 ## <a name="see-also"></a>관련 항목
-* [찾을 수 있는 카메라](locatable-camera.md)
+* [위치를 찾을 수 있는 카메라](locatable-camera.md)
