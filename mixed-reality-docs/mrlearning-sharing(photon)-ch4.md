@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293698"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460326"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 개체 이동 공유
 
@@ -50,7 +50,7 @@ ms.locfileid: "68293698"
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. 프로젝트 뷰에서 자산-> 리소스-> Prefabs로 이동 합니다. 먼저 prefab 테이블을 PhotonRoom 클래스의 Tableprefab 슬롯으로 끌어 놓습니다. 그런 다음 LunarModule prefab를 PhotonRoom 클래스의 모듈 Prefab 슬롯에 끌어서 놓습니다.
+7. 프로젝트 뷰에서 자산-> 리소스-> Prefabs로 이동 합니다. 먼저 prefab 테이블을 PhotonRoom 클래스의 Tableprefab 슬롯으로 끌어 놓습니다. 그런 다음, RocketLauncherCompleteVariantprefab를 PhotonRoom 클래스의 모듈 Prefab 슬롯에 끌어서 놓습니다.
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ ms.locfileid: "68293698"
 10. 계층에서 새 개체를 선택한 상태에서 개체의 이름을 Inspector 패널의 TableAnchor로 변경 합니다. 또한 구성 요소 추가를 클릭 하 고 TableAnchor 구성 요소를 검색 합니다. 이를 선택 하 고 개체에 추가 합니다. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> 참고: 위치를 x = 1, y =-0.55 및 z = 2로 설정 합니다. 또한 회전을 y = 90으로 설정 합니다. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. 이제 Prefabs 폴더의 프로젝트 패널에서 prefab 테이블을 방금 만든 "TableAnchor" 자식 개체로 끌어 옵니다.
 
