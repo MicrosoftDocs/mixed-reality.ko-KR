@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387696"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485701"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. 3D 개체와 상호 작용
 
@@ -202,8 +202,8 @@ ms.locfileid: "68387696"
 
 ![Lesson4 Chapter4 Step3 5 Noteim](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
-### <a name="congratulations"></a>축하합니다. 
+## <a name="congratulations"></a>축하합니다. 
 이 자습서에서는 그리드 컬렉션에서 3D 개체를 구성 하는 방법 및 거의 상호 작용 (추적 된 손으로 직접 이동) 및 먼 상호 작용 (응시 광선 또는 핸드 광선 사용)을 사용 하 여 3D 개체 (크기 조정, 회전 및 이동)를 조작 하는 방법을 배웠습니다. 3D 개체 주위에 경계 상자를 배치 하는 방법 및 경계 상자에서 gizmo 그리려면를 사용 하 고 사용자 지정 하는 방법을 배웠습니다. 마지막으로 개체를 터치할 때 이벤트를 트리거하는 방법을 알아보았습니다.
 
-[다음 단원: 고급 입력](mrlearning-base-ch5.md)
+[다음 단원: 6. 고급 입력 옵션 탐색](mrlearning-base-ch5.md)
 

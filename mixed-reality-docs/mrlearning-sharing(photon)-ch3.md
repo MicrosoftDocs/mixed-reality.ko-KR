@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 53519d7bb2832fe8ce500f1ee146c91488b09366
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293661"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485666"
 ---
-# <a name="connecting-multiple-users"></a>여러 사용자 연결
+# <a name="3-connecting-multiple-users"></a>3. 여러 사용자 연결
 
 이 단원에서는 라이브 공유 환경의 일부로 여러 사용자를 연결 하는 방법에 대해 알아봅니다. 이 단원의 끝에는 여러 장치에서 응용 프로그램을 열고, 연결 된 각 사용자의 표현으로 표현 된 아바타를 볼 수 있습니다. 
 
@@ -23,7 +23,7 @@ ms.locfileid: "68293661"
 - 플레이어 구성
 - 공유 환경에서 여러 사용자를 연결 하는 방법 알아보기
 
-### <a name="instructions"></a>지침
+## <a name="instructions"></a>지침
 
 1. 프로젝트 패널의 자산-> 리소스-> Prefabs 폴더에서 아래 이미지에 표시 된 것 처럼 NetworkLobby prefab을 계층으로 끌어 놓습니다.
 
@@ -72,5 +72,5 @@ ms.locfileid: "68293661"
 
 위의 모든 단계를 완료 하 고 빌드 프로세스도 완료 되 면 재생 단추를 누르고 HoloLens 2를 연결 합니다. 헤드를 이동 하면 구가 이동 하는 것을 볼 수 있습니다. Unity 프로젝트를 조인 하는 모든 사용자에 대해 표시 됩니다.
 
-[다음 단원: 공유 (Photon) 단원 4](mrlearning-sharing(photon)-ch4.md)
+[다음 단원: 4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)
 

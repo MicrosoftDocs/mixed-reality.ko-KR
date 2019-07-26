@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293814"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485769"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
 
@@ -199,5 +199,5 @@ ParentAnchor prefab에 익숙해져야 합니다. 현재, ParentAnchor 라는 �
 ## <a name="congratulations"></a>축하합니다.
 이 자습서에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 이 esson에서는 Azure 세션을 시작 및 중지 하 고 단일 장치에서 azure 앵커를 만들고, 업로드 하 고, 다운로드 하는 데 필요한 다양 한 단계를 살펴볼 수 있는 몇 가지 단추를 제공 했습니다. 다음 단원에서는 응용 프로그램을 다시 시작한 후에도 검색을 위해 HoloLens 2에 Azure 앵커 Id를 저장 하는 방법에 대해 알아봅니다. 시리즈를 사용 하는 동안에는 여러 장치 간에 앵커 Id를 전송 하 여 공간 맞춤을 수행 하는 방법과 공유 자습서의 일부로 서 사용자가 사용할 수 있는 다중 사용자 공유 세션에 대해 알아봅니다.
 
-[다음 단원: GLOBAL.ASA 단원 2](mrlearning-asa-ch2.md)
+[다음 단원: 2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
 

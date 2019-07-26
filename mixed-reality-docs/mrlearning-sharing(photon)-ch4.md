@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460326"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485667"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 개체 이동 공유
 
@@ -23,7 +23,7 @@ ms.locfileid: "68460326"
 - 3D 모델의 움직임을 공유 하도록 프로젝트를 구성 합니다.
 - 기본 다중 사용자 공동 작업 응용 프로그램을 빌드하는 방법 알아보기
 
-### <a name="instructions"></a>지침
+## <a name="instructions"></a>지침
 
 
 1. 이전 단원 (컨트롤 + S)의 장면을 저장 합니다. 필요할 때 더 쉽게 찾을 수 있도록 이름을 HLSharedProjectMainPart4으로 지정할 수 있습니다.
@@ -85,5 +85,5 @@ ms.locfileid: "68460326"
 
 다음 단원을 진행 하기 전에이를 공유 환경에 통합 하기 위해 필요한 기본 사항, Azure 계정 및 리소스 생성 및 기타 기본 빌딩 블록을 다루는 GLOBAL.ASA 학습 모듈을 완료 해야 합니다.
 
-[다음 단원: 공유 (Photon) 단원 5](mrlearning-sharing(photon)-ch5.md)
+[다음 단원: 5. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch5.md)
 

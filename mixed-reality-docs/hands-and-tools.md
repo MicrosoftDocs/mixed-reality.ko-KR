@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: 혼합 현실, 손, 동작 제어, 상호 작용, 디자인
-ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: b6efb0a9651cad8eee9b80bb130aa1a85b9a9941
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039172"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507864"
 ---
 # <a name="hands-and-motion-controllers"></a>직접 및 동작 컨트롤러
 ## <a name="scenarios"></a>시나리오
@@ -32,9 +32,11 @@ ms.locfileid: "66039172"
 이를 통해 사용자는 거리가 holograms 상호 작용할 수 있습니다. 사용자가 주변 환경을 최대한 활용할 수 있도록 합니다. 사용자는 어디 든 지 holograms를 배치할 수 있으며 모든 거리에서 계속 액세스할 수 있습니다. 2D 및 3D holograms을 제어 하 고 조작 하기 위한 멘 탈 모델 및 제스처는 직접 조작의 경우와 매우 동기화 됩니다.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[모션 컨트롤러](motion-controllers.md)
-동작 컨트롤러는 하나 또는 두 손을 모두 사용 하는 동시에 다 수의 거리에서 정확한 상호 작용을 제공 하 여 사용자의 물리적 기능을 확장 하는 도구입니다. 이러한 하드웨어 액세서리는 널리 사용 되는 다양 한 상호 작용에 대 한 바로 가기를 제공 하 고 다양 한 작업에 대 한 tactile 피드백을 제공 합니다. 현재 동작 컨트롤러는 WMR 시나리오 에서만 사용할 수 있습니다. 
+동작 컨트롤러는 하나 또는 두 손을 모두 사용 하는 동시에 다 수의 거리에서 정확한 상호 작용을 제공 하 여 사용자의 물리적 기능을 확장 하는 도구입니다. 이러한 하드웨어 액세서리는 널리 사용 되는 다양 한 상호 작용에 대 한 바로 가기를 제공 하 고 다양 한 작업에 대 한 tactile 피드백을 제공 합니다. 현재 동작 컨트롤러는 WMR (Windows Mixed Reality) 시나리오 에서만 사용할 수 있습니다. 
 
-![](images/Hands-and-controllers-720px.jpg)<br>
+![손 및 동작 컨트롤러의 비교 소프트웨어나](images/Hands-and-controllers-720px.jpg)<br>
+
+*손 및 동작 컨트롤러의 비교 소프트웨어나*
 
 ## <a name="see-also"></a>참조
 * [헤드 게이즈 및 커밋](gaze-and-commit.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293794"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485737"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Azure 공간 앵커 저장, 검색 및 공유
 
@@ -81,5 +81,5 @@ ms.locfileid: "68293794"
 
 다음 단원에서는 사용자에 게 실시간 피드백을 제공 하는 방법에 대해 알아봅니다. 이 피드백에는 앵커 만들기, 환경 이해의 품질 및 Azure 세션의 상태에 대 한 정보가 포함 됩니다. 피드백을 사용 하지 않으면 사용자는 앵커가 Azure에 성공적으로 업로드 되었는지 여부, 환경 품질이 앵커 만들기에 충분 한지 아니면 현재 상태 인지를 모를 수 있습니다.
 
-[다음 단원: GLOBAL.ASA 자습서 3](mrlearning-asa-ch3.md)
+[다음 단원: 3. Azure 공간 고정 피드백 표시](mrlearning-asa-ch3.md)
 

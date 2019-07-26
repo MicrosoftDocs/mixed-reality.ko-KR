@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293809"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485730"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Azure 공간 고정 피드백 표시
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Azure 공간 고정 피드백 표시
 
 이 단원에서는 Azure 공간 앵커를 사용할 때 앵커 검색, 이벤트 및 상태에 대 한 피드백을 사용자에 게 제공 하는 방법에 대해 알아봅니다.
 
-목표로
+## <a name="objectives"></a>목표
 
 * 현재 GLOBAL.ASA 세션에 대 한 중요 한 정보를 표시 하는 UI 패널을 설정 하는 방법을 알아봅니다.
 

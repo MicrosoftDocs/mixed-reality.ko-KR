@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Unity를 개발할 준비 하는 중 
+# <a name="2-getting-unity-ready-for-development"></a>2. Unity를 개발할 준비 하는 중 
 
 
 이 자습서에서는 Mixed Reality Toolkit 가져오기, 빌드 설정 구성, 장면 준비를 포함 하 여 응용 프로그램 개발을 위해 Unity를 준비 하 고 구성 하는 방법에 대해 알아봅니다.
@@ -11,7 +11,7 @@
 
 - 프로젝트 장면 준비
 
-### <a name="instructions"></a>지침
+## <a name="instructions"></a>지침
 
 1. 여기를 클릭 하 여 Mixed Reality Toolkit unity 패키지를 다운로드 하 고 저장 [합니다.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@
 
 이제 Unity 프로젝트를 Photon 준비가 되었습니다. 향후 자습서에서는이 장면 및 Unity 프로젝트를 전체 공유 환경에 구축 합니다.
 
-[다음 자습서: 여러 사용자 연결](mrlearning-sharing(photon)-ch3.md)
+[다음 자습서: 3. 여러 사용자 연결](mrlearning-sharing(photon)-ch3.md)
 

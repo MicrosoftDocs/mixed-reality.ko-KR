@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: f9da038fe917e9e45b386de54049d6aa312ecfba
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387781"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485707"
 ---
-# <a name="6exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
+# <a name="6-exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
 
 이 자습서에서는 음성 명령, 패닝 제스처 및 눈 추적 사용을 포함 하 여 HoloLens 2에 대 한 몇 가지 고급 입력 옵션을 살펴봅니다. 
 
@@ -198,8 +198,9 @@ ms.locfileid: "68387781"
 6. HoloLens 2로 빌드하기 전에 시선 추적 기능이 제대로 구성되었는지 확인합니다. 이 문서를 작성할 당시에는 Unity에 눈길 추적 기능에 대 한 응시 입력을 설정 하는 기능이 아직 없습니다. 이 기능을 설정 하는 것은 HoloLens 2에서의 아이 추적이 작동 하는 데 필요 합니다. 응시 입력 기능을 사용하도록 설정하려면 Mixed Reality Toolkit 설명서에서 다음 지침을 따르세요. https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
 
 
-### <a name="congratulations"></a>축하합니다. 
+## <a name="congratulations"></a>축하합니다.
+
 응용 프로그램에 기본 눈 추적 기능을 추가 했습니다. 이러한 작업은 시선 추적 기능 활용의 시작에 불과합니다. 이 장에서는 음성 명령, 패닝 제스처 및 눈 추적 등 고급 입력 기능에 대해 배운 5 단원도 마무리 합니다. 
 
-[다음 단원: 달착륙선 어셈블리 샘플 환경](mrlearning-base-ch6.md)
+[다음 단원: 7. 달착륙선 샘플 애플리케이션 만들기](mrlearning-base-ch6.md)
 

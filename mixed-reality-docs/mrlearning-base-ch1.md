@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387788"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485720"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 응용 프로그램 초기화
 
@@ -112,4 +112,4 @@ ms.locfileid: "68387788"
 
 >참고: [5단원](mrlearning-base-ch5.md)의 음성 명령을 사용하여 프레임 속도 카운터를 설정/해제하는 방법을 알아봅니다.
 
-[다음 단원: 사용자 인터페이스, 직접 추적 및 혼합 현실 도구 키트 구성](mrlearning-base-ch2.md)
+[다음 단원: 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성](mrlearning-base-ch2.md)

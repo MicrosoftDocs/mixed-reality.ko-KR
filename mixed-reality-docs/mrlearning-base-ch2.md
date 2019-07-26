@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 5275e862d2dec78c98510f754162961c80e9e4b8
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387718"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485752"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성 
 
@@ -167,8 +167,8 @@ Grid 개체 컬렉션 구성 요소를 사용 하면 간단한 행, 열 또는 �
 
 ![Lesson2 Chapter4 Step5](images/Lesson2_Chapter4_Step5.JPG)
 
-### <a name="congratulations"></a>축하합니다.
+## <a name="congratulations"></a>축하합니다.
 이 단원에서는 MRTK 프로필 설정(예: 공간 인식 메시 표시 유형)을 복사, 사용자 지정 및 구성하는 방법을 알아보았습니다. HoloLens 2에서 추적되는 손을 사용하여 단추와 상호 작용하고 이벤트 트리거하는 방법도 알아보았습니다. 마지막으로 Grid Object Collection 구성 요소인 Unity의 Text Mesh Pro를 사용하여 간단한 UI 인터페이스를 만드는 방법을 알아보았습니다.
 
-[다음 단원: 동적 콘텐츠 배치 및 해결기](mrlearning-base-ch3.md)
+[다음 단원: 4. 동적 콘텐츠 배치 및 해결기 사용](mrlearning-base-ch3.md)
 

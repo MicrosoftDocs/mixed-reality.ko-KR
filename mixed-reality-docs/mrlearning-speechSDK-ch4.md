@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 0cffb9ac8f61f77b77fc5925264b95ba57d94ece
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b434b9c79a702067a9c3db6fb25b0f75cdc6030d
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460343"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485786"
 ---
-# <a name="speech-sdk-learning-module---intent-and-natural-language-understanding"></a>음성 SDK 학습 모듈-의도 및 자연 Language Understanding
+# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. 의도 및 자연어 이해 설정
 
 이 단원에서는 Azure Speech Service의 의도 기능을 살펴봅니다. 의도 기능을 사용 하면 사용자가 특정 음성 명령을 사용 하지 않아도 되 고 시스템에서 해당 의도를 인식할 수 있는 AI 지원 음성 명령으로 응용 프로그램을 활용할 수 있습니다. 이 단원에서는 Azure LUIS 포털을 설정 하 고, 의도/엔터티/길이 발언를 설정 하 고, 의도 리소스를 게시 하 고, Unity 앱을 의도 리소스에 연결 하 고, 첫 번째 의도 API 호출을 수행 합니다.
 

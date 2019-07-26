@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, 테스트
-ms.openlocfilehash: 35e8eff230cdcd719952ad2633ec610c9a9a26a0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63549049"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507906"
 ---
 # <a name="testing-your-app-on-hololens"></a>HoloLens에서 앱 테스트
 
@@ -71,7 +71,11 @@ Holographic 앱은 다양 한 환경 집합에서 원활 하 게 실행 해야 �
 
 ### <a name="battery"></a>배터리
 
-전원에 연결 되지 않은 상태에서 응용 프로그램을 테스트 하 여 배터리를 얼마나 빠르게 드레이닝 하는지 파악 합니다. 전원 LED 판독값을 살펴보면 배터리 상태를 쉽게 파악할 수 있습니다. ![배터리 전원을 나타내는 LED 상태](images/batterypowerledindication-500px.png)
+전원에 연결 되지 않은 상태에서 응용 프로그램을 테스트 하 여 배터리를 얼마나 빠르게 드레이닝 하는지 파악 합니다. 전원 LED 판독값을 살펴보면 배터리 상태를 쉽게 파악할 수 있습니다. 
+
+![배터리 전원을 나타내는 LED 상태](images/batterypowerledindication-500px.png)<br>
+
+*배터리 전원을 나타내는 LED 상태*
 
 ### <a name="power-state-transitions"></a>전원 상태 전환
 

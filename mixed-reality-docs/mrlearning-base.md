@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 3c779d731d7cf139ebcbe305c94754970e937b57
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: baf99fa313e3ab38f138078334fb1388a148d6da
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293620"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485612"
 ---
 # <a name="1-overview-and-objectives"></a>1. 개요 및 목표
 
@@ -47,4 +47,4 @@ ms.locfileid: "68293620"
 * 몇 가지 C# 기본적인 프로그래밍 기능.
 * [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode)HoloLens 2 장치입니다.
 
-[다음 단원: 프로젝트 및 첫 번째 애플리케이션 초기화](mrlearning-base-ch1.md)
+[다음 단원: 2. 프로젝트 및 첫 번째 애플리케이션 초기화](mrlearning-base-ch1.md)

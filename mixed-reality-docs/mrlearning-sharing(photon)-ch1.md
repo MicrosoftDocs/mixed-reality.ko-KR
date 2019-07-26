@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293651"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485637"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Photon Unity 네트워킹 설정
+#  <a name="1-setting-up-photon-unity-networking"></a>1. Photon Unity 네트워킹 설정
 
 이 자습서에서는 THIS (Photon Unity 네트워킹)를 Unity 프로젝트로 가져와 공유 환경을 만들 준비를 하는 방법에 대해 알아봅니다. Photon는 혼합 현실 개발자가 공유 환경을 만드는 데 사용할 수 있는 몇 가지 네트워킹 옵션 중 하나입니다. Photon 계정을 만들고, Photon를 가져오고, 선택적 로컬 서버를 만드는 방법에 대해 알아봅니다.
 
-목표로
+## <a name="objectives"></a>목표
 
 * Photon 계정을 만드는 방법 알아보기
 
@@ -27,7 +27,7 @@ ms.locfileid: "68293651"
 
   
 
-### <a name="setting-up-photon"></a>Photon 설정
+## <a name="setting-up-photon"></a>Photon 설정
 
 1. [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) 계정을 설정 합니다. [이 링크](https://dashboard.photonengine.com/en-US/Account/SignUp)를 클릭 하 여 Photon 등록 페이지로 이동 합니다. 등록 페이지의 지침에 따라 계정을 만듭니다. 
    
@@ -69,5 +69,5 @@ ms.locfileid: "68293651"
 
 Photon 계정을 성공적으로 만들고, 로컬 Photon 서버를 설정 하 고, THIS를 Unity로 가져왔습니다. 다음 단계는 여러 사용자가 작업을 볼 수 있도록 프로젝트를 설정 하 고 다른 사용자와의 연결을 허용 하는 것입니다. 
 
-[다음 자습서: Unity 개발 준비](mrlearning-sharing(photon)-ch2.md)
+[다음 자습서: 2. Unity 개발 준비](mrlearning-sharing(photon)-ch2.md)
 

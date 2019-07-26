@@ -6,16 +6,18 @@ ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: e8dc5da5a089079ba38a26969df6070af8bc6200
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460300"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485599"
 ---
 # <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
 
 이 자습서에서는 Azure 서비스에 연결할 수 없는 경우 로컬 음성-텍스트 변환을 수행할 수 있도록 하는 오프 라인 모드를 추가 합니다. 또한 연결 되지 않은 상태를 *시뮬레이션* 합니다.
+
+## <a name="instructions"></a>지침
 
 1. 계층에서 Lunarcom_Base 개체를 선택 하 고 검사기 패널에서 구성 요소 추가를 클릭 합니다. Lunarcom 오프 라인 인식을 검색 하 고 선택 합니다.
 

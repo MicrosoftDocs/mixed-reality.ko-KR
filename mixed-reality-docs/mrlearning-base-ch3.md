@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 4baee7ba8643f5bb80e0456eb97d915405431654
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387712"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485695"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 solvers 사용
 
@@ -74,8 +74,8 @@ HoloLens 2에서 홀로그램은 사용자를 직관적으로 따르며, 원활�
 
 ![Lesson3 Chapter3 Step5im](images/Lesson3_chapter3_step5im.PNG)
 
-### <a name="congratulations"></a>축하합니다.
+## <a name="congratulations"></a>축하합니다.
 이 자습서에서는 MRTK의 solvers를 사용 하 여 UI가 사용자를 직관적으로 따르도록 하는 방법을 배웠습니다. 또한 해결기를 게임 개체(예: 큐브)에 연결하여 사용자의 추적된 손을 따르도록 하는 방법도 알아보았습니다. 이러한 해결기 및 MRTK에 포함된 다른 해결기에 대한 자세한 내용은 [MRTK 해결기 설명서 페이지](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)를 참조하세요.
 
-[다음 단원: 3D 개체 상호 작용](mrlearning-base-ch4.md)
+[다음 단원: 5.    3D 개체와 상호 작용](mrlearning-base-ch4.md)
 
