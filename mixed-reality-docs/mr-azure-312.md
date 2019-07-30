@@ -255,7 +255,7 @@ ms.locfileid: "63542857"
 
 이제 bot에 대 한 코드를 빌드 했으므로 Azure Portal에서 *웹 앱 봇* 서비스의 인스턴스에 게시 해야 합니다. 이 장에서는 Azure에서 봇 서비스를 만들고 구성 하는 방법을 보여 주고 코드를 게시 합니다.
 
-1.  먼저, Azure Portal ()https://portal.azure.com) 에 로그인 합니다. 
+1.  먼저, Azure Portal (https://portal.azure.com) 에 로그인 합니다. 
 
     1. 아직 Azure 계정이 없는 경우 새로 만들어야 합니다. 교실 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 proctors 중 하나에 문의 하 여 새 계정을 설정 하는 데 도움이 될 수 있습니다.
 
@@ -437,7 +437,7 @@ ms.locfileid: "63542857"
 
 Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에서 제공 되는 Unity 패키지를 사용 합니다.
 
-1.  **자산** **가져오기 패키지 사용자 지정** **패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.   >  > 
+1.  **자산** **가져오기 패키지 사용자 지정** **패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.  >  > 
 
     ![Newtonsoft.json 라이브러리 가져오기](images/AzureLabs-Lab312-34.png)
 
