@@ -3,7 +3,7 @@
 
 이 자습서에서는 Mixed Reality Toolkit 가져오기, 빌드 설정 구성, 장면 준비를 포함 하 여 응용 프로그램 개발을 위해 Unity를 준비 하 고 구성 하는 방법에 대해 알아봅니다.
 
-목표로
+## <a name="objectives"></a>목표
 
 - 응용 프로그램 개발을 위한 Unity 구성
 

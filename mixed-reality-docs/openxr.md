@@ -1,56 +1,67 @@
 ---
 title: OpenXR
-description: Mixed Reality OpenXR Developer Preview를 사용 하 여 provisional OpenXR 0.90 API를 사용해 보세요.
+description: 이식 가능한 OpenXR API 표준을 사용 하 여 엔진을 빌드하고 Windows Mixed Reality 및 HoloLens 2 헤드셋에 배포 합니다.
 author: thetuvix
 ms.author: alexturn
-ms.date: 3/18/2019
+ms.date: 7/29/2019
 ms.topic: article
-keywords: Mixed Reality OpenXR Developer Preview
-ms.openlocfilehash: 723b0b85785d4b6dd735430aa76a24b9ce05b5c7
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, 네이티브, 네이티브 앱 사용자 지정 엔진, 미들웨어
+ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039178"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601603"
 ---
 # <a name="openxr"></a>OpenXR
 
-OpenXR는 [혼합 현실 스펙트럼](mixed-reality.md)에 걸쳐 있는 여러 공급 업체의 다양 한 장치에 대 한 기본 액세스를 제공 하는 [Khronos](https://www.khronos.org/) 에서 열리는 오픈 로열티 없는 표준입니다.
+OpenXR는 [혼합 현실 스펙트럼](mixed-reality.md)에 걸쳐 있는 많은 공급 업체의 다양 한 장치에 대 한 기본 액세스를 엔진에 제공 하는 [Khronos](https://www.khronos.org/) 의 오픈 로열티 없는 무료 API 표준입니다.
 
-OpenXR를 사용 하는 경우 실제 세계에 디지털 콘텐츠를 저장 하는 holographic 장치 (예: HoloLens 2)를 모두 대상으로 하는 응용 프로그램을 빌드할 수 있습니다. 실제 세계에서 디지털 환경으로 대체 합니다.  OpenXR를 사용 하면 다양 한 하드웨어 플랫폼에서 이식할 수 있는 코드를 작성할 수 있습니다.
+OpenXR를 사용 하 여 개발할 수 있습니다는 HoloLens 2 또는 Windows Mixed Reality 모던 헤드셋 바탕 화면입니다.  헤드셋에 액세스할 수 없는 경우 HoloLens 2 에뮬레이터 또는 Windows Mixed Reality 시뮬레이터를 대신 사용할 수 있습니다.
 
-OpenXR 표준은 현재 provisional 단계에 있으며, 피드백을 위해 초기 OpenXR 0.90 사양을 릴리스 했습니다.  [Provisional 0.90 사양](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html) 및 [헤더](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)에 대 한 액세스를 포함 하 여 OpenXR에 대 한 자세한 내용은 [Khronos OpenXR 페이지](https://www.khronos.org/openxr/)를 참조 하세요. 
+## <a name="why-openxr"></a>왜 OpenXR?
 
-Mixed Reality OpenXR Developer Preview를 사용 하 여 HoloLens 2 또는 데스크톱 PC에서 provisional OpenXR 0.90 API를 사용해 볼 수 있습니다.  이 초기 런타임을 통해 OpenXR 0.90 API를 대상으로 하는 응용 프로그램에서 HoloLens 2 또는 Windows Mixed Reality 모던 헤드셋을 대상으로 지정할 수 있습니다.
+OpenXR를 사용 하면 실제 환경에서 디지털 콘텐츠를 포함 하는 두 holographic 장치 (예: HoloLens 2)를 대상으로 하는 엔진을 빌드할 수 있습니다. 이러한 장치는 물리적 콘텐츠를 숨기는 몰입 형 장치 (예: 데스크톱 Pc의 경우 Windows Mixed Reality 헤드셋) 뿐 아니라 전 세계에서 디지털 환경으로 대체 합니다.  OpenXR를 사용 하면 다양 한 하드웨어 플랫폼에서 이식할 수 있는 코드를 작성할 수 있습니다.
 
-헤드셋에 액세스할 수 없는 경우 HoloLens 2 에뮬레이터 또는 Windows Mixed Reality 시뮬레이터를 대신 사용할 수 있습니다.
+OpenXR API는 응용 프로그램을 헤드셋의 기본 플랫폼 지원에 직접 연결 하는 로더를 사용 합니다.  이는 Windows Mixed Reality 헤드셋 또는 다른 헤드셋을 사용 하는지 여부에 관계 없이 최종 사용자에 게 최대 성능 및 최소 대기 시간을 제공 합니다.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-hololens-2"></a>HoloLens 2 용 Mixed Reality OpenXR Developer 미리 보기 설정
+## <a name="what-is-openxr"></a>OpenXR 란?
 
-HoloLens 2의 Mixed Reality OpenXR Developer Preview를 시작 하려면 다음을 수행 하세요.
+핵심 OpenXR 1.0 API는 HoloLens 2와 같은 holographic 장치 및 Windows Mixed Reality 헤드셋 같은 몰입 형 장치를 모두 대상으로 지정할 수 있는 엔진을 빌드하는 데 필요한 기본 기능을 제공 합니다.
+* 시스템 + 세션
+* 참조 공간 (보기, 로컬, 단계)
+* 구성 보기 (mono, 스테레오)
+* Swapchains + 프레임 타이밍
+* 컴포지션 계층
+* Input 및 haptics
+* 그래픽 API + 플랫폼 통합
+
+OpenXR API에 대 한 자세한 내용은 [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) 및 [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)를 확인 하세요.  자세한 내용은 [Khronos OpenXR 페이지](https://www.khronos.org/openxr/)를 참조 하세요.
+
+HoloLens 2의 전체 기능 집합을 대상으로 지정 하려면 트레일러 추적, 눈 추적, 공간 매핑 및 공간 앵커와 같이 OpenXR 1.0 코어 이외의 추가 기능을 사용할 수 있도록 하는 공급 업체 및 공급 업체별 OpenXR 확장을 사용 합니다.  올해 후반에 제공 되는 확장에 대 한 자세한 내용은 아래의 [로드맵 섹션](openxr.md#roadmap) 섹션을 참조 하세요.
+
+OpenXR는 자체는 혼합 현실 엔진이 아닙니다.  대신, OpenXR를 사용 하 여 Unity와 같은 엔진에서 이식 가능한 코드를 작성 한 후에는 해당 플랫폼을 구축한 공급 업체에 관계 없이 사용자의 holographic 또는 몰입 형 장치의 기본 플랫폼 기능에 액세스할 수 있습니다.
+
+## <a name="getting-started-with-openxr-for-hololens-2"></a>HoloLens 용 OpenXR 시작 2
+
+HoloLens 2 용 OpenXR 응용 프로그램 개발을 시작 하려면:
 
 1. HoloLens 2를 설정 하거나 지침에 따라 [hololens 2 에뮬레이터를 설치](using-the-hololens-emulator.md)합니다.
-1. 장치 또는 에뮬레이터 내에서 스토어 앱을 시작 하 고 모든 앱이 업데이트 되었는지 확인 합니다.  그러면 해당 장치에서 앱과 함께 사용할 Mixed Reality OpenXR Developer Preview가 설치 됩니다.  에뮬레이터를 사용 하는 경우 에뮬레이터에서 스토어 앱을 사용 하는 데 도움이 되도록 [에뮬레이터 입력 지침](using-the-hololens-emulator.md#basic-emulator-input) 을 참조 합니다.
+1. 장치 또는 에뮬레이터 내에서 스토어 앱을 시작 하 고 모든 앱이 업데이트 되었는지 확인 합니다.  그러면 HoloLens의 OpenXR 런타임이 OpenXR 1.0으로 업데이트 됩니다.  에뮬레이터를 사용 하는 경우 에뮬레이터에서 스토어 앱을 사용 하는 데 도움이 되도록 [에뮬레이터 입력 지침](using-the-hololens-emulator.md#basic-emulator-input) 을 참조 합니다.
 
-## <a name="setting-up-the-mixed-reality-openxr-developer-preview-for-immersive-desktop-headsets"></a>몰입 형 데스크톱 헤드셋의 Mixed Reality OpenXR Developer Preview 설정
+## <a name="getting-started-with-openxr-for-windows-mixed-reality-headsets"></a>Windows Mixed Reality 용 OpenXR 시작 헤드셋
 
-데스크톱 PC에서 Mixed Reality OpenXR Developer Preview를 시작 하려면 다음을 수행 하세요.
+몰입 형 Windows Mixed Reality 헤드셋 용 OpenXR 응용 프로그램 개발을 시작 하려면 다음을 수행 합니다.
 
-1. Windows 10 10 월 2018 업데이트 (1809) 또는 Windows 10 2019 업데이트 (1903)를 실행 해야 합니다.  이전 버전의 Windows 10을 사용 하는 경우 [windows 10 업데이트 길잡이](https://www.microsoft.com/en-us/software-download/windows10)를 사용 하 여 2019 년 5 월 업데이트로 업그레이드할 수 있습니다.
+1. Windows Mixed Reality 최종 사용자가 OpenXR 응용 프로그램을 실행 하는 데 필요한 최소 요구 사항인 Windows 10 5 월 2019 업데이트 (1903)를 실행 해야 합니다.  이전 버전의 Windows 10을 사용 하는 경우 [windows 10 업데이트 길잡이](https://www.microsoft.com/en-us/software-download/windows10)를 사용 하 여 2019 년 5 월 업데이트로 업그레이드할 수 있습니다.  PC를 업데이트할 수 없는 경우에는 [Windows 10 10 월 2018 업데이트 (1809)를 사용 하 여 OpenXR 앱을 개발할](openxr.md#developing-on-windows-10-october-2018-update)수도 있습니다. 그러나 성능이 저하 되거나 기타 문제가 발생할 수 있습니다.
 1. Windows Mixed Reality 헤드셋을 설정 하거나 지침에 따라 [Windows Mixed reality 시뮬레이터를 사용 하도록](using-the-windows-mixed-reality-simulator.md)설정 합니다.
-1. [Mixed Reality OpenXR Developer Preview 앱](https://www.microsoft.com/store/productId/9n5cvvl23qbt)을 설치 합니다.  이 앱은 Windows 10 10 월 2018 업데이트 (1809) 이상에서 preview OpenXR runtime을 사용 하 여 설정할 수 있습니다.  이 앱을 설치 하면 Windows 스토어에서 런타임을 최신 상태로 유지 합니다.
-1. 시작 메뉴에서 Mixed Reality OpenXR Developer Preview 앱을 실행 하 고 지침에 따라 런타임을 활성으로 설정 합니다.  곧이 앱을 통해 다른 OpenXR 디버그 정보를 탐색할 수 있습니다.
+1. [Mixed Reality OpenXR 개발자 포털 앱](https://www.microsoft.com/store/productId/9n5cvvl23qbt)을 설치 합니다.  이 앱을 설치 하면 Mixed Reality OpenXR 런타임이 자동으로 설치 됩니다.  OpenXR 런타임을 설치한 후 Microsoft Store는 런타임을 최신 상태로 유지 합니다.
+1. 시작 메뉴에서 Mixed Reality OpenXR 개발자 포털 앱을 실행 하 고 지침에 따라 런타임을 활성으로 설정 합니다.
 
-![Mixed Reality OpenXR Developer Preview 앱](images/mixed-reality-openxr-developer-preview.png)
+![Mixed Reality OpenXR 개발자 포털 앱](images/mixed-reality-openxr-developer-portal.png)
 
-### <a name="support-for-windows-10-october-2018-update"></a>Windows 10 10 월 2018 업데이트에 대 한 지원
-
-Windows 10에서 2019 업데이트 (1903)를 실행 하 고 위의 단계를 수행한 경우 Mixed Reality OpenXR Developer Preview를 사용할 준비가 된 것입니다.
-
-[데스크톱 PC를 2019](https://www.microsoft.com/en-us/software-download/windows10)년 5 월 업데이트로 업그레이드할 준비가 되지 않은 경우 다음 단계를 수행 하 여 Windows 10 10 월 2018 업데이트 (1809)를 살펴볼 수 있습니다.
-
-1. 위의 단계에 따라 Mixed Reality OpenXR Developer Preview를 설치 합니다.
-1. Mixed Reality OpenXR Developer Preview를 시스템의 활성 OpenXR 런타임으로 설정 하려면 [Mixed Reality OpenXR Developer Preview Compatibility Pack](https://aka.ms/openxr-compat)을 설치 합니다.
+> [!NOTE]
+> Mixed Reality OpenXR 런타임은 혼합 현실 포털 앱을 통해 모든 Windows Mixed Reality 최종 사용자에 게 곧 제공 될 예정입니다.
 
 ## <a name="building-a-sample-openxr-app"></a>샘플 OpenXR 앱 빌드
 
@@ -58,28 +69,53 @@ Windows 10에서 2019 업데이트 (1903)를 실행 하 고 위의 단계를 수
 
 패키지 및 배포의 차이로 인해 Win32 및 UWP 프로젝트 파일은 별개 이지만 각 프로젝트 내의 앱 코드는 100%가 동일 합니다.
 
-## <a name="feedback"></a>사용자 의견
+## <a name="roadmap"></a>로드맵
 
-[OpenXR Provisional 0.90 사양](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)에 대 한 피드백을 제공 하려면 [Khronos OpenXR 포럼](https://community.khronos.org/c/openxr), [여유 시간 #openxr 채널](https://khr.io/slack) 및 [사양 문제 추적기](https://github.com/KhronosGroup/OpenXR-Docs/issues)를 방문해 보세요.
+OpenXR 사양은 런타임 구현자가 [기본 OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)에 정의 된 [핵심 기능](openxr.md#what-is-openxr) 외에 추가 기능을 노출할 수 있도록 하는 확장 메커니즘을 정의 합니다.
+
+OpenXR 확장에는 세 가지 종류가 있습니다.
+* **공급 업체 확장 (예: MSFT):** 하드웨어 또는 소프트웨어 기능에서 공급 업체별 혁신을 사용 하도록 설정 합니다.  모든 런타임 공급 업체는 언제 든 지 공급 업체 확장을 소개 하 고 제공할 수 있습니다.
+* **EXT 확장:** 여러 회사가 정의 하 고 구현 하는 교차 공급 업체 확장  관심이 있는 회사 그룹은 언제 든 지 내선 내선 번호를 도입할 수 있습니다.
+* **KHR 확장:** 공식 Khronos 확장은 핵심 사양 릴리스의 일부로 비준.  KHR 확장은 코어 사양 자체와 동일한 라이선스로 적용 됩니다.
+
+이 년 말에 Mixed Reality OpenXR 런타임은 HoloLens 2 기능의 전체 집합을 OpenXR 응용 프로그램으로 가져오는 MSFT 및 EXT 확장 집합을 지원 합니다.
+* [바인딩되지 않은 참조 공간 (세계 규모가 뛰어난 환경)](coordinate-systems.md#building-a-world-scale-experience)
+* [공간 앵커 + 저장소](spatial-anchors.md)
+* [손 모양 articulation + 손 모양](hands-and-tools.md)
+* [응시](eye-tracking.md)
+* [보조 뷰 구성 (혼합 현실 캡처)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
+* [공간 매핑](spatial-mapping.md)
+* Windows SDK Api와의 상호 운용성
+
+이러한 확장 중 일부는 공급 업체별 MSFT 확장으로 시작 될 수 있지만, Microsoft 및 기타 OpenXR runtime 공급 업체는 이러한 여러 기능 영역에 대 한 공급 업체 확장 또는 KHR 확장을 디자인 하기 위해 함께 작업 하 고 있습니다.  이렇게 하면 핵심 사양과 마찬가지로 해당 기능에 대해 작성 하는 코드를 런타임 공급 업체 간에 이식할 수 있습니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
-다음은 Mixed Reality OpenXR Developer Preview에 대 한 몇 가지 문제 해결 팁입니다.  다른 문제가 발생 하는 경우 [Khronos OpenXR 포럼](https://community.khronos.org/c/openxr) 또는 [여유 시간 #openxr 채널](https://khr.io/slack)을 방문 하세요.
+다음은 Mixed Reality OpenXR 런타임에 대 한 몇 가지 문제 해결 팁입니다.  [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)에 대 한 다른 질문이 있는 경우 [Khronos OpenXR 포럼](https://community.khronos.org/c/openxr) 또는 [여유 시간 #openxr 채널](https://khr.io/slack)을 방문 하세요.
+
+### <a name="developing-on-windows-10-october-2018-update"></a>Windows 10 10 월 2018 업데이트에서 개발
+
+개발 PC를 2019 년 5 월 [업데이트로 업그레이드할](https://www.microsoft.com/en-us/software-download/windows10)수 없는 경우 다음 단계를 수행 하 여 개발을 위해 Windows 10 10 월 2018 업데이트 (1809) PC를 설정할 수 있습니다.
+
+1. 위의 단계에 따라 데스크톱 PC에서 OpenXR를 시작 합니다.
+1. Mixed Reality OpenXR 런타임을 시스템의 활성 OpenXR 런타임으로 설정 하려면 [Mixed Reality OpenXR Developer Compatibility Pack](https://aka.ms/openxr-compat)을 설치 합니다.
+
+> [!NOTE]
+> OpenXR 응용 프로그램을 개발할 때 Windows 10 10 월 2018 업데이트 (1809)를 사용할 수 있지만, 최종 사용자가 Windows Mixed Reality에서 OpenXR를 사용 하려면 Windows 10에서 2019 업데이트 (1903)가 최소 요구 사항입니다.  10 월 2018 업데이트에서 OpenXR 앱을 실행할 때 성능이 저하 되거나 기타 문제가 발생할 수 있습니다.  개발 PC를 Windows 10 5 월 2019 업데이트 (1903)로 업그레이드 하는 것이 좋습니다.
 
 ### <a name="openxr-app-not-starting-windows-mixed-reality"></a>Windows Mixed Reality를 시작 하지 않는 OpenXR 앱
 
-OpenXR 앱을 실행할 때 Windows Mixed Reality를 시작 하지 않는 경우 Mixed Reality OpenXR 개발자 미리 보기가 활성 런타임으로 설정 되지 않을 수 있습니다.  Mixed Reality OpenXR Developer Preview 앱을 실행 하 고 지침에 따라 런타임을 활성으로 설정 해야 합니다.
+OpenXR 앱을 실행할 때 Windows Mixed Reality를 시작 하지 않으면 Mixed Reality OpenXR 런타임이 활성 런타임으로 설정 되지 않을 수 있습니다.  Mixed Reality OpenXR 개발자 포털 앱을 실행 하 고 지침에 따라 런타임을 활성으로 설정 해야 합니다.
 
-### <a name="mixed-reality-openxr-developer-preview-app-cannot-be-installed"></a>Mixed Reality OpenXR Developer Preview 앱을 설치할 수 없습니다. 
+### <a name="mixed-reality-openxr-developer-portal-app-cannot-be-installed"></a>Mixed Reality OpenXR 개발자 포털 앱을 설치할 수 없습니다. 
 
 Windows 10 10 월 2018 업데이트 (1809) 이상을 실행 하 고 있어야 합니다.  이전 버전의 Windows 10을 사용 하는 경우 [windows 10 업데이트 도우미](https://www.microsoft.com/en-us/software-download/windows10)를 사용 하 여 1903 (5 월 2019 업데이트)로 업그레이드할 수 있습니다.
 
-Mixed Reality OpenXR Developer Preview 앱의 설치 단추가 Windows 10 10 월 2018 업데이트에서 아무 작업도 수행 하지 않는 경우 시스템에서 앱에 대 한 부실 시스템 요구 사항을 캐시 했을 수 있습니다.  명령 프롬프트에서 명령을 `wsreset.exe` 실행 하 여 캐시를 지울 수 있습니다.
+Mixed Reality OpenXR 개발자 포털 앱의 설치 단추가 Windows 10 10 월 2018 업데이트에서 아무 작업도 수행 하지 않는 경우 시스템에서 앱에 대 한 부실 시스템 요구 사항을 캐시 했을 수 있습니다.  명령 프롬프트에서 명령을 `wsreset.exe` 실행 하 여 캐시를 지울 수 있습니다.
 
 ## <a name="see-also"></a>참조
 
 * [OpenXR에 대 한 자세한 정보](https://www.khronos.org/openxr/)
-* [OpenXR Provisional 0.90 사양](https://www.khronos.org/registry/OpenXR/specs/0.90/html/xrspec.html)
-* [OpenXR Provisional 0.90 API 참조](https://www.khronos.org/registry/OpenXR/specs/0.90/man/html/)
-* [OpenXR Provisional 0.90 헤더](https://github.com/KhronosGroup/OpenXR-Docs/tree/master/include/openxr)
-* [OpenXR Provisional 0.90 빠른 참조 가이드](https://www.khronos.org/registry/OpenXR/specs/0.90/refguide/OpenXR-0.90-web.pdf)
+* [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
+* [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [OpenXR 1.0 빠른 참조 가이드](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)

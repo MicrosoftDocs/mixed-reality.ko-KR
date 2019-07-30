@@ -4,28 +4,36 @@ title: 자습서 및 샘플 앱
 description: 혼합 현실 개발에 대 한 코드 샘플과 자습서를 제공 합니다.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 03/26/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서
-ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415405"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601625"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
 현재 모든 자습서 및 샘플 앱은 Unity를 기반으로 합니다.  다른 엔진 및 플랫폼에 대 한 콘텐츠를 개발 하는 경우 목차에서 관련 제목 아래에 찾을 수 있습니다.
 
-## <a name="mr-learning-modules"></a>MR 학습 모듈
+## <a name="hololens-2-tutorials"></a>HoloLens 2 자습서
 
-MR 학습 모듈은 개발자가 혼합 현실 응용 프로그램을 개발 하는 방법과 모범 사례를 모두 배울 수 있도록 설계 되었습니다.  초기 모듈은 HoloLens 2 용 이며 Mixed Reality Toolkit 2.0 (MRTK 2.0)을 구현 합니다.
-* 기본 모듈은 MRTK를 사용 하 여 프로젝트를 설정 하는 방법 뿐만 아니라 UI, 공간 매핑 및 기본 및 고급 상호 작용을 구현 하는 방법을 개발자에 게 보여 주기 위한 것입니다.
+HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발 하는 방법과 모범 사례를 모두 배울 수 있도록 설계 되었습니다.  이 자습서는 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
+
+* 시작 자습서- [7 개 개요 및 목표](mrlearning-base.md)
+* Azure 공간 앵커 자습서- [3 개 중 1 개 Azure 공간 앵커 시작](mrlearning-asa-ch1.md)
+* Azure Speech Services 자습서- [4 개 중 1 개 (음성 인식 및 기록) 통합 및 사용](mrlearning-speechSDK-ch1.md)
+* 다중 사용자 기능 자습서- [5 개 중 Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
 
 ## <a name="open-source-sample-apps"></a>오픈 소스 샘플 앱
 
 오픈 소스 샘플 앱은 팀에서 작성 한 응용 프로그램이 며 개발자가 프로젝트를 살펴보고 프로젝트에서 배울 수 있도록 소스 코드를 제공 합니다.
+
+* [원소의 주기율표](periodic-table-of-the-elements.md)
+* [달착륙선](lunar-module.md)
+* [갤럭시 익스플로러](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>혼합 현실 아카데미 자습서
 
