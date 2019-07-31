@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65974818"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414428"
 ---
 # <a name="development-launchpad"></a>개발 실행 패드
 
@@ -114,7 +114,7 @@ ms.locfileid: "65974818"
                             <a href="directx-development-overview.md">사용자 지정 엔진(DirectX)</a>
                         </p>
                         <p>
-Unreal - 서비스 예정
+                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
                         </p>                
                     </div>
                 </div>
@@ -175,7 +175,7 @@ Unreal - 서비스 예정
 
 ## <a name="overview"></a>개요
 
-혼합 현실 앱은 [유니버설 Windows 플랫폼](https://dev.windows.com/getstarted)으로 빌드됩니다. 모든 혼합 현실 앱은 유니버설 Windows 앱이며 모든 유니버설 Windows 앱은 Windows Mixed Reality 디바이스에서 실행되도록 만들 수 있습니다. Windows 10이 있으며 Unity와 같은 미들웨어 도구에 익숙한 경우 지금 당장 혼합 현실 환경을 구축할 수 있습니다.
+혼합 현실 애플리케이션은 [UWP(유니버설 Windows 플랫폼)](https://dev.windows.com/getstarted)로 빌드됩니다. 모든 혼합 현실 애플리케이션은 UWP 애플리케이션입니다. 모든 UWP 애플리케이션은 Windows Mixed Reality 디바이스에서 실행되도록 설정할 수 있습니다. Windows 10이 있으며 Unity와 같은 미들웨어 도구에 익숙한 경우 지금 바로 혼합 현실 환경을 빌드할 수 있습니다.
 
 <br>
 
@@ -183,7 +183,7 @@ Unreal - 서비스 예정
 
 ## <a name="basics-of-mixed-reality-development"></a>혼합 현실 개발 기본 사항
 
-[혼합 현실](mixed-reality.md) 환경에서는 환경 이해를 위한 새로운 Windows 기능이 지원됩니다. 이를 통해 개발자는 실제 세상에 [홀로그램](hologram.md)을 배치할 수 있으며, 사용자는 그야말로 걸어다니면서 디지털 세계를 이동할 수 있습니다. 
+[혼합 현실](mixed-reality.md) 환경에서는 환경 이해를 위한 새로운 Windows 기능이 지원됩니다. 이러한 기능을 통해 개발자는 실제 세상에 [홀로그램](hologram.md)을 배치할 수 있으며, 사용자는 그야말로 걸어다니면서 디지털 세계를 이동할 수 있습니다. 
 
 다음은 혼합 현실 개발을 위한 핵심 구성 요소입니다.
 
@@ -223,13 +223,13 @@ Unreal - 서비스 예정
 
 [좌표](coordinate-systems.md), [공간 음향](spatial-sound.md) 및 [공간 매핑](spatial-mapping.md)과 같은 환경 이해 기능은 혼합 현실에 필요한 기능을 제공합니다. 공간 매핑은 HoloLens에 고유하게 사용되며, 홀로그램이 사용자 및 주변의 실제 세계와 상호 작용할 수 있도록 합니다. 좌표계는 사용자의 움직임이 디지털 세계의 움직임에 영향을 미치도록 합니다.
 
-홀로그램은 빛과 소리로 구성되며 [렌더링](rendering.md)에 의존합니다. [Windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md)("셸"이라고도 함)이 나타내는 것처럼 배치 및 지속성 환경을 이해하면 사용자 환경에서 보다 편리하게 작업할 수 있습니다.
+홀로그램은 빛과 소리로 구성되며 [렌더링](rendering.md)에 의존합니다. [Windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md)(“셸”이라고도 함)이 나타내는 것처럼 배치 및 지속성 환경을 이해하면 사용자 환경에서 더 편리하게 작업할 수 있습니다.
 
-## <a name="tools-for-developing-for-mixed-reality"></a>혼합 현실용 개발을 위한 도구
+## <a name="tools-for-developing-mixed-reality"></a>혼합 현실 개발을 위한 도구
 
 사용하는 도구는 빌드하려는 [앱의 스타일](app-views.md)에 따라 다릅니다.
-* [2D 뷰가 있는 앱](building-2d-apps.md)은 Windows Phone, PC, 태블릿 등의 환경에 적합한 유니버설 Windows 플랫폼 앱을 빌드하기 위한 도구를 활용합니다. 이러한 앱은 Windows Mixed Reality 홈에 배치된 2D 프로젝션을 통해 사용할 수 있으며 여러 디바이스 유형(휴대폰 및 PC 포함)에서 작동할 수 있습니다.
-* 몰입형 및 홀로그래픽 앱은 Windows Mixed Reality API를 활용하도록 디자인된 도구가 필요합니다. 혼합 현실 앱을 빌드하려면 [Unity를 사용하는 것이 좋습니다](unity-development-overview.md). 고유한 엔진 구빌드에 관심이 있는 개발자는 [DirectX 및 기타 Windows API를 사용](directx-development-overview.md)할 수 있습니다.
+* [2D 뷰가 있는 앱](building-2d-apps.md)은 Windows Phone, PC, 태블릿과 같은 환경에 적합한 UWP 애플리케이션을 빌드하기 위한 도구를 활용합니다. 이러한 애플리케이션은 Windows Mixed Reality 홈에 배치된 2D 프로젝션을 통해 사용할 수 있으며 여러 디바이스 유형(휴대폰 및 PC 포함)에서 작동합니다.
+* 몰입형 및 홀로그래픽 애플리케이션은 Windows Mixed Reality API를 활용하도록 디자인된 도구가 필요합니다. 혼합 현실 애플리케이션을 빌드하려면 [Unity를 사용하는 것이 좋습니다](unity-development-overview.md). 고유한 엔진 구빌드에 관심이 있는 개발자는 [DirectX 및 기타 Windows API를 사용](directx-development-overview.md)할 수 있습니다.
 
 빌드 중인 앱 유형에 관계없이, 다음과 같은 도구를 통해 앱 개발 환경을 원활하게 사용할 수 있습니다.
 * [Visual Studio 및 Windows SDK](using-visual-studio.md)

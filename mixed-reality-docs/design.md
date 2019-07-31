@@ -8,18 +8,20 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, Interaction, Style, Color, app patterns, controls, sample apps, Mixed Reality Toolkit, MRTK
-ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66039206"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326195"
 ---
 # <a name="design-for-mixed-reality"></a>혼합 현실 디자인
 
 ![혼합 현실 디자인](images/Bicycle-Leschi10.gif)
 
-이 설명서는 홀로그래픽 디바이스(예: HoloLens) 및 몰입형 디바이스(예: Acer 및 HP Windows Mixed Reality 헤드셋)로 작업하는 Microsoft 디자이너, 개발자, 프로그램 관리자 및 연구원이 작성한 것입니다. 따라서 이 설명서를 'Windows 헤드 장착 디스플레이용 디자인 방법'에 대한 항목 세트로 생각할 수 있습니다.
+
+이 설명서는 홀로그래픽 디바이스(예: HoloLens) 및 몰입형 디바이스(예: Acer 및 HP Windows Mixed Reality 헤드셋)로 작업하는 Microsoft 디자이너, 개발자, 프로그램 관리자 및 연구원이 작성한 것입니다. 따라서 이 설명서를 Windows 헤드 장착 디스플레이용 디자인 방법에 대한 항목 세트로 생각할 수 있습니다.
+
 
 ## <a name="article-categories"></a>문서 범주
 
@@ -166,7 +168,7 @@ ms.locfileid: "66039206"
                             <a href="progress.md">진행률 표시</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">앱 바 및 경계 상자</a>
+                            <a href="app-bar-and-bounding-box.md">경계 상자 및 앱 바</a>
                         </p>
                     </div>
                 </div>
@@ -232,7 +234,7 @@ Microsoft 팀이 디자인하고 만든 샘플에서 뛰어난 환경을 구축�
                         </div>
                         <div class="cardText">
                             <h3>갤럭시 익스플로러</h3>
-                            <p>갤럭시 익스플로러 프로젝트가 준비되었습니다. 커뮤니티와 아이디어를 공유하고, 앱을 선택하고, 팀이 앱을 빌드하는 것을 살펴보았습니다. 이제 소스 코드를 구할 수도 있습니다.</p>
+                            <p>갤럭시 익스플로러 프로젝트가 준비되었습니다. 커뮤니티와 아이디어를 공유하고, 애플리케이션을 선택하고, 팀이 앱을 빌드하는 것을 살펴보았습니다. 이제 소스 코드를 구할 수 있습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@ Microsoft 팀이 디자인하고 만든 샘플에서 뛰어난 환경을 구축�
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
+    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -284,26 +286,7 @@ Microsoft 팀이 디자인하고 만든 샘플에서 뛰어난 환경을 구축�
             </div>
         </div>
       </a>  
-    </li>   
-        <li>
-    <a href="case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md" title="HoloSketch" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloSketch.png" alt="HoloSketch">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>HoloSketch</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
+    </li>       
             <li>
     <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
         <div class="cardSize">
@@ -368,7 +351,7 @@ Microsoft 팀이 디자인하고 만든 샘플에서 뛰어난 환경을 구축�
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="UWP(유니버설 Windows 플랫폼) 앱 디자인" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="UWP(유니버설 Windows 플랫폼) 애플리케이션 디자인" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +361,7 @@ Microsoft 팀이 디자인하고 만든 샘플에서 뛰어난 환경을 구축�
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>UWP(유니버설 Windows 플랫폼) 앱 디자인</h3>
+                        <h3>UWP(유니버설 Windows 플랫폼) 애플리케이션 디자인</h3>
                         <p> </p>
                     </div>
                 </div>
