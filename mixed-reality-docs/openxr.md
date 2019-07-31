@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, 네이티브, 네이티브 앱 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601603"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671954"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ OpenXR API는 응용 프로그램을 헤드셋의 기본 플랫폼 지원에 직
 * Input 및 haptics
 * 그래픽 API + 플랫폼 통합
 
-OpenXR API에 대 한 자세한 내용은 [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) 및 [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)를 확인 하세요.  자세한 내용은 [Khronos OpenXR 페이지](https://www.khronos.org/openxr/)를 참조 하세요.
+OpenXR API에 대 한 자세한 내용은 [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) 및 [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)를 확인 하세요.  자세한 내용은 [Khronos OpenXR 페이지](https://www.khronos.org/openxr/)를 참조 하세요.
 
 HoloLens 2의 전체 기능 집합을 대상으로 지정 하려면 트레일러 추적, 눈 추적, 공간 매핑 및 공간 앵커와 같이 OpenXR 1.0 코어 이외의 추가 기능을 사용할 수 있도록 하는 공급 업체 및 공급 업체별 OpenXR 확장을 사용 합니다.  올해 후반에 제공 되는 확장에 대 한 자세한 내용은 아래의 [로드맵 섹션](openxr.md#roadmap) 섹션을 참조 하세요.
 
@@ -117,5 +117,5 @@ Mixed Reality OpenXR 개발자 포털 앱의 설치 단추가 Windows 10 10 월 
 
 * [OpenXR에 대 한 자세한 정보](https://www.khronos.org/openxr/)
 * [OpenXR 1.0 사양](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [OpenXR 1.0 API 참조](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [OpenXR 1.0 빠른 참조 가이드](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
