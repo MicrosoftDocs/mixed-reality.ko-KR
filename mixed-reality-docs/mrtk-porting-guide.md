@@ -7,12 +7,12 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: d0d406c6963866995164c9c004e51283df8d9382
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: ccf2bb9de1e69cfe306fe9fa8f7d3b80158348d4
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387639"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601613"
 ---
 # <a name="getting-your-existing-application-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 애플리케이션 준비
 
@@ -88,7 +88,7 @@ MRTK 버전 2를 사용하는 방법에 대한 자세한 내용은 다음을 참
 
 HTK/MRTK와 MRTK 버전 2 간의 특정 API 차이점에 대한 자세한 내용은 [MRTK 버전 2 wiki](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)의 이식 가이드를 참조하세요.
 
-### <a name="best-practices"></a>최선의 구현 방법
+### <a name="best-practices"></a>모범 사례
 
 - 기본적으로 [MRTK 표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)를 사용합니다.
 - 한 번에 한 가지 중요 변경 유형 처리(예: IFocusable에서 [IMixedRealityFocusHandler](https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html)로의 변경)
@@ -106,7 +106,7 @@ HTK/MRTK와 MRTK 버전 2 간의 특정 API 차이점에 대한 자세한 내용
 
 이제 [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1)부터는 HoloLens 2 구성 요소 및 기능을 MRTK 버전 2에서 사용할 수 있으므로, Unity에서 직접 손 조작을 시뮬레이트하고, 손 조작 및 시선 추적을 위한 새 API를 개발할 수 있습니다. HoloLens 2 디바이스는 만족스러운 사용자 환경을 만드는 데 필요합니다. 더 잘 이해하기 위해 문서와 도구에 대한 연구를 시작하는 것이 좋습니다. [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)는 HoloLens(1세대)에서의 개발을 지원하며, 에어 탭을 통한 선택과 같은 기존 입력 모델을 HoloLens(1세대)에서 테스트할 수 있습니다. 
 
-## <a name="updating-interaction-model-for-hololens-2"></a>HoloLens 2용 조작 모델을 업데이트
+## <a name="updating-your-interaction-model-for-hololens-2"></a>HoloLens 2용 조작 모델 업데이트
 
 애플리케이션을 HoloLens 2에 이식하고 준비한 경우 조작 모델 및 홀로그램 디자인 배치를 업데이트할 준비가 된 것입니다.
 HoloLens(1세대)에서 해당 애플리케이션은 시야각에 맞도록 홀로그램이 비교적 멀리 떨어져 있는 응시 및 커밋 조작 모델을 사용할 확률이 높습니다.
@@ -129,7 +129,7 @@ HoloLens 2에 가장 적합하게 애플리케이션 디자인을 업데이트�
 
 - 일부 경우, 애플리케이션에 필요한 플러그 인에 UWP/ARM 플러그 인이 없을 수 있으며, 이 플러그 인은 애플리케이션을 HoloLens 2에서 이식하고 실행할 수 있는 기능을 차단합니다. 문제를 해결하고 ARM에 대한 지원을 제공하려면 플러그 인 공급 기업에게 문의하세요.
 
-- 셰이더의 minfloat(및 min16float, minint 등의 변형)은 HoloLen 2에서 HoloLens(1세대)와는 다르게 동작할 수 있습니다. 특히, 적어도 지정된 수의 비트가 사용될 수 있습니다. 예를 들어 Intel/Nvidia GPU에서는 대체적으로 32비트로 처리됩니다. ARM에서는 지정된 비트 수가 실제로 적용됩니다. 즉, 실제로 이러한 수는 HoloLens(1세대)의 경우보다 HoloLens 2에서 전체 자릿수 또는 범위가 더 적을 수 있습니다.
+- 셰이더의 minfloat(및 min16float, minint 등의 변형)는 HoloLen 2에서 HoloLens(1세대)와는 다르게 동작할 수 있습니다. 특히, 적어도 지정된 수의 비트가 사용될 수 있습니다. 예를 들어 Intel/Nvidia GPU에서는 대체적으로 32비트로 처리됩니다. ARM에서는 지정된 비트 수가 실제로 적용됩니다. 즉, 실제로 이러한 수는 HoloLens(1세대)의 경우보다 HoloLens 2에서 전체 자릿수 또는 범위가 더 적을 수 있습니다.
 
 - _asm 명령은 ARM에서 작동하지 않는 것처럼 나타납니다. 즉, _asm 명령을 사용하는 모든 코드는 다시 작성해야 합니다.
 

@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 응시, 응시 타기팅, 상호 작용, 디자인, HoloLens, MMR, 멀티모달
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415250"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507900"
 ---
 # <a name="introducing-instinctual-interactions"></a>직관적인 상호 작용 소개
 
@@ -115,7 +115,7 @@ MR(혼합 현실)에서 효과적이고 매력적이며 신비한 수천 가지�
     <tr>
         <td><a href="hands-and-tools.md">실습 및 모션 컨트롤러</a></td>
         <td>손 메시가 보입니다. 손가락 끝 어포던스 또는 손/컨트롤러 레이가 보입니다.</td>
-        <td>내 손이 가까이 있으면 잡을 수 있는 핸들이나 테두리 상자가 나타납니다.</td>
+        <td>내 손이 개체 가까이 있으면 잡을 수 있는 핸들이나 경계 상자가 나타납니다.</td>
         <td>가청음이 들리고 잡았다 놓을 수 있는 애니메이션이 보입니다.</td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ MR(혼합 현실)에서 효과적이고 매력적이며 신비한 수천 가지�
     <tr>
         <td><a href="hands-free.md">핸즈프리(음성 명령)</a></td>
         <td>시스템이 무엇을 들었는지 보여주는 듣기 표시기와 자막이 보입니다.</td>
-        <td>음성 프롬프트와 힌트가 제공됩니다. “뭐라고 해야 하나요?”라고 말하면 피드백이 보입니다.</td>
+        <td>음성 프롬프트와 힌트가 제공됩니다. 다음과 같이 말하는 경우: "이렇게 말 하세요~" 피드백이 보입니다.</td>
         <td>명령을 하면 시각 및 청각 확인이 보이고 들리거나 필요할 때 명확성 UX가 제공됩니다.</a></td>
     </tr>
 </table>

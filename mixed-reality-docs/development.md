@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-title: Development
+title: 개발
 description: HoloLens 및 몰입형 헤드셋에 대한 혼합 현실 개발자 설명서입니다.
 author: grbury
 ms.author: grbury
@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: bf80b676d03fce9011f5952af476dcaa5e2b4eb2
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414428"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507915"
 ---
 # <a name="development-launchpad"></a>개발 실행 패드
 
@@ -56,7 +56,7 @@ ms.locfileid: "67414428"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>디바이스</h3>
+                        <h3>장치</h3>
                           <p>
                             <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
                         </p>
@@ -164,7 +164,7 @@ ms.locfileid: "67414428"
                             <a href="rendering.md">홀로그램 렌더링</a>
                         </p>
                          <p>
-                            <a href="testing-your-app-on-hololens.md">테스트</a>
+                            <a href="testing-your-app-on-hololens.md">앱 테스트</a>
                         </p>                    
                     </div>
                 </div>
