@@ -1,19 +1,19 @@
 ---
-title: MR Learning SpeechSDK 모듈-음성 인식 및 기록
+title: Azure Speech Services 자습서-2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
 description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485599"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701857"
 ---
-# <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
 
 이 자습서에서는 Azure 서비스에 연결할 수 없는 경우 로컬 음성-텍스트 변환을 수행할 수 있도록 하는 오프 라인 모드를 추가 합니다. 또한 연결 되지 않은 상태를 *시뮬레이션* 합니다.
 

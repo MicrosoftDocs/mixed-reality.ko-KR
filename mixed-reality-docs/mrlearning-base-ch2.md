@@ -1,17 +1,17 @@
 ---
-title: MR 학습 기본 모듈 - 사용자 인터페이스, 손 추적 및 Mixed Reality Toolkit 구성
+title: 자습서를 시작 합니다. 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성
 description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485752"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702042"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성 
 

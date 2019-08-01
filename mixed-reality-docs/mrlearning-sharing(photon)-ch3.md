@@ -1,17 +1,17 @@
 ---
-title: HoloLens 용 MR 학습 공유 모듈 2
+title: 다중 사용자 기능 자습서-3. 여러 사용자 연결
 description: 이 과정을 완료 하 여 HoloLens 2 응용 프로그램 내에서 다중 사용자 공유 환경을 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 53519d7bb2832fe8ce500f1ee146c91488b09366
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: d3068a1ebbbc2b6db8b563be8bf8c6e488e9491a
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485666"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701936"
 ---
 # <a name="3-connecting-multiple-users"></a>3. 여러 사용자 연결
 

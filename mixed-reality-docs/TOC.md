@@ -22,7 +22,6 @@
 #### [HoloLens 다시 설정 또는 복구](reset-or-recover-your-hololens.md)
 #### [파일 저장 및 찾기](saving-and-finding-your-files.md)
 #### [사진 보기](see-your-photos.md)
-#### [센서 튜닝](sensor-tuning.md)
 #### [HoloLens 업데이트](updating-hololens.md)
 #### [디바이스 공유](device-sharing.md)
 #### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)

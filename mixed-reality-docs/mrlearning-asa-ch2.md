@@ -1,17 +1,17 @@
 ---
-title: HoloLens 학습을 위한 Azure 공간 앵커 (HoloLens) 2
+title: Azure 공간 앵커 자습서-2. Azure 공간 앵커 저장, 검색 및 공유
 description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485737"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702053"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Azure 공간 앵커 저장, 검색 및 공유
 
@@ -81,5 +81,5 @@ ms.locfileid: "68485737"
 
 다음 단원에서는 사용자에 게 실시간 피드백을 제공 하는 방법에 대해 알아봅니다. 이 피드백에는 앵커 만들기, 환경 이해의 품질 및 Azure 세션의 상태에 대 한 정보가 포함 됩니다. 피드백을 사용 하지 않으면 사용자는 앵커가 Azure에 성공적으로 업로드 되었는지 여부, 환경 품질이 앵커 만들기에 충분 한지 아니면 현재 상태 인지를 모를 수 있습니다.
 
-[다음 단원: 3. Azure 공간 고정 피드백 표시](mrlearning-asa-ch3.md)
+[다음 단원: 3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
 

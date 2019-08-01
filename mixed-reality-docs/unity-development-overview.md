@@ -6,17 +6,16 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트, 포팅, 기능, 카메라, 시뮬레이션, 에뮬레이션, 설명서
-ms.openlocfilehash: 24217b4c61bf2d438ebc1c4114bc9dc20dc62f64
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414522"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701789"
 ---
 # <a name="unity-development-overview"></a>Unity 개발 개요
 
 [혼합 현실 앱](app-views.md) 을 빌드하기 위한 가장 빠른 경로는 [Unity](http://aka.ms/HoloLensUnity)를 사용 하는 것입니다. [Unity 자습서](https://unity3d.com/learn/tutorials)를 탐색 하는 데 시간이 소요 되는 것이 좋습니다. 자산이 필요한 경우 Unity는 포괄적인 [자산 저장소](https://www.assetstore.unity3d.com/)를 포함 합니다. Unity를 기본적으로 이해 하 고 나면 [자습서](tutorials.md) 를 방문 하 여 unity를 사용한 혼합 현실 개발의 세부 사항을 배울 수 있습니다. Unity [혼합 현실 포럼](http://forum.unity3d.com/forums/hololens.102/) 을 방문 하 여 unity에서 혼합 현실 앱을 빌드하는 커뮤니티의 나머지 부분과 함께 실행 될 수 있는 문제에 대 한 해결 방법을 찾아보세요.
-
 
 Unity를 사용 하 여 혼합 현실 앱 빌드를 시작 하려면 먼저 [도구를 설치](install-the-tools.md)합니다. 
 
@@ -40,7 +39,7 @@ Mixed Reality Toolkit를 가져오지 않고 새 Unity 프로젝트를 만들려
 
 먼저, 해당 환경에서 대상으로 할 수 있는 [환경 규모](coordinate-systems.md) 를 검토 합니다.
 * **방향** 또는 **대규모 환경을**구축 하려는 경우 Unity의 추적 공간 형식을 [고정](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)으로 설정 해야 합니다.
-* 대규모 또는 **공간 규모의 환경을**구축  하려는 경우 Unity의 추적 공간 유형이 [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)로 설정 되었는지 확인 해야 합니다.
+* 대규모 또는 **공간 규모의 환경을**구축 하려는 경우 Unity의 추적 공간 유형이 [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)로 설정 되었는지 확인 해야 합니다.
 * 사용자가 5 미터를 초과 하 여 로밍할 수 있도록 HoloLens에서 **세계 규모** 의 경험을 구축 하려는 경우 [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) 구성 요소를 사용 해야 합니다.
 
 혼합 현실 응용 프로그램의 모든 핵심 구성 요소는 다른 Unity Api와 일치 하는 방식으로 노출 됩니다. 혼합 현실 도구 키트를 통해 사용할 수도 있습니다.
@@ -71,7 +70,7 @@ Holographic Unity 프로젝트를 테스트할 준비가 되 면 다음 단계�
 
 ## <a name="unity-documentation"></a>Unity 설명서
 
-Windows 개발자 센터에서 제공 하는이 설명서 외에 Unity는 Unity 편집기와 함께 Windows Mixed Reality 기능에 대 한 설명서를 설치 합니다. Unity 제공 설명서에는 두 개의 개별 섹션이 포함 되어 있습니다.
+Docs.microsoft.com에서 사용할 수 있는이 설명서 외에 Unity는 Unity 편집기와 함께 Windows Mixed Reality 기능에 대 한 설명서를 설치 합니다. Unity 제공 설명서에는 두 개의 개별 섹션이 포함 되어 있습니다.
 1. **Unity 스크립팅 참조**
     * 설명서의이 섹션에는 Unity에서 제공 하는 스크립팅 API에 대 한 세부 정보가 포함 되어 있습니다.
     * Unity 편집기에서 **도움말 > 스크립팅 참조** 를 통해 액세스할 수 있습니다.

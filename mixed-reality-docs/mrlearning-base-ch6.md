@@ -1,17 +1,17 @@
 ---
-title: MR 학습 기본 모듈 - 달탐사선 어셈블리 샘플 환경
+title: 자습서 시작-7. 음력 모듈 샘플 응용 프로그램 만들기
 description: 이 단원에서는 이전 단원에서 학습한 여러 개념을 결합하여 고유한 샘플 환경을 만듭니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 79f2d3a4a3224533761ea2e4a7e73dc3d4d5e53e
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387690"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701987"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. 음력 모듈 샘플 응용 프로그램 만들기
 

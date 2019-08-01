@@ -1,17 +1,17 @@
 ---
-title: MR Learning SpeechSDK 모듈-음성 인식 및 기록
+title: Azure Speech Services 자습서-1. 음성 인식 및 기록을 통합 하 고 사용
 description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: c1ca44ffcaa8dced988b829d9875ebe304f14a12
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460353"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701957"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. 음성 인식 및 기록을 통합 하 고 사용
 

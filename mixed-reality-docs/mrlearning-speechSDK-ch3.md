@@ -1,19 +1,19 @@
 ---
-title: MR Learning SpeechSDK 모듈-음성 인식 및 기록
+title: Azure Speech Services 자습서-3. Azure Cognitive Services speech translation 구성 요소 추가
 description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 7fe3c96cf7b888a4a91960147270be81a0973980
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485760"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701832"
 ---
-# <a name="3----adding-the-azure-cognitive-services-speech-translation-component"></a>3.    Azure Cognitive Services speech translation 구성 요소 추가
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Azure Cognitive Services speech translation 구성 요소 추가
 
 이 자습서에서는 프로젝트의 Azure Cognitive Services Speech Translation 구성 요소에 대해 알아보고 세 가지 언어로 번역 합니다. 
 

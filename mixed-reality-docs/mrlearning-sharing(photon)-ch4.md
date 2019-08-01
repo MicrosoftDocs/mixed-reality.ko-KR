@@ -1,17 +1,17 @@
 ---
-title: HoloLens 용 MR 학습 공유 모듈 2
+title: 다중 사용자 기능 자습서-4. 여러 사용자와 개체 이동 공유
 description: 이 과정을 완료 하 여 HoloLens 2 응용 프로그램 내에서 다중 사용자 공유 환경을 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 2e676d319ba7221cf9549b200b3d748f26025aa7
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485667"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701896"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 개체 이동 공유
 

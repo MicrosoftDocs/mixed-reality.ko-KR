@@ -1,17 +1,17 @@
 ---
-title: HoloLens 학습을 위한 Azure 공간 앵커 (HoloLens) 2
+title: Azure 공간 앵커 자습서-3. Azure 공간 고정 피드백 표시
 description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485730"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702024"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Azure 공간 고정 피드백 표시
 

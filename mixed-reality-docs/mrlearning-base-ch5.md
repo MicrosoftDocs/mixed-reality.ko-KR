@@ -1,17 +1,17 @@
 ---
-title: MR 학습 기본 모듈 - 고급 입력
-description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+title: 자습서 시작-6. 고급 입력 옵션 탐색
+description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 0f01b789cfc358500ec94a10f82315bca55dd622
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485707"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702005"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
 

@@ -1,17 +1,17 @@
 ---
-title: HoloLens 학습을 위한 Azure 공간 앵커 (HoloLens) 2
+title: Azure 공간 앵커 자습서-1. Azure 공간 앵커 시작
 description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 9f830bc4ead35fd308108051617c61c65d98d451
-ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
+ms.openlocfilehash: 110c8ae1a529d4a3b4796a5d2b6ee44c150741cb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671963"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702067"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
 
@@ -32,7 +32,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 [MR 기본 모듈 자산 팩 v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[GLOBAL.ASA 모듈 Asset Pack v1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/v1/ASAModuleAssets_1.unitypackage)
+[GLOBAL.ASA 모듈 Asset Pack v1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/ASA_1.1/ASAModuleAssetsBeta.unitypackage)
 
 [Mixed Reality Toolkit 2.0.0 RC1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 

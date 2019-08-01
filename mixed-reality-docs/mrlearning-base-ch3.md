@@ -1,17 +1,17 @@
 ---
-title: MR 학습 기본 모듈 - 동적 콘텐츠 배치 및 해결기
-description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+title: 자습서-4를 시작 합니다. 동적 콘텐츠 배치 및 solvers 사용
+description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: a73be40180e582058ae3e9bbaeffebe462042fbb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485695"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701996"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 solvers 사용
 

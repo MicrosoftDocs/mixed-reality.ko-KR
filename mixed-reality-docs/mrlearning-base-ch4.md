@@ -1,17 +1,17 @@
 ---
-title: MR 학습 기본 모듈 - 3D 개체 조작
+title: 자습서 시작-5. 3D 개체와 상호 작용
 description: ''
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 29a31f794cbcda4f0c77b4e6e2d0e3c2c91dcb8c
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485701"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702022"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. 3D 개체와 상호 작용
 

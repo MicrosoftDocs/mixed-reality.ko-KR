@@ -1,3 +1,18 @@
+---
+title: 다중 사용자 기능 자습서-2. Unity를 개발할 준비 하는 중
+description: 이 과정을 완료 하 여 HoloLens 2 응용 프로그램 내에서 다중 사용자 공유 환경을 구현 하는 방법을 알아보세요.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701975"
+---
 # <a name="2-getting-unity-ready-for-development"></a>2. Unity를 개발할 준비 하는 중 
 
 

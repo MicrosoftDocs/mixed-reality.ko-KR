@@ -1,19 +1,19 @@
 ---
-title: HoloLens 용 MR 학습 공유 모듈 2
+title: 다중 사용자 기능 자습서-5. 공유 환경에 Azure 공간 앵커 통합
 description: 이 과정을 완료 하 여 HoloLens 2 응용 프로그램 내에서 다중 사용자 공유 환경을 구현 하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 1ae880208e79e2e045bd5e7298db260b7f0b2232
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293622"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701866"
 ---
-# <a name="azure-spatial-anchors-and-shared-experiences"></a>Azure 공간 앵커 및 공유 환경
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. 공유 환경에 Azure 공간 앵커 통합
 
 이 단원에서는 Azure 공간 앵커 (GLOBAL.ASA)를 공유 환경에 통합 하는 방법에 대해 알아봅니다. 모든 참가자가 동일한 물리적 위치에 있는 개체를 볼 수 있도록 실제 환경에서 가상 환경을 고정 하는 경우에는 여러 개의 공동 배치 된 장치에서 일반적인 참조를 사용할 수 있습니다.
 
