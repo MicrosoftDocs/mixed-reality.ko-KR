@@ -134,8 +134,6 @@
 ## [개발 실행 패드](development.md)
 ## 혼합 현실 클라우드 서비스
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
-### [홀로그램 원격 플레이어](holographic-remoting-player.md)
-### [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Unity 개발 개요](unity-development-overview.md)
 ### 시작
@@ -188,7 +186,6 @@
 #### [DirectX의 키보드, 마우스 및 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### 고급 항목
 #### [홀로그램 DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
-#### [홀로그램 원격 기능 추가](add-holographic-remoting.md)
 ### [OpenXR](openxr.md)
 ## WebVR
 ### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
@@ -289,7 +286,16 @@
 ## 원격 도구 및 연구 도구
 ### [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 ### [디바이스 포털 API 참조](device-portal-api-reference.md)
+## 홀로그램 원격 접속
 ### [홀로그램 원격 플레이어](holographic-remoting-player.md)
+### [홀로그램 원격 호스트 앱 작성](holographic-remoting-create-host.md)
+### [사용자 지정 홀로그램 원격 플레이어 작성](holographic-remoting-create-player.md)
+### [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
+### [홀로그램 원격 접속을 통한 보안 연결](holographic-remoting-secure-connection.md)
+### [문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
+### [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+### HoloLens 1에 대한 홀로그램 원격 접속
+#### [홀로그램 원격 접속 추가](add-holographic-remoting.md)
 ## 기타
 ### [QR 코드 추적](qr-code-tracking.md)
 ### [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
