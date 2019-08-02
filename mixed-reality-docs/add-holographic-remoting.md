@@ -6,21 +6,25 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, holographic remoting, 원격 렌더링, 네트워크 렌더링, HoloLens, 원격 holograms
-ms.openlocfilehash: 8d645f634ff0fc820893f5554fd602aa3a2f38e3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
+ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829624"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712423"
 ---
-# <a name="add-holographic-remoting"></a>Holographic 원격 추가
+# <a name="add-holographic-remoting-hololens-1"></a>Holographic 원격 (HoloLens 1) 추가
+
+>[!IMPORTANT]
+>이 문서에서는 HoloLens 1 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. **HoloLens 1** 용 호스트 응용 프로그램은 NuGet **패키지 버전 1.x**를 사용 해야 합니다. 즉, HoloLens 1 용으로 작성 된 호스트 응용 프로그램은 HoloLens 2와 호환 되지 않으며 그 반대의 경우도 마찬가지입니다.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> HoloLens 2에 대 한 추가 지침은 [곧](index.md#news-and-notes)제공 될 예정입니다.
+Holographic 원격을 사용 하는 HoloLens 개발자는 HoloLens 2와 호환 되도록 앱을 업데이트 해야 합니다. 이렇게 하려면 새 버전의 Holographic Remoting NuGet 패키지가 필요 합니다. Holographic Remoting NuGet 패키지를 사용 하는 응용 프로그램에서 2.0.0.0 보다 작은 버전 번호를 사용 하는 경우 HoloLens 2의 Holographic 원격 플레이어에 연결 하려고 하면 연결이 실패 합니다.
 
-Holographic 원격을 사용 하는 HoloLens 개발자는 HoloLens 2와 호환 되도록 앱을 업데이트 해야 합니다.  이 작업을 수행 하려면 아직 공개적으로 사용할 수 없는 Holographic Remoting NuGet 패키지의 새 버전이 필요 합니다.  HoloLens NuGet 패키지를 사용 하는 응용 프로그램에서 HoloLens 2의 Holographic Remoting 플레이어에 연결 하려고 하면 연결이 실패 합니다.  HoloLens 2 NuGet 패키지를 사용할 수 있게 되 면이 페이지에서 업데이트를 시청 하세요.
+>[!NOTE]
+>HoloLens 2와 관련 한 지침은 [여기](holographic-remoting-create-host.md)에서 찾을 수 있습니다.
+
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>데스크톱 또는 UWP 앱에 holographic 원격 추가
 
@@ -47,7 +51,7 @@ Holographic remoting에 대 한 NuGet 패키지를 가져오고 프로젝트에�
 
 먼저 HolographicStreamerHelpers의 인스턴스가 필요 합니다. 원격을 처리 하는 클래스에이를 추가 합니다.
 
-```
+```cpp
 #include <HolographicStreamerHelpers.h>
 
    private:
@@ -56,7 +60,7 @@ Holographic remoting에 대 한 NuGet 패키지를 가져오고 프로젝트에�
 
 또한 연결 상태를 추적 해야 합니다. 미리 보기를 렌더링 하려면 질감을 복사 하 여 복사 해야 합니다. 또한 연결 상태 잠금, HoloLens의 IP 주소를 저장 하는 몇 가지 방법 등의 몇 가지 작업을 수행 해야 합니다.
 
-```
+```cpp
 private:
        Microsoft::Holographic::HolographicStreamerHelpers^ m_streamerHelpers;
 
@@ -75,7 +79,7 @@ private:
 
 HoloLens 장치에 연결 하려면 HolographicStreamerHelpers의 인스턴스를 만들고 대상 IP 주소에 연결 합니다. Holographic Remoting 라이브러리에서 인코더 및 디코더 해상도가 정확 하 게 일치 하도록 예상 하기 때문에 HoloLens 표시 너비 및 높이와 일치 하도록 비디오 프레임 크기를 설정 해야 합니다.
 
-```
+```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
        m_streamerHelpers->CreateStreamer(m_d3dDevice);
 
@@ -98,7 +102,7 @@ m_streamerHelpers = ref new HolographicStreamerHelpers();
 
 OnConnected 이벤트는 UI를 업데이트 하 고 렌더링을 시작할 수 있습니다. 바탕 화면 코드 샘플에서는 "연결 된" 메시지로 창 제목을 업데이트 합니다.
 
-```
+```cpp
 m_streamerHelpers->OnConnected += ref new ConnectedEvent(
            [this]()
            {
@@ -108,7 +112,7 @@ m_streamerHelpers->OnConnected += ref new ConnectedEvent(
 
 OnDisconnected 이벤트는 다시 연결, UI 업데이트 등을 처리할 수 있습니다. 이 예에서는 일시적인 오류가 발생 하는 경우 다시 연결 합니다.
 
-```
+```cpp
 Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_streamerHelpers);
        m_streamerHelpers->OnDisconnected += ref new DisconnectedEvent(
            [this, streamerHelpersWeakRef](_In_ HolographicStreamerConnectionFailureReason failureReason)
@@ -148,7 +152,7 @@ Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_strea
 
 원격 구성 요소에서 프레임을 전송할 준비가 되 면 앱에 Send프레임 이벤트에서 복사본을 만들 수 있는 기회가 제공 됩니다. 여기에서 프레임을 스왑 체인에 복사 하 여 미리 보기 창에 표시할 수 있습니다.
 
-```
+```cpp
 m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
            [this](_In_ const ComPtr<ID3D11Texture2D>& spTexture, _In_ FrameMetadata metadata)
            {
@@ -180,13 +184,13 @@ m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
 
 Holographic space 및 speech 구성 요소를 직접 만드는 대신 HolographicRemotingHelpers 클래스에서 제공 됩니다.
 
-```
+```cpp
 m_appView->Initialize(m_streamerHelpers->HolographicSpace, m_streamerHelpers->RemoteSpeech);
 ```
 
 Run 메서드 내에서 업데이트 루프를 사용 하는 대신 데스크톱 또는 UWP 앱의 주 루프에서 틱 업데이트를 제공 합니다. 이렇게 하면 데스크톱 또는 UWP 앱이 메시지 처리를 계속 제어할 수 있습니다.
 
-```
+```cpp
 void DesktopWindow::Tick()
    {
        auto lock = m_deviceLock.Lock();
@@ -198,7 +202,7 @@ void DesktopWindow::Tick()
 
 Holographic app 뷰의 Tick () 메서드는 업데이트, 그리기, 표시 루프의 반복 하나를 완료 합니다.
 
-```
+```cpp
 void AppView::Tick()
    {
        if (m_main)
@@ -222,7 +226,7 @@ Holographic 앱 보기 업데이트, 렌더링 및 present 루프는 hpc에서 �
 
 연결을 끊으려면 예를 들어 사용자가 UI 단추를 클릭 하 여 HolographicStreamerHelpers에서 연결 끊기 ()의 연결을 끊은 다음 개체를 해제 합니다.
 
-```
+```cpp
 void DesktopWindow::DisconnectFromRemoteDevice()
    {
        // Disconnecting from the remote device can change the connection state.
@@ -246,7 +250,7 @@ Windows Holographic remoting 플레이어는 연결할 원격 호스트 앱에 �
 
 Holographic 앱 보기는 holographic 공간을 초기화 하는 데 사용 해야 하는 Direct3D 장치에 앱을 제공 하는 방법이 필요 합니다. 앱은이 Direct3D 장치를 사용 하 여 미리 보기 프레임을 복사 하 고 표시 해야 합니다.
 
-```
+```cpp
 internal:
        const std::shared_ptr<DX::DeviceResources>& GetDeviceResources()
        {
