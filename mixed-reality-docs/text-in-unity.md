@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, 글꼴, 입력 체계, ui, ux
-ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
+ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701907"
+ms.lasthandoff: 08/04/2019
+ms.locfileid: "68776398"
 ---
 # <a name="text-in-unity"></a>Unity의 텍스트
 
@@ -51,7 +51,7 @@ Unity는 장면에 추가 된 모든 새 요소를 1 개의 Unity 단위 또는 
 
 ## <a name="working-with-text-mesh-pro"></a>텍스트 메시 Pro 작업
 
-Unity의 텍스트 메시 Pro를 사용 하 여 텍스트 렌더링 품질을 보호할 수 있습니다. 이는 [사인 된 거리 필드 (.sdf)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) 기법을 사용 하는 거리에 관계 없이 선명한 텍스트 윤곽선을 지원 합니다. 3D 텍스트 메시 및 UI 텍스트에 대해 위에서 사용한 것과 동일한 계산 방법을 사용 하 여 기존 입력 점에 사용할 적절 한 크기 조정 값을 찾을 수 있습니다. 크기가 36 인 기본 3D 텍스트 메시 Pro 글꼴의 경계 크기는 2.5 Unity 단위 (2.5 m) 이므로 크기 조정 값 0.005을 사용 하 여 포인트 크기를 가져올 수 있습니다. UI 메뉴 아래의 텍스트 메시 Pro는 기본 경계 크기인 25 개 Unity 단위 (25m)를 갖습니다. 크기 조정 값에 대해 0.0005을 제공 합니다.
+Unity의 텍스트 메시 Pro를 사용 하 여 텍스트 렌더링 품질을 보호할 수 있습니다. 이는 [사인 된 거리 필드 (.sdf)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) 기법을 사용 하는 거리에 관계 없이 선명한 텍스트 윤곽선을 지원 합니다. 3D 텍스트 메시 및 UI 텍스트에 대해 위에서 사용한 것과 동일한 계산 방법을 사용 하 여 기존 입력 점에 사용할 적절 한 크기 조정 값을 찾을 수 있습니다. 크기가 36 인 기본 3D 텍스트 메시 Pro 글꼴의 경계 크기는 2.5 Unity 단위 (2.5 m) 이므로 크기 조정 0.005 값을 사용 하 여 포인트 크기를 가져올 수 있습니다. UI 메뉴 아래의 텍스트 메시 Pro는 기본 경계 크기인 25 개 Unity 단위 (25m)를 갖습니다. 크기 조정 값에 대해 0.0005을 제공 합니다.
 
 ![다른 글꼴 크기를 사용 하는 Unity 3D 텍스트 메시](images/Text_In_Unity_Measurements2.png)<br>
 *Unity 3D 텍스트 및 UI 텍스트에 대 한 값 크기 조정*
