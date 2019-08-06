@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, cpu, gpu, 렌더링, 가비지 수집, hololens
-ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: 16a923697985e3686992dc31ea8e6fc39249c276
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843340"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817347"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대 한 성능 권장 사항
 
@@ -38,7 +38,7 @@ Unity는 다음에 대 한 유용한 설명서를 제공 합니다.
 
 #### <a name="cache-references"></a>캐시 참조
 
-모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[getcomponent\<T > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 가장 많이 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag *는 실제로 저렴* 가 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 합니다.
+모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[getcomponent\<T > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 가장 많이 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag는 실제로 저렴가 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 합니다.
 
 ```CS
 using UnityEngine;
@@ -231,6 +231,18 @@ Unity는 많은 정적 개체를 일괄 처리 하 여 GPU에 대 한 그리기 
 ### <a name="optimize-depth-buffer-sharing"></a>깊이 버퍼 공유 최적화
 
 일반적으로 **플레이어 XR 설정** 에서 **깊이 버퍼 공유** 를 사용 하도록 설정 하 여 [홀로그램 안정성](Hologram-stability.md)을 최적화 하는 것이 좋습니다. 그러나이 설정을 사용 하 여 깊이 기반 지연 단계를 사용 하도록 설정 하는 경우 **24 비트 깊이 형식**대신 **16 비트 깊이 형식을** 선택 하는 것이 좋습니다. 16 비트 깊이 버퍼는 깊이 버퍼 트래픽과 관련 된 대역폭 (그리고 그에 따라 전원)을 크게 감소 시킵니다. 이는 큰 전력이 될 수 있지만 [z](https://en.wikipedia.org/wiki/Z-fighting) 가 24 비트 보다 16 비트를 사용 하는 경우에는 작은 깊이 범위의 환경에만 적용 됩니다. 이러한 아티팩트를 방지 하려면 [Unity 카메라](https://docs.unity3d.com/Manual/class-Camera.html) 의 near/far 클립 평면을 수정 하 여 더 낮은 정밀도를 고려 합니다. HoloLens 기반 응용 프로그램의 경우 Unity 기본 1000m 대신 5천만 개의 먼 클립 평면은 일반적으로 z-싸 우를 제거할 수 있습니다.
+
+### <a name="avoid-full-screen-effects"></a>전체 화면 효과 방지
+
+전체 화면에서 작동 하는 기술은 모든 프레임의 크기가 수백만 작업 이므로 상당한 비용이 들 수 있습니다. 따라서 앤티앨리어스, 블 룸 등의 [사후 처리 효과](https://docs.unity3d.com/Manual/PostProcessingOverview.html) 를 방지 하는 것이 좋습니다. 
+
+### <a name="optimal-lighting-settings"></a>최적의 조명 설정
+
+Unity의 [실시간 글로벌 조명은 전 세계](https://docs.unity3d.com/Manual/GIIntro.html) 의 시각적 결과를 제공할 수 있지만 상당한 비용이 드는 조명 계산이 포함 됩니다. **Windows** > **렌더링** 조명 설정을 통해 모든 Unity 장면 파일에 대해 실시간 글로벌 조명을 사용 하지 않도록 설정 하 > 실시간 글로벌 조명 선택을 취소 하는 것이 좋습니다. >  
+
+또한 모든 섀도 캐스팅을 사용 하지 않도록 설정 하는 것이 좋습니다 .이 경우에도 Unity 장면에 비용이 많이 드는 GPU 패스가 추가 됩니다. 그림자는 빛 당 사용 하지 않도록 설정할 수 있지만 품질 설정을 통해 전체적으로 제어할 수도 있습니다. 
+ 
+ > **프로젝트 설정을**편집한 다음 **품질** 범주를 선택 하 > UWP 플랫폼에 대해 저품질 **품질** 을 선택 합니다. 그림자를 **사용 하지 않도록**설정 하려면 **shadows** 속성을 설정 하면 됩니다.
 
 ### <a name="reduce-poly-count"></a>Poly 수 줄이기
 
