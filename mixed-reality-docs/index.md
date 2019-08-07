@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: c39a5f2f31dc962758456f743e17aaf37fd4ed64
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415392"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817352"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality 설명서
 
