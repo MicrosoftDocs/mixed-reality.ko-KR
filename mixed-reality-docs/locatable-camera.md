@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 카메라, hololens, 컬러 카메라, 전면, hololens 2, cv, 컴퓨터 비전, fiducial, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694534"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861726"
 ---
 # <a name="locatable-camera"></a>과정이 카메라
 
@@ -84,11 +84,13 @@ HoloLens 설명서의 다른 곳에서 "카메라"는 "가상 게임 카메라" 
 
 [Unity의 과정이 카메라](locatable-camera-in-unity.md): CameraToWorldMatrix는 PhotoCaptureFrame 클래스에서 자동으로 제공 되므로 CameraCoordinateSystem 변환에 대해 걱정할 필요가 없습니다.
 
-[DirectX의 과정이 카메라](locatable-camera-in-directx.md): 카메라의 좌표계와 사용자 고유의 응용 프로그램 좌표계 간에 변환을 쿼리 하는 매우 간단한 방법을 보여 줍니다.
+[DirectX의 과정이 카메라](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): Holographic Face 추적 샘플에서는 카메라의 좌표계와 사용자 고유의 응용 프로그램 좌표계 간에 변환을 쿼리 하는 매우 간단한 방법을 보여 줍니다.
 
 ### <a name="distortion-error"></a>왜곡 오류
 
-HoloLens에서 비디오와 스틸 이미지 스트림은 응용 프로그램에서 프레임을 사용할 수 있게 되기 전에 시스템의 이미지 처리 파이프라인에서 undistorted 됩니다 (미리 보기 스트림은 원래 왜곡 된 프레임을 포함 함). CameraIntrinsics만 사용할 수 있기 때문에 응용 프로그램에서 이미지 프레임은 완벽 한 pinhole 카메라를 나타낸다고 가정 해야 하지만 이미지 프로세서의 왜곡 함수는 HoloLens에서 최대 10 픽셀의 오류를 발생 시킬 수 있습니다 (첫 번째 생성). 프레임 메타 데이터에서 CameraIntrinsics를 사용 하는 경우 많은 사용 사례에서이 오류는 중요 하지 않지만, 예를 들어 실제 세계의 포스터/표식에 holograms를 맞추는 경우 10px 오프셋 (holograms에 약 11mm이 배치 됨)이 발생 하는 것을 < 알 수 있습니다. 
+HoloLens에서 비디오와 스틸 이미지 스트림은 응용 프로그램에서 프레임을 사용할 수 있게 되기 전에 시스템의 이미지 처리 파이프라인에서 undistorted 됩니다 (미리 보기 스트림은 원래 왜곡 된 프레임을 포함 함). CameraIntrinsics만 사용할 수 있으므로 응용 프로그램은 이미지 프레임이 완벽 한 pinhole 카메라를 나타낸다고 가정 해야 합니다.
+
+HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레임 메타 데이터에서 CameraIntrinsics을 사용 하는 경우에도 최대 10 픽셀의 오류를 남길 수 있습니다. 많은 사용 사례에서이 오류는 중요 하지 않지만, 예를 들어 실제 세계의 포스터/표식에 holograms를 맞추는 경우 10px 오프셋 (holograms에 약 11mm이 배치 됨)이 발생 하는 것을 < 알 수 있습니다. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>과정이 카메라 사용 시나리오
 
@@ -170,7 +172,7 @@ public static Vector3 ClosestPointBetweenRays(
 * 대화방에서 사람 식별 및 인식 (예: 얼굴에 holographic 연락처 카드 넣기)
 
 ## <a name="see-also"></a>참조
-* [DirectX의 위치를 찾을 수 있는 카메라](locatable-camera-in-directx.md)
+* [과정이 카메라 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Unity의 위치를 찾을 수 있는 카메라](locatable-camera-in-unity.md)
 * [혼합 현실 캡처](mixed-reality-capture.md)
 * [개발자를 위한 혼합 현실 캡처](mixed-reality-capture-for-developers.md)

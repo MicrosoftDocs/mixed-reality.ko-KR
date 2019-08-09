@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516253"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861713"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Windows Mixed Reality 개발자 설명서에 기여
 
@@ -57,6 +57,28 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
 5. 문서 편집을 완료 한 후 아래로 스크롤하여 **파일 변경 내용 제안** 단추를 클릭 합니다.
 6. 다음 페이지에서 **끌어오기 요청 만들기** 를 클릭 하 여 자동으로 만들어진 분기를 ' 마스터 '에 병합 합니다.
 7. 편집 하려는 다음 문서에 대해 위의 단계를 반복 합니다.
+
+## <a name="renaming-or-deleting-an-existing-article"></a>기존 아티클 이름 바꾸기 또는 삭제
+
+변경 시 기존 아티클의 이름을 바꾸거나 삭제 하는 경우에는 리디렉션을 추가 해야 합니다. 이렇게 하면 기존 문서에 대 한 링크를 가진 모든 사용자가 올바른 위치가 됩니다. 리디렉션은 리포지토리의 루트에 있는. openpublishing. 리디렉션 파일을 통해 관리 됩니다.
+
+. Openpublishing. 리디렉션에 리디렉션을 추가 하려면 `redirections` 배열에 항목을 추가 합니다.
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- 는 `source_path` 제거 하는 이전 아티클의 상대 저장소 경로입니다. 경로는로 시작 `mixed-reality-docs` 하 고로 `.md`끝나야 합니다.
+- 는 `redirect_url` 이전 문서에서 새 아티클에 대 한 상대 공용 URL입니다. 이 url은 리포지토리 경로가 아니라 공용 url `mixed-reality-docs` 을 `.md`참조 하므로이 url에 또는가 포함 **되지** 않아야 합니다. 를 사용 하 여 `#section` 새 문서 내의 섹션에 연결할 수 있습니다. 필요한 경우 여기서 다른 사이트에 대 한 절대 경로를 사용할 수도 있습니다.
+- `redirect_document_id`이전 파일의 문서 ID를 유지할지 여부를 나타냅니다. 기본값은 `false`입니다. 리디렉션된 `true` 아티클의 `ms.documentid` 특성 값을 유지 하려는 경우에 사용 합니다. 문서 ID를 유지 하는 경우 페이지 보기 및 순위와 같은 데이터가 대상 문서에 전송 됩니다. 리디렉션이 주로 이름 바꾸기 인 경우에는이 작업을 수행 하 고, 동일한 콘텐츠 중 일부만 포함 하는 다른 문서에 대 한 포인터는 그렇지 않습니다.
+
+리디렉션을 추가 하는 경우에도 이전 파일을 삭제 해야 합니다.
 
 ## <a name="creating-a-new-article"></a>새 문서 만들기
 
