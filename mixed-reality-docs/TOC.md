@@ -182,7 +182,6 @@
 #### [DirectX의 공간 매핑](spatial-mapping-in-directx.md)
 ### 다른 주요 기능
 #### [DirectX의 공유 공간 앵커](shared-spatial-anchors-in-directx.md)
-#### [DirectX의 위치를 찾을 수 있는 카메라](locatable-camera-in-directx.md)
 #### [DirectX의 키보드, 마우스 및 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### 고급 항목
 #### [홀로그램 DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
