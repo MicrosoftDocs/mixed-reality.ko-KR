@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 05/15/19
 ms.topic: article
 keywords: Windows Mixed Reality, 테스트, 혼합 현실 도구 키트, MRTK 버전 2, MRTK, 도구, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: 7eded2c766765a5ccebf741eed2f8b7fe8f65a93
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: c785498e1533b2117249d3b21952ff56190126c0
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507926"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937082"
 ---
 # <a name="getting-started-with-mrtk-v2"></a>MRTK v2 시작
 
@@ -185,7 +185,7 @@ MRTK v2 Unity는 혼합 현실 응용 프로그램을 위한 오픈 소스 플�
 
 
 ## <a name="minimum-requirement-for-mrtk-v2"></a>MRTK v 2의 최소 요구 사항
-* Unity 2018.3.x
+* Unity 2018.4
 * Microsoft Visual Studio 2017 이상
 * Windows SDK 18362 + 
 * Windows 10 1803 이상
