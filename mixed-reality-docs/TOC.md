@@ -36,6 +36,7 @@
 ### [모션 컨트롤러](motion-controllers.md)
 ### [음성 입력 ](voice-input.md)
 ### [공간 매핑](spatial-mapping.md)
+### [장면 이해](scene-understanding.md)
 ### [공간 음향](spatial-sound.md)
 ### [좌표계](coordinate-systems.md)
 ### [공간 앵커](spatial-anchors.md)
