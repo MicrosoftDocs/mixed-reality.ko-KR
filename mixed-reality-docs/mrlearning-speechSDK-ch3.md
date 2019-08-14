@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: c7cbdca3c22253042a9be44a194fca8925f0f446
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701832"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977960"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Azure Cognitive Services speech translation 구성 요소 추가
 
@@ -45,5 +45,5 @@ ms.locfileid: "68701832"
 
 이제 프로젝트는 말하는 단어를 여러 언어로 번역할 수 있습니다. 자유롭게 언어를 사용 하 고 번역의 정확도를 테스트할 수 있습니다. 
 
-[다음 자습서: 4.  의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
+[다음 자습서: 4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
 

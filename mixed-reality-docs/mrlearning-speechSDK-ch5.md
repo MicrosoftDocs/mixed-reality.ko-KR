@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: fc65dccfcbc181af0c0b321374c721797e120e5d
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 43a6f02eaf09fcf43775374fae4fbe2d0bc8c346
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460333"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977985"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Speech SDK 학습 모듈-음성 명령을 사용 하 여 로켓 시작 관리자 제어
 
@@ -23,17 +23,17 @@ ms.locfileid: "68460333"
 - 음성 의도 음성 명령을 로켓 컨트롤 입력 명령으로 사용 하는 방법에 대해 알아봅니다.
 
 ## <a name="instructions"></a>지침
-1. 이 자습서에서는 "BaseModule" 자산을 사용 하 여 로켓 시작 관리자를 음성 명령과 통합 합니다. 이를 위해 프로젝트에 자산을 가져와야 합니다. 이 링크 (링크 첨부)를 사용 하 여 "로켓 시작 관리자" 자산을 다운로드할 수 있습니다. 
+1. 이 자습서에서는 "BaseModule" 자산을 사용 하 여 로켓 시작 관리자를 음성 명령과 통합 합니다. 이를 위해 프로젝트에 자산을 가져와야 합니다. 이 [링크](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2)를 사용 하 여 "로켓 시작 관리자" 자산을 다운로드할 수 있습니다. 
 
 2. 자산을 가져오려면 자산-> 가져오기 패키지-> 사용자 지정 패키지-> 다운로드 한 파일로 이동 하 여 가져오기를 클릭 합니다.
 
 ![module4chapter5step1](images/module4chapter5step1.PNG)
 
-3. "로켓 시작 관리자" 자산을 가져온 후 "로켓 시작 관리자" 폴더 > Prefabs-> "로켓 Launcher_Complete"를 선택 하 고 기존 장면 계층 구조에 끌어다 놓습니다.
+3. "기본 모듈 자산" 자산을 가져온 후 "기본 모듈 자산" 폴더 > Prefabs-> "로켓 Launcher_Complete"를 선택 하 고 기존 장면 계층 구조에 끌어다 놓습니다.
 
 ![module4chapter5step2](images/module4chapter5step2.PNG)
 
-4. 이제 이전 단원에서 작업 한 LUIS 프로젝트와 "로켓 시작 관리자"를 통합 해야 합니다 (lesson4에 대 한 링크). 이렇게 하려면 계층에서 "로켓 Launcher_Complete" prefab를 확장 하 고 "LaunchRoundButton", "ResetRoundButton" 및 "배치 힌트" 단추를 찾습니다.
+4. 이제 "로켓 시작 관리자"를 이전 단원 [단원](mrlearning-speechSDK-ch4.md)에서 작업 한 LUIS 프로젝트와 통합 해야 합니다. 이렇게 하려면 계층에서 "로켓 Launcher_Complete" prefab를 확장 하 고 "LaunchRoundButton", "ResetRoundButton" 및 "배치 힌트" 단추를 찾습니다.
 
 ![module4chapter5step3](images/module4chapter5step3.PNG)
 

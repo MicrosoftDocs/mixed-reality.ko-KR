@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 70f84c1ec03919a15bed486ffa51fb57db39deec
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702053"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977973"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Azure 공간 앵커 저장, 검색 및 공유
 
@@ -46,13 +46,13 @@ ms.locfileid: "68702053"
 
    - GetFromDisk 라는 단추에 대해 단추 누름 이벤트 트리거 뿐만 아니라 클릭 시 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 LoadAzureAnchorIDsFromDisk () 메서드를 할당 합니다.
 
-3. Tutoiral 1의 지침에 따라 장치에 업데이트 된 응용 프로그램을 빌드합니다. 이전 단원에서와 같이 Azure 앵커 만들기 단추를 누른 후에는 디스크에 저장 단추를 눌러 Azure 앵커 ID를 디스크에 저장할 수 있습니다.
+3. 자습서 1의 지침에 따라 장치에 업데이트 된 응용 프로그램을 빌드합니다. 이전 단원에서와 같이 Azure 앵커 만들기 단추를 누른 후에는 디스크에 저장 단추를 눌러 Azure 앵커 ID를 디스크에 저장할 수 있습니다.
 
 4. 응용 프로그램을 다시 시작 하 고, Azure 세션을 시작 하 고, Load Anchor ID를 누르고, Azure 앵커 찾기를 눌러 디스크에 저장 한 ID와 연결 된 앵커를 찾습니다. 이제 전체 장면을 이전에 앵커를 저장 한 위치에 배치 해야 합니다.
 
 ### <a name="share-azure-anchors-between-multiple-devices"></a>여러 장치 간에 Azure 앵커 공유
 
-이 섹션에서는 여러 장치 간에 Azure 앵커 ID를 공유 하는 방법을 알아봅니다. 이렇게 하면 여러 장치에서 동일한 앵커 ID를 사용 하 여 Azure를 쿼리하면 고정 된 holograms 및 장면을 공간적으로 정렬할 수 있습니다. 공간 맞춤 (여러 장치 간의 동일한 물리적 위치에서 동일한 holograms 표시)은 HoloLens 2의 로컬 공유 환경에 대 한 핵심입니다. Azure 공간 앵커 공유 환경 자습서 (TODO: 링크 추가)에 설명 된 방법을 포함 하 여 장치 간에 azure Id와 관련 된 정보를 전송 하는 여러 가지 방법이 있습니다. 이 예제에서는 간단한 웹 서비스를 사용 하 여 장치 간에 앵커 Id를 업로드 하 고 다운로드 합니다.
+이 섹션에서는 여러 장치 간에 Azure 앵커 ID를 공유 하는 방법을 알아봅니다. 이렇게 하면 여러 장치에서 동일한 앵커 ID를 사용 하 여 Azure를 쿼리하면 고정 된 holograms 및 장면을 공간적으로 정렬할 수 있습니다. 공간 맞춤 (여러 장치 간의 동일한 물리적 위치에서 동일한 holograms 표시)은 HoloLens 2의 로컬 공유 환경에 대 한 핵심입니다. Azure 공간 앵커 공유 환경 자습서 [자습서](mrlearning-sharing(photon)-ch1.md)에서 설명 하는 방법을 비롯 하 여 장치 간에 azure id와 관련 된 정보를 전송 하는 여러 가지 방법이 있습니다. 이 예제에서는 간단한 웹 서비스를 사용 하 여 장치 간에 앵커 Id를 업로드 하 고 다운로드 합니다.
 
 1. ShareAnchor prefab을 계층에 추가 합니다. 이 prefab는 장면에 두 개의 새 단추를 추가 합니다. 하나는 앵커 ID 정보를 업로드 하 고 다른 하나는 앵커 ID 정보를 다운로드 하는 것입니다. 
 

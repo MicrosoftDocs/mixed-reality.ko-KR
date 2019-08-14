@@ -869,7 +869,7 @@ public interface ISimulatedHand
 
 손이 현재 SimulatedDevice에 표시 되는지 여부를 검색 합니다 .이는 핸드 트래커에서 검색할 위치에 있는지 여부를 검색 합니다.
 
-**PerceptionSimulation. ISimulatedHand. Ensurevisible\**
+**PerceptionSimulation. ISimulatedHand. Ensurevisible**
 
 SimulatedDevice에 표시 되도록 손을 이동 합니다.
 
