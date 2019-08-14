@@ -18,7 +18,6 @@
 #### [HoloLens 알려진 문제](hololens-known-issues.md)
 #### [HoloLens 문제 해결](troubleshooting.md)
 #### [혼합 현실 캡처](mixed-reality-capture.md)
-#### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 #### [HoloLens 다시 설정 또는 복구](reset-or-recover-your-hololens.md)
 #### [파일 저장 및 찾기](saving-and-finding-your-files.md)
 #### [사진 보기](see-your-photos.md)
@@ -27,6 +26,7 @@
 #### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
 ### 몰입형 헤드셋
 #### [몰입형 헤드셋 하드웨어 세부 정보](immersive-headset-hardware-details.md)
+#### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 #### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [하드웨어 액세서리](hardware-accessories.md)
 ### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
