@@ -3,15 +3,15 @@ title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/25/2019
+ms.date: 8/14/2019
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 548e8fb72af137e53c10c4507c56f29c8bd6a4ca
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694426"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030154"
 ---
 HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드는 함께 설치 됩니다. 일반적으로 사용 가능한 최신 빌드를 사용 하는 것이 좋지만, 이전 에뮬레이터에 대해 앱을 테스트 하거나 테스트 해야 하는 경우가 있을 수 있습니다. 이 페이지에는 릴리스 버전에 대 한 링크가 포함 되어 있습니다.
 
@@ -21,7 +21,8 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 |  빌드 |  출시 날짜 |  참고 | 
 |----------|----------|----------|
-|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 2019 년 7 월 8 일 | 최신 HoloLens 2 빌드.  DiskStream .dll의 서명 문제를 해결 합니다. |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1028](https://go.microsoft.com/fwlink/?linkid=2101019) | 2019 년 8 월 14 일 | 2019 년 8 월 2 일 빌드.  Holographic 앱 템플릿은 더 이상 포함 되지 않지만 9 월 2019 일부 터 Visual Studio Marketplace에서 사용할 수 있습니다.  이제 Sdk가 사용자 지정 위치에 설치 되 면 에뮬레이터가 작동 합니다. |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 2019 년 7 월 8 일 | DiskStream .dll의 서명 문제를 해결 합니다. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 2019 년 6 월 11 일 | 더 이상 관리자 권한으로 실행할 필요가 없습니다.  시작 메뉴 바로 가기가 추가 되었습니다. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 2019 년 4 월 16 일 |  |
 

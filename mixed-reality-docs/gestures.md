@@ -6,16 +6,16 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 혼합 현실, 제스처, 상호 작용, 디자인
-ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 70b03c6fa327bd987a681bba59abb725c3ddc6b4
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829775"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020218"
 ---
 # <a name="gestures"></a>제스처
 
-핸드 제스처를 통해 사용자는 혼합 현실에서 작업을 수행할 수 있습니다. 상호 작용은 대상 **으로 지정** 된 요소에 대 한 작업을 수행 하기 위해 대상 및 **제스처** 또는 **음성** 을 기반으로 빌드됩니다. 핸드 제스처는 공간에서 정확한 위치를 제공 하지 않지만 HoloLens에 배치 하 고 콘텐츠와 즉시 상호 작용 하는 작업을 통해 사용자는 다른 액세서리 없이 작업할 수 있습니다.
+핸드 제스처를 통해 사용자는 혼합 현실에서 작업을 수행할 수 있습니다. 상호 작용은 대상 으로 지정 된 요소에 대 한 작업을 수행 하기 위해 대상 및 **제스처** 또는 **음성** 을 기반으로 빌드됩니다. 핸드 제스처는 공간에서 정확한 위치를 제공 하지 않지만 HoloLens에 배치 하 고 콘텐츠와 즉시 상호 작용 하는 작업을 통해 사용자는 다른 액세서리 없이 작업할 수 있습니다.
 
 <br>
 

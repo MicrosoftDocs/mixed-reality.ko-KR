@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694589"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020225"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -36,7 +36,7 @@ HoloLens 용 Windows 장치 포털을 사용 하면 Wi-fi 또는 USB를 통해 �
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
 7. [아래로 스크롤하여](gestures.md#composite-gestures) **장치 포털**을 사용 하도록 설정 합니다.
-8. Windows 장치 포털을 설정 하 여 USB 또는 Wi-fi를 통해이 HoloLens에 앱을 배포할 수 있도록 하려면 페어링 **을 클릭 하** 여 [페어링 핀을 생성](using-visual-studio.md)합니다. 첫 번째 배포 중에 Visual Studio에 PIN을 입력할 때까지 PIN 팝업에서 설정 앱을 그대로 둡니다.
+8. Windows 장치 포털을 설정 하 여 USB 또는 Wi-fi를 통해이 HoloLens에 앱을 배포할 수 있도록 하려면 페어링을 클릭 하 여 [페어링 핀을 생성](using-visual-studio.md)합니다. 첫 번째 배포 중에 Visual Studio에 PIN을 입력할 때까지 PIN 팝업에서 설정 앱을 그대로 둡니다.
 
    ![Windows Holographic 설정 앱에서 개발자 모드를 사용 하도록 설정](images/deviceportalsettings.png)
 
@@ -52,7 +52,7 @@ HoloLens 용 Windows 장치 포털을 사용 하면 Wi-fi 또는 USB를 통해 �
 
 1. PC에 설치 된 Windows 10 개발자 도구를 사용 하 여 Visual Studio 업데이트 1이 설치 되어 있는지 확인 하 [는 도구를 설치](install-the-tools.md) 합니다. 이렇게 하면 USB 연결을 사용할 수 있습니다.
 2. HoloLens를 마이크로-USB 케이블로 PC에 연결합니다.
-3. PC의 웹 브라우저에서 http://127.0.0.1:10080 로 이동합니다.
+3. PC의 웹 브라우저에서로 [http://127.0.0.1:10080](http://127.0.0.1:10080)이동 합니다.
 
 ## <a name="connecting-to-an-emulator"></a>에뮬레이터에 연결
 
@@ -270,7 +270,7 @@ HoloLens에서 실시간 ETW(Windows용 이벤트 추적) (ETW)를 관리 합니
 
 테스트를 위해 입력 데이터를 기록 및 재생할 수 있습니다.
 * **방 캡처**: 사용자 환경에 대 한 공간 매핑 메시를 포함 하는 시뮬레이션 된 대화방 파일을 다운로드 하는 데 사용 됩니다. 대화방의 이름을로 지정한 다음 **캡처** 를 클릭 하 여 PC에서 .xef 파일로 데이터를 저장 합니다. 이 공간 파일을 HoloLens 에뮬레이터에 로드할 수 있습니다.
-* **기록**: 기록할 스트림을 확인 하 고 기록 이름을로 기록한 후 기록을 클릭 **하거나 탭 하** 여 기록을 시작 합니다. HoloLens를 사용 하 여 작업을 수행 하 고 **중지** 를 클릭 하 여 데이터를 PC에 .xef 파일로 저장 합니다. 이 파일을 HoloLens 에뮬레이터 또는 디바이스에 로드할 수 있습니다.
+* **기록**: 기록할 스트림을 확인 하 고 기록 이름을로 기록한 후 기록을 클릭 하거나 탭 하 여 기록을 시작 합니다. HoloLens를 사용 하 여 작업을 수행 하 고 **중지** 를 클릭 하 여 데이터를 PC에 .xef 파일로 저장 합니다. 이 파일을 HoloLens 에뮬레이터 또는 디바이스에 로드할 수 있습니다.
 * **재생**: **녹음/녹화 업로드** 를 클릭 하거나 탭 하 여 PC에서 xef 파일을 선택 하 고 HoloLens로 데이터를 보냅니다.
 * **제어 모드**: 드롭다운 목록에서 **기본값** 또는 **시뮬레이션** 을 선택 하 고 **설정** 단추를 클릭 하거나 탭 하 여 HoloLens에서 모드를 선택 합니다. "시뮬레이션"을 선택하면 HoloLens의 실제 센서를 사용할 수 없고 대신 업로드한 시뮬레이트된 데이터를 사용합니다. "시뮬레이션"으로 전환하면 HoloLens가 "기본"으로 다시 전환될 때까지 실제 사용자에게 응답하지 않습니다.
 
