@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: holographic 프레임, 보기 필드, fov, 보정, 공간, 환경, 방법
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670176"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565993"
 ---
 # <a name="environment-considerations-for-hololens"></a>HoloLens 환경 고려 사항
 
@@ -21,7 +21,7 @@ HoloLens는 holographic을 "실제" 세계와 혼합 하 여 holograms를 주변
 
 ## <a name="setting-up-an-environment"></a>환경 설정
 
-HoloLens 장치에서는 사용자를 공간으로 *추적* 하 여 안정적이 고 정확한 holograms을 저장 하는 방법을 알고 있습니다. 적절 한 추적을 사용 하지 않으면 장치에서 환경이 나 사용자를 인식 하지 못합니다. 따라서 holograms는 잘못 된 위치에 표시 되거나 매번 동일한 위치에 표시 되지 않거나 전혀 표시 되지 않을 수 있습니다.
+HoloLens 장치에서는 사용자를 공간으로 *추적* 하 여 안정적이 고 정확한 holograms을 저장 하는 방법을 알고 있습니다. 적절 한 추적을 사용 하지 않으면 장치에서 환경이 나 사용자를 인식 하지 못합니다. 따라서 holograms는 잘못 된 위치에 표시 되거나 매번 동일한 위치에 표시 되지 않거나 전혀 표시 되지 않을 수 있습니다. 사용자를 추적 하는 데 사용 되는 데이터는 *공간 맵에*표시 됩니다. 
 
 추적 성능은 사용자가 있는 환경에 의해 크게 영향을 받으며 안정적이 고 일관 된 추적을 유도 하는 환경을 조정 하는 것은 과학이 아니라 아트입니다. 여러 가지 환경 요소를 함께 사용 하 여 추적을 가능 하 게 하 고, 혼합 현실 개발자는 추적을 개선 하기 위해 공간을 조정할 수 있는 몇 가지 요인을 고려해 야 합니다.
  
@@ -55,10 +55,12 @@ HoloLens는 *기능*이라고 하는 고유한 환경 랜드마크를 사용 하
 
 Wormholes을 방지 하려면 동일한 공간에서 동일한 영역을 방지 합니다. 때로는 동일한 영역에 공장 스테이션, 건물의 windows, 서버 랙 또는 작업 스테이션이 포함 될 수 있습니다. Labelling 영역을 추가 하거나 각 유사한 영역에 고유한 기능을 추가 하 여 wormholes를 완화할 수 있습니다.
  
-### <a name="temporal-stability-of-a-space"></a>공간의 임시 안정성
+### <a name="movement-in-a-space"></a>공간에서의 이동
 환경이 지속적으로 이동 하 고 변경 되는 경우 장치에는 찾을 안정적인 기능이 없습니다. 
 
 사용자를 포함 하 여 공간에 있는 더 많은 이동 개체가 추적을 잃지 않는 것이 더 쉽습니다. 컨베이어 벨트 이동, 다른 생성 상태의 항목 및 공간에 있는 많은 사용자는 추적 문제를 야기 하는 것으로 알려져 있습니다.
+
+HoloLens는 이러한 변경 내용을 신속 하 게 조정할 수 있지만 해당 영역이 장치에 명확 하 게 표시 되는 경우에만 가능 합니다. 자주 표시 되지 않는 영역은 실제 보다 지연 될 수 있으며이로 인해 공간 맵의 오류가 발생할 수 있습니다. 예를 들어 사용자가 친구를 검색 한 후 친구 들이 대화방을 떠나는 동안를 전환 합니다. 사용자가 현재 빈 공간을 다시 검색할 때까지 friend의 ' 고스트 ' 표현은 공간 매핑 데이터에 유지 됩니다.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>사용자가 공간에 있는 항목에 근접
 눈에 잘 가까운 개체에 대 한 관심을 겪던 수 없는 경우와 마찬가지로, 개체가 카메라에 가까이 있는 경우 HoloLens를 합니다. 두 카메라에서 개체가 너무 가깝거나 개체가 단일 카메라를 차단 하는 경우에는 해당 장치에 개체에 대 한 추적 문제가 훨씬 더 많이 발생 합니다. 
@@ -76,11 +78,7 @@ WiFi를 사용 하도록 설정 하면 실제 WiFi 네트워크/라우터에 연
 네트워크 id (예: SSID, MAC 주소)는 Microsoft로 전송 되지 않으며 모든 WiFi 참조는 HoloLens에서 로컬로 유지 됩니다.
 
 ## <a name="mapping-new-spaces"></a>새 공백 매핑
-새 공간을 입력 하거나 기존 공간을 로드 하는 경우 공간에 분산 된 메시 그래픽이 표시 됩니다. 이는 장치가 사용자 환경을 [매핑하](spatial-mapping-design.md)는 것을 의미 합니다. 
-
-Holograms를 배치 하는 데 문제가 있는 경우 HoloLens가 더 완전 하 게 매핑할 수 있도록 공간을 탐색 해 보세요. 
-
-HoloLens가 공간을 매핑할 수 없거나 보정을 벗어난 경우 제한 된 모드로 전환 될 수 있습니다. 제한 된 모드에서는 holograms를 주변에 놓을 수 없습니다.
+새 공간을 입력 하거나 기존 공간을 로드 하는 경우 공간에 분산 된 메시 그래픽이 표시 됩니다. 이는 장치가 사용자 환경을 매핑하는 것을 의미 합니다. HoloLens는 시간에 따른 공간을 학습할 수 있지만 공간을 [매핑하는 팁과 트릭](use-hololens-in-new-spaces.md)은 있습니다. 
 
 ## <a name="environment-management"></a>환경 관리
 사용자가 "정리" 하는 데 사용할 수 있는 두 가지 설정이 있으며,이로 인해 holograms에서 공간을 "잊어버린" 상태로 만듭니다.  이러한 항목은 설정 앱의 "Holograms and environment"에 있고, 두 번째 설정은 설정 앱의 "개인 정보" 아래에도 표시 됩니다.
@@ -89,20 +87,14 @@ HoloLens가 공간을 매핑할 수 없거나 보정을 벗어난 경우 제한 
 
 2.  모든 holograms 삭제 –이 설정을 선택 하 여 HoloLens는 전체 공간 데이터베이스에서 모든 지도 데이터와 고정 holograms를 지웁니다.  Holograms는 시이 없으며, 데이터베이스에 맵 섹션을 다시 저장 하기 위해 holograms를 새로 배치 해야 합니다.
 
-### <a name="managing-your-spaces"></a>공간 관리
-
-지도 섹션과 다른 공백이 HoloLens 장치에 로컬로 저장 된 단일 데이터베이스로 축소 되었습니다. 지도 데이터베이스는 내부 시스템에만 액세스할 수 있는 상태로 안전 하 게 저장 되며, PC에 연결 되어 있거나 파일 탐색기 앱을 사용 하는 경우에도 장치 사용자에 게는 액세스할 수 없습니다. Bitlocker를 사용 하도록 설정 하면 저장 된 맵 데이터도 암호화 됩니다.
-
-Holograms가 위치/holograms 사이에 연결 경로가 없는 다른 위치에 배치 되는 경우 여러 개의 지도 구성 요소가 있습니다.  동일한 지도 섹션 내에서 고정 된 Holograms는 현재 공간에서 "주변"으로 간주 됩니다.
-
-공유 홀로그램 시나리오를 사용할 수 있도록 "현재 공간" (현재 인식 된 지도 구성 요소의 일부)의 작은 하위 집합을 내보내는 개발자 API가 있습니다.  현재 매핑된 모든 공간의 전체 데이터베이스를 다운로드 하는 메커니즘은 없습니다.
-
 
 ## <a name="hologram-quality"></a>홀로그램 품질
 
 Holograms는 환경 전체 (높음, 낮음, 모든 사용자에 게 배치 될 수 있지만, 눈에 [holographic 프레임](holographic-frame.md) 을 통해 볼 수 있습니다. 최상의 보기를 얻으려면 전체 프레임을 볼 수 있도록 장치를 조정 해야 합니다. 사용자 환경에 대 한 탐색을 주저 하지 말고 탐색 하세요!
 
 [Holograms](hologram.md) 가 명확 하 고 명확 하며 안정적으로 보이도록 HoloLens를 보정 해야 합니다. HoloLens를 처음 설정 하는 경우이 프로세스를 안내 합니다. 나중에 holograms가 표시 되지 않거나 많은 오류가 표시 되는 경우 조정을 수행할 수 있습니다.
+
+공간을 매핑하는 데 문제가 있는 경우 근처의 holograms 삭제 하 고 공간을 다시 매핑 해 보세요.
 
 ### <a name="calibration"></a>보정
 
@@ -118,3 +110,4 @@ Holograms 또는 흔들리는가 나 holograms를 배치 하는 데 문제가 �
 * [공간 매핑 디자인](spatial-mapping-design.md)
 * [Holograms](hologram.md)
 * [조정](calibration.md)
+* [새 공간에서 Hololens 사용](use-hololens-in-new-spaces.md)

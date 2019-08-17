@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 제스처
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522462"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559881"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -121,6 +121,9 @@ HoloLens에 배포 하는 경우:
 * 직접 추적 이벤트를 구독 합니다.
 * 커서 피드백을 사용 하 여 손을 추적할 때 사용자를 표시 합니다.
 
+>[!NOTE]
+>HoloLens 2에서 손이 표시 될 때마다 손 모양 (손가락을 가리키는 경우가 아님)이 발생 합니다.
+
 ### <a name="instructions"></a>지침
 
 * **계층** 패널에서 **inputmanager** 개체를 확장 합니다.
@@ -136,7 +139,7 @@ HoloLens에 배포 하는 경우:
 
 1. **계층** 패널에서 **커서** 개체를 선택 하 고 삭제 합니다.
 2. **프로젝트** 패널에서 **CursorWithFeedback** 를 검색 하 여 **계층** 패널로 끌어 옵니다.
-3. **계층** 패널 **에서 inputmanager** 를 클릭 한 다음 **계층 구조** 에서 **CursorWithFeedback** 개체를 다음의 맨 아래에 있는 Inputmanager의 **simplesinglepointerselector**필드로 끕니다.  **검사기**.
+3. **계층** 패널 **에서 inputmanager** 를 클릭 한 다음 **계층 구조** 에서 **CursorWithFeedback** 개체를 다음의 맨 아래에 있는 Inputmanager의 **simplesinglepointerselector**필드로 끕니다. **검사기**.
 4. **계층**에서 **CursorWithFeedback** 를 클릭 합니다.
 5. **검사기** 패널에서 **개체 커서** 스크립트의 **커서 상태 데이터** 를 확장 합니다.
 
@@ -177,7 +180,7 @@ HoloLens에 배포 하는 경우:
 4. **CursorWithFeedback**을 클릭 합니다.
 5. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
 6. 메뉴의 검색 상자에 **CursorFeedback**을 입력 합니다. 검색 결과를 선택 합니다.
-7. **ScrollFeedback** 개체를 **계층** 의 **커서 피드백** 구성 요소에 있는 **검색 된 게임 개체의 스크롤** 속성으로 끌어 **놓습니다.**
+7. **ScrollFeedback** 개체를 **계층** 의 **커서 피드백** 구성 요소에있는 **검색 된 게임 개체의 스크롤** 속성으로 끌어 놓습니다.
 8. **계층** 패널에서 **AstroMan** 개체를 선택 합니다.
 9. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
 10. 메뉴에서 검색 상자 **제스처 동작**을 입력 합니다. 검색 결과를 선택 합니다.
@@ -367,7 +370,7 @@ GestureManager.cs 및 AstronautManager.cs를 사용 하면 다음을 수행할 �
 1. **프로젝트** 패널 **Holograms** 폴더에서 **pathingfeedback** 자산을 찾습니다.
 2. **Pathingfeedback** Prefab을 **계층**의 **CursorWithFeedback** 개체로 끌어서 놓습니다.
 3. **계층** 패널에서 **CursorWithFeedback**를 클릭 합니다.
-4. **Inspector**의 **커서 피드백** 구성 요소에서  **Pathing 검색 된 게임 개체** 속성에 **pathingfeedback** 개체를 끌어서 놓습니다.
+4. **Inspector**의 **커서 피드백** 구성 요소에서 **Pathing 검색 된 게임 개체** 속성에 **pathingfeedback** 개체를 끌어서 놓습니다.
 
 이제 **GestureAction.cs** 에 코드를 추가 하 여 다음을 사용 하도록 설정 해야 합니다.
 
@@ -521,10 +524,10 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 7. 메뉴의 검색 상자에 **음성 입력 처리기**를 입력 합니다. 검색 결과를 선택 합니다.
 8. 이 명령은 GameObject에 관계 없이 작동 하기 때문에 **전역 수신기**를 선택 합니다.
 9. 단추를 **+** 클릭 하 고 키워드 드롭다운에서 **모델 확장** 을 선택 합니다.
-10. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다.  **+**
+10. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다. **+**
 11. 이제 **함수 없음** 드롭다운을 클릭 하 고 **AstronautManager**, **ExpandModelCommand**를 차례로 선택 합니다.
 12. 음성 입력 처리기의 **+** 단추를 클릭 하 고 키워드 드롭다운에서 **모델 다시 설정** 을 선택 합니다.
-13. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다.  **+**
+13. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다. **+**
 14. 이제 **함수 없음** 드롭다운을 클릭 하 고 **AstronautManager**, **resetmodelcommand**를 차례로 선택 합니다.
 
 ![5 장의 음성 입력 소스 및 처리기를 설정 하는 방법](images/holograms211-speechhandler.png)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: f45aa7e2f07a8a67cd56f0aae140de3a68afc918
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701987"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559894"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. 음력 모듈 샘플 응용 프로그램 만들기
 
@@ -51,7 +51,7 @@ Prefab Prefabs에서 > > 자산의을 찾습니다. 또한 두 개의 로켓 시
 
 > 참고: 기본 장면 계층 구조에 표시 되는 게임 개체 이름이 장면의 개체 이름과 일치 하지 않습니다.
 
-2단계: 오디오 소스를 달탐사선에 추가합니다. 기본 장면 계층 구조에서 음력 모듈이 선택 되어 있는지 확인 하 고 구성 요소 추가를 클릭 합니다. 오디오 소스를 검색 하 고 개체에 추가 합니다. 지금은 비워둡니다. 나중에 발사음을 재생하는 데 사용할 것입니다.
+2단계: 오디오 소스를 달탐사선에 추가합니다. 기본 장면 계층 구조에서 음력 모듈이 선택 되어 있는지 확인 하 고 구성 요소 추가를 클릭 합니다. 오디오 소스를 검색 하 고 개체에 추가 합니다. 지금은 비워 두고 "Spatialize" 확인란을 클릭 하 여 공간 오디오를 사용 하도록 설정 해야 합니다. 나중에 발사음을 재생하는 데 사용할 것입니다.
 
  ![6 단원에서는 Chapter1.txt Step2im](images/Lesson6_Chapter1_step2im.PNG)  
 3단계: 스크립트를 추가 하 고 배치 힌트를 설정/해제 합니다. 구성 요소 추가를 클릭 하 고 배치 힌트 설정/해제를 검색 합니다. 이 스크립트는 앞에서 언급 한 반투명 힌트 (x-레이 재료를 사용 하는 개체)를 켜고 끌 수 있는 사용자 지정 스크립트입니다.  
