@@ -22,6 +22,7 @@
 #### [파일 저장 및 찾기](saving-and-finding-your-files.md)
 #### [사진 보기](see-your-photos.md)
 #### [HoloLens 업데이트](updating-hololens.md)
+#### [새 공간에서 HoloLens 사용](use-hololens-in-new-spaces.md)
 #### [디바이스 공유](device-sharing.md)
 #### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
 ### 몰입형 헤드셋
