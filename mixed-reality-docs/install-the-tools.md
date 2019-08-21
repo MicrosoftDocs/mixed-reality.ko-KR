@@ -7,12 +7,12 @@ ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit
-ms.openlocfilehash: 446f8f0e2c37e7d83b386911899ee3299cfd39db
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bf1c7090a3de6265ce0d31cd8f3316c2e077c7a5
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387768"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030160"
 ---
 # <a name="install-the-tools"></a>도구 설치
 
@@ -37,7 +37,7 @@ Microsoft HoloLens 및 Windows Mixed Reality 몰입형(VR) 헤드셋을 위한 �
 | ![Windows 로고](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10**<br>(수동 설치 링크)</a> | PC의 운영 체제가 혼합 현실 애플리케이션을 빌드하는 플랫폼과 일치하도록 최신 버전의 Windows 10을 설치합니다. | **Windows 10 설치** <br> <ul><li>설정의 Windows 업데이트를 통해 또는 설치 미디어를 만들어(왼쪽 열의 링크 사용) 최신 버전의 Windows 10을 설치할 수 있습니다.<li>각 릴리스의 Windows 10에서 사용할 수 있는 최신 혼합 현실 기능에 대한 내용은 [현재 릴리스 정보](release-notes-october-2018.md)를 참조하세요.</ul> 설정 > 업데이트 및 보안 > 개발자용에서 **PC의 개발자 모드를 사용하도록 설정**합니다. <br><br> **엔터프라이즈 및 회사 관리 PC에 대한 참고 사항:** 조직의 IT 부서에서 PC를 관리하는 경우 업데이트하려면 해당 부서에 문의해야 할 수도 있습니다. <br><br> **Windows용 'N' 버전:** Windows Mixed Reality 몰입형(VR) 헤드셋은 'N' 버전의 Windows에서 지원되지 않습니다. |
 | ![Visual Studio 로고](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019(16.1 이상)**<br>(설치 링크)</a> | Windows 등을 위한 전기능 IDE(통합 개발 환경)입니다. Visual Studio를 사용하여 코드를 작성하고, 디버그하고, 테스트하고, 배포합니다. | **설치할 워크로드:** <ul><li>C++를 사용한 데스크톱 개발</li><li>UWP(유니버설 Windows 플랫폼) 개발</li></ul>**Unity에 대한 참고 사항:** 특정 목적을 위해 최신 버전의 Unity(비 LTS)를 설치하려는 경우가 아니면 Unity 워크로드를 Visual Studio 설치의 일부로 설치하지 *말고*, 대신 아래 설명된 것처럼 Unity의 2018.4 LTS 스트림을 설치하는 것이 좋습니다.<br> <br>**참고:** Visual Studio 2019 버전 16.0의 혼합 현실 앱 디버깅에는 몇 가지 알려진 이슈가 있습니다.  Visual Studio 2019를 버전 16.1 이상으로 업데이트했는지 확인하세요. |
 | ![Windows 로고](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">**Windows 10 SDK(10.0.18362.0)**<br>(수동 설치 링크)</a> | HoloLens 2에서 Windows 10 앱을 빌드하기 위한 최신 헤더와 라이브러리, 메타데이터, 도구를 제공합니다. | HoloLens 2 앱을 빌드하려면 Windows SDK 빌드 18362 이상을 설치해야 합니다.<br> <br> 데스크톱 Windows Mixed Reality 헤드셋 또는 HoloLens(1세대)용 애플리케이션만 개발하는 경우에는 Visual Studio 2017에서 설치된 Windows SDK를 사용할 수 있습니다. |
-| ![Visual Studio 로고](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2098508" target="_blank">**HoloLens 2 에뮬레이터**<br>(설치 링크: 10.0.18362.1021)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens(1세대) 에뮬레이터**<br>(설치 링크: 10.0.17763.253)</a> | 이 에뮬레이터를 사용하면 실제 HoloLens 없이도 HoloLens 가상 머신 이미지에서 애플리케이션을 실행할 수 있습니다.<br> <br> 이 패키지에는 Visual Studio용 홀로그램 DirectX 프로젝트 템플릿도 포함되어 있습니다. | 에뮬레이터 시작 방법에 대한 자세한 내용은 [HoloLens 에뮬레이터 사용](using-the-hololens-emulator.md)을 참조하세요.<br> <br> 에뮬레이터 설치를 성공적으로 수행하려면 **시스템에서 Hyper-V를 지원해야 합니다**. 자세한 내용은 아래 시스템 요구 사항 섹션을 참조하세요. 원할 경우 에뮬레이터 없이 템플릿만 설치하도록 선택할 수 있습니다.<br>|
+| ![Visual Studio 로고](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2101019" target="_blank">**HoloLens 2 에뮬레이터**<br>(설치 링크: 10.0.18362.1028)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**HoloLens(1세대) 에뮬레이터**<br>(설치 링크: 10.0.17763.253)</a> | 이 에뮬레이터를 사용하면 실제 HoloLens 없이도 HoloLens 가상 머신 이미지에서 애플리케이션을 실행할 수 있습니다.<br> <br> | 에뮬레이터 시작 방법에 대한 자세한 내용은 [HoloLens 에뮬레이터 사용](using-the-hololens-emulator.md)을 참조하세요.<br> <br> 에뮬레이터 설치를 성공적으로 수행하려면 **시스템에서 Hyper-V를 지원해야 합니다**. 자세한 내용은 아래 시스템 요구 사항 섹션을 참조하세요. <br>|
 | ![Unity 로고](images/unity_logo.png)<br><br><a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">**Unity 2018.4**<br>(설치 링크)</a> | Unity 게임 엔진은 Windows Mixed Reality 기능을 기본적으로 지원하는 혼합 현실 환경을 만드는 가장 쉬운 방법입니다. | 일반적으로 Unity LTS(장기 지원) 스트림을 새 프로젝트를 시작할 최선의 버전으로 사용한 후, 최신 수정 버전으로 업데이트하여 안정적인 최신 수정 프로그램을 선택하는 것이 좋습니다.<br> <br>현재 권장 사항은 아래의 MRTK v2에 필요한 LTS 빌드인 **Unity 2018.4.x**를 사용하는 것입니다.<br> <br>일부 개발자는 특정 이유로 다른 버전의 Unity를 사용하려고 합니다. 이러한 경우 Unity는 다른 버전을 병렬로 설치하도록 지원합니다. |
 | ![MRTK 로고](images/MRTKIcon.jpg)<br><br><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">**Unity용 MRTK(Mixed Reality Toolkit) v2**</a> | Unity용 MRTK v2는 혼합 현실 애플리케이션을 위한 오픈 소스 플랫폼 간 개발 키트입니다.<br><br> MRTK v2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션 개발을 가속화하기 위해 고안되었습니다. 이 프로젝트는 혼합 현실 애플리케이션을 만들기 위한 진입 장벽을 낮추고 커뮤니티에 다시 기여하는 것을 목표로 합니다. | MRTK v2의 첫 번째 공식 릴리스를 위해 최선을 다하고 있습니다. 그동안 최신 버그 수정을 모두 포함하는 MRTK(RC2.1)의 최신 릴리스를 다운로드하는 것이 좋습니다. 프로젝트의 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/wiki" target="_blank">GitHub wiki</a>를 방문하여 MRTK v2에 대해 자세히 알아보세요. |
 
@@ -91,7 +91,7 @@ HoloLens와 Windows Mixed Reality 몰입형(VR) 헤드셋용으로 개발을 수
 </tr><tr>
 <td> 메모리</td><td> 8GB&#160;RAM 이상</td><td> 16GB RAM 이상</td>
 </tr><tr>
-<td> 스토리지</td><td colspan="2"> &gt;10GB의 추가 사용 가능 공간</td>
+<td> 저장 공간</td><td colspan="2"> &gt;10GB의 추가 사용 가능 공간</td>
 </tr><tr>
 <td> USB 포트</td><td colspan="2"> 헤드셋용 가용 USB 포트 1개(USB 3.0 A형) <b>참고: USB은 최소 900mA를 제공해야 합니다.</b></td>
 </tr><tr>

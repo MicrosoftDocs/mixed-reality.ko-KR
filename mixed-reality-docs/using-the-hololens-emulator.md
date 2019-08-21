@@ -3,16 +3,16 @@ title: HoloLens 에뮬레이터 사용
 description: HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 혼합 현실 앱을 테스트할 수 있습니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 04/25/2019
+ms.date: 08/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: e675911e661ad6a4b1f05f2ecb3aa77994c3815c
-ms.sourcegitcommit: 36601a19306a05c826b91dea191b020f634912bf
+ms.openlocfilehash: 6c112b7706f1dfff7c4affbdb4ee7326f0e15c8a
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650827"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030178"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -22,10 +22,10 @@ HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 홀로�
 
 
 ## <a name="installing-the-hololens-emulator"></a>HoloLens 에뮬레이터 설치
-HoloLens 에뮬레이터 및 홀로그램 프로젝트 템플릿을 다운로드합니다.
+HoloLens 에뮬레이터를 다운로드합니다.
 
 버전: 
-* [HoloLens 2 에뮬레이터 및 홀로그램 프로젝트 템플릿](https://go.microsoft.com/fwlink/?linkid=2098508).
+* [HoloLens 2 에뮬레이터](https://go.microsoft.com/fwlink/?linkid=2101019).
 * [HoloLens 에뮬레이터(1세대) 및 홀로그램 프로젝트 템플릿](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 HoloLens 에뮬레이터의 이전 빌드는 [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md) 페이지에서 찾을 수 있습니다.
