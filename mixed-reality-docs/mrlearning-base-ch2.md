@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
+ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702042"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629176"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성 
 
@@ -34,7 +34,7 @@ ms.locfileid: "68702042"
 
 >참고: 기본적으로 MRTK 프로필은 편집할 수 없습니다. 이러한 프로필은 복사 및 사용자 지정할 수 있는 기본 프로필 템플릿입니다. 사용자 지정 및 프로필 계층에는 여러 가지가 있습니다. 따라서 하나 이상의 설정을 구성할 때 여러 프로필을 복사 하 고 사용자 지정 하는 것이 표준 습관입니다.
 >
->MRTK 프로필 및 해당 아키텍처에 대해 자세히 알아보려면 [mrtk 설명서](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>)를 참조 하세요.
+>MRTK 프로필 및 해당 아키텍처에 대해 자세히 알아보려면 [mrtk 설명서](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>)를 참조 하세요.
 
 2. 기본 프로필의 복사본을 만들어서 사용자 지정합니다. 기본 프로필을 복사 하려면 복사 & 사용자 지정을 클릭 합니다 (이미지 참조). 그러면 MRTK 프로필의 복사본이 만들어집니다. MRTK 프로필의 복사본이 준비되었으면, 이제 프로필에서 원하는 설정을 사용자 지정할 수 있습니다. 이후 단계에서 설명한 대로이 프로필 아래에 중첩 된 추가 프로필에 대 한 복사 및 사용자 지정 단계를 반복 해야 합니다.
 
