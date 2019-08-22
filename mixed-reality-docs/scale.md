@@ -1,17 +1,17 @@
 ---
 title: 소수 자릿수
 description: Holographic 양식에서 사실적으로 보이는 콘텐츠를 표시 하는 열쇠는 실제 세계의 시각적 통계를 최대한 긴밀 하 게 모방 하는 것입니다.
-author: mavitazk
-ms.author: mavitazk
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 스타일, 디자인
-ms.openlocfilehash: f13414bff7d84692e8e87aa2abdcded15627346f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 169665293e2cc612a546bbee5af14387855ae96b
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524126"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896558"
 ---
 # <a name="scale"></a>소수 자릿수
 

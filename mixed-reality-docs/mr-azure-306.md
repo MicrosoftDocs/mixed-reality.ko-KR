@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, media services, 스트리밍 비디오, 360, 몰입 형, vr
-ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555876"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896581"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -226,7 +226,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     ![Azure 포털](images/AzureLabs-Lab6-21.png)
 
-20. 다른와 함께 동영상을 보면 **자산 형식 *다중 비트 전송률 MP4* 합니다.
+20. 비디오는 **자산 유형 _다중 비트 전송률 MP4_** 인 다른 비디오와 함께 표시 됩니다.
 
     ![Azure 포털](images/AzureLabs-Lab6-22.png)
 
@@ -346,7 +346,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     ![Into Out구에 Unity 패키지 가져오기](images/AzureLabs-Lab6-35.png)
 
-2.  파일 선택기를 사용 하 여 **unitypackage** 패키지를 선택 하 고 **열기**를 클릭 합니다. 이 자산의 구성 요소 목록이 표시 됩니다. 가져오기 **를 클릭 하**여 가져오기를 확인 합니다.
+2.  파일 선택기를 사용 하 여 **unitypackage** 패키지를 선택 하 고 **열기**를 클릭 합니다. 이 자산의 구성 요소 목록이 표시 됩니다. 가져오기를 클릭 하 여가져오기를 확인 합니다.
 
     ![Into Out구에 Unity 패키지 가져오기](images/AzureLabs-Lab6-36.png)
 
@@ -729,7 +729,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 8.  Unity로 반환 하기 전에 Visual Studio에서 변경 내용을 저장 합니다.
 
-9.  Scripts 폴더의 Scripts **클래스를** 클릭 하 고 **계층** 패널의 기본 카메라 개체로 끕니다.
+9.  Scripts 폴더의 Scripts 클래스를 클릭 하 고 **계층** 패널의 기본 카메라 개체로 끕니다.
 
 ## <a name="chapter-7---setup-the-two-unity-scenes"></a>7 장-두 Unity 장면 설정
 

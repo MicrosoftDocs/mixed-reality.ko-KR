@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-혼합 현실 디자인 프로세스 확장
 description: 팀이 공간적으로 생각 하 고 더 쉽게 혼합 현실 환경을 구상 하는 데 도움이 되도록 디자인 프로세스에 기술을 추가 합니다.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 프로세스, 사례 연구
-ms.openlocfilehash: 572e4cd7e204d65429908b5f52a46f980cfb4cc8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 27b1fbcbee413317c5466170bc38309581b9f4f0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896574"
 ---
 # <a name="case-study-expanding-the-design-process-for-mixed-reality"></a>사례 연구: 혼합 현실에 대 한 디자인 프로세스 확장
 

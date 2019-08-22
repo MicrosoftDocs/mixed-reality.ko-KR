@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-더 많은 개인 컴퓨팅
 description: 오늘 제품을 빌드하여 내일의 기회를 파악 합니다. 이러한 제품에서 제공 하는 솔루션은 미래를 위해 필요한 사항을 표시 합니다.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 사례 연구, 비전, 시나리오
-ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896519"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>사례 연구-더 많은 개인 컴퓨팅
 
@@ -148,7 +148,7 @@ Volvo는 최신 자동차 모델 (서로 다른 색 및 구성의 사용자)을 
 
 ## <a name="start-building-today"></a>지금 빌드 시작
 
-혼합 현실의 미래를 소비자에 게 표시 하는 것은 어려운 일입니다. 하지만 고유한 문제에 집중 하 고 실제 하드웨어를 사용 하 여 실습 하는 **것  은 매우 중요**합니다. Microsoft는 혼합 현실로 시작 하지만 현재 비즈니스에서 실현 된 성공에서 학습할 경우 내일의 경험을 만드는 데 도움이 됩니다.
+혼합 현실의 미래를 소비자에 게 표시 하는 것은 어려운 일입니다. 하지만 고유한 문제에 집중 하 고 실제 하드웨어를 사용 하 여 실습 하는 **것 은 매우 중요**합니다. Microsoft는 혼합 현실로 시작 하지만 현재 비즈니스에서 실현 된 성공에서 학습할 경우 내일의 경험을 만드는 데 도움이 됩니다.
 
 ## <a name="about-the-author"></a>작성자 정보
 

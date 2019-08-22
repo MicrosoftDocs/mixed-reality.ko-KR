@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 색, 조명, 재질
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526491"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896514"
 ---
 # <a name="color-light-and-materials"></a>색, 조명 및 재질
 
@@ -28,7 +28,7 @@ ms.locfileid: "63526491"
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Holographic 장치에서 렌더링의 기본 사항
 * **Holographic 장치에는 추가 디스플레이** – Holograms는 실제 세계의 빛에 조명을 추가 하 여 생성 됩니다. 흰색은 밝은 색으로 표시 되 고 검정은 투명 하 게 표시 됩니다.
 * **색 영향은 사용자의 환경에 따라 달라 집니다** . 사용자 방에는 다양 한 조명 조건이 있습니다. 명확 하 게 이해 하려면 적절 한 대비 수준으로 콘텐츠를 만듭니다.
-* **동적 조명 방지** – holographic 환경에서 균일 하 게 lit Holograms 가장 효율적입니다. 고급 동적 조명을 사용 하면 모바일 셰이더의 기능을 초과할 가능성이 높습니다.
+* **동적 조명 방지** – holographic 환경에서 균일 하 게 lit Holograms 가장 효율적입니다. 고급 동적 조명을 사용 하면 모바일 장치의 기능을 초과할 가능성이 높습니다. 동적 조명이 필요한 경우 [Mixed Reality Toolkit 표준 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)를 사용 하는 것이 좋습니다. 
 
 ## <a name="designing-with-color"></a>색으로 디자인
 

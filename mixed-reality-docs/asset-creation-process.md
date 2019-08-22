@@ -1,17 +1,17 @@
 ---
 title: 자산 생성 프로세스
 description: 혼합 현실 환경에 대 한 자산을 만드는 방법에 대 한 지침입니다.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 자산, 생성, 프로세스, 예산, 다각형, 질감, 셰이더, 성능
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896501"
 ---
 # <a name="asset-creation-process"></a>자산 생성 프로세스
 
@@ -60,7 +60,7 @@ Windows Mixed Reality는 Microsoft에서 DirectX로 만든 수십 년의 투자�
 
 **자산의 복잡성**
 * 삼각형/polygon은 몇 개입니까?
-* 셰이더는 얼마나 복잡 한가요?
+* 셰이더는 얼마나 복잡 한가요? Mixed Reality 도구 키트를 사용 하는 경우 [혼합 현실 도구 키트 표준 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) 를 사용 하 여 셰이더 복잡성을 줄이는 것이 좋습니다.
 
 개발자와 아티스트는 모두 장치와 그래픽 엔진의 기능을 고려해 야 합니다. Microsoft HoloLens에는 장치에 모든 컴퓨팅 및 그래픽이 내장 되어 있습니다. 개발자가 모바일 플랫폼에서 찾을 수 있는 기능을 공유 합니다.
 
