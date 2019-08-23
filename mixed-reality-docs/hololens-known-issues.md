@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
-ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
-ms.translationtype: HT
+ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887265"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896542"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
@@ -127,6 +127,9 @@ HoloLens에서 Microsoft Store 및 앱을 시작 하려고 하면 문제가 발�
 OOBE & 설정 중에는 2 분의 자격 증명 제한 시간이 있습니다. 2 분 이내에 사용자 이름/암호를 입력 해야 합니다. 그렇지 않으면 사용자 이름 필드는 자동으로 지워집니다.
 
 긴 암호를 입력할 때는 Bluetooth 키보드를 사용 하는 것이 좋습니다.
+
+>[!NOTE]
+> OOBE 중에 잘못 된 네트워크가 선택 된 경우 장치를 완전히 다시 설정 해야 합니다. 지침은 여기에서 찾을 수 있습니다 [.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>장치 업데이트
 * 새 업데이트 후 30 초 후 셸이 한 번 사라질 수 있습니다. **블 룸** 제스처를 수행 하 여 세션을 다시 시작 하세요.
