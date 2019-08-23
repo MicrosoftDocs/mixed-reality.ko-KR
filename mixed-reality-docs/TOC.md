@@ -30,7 +30,8 @@
 #### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 #### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [하드웨어 액세서리](hardware-accessories.md)
-### [HoloLens 데모 맞춤 및 청소 가이드](hololens-demo-guide.md)
+### [HoloLens 착용 및 청소 가이드 데모](hololens-demo-guide.md)
+### [Windows Mixed Reality를 사용하는 위치 기반 엔터테인먼트](location-based-experiences.md)
 ## 핵심 구성 요소
 ### [응시](gaze.md)
 ### [제스처](gestures.md)
