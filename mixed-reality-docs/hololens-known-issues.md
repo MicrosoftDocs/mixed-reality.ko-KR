@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: 1ef9e9f411e16d2f604930f3146ede1d03d7c0f6
-ms.sourcegitcommit: c36b8c8573f51afa79504c4a17084e4f55d2f664
-ms.translationtype: MT
+ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
+ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67789485"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887265"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
@@ -20,11 +20,11 @@ ms.locfileid: "67789485"
 ## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>Visual Studio를 통해 HoloLens에 연결 하 고 배포할 수 없습니다.
 
 >[!NOTE]
->마지막 업데이트: 7/8 @ 7:25PM-팀에서 근본 원인을 확인 하 고 현재 수정 작업 중입니다. 해결 방법은 아래에서 확인할 수 있습니다. 
+>마지막 업데이트: 8/8 @ 5:11PM-이 문제에 대 한 수정 사항이 포함 된 Visual Studio에서 VS 2019 버전 16.2을 릴리스 했습니다. 이 오류가 발생 하지 않도록 최신 버전으로 업데이트 하는 것이 좋습니다.
 
-이 문제의 근본 원인을 확인할 수 있습니다. Visual studio 2015 또는 Visual Studio 2017의 초기 릴리스를 사용 하 여 HoloLens에 응용 프로그램을 배포 하 고 디버그 한 다음, 나중에 동일한 HoloLens로 최신 버전의 Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 사용자는 영향을 받게 됩니다. 
+Visual Studio에는이 문제에 대 한 수정 사항이 포함 된 VS 2019 버전 16.2이 릴리스 되었습니다. 이 오류가 발생 하지 않도록 최신 버전으로 업데이트 하는 것이 좋습니다.
 
-최신 버전의 Visual Studio에서는 새 버전의 구성 요소를 배포 하지만 이전 버전의 파일은 장치에 남아 있으므로 최신 버전이 실패 합니다.  이로 인해 다음과 같은 오류 메시지가 나타납니다. DEP0100: 대상 장치에서 개발자 모드를 사용 하도록 설정 했는지 확인 하세요. 80004005 오류로 인해에서 <ip> 개발자 라이선스를 가져올 수 없습니다.
+문제 근본 원인: Visual studio 2015 또는 Visual Studio 2017의 초기 릴리스를 사용 하 여 HoloLens에 응용 프로그램을 배포 하 고 디버그 한 다음, 나중에 동일한 HoloLens로 최신 버전의 Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 사용자는 영향을 받게 됩니다. 최신 버전의 Visual Studio에서는 새 버전의 구성 요소를 배포 하지만 이전 버전의 파일은 장치에 남아 있으므로 최신 버전이 실패 합니다.  이로 인해 다음과 같은 오류 메시지가 나타납니다. DEP0100: 대상 장치에서 개발자 모드를 사용 하도록 설정 했는지 확인 하세요. 80004005 오류로 인해에서 <ip> 개발자 라이선스를 가져올 수 없습니다.
  
 **해결 방법**: 
 
@@ -112,7 +112,7 @@ HoloLens에서 Microsoft Store 및 앱을 시작 하려고 하면 문제가 발�
 장치에서 여전히 앱을 로드할 수 없는 경우 다음을 수행 하 여 다운로드 센터를 통해 .NET 네이티브 Framework 및 런타임 버전을 테스트용으로 로드 수 있습니다.
 
 1)  Microsoft 다운로드 센터에서 [이 zip 파일](http://download.microsoft.com/download/8/5/C/85C23745-794C-419D-B8D7-115FBCCD6DA7/netfx_1.7.zip) 을 다운로드 하세요.  압축을 푸는 경우 두 개의 파일이 생성 됩니다.  Microsoft .NET 네이티브. m a. m. m. m a.
-2)  장치가 dev의 잠금 해제 상태 인지 확인 하세요.  이러한 작업을 수행 하기 위한 지침을 수행 하기 전에 수행 하지 않은 경우에는이 작업을 수행 [합니다.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fmixed-reality%2Fusing-the-windows-device-portal&data=02%7C01%7Cjalynch%40microsoft.com%7C3622a462ebd04870fccb08d6ae94cad6%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636888351416725140&sdata=ZB6Zdx9GV95PcU6FAVgWaP3eQNMsyIc%2FbNDEby3Sb8A%3D&reserved=0)
+2)  장치가 dev의 잠금 해제 상태 인지 확인 하세요.  [여기](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fmixed-reality%2Fusing-the-windows-device-portal&data=02%7C01%7Cjalynch%40microsoft.com%7C3622a462ebd04870fccb08d6ae94cad6%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636888351416725140&sdata=ZB6Zdx9GV95PcU6FAVgWaP3eQNMsyIc%2FbNDEby3Sb8A%3D&reserved=0)에서 이러한 작업을 수행 하기 위한 지침을 수행 하기 전에 수행 하지 않은 경우에는이 작업을 수행 합니다.
 3)  그런 다음 Windows 장치 포털로 이동 하려고 합니다.  USB를 통해이 작업을 수행 하 고 브라우저에를 입력 http://127.0.0.1:10080 하 여이 작업을 수행 하는 것이 좋습니다.  
 4)  Windows 장치 포털을 설치한 후 다운로드 한 두 파일을 "로드" 해야 합니다.  이렇게 하려면 "앱" 섹션에 도달할 때까지 왼쪽 막대를 아래로 이동 하 여 "앱"을 클릭 해야 합니다.
 5)  그러면 아래와 비슷한 화면이 표시 됩니다.  "응용 프로그램 설치" 섹션으로 이동 하 여 해당 두 APPX 파일의 압축을 푼 위치를 찾습니다.  한 번에 하나씩만 수행할 수 있으므로 첫 번째 항목을 선택한 후 배포 섹션에서 "이동"을 클릭 합니다.  그런 다음 두 번째 APPX 파일에 대해이 작업을 수행 합니다. 
@@ -153,6 +153,6 @@ OOBE & 설정 중에는 2 분의 자격 증명 제한 시간이 있습니다. 2 
 * 응용 프로그램에서 사용자의 [포커스 지점을](focus-point-in-unity.md) 설정 하거나, 정상에서 카메라로 이동 하는 경우 Holograms는 혼합 현실 사진 또는 비디오 캡처에 표시 되지 않습니다. Windows에서이 버그가 수정 될 때까지 응용 프로그램에서 [포커스 지점을](focus-point-in-unity.md) 적극적으로 설정 하는 경우 평면을 반대 방향 카메라 앞으로 설정 합니다 (예: normal =-camera).
 
 ## <a name="xbox-wireless-controller"></a>Xbox 무선 컨트롤러
-* Xbox 무선 컨트롤러를 HoloLens와 함께 사용 하려면 먼저 업데이트 해야 합니다. 컨트롤러를 HoloLens와 페어링 [하기 전에 최신](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) 상태 인지 확인 합니다.
+* Xbox 무선 컨트롤러를 HoloLens와 함께 사용 하려면 먼저 업데이트 해야 합니다. 컨트롤러를 HoloLens와 페어링 하기 전에 [최신 상태](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) 인지 확인 합니다.
 * Xbox 무선 컨트롤러를 연결 하는 동안 HoloLens를 다시 부팅 하면 컨트롤러가 HoloLens에 자동으로 다시 연결 되지 않습니다. 3 분 후에 컨트롤러의 전원이 꺼질 때까지 가이드 단추 표시등이 느리게 깜박입니다. 컨트롤러를 즉시 다시 연결 하려면 표시등이 꺼질 때까지 가이드 단추를 눌러 컨트롤러의 전원을 끕니다. 컨트롤러의 전원을 다시 켤 때 HoloLens에 다시 연결 됩니다.
 * Xbox 무선 컨트롤러를 연결 하는 동안 HoloLens가 대기 모드로 전환 되 면 컨트롤러의 모든 입력은 HoloLens를 절전 모드에서 해제 합니다. 이 작업을 사용 하는 경우 컨트롤러의 전원을 꺼서이를 방지할 수 있습니다.
