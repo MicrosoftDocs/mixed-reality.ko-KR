@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 컴퓨터 비전, hololens, 몰입 형, vr
-ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63552324"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047190"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -71,7 +71,7 @@ Microsoft Computer Vision는 개발자에 게 모든 클라우드에서 고급 �
 2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
 3.  새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음). 
 
-보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.
+보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens-2)대 한 다음 링크를 참조 하세요.
 
 센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
@@ -363,8 +363,8 @@ HoloLens 카메라를 사용 하 여 이미지를 캡처한 후 해당 이미지
 
 방금 카메라 안으로 끌어온 스크립트에서 두 개의 필드가 있습니다. **커서** 및 **레이블 Prefab**.
 
-9.  아래 이미지에 표시 된 것 처럼 *계층 패널* **에서 커서** 라는 개체를 **커서**라는 슬롯으로 끕니다.
-10. 아래 이미지에 표시  된 것 처럼 *프로젝트 패널* 의 *자산 폴더* 에서 **레이블 Prefab**이라는 개체를 끌어 레이블 이름이 지정 된 슬롯으로 끕니다. 
+9.  아래 이미지에 표시 된 것 처럼 *계층 패널* 에서 커서 라는 개체를 **커서**라는 슬롯으로 끕니다.
+10. 아래 이미지에 표시 된 것 처럼 *프로젝트 패널* 의 *자산 폴더* 에서 **레이블 Prefab**이라는 개체를 끌어 레이블 이름이 지정 된 슬롯으로 끕니다. 
 
     ![Unity 내에서 참조 대상을 설정 합니다.](images/AzureLabs-Lab2-25.png)
 
@@ -544,7 +544,7 @@ HoloLens 카메라를 사용 하 여 이미지를 캡처한 후 해당 이미지
         using UnityEngine.Networking;
     ```
  
-5.  스크립트의 맨 위에 있는 *VisionManager* 클래스  ( *Start ()* 메서드 위의)에서, 이제 Azure에서 deserialize 된 JSON 응답을 나타내는 두 개의 *클래스* 를 만들어야 합니다.
+5.  스크립트의 맨 위에 있는 *VisionManager* 클래스 ( *Start ()* 메서드 위의)에서, 이제 Azure에서 deserialize 된 JSON 응답을 나타내는 두 개의 *클래스* 를 만들어야 합니다.
 
     ```csharp
         [System.Serializable]
@@ -693,7 +693,7 @@ HoloLens 카메라를 사용 하 여 이미지를 캡처한 후 해당 이미지
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>9 장-UWP 솔루션 빌드 및 응용 프로그램 테스트용으로 로드
 이제이 프로젝트의 Unity 섹션에 필요한 모든 항목이 완료 되었으므로 Unity에서 빌드할 수 있습니다.
 
-1.  빌드 설정  - **파일 > 빌드 설정** 으로 이동 합니다.
+1.  빌드 설정 - **파일 > 빌드 설정** 으로 이동 합니다.
 2.  *빌드 설정* 창에서 **빌드**를 클릭 합니다.
 
     ![Unity에서 앱 빌드](images/AzureLabs-Lab2-26.png)

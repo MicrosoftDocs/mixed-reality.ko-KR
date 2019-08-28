@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Spectator View, iPhone, iOS, iPad, OpenCV, 카메라, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, 데모, 레코드
-ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387672"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047170"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 및 HoloLens Spectator 보기 2
 
@@ -25,10 +25,8 @@ Spectator View는 모바일 장치를 사용 하 여 HD에 holograms을 기록 �
 ## <a name="key-resources"></a>주요 리소스
 
 * [**GitHub의 Spectator 보기**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**마이크로아키텍처**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
-* [**표본의**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
-* [**모바일 설정 지침**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**비디오 카메라 설치 지침**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
+* [**Spectator View 설명서**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Spectator 뷰 샘플**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>사용 사례
 * IPhone 또는 Android 장치를 사용 하 여 혼합 현실 환경을 기록할 수 있습니다. 전체 HD를 기록 하 고 holograms 및 그림자에 앤티앨리어싱을 적용 합니다. Holograms 비디오를 빠르게 캡처하는 비용 효율적이 고 빠른 방법입니다.

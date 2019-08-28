@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr, lbe, 위치 기반 엔터테인먼트, vr 아케이드, 아케이드, 모던, qr, qr 코드, hololens2
-ms.openlocfilehash: d51da88aa7bff1dc5c6d3068cb31793891c71e61
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: 736ab265db2145dd784c435e525059ed3a2fcbbb
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566003"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047164"
 ---
 # <a name="qr-code-tracking"></a>QR 코드 추적
 
@@ -248,6 +248,9 @@ QR 검색은 각도 + = 45deg의 범위에서 작동 합니다. 코드를 검색
 Windows Mixed Reality 장치는 드라이버의 시스템 수준에서 QR 코드를 검색 합니다. 장치를 다시 부팅 하면 검색 된 QR 코드가 사라지고 다음 번에 새 개체로 다시 검색 됩니다.
 
 특정 타임 스탬프 보다 오래 된 QR 코드를 무시 하도록 앱을 구성 하는 것이 좋습니다. 현재이 API는 QR 코드 기록 지우기를 지원 하지 않습니다.
+
+### <a name="qr-code-placement-in-a-space"></a>공간에서 QR 코드 배치
+QR 코드를 저장 하는 위치 및 방법에 대 한 권장 사항은 [HoloLens 환경 고려 사항](environment-considerations-for-hololens.md)을 참조 하세요.
 
 ## <a name="qr-api-reference"></a>QR API 참조
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, microsoft graph, hololens, 몰입 형, vr
-ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 775971c4e4289d2dc963dfa2bf033192d9f3489e
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694522"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047200"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -66,7 +66,7 @@ ms.locfileid: "67694522"
 2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
 3.  새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음). 
 
-보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.
+보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens-2)대 한 다음 링크를 참조 하세요.
 
 센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
@@ -93,7 +93,7 @@ ms.locfileid: "67694522"
 
     ![](images/AzureLabs-Lab311-04.png)
 
-5.  **플랫폼** 섹션에서 **네이티브 응용 프로그램이** 표시 되는지 확인 합니다. **플랫폼 추가** *를 클릭 하* 고 **네이티브 응용 프로그램**을 선택 합니다.
+5.  **플랫폼** 섹션에서 **네이티브 응용 프로그램이** 표시 되는지 확인 합니다. **플랫폼 추가** 를 클릭 하 고 **네이티브 응용 프로그램**을 선택 합니다.
 
     ![](images/AzureLabs-Lab311-05.png)
 
@@ -127,7 +127,7 @@ ms.locfileid: "67694522"
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  **파일**    빌드 설정으로 이동 하 고 유니버설 Windows 플랫폼를 선택한 후 플랫폼 전환 단추를 클릭 하 여 선택 항목을 적용 합니다. > 
+4.  **파일** 빌드 설정으로 이동 하 고 유니버설 Windows 플랫폼를 선택한 후 플랫폼 전환 단추를 클릭 하 여 선택 항목을 적용 합니다. > 
 
     ![](images/AzureLabs-Lab311-12.png)
 
@@ -628,7 +628,7 @@ Unity 프로젝트에 사용자 지정 Dll을 추가 하는 방법에 대 한 �
 
 3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
-4.  Serialize 할 수 있도록 **GazeInput** 클래스 **\[위에\]' system.string**' 태그를 추가 하는 것과 함께 아래와 일치 하도록 네임 스페이스 코드를 변경 합니다.
+4.  Serialize 할 수 있도록 **GazeInput** 클래스 위에 ' **\[\]** system.string ' 태그를 추가 하는 것과 함께 아래와 일치 하도록 네임 스페이스 코드를 변경 합니다.
 
     ```csharp
     using UnityEngine;

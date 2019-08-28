@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 얼굴 인식, hololens, 몰입 형, vr
-ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554485"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047179"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -72,7 +72,7 @@ ms.locfileid: "63554485"
 2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
 3.  새 HoloLens 앱 개발을 시작할 때 보정 및 센서 조정을 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음). 
 
-보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens)대 한 다음 링크를 참조 하세요.
+보정에 대 한 도움말을 보려면 [HoloLens 보정 문서에](calibration.md#hololens-2)대 한 다음 링크를 참조 하세요.
 
 센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
@@ -293,7 +293,7 @@ Azure에서 *Face API* 서비스를 사용 하려면 응용 프로그램에서 �
 ## <a name="chapter-4---main-camera-setup"></a>4 장-기본 카메라 설정
 
 > [!IMPORTANT]
-> 이 과정의 *Unity 설정* 구성 요소를 건너뛰고 바로 코드를 계속 진행 하려는 경우 [unitypackage를 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)하 여 [사용자 지정 패키지로](https://docs.unity3d.com/Manual/AssetPackages.html)프로젝트에 가져옵니다. 이 패키지에는 [5 장에서](#chapter-5--import-the-newtonsoft.json-library)다룬 *newtonsoft.json DLL*의 가져오기도 포함 되어 있습니다. 이를 가져온 후에는 [6 장](#chapter-6-create-the-faceanalysis-class)에서 계속할 수 있습니다.
+> 이 과정의 *Unity 설정* 구성 요소를 건너뛰고 바로 코드를 계속 진행 하려는 경우 [unitypackage를 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)하 여 [사용자 지정 패키지로](https://docs.unity3d.com/Manual/AssetPackages.html)프로젝트에 가져옵니다. 이 패키지에는 [5 장에서](#chapter-5--import-the-newtonsoftjson-library)다룬 *newtonsoft.json DLL*의 가져오기도 포함 되어 있습니다. 이를 가져온 후에는 [6 장](#chapter-6---create-the-faceanalysis-class)에서 계속할 수 있습니다.
 
 1.  *계층* 패널에서 **기본 카메라**를 선택 합니다.
 
@@ -314,7 +314,7 @@ Azure에서 *Face API* 서비스를 사용 하려면 응용 프로그램에서 �
 ## <a name="chapter-5--import-the-newtonsoftjson-library"></a>5 장-Newtonsoft.json 라이브러리 가져오기
 
 > [!IMPORTANT]
-> [마지막 챕터](#chapter-4--main-camera-setup)에서 '. unitypackage '를 가져온 경우이 챕터를 건너뛸 수 있습니다.
+> [마지막 챕터](#chapter-4---main-camera-setup)에서 '. unitypackage '를 가져온 경우이 챕터를 건너뛸 수 있습니다.
 
 받아서 봇 서비스로 전송 되는 개체를 deserialize 하 고 serialize 할 수 있도록 *newtonsoft.json* 라이브러리를 다운로드 해야 합니다. 이 [unity 패키지 파일](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/newtonsoftDLL.unitypackage)에서 올바른 unity 폴더 구조를 사용 하 여 이미 구성 된 호환 버전을 찾을 수 있습니다. 
 

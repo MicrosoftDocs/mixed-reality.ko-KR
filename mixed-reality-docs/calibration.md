@@ -6,12 +6,12 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 보정, 편안 함, 시각적 개체, 품질, ipd
-ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979477"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047049"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>시각적 품질 및 편안 함 개선
 HoloLens, HoloLens 2 및 Windows Mixed Reality 몰입 형 헤드셋은 시각적 효과의 품질을 향상 시키는 다양 한 방법을 제공 합니다. 
@@ -52,12 +52,12 @@ HoloLens 2에서는 장치를 설치 하는 동안 시각적 개체를 보정 �
 3. 시작 **설정**입니다.
 4. **시스템** > **보정** 눈 모양 보정으로 이동 하 여 눈동자 보정 실행을 선택 합니다. > 
 
-### <a name="calibration-when-sharing-a-device--session"></a>장치/세션을 공유할 때의 보정
+### <a name="calibration-when-sharing-a-devicesession"></a>장치/세션을 공유할 때의 보정
 
 Hololens 2는 각 사용자가 장치 설치를 통과 하지 않아도 사용자 간에 공유할 수 있습니다. 사용자가 장치를 처음 사용 하는 경우 Hololens 2는 사용자에 게 장치를 배치할 때 시각적 개체를 보정할 지 묻는 메시지를 표시 합니다. 사용자가 이전에 장치에서 시각적 개체를 보정 한 경우 사용자가 헤드에 장치를 배치할 때 품질 및 편안 하 게 볼 수 있도록 디스플레이를 원활 하 게 조정 합니다. 
 
 
-## <a name="hololens"></a>Hololens
+## <a name="hololens-v1"></a>Hololens (v1)
 
 IPD (interpupillary distance)를 보정 하면 시각적 개체의 품질을 향상 시킬 수 있습니다.
 
