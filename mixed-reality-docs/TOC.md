@@ -104,8 +104,7 @@
 #### [음성 명령](Voice-design.md)
 #### [헤드 게이즈 및 유지](Gaze-and-dwell.md)
 ### [헤드 게이즈 및 커밋](gaze-and-commit.md)
-### 추가 상호 작용
-#### [눈 응시](eye-tracking.md)
+### [눈 응시](eye-tracking.md)
 ## 스타일
 ### [색, 광원 및 재질](color,-light-and-materials.md)
 ### [공간 음향 디자인](spatial-sound-design.md)
@@ -288,16 +287,16 @@
 ## 원격 도구 및 연구 도구
 ### [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 ### [디바이스 포털 API 참조](device-portal-api-reference.md)
-## 홀로그램 원격 접속
+## 홀로그램 원격
 ### [홀로그램 원격 플레이어](holographic-remoting-player.md)
 ### [홀로그램 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 ### [사용자 지정 홀로그램 원격 플레이어 작성](holographic-remoting-create-player.md)
 ### [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
-### [홀로그램 원격 접속을 통한 보안 연결](holographic-remoting-secure-connection.md)
+### [홀로그램 원격을 통한 보안 연결](holographic-remoting-secure-connection.md)
 ### [문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 ### [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-### HoloLens 1에 대한 홀로그램 원격 접속
-#### [홀로그램 원격 접속 추가](add-holographic-remoting.md)
+### HoloLens(1세대)의 홀로그램 원격
+#### [홀로그램 원격 기능 추가](add-holographic-remoting.md)
 ## 기타
 ### [QR 코드 추적](qr-code-tracking.md)
 ### [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
