@@ -6,17 +6,17 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712677"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122074"
 ---
 # <a name="holographic-remoting-player"></a>Holographic 원격 플레이어
 
 >[!IMPORTANT]
->HoloLens 2에 대 한 Holographic 원격은 주요 버전 변경입니다. [ **Hololens 1** 용 호스트 응용 프로그램](add-holographic-remoting.md) 은 NuGet **패키지 버전 1.x** 를 사용 해야 합니다. x. x. x. x. x. x. x. x. x. x를 [사용 해야 합니다 ](holographic-remoting-create-host.md) . 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens 1과 호환 되지 않거나 그 반대의 경우를 의미 합니다.
+>HoloLens 2에 대 한 Holographic 원격은 주요 버전 변경입니다. [Hololens 용 호스트 응용 프로그램 **(첫 번째 gen)** ](add-holographic-remoting.md) 은 NuGet 패키지 버전 1.X를 사용 해야 하며, [hololens 용 호스트 응용 프로그램 **2** 는](holographic-remoting-create-host.md) 2.x를 사용 해야 합니다. x. x. 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens 1과 호환 되지 않거나 그 반대의 경우를 의미 합니다.
 
 Holographic Remoting Player는 Holographic 원격 기능을 지 원하는 PC 앱 및 게임에 연결 하는 동반 앱입니다. Holographic 원격 스트림은 Wi-fi 연결을 사용 하 여 PC에서 실시간으로 Microsoft HoloLens로 콘텐츠를 Holographic 합니다.
 
@@ -43,7 +43,7 @@ Holographic 원격 연결은 **암호화 되지 않습니다**. 신뢰 하는 �
 
 ## <a name="diagnostics"></a>진단
 
-연결의 품질을 측정 하려면 Holographic 원격 플레이어의 주 화면에 있는 동안 **"진단 사용"** 이라고 표시 합니다. 진단을 사용 하도록 설정 하는 경우 **HoloLens 1** 에서 앱은 다음과 같이 표시 됩니다.
+연결의 품질을 측정 하려면 Holographic 원격 플레이어의 주 화면에 있는 동안 **"진단 사용"** 이라고 표시 합니다. 진단을 사용 하도록 설정 하면 **HoloLens (첫 번째 gen)** 에서 앱이 다음과 같이 표시 됩니다.
 
 * **FPS** -원격 플레이어에서 초당 수신 및 렌더링 하는 렌더링 된 프레임의 평균 수입니다. 이상적인는 60 FPS입니다.
 * **대기 시간** -프레임이 PC에서 HoloLens로 이동 하는 데 걸리는 평균 시간입니다. 더 낮은 방법이 있습니다. 이는 주로 Wi-fi 네트워크에 따라 다릅니다.
@@ -76,7 +76,7 @@ Holographic 원격 연결은 **암호화 되지 않습니다**. 신뢰 하는 �
 * 무선 홉 수를 줄이려면 이더넷을 통해 PC를 네트워크에 연결 하는 것이 좋습니다.
 
 ## <a name="see-also"></a>관련 항목
-* [HoloLens 1: Holographic 원격 추가](add-holographic-remoting.md)
+* [HoloLens (첫 번째 gen): Holographic 원격 추가](add-holographic-remoting.md)
 * [HoloLens 2: Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
-* [Holographic 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)

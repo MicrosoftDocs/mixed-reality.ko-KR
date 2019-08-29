@@ -6,17 +6,17 @@ ms.author: bethau
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 95cf98504f26e2362b3c4fd38e7d9228350798f3
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 6b0f92fce1099ec98d87100e015de9442bff6bd2
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718067"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122028"
 ---
 # <a name="writing-a-holographic-remoting-host-app"></a>Holographic 원격 호스트 앱 작성
 
 >[!IMPORTANT]
->이 문서에서는 HoloLens 2 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. **HoloLens 1** 용 호스트 응용 프로그램은 NuGet **패키지 버전 1.x**를 사용 해야 합니다. 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens 1과 호환 되지 않거나 그 반대의 경우를 의미 합니다. HoloLens 1에 대 한 설명서는 [여기](add-holographic-remoting.md)에서 찾을 수 있습니다.
+>이 문서에서는 HoloLens 2 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. HoloLens 용 호스트 응용 프로그램 **(1 세대)** 은 NuGet 패키지 버전1.x를 사용 해야 합니다. 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens 1과 호환 되지 않거나 그 반대의 경우를 의미 합니다. HoloLens 1에 대 한 설명서는 [여기](add-holographic-remoting.md)에서 찾을 수 있습니다.
 
 원격 컴퓨터에서 렌더링 된 원격 Holographic 원격 호스트 앱을 만들면 HoloLens 2로 스트리밍할 수 있습니다. 이 문서에서는이를 달성할 수 있는 방법에 대해 설명 합니다. 이 페이지 및 작업 프로젝트의 모든 코드는 [Holographic Remoting 샘플 github 리포지토리](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)에서 찾을 수 있습니다.
 
@@ -39,12 +39,12 @@ Visual Studio에서 프로젝트에 NuGet 패키지를 추가 하려면 다음 �
 1. Visual Studio에서 프로젝트를 엽니다.
 2. 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 선택 합니다.
 3. 표시 되는 패널에서 **찾아보기** 를 클릭 한 다음 "Holographic Remoting"을 검색 합니다.
-4. **Holographic**를 선택 하 고 최신 **2.x 버전을** 선택 하 고 **설치**를 클릭 합니다.
+4. **Holographic**를 선택 하 고 최신 2.x 버전을 선택 하 고 **설치**를 클릭 합니다.
 5. **미리 보기** 대화 상자가 표시 되 면 **확인**을 클릭 합니다.
 6. 표시 되는 다음 대화 상자는 사용권 계약입니다. **동의** 함을 클릭 하 여 사용권 계약에 동의 합니다.
 
 >[!NOTE]
->HoloLens 1을 대상으로 하는 개발자에 게는 NuGet 패키지의 버전 **1. x. x** 를 계속 사용할 수 있습니다. 자세한 내용은 [Holographic 원격 추가 (HoloLens 1)](add-holographic-remoting.md)를 참조 하세요.
+>HoloLens 1을 대상으로 하는 개발자에 게는 NuGet 패키지의 버전 **1. x. x** 를 계속 사용할 수 있습니다. 자세한 내용은 [Holographic 원격 추가 (HoloLens (첫 번째 gen))](add-holographic-remoting.md)를 참조 하세요.
 
 ## <a name="create-the-remote-context"></a>원격 컨텍스트 만들기
 
@@ -297,8 +297,8 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
 
 ## <a name="see-also"></a>관련 항목
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
-* [사용자 지정 Holographic 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
+* [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
 * [Holographic 원격을 사용 하 여 보안 연결 설정](holographic-remoting-secure-connection.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
-* [Holographic 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)

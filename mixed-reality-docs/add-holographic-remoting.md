@@ -6,17 +6,17 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, holographic remoting, 원격 렌더링, 네트워크 렌더링, HoloLens, 원격 holograms
-ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712423"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122046"
 ---
-# <a name="add-holographic-remoting-hololens-1"></a>Holographic 원격 (HoloLens 1) 추가
+# <a name="add-holographic-remoting-hololens-1st-gen"></a>Holographic 원격 추가 (HoloLens (첫 번째 gen))
 
 >[!IMPORTANT]
->이 문서에서는 HoloLens 1 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. **HoloLens 1** 용 호스트 응용 프로그램은 NuGet **패키지 버전 1.x**를 사용 해야 합니다. 즉, HoloLens 1 용으로 작성 된 호스트 응용 프로그램은 HoloLens 2와 호환 되지 않으며 그 반대의 경우도 마찬가지입니다.
+>이 문서에서는 HoloLens 1 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. HoloLens 용 호스트 응용 프로그램 **(1 세대)** 은 NuGet 패키지 버전1.x를 사용 해야 합니다. 즉, HoloLens 1 용으로 작성 된 호스트 응용 프로그램은 HoloLens 2와 호환 되지 않으며 그 반대의 경우도 마찬가지입니다.
 
 ## <a name="hololens-2"></a>HoloLens 2
 

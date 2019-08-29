@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: 문제 해결, 알려진 문제, 도움말
-ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896542"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122126"
 ---
 # <a name="hololens-known-issues"></a>HoloLens 알려진 문제
 
@@ -28,7 +28,7 @@ Visual Studio에는이 문제에 대 한 수정 사항이 포함 된 VS 2019 버
  
 **해결 방법**: 
 
-팀이 현재 수정 작업을 진행 중입니다. 그 동안에는 다음 단계를 사용 하 여 문제를 해결 하 고 배포 및 디버깅을 차단 해제 하는 데 도움이 될 수 있습니다.  
+이 문제는 Visual Studio 2019 16.2에서 해결 되었지만 이전 버전의 Visual Studio에서 유지 하도록 선택 하는 개발자는 다음 단계를 사용 하 여 문제를 해결 하 고 배포 및 디버깅을 차단 해제 하는 데 도움이 됩니다.  
 1. Visual Studio를 엽니다.
 2. 파일 > 새로 만들기-> 프로젝트
 3. Visual C# > Windows 데스크톱-> 콘솔 앱 (.NET Framework)
@@ -74,7 +74,6 @@ Visual Studio에는이 문제에 대 한 수정 사항이 포함 된 VS 2019 버
  
 15. 도구가 메시지 없이 종료 된 경우 (몇 초 밖에 걸리지 않음) 이제 Visual Studio 2017 이상에서 배포 하 고 디버그할 수 있습니다.  계속 해 서 도구를 사용 해야 하는 것은 아닙니다.
 
-사용할 수 있게 되 면 추가 업데이트를 제공 합니다.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>HoloLens에서 Microsoft Store 및 앱을 시작 하는 문제
 
