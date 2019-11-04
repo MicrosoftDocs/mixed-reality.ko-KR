@@ -3,241 +3,253 @@ title: MR 공간 230-공간 매핑
 description: Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 수행 하 여 공간 매핑 개념에 대 한 자세한 내용을 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 공간 매핑, 표면 재구성, 메시
-ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: cf4a2dd3e5eb74c0aaf849442e5f5e404d7cb661
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993557"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434573"
 ---
 >[!NOTE]
-><span data-ttu-id="372cc-104">혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="372cc-105">따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="372cc-106">이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="372cc-107">지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="372cc-108">향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="372cc-109">이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
+><span data-ttu-id="39ca3-104">혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="39ca3-105">따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="39ca3-106">이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="39ca3-107">지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="39ca3-108">HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-108">[A new series of tutorials](mrlearning-base.md) has been posted for HoloLens 2.</span></span>
 
 <br>
 
-# <a name="mr-spatial-230-spatial-mapping"></a><span data-ttu-id="372cc-110">MR 공간 230: 공간 매핑</span><span class="sxs-lookup"><span data-stu-id="372cc-110">MR Spatial 230: Spatial mapping</span></span>
+# <a name="mr-spatial-230-spatial-mapping"></a><span data-ttu-id="39ca3-109">MR 공간 230: 공간 매핑</span><span class="sxs-lookup"><span data-stu-id="39ca3-109">MR Spatial 230: Spatial mapping</span></span>
 
-<span data-ttu-id="372cc-111">[공간 매핑은](spatial-mapping.md) 환경에 대 한 holograms을 교육 하 여 실제 세계와 가상 세계를 함께 결합 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-111">[Spatial mapping](spatial-mapping.md) combines the real world and virtual world together by teaching holograms about the environment.</span></span> <span data-ttu-id="372cc-112">MR 공간 230 (Project Planetarium)에서 다음을 수행 하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-112">In MR Spatial 230 (Project Planetarium) we'll learn how to:</span></span>
+<span data-ttu-id="39ca3-110">[공간 매핑은](spatial-mapping.md) 환경에 대 한 holograms을 교육 하 여 실제 세계와 가상 세계를 함께 결합 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-110">[Spatial mapping](spatial-mapping.md) combines the real world and virtual world together by teaching holograms about the environment.</span></span> <span data-ttu-id="39ca3-111">MR 공간 230 (Project Planetarium)에서 다음을 수행 하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-111">In MR Spatial 230 (Project Planetarium) we'll learn how to:</span></span>
 
-* <span data-ttu-id="372cc-113">환경을 검색 하 고 HoloLens에서 개발 컴퓨터로 데이터를 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-113">Scan the environment and transfer data from the HoloLens to your development machine.</span></span>
-* <span data-ttu-id="372cc-114">셰이더를 탐색 하 고 공간을 시각화 하는 데 사용 하는 방법을 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="372cc-114">Explore shaders and learn how to use them for visualizing your space.</span></span>
-* <span data-ttu-id="372cc-115">메시 처리를 사용 하 여 대화방 메시를 간단한 평면으로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-115">Break down the room mesh into simple planes using mesh processing.</span></span>
-* <span data-ttu-id="372cc-116">[MR 기본 사항 101](holograms-101.md)에서 배운 배치 기술 외에도, 환경에서 홀로그램을 배치할 수 있는 위치에 대 한 피드백을 제공 하세요.</span><span class="sxs-lookup"><span data-stu-id="372cc-116">Go beyond the placement techniques we learned in [MR Basics 101](holograms-101.md), and provide feedback about where a hologram can be placed in the environment.</span></span>
-* <span data-ttu-id="372cc-117">폐색 효과를 탐색 하 여 홀로그램이 실제 개체 뒤에 있을 때 x-레이 비전을 사용 하 여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-117">Explore occlusion effects, so when your hologram is behind a real-world object, you can still see it with x-ray vision!</span></span>
+* <span data-ttu-id="39ca3-112">환경을 검색 하 고 HoloLens에서 개발 컴퓨터로 데이터를 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-112">Scan the environment and transfer data from the HoloLens to your development machine.</span></span>
+* <span data-ttu-id="39ca3-113">셰이더를 탐색 하 고 공간을 시각화 하는 데 사용 하는 방법을 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="39ca3-113">Explore shaders and learn how to use them for visualizing your space.</span></span>
+* <span data-ttu-id="39ca3-114">메시 처리를 사용 하 여 대화방 메시를 간단한 평면으로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-114">Break down the room mesh into simple planes using mesh processing.</span></span>
+* <span data-ttu-id="39ca3-115">[MR 기본 사항 101](holograms-101.md)에서 배운 배치 기술 외에도, 환경에서 홀로그램을 배치할 수 있는 위치에 대 한 피드백을 제공 하세요.</span><span class="sxs-lookup"><span data-stu-id="39ca3-115">Go beyond the placement techniques we learned in [MR Basics 101](holograms-101.md), and provide feedback about where a hologram can be placed in the environment.</span></span>
+* <span data-ttu-id="39ca3-116">폐색 효과를 탐색 하 여 홀로그램이 실제 개체 뒤에 있을 때 x-레이 비전을 사용 하 여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-116">Explore occlusion effects, so when your hologram is behind a real-world object, you can still see it with x-ray vision!</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/NSNYRkUX6Mw]
 
-## <a name="device-support"></a><span data-ttu-id="372cc-118">장치 지원</span><span class="sxs-lookup"><span data-stu-id="372cc-118">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="39ca3-117">장치 지원</span><span class="sxs-lookup"><span data-stu-id="39ca3-117">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="372cc-119">과정</span><span class="sxs-lookup"><span data-stu-id="372cc-119">Course</span></span></th><th style="width:150px"> <span data-ttu-id="372cc-120"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="372cc-120"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="372cc-121"><a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></span><span class="sxs-lookup"><span data-stu-id="372cc-121"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="39ca3-118">과정</span><span class="sxs-lookup"><span data-stu-id="39ca3-118">Course</span></span></th><th style="width:150px"> <span data-ttu-id="39ca3-119"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="39ca3-119"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="39ca3-120"><a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></span><span class="sxs-lookup"><span data-stu-id="39ca3-120"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td><span data-ttu-id="372cc-122">MR 공간 230: 공간 매핑</span><span class="sxs-lookup"><span data-stu-id="372cc-122">MR Spatial 230: Spatial mapping</span></span></td><td style="text-align: center;"> <span data-ttu-id="372cc-123">✔️</span><span class="sxs-lookup"><span data-stu-id="372cc-123">✔️</span></span></td><td style="text-align: center;"> </td>
+<td><span data-ttu-id="39ca3-121">MR 공간 230: 공간 매핑</span><span class="sxs-lookup"><span data-stu-id="39ca3-121">MR Spatial 230: Spatial mapping</span></span></td><td style="text-align: center;"> <span data-ttu-id="39ca3-122">✔️</span><span class="sxs-lookup"><span data-stu-id="39ca3-122">✔️</span></span></td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a><span data-ttu-id="372cc-124">시작하기 전 주의 사항</span><span class="sxs-lookup"><span data-stu-id="372cc-124">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="39ca3-123">시작하기 전 확인 사항</span><span class="sxs-lookup"><span data-stu-id="39ca3-123">Before you start</span></span>
 
-### <a name="prerequisites"></a><span data-ttu-id="372cc-125">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="372cc-125">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="39ca3-124">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="39ca3-124">Prerequisites</span></span>
 
-* <span data-ttu-id="372cc-126">올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-126">A Windows 10 PC configured with the correct [tools installed](install-the-tools.md).</span></span>
-* <span data-ttu-id="372cc-127">몇 가지 C# 기본적인 프로그래밍 기능.</span><span class="sxs-lookup"><span data-stu-id="372cc-127">Some basic C# programming ability.</span></span>
-* <span data-ttu-id="372cc-128">[MR 기본 101](holograms-101.md)를 완료 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-128">You should have completed [MR Basics 101](holograms-101.md).</span></span>
-* <span data-ttu-id="372cc-129">[개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode)HoloLens 장치입니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-129">A HoloLens device [configured for development](using-visual-studio.md#enabling-developer-mode).</span></span>
+* <span data-ttu-id="39ca3-125">올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-125">A Windows 10 PC configured with the correct [tools installed](install-the-tools.md).</span></span>
+* <span data-ttu-id="39ca3-126">몇 가지 C# 기본적인 프로그래밍 기능.</span><span class="sxs-lookup"><span data-stu-id="39ca3-126">Some basic C# programming ability.</span></span>
+* <span data-ttu-id="39ca3-127">[MR 기본 101](holograms-101.md)를 완료 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-127">You should have completed [MR Basics 101](holograms-101.md).</span></span>
+* <span data-ttu-id="39ca3-128">[개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode)HoloLens 장치입니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-128">A HoloLens device [configured for development](using-visual-studio.md#enabling-developer-mode).</span></span>
 
-### <a name="project-files"></a><span data-ttu-id="372cc-130">프로젝트 파일</span><span class="sxs-lookup"><span data-stu-id="372cc-130">Project files</span></span>
+### <a name="project-files"></a><span data-ttu-id="39ca3-129">프로젝트 파일</span><span class="sxs-lookup"><span data-stu-id="39ca3-129">Project files</span></span>
 
-* <span data-ttu-id="372cc-131">프로젝트에 필요한 [파일](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) 을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-131">Download the [files](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) required by the project.</span></span><span data-ttu-id="372cc-132"> Unity 2017.2 이상이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-132"> Requires Unity 2017.2 or later.</span></span>
-  * <span data-ttu-id="372cc-133">Unity 5.6 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="372cc-133">If you still need Unity 5.6 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip).</span></span>
-  * <span data-ttu-id="372cc-134">Unity 5.5 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="372cc-134">If you still need Unity 5.5 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip).</span></span>
-  * <span data-ttu-id="372cc-135">Unity 5.4 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="372cc-135">If you still need Unity 5.4 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip).</span></span>
-* <span data-ttu-id="372cc-136">바탕 화면 또는 기타 쉬운 위치에 파일을 보관 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-136">Un-archive the files to your desktop or other easy to reach location.</span></span>
+* <span data-ttu-id="39ca3-130">프로젝트에 필요한 [파일](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) 을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-130">Download the [files](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) required by the project.</span></span><span data-ttu-id="39ca3-131"> Unity 2017.2 이상이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-131"> Requires Unity 2017.2 or later.</span></span>
+  * <span data-ttu-id="39ca3-132">Unity 5.6 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="39ca3-132">If you still need Unity 5.6 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip).</span></span>
+  * <span data-ttu-id="39ca3-133">Unity 5.5 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="39ca3-133">If you still need Unity 5.5 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip).</span></span>
+  * <span data-ttu-id="39ca3-134">Unity 5.4 지원이 계속 필요한 경우 [이 릴리스](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip)를 사용 하세요.</span><span class="sxs-lookup"><span data-stu-id="39ca3-134">If you still need Unity 5.4 support, please use [this release](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip).</span></span>
+* <span data-ttu-id="39ca3-135">바탕 화면 또는 기타 쉬운 위치에 파일을 보관 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-135">Un-archive the files to your desktop or other easy to reach location.</span></span>
 
 >[!NOTE]
-><span data-ttu-id="372cc-137">다운로드 하기 전에 소스 코드를 확인 하려는 경우 [GitHub에서 사용할 수](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping)있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-137">If you want to look through the source code before downloading, it's [available on GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping).</span></span>
+><span data-ttu-id="39ca3-136">다운로드 하기 전에 소스 코드를 확인 하려는 경우 [GitHub에서 사용할 수](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping)있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-136">If you want to look through the source code before downloading, it's [available on GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping).</span></span>
 
-### <a name="notes"></a><span data-ttu-id="372cc-138">참고</span><span class="sxs-lookup"><span data-stu-id="372cc-138">Notes</span></span>
+### <a name="notes"></a><span data-ttu-id="39ca3-137">참고</span><span class="sxs-lookup"><span data-stu-id="39ca3-137">Notes</span></span>
 
-* <span data-ttu-id="372cc-139">Visual Studio의 "내 코드만 사용"은 코드에서 중단점을 적중 하기 위해 디버깅 > 도구 > 옵션에서 비활성화 (*선택 취소*) 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-139">"Enable Just My Code" in Visual Studio needs to be disabled (*unchecked*) under Tools > Options > Debugging in order to hit breakpoints in your code.</span></span>
+* <span data-ttu-id="39ca3-138">Visual Studio의 "내 코드만 사용"은 코드에서 중단점을 적중 하기 위해 디버깅 > 도구 > 옵션에서 비활성화 (*선택 취소*) 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-138">"Enable Just My Code" in Visual Studio needs to be disabled (*unchecked*) under Tools > Options > Debugging in order to hit breakpoints in your code.</span></span>
 
-## <a name="unity-setup"></a><span data-ttu-id="372cc-140">Unity 설치</span><span class="sxs-lookup"><span data-stu-id="372cc-140">Unity setup</span></span>
+## <a name="unity-setup"></a><span data-ttu-id="39ca3-139">Unity 설치</span><span class="sxs-lookup"><span data-stu-id="39ca3-139">Unity setup</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/y2Y4LhK6TEM]
 
-* <span data-ttu-id="372cc-141">**Unity**를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-141">Start **Unity**.</span></span>
-* <span data-ttu-id="372cc-142">새로 만들기 **를 선택 하** 여 새 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-142">Select **New** to create a new project.</span></span>
-* <span data-ttu-id="372cc-143">프로젝트 이름을 **Planetarium**로 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-143">Name the project **Planetarium**.</span></span>
-* <span data-ttu-id="372cc-144">**3d** 설정이 선택 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-144">Verify that the **3D** setting is selected.</span></span>
-* <span data-ttu-id="372cc-145">**Create Project**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-145">Click **Create Project**.</span></span>
-* <span data-ttu-id="372cc-146">Unity가 시작 되 면 **편집 > 프로젝트 설정 > 플레이어**로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-146">Once Unity launches, go to **Edit > Project Settings > Player**.</span></span>
-* <span data-ttu-id="372cc-147">**검사기** 패널에서 녹색 **Windows 스토어** 아이콘을 찾아 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-147">In the **Inspector** panel, find and select the green **Windows Store** icon.</span></span>
-* <span data-ttu-id="372cc-148">**기타 설정**을 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-148">Expand **Other Settings**.</span></span>
-* <span data-ttu-id="372cc-149">**렌더링** 섹션에서 **가상 현실 지원** 옵션을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-149">In the **Rendering** section, check the **Virtual Reality Supported** option.</span></span>
-* <span data-ttu-id="372cc-150">**Windows Holographic** 가 **가상 현실 sdk**목록에 나타나는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-150">Verify that **Windows Holographic** appears in the list of **Virtual Reality SDKs**.</span></span> <span data-ttu-id="372cc-151">그렇지 않은 경우 목록 아래쪽 **+** 의 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-151">If not, select the **+** button at the bottom of the list and choose **Windows Holographic**.</span></span>
-* <span data-ttu-id="372cc-152">**게시 설정**을 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-152">Expand **Publishing Settings**.</span></span>
-* <span data-ttu-id="372cc-153">**기능** 섹션에서 다음 설정을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-153">In the **Capabilities** section, check the following settings:</span></span>
-    * <span data-ttu-id="372cc-154">InternetClientServer</span><span class="sxs-lookup"><span data-stu-id="372cc-154">InternetClientServer</span></span>
-    * <span data-ttu-id="372cc-155">PrivateNetworkClientServer</span><span class="sxs-lookup"><span data-stu-id="372cc-155">PrivateNetworkClientServer</span></span>
-    * <span data-ttu-id="372cc-156">마이크</span><span class="sxs-lookup"><span data-stu-id="372cc-156">Microphone</span></span>
-    * <span data-ttu-id="372cc-157">SpatialPerception</span><span class="sxs-lookup"><span data-stu-id="372cc-157">SpatialPerception</span></span>
-* <span data-ttu-id="372cc-158">**편집 > 프로젝트 설정 > 품질** 로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-158">Go to **Edit > Project Settings > Quality**</span></span>
-* <span data-ttu-id="372cc-159">**검사기** 패널의 Windows 스토어 아이콘에서 ' default ' 행 아래의 검은색 드롭다운 화살표를 선택 하 고 기본 설정을 **매우 낮음**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-159">In the **Inspector** panel, under the Windows Store icon, select the black drop-down arrow under the 'Default' row and change the default setting to **Very Low**.</span></span>
-* <span data-ttu-id="372cc-160">**자산 > 가져오기 패키지 > 사용자 지정 패키지**로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-160">Go to **Assets > Import Package > Custom Package**.</span></span>
-* <span data-ttu-id="372cc-161">**. ..\Holographicacademy-holograms-230-SpatialMapping\Starting** 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-161">Navigate to the **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** folder.</span></span>
-* <span data-ttu-id="372cc-162">**Planetarium. unitypackage**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-162">Click on **Planetarium.unitypackage**.</span></span>
-* <span data-ttu-id="372cc-163">**열기**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-163">Click **Open**.</span></span>
-* <span data-ttu-id="372cc-164">**Unity 패키지 가져오기** 창이 표시 되 면 **가져오기** 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-164">An **Import Unity Package** window should appear, click on the **Import** button.</span></span>
-* <span data-ttu-id="372cc-165">Unity가이 프로젝트를 완료 하는 데 필요한 모든 자산을 가져올 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-165">Wait for Unity to import all of the assets that we will need to complete this project.</span></span>
-* <span data-ttu-id="372cc-166">**계층** 패널에서 **주 카메라**를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-166">In the **Hierarchy** panel, delete the **Main Camera**.</span></span>
-* <span data-ttu-id="372cc-167">**프로젝트** 패널의 **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** 폴더에서 **주 카메라** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-167">In the **Project** panel, **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** folder, find the **Main Camera** object.</span></span>
-* <span data-ttu-id="372cc-168">**주 카메라** Prefab을 **계층** 패널로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-168">Drag and drop the **Main Camera** prefab into the **Hierarchy** panel.</span></span>
-* <span data-ttu-id="372cc-169">**계층** 패널에서 **방향 광원** 개체를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-169">In the **Hierarchy** panel, delete the **Directional Light** object.</span></span>
-* <span data-ttu-id="372cc-170">**프로젝트** 패널의 **Holograms** 폴더에서 **Cursor** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-170">In the **Project** panel, **Holograms** folder, locate the **Cursor** object.</span></span>
-* <span data-ttu-id="372cc-171">**커서** Prefab을 **계층**으로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-171">Drag & drop the **Cursor** prefab into the **Hierarchy**.</span></span>
-* <span data-ttu-id="372cc-172">**계층** 패널에서 **Cursor** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-172">In the **Hierarchy** panel, select the **Cursor** object.</span></span>
-* <span data-ttu-id="372cc-173">**검사기** 패널에서 **계층** 드롭다운을 클릭 하 고 **계층 편집 ...** 을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-173">In the **Inspector** panel, click the **Layer** drop-down and select **Edit Layers...**.</span></span>
-* <span data-ttu-id="372cc-174">**사용자 계층 31** 의 이름을 "**SpatialMapping**"로 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-174">Name **User Layer 31** as "**SpatialMapping**".</span></span>
-* <span data-ttu-id="372cc-175">새 장면 저장: **파일 > 다른 이름으로 장면 저장 ...**</span><span class="sxs-lookup"><span data-stu-id="372cc-175">Save the new scene: **File > Save Scene As...**</span></span>
-* <span data-ttu-id="372cc-176">**새 폴더** 를 클릭 하 고 폴더 이름을 **장면**으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-176">Click **New Folder** and name the folder **Scenes**.</span></span>
-* <span data-ttu-id="372cc-177">파일 이름을 "**Planetarium**"로 하 고 해당 파일을 **백그라운드** 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-177">Name the file "**Planetarium**" and save it in the **Scenes** folder.</span></span>
+* <span data-ttu-id="39ca3-140">**Unity**를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-140">Start **Unity**.</span></span>
+* <span data-ttu-id="39ca3-141">새로 **만들기를 선택 하** 여 새 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-141">Select **New** to create a new project.</span></span>
+* <span data-ttu-id="39ca3-142">프로젝트 이름을 **Planetarium**로 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-142">Name the project **Planetarium**.</span></span>
+* <span data-ttu-id="39ca3-143">**3d** 설정이 선택 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-143">Verify that the **3D** setting is selected.</span></span>
+* <span data-ttu-id="39ca3-144">**Create Project**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-144">Click **Create Project**.</span></span>
+* <span data-ttu-id="39ca3-145">Unity가 시작 되 면 **편집 > 프로젝트 설정 > 플레이어**로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-145">Once Unity launches, go to **Edit > Project Settings > Player**.</span></span>
+* <span data-ttu-id="39ca3-146">**검사기** 패널에서 녹색 **Windows 스토어** 아이콘을 찾아 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-146">In the **Inspector** panel, find and select the green **Windows Store** icon.</span></span>
+* <span data-ttu-id="39ca3-147">**기타 설정**을 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-147">Expand **Other Settings**.</span></span>
+* <span data-ttu-id="39ca3-148">**렌더링** 섹션에서 **가상 현실 지원** 옵션을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-148">In the **Rendering** section, check the **Virtual Reality Supported** option.</span></span>
+* <span data-ttu-id="39ca3-149">**Windows Holographic** 가 **가상 현실 sdk**목록에 나타나는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-149">Verify that **Windows Holographic** appears in the list of **Virtual Reality SDKs**.</span></span> <span data-ttu-id="39ca3-150">그렇지 않은 경우 목록 맨 아래에 있는 **+** 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-150">If not, select the **+** button at the bottom of the list and choose **Windows Holographic**.</span></span>
+* <span data-ttu-id="39ca3-151">**게시 설정**을 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-151">Expand **Publishing Settings**.</span></span>
+* <span data-ttu-id="39ca3-152">**기능** 섹션에서 다음 설정을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-152">In the **Capabilities** section, check the following settings:</span></span>
+    * <span data-ttu-id="39ca3-153">InternetClientServer</span><span class="sxs-lookup"><span data-stu-id="39ca3-153">InternetClientServer</span></span>
+    * <span data-ttu-id="39ca3-154">PrivateNetworkClientServer</span><span class="sxs-lookup"><span data-stu-id="39ca3-154">PrivateNetworkClientServer</span></span>
+    * <span data-ttu-id="39ca3-155">Microphone</span><span class="sxs-lookup"><span data-stu-id="39ca3-155">Microphone</span></span>
+    * <span data-ttu-id="39ca3-156">SpatialPerception</span><span class="sxs-lookup"><span data-stu-id="39ca3-156">SpatialPerception</span></span>
+* <span data-ttu-id="39ca3-157">**편집 > 프로젝트 설정 > 품질** 로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-157">Go to **Edit > Project Settings > Quality**</span></span>
+* <span data-ttu-id="39ca3-158">**검사기** 패널의 Windows 스토어 아이콘에서 ' default ' 행 아래의 검은색 드롭다운 화살표를 선택 하 고 기본 설정을 **매우 낮음**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-158">In the **Inspector** panel, under the Windows Store icon, select the black drop-down arrow under the 'Default' row and change the default setting to **Very Low**.</span></span>
+* <span data-ttu-id="39ca3-159">**자산 > 가져오기 패키지 > 사용자 지정 패키지**로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-159">Go to **Assets > Import Package > Custom Package**.</span></span>
+* <span data-ttu-id="39ca3-160">**. ..\Holographicacademy-holograms-230-SpatialMapping\Starting** 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-160">Navigate to the **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** folder.</span></span>
+* <span data-ttu-id="39ca3-161">**Planetarium. unitypackage**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-161">Click on **Planetarium.unitypackage**.</span></span>
+* <span data-ttu-id="39ca3-162">**열기**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-162">Click **Open**.</span></span>
+* <span data-ttu-id="39ca3-163">**Unity 패키지 가져오기** 창이 표시 되 면 **가져오기** 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-163">An **Import Unity Package** window should appear, click on the **Import** button.</span></span>
+* <span data-ttu-id="39ca3-164">Unity가이 프로젝트를 완료 하는 데 필요한 모든 자산을 가져올 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-164">Wait for Unity to import all of the assets that we will need to complete this project.</span></span>
+* <span data-ttu-id="39ca3-165">**계층** 패널에서 **주 카메라**를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-165">In the **Hierarchy** panel, delete the **Main Camera**.</span></span>
+* <span data-ttu-id="39ca3-166">**프로젝트** 패널의 **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** 폴더에서 **주 카메라** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-166">In the **Project** panel, **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** folder, find the **Main Camera** object.</span></span>
+* <span data-ttu-id="39ca3-167">**주 카메라** Prefab을 **계층** 패널로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-167">Drag and drop the **Main Camera** prefab into the **Hierarchy** panel.</span></span>
+* <span data-ttu-id="39ca3-168">**계층** 패널에서 **방향 광원** 개체를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-168">In the **Hierarchy** panel, delete the **Directional Light** object.</span></span>
+* <span data-ttu-id="39ca3-169">**프로젝트** 패널의 **Holograms** 폴더에서 **Cursor** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-169">In the **Project** panel, **Holograms** folder, locate the **Cursor** object.</span></span>
+* <span data-ttu-id="39ca3-170">**커서** Prefab을 **계층**으로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-170">Drag & drop the **Cursor** prefab into the **Hierarchy**.</span></span>
+* <span data-ttu-id="39ca3-171">**계층** 패널에서 **Cursor** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-171">In the **Hierarchy** panel, select the **Cursor** object.</span></span>
+* <span data-ttu-id="39ca3-172">**검사기** 패널에서 **계층** 드롭다운을 클릭 하 고 **계층 편집 ...** 을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-172">In the **Inspector** panel, click the **Layer** drop-down and select **Edit Layers...**.</span></span>
+* <span data-ttu-id="39ca3-173">**사용자 계층 31** 의 이름을 "**SpatialMapping**"로 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-173">Name **User Layer 31** as "**SpatialMapping**".</span></span>
+* <span data-ttu-id="39ca3-174">새 장면: 파일 > 저장 하 고 다른 **이름으로 장면 저장** ...</span><span class="sxs-lookup"><span data-stu-id="39ca3-174">Save the new scene: **File > Save Scene As...**</span></span>
+* <span data-ttu-id="39ca3-175">**새 폴더** 를 클릭 하 고 폴더 이름을 **장면**으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-175">Click **New Folder** and name the folder **Scenes**.</span></span>
+* <span data-ttu-id="39ca3-176">파일 이름을 "**Planetarium**"로 하 고 해당 파일을 **백그라운드** 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-176">Name the file "**Planetarium**" and save it in the **Scenes** folder.</span></span>
 
-## <a name="chapter-1---scanning"></a><span data-ttu-id="372cc-178">1 장-검색</span><span class="sxs-lookup"><span data-stu-id="372cc-178">Chapter 1 - Scanning</span></span>
+## <a name="chapter-1---scanning"></a><span data-ttu-id="39ca3-177">1 장-검색</span><span class="sxs-lookup"><span data-stu-id="39ca3-177">Chapter 1 - Scanning</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/888oW51z_cE]
 
-<span data-ttu-id="372cc-179">**목표로**</span><span class="sxs-lookup"><span data-stu-id="372cc-179">**Objectives**</span></span>
-* <span data-ttu-id="372cc-180">SurfaceObserver 및 해당 설정이 경험 및 성능에 미치는 영향에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-180">Learn about the SurfaceObserver and how its settings impact experience and performance.</span></span>
-* <span data-ttu-id="372cc-181">회의실의 메시를 수집 하는 방 스캔 환경을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-181">Create a room scanning experience to collect the meshes of your room.</span></span>
+<span data-ttu-id="39ca3-178">**목표로**</span><span class="sxs-lookup"><span data-stu-id="39ca3-178">**Objectives**</span></span>
 
-<span data-ttu-id="372cc-182">**지침**</span><span class="sxs-lookup"><span data-stu-id="372cc-182">**Instructions**</span></span>
-* <span data-ttu-id="372cc-183">**프로젝트** 패널 **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** 폴더에서 **SpatialMapping** prefab를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-183">In the **Project** panel **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** folder, find the **SpatialMapping** prefab.</span></span>
-* <span data-ttu-id="372cc-184">**SpatialMapping** Prefab를 **계층** 패널로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-184">Drag & drop the **SpatialMapping** prefab into the **Hierarchy** panel.</span></span>
+* <span data-ttu-id="39ca3-179">SurfaceObserver 및 해당 설정이 경험 및 성능에 미치는 영향에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-179">Learn about the SurfaceObserver and how its settings impact experience and performance.</span></span>
+* <span data-ttu-id="39ca3-180">회의실의 메시를 수집 하는 방 스캔 환경을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-180">Create a room scanning experience to collect the meshes of your room.</span></span>
 
-<span data-ttu-id="372cc-185">**빌드 및 배포 (1 부)**</span><span class="sxs-lookup"><span data-stu-id="372cc-185">**Build and Deploy (part 1)**</span></span>
-* <span data-ttu-id="372cc-186">Unity에서 **파일 > 빌드 설정**을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-186">In Unity, select **File > Build Settings**.</span></span>
-* <span data-ttu-id="372cc-187">열려 있는 장면 **추가** 를 클릭 하 여 **Planetarium** 장면을 빌드에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-187">Click **Add Open Scenes** to add the **Planetarium** scene to the build.</span></span>
-* <span data-ttu-id="372cc-188">**플랫폼** 목록에서 **유니버설 Windows 플랫폼** 을 선택 하 고 **플랫폼 전환**을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-188">Select **Universal Windows Platform** in the **Platform** list and click **Switch Platform**.</span></span>
-* <span data-ttu-id="372cc-189">**SDK** 를 **Universal 10** 및 **UWP 빌드 형식** 으로 **D3D**로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-189">Set **SDK** to **Universal 10** and **UWP Build Type** to **D3D**.</span></span>
-* <span data-ttu-id="372cc-190">**Unity C# 프로젝트**를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-190">Check **Unity C# Projects**.</span></span>
-* <span data-ttu-id="372cc-191">**빌드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-191">Click **Build**.</span></span>
-* <span data-ttu-id="372cc-192">"App" 이라는 **새 폴더** 를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-192">Create a **New Folder** named "App".</span></span>
-* <span data-ttu-id="372cc-193">단일 **앱** 폴더를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-193">Single click the **App** folder.</span></span>
-* <span data-ttu-id="372cc-194">**폴더 선택** 단추를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-194">Press the **Select Folder** button.</span></span>
-* <span data-ttu-id="372cc-195">Unity 작성이 완료 되 면 파일 탐색기 창이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-195">When Unity is done building, a File Explorer window will appear.</span></span>
-* <span data-ttu-id="372cc-196">**앱** 폴더를 두 번 클릭 하 여 엽니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-196">Double-click on the **App** folder to open it.</span></span>
-* <span data-ttu-id="372cc-197">**Planetarium** 을 두 번 클릭 하 여 Visual Studio에서 프로젝트를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-197">Double-click on **Planetarium.sln** to load the project in Visual Studio.</span></span>
-* <span data-ttu-id="372cc-198">Visual Studio에서 맨 위 도구 모음을 사용 하 여 구성을 **릴리스**로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-198">In Visual Studio, use the top toolbar to change the Configuration to **Release**.</span></span>
-* <span data-ttu-id="372cc-199">플랫폼을 **x 86**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-199">Change the Platform to **x86**.</span></span>
-* <span data-ttu-id="372cc-200">' 로컬 컴퓨터 ' 오른쪽에 있는 드롭다운 화살표를 클릭 하 고 **원격 컴퓨터**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-200">Click on the drop-down arrow to the right of 'Local Machine', and select **Remote Machine**.</span></span>
-* <span data-ttu-id="372cc-201">주소 필드에 [장치의 IP 주소](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-201">Enter [your device's IP address](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) in the Address field and change Authentication Mode to **Universal (Unencrypted Protocol)**.</span></span>
-* <span data-ttu-id="372cc-202">**디버그를 클릭 하 > 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-202">Click **Debug -> Start Without debugging** or press **Ctrl + F5**.</span></span>
-* <span data-ttu-id="372cc-203">Visual Studio에서 빌드 및 배포 상태에 대 한 **출력** 패널을 시청 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-203">Watch the **Output** panel in Visual Studio for build and deploy status.</span></span>
-* <span data-ttu-id="372cc-204">앱이 배포 된 후에는 공간을 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-204">Once your app has deployed, walk around the room.</span></span> <span data-ttu-id="372cc-205">검은색 및 흰색 와이어 프레임 메시를 포함 하는 주변 서피스가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-205">You will see the surrounding surfaces covered by black and white wireframe meshes.</span></span>
-* <span data-ttu-id="372cc-206">주변을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-206">Scan your surroundings.</span></span> <span data-ttu-id="372cc-207">벽, 최대값이 및 층을 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-207">Be sure to look at walls, ceilings, and floors.</span></span>
+<span data-ttu-id="39ca3-181">**따릅니다**</span><span class="sxs-lookup"><span data-stu-id="39ca3-181">**Instructions**</span></span>
 
-<span data-ttu-id="372cc-208">**빌드 및 배포 (2 부)**</span><span class="sxs-lookup"><span data-stu-id="372cc-208">**Build and Deploy (part 2)**</span></span>
+* <span data-ttu-id="39ca3-182">**프로젝트** 패널 **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** 폴더에서 **SpatialMapping** prefab를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-182">In the **Project** panel **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** folder, find the **SpatialMapping** prefab.</span></span>
+* <span data-ttu-id="39ca3-183">**SpatialMapping** Prefab를 **계층** 패널로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-183">Drag & drop the **SpatialMapping** prefab into the **Hierarchy** panel.</span></span>
 
-<span data-ttu-id="372cc-209">이제 공간 매핑이 성능에 영향을 줄 수 있는 방법을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-209">Now let's explore how Spatial Mapping can affect performance.</span></span>
-* <span data-ttu-id="372cc-210">Unity에서 **Window > Profiler**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-210">In Unity, select **Window > Profiler**.</span></span>
-* <span data-ttu-id="372cc-211">**> GPU 추가 Profiler**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-211">Click **Add Profiler > GPU**.</span></span>
-* <span data-ttu-id="372cc-212">**활성 프로파일러 > <Enter IP>** 를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-212">Click **Active Profiler > <Enter IP>**.</span></span>
-* <span data-ttu-id="372cc-213">HoloLens의 **IP 주소** 를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-213">Enter the **IP address** of your HoloLens.</span></span>
-* <span data-ttu-id="372cc-214">**연결**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-214">Click **Connect**.</span></span>
-* <span data-ttu-id="372cc-215">GPU에서 프레임을 렌더링 하는 데 걸리는 시간 (밀리초)을 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-215">Observe the number of milliseconds it takes for the GPU to render a frame.</span></span>
-* <span data-ttu-id="372cc-216">장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-216">Stop the application from running on the device.</span></span>
-* <span data-ttu-id="372cc-217">Visual Studio로 돌아가서 **SpatialMappingObserver.cs**을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-217">Return to Visual Studio and open **SpatialMappingObserver.cs**.</span></span> <span data-ttu-id="372cc-218">이 파일은 어셈블리-CSharp (유니버설 Windows) 프로젝트의 HoloToolkit\SpatialMapping 폴더에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-218">You will find it in the HoloToolkit\SpatialMapping folder of the Assembly-CSharp (Universal Windows) project.</span></span>
-* <span data-ttu-id="372cc-219">**활성 ()** 함수를 찾고 다음 코드 줄을 추가 합니다. **TrianglesPerCubicMeter = 1200;**</span><span class="sxs-lookup"><span data-stu-id="372cc-219">Find the **Awake()** function, and add the following line of code: **TrianglesPerCubicMeter = 1200;**</span></span>
-* <span data-ttu-id="372cc-220">장치에 프로젝트를 다시 배포 하 고 **프로파일러를 다시 연결**합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-220">Re-deploy the project to your device, and then **reconnect the profiler**.</span></span> <span data-ttu-id="372cc-221">프레임을 렌더링 하는 시간 (밀리초)의 변경 내용을 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-221">Observe the change in the number of milliseconds to render a frame.</span></span>
-* <span data-ttu-id="372cc-222">장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-222">Stop the application from running on the device.</span></span>
+<span data-ttu-id="39ca3-184">**빌드 및 배포 (1 부)**</span><span class="sxs-lookup"><span data-stu-id="39ca3-184">**Build and Deploy (part 1)**</span></span>
 
-<span data-ttu-id="372cc-223">**Unity에서 저장 및 로드**</span><span class="sxs-lookup"><span data-stu-id="372cc-223">**Save and load in Unity**</span></span>
+* <span data-ttu-id="39ca3-185">Unity에서 **파일 > 빌드 설정**을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-185">In Unity, select **File > Build Settings**.</span></span>
+* <span data-ttu-id="39ca3-186">열려 있는 장면 **추가** 를 클릭 하 여 **Planetarium** 장면을 빌드에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-186">Click **Add Open Scenes** to add the **Planetarium** scene to the build.</span></span>
+* <span data-ttu-id="39ca3-187">**플랫폼** 목록에서 **유니버설 Windows 플랫폼** 을 선택 하 고 **플랫폼 전환**을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-187">Select **Universal Windows Platform** in the **Platform** list and click **Switch Platform**.</span></span>
+* <span data-ttu-id="39ca3-188">**SDK** 를 **Universal 10** 및 **UWP 빌드 형식** 으로 **D3D**로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-188">Set **SDK** to **Universal 10** and **UWP Build Type** to **D3D**.</span></span>
+* <span data-ttu-id="39ca3-189">**Unity C# 프로젝트**를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-189">Check **Unity C# Projects**.</span></span>
+* <span data-ttu-id="39ca3-190">**빌드**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-190">Click **Build**.</span></span>
+* <span data-ttu-id="39ca3-191">"App" 이라는 **새 폴더** 를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-191">Create a **New Folder** named "App".</span></span>
+* <span data-ttu-id="39ca3-192">단일 **앱** 폴더를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-192">Single click the **App** folder.</span></span>
+* <span data-ttu-id="39ca3-193">**폴더 선택** 단추를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-193">Press the **Select Folder** button.</span></span>
+* <span data-ttu-id="39ca3-194">Unity 작성이 완료 되 면 파일 탐색기 창이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-194">When Unity is done building, a File Explorer window will appear.</span></span>
+* <span data-ttu-id="39ca3-195">**앱** 폴더를 두 번 클릭 하 여 엽니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-195">Double-click on the **App** folder to open it.</span></span>
+* <span data-ttu-id="39ca3-196">**Planetarium** 을 두 번 클릭 하 여 Visual Studio에서 프로젝트를 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-196">Double-click on **Planetarium.sln** to load the project in Visual Studio.</span></span>
+* <span data-ttu-id="39ca3-197">Visual Studio에서 맨 위 도구 모음을 사용 하 여 구성을 **릴리스**로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-197">In Visual Studio, use the top toolbar to change the Configuration to **Release**.</span></span>
+* <span data-ttu-id="39ca3-198">플랫폼을 **x 86**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-198">Change the Platform to **x86**.</span></span>
+* <span data-ttu-id="39ca3-199">' 로컬 컴퓨터 ' 오른쪽에 있는 드롭다운 화살표를 클릭 하 고 **원격 컴퓨터**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-199">Click on the drop-down arrow to the right of 'Local Machine', and select **Remote Machine**.</span></span>
+* <span data-ttu-id="39ca3-200">주소 필드에 [장치의 IP 주소](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-200">Enter [your device's IP address](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) in the Address field and change Authentication Mode to **Universal (Unencrypted Protocol)**.</span></span>
+* <span data-ttu-id="39ca3-201">**디버그를 클릭 하 > 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-201">Click **Debug -> Start Without debugging** or press **Ctrl + F5**.</span></span>
+* <span data-ttu-id="39ca3-202">Visual Studio에서 빌드 및 배포 상태에 대 한 **출력** 패널을 시청 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-202">Watch the **Output** panel in Visual Studio for build and deploy status.</span></span>
+* <span data-ttu-id="39ca3-203">앱이 배포 된 후에는 공간을 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-203">Once your app has deployed, walk around the room.</span></span> <span data-ttu-id="39ca3-204">검은색 및 흰색 와이어 프레임 메시를 포함 하는 주변 서피스가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-204">You will see the surrounding surfaces covered by black and white wireframe meshes.</span></span>
+* <span data-ttu-id="39ca3-205">주변을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-205">Scan your surroundings.</span></span> <span data-ttu-id="39ca3-206">벽, 최대값이 및 층을 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-206">Be sure to look at walls, ceilings, and floors.</span></span>
 
-<span data-ttu-id="372cc-224">마지막으로 대화방 메시를 저장 하 고 Unity에 로드 하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-224">Finally, let's save our room mesh and load it into Unity.</span></span>
-* <span data-ttu-id="372cc-225">Visual Studio로 돌아가서 이전 섹션에서 **TrianglesPerCubicMeter** **()** 함수에 추가한 줄을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-225">Return to Visual Studio and remove the **TrianglesPerCubicMeter** line that you added in the **Awake()** function during the previous section.</span></span>
-* <span data-ttu-id="372cc-226">장치에 프로젝트를 다시 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-226">Redeploy the project to your device.</span></span> <span data-ttu-id="372cc-227">이제 입방 미터 당 **500** 삼각형으로 실행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-227">We should now be running with **500** triangles per cubic meter.</span></span>
-* <span data-ttu-id="372cc-228">브라우저를 열고 HoloLens IPAddress를 입력 하 여 **Windows 장치 포털로**이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-228">Open a browser and enter in your HoloLens IPAddress to navigate to the **Windows Device Portal**.</span></span>
-* <span data-ttu-id="372cc-229">왼쪽 패널에서 **3D 보기** 옵션을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-229">Select the **3D View** option in the left panel.</span></span>
-* <span data-ttu-id="372cc-230">**표면 재구성** 아래에서 **업데이트** 단추를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-230">Under **Surface reconstruction** select the **Update** button.</span></span>
-* <span data-ttu-id="372cc-231">HoloLens에서 스캔 한 영역이 표시 창에 표시 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-231">Watch as the areas that you have scanned on your HoloLens appear in the display window.</span></span>
-* <span data-ttu-id="372cc-232">회의실 검색을 저장 하려면 **저장** 단추를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-232">To save your room scan, press the **Save** button.</span></span>
-* <span data-ttu-id="372cc-233">**다운로드** 폴더를 열어서 저장 된 **대화방 모델을**찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-233">Open your **Downloads** folder to find the saved room model **SRMesh.obj**.</span></span>
-* <span data-ttu-id="372cc-234">**Srmesh. .obj** 를 Unity 프로젝트의 **자산** 폴더에 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-234">Copy **SRMesh.obj** to the **Assets** folder of your Unity project.</span></span>
-* <span data-ttu-id="372cc-235">Unity의 **계층** 패널에서 **SpatialMapping** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-235">In Unity, select the **SpatialMapping** object in the **Hierarchy** panel.</span></span>
-* <span data-ttu-id="372cc-236">**개체 표면 관찰자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-236">Locate the **Object Surface Observer (Script)** component.</span></span>
-* <span data-ttu-id="372cc-237">**방 모델** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-237">Click the circle to the right of the **Room Model** property.</span></span>
-* <span data-ttu-id="372cc-238">**Srmesh** 개체를 찾아 선택한 다음 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-238">Find and select the **SRMesh** object and then close the window.</span></span>
-* <span data-ttu-id="372cc-239">이제 **검사기** 패널의 **Room 모델** 속성이 **srmesh**로 설정 되었는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-239">Verify that the **Room Model** property in the **Inspector** panel is now set to **SRMesh**.</span></span>
-* <span data-ttu-id="372cc-240">**재생** 단추를 눌러 Unity의 미리 보기 모드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-240">Press the **Play** button to enter Unity's preview mode.</span></span>
-* <span data-ttu-id="372cc-241">SpatialMapping 구성 요소는 저장 된 대화방 모델에서 메시를 로드 하므로 Unity에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-241">The SpatialMapping component will load the meshes from the saved room model so you can use them in Unity.</span></span>
-* <span data-ttu-id="372cc-242">**장면** 보기로 전환 하 여 와이어 프레임 셰이더에 표시 되는 모든 대화방 모델을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-242">Switch to **Scene** view to see all of your room model displayed with the wireframe shader.</span></span>
-* <span data-ttu-id="372cc-243">**재생** 단추를 다시 클릭 하 여 미리 보기 모드를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-243">Press the **Play** button again to exit preview mode.</span></span>
+<span data-ttu-id="39ca3-207">**빌드 및 배포 (2 부)**</span><span class="sxs-lookup"><span data-stu-id="39ca3-207">**Build and Deploy (part 2)**</span></span>
 
-<span data-ttu-id="372cc-244">**참고:** 다음 번에 Unity에서 미리 보기 모드를 입력 하면 기본적으로 저장 된 대화방 메쉬가 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-244">**NOTE:** The next time that you enter preview mode in Unity, it will load the saved room mesh by default.</span></span>
+<span data-ttu-id="39ca3-208">이제 공간 매핑이 성능에 영향을 줄 수 있는 방법을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-208">Now let's explore how Spatial Mapping can affect performance.</span></span>
 
-## <a name="chapter-2---visualization"></a><span data-ttu-id="372cc-245">2 장-시각화</span><span class="sxs-lookup"><span data-stu-id="372cc-245">Chapter 2 - Visualization</span></span>
+* <span data-ttu-id="39ca3-209">Unity에서 **Window > Profiler**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-209">In Unity, select **Window > Profiler**.</span></span>
+* <span data-ttu-id="39ca3-210">**> GPU 추가 Profiler**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-210">Click **Add Profiler > GPU**.</span></span>
+* <span data-ttu-id="39ca3-211">**활성 프로파일러 > <Enter IP>** 를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-211">Click **Active Profiler > <Enter IP>**.</span></span>
+* <span data-ttu-id="39ca3-212">HoloLens의 **IP 주소** 를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-212">Enter the **IP address** of your HoloLens.</span></span>
+* <span data-ttu-id="39ca3-213">**연결**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-213">Click **Connect**.</span></span>
+* <span data-ttu-id="39ca3-214">GPU에서 프레임을 렌더링 하는 데 걸리는 시간 (밀리초)을 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-214">Observe the number of milliseconds it takes for the GPU to render a frame.</span></span>
+* <span data-ttu-id="39ca3-215">장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-215">Stop the application from running on the device.</span></span>
+* <span data-ttu-id="39ca3-216">Visual Studio로 돌아가서 **SpatialMappingObserver.cs**을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-216">Return to Visual Studio and open **SpatialMappingObserver.cs**.</span></span> <span data-ttu-id="39ca3-217">이 파일은 어셈블리-CSharp (유니버설 Windows) 프로젝트의 HoloToolkit\SpatialMapping 폴더에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-217">You will find it in the HoloToolkit\SpatialMapping folder of the Assembly-CSharp (Universal Windows) project.</span></span>
+* <span data-ttu-id="39ca3-218">해제 **()** 함수를 찾고 다음 코드 줄을 추가 합니다. **TrianglesPerCubicMeter = 1200;**</span><span class="sxs-lookup"><span data-stu-id="39ca3-218">Find the **Awake()** function, and add the following line of code: **TrianglesPerCubicMeter = 1200;**</span></span>
+* <span data-ttu-id="39ca3-219">장치에 프로젝트를 다시 배포 하 고 **프로파일러를 다시 연결**합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-219">Re-deploy the project to your device, and then **reconnect the profiler**.</span></span> <span data-ttu-id="39ca3-220">프레임을 렌더링 하는 시간 (밀리초)의 변경 내용을 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-220">Observe the change in the number of milliseconds to render a frame.</span></span>
+* <span data-ttu-id="39ca3-221">장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-221">Stop the application from running on the device.</span></span>
+
+<span data-ttu-id="39ca3-222">**Unity에서 저장 및 로드**</span><span class="sxs-lookup"><span data-stu-id="39ca3-222">**Save and load in Unity**</span></span>
+
+<span data-ttu-id="39ca3-223">마지막으로 대화방 메시를 저장 하 고 Unity에 로드 하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-223">Finally, let's save our room mesh and load it into Unity.</span></span>
+
+* <span data-ttu-id="39ca3-224">Visual Studio로 돌아가서 이전 섹션에서 **TrianglesPerCubicMeter** **()** 함수에 추가한 줄을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-224">Return to Visual Studio and remove the **TrianglesPerCubicMeter** line that you added in the **Awake()** function during the previous section.</span></span>
+* <span data-ttu-id="39ca3-225">장치에 프로젝트를 다시 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-225">Redeploy the project to your device.</span></span> <span data-ttu-id="39ca3-226">이제 입방 미터 당 **500** 삼각형으로 실행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-226">We should now be running with **500** triangles per cubic meter.</span></span>
+* <span data-ttu-id="39ca3-227">브라우저를 열고 HoloLens IPAddress를 입력 하 여 **Windows 장치 포털로**이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-227">Open a browser and enter in your HoloLens IPAddress to navigate to the **Windows Device Portal**.</span></span>
+* <span data-ttu-id="39ca3-228">왼쪽 패널에서 **3D 보기** 옵션을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-228">Select the **3D View** option in the left panel.</span></span>
+* <span data-ttu-id="39ca3-229">**표면 재구성** 아래에서 **업데이트** 단추를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-229">Under **Surface reconstruction** select the **Update** button.</span></span>
+* <span data-ttu-id="39ca3-230">HoloLens에서 스캔 한 영역이 표시 창에 표시 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-230">Watch as the areas that you have scanned on your HoloLens appear in the display window.</span></span>
+* <span data-ttu-id="39ca3-231">회의실 검색을 저장 하려면 **저장** 단추를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-231">To save your room scan, press the **Save** button.</span></span>
+* <span data-ttu-id="39ca3-232">**다운로드** 폴더를 열어서 저장 된 **대화방 모델을 찾습니다.**</span><span class="sxs-lookup"><span data-stu-id="39ca3-232">Open your **Downloads** folder to find the saved room model **SRMesh.obj**.</span></span>
+* <span data-ttu-id="39ca3-233">**Srmesh. .obj** 를 Unity 프로젝트의 **자산** 폴더에 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-233">Copy **SRMesh.obj** to the **Assets** folder of your Unity project.</span></span>
+* <span data-ttu-id="39ca3-234">Unity의 **계층** 패널에서 **SpatialMapping** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-234">In Unity, select the **SpatialMapping** object in the **Hierarchy** panel.</span></span>
+* <span data-ttu-id="39ca3-235">**개체 표면 관찰자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-235">Locate the **Object Surface Observer (Script)** component.</span></span>
+* <span data-ttu-id="39ca3-236">**방 모델** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-236">Click the circle to the right of the **Room Model** property.</span></span>
+* <span data-ttu-id="39ca3-237">**Srmesh** 개체를 찾아 선택한 다음 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-237">Find and select the **SRMesh** object and then close the window.</span></span>
+* <span data-ttu-id="39ca3-238">이제 **검사기** 패널의 **Room 모델** 속성이 **srmesh**로 설정 되었는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-238">Verify that the **Room Model** property in the **Inspector** panel is now set to **SRMesh**.</span></span>
+* <span data-ttu-id="39ca3-239">**재생** 단추를 눌러 Unity의 미리 보기 모드를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-239">Press the **Play** button to enter Unity's preview mode.</span></span>
+* <span data-ttu-id="39ca3-240">SpatialMapping 구성 요소는 저장 된 대화방 모델에서 메시를 로드 하므로 Unity에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-240">The SpatialMapping component will load the meshes from the saved room model so you can use them in Unity.</span></span>
+* <span data-ttu-id="39ca3-241">**장면** 보기로 전환 하 여 와이어 프레임 셰이더에 표시 되는 모든 대화방 모델을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-241">Switch to **Scene** view to see all of your room model displayed with the wireframe shader.</span></span>
+* <span data-ttu-id="39ca3-242">**재생** 단추를 다시 클릭 하 여 미리 보기 모드를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-242">Press the **Play** button again to exit preview mode.</span></span>
+
+<span data-ttu-id="39ca3-243">**참고:** 다음 번에 Unity에서 미리 보기 모드를 입력 하면 기본적으로 저장 된 대화방 메쉬가 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-243">**NOTE:** The next time that you enter preview mode in Unity, it will load the saved room mesh by default.</span></span>
+
+## <a name="chapter-2---visualization"></a><span data-ttu-id="39ca3-244">2 장-시각화</span><span class="sxs-lookup"><span data-stu-id="39ca3-244">Chapter 2 - Visualization</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/RnkvXl-aXD4]
 
-<span data-ttu-id="372cc-246">**목표로**</span><span class="sxs-lookup"><span data-stu-id="372cc-246">**Objectives**</span></span>
-* <span data-ttu-id="372cc-247">셰이더의 기본 사항에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-247">Learn the basics of shaders.</span></span>
-* <span data-ttu-id="372cc-248">주변을 시각화 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-248">Visualize your surroundings.</span></span>
+<span data-ttu-id="39ca3-245">**목표로**</span><span class="sxs-lookup"><span data-stu-id="39ca3-245">**Objectives**</span></span>
 
-<span data-ttu-id="372cc-249">**지침**</span><span class="sxs-lookup"><span data-stu-id="372cc-249">**Instructions**</span></span>
-* <span data-ttu-id="372cc-250">Unity의 **계층 구조** 패널에서 **SpatialMapping** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-250">In Unity's **Hierarchy** panel, select the **SpatialMapping** object.</span></span>
-* <span data-ttu-id="372cc-251">**검사기** 패널에서 **공간 매핑 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-251">In the **Inspector** panel, find the **Spatial Mapping Manager (Script)** component.</span></span>
-* <span data-ttu-id="372cc-252">**표면 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-252">Click the circle to the right of the **Surface Material** property.</span></span>
-* <span data-ttu-id="372cc-253">**BlueLinesOnWalls** 재질을 찾아 선택 하 고 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-253">Find and select the **BlueLinesOnWalls** material and close the window.</span></span>
-* <span data-ttu-id="372cc-254">**프로젝트** 패널 **셰이더** 폴더에서 **BlueLinesOnWalls** 를 두 번 클릭 하 여 Visual Studio에서 셰이더를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-254">In the **Project** panel **Shaders** folder, double-click on **BlueLinesOnWalls** to open the shader in Visual Studio.</span></span>
-* <span data-ttu-id="372cc-255">다음 작업을 수행 하는 간단한 픽셀 (꼭 짓 점-조각) 셰이더입니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-255">This is a simple pixel (vertex to fragment) shader, which accomplishes the following tasks:</span></span>
-    1. <span data-ttu-id="372cc-256">꼭 짓 점 위치를 세계 공간으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-256">Converts a vertex's location to world space.</span></span>
-    2. <span data-ttu-id="372cc-257">꼭 짓 점의 법선을 확인 하 여 픽셀이 세로 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-257">Checks the vertex's normal to determine if a pixel is vertical.</span></span>
-    3. <span data-ttu-id="372cc-258">렌더링할 픽셀의 색을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-258">Sets the color of the pixel for rendering.</span></span>
+* <span data-ttu-id="39ca3-246">셰이더의 기본 사항에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-246">Learn the basics of shaders.</span></span>
+* <span data-ttu-id="39ca3-247">주변을 시각화 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-247">Visualize your surroundings.</span></span>
 
-<span data-ttu-id="372cc-259">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="372cc-259">**Build and Deploy**</span></span>
-* <span data-ttu-id="372cc-260">Unity로 돌아가서 **재생** 을 눌러 미리 보기 모드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-260">Return to Unity and press **Play** to enter preview mode.</span></span>
-* <span data-ttu-id="372cc-261">저장 된 검색 데이터에서 자동으로 로드 되는 실내 메시의 모든 세로 화면에서 파란색 선이 렌더링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-261">Blue lines will be rendered on all vertical surfaces of the room mesh (which automatically loaded from our saved scanning data).</span></span>
-* <span data-ttu-id="372cc-262">**장면** 탭으로 전환 하 여 대화방 보기를 조정 하 고 전체 대화방 메쉬가 Unity에 표시 되는 방식을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-262">Switch to the **Scene** tab to adjust your view of the room and see how the entire room mesh appears in Unity.</span></span>
-* <span data-ttu-id="372cc-263">**프로젝트** 패널에서 **재질** 폴더를 찾고 **BlueLinesOnWalls** 재질을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-263">In the **Project** panel, find the **Materials** folder and select the **BlueLinesOnWalls** material.</span></span>
-* <span data-ttu-id="372cc-264">일부 속성을 수정 하 고 Unity 편집기에서 변경 내용이 표시 되는 방식을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-264">Modify some properties and see how the changes appear in the Unity editor.</span></span>
-    * <span data-ttu-id="372cc-265">**검사기** 패널에서 **LineScale** 값을 조정 하 여 선이 더 두껍게 표시 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-265">In the **Inspector** panel, adjust the **LineScale** value to make the lines appear thicker or thinner.</span></span>
-    * <span data-ttu-id="372cc-266">**검사기** 패널에서 선 **per측정기** 값을 조정 하 여 각 벽에 표시 되는 줄 수를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-266">In the **Inspector** panel, adjust the **LinesPerMeter** value to change how many lines appear on each wall.</span></span>
-* <span data-ttu-id="372cc-267">**재생** 을 다시 클릭 하 여 미리 보기 모드를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-267">Click **Play** again to exit preview mode.</span></span>
-* <span data-ttu-id="372cc-268">HoloLens에 빌드 및 배포 하 고 실제 표면에 셰이더 렌더링이 어떻게 나타나는지 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-268">Build and deploy to the HoloLens and observe how the shader rendering appears on real surfaces.</span></span>
+<span data-ttu-id="39ca3-248">**따릅니다**</span><span class="sxs-lookup"><span data-stu-id="39ca3-248">**Instructions**</span></span>
 
-<span data-ttu-id="372cc-269">Unity는 자료를 미리 보는 많은 작업을 수행 하지만 항상 장치에서 렌더링을 체크 아웃 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-269">Unity does a great job of previewing materials, but it's always a good idea to check-out rendering in the device.</span></span>
+* <span data-ttu-id="39ca3-249">Unity의 **계층 구조** 패널에서 **SpatialMapping** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-249">In Unity's **Hierarchy** panel, select the **SpatialMapping** object.</span></span>
+* <span data-ttu-id="39ca3-250">**검사기** 패널에서 **공간 매핑 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-250">In the **Inspector** panel, find the **Spatial Mapping Manager (Script)** component.</span></span>
+* <span data-ttu-id="39ca3-251">**표면 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-251">Click the circle to the right of the **Surface Material** property.</span></span>
+* <span data-ttu-id="39ca3-252">**BlueLinesOnWalls** 재질을 찾아 선택 하 고 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-252">Find and select the **BlueLinesOnWalls** material and close the window.</span></span>
+* <span data-ttu-id="39ca3-253">**프로젝트** 패널 **셰이더** 폴더에서 **BlueLinesOnWalls** 를 두 번 클릭 하 여 Visual Studio에서 셰이더를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-253">In the **Project** panel **Shaders** folder, double-click on **BlueLinesOnWalls** to open the shader in Visual Studio.</span></span>
+* <span data-ttu-id="39ca3-254">다음 작업을 수행 하는 간단한 픽셀 (꼭 짓 점-조각) 셰이더입니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-254">This is a simple pixel (vertex to fragment) shader, which accomplishes the following tasks:</span></span>
+    1. <span data-ttu-id="39ca3-255">꼭 짓 점 위치를 세계 공간으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-255">Converts a vertex's location to world space.</span></span>
+    2. <span data-ttu-id="39ca3-256">꼭 짓 점의 법선을 확인 하 여 픽셀이 세로 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-256">Checks the vertex's normal to determine if a pixel is vertical.</span></span>
+    3. <span data-ttu-id="39ca3-257">렌더링할 픽셀의 색을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-257">Sets the color of the pixel for rendering.</span></span>
 
-## <a name="chapter-3---processing"></a><span data-ttu-id="372cc-270">3 장-처리</span><span class="sxs-lookup"><span data-stu-id="372cc-270">Chapter 3 - Processing</span></span>
+<span data-ttu-id="39ca3-258">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="39ca3-258">**Build and Deploy**</span></span>
+
+* <span data-ttu-id="39ca3-259">Unity로 돌아가서 **재생** 을 눌러 미리 보기 모드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-259">Return to Unity and press **Play** to enter preview mode.</span></span>
+* <span data-ttu-id="39ca3-260">저장 된 검색 데이터에서 자동으로 로드 되는 실내 메시의 모든 세로 화면에서 파란색 선이 렌더링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-260">Blue lines will be rendered on all vertical surfaces of the room mesh (which automatically loaded from our saved scanning data).</span></span>
+* <span data-ttu-id="39ca3-261">**장면** 탭으로 전환 하 여 대화방 보기를 조정 하 고 전체 대화방 메쉬가 Unity에 표시 되는 방식을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-261">Switch to the **Scene** tab to adjust your view of the room and see how the entire room mesh appears in Unity.</span></span>
+* <span data-ttu-id="39ca3-262">**프로젝트** 패널에서 **재질** 폴더를 찾고 **BlueLinesOnWalls** 재질을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-262">In the **Project** panel, find the **Materials** folder and select the **BlueLinesOnWalls** material.</span></span>
+* <span data-ttu-id="39ca3-263">일부 속성을 수정 하 고 Unity 편집기에서 변경 내용이 표시 되는 방식을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-263">Modify some properties and see how the changes appear in the Unity editor.</span></span>
+    * <span data-ttu-id="39ca3-264">**검사기** 패널에서 **LineScale** 값을 조정 하 여 선이 더 두껍게 표시 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-264">In the **Inspector** panel, adjust the **LineScale** value to make the lines appear thicker or thinner.</span></span>
+    * <span data-ttu-id="39ca3-265">**검사기** 패널에서 선 **per측정기** 값을 조정 하 여 각 벽에 표시 되는 줄 수를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-265">In the **Inspector** panel, adjust the **LinesPerMeter** value to change how many lines appear on each wall.</span></span>
+* <span data-ttu-id="39ca3-266">**재생** 을 다시 클릭 하 여 미리 보기 모드를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-266">Click **Play** again to exit preview mode.</span></span>
+* <span data-ttu-id="39ca3-267">HoloLens에 빌드 및 배포 하 고 실제 표면에 셰이더 렌더링이 어떻게 나타나는지 관찰 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-267">Build and deploy to the HoloLens and observe how the shader rendering appears on real surfaces.</span></span>
+
+<span data-ttu-id="39ca3-268">Unity는 자료를 미리 보는 많은 작업을 수행 하지만 항상 장치에서 렌더링을 체크 아웃 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-268">Unity does a great job of previewing materials, but it's always a good idea to check-out rendering in the device.</span></span>
+
+## <a name="chapter-3---processing"></a><span data-ttu-id="39ca3-269">3 장-처리</span><span class="sxs-lookup"><span data-stu-id="39ca3-269">Chapter 3 - Processing</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/kaUKiNiDxwY]
 
-<span data-ttu-id="372cc-271">**목표로**</span><span class="sxs-lookup"><span data-stu-id="372cc-271">**Objectives**</span></span>
-* <span data-ttu-id="372cc-272">응용 프로그램에서 사용할 공간 매핑 데이터를 처리 하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-272">Learn techniques to process spatial mapping data for use in your application.</span></span>
-* <span data-ttu-id="372cc-273">공간 매핑 데이터를 분석 하 여 평면을 찾고 삼각형을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-273">Analyze spatial mapping data to find planes and remove triangles.</span></span>
-* <span data-ttu-id="372cc-274">홀로그램 배치에 평면을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-274">Use planes for hologram placement.</span></span>
+<span data-ttu-id="39ca3-270">**목표로**</span><span class="sxs-lookup"><span data-stu-id="39ca3-270">**Objectives**</span></span>
 
-<span data-ttu-id="372cc-275">**지침**</span><span class="sxs-lookup"><span data-stu-id="372cc-275">**Instructions**</span></span>
-* <span data-ttu-id="372cc-276">Unity의 **Project** panel **Holograms** 폴더에서 **SpatialProcessing** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-276">In Unity's **Project** panel, **Holograms** folder, find the **SpatialProcessing** object.</span></span>
-* <span data-ttu-id="372cc-277">**SpatialProcessing** 개체를 **계층** 패널로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-277">Drag & drop the **SpatialProcessing** object into the **Hierarchy** panel.</span></span>
+* <span data-ttu-id="39ca3-271">응용 프로그램에서 사용할 공간 매핑 데이터를 처리 하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-271">Learn techniques to process spatial mapping data for use in your application.</span></span>
+* <span data-ttu-id="39ca3-272">공간 매핑 데이터를 분석 하 여 평면을 찾고 삼각형을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-272">Analyze spatial mapping data to find planes and remove triangles.</span></span>
+* <span data-ttu-id="39ca3-273">홀로그램 배치에 평면을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-273">Use planes for hologram placement.</span></span>
 
-<span data-ttu-id="372cc-278">SpatialProcessing prefab에는 공간 매핑 데이터를 처리 하기 위한 구성 요소가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-278">The SpatialProcessing prefab includes components for processing the spatial mapping data.</span></span> <span data-ttu-id="372cc-279">**SurfaceMeshesToPlanes.cs** 는 공간 매핑 데이터를 기반으로 평면을 찾아서 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-279">**SurfaceMeshesToPlanes.cs** will find and generate planes based on the spatial mapping data.</span></span> <span data-ttu-id="372cc-280">우리는 응용 프로그램에서 비행기를 사용 하 여 벽, 층 및 최대값이을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-280">We will use planes in our application to represent walls, floors and ceilings.</span></span> <span data-ttu-id="372cc-281">이 prefab에는 공간 매핑 메시에서 꼭 짓 점을 제거할 수 있는 **RemoveSurfaceVertices.cs** 도 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-281">This prefab also includes **RemoveSurfaceVertices.cs** which can remove vertices from the spatial mapping mesh.</span></span> <span data-ttu-id="372cc-282">이를 사용 하 여 메시에 구멍을 만들거나 더 이상 필요 하지 않은 불필요 한 삼각형 (평면을 대신 사용할 수 있음)을 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-282">This can be used to create holes in the mesh, or to remove excess triangles that are no longer needed (because planes can be used instead).</span></span>
-* <span data-ttu-id="372cc-283">Unity의 **Project** panel **Holograms** 폴더에서 **SpaceCollection** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-283">In Unity's **Project** panel, **Holograms** folder, find the **SpaceCollection** object.</span></span>
-* <span data-ttu-id="372cc-284">**SpaceCollection** 개체를 **계층** 패널로 끌어 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-284">Drag and drop the **SpaceCollection** object into the **Hierarchy** panel.</span></span>
-* <span data-ttu-id="372cc-285">**계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-285">In the **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
-* <span data-ttu-id="372cc-286">**검사기** 패널에서 **재생 공간 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-286">In the **Inspector** panel, find the **Play Space Manager (Script)** component.</span></span>
-* <span data-ttu-id="372cc-287">**PlaySpaceManager.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-287">Double-click on **PlaySpaceManager.cs** to open it in Visual Studio.</span></span>
+<span data-ttu-id="39ca3-274">**따릅니다**</span><span class="sxs-lookup"><span data-stu-id="39ca3-274">**Instructions**</span></span>
 
-<span data-ttu-id="372cc-288">PlaySpaceManager.cs는 응용 프로그램 관련 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-288">PlaySpaceManager.cs contains application-specific code.</span></span> <span data-ttu-id="372cc-289">이 스크립트에 기능을 추가 하 여 다음 동작을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-289">We will add functionality to this script to enable the following behavior:</span></span>
-1. <span data-ttu-id="372cc-290">검색 시간 제한 (10 초)을 초과 하 고 나면 공간 매핑 데이터 수집을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-290">Stop collecting spatial mapping data after we exceed the scanning time limit (10 seconds).</span></span>
-2. <span data-ttu-id="372cc-291">공간 매핑 데이터를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-291">Process the spatial mapping data:</span></span>
-    1. <span data-ttu-id="372cc-292">SurfaceMeshesToPlanes를 사용 하 여 평면 (벽, 층, 최대값이 등)을 보다 간단 하 게 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-292">Use SurfaceMeshesToPlanes to create a simpler representation of the world as planes (walls, floors, ceilings, etc).</span></span>
-    2. <span data-ttu-id="372cc-293">평면 경계 내에 있는 표면 삼각형을 제거 하려면 RemoveSurfaceVertices를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-293">Use RemoveSurfaceVertices to remove surface triangles that fall within plane boundaries.</span></span>
-3. <span data-ttu-id="372cc-294">전 세계에서 holograms의 컬렉션을 생성 하 고 사용자 가까이에 벽 및 바닥 평면을 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-294">Generate a collection of holograms in the world and place them on wall and floor planes near the user.</span></span>
+* <span data-ttu-id="39ca3-275">Unity의 **Project** panel **Holograms** 폴더에서 **SpatialProcessing** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-275">In Unity's **Project** panel, **Holograms** folder, find the **SpatialProcessing** object.</span></span>
+* <span data-ttu-id="39ca3-276">**SpatialProcessing** 개체를 **계층** 패널로 끌어 & 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-276">Drag & drop the **SpatialProcessing** object into the **Hierarchy** panel.</span></span>
 
-<span data-ttu-id="372cc-295">PlaySpaceManager.cs에 표시 된 코딩 연습을 완료 하거나 아래에서 완성 된 솔루션으로 스크립트를 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-295">Complete the coding exercises marked in PlaySpaceManager.cs, or replace the script with the finished solution from below:</span></span>
+<span data-ttu-id="39ca3-277">SpatialProcessing prefab에는 공간 매핑 데이터를 처리 하기 위한 구성 요소가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-277">The SpatialProcessing prefab includes components for processing the spatial mapping data.</span></span> <span data-ttu-id="39ca3-278">**SurfaceMeshesToPlanes.cs** 는 공간 매핑 데이터를 기반으로 평면을 찾아서 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-278">**SurfaceMeshesToPlanes.cs** will find and generate planes based on the spatial mapping data.</span></span> <span data-ttu-id="39ca3-279">우리는 응용 프로그램에서 비행기를 사용 하 여 벽, 층 및 최대값이을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-279">We will use planes in our application to represent walls, floors and ceilings.</span></span> <span data-ttu-id="39ca3-280">이 prefab에는 공간 매핑 메시에서 꼭 짓 점을 제거할 수 있는 **RemoveSurfaceVertices.cs** 도 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-280">This prefab also includes **RemoveSurfaceVertices.cs** which can remove vertices from the spatial mapping mesh.</span></span> <span data-ttu-id="39ca3-281">이를 사용 하 여 메시에 구멍을 만들거나 더 이상 필요 하지 않은 불필요 한 삼각형 (평면을 대신 사용할 수 있음)을 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-281">This can be used to create holes in the mesh, or to remove excess triangles that are no longer needed (because planes can be used instead).</span></span>
+
+* <span data-ttu-id="39ca3-282">Unity의 **Project** panel **Holograms** 폴더에서 **SpaceCollection** 개체를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-282">In Unity's **Project** panel, **Holograms** folder, find the **SpaceCollection** object.</span></span>
+* <span data-ttu-id="39ca3-283">**SpaceCollection** 개체를 **계층** 패널로 끌어 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-283">Drag and drop the **SpaceCollection** object into the **Hierarchy** panel.</span></span>
+* <span data-ttu-id="39ca3-284">**계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-284">In the **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
+* <span data-ttu-id="39ca3-285">**검사기** 패널에서 **재생 공간 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-285">In the **Inspector** panel, find the **Play Space Manager (Script)** component.</span></span>
+* <span data-ttu-id="39ca3-286">**PlaySpaceManager.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-286">Double-click on **PlaySpaceManager.cs** to open it in Visual Studio.</span></span>
+
+<span data-ttu-id="39ca3-287">PlaySpaceManager.cs는 응용 프로그램 관련 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-287">PlaySpaceManager.cs contains application-specific code.</span></span> <span data-ttu-id="39ca3-288">이 스크립트에 기능을 추가 하 여 다음 동작을 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-288">We will add functionality to this script to enable the following behavior:</span></span>
+
+1. <span data-ttu-id="39ca3-289">검색 시간 제한 (10 초)을 초과 하 고 나면 공간 매핑 데이터 수집을 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-289">Stop collecting spatial mapping data after we exceed the scanning time limit (10 seconds).</span></span>
+2. <span data-ttu-id="39ca3-290">공간 매핑 데이터를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-290">Process the spatial mapping data:</span></span>
+    1. <span data-ttu-id="39ca3-291">SurfaceMeshesToPlanes를 사용 하 여 평면 (벽, 층, 최대값이 등)을 보다 간단 하 게 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-291">Use SurfaceMeshesToPlanes to create a simpler representation of the world as planes (walls, floors, ceilings, etc).</span></span>
+    2. <span data-ttu-id="39ca3-292">평면 경계 내에 있는 표면 삼각형을 제거 하려면 RemoveSurfaceVertices를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-292">Use RemoveSurfaceVertices to remove surface triangles that fall within plane boundaries.</span></span>
+3. <span data-ttu-id="39ca3-293">전 세계에서 holograms의 컬렉션을 생성 하 고 사용자 가까이에 벽 및 바닥 평면을 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-293">Generate a collection of holograms in the world and place them on wall and floor planes near the user.</span></span>
+
+<span data-ttu-id="39ca3-294">PlaySpaceManager.cs에 표시 된 코딩 연습을 완료 하거나 아래에서 완성 된 솔루션으로 스크립트를 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-294">Complete the coding exercises marked in PlaySpaceManager.cs, or replace the script with the finished solution from below:</span></span>
 
 ```cs
 using System.Collections.Generic;
@@ -384,7 +396,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
         {
             // We do not have enough floors/walls to place our holograms on...
 
-            // 3.a: Re-enter scanning mode so the user can find more surfaces by 
+            // 3.a: Re-enter scanning mode so the user can find more surfaces by
             // calling StartObserver() on the SpatialMappingManager.Instance.
             SpatialMappingManager.Instance.StartObserver();
 
@@ -433,42 +445,46 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 }
 ```
 
-<span data-ttu-id="372cc-296">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="372cc-296">**Build and Deploy**</span></span>
-* <span data-ttu-id="372cc-297">HoloLens에 배포 하기 전에 Unity의 **재생** 단추를 눌러 재생 모드로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-297">Before deploying to the HoloLens, press the **Play** button in Unity to enter play mode.</span></span>
-* <span data-ttu-id="372cc-298">파일에서 대화방 메시를 로드 한 후에는 공간 매핑 메시에서 처리가 시작 될 때까지 10 초 정도 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-298">After the room mesh is loaded from file, wait for 10 seconds before processing starts on the spatial mapping mesh.</span></span>
-* <span data-ttu-id="372cc-299">처리가 완료 되 면 비행기가 바닥, 벽, 천장 등을 나타내는 것 처럼 보입니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-299">When processing is complete, planes will appear to represent the floor, walls, ceiling, etc.</span></span>
-* <span data-ttu-id="372cc-300">모든 비행기를 찾은 후에는 카메라 근처의 바닥에 표를 표시 하는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-300">After all of the planes have been found, you should see a solar system appear on a table of floor near the camera.</span></span>
-* <span data-ttu-id="372cc-301">두 포스터는 카메라 근처의 벽에도 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-301">Two posters should appear on walls near the camera too.</span></span> <span data-ttu-id="372cc-302">**게임** 모드에서 볼 수 없는 경우 **장면** 탭으로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-302">Switch to the **Scene** tab if you cannot see them in **Game** mode.</span></span>
-* <span data-ttu-id="372cc-303">재생 모드를 종료 하려면 **재생** 단추를 다시 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-303">Press the **Play** button again to exit play mode.</span></span>
-* <span data-ttu-id="372cc-304">평소 처럼를 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-304">Build and deploy to the HoloLens, as usual.</span></span>
-* <span data-ttu-id="372cc-305">공간 매핑 데이터의 검색 및 처리가 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-305">Wait for scanning and processing of the spatial mapping data to complete.</span></span>
-* <span data-ttu-id="372cc-306">비행기가 표시 되 면 세계에서 태양계와 포스터를 찾으려고 시도 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-306">Once you see planes, try to find the solar system and posters in your world.</span></span>
+<span data-ttu-id="39ca3-295">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="39ca3-295">**Build and Deploy**</span></span>
 
-## <a name="chapter-4---placement"></a><span data-ttu-id="372cc-307">4 장-배치</span><span class="sxs-lookup"><span data-stu-id="372cc-307">Chapter 4 - Placement</span></span>
+* <span data-ttu-id="39ca3-296">HoloLens에 배포 하기 전에 Unity의 **재생** 단추를 눌러 재생 모드로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-296">Before deploying to the HoloLens, press the **Play** button in Unity to enter play mode.</span></span>
+* <span data-ttu-id="39ca3-297">파일에서 대화방 메시를 로드 한 후에는 공간 매핑 메시에서 처리가 시작 될 때까지 10 초 정도 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-297">After the room mesh is loaded from file, wait for 10 seconds before processing starts on the spatial mapping mesh.</span></span>
+* <span data-ttu-id="39ca3-298">처리가 완료 되 면 비행기가 바닥, 벽, 천장 등을 나타내는 것 처럼 보입니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-298">When processing is complete, planes will appear to represent the floor, walls, ceiling, etc.</span></span>
+* <span data-ttu-id="39ca3-299">모든 비행기를 찾은 후에는 카메라 근처의 바닥에 표를 표시 하는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-299">After all of the planes have been found, you should see a solar system appear on a table of floor near the camera.</span></span>
+* <span data-ttu-id="39ca3-300">두 포스터는 카메라 근처의 벽에도 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-300">Two posters should appear on walls near the camera too.</span></span> <span data-ttu-id="39ca3-301">**게임** 모드에서 볼 수 없는 경우 **장면** 탭으로 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-301">Switch to the **Scene** tab if you cannot see them in **Game** mode.</span></span>
+* <span data-ttu-id="39ca3-302">재생 모드를 종료 하려면 **재생** 단추를 다시 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-302">Press the **Play** button again to exit play mode.</span></span>
+* <span data-ttu-id="39ca3-303">평소 처럼를 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-303">Build and deploy to the HoloLens, as usual.</span></span>
+* <span data-ttu-id="39ca3-304">공간 매핑 데이터의 검색 및 처리가 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-304">Wait for scanning and processing of the spatial mapping data to complete.</span></span>
+* <span data-ttu-id="39ca3-305">비행기가 표시 되 면 세계에서 태양계와 포스터를 찾으려고 시도 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-305">Once you see planes, try to find the solar system and posters in your world.</span></span>
+
+## <a name="chapter-4---placement"></a><span data-ttu-id="39ca3-306">4 장-배치</span><span class="sxs-lookup"><span data-stu-id="39ca3-306">Chapter 4 - Placement</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/Srhtpid1uZc]
 
-<span data-ttu-id="372cc-308">**목표로**</span><span class="sxs-lookup"><span data-stu-id="372cc-308">**Objectives**</span></span>
-* <span data-ttu-id="372cc-309">홀로그램이 표면에 맞는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-309">Determine if a hologram will fit on a surface.</span></span>
-* <span data-ttu-id="372cc-310">홀로그램을 화면에 맞출 수 없는 경우 사용자에 게 피드백을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-310">Provide feedback to the user when a hologram can/cannot fit on a surface.</span></span>
+<span data-ttu-id="39ca3-307">**목표로**</span><span class="sxs-lookup"><span data-stu-id="39ca3-307">**Objectives**</span></span>
 
-<span data-ttu-id="372cc-311">**지침**</span><span class="sxs-lookup"><span data-stu-id="372cc-311">**Instructions**</span></span>
-* <span data-ttu-id="372cc-312">Unity의 **계층 구조** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-312">In Unity's **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
-* <span data-ttu-id="372cc-313">**검사기** 패널에서 **평면 (스크립트) 구성 요소에 대 한 표면 메시** 를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-313">In the **Inspector** panel, find the **Surface Meshes To Planes (Script)** component.</span></span>
-* <span data-ttu-id="372cc-314">**그리기 평면** 속성을 **없음** 으로 변경 하 여 선택을 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-314">Change the **Draw Planes** property to **Nothing** to clear the selection.</span></span>
-* <span data-ttu-id="372cc-315">벽 평면만 렌더링 되도록 **평면 그리기** 속성을 **벽**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-315">Change the **Draw Planes** property to **Wall**, so that only wall planes will be rendered.</span></span>
-* <span data-ttu-id="372cc-316">**프로젝트** 패널의 **Scripts** 폴더에서 **Placeable.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-316">In the **Project** panel, **Scripts** folder, double-click on **Placeable.cs** to open it in Visual Studio.</span></span>
+* <span data-ttu-id="39ca3-308">홀로그램이 표면에 맞는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-308">Determine if a hologram will fit on a surface.</span></span>
+* <span data-ttu-id="39ca3-309">홀로그램을 화면에 맞출 수 없는 경우 사용자에 게 피드백을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-309">Provide feedback to the user when a hologram can/cannot fit on a surface.</span></span>
 
-<span data-ttu-id="372cc-317">**동적 배치** 가능 스크립트는 평면 찾기가 완료 된 후 생성 된 포스터 및 프로젝션 상자에 이미 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-317">The **Placeable** script is already attached to the posters and projection box that are created after plane finding completes.</span></span> <span data-ttu-id="372cc-318">코드의 주석 처리를 제거 하기만 하면 됩니다 .이 스크립트는 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-318">All we need to do is uncomment some code, and this script will achieve the following:</span></span>
-1. <span data-ttu-id="372cc-319">홀로그램의 중심에서 raycasting로 화면에 맞출 수 있는지 여부와 경계 큐브의 4 개 모퉁이를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-319">Determine if a hologram will fit on a surface by raycasting from the center and four corners of the bounding cube.</span></span>
-2. <span data-ttu-id="372cc-320">표면 법선을 확인 하 여 홀로그램을 가만히 놓을 수 있을 만큼 부드러운 지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-320">Check the surface normal to determine if it is smooth enough for the hologram to sit flush on.</span></span>
-3. <span data-ttu-id="372cc-321">홀로그램 주위에 경계 큐브를 렌더링 하 여 배치 하는 동안 실제 크기를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-321">Render a bounding cube around the hologram to show its actual size while being placed.</span></span>
-4. <span data-ttu-id="372cc-322">홀로그램 아래/뒤에 그림자를 캐스팅 하 여 바닥/벽에 배치 될 위치를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-322">Cast a shadow under/behind the hologram to show where it will be placed on the floor/wall.</span></span>
-5. <span data-ttu-id="372cc-323">홀로그램을 표면에 배치할 수 없는 경우 그림자를 빨간색으로 렌더링 하 고 가능 하면 녹색으로 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-323">Render the shadow as red, if the hologram cannot be placed on the surface, or green, if it can.</span></span>
-6. <span data-ttu-id="372cc-324">선호도가 있는 표면 유형 (수직 또는 수평)에 맞춰 홀로그램의 방향을 다시 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-324">Re-orient the hologram to align with the surface type (vertical or horizontal) that it has affinity to.</span></span>
-7. <span data-ttu-id="372cc-325">이동 또는 맞춤 동작을 방지 하기 위해 홀로그램을 선택한 화면에 원활 하 게 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-325">Smoothly place the hologram on the selected surface to avoid jumping or snapping behavior.</span></span>
+<span data-ttu-id="39ca3-310">**따릅니다**</span><span class="sxs-lookup"><span data-stu-id="39ca3-310">**Instructions**</span></span>
 
-<span data-ttu-id="372cc-326">아래 코딩 연습에서 모든 코드의 주석 처리를 제거 하거나 **Placeable.cs**에서이 완성 된 솔루션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-326">Uncomment all code in the coding exercise below, or use this completed solution in **Placeable.cs**:</span></span>
+* <span data-ttu-id="39ca3-311">Unity의 **계층 구조** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-311">In Unity's **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
+* <span data-ttu-id="39ca3-312">**검사기** 패널에서 **평면 (스크립트) 구성 요소에 대 한 표면 메시** 를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-312">In the **Inspector** panel, find the **Surface Meshes To Planes (Script)** component.</span></span>
+* <span data-ttu-id="39ca3-313">**그리기 평면** 속성을 **없음** 으로 변경 하 여 선택을 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-313">Change the **Draw Planes** property to **Nothing** to clear the selection.</span></span>
+* <span data-ttu-id="39ca3-314">벽 평면만 렌더링 되도록 **평면 그리기** 속성을 **벽**으로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-314">Change the **Draw Planes** property to **Wall**, so that only wall planes will be rendered.</span></span>
+* <span data-ttu-id="39ca3-315">**프로젝트** 패널의 **Scripts** 폴더에서 **Placeable.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-315">In the **Project** panel, **Scripts** folder, double-click on **Placeable.cs** to open it in Visual Studio.</span></span>
+
+<span data-ttu-id="39ca3-316">**동적 배치** 가능 스크립트는 평면 찾기가 완료 된 후 생성 된 포스터 및 프로젝션 상자에 이미 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-316">The **Placeable** script is already attached to the posters and projection box that are created after plane finding completes.</span></span> <span data-ttu-id="39ca3-317">코드의 주석 처리를 제거 하기만 하면 됩니다 .이 스크립트는 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-317">All we need to do is uncomment some code, and this script will achieve the following:</span></span>
+
+1. <span data-ttu-id="39ca3-318">홀로그램의 중심에서 raycasting로 화면에 맞출 수 있는지 여부와 경계 큐브의 4 개 모퉁이를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-318">Determine if a hologram will fit on a surface by raycasting from the center and four corners of the bounding cube.</span></span>
+2. <span data-ttu-id="39ca3-319">표면 법선을 확인 하 여 홀로그램을 가만히 놓을 수 있을 만큼 부드러운 지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-319">Check the surface normal to determine if it is smooth enough for the hologram to sit flush on.</span></span>
+3. <span data-ttu-id="39ca3-320">홀로그램 주위에 경계 큐브를 렌더링 하 여 배치 하는 동안 실제 크기를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-320">Render a bounding cube around the hologram to show its actual size while being placed.</span></span>
+4. <span data-ttu-id="39ca3-321">홀로그램 아래/뒤에 그림자를 캐스팅 하 여 바닥/벽에 배치 될 위치를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-321">Cast a shadow under/behind the hologram to show where it will be placed on the floor/wall.</span></span>
+5. <span data-ttu-id="39ca3-322">홀로그램을 표면에 배치할 수 없는 경우 그림자를 빨간색으로 렌더링 하 고 가능 하면 녹색으로 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-322">Render the shadow as red, if the hologram cannot be placed on the surface, or green, if it can.</span></span>
+6. <span data-ttu-id="39ca3-323">선호도가 있는 표면 유형 (수직 또는 수평)에 맞춰 홀로그램의 방향을 다시 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-323">Re-orient the hologram to align with the surface type (vertical or horizontal) that it has affinity to.</span></span>
+7. <span data-ttu-id="39ca3-324">이동 또는 맞춤 동작을 방지 하기 위해 홀로그램을 선택한 화면에 원활 하 게 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-324">Smoothly place the hologram on the selected surface to avoid jumping or snapping behavior.</span></span>
+
+<span data-ttu-id="39ca3-325">아래 코딩 연습에서 모든 코드의 주석 처리를 제거 하거나 **Placeable.cs**에서이 완성 된 솔루션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-325">Uncomment all code in the coding exercise below, or use this completed solution in **Placeable.cs**:</span></span>
 
 ```cs
 using System.Collections.Generic;
@@ -482,7 +498,7 @@ using Academy.HoloToolkit.Unity;
 /// </summary>
 public enum PlacementSurfaces
 {
-    // Horizontal surface with an upward pointing normal.    
+    // Horizontal surface with an upward pointing normal.
     Horizontal = 1,
 
     // Vertical surface with a normal facing the user.
@@ -909,7 +925,7 @@ public class Placeable : MonoBehaviour
     /// The target surface's normal vector.
     /// </param>
     /// <remarks>
-    /// The aligntoVerticalSurface parameter is ignored if the object
+    /// The alignToVerticalSurface parameter is ignored if the object
     /// is to be placed on a horizontalSurface
     /// </remarks>
     private void OrientObject(bool alignToVerticalSurface, Vector3 surfaceNormal)
@@ -1006,7 +1022,7 @@ public class Placeable : MonoBehaviour
             shadowAsset.GetComponent<Renderer>().sharedMaterial = NotPlaceableShadowMaterial;
         }
 
-        // Show the shadow asset as appropriate.        
+        // Show the shadow asset as appropriate.
         if (position != Vector3.zero)
         {
             // Position the shadow a small distance from the target surface, along the normal.
@@ -1051,41 +1067,46 @@ public class Placeable : MonoBehaviour
 }
 ```
 
-<span data-ttu-id="372cc-327">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="372cc-327">**Build and Deploy**</span></span>
-* <span data-ttu-id="372cc-328">이전과 마찬가지로 프로젝트를 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-328">As before, build the project and deploy to the HoloLens.</span></span>
-* <span data-ttu-id="372cc-329">공간 매핑 데이터의 검색 및 처리가 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-329">Wait for scanning and processing of the spatial mapping data to complete.</span></span>
-* <span data-ttu-id="372cc-330">태양계가 표시 되 면 아래 투영 상자를 응시 하 고 선택 제스처를 수행 하 여 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-330">When you see the solar system, gaze at the projection box below and perform a select gesture to move it around.</span></span> <span data-ttu-id="372cc-331">투영 상자를 선택 하는 동안에는 경계 큐브가 투영 상자 주위에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-331">While the projection box is selected, a bounding cube will be visible around the projection box.</span></span>
-* <span data-ttu-id="372cc-332">머리를 이동 하 여 대화방의 다른 위치를 응시 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-332">Move you head to gaze at a different location in the room.</span></span> <span data-ttu-id="372cc-333">투영 상자는 응시 다음에와 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-333">The projection box should follow your gaze.</span></span> <span data-ttu-id="372cc-334">투영 상자 아래 그림자가 빨간색으로 바뀌고 해당 화면에 홀로그램을 놓을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-334">When the shadow below the projection box turns red, you cannot place the hologram on that surface.</span></span> <span data-ttu-id="372cc-335">투영 상자 아래의 그림자가 녹색으로 바뀌고 다른 선택 제스처를 수행 하 여 홀로그램을 놓을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-335">When the shadow below the projection box turns green, you can place the hologram by performing another select gesture.</span></span>
-* <span data-ttu-id="372cc-336">벽에서 holographic 포스터 중 하나를 찾아 선택 하 여 새 위치로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-336">Find and select one of the holographic posters on a wall to move it to a new location.</span></span> <span data-ttu-id="372cc-337">바닥 또는 천장에 포스터를 배치할 수 없으며, 이동할 때 각 벽에 대해 올바르게 방향이 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-337">Notice that you cannot place the poster on the floor or ceiling, and that it stays correctly oriented to each wall as you move around.</span></span>
+<span data-ttu-id="39ca3-326">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="39ca3-326">**Build and Deploy**</span></span>
 
-## <a name="chapter-5---occlusion"></a><span data-ttu-id="372cc-338">5 장-폐색</span><span class="sxs-lookup"><span data-stu-id="372cc-338">Chapter 5 - Occlusion</span></span>
+* <span data-ttu-id="39ca3-327">이전과 마찬가지로 프로젝트를 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-327">As before, build the project and deploy to the HoloLens.</span></span>
+* <span data-ttu-id="39ca3-328">공간 매핑 데이터의 검색 및 처리가 완료 될 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-328">Wait for scanning and processing of the spatial mapping data to complete.</span></span>
+* <span data-ttu-id="39ca3-329">태양계가 표시 되 면 아래 투영 상자를 응시 하 고 선택 제스처를 수행 하 여 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-329">When you see the solar system, gaze at the projection box below and perform a select gesture to move it around.</span></span> <span data-ttu-id="39ca3-330">투영 상자를 선택 하는 동안에는 경계 큐브가 투영 상자 주위에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-330">While the projection box is selected, a bounding cube will be visible around the projection box.</span></span>
+* <span data-ttu-id="39ca3-331">머리를 이동 하 여 대화방의 다른 위치를 응시 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-331">Move you head to gaze at a different location in the room.</span></span> <span data-ttu-id="39ca3-332">투영 상자는 응시 다음에와 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-332">The projection box should follow your gaze.</span></span> <span data-ttu-id="39ca3-333">투영 상자 아래 그림자가 빨간색으로 바뀌고 해당 화면에 홀로그램을 놓을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-333">When the shadow below the projection box turns red, you cannot place the hologram on that surface.</span></span> <span data-ttu-id="39ca3-334">투영 상자 아래의 그림자가 녹색으로 바뀌고 다른 선택 제스처를 수행 하 여 홀로그램을 놓을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-334">When the shadow below the projection box turns green, you can place the hologram by performing another select gesture.</span></span>
+* <span data-ttu-id="39ca3-335">벽에서 holographic 포스터 중 하나를 찾아 선택 하 여 새 위치로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-335">Find and select one of the holographic posters on a wall to move it to a new location.</span></span> <span data-ttu-id="39ca3-336">바닥 또는 천장에 포스터를 배치할 수 없으며, 이동할 때 각 벽에 대해 올바르게 방향이 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-336">Notice that you cannot place the poster on the floor or ceiling, and that it stays correctly oriented to each wall as you move around.</span></span>
+
+## <a name="chapter-5---occlusion"></a><span data-ttu-id="39ca3-337">5 장-폐색</span><span class="sxs-lookup"><span data-stu-id="39ca3-337">Chapter 5 - Occlusion</span></span>
 
 >[!VIDEO https://www.youtube.com/embed/6Xrzh_w-7SE]
 
-<span data-ttu-id="372cc-339">**목표로**</span><span class="sxs-lookup"><span data-stu-id="372cc-339">**Objectives**</span></span>
-* <span data-ttu-id="372cc-340">홀로그램을 공간 매핑 메시로 폐색 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-340">Determine if a hologram is occluded by the spatial mapping mesh.</span></span>
-* <span data-ttu-id="372cc-341">흥미로운 효과를 얻기 위해 다른 폐색 기술을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-341">Apply different occlusion techniques to achieve a fun effect.</span></span>
+<span data-ttu-id="39ca3-338">**목표로**</span><span class="sxs-lookup"><span data-stu-id="39ca3-338">**Objectives**</span></span>
 
-<span data-ttu-id="372cc-342">**지침**</span><span class="sxs-lookup"><span data-stu-id="372cc-342">**Instructions**</span></span>
+* <span data-ttu-id="39ca3-339">홀로그램을 공간 매핑 메시로 폐색 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-339">Determine if a hologram is occluded by the spatial mapping mesh.</span></span>
+* <span data-ttu-id="39ca3-340">흥미로운 효과를 얻기 위해 다른 폐색 기술을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-340">Apply different occlusion techniques to achieve a fun effect.</span></span>
 
-<span data-ttu-id="372cc-343">먼저 공간 매핑 메시가 실제 세계를 occluding 하지 않고 다른 holograms을 려 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-343">First, we are going to allow the spatial mapping mesh to occlude other holograms without occluding the real world:</span></span>
-* <span data-ttu-id="372cc-344">**계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-344">In the **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
-* <span data-ttu-id="372cc-345">**검사기** 패널에서 **재생 공간 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-345">In the **Inspector** panel, find the **Play Space Manager (Script)** component.</span></span>
-* <span data-ttu-id="372cc-346">**보조 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-346">Click the circle to the right of the **Secondary Material** property.</span></span>
-* <span data-ttu-id="372cc-347">**폐색** 재질을 찾아 선택 하 고 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-347">Find and select the **Occlusion** material and close the window.</span></span>
+<span data-ttu-id="39ca3-341">**따릅니다**</span><span class="sxs-lookup"><span data-stu-id="39ca3-341">**Instructions**</span></span>
 
-<span data-ttu-id="372cc-348">다음으로 지구에 특별 한 동작을 추가 하 여 다른 홀로그램 (예: sun)에 의해 폐색 될 때마다 파란색 강조 표시를 하거나 공간 매핑 메시로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-348">Next, we are going to add a special behavior to Earth, so that it has a blue highlight whenever it becomes occluded by another hologram (like the sun), or by the spatial mapping mesh:</span></span>
-* <span data-ttu-id="372cc-349">**프로젝트** 패널의 **Holograms** 폴더에서 **SolarSystem** 개체를 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-349">In the **Project** panel, in the **Holograms** folder, expand the **SolarSystem** object.</span></span>
-* <span data-ttu-id="372cc-350">**지구**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-350">Click on **Earth**.</span></span>
-* <span data-ttu-id="372cc-351">**검사기** 패널에서 지구 재질 (최하위 구성 요소)을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-351">In the **Inspector** panel, find the Earth's material (bottom component).</span></span>
-* <span data-ttu-id="372cc-352">**셰이더 드롭다운에서**셰이더를 **사용자 지정 > OcclusionRim**로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-352">In the **Shader drop-down**, change the shader to **Custom > OcclusionRim**.</span></span> <span data-ttu-id="372cc-353">그러면 다른 개체에 의해 폐색 될 때마다 지구 주위에 파란색 강조 표시가 렌더링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-353">This will render a blue highlight around Earth whenever it is occluded by another object.</span></span>
+<span data-ttu-id="39ca3-342">먼저 공간 매핑 메시가 실제 세계를 occluding 하지 않고 다른 holograms을 려 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-342">First, we are going to allow the spatial mapping mesh to occlude other holograms without occluding the real world:</span></span>
 
-<span data-ttu-id="372cc-354">마지막으로, 태양계에서 행성에 대해 x-레이 비전 효과를 사용 하도록 설정 하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-354">Finally, we are going to enable an x-ray vision effect for planets in our solar system.</span></span> <span data-ttu-id="372cc-355">다음을 수행 하려면 **PlanetOcclusion.cs** (Scripts\SolarSystem 폴더에 있음)를 편집 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-355">We will need to edit **PlanetOcclusion.cs** (found in the Scripts\SolarSystem folder) in order to achieve the following:</span></span>
-1. <span data-ttu-id="372cc-356">SpatialMapping 계층 (방 메시 및 평면)에서 행성을 폐색 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-356">Determine if a planet is occluded by the SpatialMapping layer (room meshes and planes).</span></span>
-2. <span data-ttu-id="372cc-357">SpatialMapping 계층에 의해 폐색 될 때마다 전 세계의 와이어 프레임 표현을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-357">Show the wireframe representation of a planet whenever it is occluded by the SpatialMapping layer.</span></span>
-3. <span data-ttu-id="372cc-358">SpatialMapping 계층에 의해 차단 되지 않는 행성의 와이어 프레임 표현을 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-358">Hide the wireframe representation of a planet when it is not blocked by the SpatialMapping layer.</span></span>
+* <span data-ttu-id="39ca3-343">**계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-343">In the **Hierarchy** panel, select the **SpatialProcessing** object.</span></span>
+* <span data-ttu-id="39ca3-344">**검사기** 패널에서 **재생 공간 관리자 (스크립트)** 구성 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-344">In the **Inspector** panel, find the **Play Space Manager (Script)** component.</span></span>
+* <span data-ttu-id="39ca3-345">**보조 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-345">Click the circle to the right of the **Secondary Material** property.</span></span>
+* <span data-ttu-id="39ca3-346">**폐색** 재질을 찾아 선택 하 고 창을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-346">Find and select the **Occlusion** material and close the window.</span></span>
 
-<span data-ttu-id="372cc-359">PlanetOcclusion.cs의 코딩 연습을 수행 하거나 다음 솔루션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-359">Follow the coding exercise in PlanetOcclusion.cs, or use the following solution:</span></span>
+<span data-ttu-id="39ca3-347">다음으로 지구에 특별 한 동작을 추가 하 여 다른 홀로그램 (예: sun)에 의해 폐색 될 때마다 파란색 강조 표시를 하거나 공간 매핑 메시로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-347">Next, we are going to add a special behavior to Earth, so that it has a blue highlight whenever it becomes occluded by another hologram (like the sun), or by the spatial mapping mesh:</span></span>
+
+* <span data-ttu-id="39ca3-348">**프로젝트** 패널의 **Holograms** 폴더에서 **SolarSystem** 개체를 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-348">In the **Project** panel, in the **Holograms** folder, expand the **SolarSystem** object.</span></span>
+* <span data-ttu-id="39ca3-349">**지구**를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-349">Click on **Earth**.</span></span>
+* <span data-ttu-id="39ca3-350">**검사기** 패널에서 지구 재질 (최하위 구성 요소)을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-350">In the **Inspector** panel, find the Earth's material (bottom component).</span></span>
+* <span data-ttu-id="39ca3-351">**셰이더 드롭다운에서**셰이더를 **사용자 지정 > OcclusionRim**로 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-351">In the **Shader drop-down**, change the shader to **Custom > OcclusionRim**.</span></span> <span data-ttu-id="39ca3-352">그러면 다른 개체에 의해 폐색 될 때마다 지구 주위에 파란색 강조 표시가 렌더링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-352">This will render a blue highlight around Earth whenever it is occluded by another object.</span></span>
+
+<span data-ttu-id="39ca3-353">마지막으로, 태양계에서 행성에 대해 x-레이 비전 효과를 사용 하도록 설정 하겠습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-353">Finally, we are going to enable an x-ray vision effect for planets in our solar system.</span></span> <span data-ttu-id="39ca3-354">다음을 수행 하려면 **PlanetOcclusion.cs** (Scripts\SolarSystem 폴더에 있음)를 편집 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-354">We will need to edit **PlanetOcclusion.cs** (found in the Scripts\SolarSystem folder) in order to achieve the following:</span></span>
+
+1. <span data-ttu-id="39ca3-355">SpatialMapping 계층 (방 메시 및 평면)에서 행성을 폐색 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-355">Determine if a planet is occluded by the SpatialMapping layer (room meshes and planes).</span></span>
+2. <span data-ttu-id="39ca3-356">SpatialMapping 계층에 의해 폐색 될 때마다 전 세계의 와이어 프레임 표현을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-356">Show the wireframe representation of a planet whenever it is occluded by the SpatialMapping layer.</span></span>
+3. <span data-ttu-id="39ca3-357">SpatialMapping 계층에 의해 차단 되지 않는 행성의 와이어 프레임 표현을 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-357">Hide the wireframe representation of a planet when it is not blocked by the SpatialMapping layer.</span></span>
+
+<span data-ttu-id="39ca3-358">PlanetOcclusion.cs의 코딩 연습을 수행 하거나 다음 솔루션을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-358">Follow the coding exercise in PlanetOcclusion.cs, or use the following solution:</span></span>
 
 ```cs
 using UnityEngine;
@@ -1178,19 +1199,21 @@ public class PlanetOcclusion : MonoBehaviour
 }
 ```
 
-<span data-ttu-id="372cc-360">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="372cc-360">**Build and Deploy**</span></span>
-* <span data-ttu-id="372cc-361">평소 처럼 응용 프로그램을 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-361">Build and deploy the application to HoloLens, as usual.</span></span>
-* <span data-ttu-id="372cc-362">공간 매핑 데이터의 스캔 및 처리가 완료 될 때까지 기다립니다 (벽에 파란색 선이 표시 되어야 함).</span><span class="sxs-lookup"><span data-stu-id="372cc-362">Wait for scanning and processing of the spatial mapping data to be complete (you should see blue lines appear on walls).</span></span>
-* <span data-ttu-id="372cc-363">태양계의 투영 상자를 찾아 선택한 다음 벽 옆 또는 카운터 뒤에 있는 상자를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-363">Find and select the solar system's projection box and then set the box next to a wall or behind a counter.</span></span>
-* <span data-ttu-id="372cc-364">포스터 또는 프로젝션 상자에서 피어에 화면을 숨겨서 기본 폐색를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-364">You can view basic occlusion by hiding behind surfaces to peer at the poster or projection box.</span></span>
-* <span data-ttu-id="372cc-365">지구를 찾아 다른 홀로그램 또는 표면 뒤에 있을 때마다 파란색 강조 표시 효과가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-365">Look for the Earth, there should be a blue highlight effect whenever it goes behind another hologram or surface.</span></span>
-* <span data-ttu-id="372cc-366">벽 또는 방의 다른 표면 뒤에서 행성 이동을 시청 합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-366">Watch as the planets move behind the wall or other surfaces in the room.</span></span> <span data-ttu-id="372cc-367">이제 x 광선의 비전을 통해 와이어 프레임 구조를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-367">You now have x-ray vision and can see their wireframe skeletons!</span></span>
+<span data-ttu-id="39ca3-359">**빌드 및 배포**</span><span class="sxs-lookup"><span data-stu-id="39ca3-359">**Build and Deploy**</span></span>
 
-## <a name="the-end"></a><span data-ttu-id="372cc-368">끝</span><span class="sxs-lookup"><span data-stu-id="372cc-368">The End</span></span>
+* <span data-ttu-id="39ca3-360">평소 처럼 응용 프로그램을 빌드하고 HoloLens에 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-360">Build and deploy the application to HoloLens, as usual.</span></span>
+* <span data-ttu-id="39ca3-361">공간 매핑 데이터의 스캔 및 처리가 완료 될 때까지 기다립니다 (벽에 파란색 선이 표시 되어야 함).</span><span class="sxs-lookup"><span data-stu-id="39ca3-361">Wait for scanning and processing of the spatial mapping data to be complete (you should see blue lines appear on walls).</span></span>
+* <span data-ttu-id="39ca3-362">태양계의 투영 상자를 찾아 선택한 다음 벽 옆 또는 카운터 뒤에 있는 상자를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-362">Find and select the solar system's projection box and then set the box next to a wall or behind a counter.</span></span>
+* <span data-ttu-id="39ca3-363">포스터 또는 프로젝션 상자에서 피어에 화면을 숨겨서 기본 폐색를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-363">You can view basic occlusion by hiding behind surfaces to peer at the poster or projection box.</span></span>
+* <span data-ttu-id="39ca3-364">지구를 찾아 다른 홀로그램 또는 표면 뒤에 있을 때마다 파란색 강조 표시 효과가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-364">Look for the Earth, there should be a blue highlight effect whenever it goes behind another hologram or surface.</span></span>
+* <span data-ttu-id="39ca3-365">벽 또는 방의 다른 표면 뒤에서 행성 이동을 시청 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-365">Watch as the planets move behind the wall or other surfaces in the room.</span></span> <span data-ttu-id="39ca3-366">이제 x 광선의 비전을 통해 와이어 프레임 구조를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-366">You now have x-ray vision and can see their wireframe skeletons!</span></span>
 
-<span data-ttu-id="372cc-369">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-369">Congratulations!</span></span> <span data-ttu-id="372cc-370">이제 MR 공간 230 **을 완료 했습니다. 공간 매핑입니다**.</span><span class="sxs-lookup"><span data-stu-id="372cc-370">You have now completed **MR Spatial 230: Spatial mapping**.</span></span>
-* <span data-ttu-id="372cc-371">환경을 검색 하 고 공간 매핑 데이터를 Unity로 로드 하는 방법을 알고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-371">You know how to scan your environment and load spatial mapping data to Unity.</span></span>
-* <span data-ttu-id="372cc-372">셰이더의 기본 사항과 자료를 사용 하 여 전 세계를 다시 시각화 하는 방법을 이해 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-372">You understand the basics of shaders and how materials can be used to re-visualize the world.</span></span>
-* <span data-ttu-id="372cc-373">평면을 찾고 메시에서 삼각형을 제거 하는 새로운 처리 기법을 배웠습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-373">You learned of new processing techniques for finding planes and removing triangles from a mesh.</span></span>
-* <span data-ttu-id="372cc-374">Holograms를 이동 하 고 적합 한 표면에 놓을 수 있었습니다.</span><span class="sxs-lookup"><span data-stu-id="372cc-374">You were able to move and place holograms on surfaces that made sense.</span></span>
-* <span data-ttu-id="372cc-375">다양 한 폐색 기술이 경험 했으며 x 광선의 기능을 asha.</span><span class="sxs-lookup"><span data-stu-id="372cc-375">You experienced different occlusion techniques and harnessed the power of x-ray vision!</span></span>
+## <a name="the-end"></a><span data-ttu-id="39ca3-367">끝</span><span class="sxs-lookup"><span data-stu-id="39ca3-367">The End</span></span>
+
+<span data-ttu-id="39ca3-368">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-368">Congratulations!</span></span> <span data-ttu-id="39ca3-369">이제 **MR 공간 230: 공간 매핑을**완료 했습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-369">You have now completed **MR Spatial 230: Spatial mapping**.</span></span>
+
+* <span data-ttu-id="39ca3-370">환경을 검색 하 고 공간 매핑 데이터를 Unity로 로드 하는 방법을 알고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-370">You know how to scan your environment and load spatial mapping data to Unity.</span></span>
+* <span data-ttu-id="39ca3-371">셰이더의 기본 사항과 자료를 사용 하 여 전 세계를 다시 시각화 하는 방법을 이해 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-371">You understand the basics of shaders and how materials can be used to re-visualize the world.</span></span>
+* <span data-ttu-id="39ca3-372">평면을 찾고 메시에서 삼각형을 제거 하는 새로운 처리 기법을 배웠습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-372">You learned of new processing techniques for finding planes and removing triangles from a mesh.</span></span>
+* <span data-ttu-id="39ca3-373">Holograms를 이동 하 고 적합 한 표면에 놓을 수 있었습니다.</span><span class="sxs-lookup"><span data-stu-id="39ca3-373">You were able to move and place holograms on surfaces that made sense.</span></span>
+* <span data-ttu-id="39ca3-374">다양 한 폐색 기술이 경험 했으며 x 광선의 기능을 asha.</span><span class="sxs-lookup"><span data-stu-id="39ca3-374">You experienced different occlusion techniques and harnessed the power of x-ray vision!</span></span>

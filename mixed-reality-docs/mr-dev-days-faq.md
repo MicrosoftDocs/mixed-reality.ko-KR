@@ -7,12 +7,12 @@ ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
 keywords: Mixed Reality, 컨퍼런스, summit, developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f9f68962229bfc66bf07040b79ea07345dfd5378
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526648"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438426"
 ---
 # <a name="mixed-reality-dev-days-faq"></a>혼합 현실 Dev 일 FAQ
 
@@ -40,7 +40,7 @@ ms.locfileid: "63526648"
 
     혼합 현실 개발 일 (혼합 현실 전문가)과 함께 제공 되는 클라우드 및 AI 기술의 많은 측면을 컴퓨터 비전에서 홀로그램 생성으로 설계 했습니다. 개발자 플랫폼, 도구, 서비스 및 장치에 대 한 교육을 받을 수 있는 혼합 현실 개발자 인 경우에는 혼합 현실 Dev 일이 매우 적합 합니다. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) 는 회사 전체의 제품 팀에서 개발자와 전문가를 함께 제공 합니다. 광범위 한 기술 및 응용 프로그램 패턴을 다룹니다. 이 이벤트는 빌드를 대체 하지 않으며,이 경우에는이 작업을 수행 하는 것이 좋습니다. 
+    [Microsoft Build](https://www.microsoft.com//build) 는 회사 전체의 제품 팀에서 개발자와 전문가를 함께 제공 합니다. 광범위 한 기술 및 응용 프로그램 패턴을 다룹니다. 이 이벤트는 빌드를 대체 하지 않으며,이 경우에는이 작업을 수행 하는 것이 좋습니다. 
 
 * **이벤트의 비용은 얼마 인가요?**
 
@@ -64,4 +64,4 @@ ms.locfileid: "63526648"
 
 * **자세히 알아보려면 누구에 게 연락 해야 하나요?**
 
-    자세한 내용을 보려면 전자 메일을 보내세요.DevEvent@microsoft.com
+    자세한 내용은 전자 메일을 DevEvent@microsoft.com 하세요.

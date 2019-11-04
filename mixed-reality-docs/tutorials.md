@@ -4,15 +4,15 @@ title: 자습서 및 샘플 앱
 description: 혼합 현실 개발에 대 한 코드 샘플과 자습서를 제공 합니다.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/26/2019
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서
-ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: 3ec675b6f32b734c846eb11221f2aa9c22dc36ff
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601625"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437431"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
@@ -20,7 +20,7 @@ ms.locfileid: "68601625"
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2 자습서
 
-HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발 하는 방법과 모범 사례를 모두 배울 수 있도록 설계 되었습니다.  이 자습서는 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
+HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다.  이 자습서는 [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
 
 * 시작 자습서- [7 개 개요 및 목표](mrlearning-base.md)
 * Azure 공간 앵커 자습서- [3 개 중 1 개 Azure 공간 앵커 시작](mrlearning-asa-ch1.md)
@@ -37,19 +37,20 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
 
 ## <a name="mixed-reality-academy-tutorials"></a>혼합 현실 아카데미 자습서
 
-혼합 현실 아카데미는 해당 프로젝트 파일을 사용 하는 일련의 온라인 단계별 자습서입니다. 
-* 이 자습서에서는 다음을 수행 하는 100, 200 및 300 수준 항목을 다룹니다. 100 수준에서는 프로젝트 기본 사항, 200 수준에서 핵심 MR 구성 요소 및 300 수준에 대 한 클라우드 서비스 통합에 대해 설명 합니다.
-* 대부분의 과정에서는 HoloLens 및 모던 (VR) 헤드셋 모두에 적용 되는 개념을 다룹니다. 
-* 각 자습서는 챕터로 구성 되며 주요 개념에 대 한 비디오 데모를 포함 합니다. 
+혼합 현실 아카데미는 해당 프로젝트 파일을 사용 하는 일련의 온라인 단계별 자습서입니다.
+
+* 자습서에는 100, 200 및 300 수준 항목이 포함 되어 있습니다 .이 항목에 대 한 100 level은 프로젝트 기본 사항, 200 수준에서는 핵심 MR 빌딩 블록, 그리고 300 수준에서는 클라우드 서비스 통합에 대해 설명 합니다.
+* 대부분의 과정에서는 HoloLens 및 모던 (VR) 헤드셋 모두에 적용 되는 개념을 다룹니다.
+* 각 자습서는 챕터로 구성 되며 주요 개념에 대 한 비디오 데모를 포함 합니다.
 * 올바른 [도구가 설치](install-the-tools.md) 된 WINDOWS 10 PC는 각 자습서를 완료 하는 일반적인 필수 구성 요소입니다.
 
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                                    <a href="holograms-100.md" title="MR 기본 사항 100" data-linktype="absolute-path">
+                                    <a href="holograms-100.md" title="MR 기본 100" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -68,7 +69,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                </a>
                             </li>
                             <li>
-                                  <a href="holograms-101.md" title="MR 기본 사항 101" data-linktype="absolute-path">
+                                  <a href="holograms-101.md" title="MR 기본 101" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -87,7 +88,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                </a>
                             </li>
                             <li>
-                                <a href="holograms-101e.md" title="MR 기본 사항 101E" data-linktype="absolute-path">
+                                <a href="holograms-101e.md" title="MR 기본 101E" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -192,7 +193,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 공간 220: 공간 음향</h3>
+                                              <h3>MR 공간 220: 공간 사운드</h3>
                                               <p>공간 사운드를 holograms로 breathes 하 고 현재 상태를 제공 합니다. 이 과정에서는 공간 소리를 사용 하 여 주변 세계에서 holograms 하 고, 상호 작용 중에 피드백을 제공 하 고, 오디오를 사용 하 여 holograms를 찾는 방법을 배웁니다.</p>
                                           </div>
                                       </div>
@@ -249,7 +250,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 공유 250: HoloLens 및 몰입 형 헤드셋</h3>
+                                              <h3>MR 공유 250: HoloLens 및 모던 헤드셋</h3>
                                               <p>이 프로젝트의 2017 프로젝트에서는 공유 장치 간 환경 내에서 HoloLens 및 모던 (VR) 헤드셋의 고유한 장점을 활용 하는 앱을 빌드하는 방법을 보여 줍니다.</p>
                                           </div>
                                       </div>
@@ -275,7 +276,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 및 Azure 301: 외국어 번역</h3>
+                                              <h3>MR 및 Azure 301: 언어 번역</h3>
                                               <p>혼합 현실 앱은 Azure Translator Text API를 사용 하 여 음성을 다른 언어로 텍스트로 변환할 수 있습니다. 이 과정에서 방법을 알아보세요.</p>
                                           </div>
                                       </div>
@@ -389,7 +390,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 및 Azure 306: 비디오 스트리밍</h3>
+                                              <h3>MR 및 Azure 306: 스트리밍 비디오</h3>
                                               <p>Azure Media Services를 사용 하 여 Windows의 VR (Mixed Reality 몰입) 환경에서 360 수준 비디오를 스트리밍하는 방법에 대해 알아봅니다.</p>
                                           </div>
                                       </div>
@@ -408,7 +409,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 및 Azure 307: 기계 학습</h3>
+                                              <h3>MR 및 Azure 307: Machine learning</h3>
                                               <p>혼합 현실 앱 내에서 Azure Machine Learning Studio 활용 하 여 많은 ML (기계 학습) 알고리즘을 배포 합니다.</p>
                                           </div>
                                       </div>
@@ -503,7 +504,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 응용 프로그램을 개발
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 및 Azure 312: Bot 통합</h3>
+                                              <h3>MR 및 Azure 312: 봇 통합</h3>
                                               <p>Microsoft Bot Framework v4를 사용 하 여 봇을 만들어 배포 하 고 혼합 현실 앱에서 통신 합니다.</p>
                                           </div>
                                       </div>

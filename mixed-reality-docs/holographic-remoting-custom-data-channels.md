@@ -3,34 +3,34 @@ title: 사용자 지정 Holographic 원격 데이터 채널
 description: 사용자 지정 데이터 채널은 이미 설정 된 Holographic 원격 연결을 통해 사용자 데이터를 전송 하는 데 사용할 수 있습니다.
 author: NPohl-MSFT
 ms.author: nopohl
-ms.date: 08/01/2019
+ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 9f7f20023d496412b331606e03d0c5110bb4864f
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: a862fa52695c7bfb94b58c6c0b85606a112835da
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718087"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434280"
 ---
-# <a name="custom-holographic-remoting-data-channels"></a><span data-ttu-id="dcc22-104">사용자 지정 Holographic 원격 데이터 채널</span><span class="sxs-lookup"><span data-stu-id="dcc22-104">Custom Holographic Remoting data channels</span></span>
+# <a name="custom-holographic-remoting-data-channels"></a><span data-ttu-id="6e6ee-104">사용자 지정 Holographic 원격 데이터 채널</span><span class="sxs-lookup"><span data-stu-id="6e6ee-104">Custom Holographic Remoting data channels</span></span>
 
 >[!NOTE]
-><span data-ttu-id="dcc22-105">이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-105">This guidance is specific to Holographic Remoting on HoloLens 2.</span></span>
+><span data-ttu-id="6e6ee-105">이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-105">This guidance is specific to Holographic Remoting on HoloLens 2.</span></span>
 
-<span data-ttu-id="dcc22-106">사용자 지정 데이터 채널을 사용 하 여 설정 된 원격 연결을 통해 사용자 지정 데이터를 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-106">Use custom data channels to send custom data over an established remoting connection.</span></span>
+<span data-ttu-id="6e6ee-106">사용자 지정 데이터 채널을 사용 하 여 설정 된 원격 연결을 통해 사용자 지정 데이터를 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-106">Use custom data channels to send custom data over an established remoting connection.</span></span>
 
 >[!IMPORTANT]
-><span data-ttu-id="dcc22-107">사용자 지정 데이터 채널에는 두 사용자 지정 앱 간의 통신을 허용 하므로 사용자 지정 호스트 앱 및 사용자 지정 플레이어 앱이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-107">Custom data channels require a custom host app and a custom player app, as it allows for communication between the two custom apps.</span></span>
+><span data-ttu-id="6e6ee-107">사용자 지정 데이터 채널에는 두 사용자 지정 앱 간의 통신을 허용 하므로 사용자 지정 호스트 앱 및 사용자 지정 플레이어 앱이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-107">Custom data channels require a custom host app and a custom player app, as it allows for communication between the two custom apps.</span></span>
 
 >[!TIP]
-><span data-ttu-id="dcc22-108">간단한 ping-ping 예제는 [Holographic Remoting 샘플 github 리포지토리](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)내의 호스트 및 플레이어 샘플에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-108">A simple ping-pong example can be found in the host and player samples inside the [Holographic Remoting samples github repository](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).</span></span> <span data-ttu-id="dcc22-109">샘플 ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` 코드를 사용 하도록 설정 하려면 SampleHostMain/SamplePlayerMain 파일 내에서 주석 처리를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-109">Uncomment ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` inside the SampleHostMain.h / SamplePlayerMain.h files to enable the sample code.</span></span>
+><span data-ttu-id="6e6ee-108">간단한 ping-ping 예제는 [Holographic Remoting 샘플 github 리포지토리](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)내의 호스트 및 플레이어 샘플에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-108">A simple ping-pong example can be found in the host and player samples inside the [Holographic Remoting samples github repository](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).</span></span> <span data-ttu-id="6e6ee-109">SampleHostMain/SamplePlayerMain 파일 내의 ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` 주석 처리를 제거 하 여 샘플 코드를 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-109">Uncomment ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` inside the SampleHostMain.h / SamplePlayerMain.h files to enable the sample code.</span></span>
 
 
-# <a name="create-a-custom-data-channel"></a><span data-ttu-id="dcc22-110">사용자 지정 데이터 채널 만들기</span><span class="sxs-lookup"><span data-stu-id="dcc22-110">Create a custom data channel</span></span>
+## <a name="create-a-custom-data-channel"></a><span data-ttu-id="6e6ee-110">사용자 지정 데이터 채널 만들기</span><span class="sxs-lookup"><span data-stu-id="6e6ee-110">Create a custom data channel</span></span>
 
 
-<span data-ttu-id="dcc22-111">사용자 지정 데이터 채널을 만들려면 다음 필드가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-111">To create a custom data channel, the following fields are required:</span></span>
+<span data-ttu-id="6e6ee-111">사용자 지정 데이터 채널을 만들려면 다음 필드가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-111">To create a custom data channel, the following fields are required:</span></span>
 ```cpp
 std::recursive_mutex m_customDataChannelLock;
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel m_customDataChannel = nullptr;
@@ -38,28 +38,28 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-<span data-ttu-id="dcc22-112">연결이 성공적으로 설정 된 후에는 호스트 측 및/또는 플레이어 쪽에서 새 데이터 채널 만들기를 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-112">After a connection was successfully established, the creation of new data channels can be initiated from either the host side and/or the player side.</span></span> <span data-ttu-id="dcc22-113">RemoteContext 및 PlayerContext 모두이 작업을 수행 ```CreateDataChannel()``` 하는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-113">Both the RemoteContext and the PlayerContext provide a ```CreateDataChannel()``` method to do this.</span></span> <span data-ttu-id="dcc22-114">첫 번째 매개 변수는 susequent 작업에서 데이터 채널을 식별 하는 데 사용 되는 채널 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-114">The first parameter is the channel ID which is used to identify the data channel in susequent operations.</span></span> <span data-ttu-id="dcc22-115">두 번째 매개 변수는이 채널의 데이터가 다른 쪽으로 전송 되는 우선 순위를 지정 하는 우선 순위입니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-115">The second paramter is the priority which specifies the priority with which data of this channel is transfered to the other side.</span></span> <span data-ttu-id="dcc22-116">채널 Id의 유효한 범위는 0부터 시작 하 고, 호스트 측의 경우 63을 포함 하 고, 플레이어 쪽에 대 한 127을 포함 하 여 64까지 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-116">The valid range for channel IDs is 0 up to and including 63 for the host side and 64 up to and including 127 for the player side.</span></span> <span data-ttu-id="dcc22-117">유효한 우선 순위 ```Low```는 ```Medium``` 또는 ```High``` (양쪽 모두)입니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-117">Valid priorities are ```Low```, ```Medium``` or ```High``` (on both sides).</span></span>
+<span data-ttu-id="6e6ee-112">연결이 성공적으로 설정 된 후에는 호스트 측 및/또는 플레이어 쪽에서 새 데이터 채널 만들기를 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-112">After a connection was successfully established, the creation of new data channels can be initiated from either the host side and/or the player side.</span></span> <span data-ttu-id="6e6ee-113">RemoteContext와 PlayerContext는 모두이 작업을 수행 하는 ```CreateDataChannel()``` 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-113">Both the RemoteContext and the PlayerContext provide a ```CreateDataChannel()``` method to do this.</span></span> <span data-ttu-id="6e6ee-114">첫 번째 매개 변수는 susequent 작업에서 데이터 채널을 식별 하는 데 사용 되는 채널 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-114">The first parameter is the channel ID which is used to identify the data channel in susequent operations.</span></span> <span data-ttu-id="6e6ee-115">두 번째 매개 변수는이 채널의 데이터가 다른 쪽으로 전송 되는 우선 순위를 지정 하는 우선 순위입니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-115">The second paramter is the priority which specifies the priority with which data of this channel is transfered to the other side.</span></span> <span data-ttu-id="6e6ee-116">채널 Id의 유효한 범위는 0부터 시작 하 고, 호스트 측의 경우 63을 포함 하 고, 플레이어 쪽에 대 한 127을 포함 하 여 64까지 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-116">The valid range for channel IDs is 0 up to and including 63 for the host side and 64 up to and including 127 for the player side.</span></span> <span data-ttu-id="6e6ee-117">유효한 우선 순위는 ```Low```, ```Medium``` 또는 ```High``` (양쪽 모두)입니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-117">Valid priorities are ```Low```, ```Medium``` or ```High``` (on both sides).</span></span>
 
-<span data-ttu-id="dcc22-118">**호스트** 쪽에서 데이터 채널 만들기를 시작 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-118">To initiate the creation of a data channel on the **host** side:</span></span>
+<span data-ttu-id="6e6ee-118">**호스트** 쪽에서 데이터 채널 만들기를 시작 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-118">To initiate the creation of a data channel on the **host** side:</span></span>
 ```cpp
 // Valid channel ids for channels created on the host side are 0 up to and including 63
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
-<span data-ttu-id="dcc22-119">**플레이어** 쪽에서 데이터 채널 만들기를 시작 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-119">To initiate the creation of a data channel on the **player** side:</span></span>
+<span data-ttu-id="6e6ee-119">**플레이어** 쪽에서 데이터 채널 만들기를 시작 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-119">To initiate the creation of a data channel on the **player** side:</span></span>
 ```cpp
 // Valid channel ids for channels created on the player side are 64 up to and including 127
 m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
 ```
 
 >[!NOTE]
-><span data-ttu-id="dcc22-120">새 사용자 지정 데이터 채널을 만들려면 한 쪽 (호스트 또는 플레이어)만 ```CreateDataChannel``` 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-120">To create a new custom data channel, only one side (either host or player) needs to call the ```CreateDataChannel``` method.</span></span>
+><span data-ttu-id="6e6ee-120">새 사용자 지정 데이터 채널을 만들려면 한 쪽 (호스트 또는 플레이어)만 ```CreateDataChannel``` 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-120">To create a new custom data channel, only one side (either host or player) needs to call the ```CreateDataChannel``` method.</span></span>
 
-## <a name="handling-custom-data-channel-events"></a><span data-ttu-id="dcc22-121">사용자 지정 데이터 채널 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="dcc22-121">Handling custom data channel events</span></span>
+## <a name="handling-custom-data-channel-events"></a><span data-ttu-id="6e6ee-121">사용자 지정 데이터 채널 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="6e6ee-121">Handling custom data channel events</span></span>
 
-<span data-ttu-id="dcc22-122">사용자 지정 데이터 채널 ```OnDataChannelCreated``` 을 설정 하려면 이벤트를 처리 해야 합니다 (플레이어와 호스트 쪽 모두에서).</span><span class="sxs-lookup"><span data-stu-id="dcc22-122">To establish a custom data channel, the ```OnDataChannelCreated``` event needs to be handled (on both the player and the host side).</span></span> <span data-ttu-id="dcc22-123">한쪽에서 사용자 데이터 채널을 만들고이 채널을 통해 데이터를 보내고 받는 데 ```IDataChannel``` 사용할 수 있는 개체를 제공 하는 경우 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-123">It triggers when a user data channel has been created by either side and provides a ```IDataChannel``` object, which can be used to send and receive data over this channel.</span></span>
+<span data-ttu-id="6e6ee-122">사용자 지정 데이터 채널을 설정 하려면 플레이어와 호스트 쪽 모두에서 ```OnDataChannelCreated``` 이벤트를 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-122">To establish a custom data channel, the ```OnDataChannelCreated``` event needs to be handled (on both the player and the host side).</span></span> <span data-ttu-id="6e6ee-123">사용자 데이터 채널을 양쪽에서 만들고이 채널을 통해 데이터를 보내고 받는 데 사용할 수 있는 ```IDataChannel``` 개체를 제공 하는 경우 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-123">It triggers when a user data channel has been created by either side and provides a ```IDataChannel``` object, which can be used to send and receive data over this channel.</span></span>
 
-<span data-ttu-id="dcc22-124">```OnDataChannelCreated``` 이벤트에 수신기를 등록 하려면:</span><span class="sxs-lookup"><span data-stu-id="dcc22-124">To register a listener on the ```OnDataChannelCreated``` event:</span></span>
+<span data-ttu-id="6e6ee-124">```OnDataChannelCreated``` 이벤트에 수신기를 등록 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-124">To register a listener on the ```OnDataChannelCreated``` event:</span></span>
 ```cpp
 m_onDataChannelCreatedEventRevoker = m_remoteContext.OnDataChannelCreated(winrt::auto_revoke,
     [this](const IDataChannel& dataChannel, uint8_t channelId)
@@ -71,7 +71,7 @@ m_onDataChannelCreatedEventRevoker = m_remoteContext.OnDataChannelCreated(winrt:
     });
 ```
 
-<span data-ttu-id="dcc22-125">데이터가 수신 될 때 알림 메시지를 받으려면 ```OnDataReceived``` ```OnDataChannelCreated``` 처리기에서 제공 하는 ```IDataChannel``` 개체의 이벤트에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-125">To get notified when data is received, register to the ```OnDataReceived``` event on the ```IDataChannel``` object provided by the ```OnDataChannelCreated``` handler.</span></span> <span data-ttu-id="dcc22-126">데이터 채널이 닫히면 ```OnClosed``` 이벤트에 등록 하 여 알림 메시지를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-126">Register to the ```OnClosed``` event, to get notified when the data channel has been closed.</span></span>
+<span data-ttu-id="6e6ee-125">데이터가 수신 될 때 알림 메시지를 받으려면 ```OnDataChannelCreated``` 처리기에서 제공 하는 ```IDataChannel``` 개체의 ```OnDataReceived``` 이벤트에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-125">To get notified when data is received, register to the ```OnDataReceived``` event on the ```IDataChannel``` object provided by the ```OnDataChannelCreated``` handler.</span></span> <span data-ttu-id="6e6ee-126">데이터 채널이 닫히면 ```OnClosed``` 이벤트에 등록 하 여 알림 메시지를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-126">Register to the ```OnClosed``` event, to get notified when the data channel has been closed.</span></span>
 
 ```cpp
 m_customChannelDataReceivedEventRevoker = m_customDataChannel.OnDataReceived(winrt::auto_revoke, 
@@ -93,29 +93,29 @@ m_customChannelClosedEventRevoker = m_customDataChannel.OnClosed(winrt::auto_rev
     });
 ```
 
-## <a name="sending-data"></a><span data-ttu-id="dcc22-127">데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="dcc22-127">Sending data</span></span>
+## <a name="sending-data"></a><span data-ttu-id="6e6ee-127">데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="6e6ee-127">Sending data</span></span>
 
-<span data-ttu-id="dcc22-128">사용자 지정 데이터 채널을 통해 데이터를 전송 하려면 ```IDataChannel::SendData()``` 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-128">To send data over a custom data channel, use the ```IDataChannel::SendData()``` method.</span></span> <span data-ttu-id="dcc22-129">첫 번째 매개 변수는 ```winrt::array_view<const uint8_t>``` 보내야 하는 데이터에 대 한입니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-129">The first paramter is a ```winrt::array_view<const uint8_t>``` to the data that should be send.</span></span> <span data-ttu-id="dcc22-130">두 번째 매개 변수는 다른 쪽에서 수신을 승인할 때까지 데이터를 다시 전송 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-130">The second parameter specifies wheter the data should be resend, until the other side acknowledge the reception.</span></span> 
+<span data-ttu-id="6e6ee-128">사용자 지정 데이터 채널을 통해 데이터를 보내려면 ```IDataChannel::SendData()``` 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-128">To send data over a custom data channel, use the ```IDataChannel::SendData()``` method.</span></span> <span data-ttu-id="6e6ee-129">첫 번째 매개 변수는 보내야 하는 데이터에 대 한 ```winrt::array_view<const uint8_t>```입니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-129">The first paramter is a ```winrt::array_view<const uint8_t>``` to the data that should be send.</span></span> <span data-ttu-id="6e6ee-130">두 번째 매개 변수는 다른 쪽에서 수신을 승인할 때까지 데이터를 다시 전송 해야 하는지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-130">The second parameter specifies wheter the data should be resend, until the other side acknowledge the reception.</span></span> 
 
 >[!IMPORTANT]
-><span data-ttu-id="dcc22-131">네트워크 상태가 잘못 된 경우 동일한 데이터 패킷이 두 번 이상 도착할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-131">In case of bad network conditions, the same data packet might arrive more than once.</span></span> <span data-ttu-id="dcc22-132">수신 코드에서이 상황을 처리할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-132">The receiving code must be able to handle this situation.</span></span>
+><span data-ttu-id="6e6ee-131">네트워크 상태가 잘못 된 경우 동일한 데이터 패킷이 두 번 이상 도착할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-131">In case of bad network conditions, the same data packet might arrive more than once.</span></span> <span data-ttu-id="6e6ee-132">수신 코드에서이 상황을 처리할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-132">The receiving code must be able to handle this situation.</span></span>
 
 ```cpp
 uint8_t data[] = {1};
 m_customDataChannel.SendData(data, true);
 ```
 
-## <a name="closing-a-custom-data-channel"></a><span data-ttu-id="dcc22-133">사용자 지정 데이터 채널 닫기</span><span class="sxs-lookup"><span data-stu-id="dcc22-133">Closing a custom data channel</span></span>
+## <a name="closing-a-custom-data-channel"></a><span data-ttu-id="6e6ee-133">사용자 지정 데이터 채널 닫기</span><span class="sxs-lookup"><span data-stu-id="6e6ee-133">Closing a custom data channel</span></span>
 
-<span data-ttu-id="dcc22-134">사용자 지정 데이터 채널을 닫으려면 ```IDataChannel::Close()``` 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-134">To close a custom data channel, use the ```IDataChannel::Close()``` method.</span></span> <span data-ttu-id="dcc22-135">사용자 지정 데이터 채널이 닫히면 두 쪽 ```OnClosed``` 모두 이벤트에서 알림이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="dcc22-135">Both sides will be notified by the ```OnClosed``` event once the custom data channel has been closed.</span></span>
+<span data-ttu-id="6e6ee-134">사용자 지정 데이터 채널을 닫으려면 ```IDataChannel::Close()``` 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-134">To close a custom data channel, use the ```IDataChannel::Close()``` method.</span></span> <span data-ttu-id="6e6ee-135">사용자 지정 데이터 채널이 닫히면 두 쪽 모두 ```OnClosed``` 이벤트에서 알림이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6e6ee-135">Both sides will be notified by the ```OnClosed``` event once the custom data channel has been closed.</span></span>
 
 ```cpp
 m_customDataChannel.Close();
 ```
 
-## <a name="see-also"></a><span data-ttu-id="dcc22-136">관련 항목</span><span class="sxs-lookup"><span data-stu-id="dcc22-136">See Also</span></span>
-* [<span data-ttu-id="dcc22-137">Holographic 원격 호스트 앱 작성</span><span class="sxs-lookup"><span data-stu-id="dcc22-137">Writing a Holographic Remoting host app</span></span>](holographic-remoting-create-host.md)
-* [<span data-ttu-id="dcc22-138">사용자 지정 Holographic Remoting 플레이어 앱 작성</span><span class="sxs-lookup"><span data-stu-id="dcc22-138">Writing a custom Holographic Remoting player app</span></span>](holographic-remoting-create-player.md)
-* [<span data-ttu-id="dcc22-139">Holographic 원격 문제 해결 및 제한 사항</span><span class="sxs-lookup"><span data-stu-id="dcc22-139">Holographic Remoting troubleshooting and limitations</span></span>](holographic-remoting-troubleshooting.md)
-* [<span data-ttu-id="dcc22-140">Holographic 원격 소프트웨어 사용 조건</span><span class="sxs-lookup"><span data-stu-id="dcc22-140">Holographic Remoting software license terms</span></span>](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [<span data-ttu-id="dcc22-141">Microsoft 개인 정보 취급 방침</span><span class="sxs-lookup"><span data-stu-id="dcc22-141">Microsoft Privacy Statement</span></span>](https://go.microsoft.com/fwlink/?LinkId=521839)
+## <a name="see-also"></a><span data-ttu-id="6e6ee-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6e6ee-136">See Also</span></span>
+* [<span data-ttu-id="6e6ee-137">Holographic 원격 호스트 앱 작성</span><span class="sxs-lookup"><span data-stu-id="6e6ee-137">Writing a Holographic Remoting host app</span></span>](holographic-remoting-create-host.md)
+* [<span data-ttu-id="6e6ee-138">사용자 지정 Holographic Remoting 플레이어 앱 작성</span><span class="sxs-lookup"><span data-stu-id="6e6ee-138">Writing a custom Holographic Remoting player app</span></span>](holographic-remoting-create-player.md)
+* [<span data-ttu-id="6e6ee-139">Holographic 원격 문제 해결 및 제한 사항</span><span class="sxs-lookup"><span data-stu-id="6e6ee-139">Holographic Remoting troubleshooting and limitations</span></span>](holographic-remoting-troubleshooting.md)
+* [<span data-ttu-id="6e6ee-140">홀로그램 원격 소프트웨어 사용 조건</span><span class="sxs-lookup"><span data-stu-id="6e6ee-140">Holographic Remoting software license terms</span></span>](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [<span data-ttu-id="6e6ee-141">Microsoft 개인 정보 취급 방침</span><span class="sxs-lookup"><span data-stu-id="6e6ee-141">Microsoft Privacy Statement</span></span>](https://go.microsoft.com/fwlink/?LinkId=521839)
