@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, edge, iot edge, 자습서, api, 알림, 기능, 테이블, hololens, 몰입 형, vr, iot, virtual machine, ubuntu, python
-ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047239"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437969"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -35,13 +35,13 @@ ms.locfileid: "70047239"
 
 사용할 서비스는 다음과 같습니다.
 
-- **Azure IoT Hub** 는 개발자가 IoT 자산을 연결, 모니터링 및 관리 하는 데 사용할 수 있는 Microsoft Azure 서비스입니다. 자세한 내용은 [ **Azure IoT Hub 서비스** 페이지](https://azure.microsoft.com/en-au/services/iot-hub/)를 참조 하세요.
+- **Azure IoT Hub** 는 개발자가 IoT 자산을 연결, 모니터링 및 관리 하는 데 사용할 수 있는 Microsoft Azure 서비스입니다. 자세한 내용은 [ **Azure IoT Hub 서비스** 페이지](https://azure.microsoft.com/services/iot-hub/)를 참조 하세요.
 
-- **Azure Container Registry** 는 개발자가 다양 한 유형의 컨테이너에 대해 컨테이너 이미지를 저장할 수 있도록 하는 Microsoft Azure 서비스입니다. 자세한 내용은 [ **Azure Container Registry 서비스** 페이지](https://azure.microsoft.com/en-au/services/container-registry/)를 참조 하세요.
+- **Azure Container Registry** 는 개발자가 다양 한 유형의 컨테이너에 대해 컨테이너 이미지를 저장할 수 있도록 하는 Microsoft Azure 서비스입니다. 자세한 내용은 [ **Azure Container Registry 서비스** 페이지](https://azure.microsoft.com/services/container-registry/)를 참조 하세요.
 
-- **Azure 함수 앱** 는 개발자가 azure에서 작은 코드, ' 함수 '를 실행할 수 있도록 하는 Microsoft Azure 서비스입니다. 이렇게 하면 다양 한 이점을 얻을 수 있는 로컬 응용 프로그램이 아닌 클라우드로 작업을 위임할 수 있습니다. **Azure Functions** 는 C\#, F\#, node.js, Java 및 PHP를 비롯 한 몇 가지 개발 언어를 지원 합니다. 자세한 내용은 [ **Azure Functions** 페이지](https://docs.microsoft.com/azure/azure-functions/functions-overview)를 참조 하세요.
+- **Azure 함수 앱** 는 개발자가 azure에서 작은 코드, ' 함수 '를 실행할 수 있도록 하는 Microsoft Azure 서비스입니다. 이렇게 하면 다양 한 이점을 얻을 수 있는 로컬 응용 프로그램이 아닌 클라우드로 작업을 위임할 수 있습니다. **Azure Functions** 는 C\#, F\#, Node.js, JAVA 및 PHP를 비롯 한 몇 가지 개발 언어를 지원 합니다. 자세한 내용은 [ **Azure Functions** 페이지](https://docs.microsoft.com/azure/azure-functions/functions-overview)를 참조 하세요.
 
-- **Azure Storage: 테이블** 은 개발자가 구조화 된 비 SQL 데이터를 클라우드에 저장 하 여 어디서 나 쉽게 액세스할 수 있도록 하는 Microsoft Azure 서비스입니다. 이 서비스는 스키마 없는 디자인을 boasts, 필요에 따라 테이블의 진화를 허용 하므로 매우 유연 합니다. 자세한 내용은 [ **Azure Tables** 페이지를 참조 하세요.](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- **Azure Storage: Tables** 는 개발자가 구조화 된 비 SQL 데이터를 클라우드에 저장 하 여 어디서 나 쉽게 액세스할 수 있도록 하는 Microsoft Azure 서비스입니다. 이 서비스는 스키마 없는 디자인을 boasts, 필요에 따라 테이블의 진화를 허용 하므로 매우 유연 합니다. 자세한 내용은 [ **Azure Tables** 페이지를 참조 하세요.](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 
 이 과정에서는 IoT Hub 서비스를 설정 하 고 사용 하는 방법을 설명 하 고 장치에서 제공 하는 응답을 시각화 합니다. 사용자가 빌드할 수 있는 사용자 지정 IoT Hub 서비스 설정에 이러한 개념을 적용 하는 것이 좋습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "70047239"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 최신 필수 구성 요소는 [도구 설치](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) 문서를 참조 하세요.
 
@@ -72,14 +72,14 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 - Windows 10 SDK (최신 버전)
 - HoloLens, **개발자 모드 사용**
 - Visual Studio 2017.15.4 (Azure 클라우드 탐색기 액세스 하는 데만 사용 됨)
-- Azure 및 IoT Hub 서비스에 대 한 인터넷 액세스. 자세한 내용은 [IoT Hub 서비스 페이지에 대 한 링크를](https://azure.microsoft.com/en-au/services/iot-hub/) 참조 하세요.
+- Azure 및 IoT Hub 서비스에 대 한 인터넷 액세스. 자세한 내용은 [IoT Hub 서비스 페이지에 대 한 링크를](https://azure.microsoft.com/services/iot-hub/) 참조 하세요.
 - 기계 학습 모델입니다. 모델을 사용할 준비가 되지 않은 경우 [이 과정에서 제공 되는 모델을 사용할 수](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip)있습니다.
 - Windows 10 개발 컴퓨터에서 **hyper-v** 소프트웨어를 사용 하도록 설정 했습니다.
-- 개발 컴퓨터에서 실행 되는 Ubuntu (16.4 또는 18.4)를 실행 하는 가상 머신 또는 Linux를 실행 하는 별도의 컴퓨터 (Ubuntu 16.4 또는 18.4)를 사용할 수 있습니다. Windows에서 Hyper-v를 사용 하 여 VM을 만드는 방법에 대 한 자세한 내용은 ["시작 하기 전에" 챕터](#before-you-start)에서 확인할 수 있습니다. (https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine).  
+- 개발 컴퓨터에서 실행 되는 Ubuntu (16.4 또는 18.4)를 실행 하는 가상 머신 또는 Linux를 실행 하는 별도의 컴퓨터 (Ubuntu 16.4 또는 18.4)를 사용할 수 있습니다. Windows에서 Hyper-v를 사용 하 여 VM을 만드는 방법에 대 한 자세한 내용은 ["시작 하기 전에" 챕터](#before-you-start)에서 확인할 수 있습니다. https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine) 합니다.  
 
 
 
-### <a name="before-you-start"></a>시작하기 전 주의 사항
+### <a name="before-you-start"></a>시작하기 전 확인 사항
 
 1. HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다.
 2. 새 HoloLens 앱 개발을 시작할 때 **보정** 및 **센서 조정을** 수행 하는 것이 좋습니다 (경우에 따라 각 사용자에 대해 해당 작업을 수행 하는 데 도움이 될 수 있음).
@@ -89,7 +89,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 센서 조정에 대 한 도움말을 보려면 [HoloLens 센서 조정 문서에 대 한 링크를](sensor-tuning.md)참조 하세요.
 
 3. **Hyper-v**를 사용 하 여 **Ubuntu 가상 머신을** 설정 합니다. 프로세스에 도움이 되는 리소스는 다음과 같습니다.
-    1.  먼저이 링크에 따라 [Ubuntu 16.04.4 LTS (Xenial Xerus) ISO를 다운로드](http://au.releases.ubuntu.com/16.04/)합니다. **AMD64 (64 비트 PC) 데스크톱 이미지**를 선택 합니다.
+    1.  먼저이 링크에 따라 [Ubuntu 16.04.4 LTS (Xenial Xerus) ISO를 다운로드](https://au.releases.ubuntu.com/16.04/)합니다. **AMD64 (64 비트 PC) 데스크톱 이미지**를 선택 합니다.
     2.  Windows 10 컴퓨터에서 **hyper-v** 를 사용 하도록 설정 했는지 확인 합니다. [Windows 10에서 hyper-v를 설치 하 고 사용 하도록 설정](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)하는 방법에 대 한 지침은이 링크를 참조 하세요.
     3.  Hyper-v를 시작 하 고 새 Ubuntu VM을 만듭니다. [Hyper-v를 사용 하 여 VM을 만드는 방법에](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine)대 한 단계별 가이드는 다음 링크를 참조 하세요. **"부팅 가능한 이미지 파일에서 운영 체제 설치"** 를 요청 하는 경우 이전에 다운로드 한 **Ubuntu ISO** 를 선택 합니다.
 
@@ -193,7 +193,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     3. 이 서비스 인스턴스의 원하는 **이름을** 삽입 합니다.    
 
-5.  페이지 아래쪽에서 다음을 **클릭 합니다. 크기 및 크기**조정.
+5.  페이지 맨 아래에서 **다음: 크기 및 크기 조정**을 클릭 합니다.
 
     ![저장소 인스턴스 만들기](images/AzureLabs-Lab313-12.png)
 
@@ -233,7 +233,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 16. 표시 되는 페이지에서 **iothubowner**를 클릭 하면 화면 오른쪽에 블레이드가 표시 됩니다. 
 
-17. 연결 문자열 (기본 키)의 연결 문자열 (기본 키)을 기록해 둡니다. 나중에 장치에 대 한 *연결 문자열* 을 설정할 때 사용 합니다.
+17. 연결 **문자열 (기본** 키)의 연결 문자열 (기본 키)을 기록해 둡니다. 나중에 장치에 대 한 *연결 문자열* 을 설정할 때 사용 합니다.
 
     ![저장소 인스턴스 만들기](images/AzureLabs-Lab313-20.png)
 
@@ -243,18 +243,18 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 1.  [Windows용 Docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)다운로드할 수 있는 계정을 만들도록 요청 합니다. 
 
-    [![windows 용 docker 다운로드](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+    [windows 용 docker 다운로드 ![](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
     > [!IMPORTANT]
     > Docker를 실행 하려면 *windows 10 PRO*, *Enterprise 14393*또는 *windows Server 2016 RTM*이 필요 합니다. 다른 버전의 Windows 10을 실행 하는 경우 [Docker 도구 상자](https://docs.docker.com/toolbox/toolbox_install_windows/)를 사용 하 여 docker를 설치 해 볼 수 있습니다.
 
 2.  [Python 3.6](https://www.python.org/downloads/).
 
-    [![python 3.6 다운로드](images/AzureLabs-Lab313-22.png)](https://www.python.org/downloads/)
+    [python 3.6 다운로드 ![](images/AzureLabs-Lab313-22.png)](https://www.python.org/downloads/)
 
 3.  [Visual Studio Code (VS Code 라고도 함)](https://code.visualstudio.com/download).
 
-    [![다운로드 VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
+    [다운로드 ![VS Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
 
 위에서 언급 한 소프트웨어를 설치한 후에는 컴퓨터를 다시 시작 해야 합니다.
 
@@ -271,13 +271,13 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 1.  **Ubuntu 터미널**을 열고 다음 명령을 사용 하 여 **pip**를 설치 합니다.
 
-    > [! 힌트] 바로 가기 키를 사용 하 여 *터미널* 을 매우 쉽게 열 수 있습니다. **Ctrl + Alt + T**
+    > [! 힌트] 바로 가기 키 ( **Ctrl + Alt + T**)를 사용 하 여 *터미널* 을 매우 쉽게 열 수 있습니다.
 
     ```bash
         sudo apt-get install python-pip
     ```
 
-2.  이 장에서는 *터미널*에서 장치 저장소를 사용할 수 있는 권한을 묻는 메시지가 표시 될 수 있으며 **y/n** (예 또는 아니요)을 입력 하 고 **enter** 키를 눌러 수락합니다.
+2.  이 장에서는 *터미널*에서 장치 저장소를 사용할 수 있는 권한을 묻는 메시지가 표시 될 수 있으며 **y/n** (예 또는 아니요) **을 입력 하**고 **enter** 키를 눌러 수락 합니다.
 
 3.  명령이 완료 되 면 다음 명령을 사용 하 여 **말아 넘기기**를 설치 합니다.
 
@@ -320,7 +320,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     1.  키보드의 화살표 키를 사용 하 여 아래로 스크롤합니다 (약간 아래로 스크롤해야 하는 경우).
 
-        **"\<여기 > 장치 연결 문자열을 추가**합니다."
+        " **여기에 장치 연결 문자열\<추가 >** "를 참조 하십시오.
 
     2. **괄호를 포함**한 줄을 앞에서 설명한 **장치 연결 문자열로** 대체 합니다.
 
@@ -370,7 +370,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 4. 확장이 설치 되 면 VS Code를 닫았다가 다시 엽니다.
 
-5. VS Code를 한 번 더 열면**통합 터미널** **보기** > 로 이동 합니다.
+5. VS Code 하 여 > **통합 터미널** **보기로** 이동 합니다.
 
 6. 이제 **Cookiecutter**를 설치 합니다. 터미널에서 다음 bash 명령을 실행 합니다.
 
@@ -380,8 +380,8 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     > [! 힌트] 명령을 사용 하는 데 문제가 있는 경우: 
     >1. VS Code 및/또는 컴퓨터를 다시 시작 합니다.
-    >2. Python을 설치 하는 데 사용 하는 것으로 **VS Code 터미널** 을 전환 해야 할 수도 있습니다. 즉, 특히 python 환경이 컴퓨터에 이미 설치 되어 있는 경우에 한 합니다. 터미널이 열리면 터미널의 오른쪽에 있는 드롭다운 메뉴를 찾을 수 있습니다.
-     ![컨테이너 만들기](images/AzureLabs-Lab313-24b.png) 
+    >2. Python을 설치 하는 데 사용 하는 것으로 **VS Code 터미널** 을 전환 해야 할 수도 **있습니다. 즉** , 특히 python 환경이 컴퓨터에 이미 설치 되어 있는 경우에 한 합니다. 터미널이 열리면 터미널의 오른쪽에 있는 드롭다운 메뉴를 찾을 수 있습니다.
+     컨테이너](images/AzureLabs-Lab313-24b.png) ![만듭니다. 
     >3. **Python** 설치 경로가 컴퓨터에 **환경 변수로** 추가 되었는지 확인 합니다. Cookiecutter는 동일한 위치 경로의 일부 여야 합니다. [환경 변수에 대 한 자세한 내용은 다음 링크](https://msdn.microsoft.com/library/windows/desktop/ms682653(v=vs.85).aspx)를 참조 하세요. 
 
 7. **Cookiecutter** 설치가 완료 되 면 시스템 환경 내에서 **Cookiecutter** 가 명령으로 인식 되도록 컴퓨터를 다시 시작 해야 합니다.
@@ -392,7 +392,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 1. VS Code에서 **보기** > **명령 팔레트**를 클릭 합니다.
 
-2. 색상표에서 Azure IoT Edge 검색 하 고 실행 **합니다. 새 Iot Edge 솔루션**.
+2. 색상표에서 **Azure IoT Edge: 새 IoT Edge 솔루션**을 검색 하 고 실행 합니다.
 
 3. 솔루션을 만들려는 위치로 이동 합니다. **Enter** 키를 눌러 위치를 적용 합니다.
 
@@ -425,7 +425,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 - *배포. 템플릿. json*.
 - *Dockerfile. amd64*
 
-그런 다음 python 스크립트에서 *Custom Vision 모델*에 대해 일치 시킬 이미지를 확인 하는 데 사용 하는 *images* 폴더를 만듭니다. 마지막으로, 모델을 읽는 데 도움이 되는 *레이블과* 사용자 모델인 모델인 파일을 추가 합니다.
+그런 다음 python 스크립트에서 *Custom Vision 모델*에 대해 일치 시킬 이미지를 확인 하는 데 사용 하는 *images* 폴더를 만듭니다. 마지막으로, 모델을 읽는 데 도움이 되는 *레이블과* *사용자 모델인 모델인 파일을* 추가 합니다.
 
 1. VS Code 열린 상태에서 모듈 폴더로 이동 하 고 **py<span></span>** 라는 스크립트를 찾습니다. 두 번 클릭 하 여 엽니다.
 
@@ -744,7 +744,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>9 장-솔루션을 컨테이너로 패키지
 
-1.  이제 파일을 컨테이너로 "패키지" 하 고 **Azure Container Registry**에 푸시할 수 있습니다. VS Code 내에서 *통합 터미널* (**View** >  **\`** **integrated terminal** 또는 **Ctrl**+)을 열고 다음 줄을 사용 하 여 **Docker** 에 로그인 합니다 (다음의 값으로 대체 합니다. Azure Container Registry 자격 증명을 사용 하는 명령 **(ACR)** :
+1.  이제 파일을 컨테이너로 "패키지" 하 고 **Azure Container Registry**에 푸시할 수 있습니다. VS Code 내에서 *통합 터미널* (**보기** > **통합 터미널** 또는 **Ctrl**+ **\`** )을 열고 다음 줄을 사용 하 여 **Docker** 에 로그인 합니다. (명령의 값을로 대체 합니다. **ACR (Azure Container Registry**)의 자격 증명:
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -754,7 +754,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     ![배포 만들기](images/AzureLabs-Lab313-30.png)
 
-3. **명령 팔레트** 를 다시 열고 Azure를 **검색 합니다.** 로그인 합니다. Azure 계정 자격 증명을 사용 하 여 프롬프트를 따릅니다. VS Code은 복사 하 여 *열*수 있는 옵션을 제공 합니다 .이 옵션을 사용 하면 곧 필요한 장치 코드를 복사 하 여 기본 웹 브라우저를 열 수 있습니다. 메시지가 표시 되 면 장치 코드를 붙여넣어 컴퓨터를 인증 합니다.
+3. **명령 팔레트** 를 다시 열고 **Azure: 로그인**을 검색 합니다. Azure 계정 자격 증명을 사용 하 여 프롬프트를 따릅니다. VS Code은 복사 하 여 *열*수 있는 옵션을 제공 합니다 .이 옵션을 사용 하면 곧 필요한 장치 코드를 복사 하 여 기본 웹 브라우저를 열 수 있습니다. 메시지가 표시 되 면 장치 코드를 붙여넣어 컴퓨터를 인증 합니다.
 
     ![복사 및 열기](images/AzureLabs-Lab313-31.png)
 
@@ -906,7 +906,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     ![새 테이블을 만들었습니다.](images/AzureLabs-Lab313-43.png) 
 
-14. 왼쪽의 패널을 다시 사용 하 여 *테이블 서비스* 섹션으로 스크롤하고 테이블 (또는 새 포털에서 **테이블 찾아보기**)을 클릭 하 고 **테이블 URL** (메모장 사용)의 복사본을 가져옵니다. 이 과정에서 나중에 테이블을 **Power BI** 응용 프로그램에 연결할 때이 값을 사용 합니다.
+14. 왼쪽의 패널을 다시 사용 하 여 *테이블 서비스* 섹션으로 스크롤하고 테이블 (또는 새 포털에서 **테이블 찾아보기**) **을 클릭 하** 고 **테이블 URL** (메모장 사용)의 복사본을 가져옵니다. 이 과정에서 나중에 테이블을 **Power BI** 응용 프로그램에 연결할 때이 값을 사용 합니다.
 
     ![새 테이블을 만들었습니다.](images/AzureLabs-Lab313-44.png)
 
@@ -916,7 +916,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 1. **Visual Studio** 를 엽니다 (Visual Studio Code**하지 않음** ).
 
-2. 메뉴에서**클라우드 탐색기** **보기** > 를 클릭 합니다.
+2. 메뉴에서 **보기** > **클라우드 탐색기**를 클릭 합니다.
 
     ![클라우드 탐색기 열기](images/AzureLabs-Lab313-45.png)
 
@@ -935,7 +935,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 5. 확장 되 면 새로 만든 **저장소 계정을** 사용할 수 있습니다. 저장소 왼쪽에 있는 화살표를 클릭 한 다음 확장 되 면 **테이블** 을 찾아 해당 옆의 화살표를 클릭 하 여 마지막 챕터에서 만든 **테이블** 을 표시 합니다. **테이블**을 두 번 클릭 합니다.
 
-6. Visual Studio 창의 중앙에서 테이블이 열립니다. **+** (더하기)가 있는 테이블 아이콘을 클릭 합니다.
+6. Visual Studio 창의 중앙에서 테이블이 열립니다. 테이블 아이콘을 클릭 하 고 **+** ()를 클릭 합니다.
 
     ![새 테이블 추가](images/AzureLabs-Lab313-48.png)
 
@@ -947,7 +947,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     - 이름: **PartitionKey**, 값: **PK_IoTMessages** 
 
-    - 이름: **Rowkey**, 값: **RK_1_IoTMessages** 
+    - 이름: **Rowkey**, Value: **RK_1_IoTMessages** 
 
 9. 그런 다음 *엔터티 추가* 창의 왼쪽 아래에 있는 **속성 추가** 를 클릭 하 고 다음 속성을 추가 합니다.
 
@@ -1021,7 +1021,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     8. **저장소** 섹션의 경우 **이전 단계에서 만든 저장소 서비스를 선택 해야**합니다.
 
-    9. 이 앱에 *Application Insights* 필요 하지 않으므로 자유롭게 그대로 둡니다.
+    9. 이 앱에 *Application Insights* 필요 **하지 않으므로 자유롭게 그대로 둡니다.**
 
     10. **만들기**를 클릭합니다.
 
@@ -1039,7 +1039,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     ![리소스로 이동](images/AzureLabs-Lab313-57.png)
 
-11. 새 패널의 왼쪽에서 **+** *함수*옆에 있는 더하기 () 아이콘을 클릭 하 여 새 함수를 만듭니다.
+11. 새 패널의 왼쪽에서 *함수*옆에 있는 **+** (더하기) 아이콘을 클릭 하 여 새 함수를 만듭니다.
 
     ![새 함수 추가](images/AzureLabs-Lab313-58.png)
 
@@ -1132,7 +1132,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
     }
     ```
 
-19. 다음 변수를 변경 하 여 **저장소 계정**에서 찾을 수 있는 적절 한 값 ( [11 장에서 각각 11 장, 13 단계](#chapter-11---create-table-service))에 해당 하는 값에 해당 하는 변수를 변경 합니다.
+19. 다음 변수를 변경 하 여 **저장소 계정**에서 찾을 수 있는**적절 한 값 (** [11 장에서 각각 11 장, 13 단계](#chapter-11---create-table-service))에 해당 하 **는 값에** 해당 하는 변수를 변경 합니다.
 
     - **tableName**- **저장소 계정**에 있는 **테이블** 의 이름을 사용 합니다.
     - **Tableurl**- **저장소 계정**에 있는 **테이블** 의 url을 사용 합니다.
@@ -1143,7 +1143,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
 20. 코드가 준비 되 면 **저장**을 클릭 합니다.
 
-21. 그런 다음 페이지의 **\<** 오른쪽에 있는 (화살표) 아이콘을 클릭 합니다.
+21. 그런 다음 페이지의 오른쪽에 있는 **\<** (화살표) 아이콘을 클릭 합니다.
 
     ![사용자 지정 함수](images/AzureLabs-Lab313-66.png)
 

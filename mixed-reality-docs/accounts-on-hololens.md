@@ -1,17 +1,17 @@
 ---
 title: HoloLens의 계정
 description: HoloLens에서 사용자 계정을 설정 하 고 관리 하는 방법입니다.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 사용자, 계정, aad, adfs, microsoft 계정, msa, 자격 증명
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516819"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437088"
 ---
 # <a name="accounts-on-hololens"></a>HoloLens의 계정
 
@@ -38,9 +38,9 @@ ms.locfileid: "63516819"
 
 단일 장치 계정 내에서 사용자는 앱 내에서 더 쉽게 액세스할 수 있도록 추가 웹 계정 자격 증명을 연결 하거나 (예: 스토어) 개인 및 회사 리소스에 대 한 액세스를 결합할 수 있습니다. 이러한 방식으로 추가 계정에 로그인 하면 이미지 또는 다운로드와 같이 장치에서 만들어진 사용자 데이터를 구분 하지 않습니다. 계정이 장치에 연결 되 면 앱은 각 앱에 개별적으로 로그인 할 필요가 없도록 사용자의 사용 권한으로 앱을 사용할 수 있습니다.
 
-## <a name="using-single-sign-on-within-an-app"></a>앱 내에서 single sign-on 사용
+## <a name="using-single-sign-on-within-an-app"></a>앱 내에서 Single Sign-On 사용
 
-앱 개발자는 다른 Windows 장치와 마찬가지로 [Windows 계정 관리자 api](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)를 사용 하 여 HoloLens에 연결 된 id를 사용 하는 이점을 활용할 수 있습니다. 이러한 Api에 대 한 일부 코드 샘플은 [여기](http://go.microsoft.com/fwlink/p/?LinkId=620621)에서 사용할 수 있습니다.
+앱 개발자는 다른 Windows 장치와 마찬가지로 [Windows 계정 관리자 api](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)를 사용 하 여 HoloLens에 연결 된 id를 사용 하는 이점을 활용할 수 있습니다. 이러한 Api에 대 한 일부 코드 샘플은 [여기](https://go.microsoft.com/fwlink/p/?LinkId=620621)에서 사용할 수 있습니다.
 
 앱에서 인증 토큰을 요청할 때 계정 정보, 2 단계 인증 등에 대 한 사용자 동의를 요청 하는 등 발생할 수 있는 모든 계정 인터럽트가 처리 되어야 합니다.
 

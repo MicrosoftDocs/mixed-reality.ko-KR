@@ -3,18 +3,18 @@ title: MR 기본 사항 101E-에뮬레이터를 사용 하 여 프로젝트 완�
 description: Unity, Visual Studio 및 HoloLens 에뮬레이터를 사용 하 여이 코딩 연습을 수행 하 여 holographic 응용 프로그램의 기본 사항을 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, Windows Mixed Reality, HoloLens, 홀로그램, 아카데미, 자습서, 에뮬레이터
-ms.openlocfilehash: 77f7d497396937bf471a69fa514cef84ab0b699d
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b1d8e1f3f272051bdd6f69ab88c3aef4f86f13ef
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522325"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434710"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 
@@ -22,7 +22,7 @@ ms.locfileid: "63522325"
 
  >[!VIDEO https://www.youtube.com/embed/Xzm8_s05mm8]
 
-이 자습서에서는 [응시](gaze.md), [제스처](gestures.md), [음성 입력](voice-input.md), [공간 음향](spatial-sound.md) 및 [공간 매핑을](spatial-mapping.md) 비롯 한 HoloLens의 핵심 Windows Mixed Reality 기능을 보여 주는 Unity에서 빌드된 전체 프로젝트를 안내 합니다. . 자습서를 완료 하는 데 약 1 시간이 소요 됩니다.
+이 자습서에서는 [응시](gaze-and-commit.md), [제스처](gaze-and-commit.md#composite-gestures), [음성 입력](voice-input.md), [공간 음향](spatial-sound.md) 및 [공간 매핑을](spatial-mapping.md) 비롯 한 HoloLens의 핵심 Windows Mixed Reality 기능을 보여 주는 Unity에서 빌드된 전체 프로젝트를 안내 합니다. . 자습서를 완료 하는 데 약 1 시간이 소요 됩니다.
 
 ## <a name="device-support"></a>장치 지원
 
@@ -34,9 +34,9 @@ ms.locfileid: "63522325"
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "63522325"
 * **열기**를 선택 합니다.
 * 이전에 보관 하지 않은 **종이 접기** 폴더로 위치를 입력 합니다.
 * **종이** 를 선택 하 고 **폴더 선택**을 클릭 합니다.
-* 새 장면 저장:파일 / **을 다른 이름으로 저장**합니다.
+* 새 장면: **파일** 을 저장 하 / **장면을 저장**합니다.
 * 장면 **종이** 의 이름을로 하 고 **저장** 단추를 누릅니다.
 
 #### <a name="setup-the-main-camera"></a>기본 카메라 설정
@@ -116,13 +116,13 @@ ms.locfileid: "63522325"
 * Visual Studio의 맨 위 도구 모음을 사용 하 여 대상을 디버그에서 **릴리스** 로, ARM에서 **x 86**으로 변경 합니다.
   * 장치 단추 옆의 화살표를 클릭 하 고 **HoloLens 에뮬레이터**를 선택 합니다.
   * **디버그를 클릭 하 > 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다.
-  * 잠시 후에 에뮬레이터가 종이 접기 프로젝트로 시작 됩니다. [에뮬레이터](using-the-hololens-emulator.md)를 처음 시작할 때 에뮬레이터가 시작 될 때까지 15 분 정도 걸릴 수 있습니다. 시작 되 면 닫지 마세요.
+  * 잠시 후에 에뮬레이터가 종이 접기 프로젝트로 시작 됩니다. [에뮬레이터를](using-the-hololens-emulator.md)처음 시작할 때 에뮬레이터가 시작 될 때까지 15 분 정도 걸릴 수 있습니다. 시작 되 면 닫지 마세요.
 
 ## <a name="chapter-2---gaze"></a>2 장-응시
 
 >[!VIDEO https://www.youtube.com/embed/BPWTbAC210k]
 
-이 장에서는 holograms와 상호 작용 하는 세 가지 방법, 즉 [응시](gaze.md)를 소개 하겠습니다.
+이 장에서는 holograms와 상호 작용 하는 세 가지 방법, 즉 [응시](gaze-and-commit.md)를 소개 하겠습니다.
 
 ### <a name="objectives"></a>목표
 
@@ -137,7 +137,7 @@ ms.locfileid: "63522325"
 * 프로젝트 패널에서 **Scripts** 폴더를 마우스 오른쪽 단추로 클릭 합니다.
 * **만들기** 하위 메뉴를 클릭 합니다.
 * **C# 스크립트**를 선택 합니다.
-* 스크립트 이름을 **WorldCursor**로 합니다. 참고: 이름은 대/소문자 구분입니다. .Cs 확장명을 추가할 필요가 없습니다.
+* 스크립트 이름을 **WorldCursor**로 합니다. 참고: 이름은 대/소문자를 구분 합니다. .Cs 확장명을 추가할 필요가 없습니다.
 * **계층 패널**에서 **Cursor** 개체를 선택 합니다.
 * **WorldCursor** 스크립트를 **검사기 패널로**끌어 놓습니다.
 * **WorldCursor** 스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
@@ -198,7 +198,7 @@ public class WorldCursor : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/6d-0RHeKHq4]
 
-이 장에서는 [제스처](gestures.md)에 대 한 지원을 추가 합니다. 사용자가 용지 구를 선택 하면 Unity의 물리학 엔진을 사용 하 여 무게를 설정 하 여 구를 설정 합니다.
+이 장에서는 [제스처](gaze-and-commit.md#composite-gestures)에 대 한 지원을 추가 합니다. 사용자가 용지 구를 선택 하면 Unity의 물리학 엔진을 사용 하 여 무게를 설정 하 여 구를 설정 합니다.
 
 ### <a name="objectives"></a>목표
 
@@ -309,7 +309,7 @@ public class SphereCommands : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/LxbOhnd2_GM]
 
-이 장에서는 다음과 같은 두 가지 [음성 명령](voice-input.md)에 대 한 지원을 추가 합니다. "다시 설정"을 사용 하 여 삭제 된 구를 원래 위치로 반환 하 고 "놓기"를 사용 하 여 구를 나눌 수 있습니다.
+이 장에서는 두 개의 [음성 명령](voice-input.md)에 대 한 지원을 추가 합니다. "다시 설정"을 사용 하 여 삭제 된 구를 원래 위치로 반환 하 고, "삭제 구"를 사용 하 여 구를 설정 합니다.
 
 ### <a name="objectives"></a>목표
 
@@ -445,7 +445,7 @@ public class SphereCommands : MonoBehaviour
 * **Holograms** 폴더에서 **외계** 개체를 계층 패널의 **OrigamiCollection** 개체로 끌어 놓습니다.
 * **OrigamiCollection** 를 선택 하 고 **오디오 원본** 구성 요소를 찾습니다. 다음 속성을 변경 합니다.
   * **Spatialize** 속성을 확인 합니다.
-  * 절전 모드 해제를 확인 **합니다.**
+  * 절전 모드 **해제를 확인 합니다.**
   * 슬라이더를 오른쪽으로 끌어 **공간 Blend** 를 **3d** 로 변경 합니다.
   * **Loop** 속성을 선택 합니다.
   * **3D 소리 설정**을 확장 하 고 **Doppler 수준**에 대해 **0.1** 을 입력 합니다.
@@ -638,11 +638,11 @@ public class TapToPlaceParent : MonoBehaviour
 
 이제 사용자 고유의 holographic apps를 만들 준비가 되었습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [MR 기본 101: 디바이스를 사용하는 완전한 프로젝트](holograms-101.md)
-* [응시](gaze.md)
-* [제스처](gestures.md)
+* [MR 기본 사항 101: 장치를 사용 하 여 프로젝트 완료](holograms-101.md)
+* [응시](gaze-and-commit.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
 * [음성 입력 ](voice-input.md)
 * [공간 음향](spatial-sound.md)
 * [공간 매핑](spatial-mapping.md)

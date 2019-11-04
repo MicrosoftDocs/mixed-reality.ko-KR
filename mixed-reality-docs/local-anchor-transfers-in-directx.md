@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 동기화, 공간 앵커, 전송, 여럿이, 보기, 시나리오, 연습, 샘플 코드, 전송, 로컬 앵커 전송, 앵커 내보내기, 앵커 가져오기
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515467"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437961"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX의 로컬 앵커 전송
 
@@ -41,14 +41,14 @@ ms.locfileid: "63515467"
 </Capabilities>
 ```
 
-이 기능은 **uap2** 네임 스페이스에서 제공 됩니다. 매니페스트에이 네임 스페이스에 대 한 액세스 권한을 얻으려면 &lt;패키지 > 요소에 *xlmns* 특성으로 포함 합니다. 예를 들면 다음과 같습니다.
+이 기능은 **uap2** 네임 스페이스에서 제공 됩니다. 매니페스트에이 네임 스페이스에 대 한 액세스 권한을 얻으려면이를 &lt;Package > 요소에 *xlmns* 특성으로 포함 합니다. 예를 들면 다음과 같습니다.
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-먼저 데이터 스트림을 설정 해야 합니다. 이렇게 하면 1이 됩니다.) TryExportAnchorsAsync를 사용 하 여 응용 프로그램 소유의 버퍼에 데이터를 저장 하 고 2를 사용 합니다.) 내보내진 바이트 버퍼 스트림 (WinRT 데이터 스트림)의 데이터를 표준:: vector&lt;바이트 > 자체 메모리 버퍼로 읽습니다.
+먼저 데이터 스트림을 설정 해야 합니다. 이렇게 하면 1이 됩니다.) TryExportAnchorsAsync를 사용 하 여 응용 프로그램 소유의 버퍼에 데이터를 저장 하 고 2를 사용 합니다.) WinRT 데이터 스트림 인 내보낸 바이트 버퍼 스트림에서 데이터를 std:: vector&lt;byte >의 고유한 메모리 버퍼로 읽습니다.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-정말 간단하죠. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
+이제 되었습니다. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
 
-## <a name="see-also"></a>참조
-* [PPL(병렬 패턴 라이브러리)](https://msdn.microsoft.com/library/dd492418.aspx)
+## <a name="see-also"></a>참고 항목
+* [PPL (병렬 패턴 라이브러리)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. f i f. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

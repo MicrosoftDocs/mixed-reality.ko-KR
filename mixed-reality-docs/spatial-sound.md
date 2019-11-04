@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 공간 음향, 서라운드 사운드, 3d 오디오, 3d 소리, 공간 오디오
-ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437399"
 ---
 # <a name="spatial-sound"></a>공간 음향
 
@@ -21,7 +21,7 @@ Holograms는 사용자의 응시가 가리키는 경우에만 시각적으로 �
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/PTPvx7mDon4]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/PTPvx7mDon4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>장치 지원
 
@@ -33,9 +33,9 @@ Holograms는 사용자의 응시가 가리키는 경우에만 시각적으로 �
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
@@ -52,7 +52,7 @@ Holograms는 사용자의 응시가 가리키는 경우에만 시각적으로 �
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Azimuth (왼쪽 또는 오른쪽 오디오) 큐는 각 귀에서 소리가 도착할 때의 차이에서 발생 합니다. 위쪽 및 아래쪽 큐는 외부 귀 모양 (pinnae)에서 생성 된 spectral 변경 내용에서 시작 됩니다. 오디오가 어디에서 오는지를 지정 하 여 시스템은 서로 다른 시간에 도착 하는 소리의 경험을 시뮬레이션할 수 있습니다. HoloLens에서 azimuth spatialization는 개인 설정 되어 있지만 권한 상승 시뮬레이션은 평균 anthropometrics 집합을 기반으로 합니다. 따라서 상승 정확성은 azimuth 정확도 보다 정확도가 떨어질 수 있습니다.
 
@@ -69,7 +69,7 @@ Azimuth (왼쪽 또는 오른쪽 오디오) 큐는 각 귀에서 소리가 도�
 
 Windows의 공간 사운드 엔진은 재생에 대해 48k 샘플 비율도 지원 합니다. Unity와 같은 대부분의 미들웨어는 소리 파일을 지원 되는 형식으로 자동으로 변환 하지만 Windows 오디오 Api를 직접 사용 하는 경우 콘텐츠 형식을 효과에서 지 원하는 형식과 일치 시킵니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [MR 공간 220](holograms-220.md)
 * [Unity의 공간 음향](spatial-sound-in-unity.md)
 * [DirectX의 공간 음향](spatial-sound-in-directx.md)

@@ -1,19 +1,19 @@
 ---
-title: 사례 연구-AfterNow의 프로세스-구상, 프로토타입, 빌드
+title: 사례 연구-AfterNow 프로세스
 description: AfterNow의 프로세스-구상, 프로토타입, 빌드
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, AfterNow, 구상, 프로토타입, 빌드
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523475"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436940"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>사례 연구-AfterNow의 프로세스-구상, 프로토타입, 빌드
+# <a name="case-study---afternows-process"></a>사례 연구-AfterNow 프로세스
 
 [지금](https://www.afternow.io/)까지 저희는 아이디어를 활용 하 고 시장에 대비 하는 구체적이 고 완전 한 운영 제품과 환경으로 aspirations. 그러나 한 줄의 코드를 작성 하기 전에 구상 이라는 프로세스를 통해 청사진을 만듭니다.
 
@@ -104,7 +104,7 @@ ms.locfileid: "63523475"
 
 30 분 동안의 storyboard를 제공 합니다. 뛰어난 8 개의 아이디어를 이해 하 고 아이디어의 3 개 패널 스토리 보드를 만듭니다.
 
-![스토리 보드 스케치](images/sketching-storyboards-640px.png)<br>
+![스케치 스토리 보드](images/sketching-storyboards-640px.png)<br>
 *스토리 보드 스케치*
 
 ## <a name="day-3---decide"></a>3 일-결정

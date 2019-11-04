@@ -1,21 +1,21 @@
 ---
-title: 사례 연구-HoloTour에 대 한 콘텐츠 캡처 및 만들기
-description: HoloTour for Microsoft HoloLens는 전 세계의 아이콘 위치에 대 한 모던 3D 개인 둘러보기를 제공 합니다.
+title: 사례 연구-HoloTour
+description: HoloTour for Microsoft HoloLens는 전 세계의 아이콘 위치에 대 한 모던 3D 개인 둘러보기를 제공 합니다. 이 사례 연구에서는 HoloTour에 사용 되는 콘텐츠를 캡처하고 만드는 과정을 안내 합니다.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed 현실
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518256"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436931"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>사례 연구-HoloTour에 대 한 콘텐츠 캡처 및 만들기
+# <a name="case-study---holotour"></a>사례 연구-HoloTour
 
-HoloTour for Microsoft HoloLens는 전 세계의 아이콘 위치에 대 한 모던 3D 개인 둘러보기를 제공 합니다. 이 프로젝트에서 작업 하는 디자이너, 아티스트, 생산자, 오디오 디자이너 및 개발자가 발견 되 면 잘 알려진 위치에 대 한 convincingly 실제 3D 렌더링을 만드는 것은 독창적인 및 기술적 wizardry의 고유한 blend를 사용 합니다.
+HoloTour for Microsoft HoloLens는 전 세계의 아이콘 위치에 대 한 모던 3D 개인 둘러보기를 제공 합니다. 이 프로젝트에서 작업 하는 디자이너, 아티스트, 생산자, 오디오 디자이너 및 개발자가 발견 되 면 잘 알려진 위치에 대 한 convincingly 실제 3D 렌더링을 만드는 것은 독창적인 및 기술적 wizardry의 고유한 blend를 사용 합니다. 이 사례 연구에서는 HoloTour에 사용 되는 콘텐츠를 캡처하고 만드는 과정을 안내 합니다.
 
 ## <a name="the-tech"></a>기술
 
@@ -42,7 +42,6 @@ Microsoft에서는 Velcro 및 집어넣었을에서 3D로 인쇄 된 카메라 �
 
 360 ° 카메라 rig filming Machu 
 
-
 ## <a name="behind-the-scenes"></a>백그라운드 작업
 
 Filming 하기 전에 가상 둘러보기에 포함 하려는 위치를 파악 해야 했습니다. 로마는 처음에는 제공 하고자 하는 첫 번째 위치이 고,이 위치를 사용 하 여 scouting를 미리 수행 하기로 결정 했습니다. 사용자가 고려 하 고 있는 사이트에 대 한 사용자의 방문을 위해 아티스트, 디자이너 및 생산자를 비롯 한 6 명의 팀을 보냈습니다. Filming에 대 한 나머지는 여행에 대 한 9 일 – 2.5입니다. (Machu에 대 한 microsoft는 정찰을 수행 하지 않도록 하 고, 미리 연구 하 여 filming에 대 한 몇 일의 버퍼를 예약 했습니다.)
@@ -58,7 +57,7 @@ Filming 하기 전에 가상 둘러보기에 포함 하려는 위치를 파악 �
 
 ### <a name="capturing-the-video"></a>비디오 캡처
 
-캡처 중 몇 가지 간단한 작업을 수행 하면 사후 처리를 훨씬 더 쉽게 수행할 수 있습니다. 예를 들어 여러 카메라의 이미지를 함께 연결할 때마다 각 카메라에 약간 다른 보기가 있으므로 시각적 아티팩트가 발생 합니다. 더 가까이 있는 개체는 카메라에 대 한 것 이며, 뷰 간의 차이가 클수록 중철 아티팩트가 커집니다. 문제를 시각화 하는 쉬운 방법은 다음과 같습니다. 얼굴 앞에서 엄지 단추를 누르고 한 눈에 볼 수 있습니다. 이제 눈동자를 전환 합니다. 배경을 기준으로 이동 하는 것이 표시 됩니다. 얼굴에서 멀리 떨어진 곳을 보유 하 고 실험을 반복 하는 경우 엄지 단추는 아래로 이동 하는 것 처럼 보입니다. 이러한 분명 한 이동은 직면 한 중철 문제와 비슷합니다. 카메라와 마찬가지로 눈에는 작은 거리로 구분 되어 있으므로 정확히 동일한 이미지가 표시 되지 않습니다.
+캡처 중 몇 가지 간단한 작업을 수행 하면 사후 처리를 훨씬 더 쉽게 수행할 수 있습니다. 예를 들어 여러 카메라의 이미지를 함께 연결할 때마다 각 카메라에 약간 다른 보기가 있으므로 시각적 아티팩트가 발생 합니다. 더 가까이 있는 개체는 카메라에 대 한 것 이며, 뷰 간의 차이가 클수록 중철 아티팩트가 커집니다. 문제를 시각화 하는 쉬운 방법은 다음과 같습니다. 얼굴 앞에서 엄지 단추를 누르고 한 눈에 볼 수 있습니다. 이제 눈동자를 전환 합니다. 배경을 기준으로 이동 하는 것이 표시 됩니다. 얼굴에서 멀리 떨어진 곳을 보유 하 고 실험을 반복 하는 경우 엄지 단추는 아래로 이동 하는 것 처럼 보입니다. 이러한 분명 한 이동은 직면 한 중철 문제와 비슷합니다. 카메라와 마찬가지로 눈에는 거의 거리가 구분 되어 있으므로 정확히 동일한 이미지가 표시 되지 않습니다.
 
 사후 처리에서이를 해결 하는 것 보다 filming 하는 동안에는 최악의 아티팩트를 방지 하는 것이 더 쉬울 것 이기 때문에, 사용자와 카메라에서 멀리 떨어져 있는 항목을 유지 하려고 시도 했습니다. 카메라에 대 한 큰 선택을 유지 하는 것은 가장 큰 문제 중 하나 이며, 이러한 문제를 해결 하기 위해 창조적으로 노력 해야 했습니다. 로컬 가이드를 사용 하는 것은 crowds를 관리 하는 데 큰 도움이 되었지만 기호 (간혹 작은 원추 또는 bean)를 사용 하 여 filming 공간을 매우 효율적으로 표시 하는 것이 좋습니다. 가장 좋은 캡처를 얻는 가장 좋은 방법은 대부분의 사용자가 표시 하기 전에 아침에 매우 빨리 도착 하는 것입니다.
 
@@ -77,7 +76,7 @@ Filming 하기 전에 가상 둘러보기에 포함 하려는 위치를 파악 �
 중철 하기 전에 푸티지에 대 한 대략적인 잘림입니다. 
 
 
-비디오를 결합 하기 위해 [Ptgui](http://www.ptgui.com/) 라는 도구를 사용 하 여 처리 파이프라인에 통합 했습니다. 사후 처리의 일환으로 비디오에서 아직 프레임을 추출 하 고 해당 프레임 중 하나에 적합 한 중철 패턴을 찾았습니다. 그런 다음 해당 패턴을 작성 한 사용자 지정 플러그 인에 적용 했습니다. 그러면 After Effects에서 합성 하는 동안 비디오 아티스트가 중철 패턴을 직접 미세 조정 하 고 조정할 수 있습니다. 
+비디오를 결합 하기 위해 [Ptgui](https://www.ptgui.com/) 라는 도구를 사용 하 여 처리 파이프라인에 통합 했습니다. 사후 처리의 일환으로 비디오에서 아직 프레임을 추출 하 고 해당 프레임 중 하나에 적합 한 중철 패턴을 찾았습니다. 그런 다음 해당 패턴을 작성 한 사용자 지정 플러그 인에 적용 했습니다. 그러면 After Effects에서 합성 하는 동안 비디오 아티스트가 중철 패턴을 직접 미세 조정 하 고 조정할 수 있습니다. 
 
 ![연결 되어을 보여 주는 PTGui의 스크린샷.](images/stitching-tool-pantheon-500px.png)
 
@@ -153,5 +152,5 @@ Filming 하기 전에 가상 둘러보기에 포함 하려는 위치를 파악 �
 
 
 
-## <a name="see-also"></a>참조
-* [동영상: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+## <a name="see-also"></a>참고 항목
+* [비디오: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

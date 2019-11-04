@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holographic 앱, 새 앱, UWP 앱, 템플릿 앱, holograms, 새 프로젝트, 연습, 다운로드, 샘플 코드
-ms.openlocfilehash: 24f217021cd448f19a744696de42f580f139f76f
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 1a6071d692d4a2470493b8f5dc2af6e234aca6f2
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387622"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435747"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Holographic DirectX 프로젝트 만들기
 
@@ -22,14 +22,14 @@ DirectX 11 holographic UWP 앱 템플릿은 DirectX 11 UWP 앱 템플릿과 매�
 그러나 혼합 현실 앱에는 일반적인 Direct3D 11 UWP 앱에 없는 몇 가지 추가 기능이 있습니다. Windows Holographic 앱 템플릿은 다음을 수행할 수 있습니다.
 * Holographic 카메라와 연결 된 Direct3D 장치 리소스를 처리 합니다.
 * 시스템에서 카메라 백 버퍼를 검색 합니다.
-* [응시](gaze.md) 하는 입력을 처리 하 고 간단한 [제스처](gestures.md)를 인식 합니다.
+* [응시](gaze-and-commit.md) 하는 입력을 처리 하 고 간단한 [제스처](gaze-and-commit.md#composite-gestures)를 인식 합니다.
 * 전체 화면 스테레오 렌더링 모드로 전환 합니다.
 
 ## <a name="how-do-i-get-started"></a>시작 어떻게 할까요?
 
 먼저 Visual Studio 2019 및 Microsoft HoloLens 에뮬레이터 다운로드 지침에 따라 [도구를 설치](install-the-tools.md)합니다. Holographic 앱 템플릿은 Microsoft HoloLens 에뮬레이터와 동일한 설치 관리자에 포함 되어 있습니다. 또한를 설치 하기 전에 템플릿을 설치 하는 옵션을 선택 해야 합니다.
 
-이제 DirectX 11 Windows Mixed Reality 앱을 만들 준비가 되었습니다. 샘플 콘텐츠를 제거 하려면 **DRAW_SAMPLE_CONTENT** *의 전처리기*지시문을 주석으로 처리 합니다.
+이제 DirectX 11 Windows Mixed Reality 앱을 만들 준비가 되었습니다. 샘플 콘텐츠를 제거 하려면 **DRAW_SAMPLE_CONTENT** 의 전처리기 지시문을 주석으로 처리 *합니다.*
 
 ## <a name="creating-a-uwp-project"></a>UWP 프로젝트 만들기
 
@@ -40,18 +40,18 @@ DirectX 11 holographic UWP 앱 템플릿은 DirectX 11 UWP 앱 템플릿과 매�
 2. **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 상황에 맞는 메뉴에서 **프로젝트** 를 선택 합니다. **새 프로젝트** 대화 상자가 열립니다.
 3. 왼쪽에서 **설치** 를 확장 하 고 **비주얼 C++**  언어 노드를 확장 합니다.
 4. **Windows universal > Holographic** 노드로 이동 하 고 **Holographic DirectX 11 앱 (유니버설 Windows) (C++/winrt)** 을 선택 합니다.
-   ![Visual Studio에서 Holographic DirectX 11 C++/WINRT UWP 앱 프로젝트 템플릿의 스크린샷](images/holographic-directx-app-cpp-new-project.png)<br>
+   Visual Studio에서 Holographic DirectX 11 C++/WINRT UWP 앱 프로젝트 템플릿의 ![스크린샷](images/holographic-directx-app-cpp-new-project.png)<br>
    *Visual Studio의 C++Holographic DirectX 11/WINRT UWP 앱 프로젝트 템플릿*
    >[!IMPORTANT]
    >프로젝트 템플릿의 이름에 "(C++/winrt)"가 포함 되어 있어야 합니다.  그렇지 않으면 이전 버전의 holographic 프로젝트 템플릿이 설치 되어 있는 것입니다.  최신 프로젝트 템플릿을 가져오려면 [최신 HoloLens 에뮬레이터를 설치](using-the-hololens-emulator.md)합니다.
 5. **이름** 및 **위치** 텍스트 상자를 입력 하 고 **확인**을 클릭 하거나 탭 합니다. Holographic app 프로젝트가 생성 됩니다.
 6. HoloLens를 대상으로 하는 개발의 경우 **대상 버전** 및 **최소 버전이** **Windows 10, 버전 1903**으로 설정 되어 있는지 확인 합니다.  HoloLens (첫 번째 gen) 또는 데스크톱 Windows Mixed Reality 헤드셋도 대상으로 지정 하는 경우 **Windows 10, 버전 1809** 의 **최소 버전** 을 대신 지정할 수 있습니다. 단, 새로 사용 하는 경우 코드에서 일부 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">버전 적응 검사가</a> 필요 합니다. HoloLens 2의 기능.
-   ![Windows 10 버전 1903을 대상으로 설정 하 고 최소 버전으로 설정 하는 스크린샷](images/new-uwp-project.png)<br>
+   Windows 10 버전 1903을 대상으로 설정 하 고 최소 버전으로 설정 하는 스크린샷 ![](images/new-uwp-project.png)<br>
    ***Windows 10, 버전 1903을** 대상 및 최소 버전으로 설정*
    >[!IMPORTANT]
-   >**Windows 10, 버전 1903** 이 옵션으로 표시 되지 않는 경우 최신 WINDOWS 10 SDK가 설치 되어 있지 않습니다.  이 옵션을 표시 하려면 <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">Windows 10 SDK 버전 10.0.18362.0 이상을 설치</a>합니다.
+   >**Windows 10, 버전 1903** 이 옵션으로 표시 되지 않는 경우 최신 WINDOWS 10 SDK가 설치 되어 있지 않습니다.  이 옵션을 표시 하려면 <a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">Windows 10 SDK 버전 10.0.18362.0 이상을 설치</a>합니다.
 
-템플릿은 표준 규격 c + + 17 컴파일러를 지 원하는 Windows 런타임 api의 c + + 17 언어 프로젝션 인 <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/winrt</a>를 사용 하 여 프로젝트를 생성 합니다.  이 프로젝트에서는 사용자 로부터 2 미터 배치 된 전 세계 잠긴 큐브를 만드는 방법을 보여 줍니다. 사용자는 컨트롤러의 단추를 [클릭 하거나 눌러](gestures.md#air-tap) 사용자의 [응시](gaze.md)에 지정 된 다른 위치에 큐브를 배치할 수 있습니다. 이 프로젝트를 수정 하 여 혼합 현실 앱을 만들 수 있습니다.
+템플릿은 표준 규격 c + + 17 컴파일러를 지 원하는 Windows 런타임 api의 c + + 17 언어 프로젝션 인 <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/winrt</a>를 사용 하 여 프로젝트를 생성 합니다.  이 프로젝트에서는 사용자 로부터 2 미터 배치 된 전 세계 잠긴 큐브를 만드는 방법을 보여 줍니다. 사용자는 컨트롤러의 단추를 [클릭 하거나 눌러](gaze-and-commit.md#composite-gestures) 사용자의 [응시](gaze-and-commit.md)에 지정 된 다른 위치에 큐브를 배치할 수 있습니다. 이 프로젝트를 수정 하 여 혼합 현실 앱을 만들 수 있습니다.
 
 또는 SharpDX를 기반으로 하는 **Visual C#**  holographic 프로젝트 템플릿을 사용 하 여 새 프로젝트를 만들 수 있습니다.  Windows Holographic 앱 C# 템플릿에서 holographic 프로젝트를 시작 하지 않은 경우에는 Windows Mixed Reality C# 템플릿 프로젝트에서 fxcompile 파일을 복사 하 여 해당 .CSPROJ 파일에서 가져와야 HLSL를 컴파일합니다. 프로젝트에 추가 하는 파일입니다.
 
@@ -81,7 +81,7 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 Win32 holographic 프로젝트 빌드를 시작 하는 가장 쉬운 방법은 <a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/BasicHologram" target="_blank"> *basichologram* win32 샘플</a>을 조정 하는 것입니다.
 
-이 Win32 샘플은 표준 규격 c + + 17 컴파일러를 지 원하는 Windows 런타임 api에 대 한 c + + 17 언어 투영 인 <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/winrt</a>를 사용 합니다.  이 프로젝트에서는 사용자 로부터 2 미터 배치 된 전 세계 잠긴 큐브를 만드는 방법을 보여 줍니다. 사용자는 컨트롤러의 단추를 눌러 사용자의 [응시](gaze.md)에 지정 된 다른 위치에 큐브를 배치할 수 있습니다. 이 프로젝트를 수정 하 여 혼합 현실 앱을 만들 수 있습니다.
+이 Win32 샘플은 표준 규격 c + + 17 컴파일러를 지 원하는 Windows 런타임 api에 대 한 c + + 17 언어 투영 인 <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/winrt</a>를 사용 합니다.  이 프로젝트에서는 사용자 로부터 2 미터 배치 된 전 세계 잠긴 큐브를 만드는 방법을 보여 줍니다. 사용자는 컨트롤러의 단추를 눌러 사용자의 [응시](gaze-and-commit.md)에 지정 된 다른 위치에 큐브를 배치할 수 있습니다. 이 프로젝트를 수정 하 여 혼합 현실 앱을 만들 수 있습니다.
 
 ### <a name="win32-app-entry-point"></a>Win32 앱 진입점
 
@@ -141,7 +141,7 @@ int APIENTRY wWinMain(
 |  `VertexShader.hlsl` |  GPU에서 꼭 짓 점 처리를 수행 하기 위한 간단한 셰이더입니다. | 
 |  `VPRTVertexShader.hlsl` |  GPU에서 꼭 짓 점 처리를 수행 하는 간단한 셰이더가 Windows Mixed Reality 스테레오 렌더링에 최적화 되어 있습니다. | 
 
-`VertexShaderShared.hlsl`와 사이 `VertexShader.hlsl` 에 공유 되는 `VPRTVertexShader.hlsl`공통 코드를 포함 합니다.
+`VertexShaderShared.hlsl` `VertexShader.hlsl`와 `VPRTVertexShader.hlsl`간에 공유 되는 공통 코드를 포함 합니다.
 
 셰이더는 프로젝트가 빌드될 때 컴파일되고 **SpinningCubeRenderer:: CreateDeviceDependentResources** 메서드에 로드 됩니다.
 
@@ -151,11 +151,11 @@ int APIENTRY wWinMain(
 
 ## <a name="update-holographic-content"></a>Holographic 콘텐츠 업데이트
 
-혼합 현실 앱은 기본적으로의 `AppMain.cpp` **업데이트** 메서드에서 구현 되는 게임 루프에서 업데이트 됩니다. **Update** 메서드는 회전 큐브와 같은 장면 개체를 업데이트 하 고 최신 뷰 및 프로젝션 매트릭스를 가져오고 스왑 체인을 표시 하는 데 사용 되는 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 개체를 반환 합니다.
+혼합 현실 앱은 기본적으로 `AppMain.cpp`의 **업데이트** 메서드에서 구현 되는 게임 루프에서 업데이트 됩니다. **Update** 메서드는 회전 큐브와 같은 장면 개체를 업데이트 하 고 최신 뷰 및 프로젝션 매트릭스를 가져오고 스왑 체인을 표시 하는 데 사용 되는 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 개체를 반환 합니다.
 
-의  `AppMain.cpp` Render 메서드는 현재 앱 및 공간 위치 지정 상태에 따라 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 을 사용 하 여 각 holographic 카메라에 현재 프레임을 렌더링 합니다.
+`AppMain.cpp`의 **Render** 메서드는 현재 앱 및 공간 위치 지정 상태에 따라 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> 을 사용 하 여 각 holographic 카메라에 현재 프레임을 렌더링 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [HolographicSpace 받기](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [DirectX의 렌더링](rendering-in-directx.md)

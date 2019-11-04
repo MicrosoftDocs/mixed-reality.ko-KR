@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, 앱 패턴, 디자인, HoloLens, 회의실 검색, 공간 매핑, 표면 재구성, 메시
-ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: Windows Mixed Reality, 앱 패턴, 디자인, HoloLens, 회의실 검색, 공간 매핑, 메시
+ms.openlocfilehash: bdb070407f27d04046bd022894c7a8a01b9658d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829908"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437518"
 ---
 # <a name="room-scan-visualization"></a>대화방 스캔 시각화
 
@@ -33,7 +33,7 @@ ms.locfileid: "66829908"
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
@@ -66,13 +66,13 @@ ms.locfileid: "66829908"
 
 캐시 된 공간 매핑의 경우 응용 프로그램은 일반적으로 공간 매핑 데이터의 스냅숏을 사용 하 고 환경 기간 동안이 스냅숏을 사용 합니다.
 
-**이점**
+**혜택**
 * 경험을 실행 하는 동안 시스템에서 오버 헤드가 줄어들고 성능이 크게 향상 되 고 열 및 cpu 성능이 향상 됩니다.
 * 공간 데이터의 변경으로 인해 중단 되지 않으므로 기본 환경을 간단 하 게 구현할 수 있습니다.
 * 물리학, 그래픽 및 기타 목적을 위해 공간 데이터의 post 처리에 대 한 단일 일회성 비용입니다.
 
 **단점**
-* 실제 개체 또는 사람들의 이동은 캐시 된 데이터에 의해 반영 되지 않습니다. 예를 들어 응용 프로그램은 실제로 닫혀 있을 때 도어를 열어 볼 수 있습니다.
+* 실제 개체 또는 사람들의 이동은 캐시 된 데이터에 의해 반영 되지 않습니다. 예: 응용 프로그램은 실제로 닫혀 있을 때 도어를 열어 볼 수 있습니다.
 * 캐시 된 버전의 데이터를 유지 관리 하기 위한 응용 프로그램 메모리가 더 많이 있습니다.
 
 이 메서드에 대 한 좋은 사례는 제어 되는 환경 또는 테이블 상위 게임입니다.
@@ -81,7 +81,7 @@ ms.locfileid: "66829908"
 
 특정 응용 프로그램은 계속 검색을 사용 하 여 공간 매핑 데이터를 새로 고칠 수 있습니다.
 
-**이점**
+**혜택**
 * 응용 프로그램에 대 한 별도의 검색 또는 탐색 환경에서 작성 하지 않아도 됩니다.
 * 실제 개체의 이동은 약간의 지연이 있지만 게임에서 반영할 수 있습니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "66829908"
 
 이 메서드에 대 한 좋은 사례는 holograms가 개체를 이동 하는 것으로 예상 되는 경우입니다. 예를 들어 바닥에서 구동 하는 holographic 자동차는 열려 있는지 닫혀 있는지에 따라 도어를 올바르게 전환 하려는 경우가 있습니다.
 
-## <a name="see-also"></a>참조
-* [공간 매핑 디자인](spatial-mapping-design.md)
+## <a name="see-also"></a>참고 항목
+* [공간 매핑](spatial-mapping.md)
 * [좌표계](coordinate-systems.md)
 * [공간 음향 디자인](spatial-sound-design.md)

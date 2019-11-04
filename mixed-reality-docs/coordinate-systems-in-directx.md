@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 혼합 현실, 공간 로케이터, 공간 참조 프레임, 공간 좌표 시스템, 공간 스테이지, 샘플 코드, 이미지 안정화, 공간 앵커, 공간 앵커 저장소, 추적 손실, 연습
-ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628980"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436228"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX에서 시스템 좌표계
 
@@ -37,7 +37,7 @@ SpatialCoordinateSystem에는 장치의 위치를 나타내는 것을 비롯 하
 
 이러한 개체에서 반환 되는 모든 좌표계는 직각으로, + y up, + x를 오른쪽에, + z는 역방향입니다. 양의 x 방향에서 왼쪽 또는 오른쪽 손가락을 가리키고 양의 y 방향으로 curl 하 여 양의 z 축 점이 가리키는 방향을 기억할 수 있습니다. 엄지가 가리키는 방향이 해당 좌표계에 대해 양의 z-축이 가리키는 방향입니다. 다음 그림은 이 두 좌표계를 보여 줍니다.
 
-![왼쪽 및 오른쪽 좌표계](images/left-hand-right-hand.gif)<br>
+왼쪽 및 오른쪽 좌표계를 ![](images/left-hand-right-hand.gif)<br>
 *왼쪽 및 오른쪽 좌표계*
 
 HoloLens의 위치를 기반으로 SpatialCoordinateSystem를 부트스트랩 하려면 아래 섹션에 설명 된 대로 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> 클래스를 사용 하 여 참조의 고정 또는 고정 프레임을 만듭니다.
@@ -616,7 +616,7 @@ SpatialLocatorAttachedFrameOfReference을 가져오려면 SpatialLocator 클래�
 
 ### <a name="get-a-spatial-pointer-pose-and-follow-the-users-gaze"></a>공간 포인터 포즈를 가져오고 사용자의 응시를 따릅니다.
 
-Holographic shell이 사용자의 응시를 따르는 방법과 유사 하 게 사용자의 [응시](gaze.md)를 따르기 위해 예제 홀로그램을 원합니다. 이를 위해 동일한 타임 스탬프에서 SpatialPointerPose을 가져와야 합니다.
+Holographic shell이 사용자의 응시를 따르는 방법과 유사 하 게 사용자의 [응시](gaze-and-commit.md)를 따르기 위해 예제 홀로그램을 원합니다. 이를 위해 동일한 타임 스탬프에서 SpatialPointerPose을 가져와야 합니다.
 
 ```
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
@@ -730,7 +730,7 @@ From **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-정말 간단하죠. 그러면 홀로그램은 사용자의 응시 방향 앞에서 2 미터의 위치를 "추적" 합니다.
+이제 되었습니다. 그러면 홀로그램은 사용자의 응시 방향 앞에서 2 미터의 위치를 "추적" 합니다.
 
 >[!NOTE]
 >이 예제에서는 추가 콘텐츠도 로드 합니다. StationaryQuadRenderer를 참조 하세요.
@@ -794,7 +794,7 @@ Windows Holographic 앱 템플릿에는 이미 생성 된 LocatabilityChanged �
 
 [공간 매핑](spatial-mapping-in-directx.md) api는 좌표계를 사용 하 여 표면 망상의 모델 변환을 가져옵니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [좌표계](coordinate-systems.md)
 * [공간 앵커](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

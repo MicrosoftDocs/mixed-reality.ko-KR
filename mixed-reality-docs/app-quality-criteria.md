@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱 품질 기준, 혼합 현실, 혼합 현실 앱
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024488"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437043"
 ---
 # <a name="app-quality-criteria"></a>앱 품질 기준
 
@@ -51,7 +51,7 @@ ms.locfileid: "67024488"
 
 |  최상위  |  평가 |  통과 |
 --- | --- | ---
-| 앱은 대상 장치의 FPS (초당 프레임 수) 목표를 만족 합니다. HoloLens의 60fps; 울트라 Pc의 90fps 및 기본 Pc의 60fps | 앱은 코어 환경을 방해할 하지 않는 간헐적 프레임 삭제를 포함 합니다. 또는 FPS는 원하는 목표 보다 지속적으로 낮지만 앱 환경을 방해 하지 않습니다. | 앱이 10 초 이내에 평균적으로 프레임 속도로 놓기가 발생 합니다. |
+| 앱이 대상 장치에 대 한 FPS (초당 프레임 수) 목표를 충족 합니다. HoloLens의 60fps 울트라 Pc의 90fps 및 기본 Pc의 60fps | 앱은 코어 환경을 방해할 하지 않는 간헐적 프레임 삭제를 포함 합니다. 또는 FPS는 원하는 목표 보다 지속적으로 낮지만 앱 환경을 방해 하지 않습니다. | 앱이 10 초 이내에 평균적으로 프레임 속도로 놓기가 발생 합니다. |
 
 ### <a name="how-to-measure"></a>측정 방법
 
@@ -176,7 +176,7 @@ ms.locfileid: "67024488"
 
 |  최상위  |  평가 |  통과 |
 --- | --- | ---
-| Holograms는 일반적으로 센티미터에서 인치 범위의 표면에 맞춥니다. 더 많은 정확도가 필요한 경우 앱은 원하는 앱 사양 내에서 공동 작업을 위한 효율적인 수단을 제공 해야 합니다. | NA | Holograms 화면 평면을 분리 하거나 화면에서 부동 상태로 표시 하 여 실제 대상 개체와 정렬 되지 않은 상태로 표시 됩니다. 정확도가 필요한 경우 Holograms는 시나리오의 근접 사양을 충족 해야 합니다. | 
+| Holograms는 일반적으로 센티미터에서 인치 범위의 표면에 맞춥니다. 더 많은 정확도가 필요한 경우 앱은 원하는 앱 사양 내에서 공동 작업을 위한 효율적인 수단을 제공 해야 합니다. | 해당 없음 | Holograms 화면 평면을 분리 하거나 화면에서 부동 상태로 표시 하 여 실제 대상 개체와 정렬 되지 않은 상태로 표시 됩니다. 정확도가 필요한 경우 Holograms는 시나리오의 근접 사양을 충족 해야 합니다. | 
 
 ### <a name="how-to-measure"></a>측정 방법
 
@@ -246,7 +246,7 @@ ms.locfileid: "67024488"
 </tr><tr>
 <td> 평가</td><td> 콘텐츠는 보기 및 동작 지침 내에 있지만 클리핑 평면을 부적절 하 게 사용 하거나 사용 하지 않습니다.</td>
 </tr><tr>
-<td> 통과 </td><td> 콘텐츠가 너무 가까이 표시 됩니다 (일반적 &lt;으로 1.25 m 또는 &lt;holograms를 더 자세히 관찰 해야 하는 고정 된의 경우 50cm).</td>
+<td> 통과 </td><td> 콘텐츠가 너무 가까이 표시 됩니다 (일반적으로 &lt;1.25 m 또는 &lt;50cm을 통해 더 자세히 관찰 해야 하는 고정 된 holograms).</td>
 </tr>
 </table>
 
@@ -368,7 +368,7 @@ Windows Mixed Reality에서 오디오 엔진은 방향, 거리 및 환경 시뮬
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 
-* [MR 공간 220: 공간 음향](holograms-220.md)
+* [MR 공간 220: 공간 사운드](holograms-220.md)
 * [MRToolkit, 공간 오디오](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>FOV (holographic frame) 경계에 집중
@@ -546,9 +546,7 @@ Holograms은 "실제" 개체와 거의 동일한 방식으로 사용자의 위�
 * [헤드 게이즈 및 유지](gaze-and-dwell.md)
 * [커서](cursors.md)
 * [편안 함 및 응시](comfort.md#gaze-direction)
-* [제스처](gestures.md)
 * [음성 입력 ](voice-input.md)
-* [음성 명령](voice-design.md)
 * [모션 컨트롤러](motion-controllers.md)
 * [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Unity의 키보드 입력](keyboard-input-in-unity.md)
@@ -562,8 +560,8 @@ Holograms은 "실제" 개체와 거의 동일한 방식으로 사용자의 위�
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 
-* [사례 연구: 더 많은 개인 컴퓨팅 담당](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [캐스트 조사: HoloStudio UI 및 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [사례 연구: 더 많은 개인 컴퓨팅](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [캐스트 연구: HoloStudio UI 및 상호 작용 디자인 학습](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 * [샘플 앱: 요소의 주기적 테이블](periodic-table-of-the-elements.md)
 * [샘플 앱: 음력 모듈](lunar-module.md)
 * [MR 입력 210: 응시](holograms-210.md)
@@ -619,7 +617,7 @@ Holograms은 "실제" 개체와 거의 동일한 방식으로 사용자의 위�
 * [상호 작용 가능한 개체](interactable-object.md)
 * [Unity의 텍스트](text-in-unity.md)
 * [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
-* [음성 명령](voice-design.md)
+* [음성 입력 ](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>도구 및 자습서
 

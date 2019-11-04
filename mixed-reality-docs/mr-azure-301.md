@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, translator 텍스트, hololens, 몰입 형, vr
-ms.openlocfilehash: 6fe31d1bcb72337f0a3e8664893ea0f7c0540aae
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 012eb5522c866e9e0f1caf5e4024305af07e298c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554056"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438531"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
 <br>
 
-# <a name="mr-and-azure-301-language-translation"></a>MR 및 Azure 301: 외국어 번역
+# <a name="mr-and-azure-301-language-translation"></a>MR 및 Azure 301: 언어 번역
 
 이 과정에서는 Translator Text API와 함께 Azure Cognitive Services를 사용 하 여 혼합 현실 응용 프로그램에 번역 기능을 추가 하는 방법에 대해 설명 합니다.
 
@@ -40,14 +40,14 @@ Translator Text API은 거의 실시간으로 작동 하는 번역 서비스입�
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 Azure 301: 외국어 번역</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR 및 Azure 301: 언어 번역</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -63,7 +63,7 @@ Translator Text API은 거의 실시간으로 작동 하는 번역 서비스입�
 - 기본 제공 마이크가 있는 헤드폰 집합 (헤드셋에 기본 제공 mic 및 스피커가 없는 경우)
 - Azure 설정 및 번역 검색을 위한 인터넷 액세스
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 - 이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 - 이 자습서의 코드를 사용 하 여 PC에 연결 된 기본 마이크 장치에서 기록할 수 있습니다. 기본 마이크 장치가 음성 캡처에 사용할 장치로 설정 되었는지 확인 합니다.
@@ -134,7 +134,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 혼합 현실 모던 헤드셋을 설정 하 고 테스트 합니다.
 
 > [!NOTE]
-> 이 과정에서는 동작 컨트롤러가 필요 하지 않습니다. 몰입 형 헤드셋을 설정 하는 데 지원이 필요한 경우 [다음 단계를 수행](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)하세요.
+> 이 과정에서는 동작 컨트롤러가 필요 하지 않습니다. 몰입 형 헤드셋을 설정 하는 데 지원이 필요한 경우 [다음 단계를 수행](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)하세요.
 
 다음은 혼합 현실를 사용 하 여 개발 하기 위한 일반적인 설정 이며, 따라서 다른 프로젝트에 적합 한 템플릿입니다.
 
@@ -252,7 +252,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 2.  Canvas 개체가 선택 된 상태에서 ' Canvas ' 구성 요소 내의 *검사기 패널* 에서 **렌더링 모드** 를 **세계 공간**으로 변경 합니다. 
 3.  다음으로, *검사기 패널의 Rect 변환*에서 다음 매개 변수를 변경 합니다.
 
-    1. *POS*    X 0 Z 40 -  
+    1. *POS* -  **X** 0 **Y** 0 **Z** 40
     2. *너비* -500
     3. *높이* -300
     4. *크기 조정* - **X** 0.13 **Y** 0.13 **Z** 0.13
@@ -265,7 +265,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     1. *Rect Transform* 구성 요소의 경우:
 
-        | 이름                   | 변환 *위치*             | 너비      | 높이    |
+        | Name(이름)                   | 변환 *위치*             | 너비      | 높이로    |
         |:----------------------:|:----------------------------------:|:----------:|:---------:|
         | MicrophoneStatusLabel  | **X** -80 **Y** 90 **Z** 0         | 300        | 30        |
         | AzureResponseLabel     | **X** -80 **Y** 30 **Z** 0         | 300        | 30        |
@@ -276,7 +276,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
     2. **텍스트 (스크립트)** 구성 요소:
 
 
-        | 이름                   | 텍스트 모드               | 글꼴 크기    |
+        | Name(이름)                   | 텍스트               | 글꼴 크기    |
         |:----------------------:|:------------------:|:------------:|
         | MicrophoneStatusLabel  | 마이크 상태: | 20           |
         | AzureResponseLabel     | Azure 웹 응답 | 20           |
@@ -294,7 +294,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     1. **Rect Transform** 구성 요소의 경우:
 
-        | 이름                  | 변환 *위치* | 너비      | 높이    |
+        | Name(이름)                  | 변환 *위치* | 너비      | 높이로    |
         |:---------------------:|:----------------------:|:----------:|:---------:|
         | MicrophoneStatusText  | X 0 Y-30 Z 0          | 300        | 30        |
         | AzureResponseText     | X 0 Y-30 Z 0          | 300        | 30        |
@@ -303,7 +303,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     2. **텍스트 (스크립트)** 구성 요소:
 
-        | 이름                  | 텍스트 모드          | 글꼴 크기    |
+        | Name(이름)                  | 텍스트          | 글꼴 크기    |
         |:---------------------:|:-------------:|:------------:|
         | MicrophoneStatusText  |      ??       | 20           |
         | AzureResponseText     |      ??       | 20           |
@@ -608,7 +608,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     > [!NOTE]
     > - 언어 **열거형** 에 삽입 된 언어는 예제 일 뿐입니다. 원한다 면 자유롭게 추가할 수 있습니다. [API는 60 개 이상의 언어](https://docs.microsoft.com/azure/cognitive-services/translator/languages) (클링온어 포함)를 지원 합니다.
-    > - 사용 가능한 언어를 포함 하는 [대화형 페이지는 더 많이](https://www.microsoft.com/translator/business/languages/)있습니다. 페이지는 사이트 언어가 ' en-us '로 설정 된 경우에만 작동 하는 것 처럼 보이지만 Microsoft 사이트는 네이티브 언어로 리디렉션될 가능성이 높습니다. 페이지의 맨 아래에 있는 사이트 언어를 변경 하거나 URL을 변경할 수 있습니다.
+    > - 사용 가능한 언어를 포함 하는 [대화형 페이지는 더 많이](https://www.microsoft.com/translator/business/languages/)있습니다. 페이지는 사이트 언어가 ' ' (으)로 설정 된 경우에만 작동 하는 것 처럼 보이지만 Microsoft 사이트는 기본 언어로 리디렉션될 가능성이 높습니다. 페이지의 맨 아래에 있는 사이트 언어를 변경 하거나 URL을 변경할 수 있습니다.
     > - 위의 코드 조각에서 **authorizationkey** 값은 *Azure Translator Text API*에 구독할 때 받은 **키** 여야 합니다. 이 내용은 [1 장](#chapter-1--the-azure-portal)에서 설명 했습니다.
 
 6.  이제 해제 *()* 및 *Start ()* 메서드에 대 한 코드를 추가 해야 합니다. 
@@ -710,7 +710,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
 ## <a name="chapter-8--configure-the-unity-scene"></a>8 장-Unity 장면 구성
 
-1.  Unity 편집기로 돌아가서 **Scripts** 폴더의 *Results* *클래스를* 클릭 하 여 *계층 패널*의 **기본 카메라** 개체로 끕니다.
+1.  Unity 편집기로 돌아가서 **Scripts** *폴더의* *Results* 클래스를 클릭 하 여 *계층 패널*의 **기본 카메라** 개체로 끕니다.
 2.  **주 카메라** 를 클릭 하 고 *검사기 패널*을 확인 합니다. 새로 추가한 *스크립트* 구성 요소에는 빈 값을 갖는 4 개의 필드가 있습니다. 다음은 코드의 속성에 대 한 출력 참조입니다. 
 3.  아래 이미지에 표시 된 것 처럼 적절 한 **텍스트** 개체를 *계층 패널* 에서 4 개의 슬롯으로 끕니다.
 
@@ -732,7 +732,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 - *결과*, *번역기*및 *MicrophoneManager*스크립트는 **주 카메라** 개체에 연결 됩니다. 
 - *Azure Translator Text API* 서비스 **키** 를 *Translator* 스크립트 내 **authorizationkey** 변수 내에 배치 했습니다.  
 - *기본 카메라 검사기 패널* 의 모든 필드가 제대로 할당 됩니다.
-- 장면을 실행할 때 마이크가 작동 합니다 (그렇지 않은 경우 연결 된 마이크가 *기본* 장치이 고 [Windows 내에서 올바르게 설정](https://support.microsoft.com/en-au/help/4027981/windows-how-to-set-up-and-test-microphones-in-windows-10)했는지 확인).
+- 장면을 실행할 때 마이크가 작동 합니다 (그렇지 않은 경우 연결 된 마이크가 *기본* 장치이 고 [Windows 내에서 올바르게 설정](https://support.microsoft.com/help/4027981/windows-how-to-set-up-and-test-microphones-in-windows-10)했는지 확인).
 
 *Unity 편집기*에서 **재생** 단추를 눌러 몰입 형 헤드셋을 테스트할 수 있습니다.
 앱은 연결 된 모던 헤드셋을 통해 작동 해야 합니다.
@@ -744,7 +744,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
 이제이 프로젝트의 Unity 섹션에 필요한 모든 항목이 완료 되었으므로 Unity에서 빌드할 수 있습니다.
 
-1.  **빌드 설정**으로 이동 합니다. **빌드 설정 > 파일 ...**
+1.  **빌드 설정**으로 이동: **파일 > 빌드 설정** ...
 2.  **빌드 설정** 창에서 **빌드**를 클릭 합니다.
 
     ![Unity 장면을 빌드합니다.](images/AzureLabs-Lab1-36.png)

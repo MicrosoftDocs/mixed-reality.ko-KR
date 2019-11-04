@@ -6,16 +6,16 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: 혼합 현실, 디자인, 편안, HoloLens 2, HoloLens (첫 번째 gen)
-ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e71b8d73a37a5d10a07d37d91cf14c88b7a85687
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024446"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436389"
 ---
 # <a name="comfort"></a>편안
 
-자연스럽 게 볼 때 인간 시각적 시스템은 여러 정보 소스를 사용 하거나 "큐"를 사용 하 여 3D 모양과 개체의 상대 위치를 해석 합니다. 일부 큐는 [선형 큐브 뷰](https://en.wikipedia.org/wiki/Perspective_(graphical)), [친숙 한 크기](https://en.wikipedia.org/wiki/Size#Perception_of_size), 폐색, [피사계 심도 흐림](https://en.wikipedia.org/wiki/Depth_of_field)및 [설비](https://en.wikipedia.org/wiki/Accommodation_(eye))를 비롯 한 단일 눈동자 (monocular)만 사용 합니다. 다른 큐는 두 눈동자 (쌍안경 모양)를 사용 하 고 [vergence](https://en.wikipedia.org/wiki/Vergence) (기본적으로 개체를 확인 하는 데 필요한 눈의 상대적 회전) 및 [쌍안경 모양 차이가](https://en.wikipedia.org/wiki/Stereopsis) ( 두 개의 눈으로 돌아갑니다). 헤드 탑재 된 디스플레이를 최대한 편안 하 게 유지 하기 위해 디자이너와 개발자는 자연스럽 게 이러한 큐가 작동 하는 방식을 모방 하는 방식으로 콘텐츠를 만들고 표시 하는 것이 중요 합니다. 물리적 관점에서 fatiguing는 목 또는 arm의 동작을 필요로 하지 않는 콘텐츠를 디자인 하는 것도 중요 합니다. 이 문서에서는 이러한 목표를 달성 하기 위해 주요 고려 사항을 고려 합니다.
+자연스럽 게 볼 때 인간 시각적 시스템은 여러 정보 소스를 사용 하거나 "큐"를 사용 하 여 3D 모양과 개체의 상대 위치를 해석 합니다. 일부 큐는 [선형 큐브 뷰](https://en.wikipedia.org/wiki/Perspective_(graphical)), [친숙 한 크기](https://en.wikipedia.org/wiki/Size#Perception_of_size), 폐색, [피사계 심도 흐림](https://en.wikipedia.org/wiki/Depth_of_field)및 [설비](https://en.wikipedia.org/wiki/Accommodation_(eye))를 비롯 한 단일 눈동자 (monocular)만 사용 합니다. 다른 큐는 두 눈동자 (쌍안경 모양)를 사용 하 고 [vergence](https://en.wikipedia.org/wiki/Vergence) (기본적으로 개체를 확인 하는 데 필요한 눈의 상대적 회전) 및 [쌍안경 모양 차이가](https://en.wikipedia.org/wiki/Stereopsis) ( 두 개의 눈으로 돌아갑니다). 헤드 마운트 디스플레이에서 최대한 편안하도록 하려면 디자이너와 개발자가 이러한 신호가 자연계에서 작동하는 방식을 모방하는 방식으로 콘텐츠를 만들고 표시해야 합니다. 물리적 관점에서 fatiguing는 목 또는 arm의 동작을 필요로 하지 않는 콘텐츠를 디자인 하는 것도 중요 합니다. 이 문서에서는 이러한 목표를 달성 하기 위해 주요 고려 사항을 고려 합니다.
 
 ## <a name="vergence-accommodation-conflict"></a>Vergence 충돌
 
@@ -25,18 +25,19 @@ ms.locfileid: "67024446"
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/-606oZKLa_s]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/-606oZKLa_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### <a name="guidance-for-holographic-devices"></a>Holographic 장치에 대 한 지침
 
 HoloLens 디스플레이는 사용자 로부터 약 2.0 m 거리 만큼 광으로 고정 됩니다. 따라서 장치에서 명확한 이미지를 유지 하려면 사용자는 항상 2.0 m 근처를 수용 해야 합니다. 앱 개발자는 다양 한 깊이에서 콘텐츠 및 holograms을 배치 하 여 사용자의 눈이 수렴 하는 위치를 안내할 수 있습니다. 사용자가 가능한 한 2.0 m에 가깝게 수렴 하는 콘텐츠를 유지 하 여 vergence 충돌의 Discomfort을 방지 하거나 최소화할 수 있습니다 (즉, 많은 깊이가 있는 장면에서 가능 하면 사용자 로부터 2.0 m 근처에 관심 영역을 놓습니다.). 콘텐츠를 2.0 m 근처에 배치할 수 없는 경우 사용자의 응시가 서로 다른 거리 사이에서 앞뒤로 전환 하는 경우 vergence 충돌의 discomfort 가장 큽니다. 즉, 시간이 지남에 따라 이동 하거나 멀리 이동 하는 홀로그램 50cm을 확인 하는 것 보다 50cm이 유지 되는 고정 홀로그램을 살펴보는 것이 훨씬 더 편안 합니다.
 
-![사용자의 holograms를 배치 하는 데 가장 적합 한 거리입니다.](images/distanceguiderendering-950px.png)<br>
+사용자의 holograms를 배치 하는 데 가장 적합 한 거리를 ![합니다.](images/distanceguiderendering-950px.png)<br>
 *사용자 로부터 holograms를 배치 하는 데 가장 적합 한 거리*
 
 ### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>HoloLens (첫 번째 gen) 및 HoloLens 2에 대 한 모범 사례
 
-최대한 편안 하 게 하기 위해 **홀로그램 배치에 가장 적합 한 영역은 1.25 m에서 5m 사이**입니다. 모든 경우에서 디자이너는 콘텐츠 장면을 구성 하 여 사용자가 콘텐츠 (예: [콘텐츠 크기 및 기본 배치 매개 변수](gaze-targeting.md)조정)와 상호 작용할 수 있도록 합니다. 
+최대한 편안 하 게 하기 위해 **홀로그램 배치에 가장 적합 한 영역은 1.25 m에서 5m 사이**입니다. 모든 경우에서 디자이너는 콘텐츠 장면을 구성 하 여 사용자가 콘텐츠 (예: [콘텐츠 크기 및 기본 배치 매개 변수](gaze-and-commit.md)조정)와 상호 작용할 수 있도록 합니다. 
 
 콘텐츠는 경우에 따라 1m 보다 가까이 표시 되어야 하지만 40cm 보다는 holograms을 제시 하는 것이 좋습니다. 따라서 가장 가까이 있는 개체를 방지 하려면 **40cm에서 콘텐츠를 페이드 아웃 하 고 30cm에 렌더링 클리핑 평면을 배치 하는** 것이 좋습니다.
 
@@ -44,7 +45,7 @@ HoloLens 디스플레이는 사용자 로부터 약 2.0 m 거리 만큼 광으�
 
 ### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>HoloLens 2 및 근거리 상호 작용 거리에 대 한 추가 고려 사항
 
-HoloLens 2의 직접 (근거리) 상호 작용 또는 **내용이 1m 보다 가까이 배치 되어야 하는 모든 응용 프로그램에 대 한 콘텐츠를 설계할 때 사용자가 편안 하 게 유지 하기 위해 추가 주의가 필요**합니다. Vergence 충돌로 인 한 discomfort의 확률은 보기 거리가 감소 하면서 급격 하 게 증가 합니다. 또한 사용자는 근접 한 상호 작용 거리에서 콘텐츠를 볼 때 bluriness가 증가 했을 수 있으므로 최적의 홀로그램 배치 영역 내에서 렌더링 되는 콘텐츠를 테스트 하는 것이 좋습니다 (클리핑 평면까지 1.0 m 미만). 명확 하 고 보기 편한 상태를 유지 해야 합니다. 
+HoloLens 2의 직접 (근거리) 상호 작용 또는 **내용이 1m 보다 가까이 배치 되어야 하는 모든 응용 프로그램에 대 한 콘텐츠를 설계할 때 사용자가 편안 하 게 유지 하기 위해 추가 주의가 필요**합니다. Vergence 충돌로 인 한 discomfort의 확률은 보기 거리가 감소 하면서 급격 하 게 증가 합니다. 또한 사용자는 근접 한 상호 작용 거리에서 콘텐츠를 볼 때 blurriness가 증가 했을 수 있으므로 최적의 홀로그램 배치 영역 내에서 렌더링 되는 콘텐츠를 테스트 하는 것이 좋습니다 (클리핑 평면까지 1.0 m 미만). 명확 하 고 보기 편한 상태를 유지 해야 합니다. 
 
 **사용자가 가까운 콘텐츠 (1.0 m 미만)를 보고 심층 이동 하는 데 필요한 시간을 기준으로 앱에 대 한 "깊이 예산"을 만드는 것이 좋습니다**. 예를 들어 사용자를 해당 상황에 25% 이상 배치 하지 않도록 합니다. 깊이 예산을 초과 하는 경우 편리한 환경을 유지 하기 위해 신중 하 게 사용자를 테스트 하는 것이 좋습니다. 
 
@@ -164,15 +165,15 @@ Windows Mixed Reality 몰입 형 HMDs의 경우, 최소한의 읽기 쉬운 세�
 
 최적 (휴면) 응시 각도는 특히 활동 중에 약간의 하향 기울기가 될 수 있으므로 수평 아래로 10-20도를 고려 합니다.
 
-![동작의 목 범위에 따라 결정 되는 보기 (FOV)의 허용 가능한 필드](images/optimal-field-of-view-2-750px.png)<br>
+동작의 목 범위에 따라 결정 되는 뷰 (FOV)의 허용 되는 필드를 ![](images/optimal-field-of-view-2.png)<br>
 *동작의 목 범위에 따라 결정 되는 보기 (FOV)의 허용 가능한 필드*
 
 ## <a name="arm-positions"></a>Arm 위치
 
 Muscle 피로는 사용자가 경험 기간 내내 손을 지속적으로 기대 하는 경우 누적 될 수 있습니다. 또한 사용자가 긴 기간 동안 공기 탭 제스처를 반복적으로 수행 하도록 요구 하는 것이 fatiguing 수 있습니다. 따라서 지속적인 반복 제스처 입력이 필요 하지 않도록 하는 것이 좋습니다. 이러한 목표는 짧은 브레이크를 통합 하거나 응용 프로그램과 상호 작용 하기 위해 제스처 및 음성 입력을 혼합 하 여 달성할 수 있습니다.
 
-## <a name="see-also"></a>참조
-* [응시](gaze.md)
+## <a name="see-also"></a>참고 항목
+* [응시](gaze-and-commit.md)
 * [홀로그램 안정성](hologram-stability.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [홀로그램 프레임](holographic-frame.md)

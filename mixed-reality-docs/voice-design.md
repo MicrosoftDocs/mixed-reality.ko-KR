@@ -1,17 +1,17 @@
 ---
 title: 음성 명령
 description: GGV(응시, 제스처 및 음성)는 HoloLens에서 상호 작용을 수행하는 기본적인 수단입니다. 이 문서에서는 음성 디자인에 대한 상세한 지침을 제공합니다.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interaction, voice
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387647"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437221"
 ---
 # <a name="voice-commanding"></a>음성 명령
 
@@ -28,9 +28,9 @@ ms.locfileid: "68387647"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
@@ -50,10 +50,10 @@ ms.locfileid: "68387647"
 ### <a name="best-practices"></a>모범 사례
 
 다음은 매끄러운 음성 인식에 도움이 될 수 있는 몇 가지 사례입니다.
-* **간결한 명령 사용** - 가능한 경우 두 개 이상의 음절로 이루어진 키워드를 선택합니다. 1음절 단어는 악센트가 다른 사람이 말할 경우 다른 모음 소리를 사용할 수 있습니다. 예: "Play the currently selected video"보다는 "Play video"라고 말하는 것이 더 좋습니다.
-* **간단한 어휘 사용** - 예: "Show placard"보다는 "Show note"라고 말하는 것이 더 좋습니다.
+* **간결한 명령 사용** - 가능한 경우 두 개 이상의 음절로 이루어진 키워드를 선택합니다. 1음절 단어는 악센트가 다른 사람이 말할 경우 다른 모음 소리를 사용할 수 있습니다. 예: "비디오 재생"은 "현재 선택한 비디오 재생" 보다 좋습니다.
+* **간단한 어휘 사용** -예: "show note"는 "show 카드" 보다 좋습니다.
 * **비파괴적인 명령 사용** - 음성 명령으로 수행할 수 있는 모든 작업은 비파괴적이어야 하며, 사용자 근처에서 말하는 다른 사람이 실수로 명령을 트리거하는 경우 쉽게 실행 취소할 수 있어야 합니다.
-* **유사하게 들리는 명령 사용 금지** - 매우 비슷하게 들리는 여러 음성 명령을 등록하지 않도록 합니다. 예: "Show more"와 "Show store"는 매우 비슷하게 들릴 수 있습니다.
+* **유사하게 들리는 명령 사용 금지** - 매우 비슷하게 들리는 여러 음성 명령을 등록하지 않도록 합니다. 예: "자세히 표시" 및 "저장소 표시"는 매우 유사 하 게 표시 될 수 있습니다.
 * **사용하지 않을 경우 앱 등록 취소** - 앱에서 특정 음성 명령이 유효한 상태가 아닐 경우에는 다른 명령과 혼동되지 않도록 등록을 취소하는 것이 좋습니다.
 * **다른 악센트로 테스트** - 다른 악센트의 사용자와 앱을 테스트합니다.
 * **음성 명령 일관성 유지** - "Go back"이라고 말할 경우 이전 페이지로 이동되면 애플리케이션에서 이 동작을 유지합니다.
@@ -65,7 +65,7 @@ ms.locfileid: "68387647"
 
 언제든지 "select"라고 말하면 응시 커서가 가리키고 있는 대상이 활성화됩니다. 
 
->참고: HoloLens 2에서는 먼저 단어 “select”라고 말하여 응시 커서를 호출해야 합니다. 활성화하려면 "select"라고 다시 말합니다. 응시 커서를 숨기려면 손으로 에어 탭하거나 개체를 터치하면 됩니다. 
+>참고: HoloLens 2에서는 먼저 "select" 라는 단어를 말하여 응시 커서를 호출 해야 합니다. 활성화하려면 "select"라고 다시 말합니다. 응시 커서를 숨기려면 손으로 에어 탭하거나 개체를 터치하면 됩니다. 
 
 ### <a name="see-it-say-it"></a>보기, 말하기
 
@@ -113,6 +113,6 @@ Windows Mixed Reality는 **단추의 레이블이 연결된 음성 명령과 동
 * 특정 앱이나 앱 명령을 대상으로 음성 명령을 내리려면 어떻게 하나요?
 * 음성을 사용해서 항목을 HoloLens의 홀로그래픽 프레임 밖으로 보낼 수 있나요?
 
-## <a name="see-also"></a>참조
-* [제스처](gestures.md)
+## <a name="see-also"></a>참고 항목
+* [제스처](gaze-and-commit.md#composite-gestures)
 * [헤드 게이즈 및 유지](gaze-and-dwell.md)

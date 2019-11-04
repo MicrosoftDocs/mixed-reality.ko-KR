@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: 릴리스 정보, 버전, windows 10, 빌드, 19h1, os, 2019 년 5 월
-ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843311"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438313"
 ---
 # <a name="release-notes---may-2019"></a>릴리스 정보-2019 년 5 월
 
@@ -38,7 +38,7 @@ Windows Mixed Reality에서 Win32 응용 프로그램을 시작 하려면 컨트
 ![Win32 Pin_Panel](images/mr-win32-slates-pinspanel.png)
 
 #### <a name="please-help-us-improve"></a>개선할 수 있도록 도와 주세요!
-호환성을 지속적으로 개선 하 고 있습니다.  Windows Mixed Reality에서 즐겨 사용 하는 클래식 Win32 응용 프로그램이 제대로 작동 하지 않는 경우 [피드백 허브](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)를 통해 피드백을 제출 하세요.
+호환성을 지속적으로 개선 하 고 있습니다.  Windows Mixed Reality에서 즐겨 사용 하는 클래식 Win32 응용 프로그램이 제대로 작동 하지 않는 경우 [피드백 허브](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)를 통해 피드백을 제출 하세요.
 
 ## <a name="hololens-1st-gen-long-term-servicing"></a>HoloLens (첫 번째 gen) 장기 서비스
 
@@ -61,7 +61,7 @@ HoloLens (첫 번째 gen)가 LTS (장기 서비스) 상태를 입력 합니다. 
 * [릴리스 정보 - 2016년 5월](release-notes-may-2016.md)
 * [릴리스 정보 - 2016년 3월](release-notes-march-2016.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [모던 헤드셋 지원 (외부 링크)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [HoloLens 지원 (외부 링크)](https://support.microsoft.com/products/hololens)
 * [도구 설치](install-the-tools.md)

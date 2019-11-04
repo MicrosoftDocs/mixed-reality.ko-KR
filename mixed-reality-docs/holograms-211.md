@@ -3,22 +3,22 @@ title: MR 입력 211-제스처
 description: Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 수행 하 여 제스처 개념에 대 한 세부 정보를 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 제스처
-ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
-ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
+ms.openlocfilehash: d7a92e4b2f196d6d8b0ba0fe3ccb2aed87479ac1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69559881"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434701"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 # <a name="mr-input-211-gesture"></a>MR 입력 211: 제스처
 
-[제스처](gestures.md) 사용자 의도를 작업으로 설정 합니다. 제스처를 사용 하면 사용자가 holograms와 상호 작용할 수 있습니다. 이 과정에서는 사용자의 손을 추적 하 고, 사용자 입력에 응답 하 고, 직접 상태 및 위치에 따라 사용자에 게 피드백을 제공 하는 방법을 알아봅니다.
+[제스처](gaze-and-commit.md#composite-gestures) 사용자 의도를 작업으로 설정 합니다. 제스처를 사용 하면 사용자가 holograms와 상호 작용할 수 있습니다. 이 과정에서는 사용자의 손을 추적 하 고, 사용자 입력에 응답 하 고, 직접 상태 및 위치에 따라 사용자에 게 피드백을 제공 하는 방법을 알아봅니다.
 
 >[!VIDEO https://www.youtube.com/embed/c9zlpfFeEtc]
 
@@ -44,9 +44,9 @@ ms.locfileid: "69559881"
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 * 몇 가지 C# 기본적인 프로그래밍 기능.
@@ -73,7 +73,7 @@ ms.locfileid: "69559881"
 1. Unity를 시작합니다.
 2. **열기**를 선택 합니다.
 3. 이전에 보관 하지 않은 **제스처** 폴더로 이동 합니다.
-4. **모델 탐색기** **시작**/폴더를 찾아 선택 합니다.
+4. **시작**/**모델 탐색기** 폴더를 찾아 선택 합니다.
 5. **폴더 선택** 단추를 클릭 합니다.
 6. **프로젝트** 패널에서 **장면** 폴더를 확장 합니다.
 7. **모델 탐색기** 장면을 두 번 클릭 하 여 Unity에서 로드 합니다.
@@ -98,8 +98,8 @@ HoloLens에 배포 하는 경우:
 
 1. Visual Studio의 맨 위 도구 모음을 사용 하 여 대상을 디버그에서 **릴리스** 로, ARM에서 **x 86**으로 변경 합니다.
 2. 로컬 컴퓨터 단추 옆에 있는 드롭다운 화살표를 클릭 하 고 **원격 컴퓨터**를 선택 합니다.
-3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
-4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device-hololens)으로 연결 해야 합니다.
+3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭 합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
+4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device)으로 연결 해야 합니다.
 5. 앱이 배포 되 면 **선택 제스처로** **fitbox** 를 해제 합니다.
 
 모던 헤드셋에 배포 하는 경우:
@@ -139,7 +139,7 @@ HoloLens에 배포 하는 경우:
 
 1. **계층** 패널에서 **커서** 개체를 선택 하 고 삭제 합니다.
 2. **프로젝트** 패널에서 **CursorWithFeedback** 를 검색 하 여 **계층** 패널로 끌어 옵니다.
-3. **계층** 패널 **에서 inputmanager** 를 클릭 한 다음 **계층 구조** 에서 **CursorWithFeedback** 개체를 다음의 맨 아래에 있는 Inputmanager의 **simplesinglepointerselector**필드로 끕니다. **검사기**.
+3. **계층** 패널에서 **inputmanager** 를 클릭 한 다음 **계층 구조** 에서 **CursorWithFeedback** 개체를 다음의 맨 아래에 있는 Inputmanager의 **simplesinglepointerselector**필드로 끕니다. **검사기**.
 4. **계층**에서 **CursorWithFeedback** 를 클릭 합니다.
 5. **검사기** 패널에서 **개체 커서** 스크립트의 **커서 상태 데이터** 를 확장 합니다.
 
@@ -180,7 +180,7 @@ HoloLens에 배포 하는 경우:
 4. **CursorWithFeedback**을 클릭 합니다.
 5. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
 6. 메뉴의 검색 상자에 **CursorFeedback**을 입력 합니다. 검색 결과를 선택 합니다.
-7. **ScrollFeedback** 개체를 **계층** 의 **커서 피드백** 구성 요소에있는 **검색 된 게임 개체의 스크롤** 속성으로 끌어 놓습니다.
+7. **ScrollFeedback** 개체를 **계층** 의 **커서 피드백** 구성 요소에 있는 **검색 된 게임 개체의 스크롤** 속성으로 끌어 **놓습니다.**
 8. **계층** 패널에서 **AstroMan** 개체를 선택 합니다.
 9. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
 10. 메뉴에서 검색 상자 **제스처 동작**을 입력 합니다. 검색 결과를 선택 합니다.
@@ -346,7 +346,7 @@ GestureManager.cs 및 AstronautManager.cs를 사용 하면 다음을 수행할 �
 1. 음성 키워드 "**Move Astronaut**"를 사용 하 여 **조작** 제스처를 사용 하도록 설정 하 고 "**Rotate Astronaut**"를 사용 하지 않도록 설정 합니다.
 2. **조작 제스처 인식기**에 대 한 응답으로 전환 합니다.
 
-이제 시작하겠습니다.
+그럼 시작해 보겠습니다.
 
 1. **계층** 패널에서 비어 있는 새 GameObject을 만듭니다. 이름을 "**AstronautManager**"로 합니다.
 2. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
@@ -494,7 +494,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 * 인덱스 손가락을 엄지 단추 아래로 낮추고 pinched을 함께 유지 합니다.
 * 손을 움직이면 astronaut도 이동 합니다 (이는 조작).
 * Astronaut 조작을 중지 하도록 인덱스 손가락을 올립니다.
-* 참고: 손을 이동 하기 전에 ' Move Astronaut '가 표시 되지 않으면 탐색 제스처가 대신 사용 됩니다.
+* 참고: 손을 이동 하기 전에 ' Move Astronaut '를 표시 하지 않으면 탐색 제스처가 대신 사용 됩니다.
 * Rotatable 상태로 돌아가려면 ' Astronaut 회전 ' 이라고 합니다.
 
 ## <a name="chapter-5---model-expansion"></a>5 장-모델 확장
@@ -523,11 +523,11 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 6. **검사기** 패널에서 **구성 요소 추가** 단추를 클릭 합니다.
 7. 메뉴의 검색 상자에 **음성 입력 처리기**를 입력 합니다. 검색 결과를 선택 합니다.
 8. 이 명령은 GameObject에 관계 없이 작동 하기 때문에 **전역 수신기**를 선택 합니다.
-9. 단추를 **+** 클릭 하 고 키워드 드롭다운에서 **모델 확장** 을 선택 합니다.
-10. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다. **+**
+9. **+** 단추를 클릭 하 고 키워드 드롭다운에서 **모델 확장** 을 선택 합니다.
+10. 응답 아래 **+** 를 클릭 하 고 **계층** 의 **AstronautManager** 을 **None (Object)** 필드로 끕니다.
 11. 이제 **함수 없음** 드롭다운을 클릭 하 고 **AstronautManager**, **ExpandModelCommand**를 차례로 선택 합니다.
 12. 음성 입력 처리기의 **+** 단추를 클릭 하 고 키워드 드롭다운에서 **모델 다시 설정** 을 선택 합니다.
-13. 응답 아래를 클릭 하 고 계층의 **AstronautManager** 을 **None (Object)** 필드로 끕니다. **+**
+13. 응답 아래 **+** 를 클릭 하 고 **계층** 의 **AstronautManager** 을 **None (Object)** 필드로 끕니다.
 14. 이제 **함수 없음** 드롭다운을 클릭 하 고 **AstronautManager**, **resetmodelcommand**를 차례로 선택 합니다.
 
 ![5 장의 음성 입력 소스 및 처리기를 설정 하는 방법](images/holograms211-speechhandler.png)
@@ -543,7 +543,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 ## <a name="the-end"></a>끝
 
-축하합니다. 이제 MR 입력 211 **을 완료 했습니다. 제스처**.
+축하합니다. 이제 **MR 입력 211: 제스처**를 완료 했습니다.
 
 * 직접 추적, 탐색 및 조작 이벤트를 검색 하 고 대응 하는 방법을 알고 있습니다.
 * 탐색 제스처와 조작 제스처의 차이점을 이해 하 고 있습니다.

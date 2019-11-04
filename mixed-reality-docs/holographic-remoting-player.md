@@ -6,27 +6,27 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2827676ee95daf6a24ad11fceaade839f579cff4
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122074"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434340"
 ---
 # <a name="holographic-remoting-player"></a>Holographic 원격 플레이어
 
 >[!IMPORTANT]
->HoloLens 2에 대 한 Holographic 원격은 주요 버전 변경입니다. [Hololens 용 호스트 응용 프로그램 **(첫 번째 gen)** ](add-holographic-remoting.md) 은 NuGet 패키지 버전 1.X를 사용 해야 하며, [hololens 용 호스트 응용 프로그램 **2** 는](holographic-remoting-create-host.md) 2.x를 사용 해야 합니다. x. x. 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens 1과 호환 되지 않거나 그 반대의 경우를 의미 합니다.
+>HoloLens 2에 대 한 Holographic 원격은 주요 버전 변경입니다. [Hololens 용 호스트 응용 프로그램 **(첫 번째 gen)** ](add-holographic-remoting.md) 은 NuGet 패키지 **버전 1.x** 를 사용 해야 하며, [hololens 용 호스트 응용 프로그램 **2** 는](holographic-remoting-create-host.md) 2.x를 사용 해야 합니다. x **. x.** 이는 HoloLens 2 용으로 작성 된 호스트 응용 프로그램이 HoloLens (첫 번째 gen)와 호환 되지 않는 것을 의미 하며 그 반대의 경우도 마찬가지입니다.
 
 Holographic Remoting Player는 Holographic 원격 기능을 지 원하는 PC 앱 및 게임에 연결 하는 동반 앱입니다. Holographic 원격 스트림은 Wi-fi 연결을 사용 하 여 PC에서 실시간으로 Microsoft HoloLens로 콘텐츠를 Holographic 합니다.
 
 Holographic 원격 플레이어는 Holographic 원격을 지원 하도록 특별히 설계 된 PC 앱 에서만 사용할 수 있습니다.
 
-Holographic 원격 플레이어는 HoloLens와 HoloLens 2 모두에 대해 사용할 수 있습니다.  HoloLens를 사용 하 여 Holographic Remoting을 지 원하는 PC 앱은 HoloLens 2를 사용 하는 Holographic Remoting을 지원 하도록 업데이트 해야 합니다. 지원 되는 버전에 대 한 질문이 있으면 앱 공급자에 게 문의 하세요.
+Holographic 원격 플레이어는 HoloLens (첫 번째 gen)와 HoloLens 2 모두에 대해 사용할 수 있습니다.  HoloLens를 사용 하 여 Holographic Remoting을 지 원하는 PC 앱은 HoloLens 2를 사용 하는 Holographic Remoting을 지원 하도록 업데이트 해야 합니다. 지원 되는 버전에 대 한 질문이 있으면 앱 공급자에 게 문의 하세요.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Holographic Remoting 플레이어에 연결
 
-앱의 지침에 따라 Holographic Remoting 플레이어에 연결 합니다. 다음과 같이 원격 플레이어의 주 화면에서 볼 수 있는 HoloLens 장치의 IP 주소를 입력 해야 합니다.
+앱의 지침에 따라 Holographic Remoting 플레이어에 연결 합니다. 다음과 같이 원격 플레이어의 기본 화면에서 볼 수 있는 HoloLens 장치의 IP 주소를 입력 해야 합니다.
 
 ![Holographic 원격 플레이어](images/holographicremotingplayer.png)
 
@@ -55,12 +55,12 @@ Holographic 원격 연결은 **암호화 되지 않습니다**. 신뢰 하는 �
 * **Render** -원격 플레이어가 마지막 1 초 동안 렌더링 한 프레임의 수입니다. 네트워크를 통해 도착 한 프레임 수와는 독립적입니다 ( **비디오 프레임**참조). 또한 렌더링 된 프레임 간의 마지막 초당 평균/최대 렌더링 델타 시간 (밀리초)이 표시 됩니다.
 
 * **비디오 프레임** -표시 되는 첫 번째 숫자는 건너뛴 비디오 프레임, 두 번째 숫자는 다시 사용 된 비디오 프레임, 세 번째는 비디오 프레임으로 수신 됩니다. 모든 숫자는 마지막 1 초 동안의 카운트를 나타냅니다.
-    * ```Received frames```마지막 1 초 동안 도착 한 비디오 프레임의 수입니다. 정상 조건에서이는 60 이어야 하지만 네트워크 문제로 인해 프레임이 삭제 되었거나 원격/호스트 쪽에서 예상 된 속도로 프레임을 생성 하지 않는다는 표시기입니다.
-    * ```Reused frames```마지막 1 초 동안 두 번 이상 사용한 비디오 프레임의 수입니다. 예를 들어 비디오 프레임이 늦게 도착 하면 플레이어의 렌더링 루프는 여전히 프레임을 렌더링 하지만 이전 프레임에 이미 사용 된 비디오 프레임을 *다시* 사용 해야 합니다.
-    * ```Skipped frames```플레이어의 렌더링 루프에서 사용 되지 않은 비디오 프레임의 수입니다. 예를 들어, 네트워크 지터는 비디오 프레임이 도착 하는 효과를 더 이상 균등 하 게 배포 하지 않을 수 있습니다. 즉, 일부는 지연 되 고 다른 일부는 더 이상 60Hz에서 실행 될 때 16.66 밀리초의 델타를 갖지 않을 수 있습니다. 이 경우 두 개 이상의 프레임이 플레이어의 렌더링 루프의 두 틱 간에 도착할 수 있습니다. 이 경우 플레이어는 항상 최근 받은 비디오 프레임을 표시 하는 것으로 예상 되는 하나 이상의 프레임을 *건너뜁니다* .
+    * ```Received frames```는 마지막 1 초 동안 도착 한 비디오 프레임의 수입니다. 정상 조건에서이는 60 이어야 하지만 네트워크 문제로 인해 프레임이 삭제 되었거나 원격/호스트 쪽에서 예상 된 속도로 프레임을 생성 하지 않는다는 표시기입니다.
+    * ```Reused frames```는 마지막 1 초 동안 두 번 이상 사용 되는 비디오 프레임의 수입니다. 예를 들어 비디오 프레임이 늦게 도착 하면 플레이어의 렌더링 루프는 여전히 프레임을 렌더링 하지만 이전 프레임에 이미 사용 된 비디오 프레임을 *다시* 사용 해야 합니다.
+    * ```Skipped frames```은 플레이어의 렌더링 루프에서 사용 되지 않은 비디오 프레임의 수입니다. 예를 들어 네트워크 지터는 비디오 프레임이 도착 해도 더 이상 균등 하 게 배포 되지 않는 효과를 가질 수 있습니다. 예를 들어, 일부는 지연 된 것이 고 다른 항목은 60Hz에서 실행 될 때 16.66 밀리초의 델타를 포함 하지 않는 시간에 발생 합니다. 플레이어의 렌더링 루프의 두 틱 사이에 둘 이상의 프레임이 도착 하는 경우 발생할 수 있습니다. 이 경우 플레이어는 가장 최근에 받은 비디오 프레임을 항상 표시 하는 것으로 예상 되는 하나 이상의 프레임을 *건너뜁니다* .
 
     >[!NOTE]
-    >네트워크 지터를 향한 경우 일반적으로 건너뛰고 재사용 된 프레임은 동일 합니다. 생략 된 프레임만 표시 되는 경우에는 플레이어에서 대상 프레임 속도로 적중 하지 않는 표시기가 표시 됩니다. 이 경우 문제를 진단할 때 최대 렌더링 델타 시간을 주의 해야 합니다.
+    >네트워크 지터를 향한 경우 건너뛴 후 다시 사용 된 프레임은 일반적으로 동일 합니다. 반대로 건너뛴 프레임만 표시 되는 경우 플레이어는 대상 프레임 속도로 적중 되지 않는다는 표시기입니다. 이 경우 문제를 진단할 때 최대 렌더링 델타 시간을 눈에 파악 해야 합니다.
 
 * **비디오 프레임 델타** -마지막 1 초 동안 받은 비디오 프레임 사이의 최소/최대 델타입니다. 일반적으로이 수는 네트워크 지터로 인해 발생 하는 문제가 발생 하는 경우 건너뛴/재사용 된 프레임과 관련이 있습니다.
 * **Latency** -마지막 1 초 동안의 평균 소요 시간 (밀리초)입니다. 이 컨텍스트를 사용 하는 경우 HoloLens 디스플레이에서 해당 포즈/원격 분석 데이터에 대 한 비디오 프레임을 표시할 때까지 HoloLens에서 원격/호스트 쪽으로 포즈/센서 데이터를 전송 하는 데 걸리는 시간을 의미 합니다.
@@ -75,8 +75,8 @@ Holographic 원격 연결은 **암호화 되지 않습니다**. 신뢰 하는 �
 * GeForce GTX 970 또는 AMD Radeon R 9 290 이상의 그래픽 카드를 권장 합니다.
 * 무선 홉 수를 줄이려면 이더넷을 통해 PC를 네트워크에 연결 하는 것이 좋습니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [HoloLens (첫 번째 gen): Holographic 원격 추가](add-holographic-remoting.md)
 * [HoloLens 2: Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
-* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)

@@ -6,18 +6,18 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 3D 앱 시작 관리자, 모던 헤드셋, 라이브 큐브
-ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: ce9d242e26d67c8fe5af7ac32f4e910a15715d25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63517639"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437226"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>3D 앱 시작 관리자 디자인 지침
 
 Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 및 물로 둘러싸인 절벽에 집으로 시각화 된 Windows Mixed Reality 홈을 입력 합니다 ( [다른 환경을 선택 하 고 직접 만들](add-custom-home-environments.md)수도 있음). 이 홈의 공간 내에서 사용자가 원하는 방식으로 관심 있는 3D 개체와 앱을 자유롭게 정렬 하 고 구성할 수 있습니다. **3d 앱 시작 관리자** 는 응용 프로그램을 시작 하도록 선택할 수 있는 사용자의 혼합 현실 집에 있는 "물리적" 개체입니다.
 
-![예제: Floaty Bird 3D 앱 시작 관리자](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+![예: Floaty Bird 3D 앱 시작 관리자](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Floaty Bird 3D 앱 시작 관리자 예제 (가상 앱)*
 
 ## <a name="3d-app-launcher-creation-process"></a>3D 앱 시작 관리자 만들기 프로세스
@@ -50,12 +50,12 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 
 앱 시작 관리자는 사람들의 공간에 있을 것으로 기대 하는 개체와 같은 느낌을 합니다. 이러한 작업은 실질적으로 이러한 작업을 수행 하기 때문에 사용자가 자유롭게 검색 하 고 가까이 유지할 수 있었던 것 처럼 보입니다.
 
-![예제: Astro 구부리기 3D 앱 시작 관리자](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+![예: Astro 구부리기 3D 앱 시작 관리자](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
 *Astro 구부리기 3D 앱 시작 관리자 예제 (가상 앱)*
 
 ### <a name="recognizable"></a>읽을
 
-3D 앱 시작 관리자는 "자신의 앱의 브랜드"를 표시 하는 사용자에 게 즉시 표현 해야 합니다. 앱에 별표 또는 특별히 식별 가능한 개체가 있는 경우 디자인의 큰 부분으로 사용 하는 것이 좋습니다. 혼합 현실 세계에서 개체는 단지 로고만이 아닌 사용자에 게 더 많은 관심을 그리도록 합니다. 인식 가능한 개체는 신속 하 고 명확 하 게 브랜드를 전달 합니다.
+3D 앱 시작 관리자는 "자신의 앱의 브랜드"를 표시 하는 사용자에 게 즉시 표현 해야 합니다. 앱에 별표 (*) 또는 특별히 식별 가능한 개체가 있는 경우 디자인의 큰 부분으로 사용 하는 것이 좋습니다. 혼합 현실 세계에서 개체는 단지 로고만이 아닌 사용자에 게 더 많은 관심을 그리도록 합니다. 인식 가능한 개체는 신속 하 고 명확 하 게 브랜드를 전달 합니다.
 
 ### <a name="volumetric"></a>대규모
 
@@ -64,24 +64,20 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 
 :::row:::
     :::column:::
-        ![Logo only](images/20171016-140436-mixedreality-640px.jpg)
-        *Logo only*
+        *로고 전용](images/20171016-140436-mixedreality-640px.jpg) ![* 로고
     :::column-end:::
     :::column:::
-        ![More recognizable with a character](images/20171016-140557-mixedreality-640px.jpg)
-        *More recognizable with a character*
+        문자를 사용 하 여 더 쉽게 인식할 ![문자](images/20171016-140557-mixedreality-640px.jpg) *인식*
     :::column-end:::
 :::row-end:::
 
 
 :::row:::
     :::column:::
-        ![Flat approach, not surprisingly, feels flat](images/20171016-155101-mixedreality-640px.jpg)
-        *Flat approach, not surprisingly, feels flat*
+        ![플랫 접근 방법, 즉, 느낌이 좋은 플랫](images/20171016-155101-mixedreality-640px.jpg) *플랫 접근 방식이* 아닙니다.
     :::column-end:::
     :::column:::
-        ![Volumetric approach better showcases your app](images/20171016-161407-mixedreality-640px.jpg)
-        *Volumetric approach better showcases your app*
+        ![대규모 접근 방식을 사용 하면 앱을 보다 잘 파악할](images/20171016-161407-mixedreality-640px.jpg) *대규모 접근 방법을* 더 잘 보여 줍니다.
     :::column-end:::
 :::row-end:::
 
@@ -98,7 +94,7 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 * 모델이 다른 거리와 크기에서 잘 읽도록 합니다.
 * 모델을 이동할 준비가 되 면 [자산 내보내기 지침](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview)을 참조 하세요.
 
-![질감에서 미묘한 세부 정보를 포함 하는 모델](images/20171013-143334-mixedreality-640px.jpg)<br>
+질감에서 미묘한 세부 정보를 포함 하는 ![모델](images/20171013-143334-mixedreality-640px.jpg)<br>
 *질감에서 미묘한 세부 정보를 포함 하는 모델*
 
 ### <a name="what-to-avoid"></a>피해 야 할 사항
@@ -106,7 +102,7 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 * 씬 geometry를 사용 하지 마세요. 거리가 적절 하 게 작동 하지 않고 별칭이 잘못 됩니다.
 * 모델의 일부가 1:1:1 크기 비율을 초과 하 여 너무 많이 확장 되는 것을 허용 하지 않습니다. 크기 조정 문제를 만듭니다.
 
-![고대비, 사용량이 적은 패턴 방지](images/20171013-143603-mixedreality-640px.jpg)<br>
+고대비, 사용량이 적은 패턴을 방지 ![](images/20171013-143603-mixedreality-640px.jpg)<br>
 *고대비, 작은 사용 중 패턴 방지*
 
 ## <a name="how-to-handle-type"></a>형식을 처리 하는 방법
@@ -120,36 +116,33 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 
 :::row:::
     :::column:::
-        ![Flat type without a backdrop can be hard to view from certain angles and in certain environments](images/flattype-640px.png)
-        *Flat type without a backdrop can be hard to view from certain angles and in certain environments*
+        배경 없이 ![플랫 유형을 사용 하면 특정 각도에서 볼 수 있을 수 있으며 특정 환경에서 *배경이 없는 플랫 유형을](images/flattype-640px.png) 특정 각도 및 특정 환경에서 표시 하기가 어려울 수 있습니다* .
     :::column-end:::
     :::column:::
-        ![Type with a built-in backdrop can work well](images/flattypeandbkg-640px.png)
-        *Type with a built-in backdrop can work well*
+        기본 제공 배경이 있는 ![형식은 *기본 제공 되는 배경이 있는 형식*](images/flattypeandbkg-640px.png) 제대로 작동할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![Extruded type can work well if you shade the sides](images/20171016-160221-mixedreality-640px.jpg)
-        *Extruded type can work well if you shade the sides*
+        ![돌출 형식은 가장자리를 음영 처리 하는 경우에도 *입체 형식*](images/20171016-160221-mixedreality-640px.jpg) 회색으로 표시 될 수 있습니다.
     :::column-end:::
 :::row-end:::
 
 
 **작동 하는 색을 입력 합니다.**
 * 하얀
-* 검정
+* 명암
 * 밝은 반 채도 색
 
-![작동 하는 색을 입력 합니다.](images/20171016-112111-mixedreality-640px.jpg)<br>
+![형식 색입니다.](images/20171016-112111-mixedreality-640px.jpg)<br>
 *작동 하는 색을 입력 합니다.*
 
 ### <a name="what-to-avoid"></a>피해 야 할 사항
 
 **문제를 일으키는 색을 입력 합니다.**
 * 중간 색조
-* 회색
+* 으로
 * 채도가 높은 색 또는 낮춘 색
 
-![문제를 일으키는 색을 입력 합니다.](images/20171016-112246-mixedreality-640px.jpg)<br>
+문제가 발생 하는 색 ![형식입니다.](images/20171016-112246-mixedreality-640px.jpg)<br>
 *문제를 일으키는 색을 입력 합니다.*
 
 ## <a name="lighting"></a>조명
@@ -158,21 +151,21 @@ Windows Mixed Reality 몰입 (VR) 헤드셋에 배치 하는 경우에는 산 �
 
 시작 관리자가 환경에서 다양 한 조명의 화면에 표시 되는 모습을 테스트 하는 좋은 위치는 스튜디오, 미디어 객실 (Patio의 구체적인 영역)입니다. 또 다른 좋은 테스트는 반쪽 및 1/2 그림자에 배치 하 고 모양을 확인 하는 것입니다.
 
-![시작 관리자가 밝은 및 그림자 모두에 적합 한지 확인 합니다.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
+사용 중인 시작 관리자가 밝은 및 그림자 모두에 적합 한지 확인 ![합니다.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
 *시작 관리자가 밝은 및 그림자 둘 다에서 제대로 보이는지 확인 합니다.*
 
 ## <a name="texturing"></a>질감
 
 ### <a name="authoring-your-textures"></a>질감 제작
 
-3D 앱 시작 관리자의 끝 형식은 .PBR (물리적으로 기반 렌더링) 파이프라인을 사용 하 여 만든. 이는 복잡 한 프로세스 일 수 있습니다. 현재는 기술 음악가를 사용 하는 것이 좋습니다. 용감한 DIY 인 경우, 시작 하기 전에 내부적으로 수행 해야 하는 작업을 [연구 하 고 배우](http://wiki.polycount.com/wiki/PBR) 는 데 걸리는 시간은 일반적인 실수를 피하는 데 도움이 됩니다. 
+3D 앱 시작 관리자의 끝 형식은 .PBR (물리적으로 기반 렌더링) 파이프라인을 사용 하 여 만든. 이는 복잡 한 프로세스 일 수 있습니다. 현재는 기술 음악가를 사용 하는 것이 좋습니다. 용감한 DIY 인 경우, 시작 하기 전에 내부적으로 수행 해야 하는 작업을 [연구 하 고 배우](https://wiki.polycount.com/wiki/PBR) 는 데 걸리는 시간은 일반적인 실수를 피하는 데 도움이 됩니다. 
 
-![예제: 최신 노트 앱](images/pbr-freshnote1-640px-500px.png)<br>
+![예제: 최신 메모 앱](images/pbr-freshnote1-640px-500px.png)<br>
 *최신 참고 3D 앱 시작 관리자 예제 (가상 앱)*
 
 **권장 authoring tool**
 
-Allegorithmic [를 사용 하](https://www.allegorithmic.com/products/substance-painter) 여 최종 파일을 작성 하는 것이 좋습니다. 학습 기능 복사에서 .PBR 셰이더를 작성 하는 방법을 잘 모르는 경우 다음 [자습서](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials)를 참조 하세요.
+Allegorithmic [를 사용 하 여 최종](https://www.allegorithmic.com/products/substance-painter) 파일을 작성 하는 것이 좋습니다. 학습 기능 복사에서 .PBR 셰이더를 작성 하는 방법을 잘 모르는 경우 다음 [자습서](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials)를 참조 하세요.
 
 이러한 기능 중 하나를 잘 알고 있는 경우에는 (교대로 [3D 옷걸이](https://3dcoat.com/home/), [Quixel Suite 2 또는](https://quixel.se/suite2/) [moset 도구 모음이](https://www.marmoset.co/toolbag/) 작동 합니다.)
 
@@ -186,7 +179,7 @@ Allegorithmic [를 사용 하](https://www.allegorithmic.com/products/substance-
     * 질감에서 조명 구운 방지
     * .PBR 재질 제작 패키지 중 하나를 사용 하 여 셰이더에 대해 생성 된 올바른 맵 가져오기
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [혼합 현실 홈에서 사용할 3D 모델 만들기](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 * [3D 앱 시작 관리자(UWP 앱) 구현](implementing-3d-app-launchers.md)

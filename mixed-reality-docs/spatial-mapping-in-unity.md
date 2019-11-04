@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, 공간 매핑, 렌더러, collider, 메시, 스캔, 구성 요소
-ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 452e629a877df585ffbc0a6466ffeb2588b66ecf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148645"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438039"
 ---
 # <a name="spatial-mapping-in-unity"></a>Unity의 공간 매핑
 
@@ -22,6 +22,29 @@ Unity에는 다음과 같은 방법으로 개발자에 게 노출 되는 공간 
 2. 모든 제어 기능을 제공 하 고 보다 정교한 응용 프로그램별 사용자 지정을 가능 하 게 하는 하위 수준 공간 매핑 Api
 
 앱에서 공간 매핑을 사용 하려면 Appxmanifest.xml에 spatialPerception 기능을 설정 해야 합니다.
+
+## <a name="device-support"></a>장치 지원
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능과</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>공간 매핑</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="setting-the-spatialperception-capability"></a>SpatialPerception 기능 설정
 
@@ -75,8 +98,8 @@ Unity 앱에서 이러한 두 구성 요소를 사용 하려면 다음을 수행
 
 공간 매핑 렌더러 및 공간 매핑 Collider 구성 요소에서 가져오는 것 보다 더 많은 제어가 필요한 경우 하위 수준 공간 매핑 스크립트 Api를 사용할 수 있습니다.
 
-**공간** *UnityEngine. XR. WSA*<br>
-**형식**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
+**네임 스페이스:** *unityengine. XR. WSA*<br>
+**유형**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
 
 다음은 공간 매핑 Api를 사용 하는 응용 프로그램의 제안 된 흐름에 대 한 개요입니다.
 
@@ -239,7 +262,7 @@ struct RaycastResult
 
 Unity 샘플에서 커서는 각 프레임을 비춥니다. 먼저, Unity의 colliders에 대해 합니다. 두 번째는 모듈의 세계 표현에 대해 이해 합니다. 마지막으로 UI 요소를 다시 한 번 더 합니다. 이 응용 프로그램에서 UI는 우선 순위, 그 다음으로 이해 결과, 마지막으로 Unity의 colliders를 가져옵니다. SurfaceType은 커서 옆에 텍스트로 보고 됩니다.
 
-![표면 형식의 레이블이 커서 옆에 표시 됩니다.](images/su-raycastresults-300px.jpg)<br>
+![Surface 유형은 커서 옆에 레이블이 지정 됩니다](images/su-raycastresults-300px.jpg)<br>
 *표면 형식의 레이블이 커서 옆에 표시 됩니다.*
 
 ### <a name="topology-queries"></a>토폴로지 쿼리
@@ -324,7 +347,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 래퍼 함수는 사용자 지정 셰이프 정의를 쉽게 만들기 위해 Unity 모듈에서 제공 됩니다. 구성 요소 및 모양 제약 조건의 전체 목록은 "ShapeComponentConstraint"의 "SpatialUnderstandingDll.cs" 및 "ShapeConstraint" 구조체에서 찾을 수 있습니다.
 
-![이 화면에서 사각형 모양을 찾았습니다.](images/su-shapequery-300px.jpg)<br>
+이 화면에 ![사각형 모양이 있습니다](images/su-shapequery-300px.jpg)<br>
 *이 화면에서 사각형 모양을 찾았습니다.*
 
 ### <a name="object-placement-solver"></a>개체 배치 해 찾기
@@ -395,8 +418,8 @@ Solver_PlaceObject(
 
 성공 하면 배치 위치, 차원 및 방향을 포함 하는 "ObjectPlacementResult" 구조가 반환 됩니다. 또한 배치가 배치 된 개체의 내부 목록에 추가 됩니다. 이후 배치 쿼리에서는이 개체를 고려 합니다. Unity 샘플의 "LevelSolver.cs" 파일에는 더 많은 예제 쿼리가 포함 되어 있습니다.
 
-![개체 배치 결과](images/su-objectplacement-1000px.jpg)<br>
-*그림 3: 파란 상자에는 바닥의 세 위치에서 카메라 위치 규칙을 벗어난 결과를 보여 주는 방법이 있습니다.*
+개체 배치의 ![결과](images/su-objectplacement-1000px.jpg)<br>
+*그림 3: 파란 상자에 카메라 위치 규칙을 사용 하 여 바닥 쿼리를 수행 하는 세 위치의 결과*
 
 수준 또는 응용 프로그램 시나리오에 필요한 여러 개체의 배치 위치를 해결 하는 경우에는 먼저 필요에 따라 공간을 찾을 수 있는 확률을 최대화 하기 위해 필수적인 개체와 큼 개체를 해결 합니다. 배치 순서는 중요 합니다. 개체 배치를 찾을 수 없는 경우 제한 된 구성으로 시도 합니다. 여러 방 구성에서 기능을 지원 하려면 대체 (fallback) 구성 집합이 있어야 합니다.
 
@@ -444,7 +467,7 @@ Import_UnderstandingMesh –
 
 Dll 이해는 내부적으로 playspace를 8cm 크기의 voxel 큐브 그리드로 저장 합니다. 검색의 초기 부분에서 주 구성 요소 분석을 완료 하 여 방의 축을 확인 합니다. 내부적으로 이러한 축에 맞춰진 voxel 공간을 저장 합니다. 메시는 거의 매 초 마다 voxel 볼륨에서 isosurface를 추출 하 여 생성 됩니다. 
 
-![Voxel 볼륨에서 생성 된 메시 생성](images/su-custommesh.jpg)<br>
+voxel 볼륨](images/su-custommesh.jpg) 생성 된 메시를 생성 ![<br>
 *Voxel 볼륨에서 생성 된 메시 생성*
 
 ## <a name="troubleshooting"></a>문제 해결
@@ -454,11 +477,11 @@ Dll 이해는 내부적으로 playspace를 8cm 크기의 voxel 큐브 그리드�
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Mixed Reality Toolkit의 공간 매핑
 Mixed Reality Toolkit v 2에서 공간 매핑을 사용 하는 방법에 대 한 자세한 내용은 MRTK docs의 <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">공간 인식 섹션</a> 을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [MR 공간 230: 공간 매핑](holograms-230.md)
 * [좌표계](coordinate-systems.md)
 * [Unity의 좌표계](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. 범위</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. 범위</a>

@@ -5,18 +5,18 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701975"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438387"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. Unity를 개발할 준비 하는 중 
 
 
-이 자습서에서는 Mixed Reality Toolkit 가져오기, 빌드 설정 구성, 장면 준비를 포함 하 여 응용 프로그램 개발을 위해 Unity를 준비 하 고 구성 하는 방법에 대해 알아봅니다.
+이 자습서에서는 혼합 현실 도구 키트 가져오기, 빌드 설정 구성 및 장면 준비를 포함 하 여 응용 프로그램 개발을 위해 Unity를 준비 하 고 구성 하는 방법을 알아봅니다.
 
 ## <a name="objectives"></a>목표
 
@@ -34,13 +34,13 @@ ms.locfileid: "68701975"
 
 ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. 1 단계에서 제공한 링크에서 방금 다운로드 한 Unity 패키지를 선택 합니다. Unity에 가져오기 팝업 창이 표시 되 면 가져오기 단추를 클릭 하 여 가져오기를 시작 합니다. MRTK를 가져오는 데 몇 분 정도 걸릴 수 있습니다.
+3. 1 단계에서 제공한 링크에서 방금 다운로드 한 Unity 패키지를 선택 합니다. Unity에 가져오기 팝업 창이 표시 되 면 가져오기 단추를 클릭 하 여 MRTK 가져오기를 시작 합니다. 몇 분 정도 걸릴 수 있습니다.
 
 ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> 참고: 다운로드 된 패키지는 파일을 저장 한 로컬 폴더에 있습니다. 위의 이미지는 패키지를 찾을 위치를 표시 된다 하지 않습니다.
+> 참고: 다운로드 한 패키지는 파일을 저장 한 로컬 폴더에 있습니다. 위의 이미지는 패키지를 찾을 위치를 표시 된다 하지 않습니다.
 
-4. 새 장면을 만듭니다. 이 작업은 파일을 클릭 하 고 새 장면을 선택 하 여 수행할 수 있습니다. 장면을 HLSharedProjectMain로 저장 합니다.
+4. 새 장면을 만듭니다. 파일을 클릭 하 고 새 장면을 선택 하 여이 작업을 수행할 수 있습니다. HLSharedProjectMain로 저장 합니다.
 
 > 참고: 아래 이미지와 비슷한 팝업을 받을 수 있습니다. 지금은 아니요를 클릭 합니다.
 >
@@ -58,7 +58,7 @@ ms.locfileid: "68701975"
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-7. 아래로 스크롤하여 진단 창을 숨기려면 진단 시스템 사용을 선택 취소 합니다. 응용 프로그램 개발 중에 진단 창을 사용 하도록 설정 하 여 성능을 모니터링 하 고 프로덕션 또는 응용 프로그램 데모 중에 사용 하지 않도록 설정 하는 것이 좋습니다. 
+7. 아래로 스크롤하여 진단 창을 숨기려면 진단 시스템 사용을 선택 취소 합니다. 응용 프로그램을 개발 하는 동안 진단 창을 사용 하도록 설정 하 여 성능을 모니터링 한 다음 프로덕션 또는 응용 프로그램 데모 중에 사용 하지 않도록 설정 하는 것이 좋습니다. 
 
 ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
@@ -66,7 +66,7 @@ ms.locfileid: "68701975"
 
 ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. 완료 되 면 열려 있는 장면 추가 라는 상자를 클릭 합니다. 이제 검사기 패널로 이동 하 여 지원 되는 가상 현실 오른쪽에 있는 확인란이 선택 되어 있는지 확인 합니다 (아래 이미지에 표시 됨). 또한 아래 그림에 표시 된 것 처럼 장면/HLSharedProjectMain 옆의 확인란도 선택 되어 있는지 확인 합니다.
+9. 완료 되 면 열려 있는 장면 추가 라는 상자를 클릭 합니다. 이제 검사기 패널로 이동 하 여 지원 되는 가상 현실 오른쪽에 있는 확인란이 선택 되어 있는지 확인 합니다 (아래 이미지에 표시 됨). 또한 아래 이미지에 나와 있는 것 처럼 장면/HLSharedProjectMain 옆의 확인란도 선택 되어 있는지 확인 합니다.
 
 ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
@@ -78,11 +78,11 @@ ms.locfileid: "68701975"
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
-12. 프로젝트 패널에서 Prefabs 폴더로 이동 합니다. 다음 몇 단계에서 장면에 몇 가지 prefabs 구현 합니다. Prefabs 폴더에서 prefab, 디버그 창을 클릭 하 여 계층으로 끕니다. 완료 되 면 파일을 클릭 한 다음 저장을 클릭 하거나 ctrl + S를 눌러 프로젝트를 저장 합니다.
+12. 프로젝트 패널에서 Prefabs 폴더로 이동 합니다. 다음 단계에서는 장면에 몇 가지 prefabs을 구현 합니다. Prefabs 폴더에서 prefab, 디버그 창을 클릭 하 여 계층으로 끕니다. 완료 되 면 파일을 클릭 한 다음 저장을 클릭 하거나 ctrl + S를 눌러 프로젝트를 저장 합니다.
 
 ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > 참고: Prefab를 클릭 하면 TMP Essentials에 대 한 정보를 요청 하는 팝업이 표시 될 수 있습니다. 필요에 따라 TMP Essentials 가져오기를 클릭 합니다. 이 팝업이 표시 되 면 계층 구조에서 prefab을 삭제 하 고 텍스트 관련 오류 발생을 방지 하기 위해 계층으로 다시 끌어 야 할 수 있습니다.
+   > 참고: prefab를 클릭 하면 TMP Essentials에 대 한 정보를 요청 하는 팝업이 표시 될 수 있습니다. 필요에 따라 TMP Essentials 가져오기를 클릭 합니다. 이 팝업이 표시 되 면 계층 구조에서 prefab을 삭제 하 고 텍스트 관련 오류 발생을 방지 하기 위해 계층으로 다시 끌어 야 할 수 있습니다.
    >
 >![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 

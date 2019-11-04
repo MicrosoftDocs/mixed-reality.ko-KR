@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 사용자 지정 비전, hololens, 몰입 형, vr
-ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 2c8bd31958cca3b0e27fb0e97839d75fcdebe8c5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047217"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438512"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -49,7 +49,7 @@ Azure Custom Vision는 개발자가 사용자 지정 이미지 분류자를 빌�
 > [!NOTE]
 > 이 과정에서 주로 HoloLens에 초점을 맞춘 반면,이 과정에서 배운 내용을 Windows Mixed Reality 모던 (VR) 헤드셋에도 적용할 수 있습니다. 모던 (VR) 헤드셋은 액세스할 수 있는 카메라를 포함 하지 않으므로 PC에 연결 된 외부 카메라가 필요 합니다. 이 과정을 진행 하면서 모던 (VR) 헤드셋을 지원 하기 위해 사용 해야 하는 변경 내용에 대 한 정보를 볼 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (7 월 2018)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -66,7 +66,7 @@ Azure Custom Vision는 개발자가 사용자 지정 이미지 분류자를 빌�
 - Azure 설정 및 Custom Vision API 검색을 위한 인터넷 액세스
 - Custom Vision Service에서 인식 하고자 하는 각 개체에 대해 5 개 이상의 이미지 (10 개 이상 권장)를 표시 합니다. 원할 경우 [이 과정에서 이미 제공 된 이미지 (컴퓨터 마우스 및 키보드) ](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/ComputerVision_Images.zip)를 사용할 수 있습니다.
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
@@ -125,7 +125,7 @@ Custom Vision 포털에서 기본 목표는 이미지의 특정 개체를 인식
 
 Custom Vision Service 프로젝트를 학습 하려면:
 
-1.  태그 옆에 있는 **단추를클릭+** 합니다.
+1.  태그 옆에 있는 **+** 단추를 클릭 **합니다.**
 
     ![](images/AzureLabs-Lab302b-06.png)
 
@@ -195,7 +195,7 @@ Custom Vision Service 프로젝트를 학습 하려면:
 
     ![](images/AzureLabs-Lab302b-18.png)
 
-3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정* *편집*  > * 으로 이동한 다음 새 창에서 **외부 도구** 로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. * > *기본 설정* *편집**  으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![](images/AzureLabs-Lab302b-19.png)
 
@@ -205,7 +205,7 @@ Custom Vision Service 프로젝트를 학습 하려면:
 
 5.  아직 **파일 > 빌드 설정을** 사용 하 고 있는지 확인 합니다.
 
-    1.  **대상 장치가** **Hololens** 로 설정 됨
+    1.  **대상 장치가** **HoloLens** 로 설정 됨
 
         > 모던 헤드셋의 경우 **대상 장치** 를 *모든 장치로*설정 합니다.
         
@@ -261,7 +261,7 @@ Custom Vision Service 프로젝트를 학습 하려면:
 
     ![](images/AzureLabs-Lab302b-27.png)
 
-8.  *빌드 설정* 으로 돌아가기 *Unity C\# 프로젝트가* 더 이상 회색으로 표시 되지 않습니다 .이 옆의 확인란을 선택 합니다.
+8.  *빌드 설정* 으로 돌아가기 *Unity C\# 프로젝트가* 더 이상 회색으로 표시 되지 않습니다. 이 옆의 확인란을 선택 합니다.
 
 9.  빌드 설정 창을 닫습니다.
 
@@ -276,7 +276,7 @@ Custom Vision Service 프로젝트를 학습 하려면:
 이 과정에서는 **newtonsoft.json** 라이브러리를 사용 해야 합니다 .이 라이브러리는 자산에 DLL로 추가할 수 있습니다. 이 라이브러리를 포함 하는 패키지는 [이 링크에서 다운로드할 수 있습니다](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에서 제공 되는 Unity 패키지를 사용 합니다.
 
-1.  **자산* *가져오기 패키지* 사용자 지정 패키지 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다. >  > *
+1.  * >  > *패키지* *가져오기* *사용자 지정* *패키지**  메뉴 옵션의 자산을 사용 하 여 *unitypackage* 을 Unity에 추가 합니다.
 
 2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** 을 포함 하 여 모든 항목을 선택 했는지 확인 합니다.
 
@@ -297,7 +297,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 6.  다음으로 **newtonsoft.json** 폴더 내에서 **WSA** 폴더를 열어야 합니다. 방금 구성한 파일의 복사본이 표시 됩니다. 파일을 선택 하 고 검사기에서 다음을 확인 합니다.
     -   **모든 플랫폼이** **선택 취소** 되어 있음 
-    -   **만** **WSAPlayer** **확인** 됨
+    -   **WSAPlayer** 만 **선택** 됩니다.
     -   **Dont 프로세스** 를 **선택 했습니다** .
 
     ![](images/AzureLabs-Lab302b-31.png)
@@ -348,7 +348,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 2.  위에서 만든 폴더를 두 번 클릭 하 여 엽니다.
 
-3.  폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음,**C\# 스크립트** **만들기** > 를 클릭 합니다. 스크립트 이름을 *CustomVisionAnalyser*로 합니다.
+3.  폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 > **C\# 스크립트** **만들기** 를 클릭 합니다. 스크립트 이름을 *CustomVisionAnalyser*로 합니다.
 
 4.  새 *CustomVisionAnalyser* 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -473,7 +473,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 이 클래스를 만들려면:
 
-1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 **\# C 스크립트** **만들기** > 를 클릭 합니다. *CustomVisionObjects*스크립트를 호출 합니다.
+1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 > **C\# 스크립트** **만들기** 를 클릭 합니다. *CustomVisionObjects*스크립트를 호출 합니다.
 
 2.  새 **CustomVisionObjects** 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -610,7 +610,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 이 클래스를 만들려면:
 
-1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 **\# C 스크립트** **만들기** > 를 클릭 합니다. *VoiceRecognizer*스크립트를 호출 합니다.
+1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 > **C\# 스크립트** **만들기** 를 클릭 합니다. *VoiceRecognizer*스크립트를 호출 합니다.
 
 2.  새 **VoiceRecognizer** 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -718,7 +718,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 이 클래스를 만들려면:
 
-1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 **\# C 스크립트** **만들기** > 를 클릭 합니다. *CustomVisionTrainer*스크립트를 호출 합니다.
+1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 > **C\# 스크립트** **만들기** 를 클릭 합니다. *CustomVisionTrainer*스크립트를 호출 합니다.
 
 2.  새 *CustomVisionTrainer* 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -1079,7 +1079,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 이 클래스를 만들려면:
 
-1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 **\# C 스크립트** **만들기** > 를 클릭 합니다. 스크립트 이름을 *SceneOrganiser*로 합니다.
+1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 한 다음 > **C\# 스크립트** **만들기** 를 클릭 합니다. 스크립트 이름을 *SceneOrganiser*로 합니다.
 
 2.  새 *SceneOrganiser* 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -1447,7 +1447,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
                 }
             } 
 
-            // Subscribing to the Hololens API gesture recognizer to track user gestures
+            // Subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -1659,15 +1659,15 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 HoloLens에 배포 하려면:
 
-1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다. 이렇게 하려면 다음을 수행합니다.
 
     1.  HoloLens를 입고 하는 동안 **설정을**엽니다.
 
-    2.  **네트워크 & 인터넷** > **wi-fi** > **고급 옵션** 으로 이동 합니다.
+    2.  **네트워크 & 인터넷** > **Wi-fi** > **고급 옵션** 으로 이동 합니다.
 
     3.  **IPv4** 주소를 적어둡니다.
 
-    4.  그런 다음 **설정**으로 다시 이동한 다음**개발자** 를 위한 **& 보안** > 을 업데이트 합니다.
+    4.  그런 다음 **설정**으로 다시 이동한 다음 **개발자를 위한** **& 보안** > 를 업데이트 합니다.
 
     5.  **에서 개발자 모드를**설정 합니다.
 
@@ -1694,7 +1694,7 @@ HoloLens에 배포 하려면:
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Training;
 ```
-로 구분하거나 여러
+또는
 ```
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Analysis;

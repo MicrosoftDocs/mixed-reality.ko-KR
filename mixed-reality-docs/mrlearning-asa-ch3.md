@@ -1,21 +1,21 @@
 ---
 title: Azure 공간 앵커 자습서-3. Azure 공간 고정 피드백 표시
-description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
+description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702024"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438419"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Azure 공간 고정 피드백 표시
 
-이 단원에서는 Azure 공간 앵커를 사용할 때 앵커 검색, 이벤트 및 상태에 대 한 피드백을 사용자에 게 제공 하는 방법에 대해 알아봅니다.
+이 단원에서는 Azure 공간 앵커를 사용할 때 앵커 검색, 이벤트 및 상태에 대 한 피드백을 사용자에 게 제공 하는 방법을 알아봅니다.
 
 ## <a name="objectives"></a>목표
 
@@ -27,12 +27,12 @@ ms.locfileid: "68702024"
 
 ### <a name="set-up-asa-feedback-ui-panel"></a>사용자 의견 피드백 설정 UI 패널
 
-1. 이 단원에서는 "SaveAnchorToDisk" 및 "ShareAnchor" 단추를 사용 하 여 두 단추를 모두 선택 하 고 아래와 같이 검사기 패널에서 확인란의 선택을 취소 하 여 이러한 단추를 숨깁니다.
+1. 이 단원에서는 "SaveAnchorToDisk" 및 "ShareAnchor" 단추를 사용 하지 않으므로 두 단추를 모두 선택 하 고 아래와 같이 검사기 패널에서 확인란의 선택을 취소 하 여 이러한 단추를 숨깁니다.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. 다음으로 명령 패널을 만듭니다. "명령" 단추를 마우스 오른쪽 단추로 클릭 하 고 "3D 개체" 위로 마우스를 이동 하 여 "textmeshpro"를 선택 합니다.
+2. 명령 패널을 만듭니다. "명령" 단추를 마우스 오른쪽 단추로 클릭 하 고 "3D 개체"를 마우스로 가리킨 다음 "textmeshpro"를 선택 합니다.
 
 ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
@@ -50,19 +50,19 @@ ms.locfileid: "68702024"
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
-이제 [여기](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) 를 클릭 하 여 다음 몇 단계에서 필요한 파일을 다운로드 합니다.
+다음 몇 단계에서 필요한 파일을 다운로드 하려면 [여기](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) 를 클릭 하세요.
 
 6. 탐색기가 열리면 자산 폴더와 "ASAmodulesAssets" 폴더를 차례로 선택한 다음 앵커 피드백 스크립트와 anchor 모듈 스크립트 파일을 폴더에 복사 합니다. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> 참고: 이전을 덮어쓸지 아니면 이전을 유지할지를 묻는 팝업이 표시 되 면 덮어쓰기를 선택 했는지 확인 합니다.
+> 참고: 이전을 덮어쓸지 아니면 이전을 유지할지를 묻는 팝업 메시지가 표시 되 면 덮어쓰기를 선택 합니다.
 
-7. 이제 자산 폴더로 돌아갑니다. 그런 다음 "AzureSpatialAnchorsPlugin" 폴더, 예 폴더 및 마지막으로 scripts 폴더로 이동한 후 Azure 공간 앵커 데모 래퍼를 해당 폴더에 복사 합니다. 
+7. 자산 폴더로 돌아갑니다. 그런 다음 "AzureSpatialAnchorsPlugin" 폴더로 이동 하 고 예제 폴더와 마지막으로 Scripts 폴더를 차례로 이동 합니다. 그런 다음 Azure 공간 앵커 데모 래퍼를 해당 폴더에 복사 합니다. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. 파일이 업로드 되 면 ASA_feedback 계층에서 "feedbackpanel" 텍스트를 선택 하 고 "구성 요소 추가"를 클릭 한 다음이를 검색 하 고 표시 되 면 선택 하 여 앵커 피드백 스크립트를 추가 합니다. 
+8. 파일이 업로드 되 면 ASA_feedback 계층 구조에서 "feedbackpanel" 텍스트를 선택 하 고 "구성 요소 추가"를 클릭 한 다음, 표시 되 면이를 검색 하 고 선택 하 여 앵커 피드백 스크립트를 추가 합니다. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
@@ -72,6 +72,6 @@ ms.locfileid: "68702024"
 
 ## <a name="congratulations"></a>축하합니다.
 
-이 단원에서는 사용자에 게 실시간 피드백을 제공 하기 위해 Azure 공간 고정 환경의 현재 상태를 표시 하는 UI 패널을 만드는 방법을 알아보았습니다.
+이 단원에서는 사용자에 게 실시간 피드백을 제공 하기 위해 Azure 공간 고정 환경의 현재 상태를 표시 하는 UI 패널을 만드는 방법을 배웠습니다.
 
 

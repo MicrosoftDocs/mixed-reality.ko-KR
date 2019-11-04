@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 자산, 생성, 프로세스, 예산, 다각형, 질감, 셰이더, 성능
-ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: fb8266a018e11a8fb944819a0cac5ace38f2cb25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896501"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437008"
 ---
 # <a name="asset-creation-process"></a>자산 생성 프로세스
 
@@ -33,23 +33,23 @@ Windows Mixed Reality는 Microsoft에서 DirectX로 만든 수십 년의 투자�
 <tr>
 <th style="text-align:left;"><b>가치</b></th><th style="text-align:right;"> CPU</th><th> GPU</th><th> 메모리</th>
 </tr><tr>
-<td> 다각형</td><td> 0</td><td> 5%</td><td> 10%</td>
+<td> 다각형</td><td> 0</td><td> 5</td><td> 5-10</td>
 </tr><tr>
-<td> 텍스처</td><td> 5%</td><td> 15%</td><td>25%</td>
+<td> 텍스처</td><td> 5</td><td> 15</td><td>25%</td>
 </tr><tr>
-<td> 셰이더</td><td> 15%</td><td> 35%</td><td> 0</td>
+<td> 셰이더</td><td> 15</td><td> 35%</td><td> 0</td>
 </tr><tr>
 <td> <b>움직임</b></td><td></td><td></td><td></td>
 </tr><tr>
-<td> 물리</td><td> 5%</td><td> 15%</td><td> 0</td>
+<td> 물리</td><td> 5</td><td> 15</td><td> 0</td>
 </tr><tr>
-<td> 실시간 조명</td><td> 10%</td><td> 0</td><td> 0</td>
+<td> 실시간 조명</td><td> 5-10</td><td> 0</td><td> 0</td>
 </tr><tr>
-<td> 미디어 (오디오/비디오)</td><td> -</td><td> 15%</td><td> 25%</td>
+<td> 미디어 (오디오/비디오)</td><td> -</td><td> 15</td><td> 25%</td>
 </tr><tr>
-<td> 스크립트/논리</td><td> 25%</td><td> 0</td><td> 5%</td>
+<td> 스크립트/논리</td><td> 25%</td><td> 0</td><td> 5</td>
 </tr><tr>
-<td> 일반 오버 헤드</td><td> 5%</td><td> 5%</td><td> 5%</td>
+<td> 일반 오버 헤드</td><td> 5</td><td> 5</td><td> 5</td>
 </tr><tr>
 <td> <b>개수</b></td><td> <b>65%</b></td><td> <b>90%</b></td><td> <b>70%</b></td>
 </tr>
@@ -84,7 +84,7 @@ Windows Mixed Reality는 Microsoft에서 DirectX로 만든 수십 년의 투자�
 
 ### <a name="purchasing-assets"></a>자산 구매
 
-또 다른 뛰어난 옵션은 사용자 환경에 대 한 자산을 구입 하는 것입니다. [Unity Asset Store](https://www.assetstore.unity3d.com/) 또는 [TurboSquid](http://www.turbosquid.com/) 와 같은 서비스를 통해 사용할 수 있는 자산이 있습니다.
+또 다른 뛰어난 옵션은 사용자 환경에 대 한 자산을 구입 하는 것입니다. [Unity Asset Store](https://www.assetstore.unity3d.com/) 또는 [TurboSquid](https://www.turbosquid.com/) 와 같은 서비스를 통해 사용할 수 있는 자산이 있습니다.
 
 타사에서 자산을 구입 하는 경우 항상 다음을 확인 해야 합니다.
 * **Poly 수는 무엇 인가요?**
@@ -92,7 +92,7 @@ Windows Mixed Reality는 Microsoft에서 DirectX로 만든 수십 년의 투자�
 * **모델에 대 한 세부 정보 (LODs)가 있나요?**
   * 모델에 대 한 세부 정보를 사용 하 여 성능에 대 한 모델 세부 정보를 확장할 수 있습니다.
 * **원본 파일을 사용할 수 있나요?**
-  * 일반적으로 [Unity Asset Store](https://www.assetstore.unity3d.com/) 에는 포함 되지 않지만 항상 [TurboSquid](http://www.turbosquid.com/)와 같은 서비스에 포함 됩니다.
+  * 일반적으로 [Unity Asset Store](https://www.assetstore.unity3d.com/) 에는 포함 되지 않지만 항상 [TurboSquid](https://www.turbosquid.com/)와 같은 서비스에 포함 됩니다.
   * 원본 파일이 없으면 자산을 수정할 수 없습니다.
   * 제공 된 소스 파일을 3D 도구에서 가져올 수 있는지 확인 합니다.
 * **수신 하는 내용 파악**

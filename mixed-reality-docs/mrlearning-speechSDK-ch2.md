@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: 5382a1cce38e8607042c21b8dd3157d1da2fa72e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701857"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437559"
 ---
 # <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
 
@@ -19,15 +19,16 @@ ms.locfileid: "68701857"
 
 ## <a name="instructions"></a>지침
 
-1. 계층에서 Lunarcom_Base 개체를 선택 하 고 검사기 패널에서 구성 요소 추가를 클릭 합니다. Lunarcom 오프 라인 인식을 검색 하 고 선택 합니다.
+1. 계층에서 Lunarcom_Base 개체를 선택 합니다.
+2. 검사기 패널에서 구성 요소 추가를 클릭 합니다. Lunarcom 오프 라인 인식을 검색 하 고 선택 합니다.
 
 ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
 
-2. LunarcomOfflineRecognizer의 드롭다운을 클릭 하 고 사용을 선택 합니다. 이 프로그램은 사용자가 연결 되지 않은 것 처럼 작동 하는 프로젝트를 프로그램 합니다. 
+3. LunarcomOfflineRecognizer의 드롭다운을 클릭 하 고 사용을 선택 합니다. 이 프로그램은 사용자가 연결 되지 않은 것 처럼 작동 하는 프로젝트를 프로그램 합니다. 
 
 ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
 
-3. 이제 Unity 편집기에서 play를 눌러 테스트 합니다. 장면에서 왼쪽 아래 모서리에 있는 마이크를 누르고 말하기를 시작 합니다. 
+4. Unity 편집기에서 Play를 누르고 테스트 합니다. 장면의 왼쪽 아래 모서리에 있는 마이크를 누르고 말하기를 시작 합니다. 
 
 > [!NOTE]
 > 오프 라인 상태 이기 때문에 절전 모드 해제 단어 기능이 사용 하지 않도록 설정 되었습니다. 오프 라인에서 음성이 인식 될 때마다 마이크를 물리적으로 클릭 해야 합니다. 
@@ -41,5 +42,5 @@ ms.locfileid: "68701857"
 오프 라인 모드를 사용 하도록 설정 했습니다. 이제 오프 라인 상태인 경우에도 음성 SDK를 사용 하 여 프로젝트에 대 한 작업을 수행할 수 있습니다. 
 
 
-[다음 자습서: 3.  Azure Cognitive Services speech translation 구성 요소 추가](mrlearning-speechSDK-ch3.md)
+[다음 자습서: 3. Azure Cognitive Services speech translation 구성 요소 추가](mrlearning-speechSDK-ch3.md)
 

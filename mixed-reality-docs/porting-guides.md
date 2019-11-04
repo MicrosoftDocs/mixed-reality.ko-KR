@@ -6,17 +6,14 @@ ms.author: cwhite
 ms.date: 10/02/2018
 ms.topic: article
 keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP
-ms.openlocfilehash: ece478f6bc8f43fc75eb8271096cdec37c41dced
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 19835cd06680e374c92e6e454b11663481bc4a07
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387758"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438341"
 ---
 # <a name="porting-guides"></a>포팅 가이드
-
-> [!NOTE]
-> HoloLens 2에 대 한 추가 지침은 [곧](index.md#news-and-notes)제공 될 예정입니다.
 
 Windows 10에는 몰입 형 및 holographic 헤드셋에 대 한 지원이 직접 포함 되어 있습니다. Oculus Rift 또는 HTC Vive와 같은 다른 장치에 대 한 콘텐츠를 빌드한 경우 이러한 콘텐츠는 운영 체제의 플랫폼 API 위에 있는 라이브러리에 종속 됩니다. Windows Mixed Reality에 기존 콘텐츠를 가져오는 경우에는 Windows Api에 이러한 다른 Sdk를 사용 하는 방법의 대상을 변경 해야 합니다. [Mixed reality 용 Windows 플랫폼 api](https://docs.microsoft.com/uwp/api/Windows.Perception) 는 UWP (유니버설 Windows 플랫폼) 앱 모델 에서만 작동 합니다. 따라서 앱이 UWP에 대해 아직 빌드되지 않은 경우 UWP로 포팅 하는 작업은 포팅 환경에 포함 됩니다.
 
@@ -35,7 +32,7 @@ Windows 10에는 몰입 형 및 holographic 헤드셋에 대 한 지원이 직�
 
 [도구 설치](install-the-tools.md#for-immersive-vr-headset-development) 페이지에 권장 되는 개발 하드웨어가 나열 됩니다.
 
-### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>일반 2 단계: 최신 Windows 10 flight로 업그레이드
+### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>일반적인 2 단계: Windows 10의 최신 비행으로 업그레이드
 
 Windows Mixed Reality 플랫폼은 아직 활성 개발 중 이며 가장 효과적으로 "Windows 참가자가 빠르게" 비행 하는 것이 좋습니다. Windows 항공편에 대 한 액세스 권한을 받으려면 [Windows 참가자 프로그램에 참여](https://insider.windows.com/)해야 합니다.
 1. [Windows 10 크리에이터 스 업데이트](https://www.microsoft.com/software-download/windows10) 설치
@@ -43,7 +40,7 @@ Windows Mixed Reality 플랫폼은 아직 활성 개발 중 이며 가장 효과
 3. [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 사용
 4. 설정--> 업데이트 & 보안 섹션을 통해 [Windows Insider Fast flight](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview) 로 전환 합니다.
 
-### <a name="common-step-3-upgrade-to-the-most-recent-build-of-visual-studio"></a>일반적인 3 단계: 최신 버전의 Visual Studio로 업그레이드
+### <a name="common-step-3-upgrade-to-the-most-recent-build-of-visual-studio"></a>일반적인 3 단계: Visual Studio의 최신 빌드로 업그레이드
 * Visual Studio 2019 [의 도구 설치 페이지를](install-the-tools.md#installation-checklist) 참조 하세요.
 
 ### <a name="common-step-4-be-ready-for-the-store"></a>일반적인 4 단계: 스토어 준비
@@ -64,7 +61,7 @@ Windows Mixed Reality 플랫폼은 아직 활성 개발 중 이며 가장 효과
 2. 시작 하기 전에 프로젝트 복사본 저장
 3. 포팅의 포팅에서 제공 되는 [설명서](https://docs.unity3d.com/Manual/UpgradeGuides.html) 를 검토 합니다.
 4. 자동 API 업데이트 프로그램을 사용 하기 위한 Unity 사이트의 [지침](https://docs.unity3d.com/Manual/APIUpdater.html) 을 따르세요.
-5. 프로젝트를 실행 하기 위해 수행 해야 하는 추가 변경 내용이 있는지 확인 하 고 나머지 오류와 경고를 사용 하 여 작업 합니다. 참고: 사용자가 의존 하는 미들웨어가 있는 경우 해당 미들웨어를 업데이트 해야 할 수 있습니다 (아래 3 단계의 자세한 내용 참조).
+5. 프로젝트를 실행 하기 위해 수행 해야 하는 추가 변경 내용이 있는지 확인 하 고 나머지 오류와 경고를 사용 하 여 작업 합니다. 참고: 종속 된 미들웨어가 있는 경우 해당 미들웨어를 업데이트 해야 할 수 있습니다 (아래 3 단계의 자세한 내용 참조).
 
 ### <a name="unity-step-3-upgrade-your-middleware-to-the-latest-versions"></a>Unity 3 단계: 미들웨어를 최신 버전으로 업그레이드
 
@@ -77,25 +74,25 @@ Windows Mixed Reality 플랫폼은 아직 활성 개발 중 이며 가장 효과
 * UWP 개발 리소스에 대 한 자세한 내용은 [Windows 10 게임 개발 가이드](https://docs.microsoft.com/windows/uwp/gaming/e2e)를 참조 하세요.
 * Unity는 계속 해 서 IL2CPP 지원을 개선 하 고 있습니다. IL2CPP를 사용 하면 일부 UWP 포트를 훨씬 쉽게 만들 수 있습니다. 현재 .Net scripting 백 엔드를 대상으로 하는 경우 IL2CPP 백엔드를 활용 하기 위해를 변환 하는 것이 좋습니다.
 
-참고: 응용 프로그램에 스트림에서의 match와 같은 장치 관련 서비스에 대 한 종속성이 있는 경우이 단계에서 사용 하지 않도록 설정 해야 합니다. 나중에 Windows에서 제공 하는 것과 동일한 서비스에 연결할 수 있습니다.
+참고: 응용 프로그램에 장치 관련 서비스 (예: 스트림에서의 일치 항목)에 대 한 종속성이 있는 경우이 단계에서 사용 하지 않도록 설정 해야 합니다. 나중에 Windows에서 제공 하는 것과 동일한 서비스에 연결할 수 있습니다.
 
-### <a name="unity-step-5-deprecated"></a>Unity 5 단계: Mapi
+### <a name="unity-step-5-deprecated"></a>Unity 5 단계: (사용 되지 않음)
 
 5 단계가 더 이상 필요 하지 않습니다. 단계 인덱싱이 동일 하 게 유지 되도록 여기에 남겨 둡니다.
 
 ### <a name="unity-step-6-get-your-windows-mixed-reality-hardware-set-up"></a>Unity 6 단계: Windows Mixed Reality 하드웨어 설정 가져오기
-1. 모던 헤드셋 설정 [의 단계 검토](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start
-)
+1. [모던 헤드셋 설정](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start
+) 의 단계 검토
 2. [Windows Mixed reality 시뮬레이터를 사용 하](using-the-windows-mixed-reality-simulator.md) 고 [windows mixed Reality 홈을 탐색](navigating-the-windows-mixed-reality-home.md) 하는 방법을 알아봅니다.
 
-### <a name="unity-step-7-target-your-application-to-run-on-windows-mixed-reality"></a>Unity 7 단계: Windows Mixed Reality에서 실행할 응용 프로그램을 대상으로 합니다.
+### <a name="unity-step-7-target-your-application-to-run-on-windows-mixed-reality"></a>Unity 7 단계: Windows Mixed Reality에서 실행할 응용 프로그램 대상
 1. 먼저 특정 VR SDK와 관련 된 다른 모든 라이브러리 지원을 제거 하거나 조건부로 컴파일해야 합니다. 이러한 자산은 Windows Mixed Reality와 같이 다른 VR Sdk와 호환 되지 않는 방식으로 프로젝트의 설정 및 속성을 변경 하는 경우가 많습니다.
     * 예를 들어 프로젝트가 SteamVR SDK를 참조 하는 경우 Windows 스토어 빌드 대상으로 내보낼 때 이러한 prefabs 및 스크립트 API 호출을 제외 하도록 프로젝트를 업데이트 해야 합니다.
     * 다른 VR Sdk를 조건부로 제외 하기 위한 구체적인 단계는 곧 제공 될 예정입니다.
 2. Unity 프로젝트에서 [Windows 10 SDK를 대상으로 합니다](holograms-100.md#target-windows-10-sdk) .
 3. 각 장면에 대해 [카메라를 설정 합니다](holograms-100.md#chapter-2---setup-the-camera) .
 
-### <a name="unity-step-8-use-the-stage-to-place-content-on-the-floor"></a>Unity 8 단계: 스테이지를 사용 하 여 바닥에 콘텐츠를 저장 합니다.
+### <a name="unity-step-8-use-the-stage-to-place-content-on-the-floor"></a>Unity 8 단계: 스테이지를 사용 하 여 바닥에 콘텐츠 넣기
 
 광범위 한 [환경 규모](coordinate-systems.md)에서 혼합 현실 환경을 빌드할 수 있습니다.
 
@@ -155,7 +152,7 @@ Windows Mixed Reality는 하이엔드 게임 Pc부터 광범위 한 시장 메�
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) 및 [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) 에는 성능 프로파일러가 포함 되며, [Microsoft](understanding-performance-for-mixed-reality.md) 및 [Intel](https://software.intel.com/articles/vr-content-developer-guide) 은 성능 프로 파일링 및 최적화에 대 한 지침을 게시 합니다. [혼합 현실 성능을 이해](understanding-performance-for-mixed-reality.md)하는 데 사용할 수 있는 성능에 대 한 광범위 한 설명이 있습니다. Unity에 [대 한 성능 권장 사항](performance-recommendations-for-unity.md)에서 unity에 대 한 구체적인 정보를 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Windows Mixed Reality 최소 PC 하드웨어 호환성 지침](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)

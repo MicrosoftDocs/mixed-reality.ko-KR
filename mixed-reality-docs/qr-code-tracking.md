@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr, lbe, 위치 기반 엔터테인먼트, vr 아케이드, 아케이드, 모던, qr, qr 코드, hololens2
-ms.openlocfilehash: 736ab265db2145dd784c435e525059ed3a2fcbbb
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: e14fe14fd76bceaf506dd7b85a57825c3f18d223
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047164"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438112"
 ---
 # <a name="qr-code-tracking"></a>QR 코드 추적
 
@@ -23,7 +23,7 @@ HoloLens 2는 헤드셋 주위의 환경에서 QR 코드를 검색 하 여 각 �
 <tr>
 <th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens(1세대)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> QR 코드 검색</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">참고 참조</td>
+<td> QR 코드 검색</td><td style="text-align: center;">‎</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">참고 참조</td>
 </tr>
 </table>
 
@@ -31,16 +31,14 @@ HoloLens 2는 헤드셋 주위의 환경에서 QR 코드를 검색 하 여 각 �
 >데스크톱 Pc의 몰입 형 Windows Mixed Reality 헤드셋 지원은 현재 아래의 NuGet 패키지에서 지원 되지 않습니다.  데스크톱 지원에 대 한 추가 업데이트를 계속 해 서 조정 하세요.
 
 ## <a name="getting-the-qr-package"></a>QR 패키지 가져오기
-[여기](https://github.com/dorreneb/mixed-reality/releases)에서 QR 코드 검색을 위한 NuGet 패키지를 다운로드할 수 있습니다.
-
-이 패키지의 이후 버전은 공용 NuGet 패키지 리포지토리를 통해 사용할 수 있습니다.
+[여기](https://nuget.org/Packages/Microsoft.MixedReality.QR)에서 QR 코드 검색을 위한 NuGet 패키지를 다운로드할 수 있습니다.
 
 ## <a name="detecting-qr-codes"></a>QR 코드 검색
 
 ### <a name="adding-the-webcam-capability"></a>웹캠 기능 추가
-QR 코드를 검색 하려면 매니페스트에 기능 `webcam` 을 추가 해야 합니다. 이 기능은 사용자 환경에서 검색 된 코드 내의 데이터에 중요 한 정보가 포함 될 수 있으므로 필요 합니다.
+QR 코드를 검색 하려면 매니페스트에 `webcam` 기능을 추가 해야 합니다. 이 기능은 사용자 환경에서 검색 된 코드 내의 데이터에 중요 한 정보가 포함 될 수 있으므로 필요 합니다.
 
-다음을 호출 `QRCodeWatcher.RequestAccessAsync()`하 여 사용 권한을 요청할 수 있습니다.
+`QRCodeWatcher.RequestAccessAsync()`를 호출 하 여 사용 권한을 요청할 수 있습니다.
 
 _C#:_
 ```cs
@@ -54,118 +52,87 @@ co_await QRCodeWatcher.RequestAccessAsync();
 
 QRCodeWatcher 개체를 구성 하기 전에 사용 권한을 요청 해야 합니다.
 
-QR 코드 검색 `webcam` 기능을 사용 하려면 장치의 추적 카메라를 사용 하 여 검색을 수행 합니다. 이를 통해 장치 사진/비디오 (PV) 카메라를 검색 하는 것과 비교 하 여 더 광범위 한 검색 FOV와 더 나은 배터리 수명을 제공 합니다.
+QR 코드 검색에 `webcam` 기능이 필요 하지만 장치의 추적 카메라를 사용 하 여 검색을 수행 합니다. 이를 통해 장치 사진/비디오 (PV) 카메라를 검색 하는 것과 비교 하 여 더 광범위 한 검색 FOV와 더 나은 배터리 수명을 제공 합니다.
 
 ### <a name="detecting-qr-codes-in-unity"></a>Unity에서 QR 코드 검색
 
-MRTK에 대 한 종속성을 취하지 않고 Unity에서 QR 코드 검색 API를 사용할 수 있습니다. 이렇게 하려면 다음을 수행 해야 합니다.
+MRTK에 대 한 종속성을 취하지 않고 Unity에서 QR 코드 검색 API를 사용할 수 있습니다. 이렇게 하려면 [Unity 용 nuget](https://github.com/GlitchEnzo/NuGetForUnity)을 사용 하 여 nuget 패키지를 설치 해야 합니다.
 
-1. 이름 *플러그*인을 사용 하 여 unity 프로젝트의 자산 폴더에 새 폴더를 만듭니다.
-2. 이 폴더의 필요한 모든 파일을 방금 만든 로컬 "플러그 인" 폴더에 복사 합니다.
-
-Holographic square와 연결 된 데이터 (예: GUID, 실제 크기, 타임 스탬프 및 디코딩된 데이터)를 표시 하는 샘플 Unity 앱이 있습니다. 이 앱은에서 https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes 찾을 수 있습니다.
+Holographic square와 연결 된 데이터 (예: GUID, 실제 크기, 타임 스탬프 및 디코딩된 데이터)를 표시 하는 샘플 Unity 앱이 있습니다. 이 앱은 https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes 에서 찾을 수 있습니다.
 
 ### <a name="detecting-qr-codes-in-c"></a>에서 QR 코드 검색C++
 
->[!NOTE]
->이 C++ 문서의 코드 조각은 현재 [ C++ holographic 프로젝트 템플릿에](creating-a-holographic-directx-project.md)사용 되는 C++것 처럼 C + 17-so-far working 규격 C++/winrt가 아닌/cx 사용을 보여 줍니다. 개념은 코드를 변환 해야 C++하지만/winrt 프로젝트에 대해 동일 합니다.
+```cpp
+using namespace winrt::Windows::Foundation;
+using namespace winrt::Microsoft::MixedReality::QR;
 
-```
-using namespace Microsoft.MixedReality.QR;
+class QRListHelper
+{
+public:
+    QRListHelper(MyApplication& app) :
+        m_app(app)
+    {}
 
-    public ref class QRListHelper sealed
+    IAsyncAction SetUpQRCodes()
     {
-    public:
-        QRListHelper()
+        if (QRCodeWatcher::IsSupported())
         {
-
+            QRCodeWatcherAccessStatus status = co_await QRCodeWatcher::RequestAccessAsync();
+            InitializeQR(status);
         }
+    }
 
-        void setApp(SpatialStageManager* pStage)
+private:
+    void OnAddedQRCode(const IInspectable&, const QRCodeAddedEventArgs& args)
+    {
+        m_app.OnAddedQRCode(args);
+    }
+
+    void OnUpdatedQRCode(const IInspectable&, const QRCodeUpdatedEventArgs& args)
+    {
+        m_app.OnUpdatedQRCode(args);
+    }
+
+    void OnEnumerationComplete(const IInspectable&, const IInspectable&)
+    {
+        m_app.OnEnumerationComplete();
+    }
+
+    MyApplication& m_app;
+    QRCodeWatcher m_qrWatcher{ nullptr };
+
+    void InitializeQR(QRCodeWatcherAccessStatus status)
+    {
+        if (status == QRCodeWatcherAccessStatus::Allowed)
         {
-            m_pStage = pStage;
+            m_qrWatcher = QRCodeWatcher();
+            m_qrWatcher.Added({ this, &QRListHelper::OnAddedQRCode });
+            m_qrWatcher.Updated({ this, &QRListHelper::OnUpdatedQRCode });
+            m_qrWatcher.EnumerationCompleted({ this, &QRListHelper::OnEnumerationComplete });
+            m_qrWatcher.Start();
         }
-
-        void SetUpQRCodes()
+        else
         {
-            if (QRCodeWatcher::IsSupported())
-            {
-                auto operation = QRCodeWatcher::RequestAccessAsync();
-
-                WeakReference weakThis(this);
-
-                operation->Completed = ref new AsyncOperationCompletedHandler<QRCodeWatcherAccessStatus>(
-                    [weakThis](IAsyncOperation< QRCodeWatcherAccessStatus>^ operaion, AsyncStatus status)
-                {
-                    QRListHelper^ QRListHelper = weakThis.Resolve<QRListHelper>();
-                    if (status == AsyncStatus::Completed)
-                    {
-                        QRListHelper->InitializeQR( operaion->GetResults());
-                    }
-                }
-                );
-            }
+            // Permission denied by system or user
+            // Handle the failures
         }
-
-    private:
-        void OnAddedQRCode(Object^, QRCodeAddedEventArgs ^args)
-        {
-            m_pStage->OnAddedQRCode(args);
-        }
-        void OnUpdatedQRCode(Object^, QRCodeUpdatedEventArgs ^args)
-        {
-            m_pStage->OnUpdatedQRCode(args);
-        }
-        void OnEnumerationComplete(Object^, Object^)
-        {
-            m_pStage->OnEnumerationComplete();
-        }
-
-        SpatialStageManager* m_pStage;
-        QRCodeWatcher^ m_qrWatcher;
-
-
-
-        void InitializeQR(QRCodeWatcherAccessStatus status)
-        {
-            if (status == QRCodeWatcherAccessStatus::Allowed)
-            {
-                m_qrWatcher = ref new QRCodeWatcher();
-
-                m_qrWatcher->Added += ref new EventHandler<Object^, QRCodeAddedEventArgs^>(this, &QRListHelper::OnAddedQRCode);
-                m_qrWatcher->Updated += ref new EventHandler<Object^, QRCodeUpdatedEventArgs^>(this, &QRListHelper::OnUpdatedQRCode);
-                m_qrWatcher->EnumerationCompleted += ref new EventHandler<Object^, Object^>(this, &QRListHelper::OnEnumerationComplete);
-                try
-                {
-                    m_qrWatcher->Start();
-                }
-                catch (...)
-                {
-
-                }
-            }
-            else
-            {
-                // Permission denied by system or user
-                // Handle the failures
-            }
-        }
-    }; 
+    }
+};
 ```
 
 ## <a name="getting-the-coordinate-system-for-a-qr-code"></a>QR 코드의 좌표계 가져오기
 
 검색 된 각 QR 코드는 아래와 같이 왼쪽 상단에 있는 빠른 검색 사각형의 왼쪽 위 모서리에 있는 QR 코드와 정렬 된 [공간 좌표계](coordinate-systems.md) 를 제공 합니다.  QR SDK를 직접 사용 하는 경우 Z 축이 문서를 가리키고 (표시 되지 않음) Unity 좌표로 변환 되 면 Z 축 지점은 용지에서 제외 되며 왼쪽으로 전달 됩니다.
 
-QR 코드의 SpatialCoordinateSystem가 표시 됩니다. 이 좌표계는 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview:: CreateCoordinateSystemForNode</a> 를 호출 하 고 코드의 SpatialGraphNodeId를 전달 하 여 플랫폼에서 가져올 수 있습니다.
+QR 코드의 SpatialCoordinateSystem은 표시 된 대로 정렬 됩니다. 이 좌표계는 <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createcoordinatesystemfornode" target="_blank">SpatialGraphInteropPreview:: CreateCoordinateSystemForNode</a> 를 호출 하 고 코드의 SpatialGraphNodeId를 전달 하 여 플랫폼에서 가져올 수 있습니다.
 
 ![QR 코드 좌표계](images/Qr-coordinatesystem.png) 
 
-QRCode 개체의 경우 다음 C++/cx 코드는 사각형을 만들고 QR 코드의 좌표계를 사용 하 여 삽입 하는 방법을 보여 줍니다.
+QRCode 개체의 경우 다음 C++ 코드는 사각형을 만들고 QR 코드의 좌표계를 사용 하 여 삽입 하는 방법을 보여 줍니다.
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
-std::vector<float3> SpatialStageManager::CreateRectangle(float width, float height)
+std::vector<float3> MyApplication::CreateRectangle(float width, float height)
 {
     std::vector<float3> vertices(4);
 
@@ -181,29 +148,32 @@ std::vector<float3> SpatialStageManager::CreateRectangle(float width, float heig
 실제 크기를 사용 하 여 QR 사각형을 만들 수 있습니다.
 
 ```cpp
-std::vector<float3> qrVertices = CreateRectangle(Code->PhysicalSizeMeters, Code->PhysicalSizeMeters); 
+std::vector<float3> qrVertices = CreateRectangle(code.PhysicalSideLength(), code.PhysicalSideLength()); 
 ```
 
 좌표계를 사용 하 여 QR 코드를 그리거나 위치에 holograms을 연결할 수 있습니다.
 
 ```cpp
-Windows::Perception::Spatial::SpatialCoordinateSystem^ qrCoordinateSystem = Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(Code->SpatialGraphNodeId);
+using namespace winrt::Windows::Perception::Spatial;
+using namespace winrt::Windows::Perception::Spatial::Preview;
+SpatialCoordinateSystem qrCoordinateSystem = SpatialGraphInteropPreview::CreateCoordinateSystemForNode(code.SpatialGraphNodeId());
 ```
 
-*Qrcodewatcher:: QRCodeAddedHandler* 은 다음과 같을 수 있습니다.
+*QRCodeAddedHandler* 다음과 같이 보일 수 있습니다.
 
 ```cpp
-void MyClass::OnAddedQRCode(Object ^sender, QRCodeWatcher::QRCodeAddedEventArgs ^args)
+void MyApplication::OnAddedQRCode(const QRCodeAddedEventArgs& args)
 {
-    std::vector<float3> qrVertices = CreateRectangle(args->Code->PhysicalSizeMeters, args->Code->PhysicalSizeMeters);
+    QRCode code = args.Code();
+    std::vector<float3> qrVertices = CreateRectangle(code.PhysicalSideLength(), code.PhysicalSideLength());
     std::vector<unsigned short> qrCodeIndices = TriangulatePoints(qrVertices);
     XMFLOAT3 qrAreaColor = XMFLOAT3(DirectX::Colors::Aqua);
 
-    Windows::Perception::Spatial::SpatialCoordinateSystem^ qrCoordinateSystem =  Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview::CreateCoordinateSystemForNode(args->Code->SpatialGraphNodeId);
+    SpatialCoordinateSystem qrCoordinateSystem = SpatialGraphInteropPreview::CreateCoordinateSystemForNode(code.SpatialGraphNodeId());
     std::shared_ptr<SceneObject> m_qrShape =
         std::make_shared<SceneObject>(
             m_deviceResources,
-            reinterpret_cast<std::vector<XMFLOAT3>&>(qrVertices),
+            qrVertices,
             qrCodeIndices,
             qrAreaColor,
             qrCoordinateSystem);
@@ -273,9 +243,9 @@ namespace Microsoft.MixedReality.QR
         public Guid SpatialGraphNodeId { get; }
 
         /// <summary>
-        /// Version of this QR code. Version 1-40 are regular QR codes and 41-44 are Micro QR code formats 1-4.
+        /// Version of this QR code. Version 1-40 are regular QR codes and M1 to M4 are Micro QR code formats 1-4.
         /// </summary>
-        public VersionInfo Version { get; }
+        public QRVersion Version { get; }
 
         /// <summary>
         /// Physical width and height of this QR code in meters.
@@ -436,7 +406,7 @@ namespace Microsoft.MixedReality.QR
     /// <summary>
     /// Version info for QR codes, including Micro QR codes.
     /// </summary>
-    public enum VersionInfo
+    public enum QRVersion
     {
         QR1 = 1,
         QR2 = 2,
@@ -486,6 +456,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [좌표계](coordinate-systems.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>

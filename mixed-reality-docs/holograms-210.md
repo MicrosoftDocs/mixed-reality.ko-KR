@@ -3,22 +3,22 @@ title: MR 입력 210-응시
 description: Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 수행 하 여 응시 개념에 대 한 자세한 내용을 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 응시
-ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 8608701a1dd0a9a20aede1737d16d5af2e715f6b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993553"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434686"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 # <a name="mr-input-210-gaze"></a>MR 입력 210: 응시
 
-[응시](gaze.md) 는 첫 번째 입력 형태 이며 사용자의 의도 및 인식을 표시 합니다. MR 입력 210 (즉, 프로젝트 탐색기)은 Windows Mixed Reality의 응시 관련 개념을 자세히 설명 합니다. 앱이 사용자의 응시에 대해 알고 있는 기능을 최대한 활용 하 여 커서 및 holograms에 상황별 인식을 추가할 예정입니다.
+[응시](gaze-and-commit.md) 는 첫 번째 입력 형태 이며 사용자의 의도 및 인식을 표시 합니다. MR 입력 210 (즉, 프로젝트 탐색기)은 Windows Mixed Reality의 응시 관련 개념을 자세히 설명 합니다. 앱이 사용자의 응시에 대해 알고 있는 기능을 최대한 활용 하 여 커서 및 holograms에 상황별 인식을 추가할 예정입니다.
 
 >[!VIDEO https://www.youtube.com/embed/yKAttGduVp0]
 
@@ -43,9 +43,9 @@ ms.locfileid: "64993553"
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 * 몇 가지 C# 기본적인 프로그래밍 기능.
@@ -91,7 +91,7 @@ ms.locfileid: "64993553"
 2. 플레이어 설정에 대 한 **검사기 패널** 에서 **Windows 스토어** 아이콘을 선택 합니다.
 3. **XR 설정** 그룹을 확장 합니다.
 4. **렌더링** 섹션에서 **가상 현실 지원 됨** 확인란을 선택 하 여 새 **가상 현실 sdk** 목록을 추가 합니다.
-5. **Windows Mixed Reality** 가 목록에 나타나는지 확인 합니다. 그렇지 않은 경우 목록 아래쪽 **+** 의 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.
+5. **Windows Mixed Reality** 가 목록에 나타나는지 확인 합니다. 그렇지 않은 경우 목록 맨 아래에 있는 **+** 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.
 
 다음으로, scripting 백 엔드를 .NET으로 설정 해야 합니다.
 
@@ -132,7 +132,7 @@ ms.locfileid: "64993553"
 
 ### <a name="save-the-project"></a>프로젝트를 저장 합니다.
 
-1. 새 장면 저장: **파일 > 장면을 저장**합니다.
+1. 새 장면: 파일을 저장 하 **> 장면을 저장**합니다.
 2. **새 폴더** 를 클릭 하 고 폴더 이름을 **장면**으로 합니다.
 3. 파일 이름을 "**Modelexplorer**"로 하 고 해당 파일을 **백그라운드** 폴더에 저장 합니다.
 
@@ -157,8 +157,8 @@ HoloLens에 배포 하는 경우:
 
 1. Visual Studio의 맨 위 도구 모음을 사용 하 여 대상을 디버그에서 **릴리스** 로, ARM에서 **x 86**으로 변경 합니다.
 2. 로컬 컴퓨터 단추 옆에 있는 드롭다운 화살표를 클릭 하 고 **원격 컴퓨터**를 선택 합니다.
-3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
-4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device-hololens)으로 연결 해야 합니다.
+3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭 합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
+4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device)으로 연결 해야 합니다.
 5. 앱이 배포 되 면 **선택 제스처로** **fitbox** 를 해제 합니다.
 
 모던 헤드셋에 배포 하는 경우:
@@ -232,7 +232,7 @@ void IFocusable.OnFocusExit()
 ```
 
 >[!NOTE]
->을 ( `EnableKeyword` 를 `DisableKeyword` ) 사용 합니다. Toolkit의 표준 셰이더를 사용 하 여 자신의 앱에서 이러한 기능을 활용 하려면 [스크립트를 통해 자료에 액세스 하기 위한 Unity 지침](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)을 따라야 합니다. 이 경우 Resources 폴더에 필요한 [강조 표시 된 자료의 세 가지 변형이](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) 이미 포함 되어 있습니다 (이름에 강조 표시 된 세 가지 자료 참조).
+>`EnableKeyword`와 `DisableKeyword`를 사용 합니다. Toolkit의 표준 셰이더를 사용 하 여 자신의 앱에서 이러한 기능을 활용 하려면 [스크립트를 통해 자료에 액세스 하기 위한 Unity 지침](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)을 따라야 합니다. 이 경우 Resources 폴더에 필요한 [강조 표시 된 자료의 세 가지 변형이](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) 이미 포함 되어 있습니다 (이름에 강조 표시 된 세 가지 자료 참조).
 
 ### <a name="build-and-deploy"></a>빌드 및 배포
 
@@ -271,7 +271,7 @@ void IFocusable.OnFocusExit()
 2. 사용자가 holograms에 gazing 경우 방향 표시기를 숨깁니다.
 3. Holograms를 가리키도록 방향 표시기를 업데이트 합니다.
 
-이제 시작하겠습니다.
+그럼 시작해 보겠습니다.
 
 1. **계층** 패널에서 **AstroMan** 개체를 클릭 하 고 **화살표를 클릭** 하 여 확장 합니다.
 2. **계층** 패널의 **AstroMan**아래에서 **DirectionalIndicator** 개체를 선택 합니다.

@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, 안정화, 사례 연구
-ms.openlocfilehash: a084ede5f9bf3d5f058cc81ec75840e2c2e75af2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526268"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436438"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>사례 연구-안정화 평면을 사용 하 여 holographic turbulence 줄이기
 
@@ -19,7 +19,7 @@ Holograms를 사용 하는 것은 복잡할 수 있습니다. 공간을 이동 �
 
 ## <a name="the-tech"></a>기술
 
-실제로 공간을 공유 하는 것 처럼 holograms 표시 되도록 하려면 색 구분 없이 제대로 렌더링 해야 합니다. 이는 주로 [안정화 평면](hologram-stability.md#stabilization-plane)을 호출 하는 항목에 holograms 고정 되도록 HoloLens 하드웨어에 기본 제공 되는 기술에 의해 이루어집니다.
+실제로 공간을 공유 하는 것 처럼 holograms 표시 되도록 하려면 색 구분 없이 제대로 렌더링 해야 합니다. 이는 주로 [안정화 평면](hologram-stability.md#reprojection)을 호출 하는 항목에 holograms 고정 되도록 HoloLens 하드웨어에 기본 제공 되는 기술에 의해 이루어집니다.
 
 평면은 point와 normal에서 정의 하지만 항상 평면에서 카메라를 가리키도록 하려고 하기 때문에 평면을 설정 하는 것이 중요 합니다. 모든 항목을 고정 하 고 안정적으로 유지 하기 위해 처리에 초점을 맞출 수 있도록 HoloLens를 지시할 수 있습니다. 그러나이 포커스 포인트를 설정 하는 방법은 앱에 따라 달라 지 며 콘텐츠에 따라 앱을 만들거나 중단할 수 있습니다.
 
@@ -29,9 +29,9 @@ Holograms를 사용 하는 것은 복잡할 수 있습니다. 공간을 이동 �
 
 다음 앱을 개발할 때 비행기를 사용 하지 않는 경우 개체가 sway로 이동 하면 개체가 sway가 되 고 빠른 헤드 또는 홀로그램 이동에 대 한 색 분리가 표시 되는 것을 알 수 있습니다. 개발 기간 동안, 안정화 평면을 가장 잘 활용 하는 방법과 해결할 수 없는 문제를 해결 하는 방법에 대 한 자세한 내용은 평가판 및 오류를 통해 배웠습니다.
 
-### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Galaxy 탐색기: 고정 콘텐츠, 3D 대화형 작업
+### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Galaxy 탐색기: 고정 콘텐츠, 3D 대화형
 
-[Galaxy 탐색기](galaxy-explorer.md) 의 장면에는 두 가지 주요 요소가 있습니다. 사용자의 응시를 따르는 주요 콘텐츠 및 작은 UI 도구 모음의 주요 뷰입니다. 안정화 논리의 경우 각 프레임에서 현재 응시 벡터가 교차 하는 것을 확인 하 여 지정 된 충돌 계층에서 어떤 것도 적중 되는지 확인 합니다. 이 경우 관심이 있는 계층은 행성 이므로, 응시가 전 세계에 있는 경우 안정화 평면이 배치 됩니다. 대상 충돌 계층의 어떤 개체도 적중 되지 않으면 앱은 보조 "plan B" 계층을 사용 합니다. 에서 gazed 되는 항목이 없는 경우 안정화 평면은 콘텐츠에서 gazing 때와 동일한 거리에 유지 됩니다. UI 도구는 전체 장면의 안정성을 가깝게 이동 하는 것을 발견 했으므로 평면 대상으로 남아 있습니다.
+[Galaxy 탐색기](galaxy-explorer.md) 의 장면에는 두 가지 주요 요소가 있습니다. 즉, 두 가지 주요 요소가 있습니다. 안정화 논리의 경우 각 프레임에서 현재 응시 벡터가 교차 하는 것을 확인 하 여 지정 된 충돌 계층에서 어떤 것도 적중 되는지 확인 합니다. 이 경우 관심이 있는 계층은 행성 이므로, 응시가 전 세계에 있는 경우 안정화 평면이 배치 됩니다. 대상 충돌 계층의 어떤 개체도 적중 되지 않으면 앱은 보조 "plan B" 계층을 사용 합니다. 에서 gazed 되는 항목이 없는 경우 안정화 평면은 콘텐츠에서 gazing 때와 동일한 거리에 유지 됩니다. UI 도구는 전체 장면의 안정성을 가깝게 이동 하는 것을 발견 했으므로 평면 대상으로 남아 있습니다.
 
 Galaxy 탐색기의 디자인은 작업을 안정적으로 유지 하 고 색 분리의 효과를 줄이는 데 적합 합니다. 사용자는 한 쪽에서 다른 쪽으로 이동 하는 대신 콘텐츠를 탐색 하 고 궤도로 전환 하는 것이 좋습니다 .이 경우 행성은 색 구분이 눈에 띄지 않을 만큼 orbiting. 또한 일정 한 60 FPS가 유지 되며이는 색 분리가 발생 하지 않도록 하는 긴 방법으로 진행 됩니다.
 
@@ -93,11 +93,11 @@ HoloLens가 있는 경우 설명 된 개념을 사용 하 여 재생 하려는 �
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Ben Strukus" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>이혜준 Strukus</b><br>소프트웨어 엔지니어@Microsoft</td>
+<td style="border-style: none"><b>이혜준 Strukus</b><br>소프트웨어 엔지니어 @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>참조
-* [MR 기본 100: Unity 시작](holograms-100.md)
+## <a name="see-also"></a>참고 항목
+* [MR 기본 사항 100: Unity 시작](holograms-100.md)
 * [Unity의 포커스 포인트](focus-point-in-unity.md)
 * [홀로그램 안정성](hologram-stability.md)

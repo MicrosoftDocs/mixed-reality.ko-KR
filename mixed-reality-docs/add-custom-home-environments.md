@@ -1,24 +1,24 @@
 ---
-title: 사용자 지정 홈 환경 추가
+title: 사용자 고유의 몰입 형 환경 디자인
 description: Microsoft에서 제공 하는 Windows Mixed Reality 홈 환경 외에도 사용자 고유의을 만들고 사용 하 여 시험해 볼 수 있습니다.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, 가상 현실, VR, MR, 홈, 사용자 지정 환경, 장소, 절벽 집, skyloft, 사용자, 만들기
-ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e133e1438410540592a51f54ed136aecd04c6244
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024533"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437074"
 ---
-# <a name="add-custom-home-environments"></a>사용자 지정 홈 환경 추가
+# <a name="design-your-own-immersive-environments"></a>사용자 고유의 몰입 형 환경 디자인
 
 >[!NOTE]
 >이는 실험적 기능입니다. 시도 하 고 재미 있게 해 주지만, 모든 것이 예상 대로 작동 하지 않을 경우에는 걱정할 필요가 없습니다. 이 기능의 실행 가능성을 평가 하 고 사용 하는 데 관심이 있기 때문에 [개발자 포럼](https://forums.hololens.com/categories/custom-home-environments)에서 사용자 환경 및 발견 한 버그를 알려 주세요.
 
-[Windows 10 4 월 2018 업데이트](#release-notes-april-2018.md)부터 [windows Mixed Reality 홈](#navigating-the-windows-mixed-reality-home.md)으로 사용할 수 있는 사용자 지정 환경을 시작 메뉴의 위치 선택기에 추가할 수 있는 실험적 기능을 사용 하도록 설정 했습니다. Windows Mixed Reality에는 집으로 선택할 수 있는 두 가지 기본 환경인 절벽 집과 Skyloft가 있습니다. 사용자 지정 환경을 만들면 직접 만든 목록을 사용 하 여 해당 목록을 확장할 수 있습니다. 작성자와 개발자의 관심을 평가 하는 초기 상태로이 기능을 사용할 수 있도록 하 고, 어떤 종류의 사용자를 만드는 지 확인 하 고, 다양 한 제작 도구를 사용 하는 방법을 이해 하 고 있습니다.
+[Windows 10 4 월 2018 업데이트](release-notes-april-2018.md)부터 [windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md)으로 사용할 수 있는 사용자 지정 환경을 시작 메뉴의 위치 선택기에 추가할 수 있는 실험적 기능을 사용 하도록 설정 했습니다. Windows Mixed Reality에는 집으로 선택할 수 있는 두 가지 기본 환경인 절벽 집과 Skyloft가 있습니다. 사용자 지정 환경을 만들면 직접 만든 목록을 사용 하 여 해당 목록을 확장할 수 있습니다. 작성자와 개발자의 관심을 평가 하는 초기 상태로이 기능을 사용할 수 있도록 하 고, 어떤 종류의 사용자를 만드는 지 확인 하 고, 다양 한 제작 도구를 사용 하는 방법을 이해 하 고 있습니다.
 
 사용자 지정 환경을 사용 하는 경우 teleporting, 앱과의 상호 작용 및 holograms 배치는 절벽 집 및 Skyloft에서와 같이 작동 하는 것을 알 수 있습니다. 판타지에서 웹을 찾아보거나 holograms를 사용 하 여 futuristic 도시를 채울 수 있습니다. 가능성은 무한 합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "67024533"
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
@@ -45,7 +45,7 @@ ms.locfileid: "67024533"
 ## <a name="trying-a-sample-environment"></a>샘플 환경 시도
 
 사용자 지정 홈 환경의 독창적인 기능 중 일부를 보여 주는 샘플 환경을 만들었습니다. 다음 단계를 수행 하 여 사용해 보세요.
-1. [샘플 판타지 섬 환경 다운로드](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) 자동 압축 풀기 실행 파일에 대 한 링크를 가리킵니다.
+1. [샘플 판타지 섬 환경](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (링크 지점과 자동 압축 풀기 실행 파일)을 다운로드 합니다.
 
     ![판타지 섬 샘플 환경](images/FantasyLand.jpg)<br>
     *판타지 섬 샘플 환경*<br>
@@ -55,7 +55,7 @@ ms.locfileid: "67024533"
     > [!NOTE]
     > 웹에서 다운로드 한 .exe 파일을 실행 하려고 할 때 (예:) "Windows 보호 된 PC" 팝업이 발생할 수 있습니다. 이 팝업에서 Fantasy_Island를 실행 하려면 **추가 정보** 를 선택 하 고 **실행**을 클릭 합니다. 이 보안 설정은 신뢰 하지 않을 수 있는 파일을 다운로드 하는 것을 방지 하기 위한 것 이므로 파일 원본을 신뢰 하는 경우에만이 옵션을 선택 하십시오.
 
-3. **파일 탐색기** 를 열고 주소 표시줄 `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`에 다음을 붙여넣어 환경 폴더로 이동 합니다.
+3. **파일 탐색기** 를 열고 주소 표시줄에 다음을 붙여 `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`환경 폴더로 이동 합니다.
 4. 다운로드 한 샘플 환경을이 폴더에 복사 합니다.
 5. **혼합 현실 포털**을 다시 시작 합니다. 그러면 위치 선택기에서 환경 목록이 새로 고쳐집니다.
 6. 헤드셋에 배치 합니다. 홈에 있으면 컨트롤러의 Windows 단추를 사용 하 여 **시작 메뉴** 를 엽니다.
@@ -96,12 +96,12 @@ Windows Mixed Reality는 환경의 로드 시간을 크게 줄일 수 있는 다
 
 변환기는 현재 최적화의 정확한 동작을 조정 하기 위해 여러 플래그를 지원 합니다. 최상의 결과를 위해 다음 플래그를 사용 하 여를 실행 하는 것이 좋습니다.
 
-플래그|권장 값|설명
+Flag|권장 값|설명
 ---|---|---
 -최대 질감-크기|1024 또는 2048| 이를 조정 하 여 질감의 품질을 향상 시킵니다. 기본값은 512x512입니다. 값이 클수록 환경의 파일 크기에 크게 영향을 주므로 256 mb 제한을 염두에 두십시오.
 -최소 버전|1803|사용자 지정 환경은 windows > = 1803 버전 에서만 지원 됩니다. 이 플래그는 이전 버전의 질감을 제거 하 고 최종 자산의 파일 크기를 줄입니다.
 
-이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```cmd
 WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1803
@@ -111,7 +111,7 @@ WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1
 
 최종 .bb 환경을 준비 하 고 나면 헤드셋에서 테스트할 준비가 된 것입니다. ["샘플 환경 시도"](#trying-a-sample-environment) 섹션의 2 단계에서 시작 하 여 사용자 지정 환경을 혼합 현실 홈으로 사용 합니다. 
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback"></a>Feedback
 
 이 실험적 기능을 평가 하는 동안 사용자 지정 환경을 사용 하는 방법, 발생할 수 있는 버그 및 기능을 원하는 방법을 배우는 데 관심이 있습니다. [개발자 포럼](https://forums.hololens.com/categories/custom-home-environments)에서 사용자 지정 홈 환경을 만들고 사용 하기 위한 모든 피드백을 공유 해 주세요.
 
@@ -149,6 +149,6 @@ Windows Mixed Reality는 환경을 로드 하는 경우 글 Tf 단위를 1 미�
 
 사용자 지정 환경을 만들 때 만든 실제 공간과 일치 하지 않는 acoustics 렌더링 시뮬레이션을 사용 합니다. 소리는 잘못 된 방향에서 제공 될 수 있으며 소리가 muffled 수 있습니다. 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Windows Mixed Reality 자산 변환기 (GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

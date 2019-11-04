@@ -6,19 +6,19 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 스타일, 글꼴, 입력 체계, ui, ux
-ms.openlocfilehash: cc8e25e9cd7ba41bed179328fe7198e935e65d76
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830009"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437408"
 ---
 # <a name="typography"></a>입력 체계
 
-텍스트는 앱 환경에서 정보를 전달 하는 데 중요 한 요소입니다. 2D 화면에서 입력 체계와 마찬가지로 목표를 명확 하 고 읽을 수 있습니다. 혼합 현실의 3 차원 측면에서 텍스트 및 전반적인 사용자 환경에 훨씬 더 큰 영향을 줄 수 있는 기회가 있습니다.
-
 ![HoloLens의 입력 체계 예제](images/typography-cover.png)<br>
-*HoloLens의 입력 체계 예제*
+
+
+텍스트는 앱 환경에서 정보를 전달 하는 데 중요 한 요소입니다. 2D 화면의 입력 체계처럼 목표는 명확하고 읽기 쉬운 것입니다. 혼합 현실의 3차원 측면에서는 텍스트와 사용자 환경 전체에 훨씬 더 큰 영향을 줄 수 있는 기회가 있습니다.
 
 3D의 유형에 대 한 정보를 제공 하는 경우 입체 대규모 3D 텍스트를 생각 하는 경향이 있습니다. 일부 로고 형식 디자인 및 몇 가지 다른 제한 된 응용 프로그램을 제외 하 고, 입체 텍스트는 텍스트의 가독성을 저하 하는 경향이 있습니다. 3D에 대 한 환경을 디자인 하는 경우에도 형식에 대해 2D를 사용 합니다 .이는 읽기 쉽고 읽기 쉽습니다.
 
@@ -45,25 +45,33 @@ HoloLens에서 덧셈 색 시스템을 기반으로 하는 holograms를 사용 �
 
 얇은 수직선을 진동 하 고 가독성을 저하 시킬 수 있으므로 42pt에서 형식 크기에 대 한 밝거나 글꼴 가중치를 사용 하지 마십시오. 스트로크 두께가 충분 한 최신 글꼴이 제대로 작동 합니다. 예를 들어, Helvetica 및 Arial은 일반 또는 굵게 가중치를 사용 하 여 HoloLens에서 매우 쉽게 읽을 수 있습니다.
 
-### <a name="color"></a>색
+### <a name="color"></a>색상
 
 HoloLens에서 holograms은 가감 시스템을 사용 하 여 생성 되므로 흰색 텍스트는 매우 읽기 쉽게 합니다. 시작 메뉴와 앱 바에서 흰색 텍스트의 예제를 찾을 수 있습니다. HoloLens의 백 플레이트 없이 흰색 텍스트가 제대로 작동 하는 경우에도 복잡 한 물리적 배경으로 인해 형식을 읽기가 어려울 수 있습니다. 사용자의 포커스를 개선 하 고 실제 백그라운드에서 혼란 스 러를 최소화 하려면 진한 또는 컬러 뒷면에서 흰색 텍스트를 사용 하는 것이 좋습니다.
 
 <br>
 
 
-![어두운 또는 컬러 뒷면에서 흰색 텍스트를 사용 하는 것이 좋습니다. *어두운 또는 컬러 후면의 흰색 텍스트 예* ](images/typography-whiteonblack2-1000px.jpg)
-
+![진한 또는 컬러 뒷면에서 흰색 텍스트를 사용 하는 것이 좋습니다. *어두운 또는 컬러 후면의 흰색 텍스트 예를](images/typography-whiteonblack2-1000px.jpg)
+합니다.*
 <br>
 
 어두운 텍스트를 사용 하려면 밝은 후면 판을 사용 하 여 읽을 수 있도록 해야 합니다. 가산적 색 시스템에서 검정은 투명으로 표시 됩니다. 즉, 색이 지정 된 배경 판을 표시 하지 않고 검정 텍스트를 볼 수 없습니다.
 
-![검정 텍스트 예](images/typography-whiteonblack.png)
-<br>*흰색 텍스트의 흰색 및 검은색의 검정색 예*
+:::row:::
+    :::column:::
+        ![검정 텍스트 예제](images/typography-whiteonblack.png)<br>
+        *검정의 흰색 및 흰색 텍스트의 검정색 예*<br>
+    :::column-end:::
+    :::column:::
+        ![검정 텍스트 예제](images/640px-typography-blackonwhite.jpg)<br>
+        *시스템 앱의 검정 텍스트 예-스토어 및 설정*<br>
+    :::column-end:::
+:::row-end:::
 
+<br>
 
-![검정 텍스트 예](images/640px-typography-blackonwhite.jpg)
-<br>*시스템 앱의 검정 텍스트 예-스토어 및 설정*
+---
 
 ## <a name="recommended-font-size"></a>권장 글꼴 크기
 
@@ -71,7 +79,7 @@ HoloLens에서 holograms은 가감 시스템을 사용 하 여 생성 되므로 
 
 0\.45 m (45cm)에서 거의 상호 작용 하는 경우 읽을 수 있는 최소 글꼴의 보기 각도와 높이는 0.4 °-0.5 °/3.14 – 3.9 mm입니다. [Unity의 텍스트](text-in-unity.md)에서 도입 된 배율 인수를 사용 하는 12pt에 대 한 정보입니다.
 
-![*근거리 및 원거리 상호 작용 범위 콘텐츠 (근거리 및 원거리* 상호 작용 범위)](images/typography-distance-1000px.jpg)
+근거리 및 원거리 상호 작용 범위 ![근거리 *및 원거리 상호 작용 범위에서 콘텐츠*](images/typography-distance-1000px.jpg)
 
 
 ### <a name="the-minimum-legible-font-size"></a>읽을 때 최소 글꼴 크기
@@ -90,18 +98,37 @@ HoloLens에서 holograms은 가감 시스템을 사용 하 여 생성 되므로 
 
 맑은 고딕 (Windows의 기본 글꼴)은 대부분의 경우 잘 작동 합니다. 그러나 밝은 수직선을 진동 하 고 가독성을 저하 시킬 수 있으므로 작은 크기로 밝은 색 또는 반투명 글꼴 패밀리를 사용 하지 마십시오. 스트로크 두께가 충분 한 최신 글꼴이 제대로 작동 합니다. 예를 들어 Helvetica 및 Arial은 멋진 하 고 일반 또는 굵게 가중치를 사용 하 여 HoloLens에서 매우 읽을 수 있습니다.
 
-\* * Unity의 텍스트 크기 계산에 대 한 자세한 내용은 [unity의 페이지 텍스트](text-in-unity.md) 를 참조 하세요.
+**Unity의 텍스트 크기 계산에 대 한 자세한 내용은 [unity의 텍스트](text-in-unity.md) 를 참조 하세요.**
 
-![각도](images/Text_In_Unity_ViewingAngle.jpg)
-보기*거리, 각도 및 텍스트 높이* 보기
+*거리, 각도 및 텍스트 높이를 볼*](images/Text_In_Unity_ViewingAngle.jpg)
+각도 ![보기
+
+<br>
+
+---
 
 ## <a name="resources"></a>리소스
-* [Segoe 글꼴](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
-* [HoloLens 글꼴](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
-![HoloLens 글꼴은 Windows Mixed Reality에서 사용 되는 기호 문자 모양을 제공 합니다.](images/300px-hololensmdl2symbols.jpg)
-<br>*HoloLens 글꼴은 Windows Mixed Reality에서 사용 되는 기호 문자 모양을 제공 합니다.*
+:::row:::
+    :::column:::
+    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Segoe 글꼴](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    (Zip 파일)<br>
+    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[HoloLens 글꼴](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    (Zip 파일)<br>
+    <br>
+    *이미지: HoloLens 글꼴은 Windows Mixed Reality에서 사용 되는 기호 문자 모양을 제공 합니다.*
+    :::column-end:::
+        :::column:::
+        ![HoloLens 글꼴은 Windows Mixed Reality에서 사용 되는 기호 문자 모양을 제공 합니다.](images/hololensmdl2symbols.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>참조
+
+<br>
+
+---
+
+
+## <a name="see-also"></a>참고 항목
 * [Unity의 텍스트](text-in-unity.md)
 * [색, 광원 및 재질](color,-light-and-materials.md)

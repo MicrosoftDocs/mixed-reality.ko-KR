@@ -6,16 +6,16 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, remoting, holographic remoting, holographic 원격 플레이어
-ms.openlocfilehash: c118c4af61c6eb2706ef851a6654c18ff7313453
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6164d7ae1bc2d9ac13135f17132aca089e63ecdf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548720"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438231"
 ---
 # <a name="unity-play-mode"></a>Unity 재생 모드
 
-Unity 프로젝트에서 빠르게 작업 하는 방법은 "재생 모드"를 사용 하는 것입니다. 그러면 PC의 Unity 편집기에서 로컬로 앱이 실행 됩니다. Unity는 Holographic 원격 기능을 사용 하 여 실제 HoloLens 장치에서 콘텐츠를 빠르게 미리 볼 수 있는 방법을 제공 합니다.
+Unity 프로젝트에서 빠르게 작업 하는 방법은 "재생 모드"를 사용 하는 것입니다. 그러면 PC의 Unity 편집기에서 로컬로 앱이 실행 됩니다. Unity는 Holographic 원격 기능을 사용 하 여 실제 HoloLens 장치에서 콘텐츠를 빠르게 미리 볼 수 있는 방법을 제공 합니다. 재생 모드는 개발 PC에 연결 된 Windows Mixed Reality 헤드셋과 함께 사용할 수도 있습니다.
 
 ## <a name="unity-play-mode-with-holographic-remoting"></a>Holographic 원격을 사용 하는 Unity 재생 모드
 
@@ -32,5 +32,5 @@ Holographic Remoting을 사용 하려면 고속 PC 및 Wi-fi 연결이 필요 �
 
 최상의 결과를 위해 앱이 [포커스 지점을](focus-point-in-unity.md)적절히 설정 하는지 확인 합니다. 이렇게 하면 Holographic는 무선 연결의 대기 시간에 맞게 장면을 최적으로 조정 하는 데 도움이 됩니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [홀로그램 원격 플레이어](holographic-remoting-player.md)

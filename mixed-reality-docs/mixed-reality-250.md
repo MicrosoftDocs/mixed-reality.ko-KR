@@ -3,22 +3,22 @@ title: MR 공유 250-HoloLens 및 모던 헤드셋
 description: Unity, Visual Studio, HoloLens 및 Windows Mixed Reality 헤드셋을 사용 하 여이 코딩 연습을 수행 하 여 혼합 현실 장치 간 holograms 공유에 대 한 세부 정보를 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 이동 컨트롤러, 공유, xbox 컨트롤러, 네트워킹, 장치 간
-ms.openlocfilehash: 9e1cb0d168b8bf830b4477190516cd19caef7972
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: c8d341f75424887ca1b0994c8a4d16a0bded671e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63506117"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437867"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 
-# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>MR 공유 250: HoloLens 및 몰입 형 헤드셋
+# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>MR 공유 250: HoloLens 및 모던 헤드셋
 
 UWP (유니버설 Windows 플랫폼)를 사용 하면 여러 장치에 걸쳐 있는 응용 프로그램을 쉽게 만들 수 있습니다. 이러한 유연성을 통해 각 장치의 장점을 활용 하는 환경을 만들 수 있습니다. 이 자습서에서는 HoloLens 및 Windows Mixed Reality 몰입 형 헤드셋에서 실행 되는 기본 공유 환경을 소개 합니다. 이 콘텐츠는 원래 시애틀, WA의 Microsoft Build 2017 회의에서 제공 되었습니다.
 
@@ -35,13 +35,13 @@ UWP (유니버설 Windows 플랫폼)를 사용 하면 여러 장치에 걸쳐 �
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td>MR 공유 250: HoloLens 및 몰입 형 헤드셋</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR 공유 250: HoloLens 및 모던 헤드셋</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * [필요한 개발 도구가](install-the-tools.md) 포함 된 WINDOWS 10 PC 이며 [windows Mixed Reality 모던 헤드셋을 지원 하도록 구성 되어](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)있습니다.
 * PC에서 작동 하는 Xbox 컨트롤러
@@ -69,6 +69,7 @@ UWP (유니버설 Windows 플랫폼)를 사용 하면 여러 장치에 걸쳐 �
 HoloLens 또는 Windows Mixed Reality 몰입 형 헤드셋에서 홀로그램을 표시 하는 응용 프로그램입니다.
 
 ### <a name="steps"></a>단계
+
 * Unity를 엽니다.
     * **열기**를 선택 합니다.
     * 프로젝트 파일의 압축을 푼 위치로 이동 합니다.
@@ -112,7 +113,7 @@ HoloLens 또는 Windows Mixed Reality 몰입 형 헤드셋에서 홀로그램을
 
 프로젝트 패널에서 **Assets\HoloToolkit\Input\Scripts\Utilities** 으로 이동 하 고 **MixedRealityCameraManager.cs** 를 두 번 클릭 하 여 엽니다.
 
-**설명은** MixedRealityCameraManager.cs는 장치에 따라 품질 수준 및 배경 설정을 조정 하는 간단한 스크립트입니다. 여기서 핵심은 HolographicSettings는 장치가 HoloLens (IsDisplayOpaque false) 또는 몰입 형 헤드셋 (IsDisplayOpaque이 true를 반환) 인지 여부를 스크립트에서 검색할 수 있도록 하는 것입니다.
+**개요:** MixedRealityCameraManager.cs는 장치에 따라 품질 수준 및 배경 설정을 조정 하는 간단한 스크립트입니다. 여기서 핵심은 HolographicSettings는 장치가 HoloLens (IsDisplayOpaque false) 또는 몰입 형 헤드셋 (IsDisplayOpaque이 true를 반환) 인지 여부를 스크립트에서 검색할 수 있도록 하는 것입니다.
 
 ### <a name="enjoy-your-progress"></a>진행 상황을 경험해 보세요.
 
@@ -130,9 +131,10 @@ Windows Mixed Reality 응용 프로그램의 입력을 처리 하는 방법을 �
 
 1 챕터의 응용 프로그램을 기반으로 하는 기능을 추가 하 여 사용자가 홀로그램을 선택 하 여 HoloLens의 실제 세계 표면 또는 모던 헤드셋의 가상 테이블에 저장할 수 있습니다.
 
-**입력 리프레셔:** HoloLens에서 선택 제스처는 **공중 탭**입니다. 모던 헤드셋에서 Xbox 컨트롤러의 **A** 단추를 사용 합니다. 입력 시작에 대 한 자세한 내용은 [여기](gestures.md)를 참조 하세요.
+**입력 리프레셔:** HoloLens에서 선택 제스처는 **공중 탭**입니다. 모던 헤드셋에서 Xbox 컨트롤러의 **A** 단추를 사용 합니다. 자세한 내용은 [상호 작용 모델 개요](interaction-fundamentals.md)를 확인 하세요.
 
 ### <a name="steps"></a>단계
+
 * 입력 관리자 추가
     * **HoloToolkit > 입력 > Prefabs** **Inputmanager** 를 **계층 구조** 에 **관리자**의 자식으로 끌어 놓습니다.
     * **HoloToolkit > 입력 > Prefabs > 커서** **계층**으로 **커서** 를 끕니다.
@@ -193,6 +195,7 @@ Second는 업데이트에서 화면을 검토 하 고 있는지 확인 하기 �
 프로젝트를 여럿이 아닌 프로젝트로 변환 합니다. 세션을 호스트 하거나 조인 하는 데 UI와 논리를 추가 합니다. HoloLens 사용자는 해당 헤드에 대 한 클라우드가 포함 된 세션에서 서로를 볼 수 있으며, 몰입 형 헤드셋 사용자는 앵커 위치 근처의 클라우드를 가집니다. 모던 헤드셋의 사용자는 장면의 원점을 기준으로 HoloLens 사용자를 확인 합니다. HoloLens 사용자는 모두 같은 장소에서 아일랜드의 홀로그램을 보게 됩니다. 이 장 중에는 몰입 형 헤드셋의 사용자가 섬에 있지 않고, HoloLens와 매우 유사 하 게 작동 합니다.
 
 ### <a name="steps"></a>단계
+
 * 섬 및 VRRoom 제거
     * **계층** 에서 분리를 마우스 오른쪽 **단추로 클릭 하** 고 **삭제** 를 선택 합니다.
     * **계층** 에서 **VRRoom** 를 마우스 오른쪽 단추로 클릭 하 고 **삭제** 를 선택 합니다.
@@ -250,10 +253,12 @@ HoloLens가 세션에 참여 하는 경우 앵커를 가져와야 합니다. UNE
 응용 프로그램을 업데이트 하 여 응용 프로그램을 업데이트 하 여 사용자에 게 몰입 형 헤드셋 사용자를 배치 합니다. HoloLens 사용자는 계속 해 서 아일랜드의 눈에 볼 수 있습니다. 각 장치 유형의 사용자는 전 세계에 표시 되는 다른 사용자를 볼 수 있습니다. 예를 들어 몰입 형 헤드셋 사용자는 아일랜드의 다른 경로에 대 한 다른 아바타을 볼 수 있으며,이는 HoloLens 위의 자이언트 사용자를 고립 된 클라우드로 볼 수 있습니다. 모던 헤드셋 사용자는 HoloLens 사용자가 아일랜드를 보고 있는 경우 HoloLens 사용자의 응시 광선의 커서만 볼 수 있습니다. HoloLens 사용자는 각 몰입 형 헤드셋 사용자를 나타내는 아바타에 게 아바타를 보게 됩니다.
 
 **몰입 형 장치에 대 한 업데이트 된 입력:**
+
 * Xbox 컨트롤러의 왼쪽 범퍼 및 오른쪽 범퍼 단추가 플레이어를 회전 합니다.
 * Xbox 컨트롤러에서 Y 단추를 누르고 있으면 [텔레포트](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) 커서를 사용할 수 있습니다. Y 단추를 놓을 때 커서에 회전 화살표 표시기가 있으면 커서의 위치로 teleported 됩니다.
 
 ### <a name="steps"></a>단계
+
 * MixedRealityCameraParent에 MixedRealityTeleport 추가
     * **계층**에서 **usland**를 선택 합니다.
     * **Inspector**에서 **수준 제어**를 사용 하도록 설정 합니다.
@@ -288,6 +293,7 @@ MixedRealityTeleport에 대 한 두 번째 작업은 **dolly**이동을 처리 �
 다시 한 번 HoloLens를 사용 하는 사용자는 세션을 호스팅합니다. 다른 사용자가 세션에 참여 합니다. 응용 프로그램은 처음 3 명의 사용자에 게 아일랜드의 세 경로 중 하나에 있는 몰입 형 헤드셋에서 조인 하 게 됩니다. 이 섹션에서는 아일랜드를 자유롭게 살펴보세요.
 
 유의 사항:
+
 1. 클라우드에서 얼굴을 볼 수 있습니다. 그러면 사용 사용자가 HoloLens 사용자가 보고 있는 방향을 볼 수 있습니다.
 2. 섬에 있는 아바타는 necks를 회전 합니다. 사용자가 수행 하는 작업을 따르지 않는 것은 아닙니다 (해당 정보는 없음). 하지만 좋은 경험을 위해 노력 하 고 있습니다.
 3. HoloLens 사용자가 아일랜드를 살펴보면 사용 사용자가 자신의 커서를 볼 수 있습니다.
@@ -306,6 +312,7 @@ MixedRealityTeleport에 대 한 두 번째 작업은 **dolly**이동을 처리 �
 4 장을 기반으로 하는 몰입 형 헤드셋의 사용자가 아일랜드의 퍼즐 근처에 있으면 HoloLens 사용자는 퍼즐에 대 한 단서를 포함 하는 도구 설명을 얻게 됩니다. 모든 몰입 형 헤드셋 사용자가 퍼즐를 지 나 로켓 방에 있는 "ready pad"로 이동 하면 로켓이 시작 됩니다.
 
 ### <a name="steps"></a>단계
+
 * **계층**에서 **usland**를 선택 합니다.
 * **검사기**의 **수준 제어**에서 **공동 작업 사용**을 선택 합니다.
 
@@ -323,20 +330,20 @@ CheckGoal는 몇 가지 수학을 통해 pad에 더 있는지 또는 더 적은�
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
-       {
-           levelState.SetGoalIndex(GoalIndex);
-       }
+{
+    levelState.SetGoalIndex(GoalIndex);
+}
 ```
 
 ```cs
 public void SendAtGoal(int GoalIndex)
-       {
-           if (isLocalPlayer)
-           {
-               Debug.Log("sending at goal " + GoalIndex);
-               CmdSendAtGoal(GoalIndex);
-           }
-       }
+{
+    if (isLocalPlayer)
+    {
+        Debug.Log("sending at goal " + GoalIndex);
+        CmdSendAtGoal(GoalIndex);
+    }
+}
 ```
 
 SendAtGoalMessage는 SetGoalIndex를 호출 하는 Cmdis Dat목표가 호출 되며 LevelControl.cs로 돌아갑니다. 언뜻 보기에는 이상한 현상이 보입니다. 플레이어 컨트롤러를 통해 이상한 라우팅이 아닌 SetGoalIndex를 호출 하지 않는 이유는 무엇 인가요? 그 이유는 데이터가 동기화 된 상태로 유지 하기 위해에서 사용 하는 데이터 모델을 준수 한다는 것입니다. 수법 및 스 싱을 방지 하려면 각 개체에 동기화 된 변수를 변경할 수 있는 권한이 있는 사용자가 있어야 합니다. 또한 호스트 (세션을 시작한 사용자)만 데이터를 직접 변경할 수 있습니다. 호스트가 아니지만 권한이 있는 사용자는 변수를 변경 하는 호스트에 ' 명령 '을 보내야 합니다. 기본적으로 호스트에는 사용자를 나타내기 위해 생성 된 개체를 제외한 모든 개체에 대 한 권한이 있습니다. 이 경우이 개체는 playercontroller 스크립트를 포함 합니다. 개체에 대 한 권한을 요청 하 고 변경 작업을 수행 하는 방법이 있지만 플레이어 컨트롤러에 자체 권한이 있으며 플레이어 컨트롤러를 통해 명령을 라우팅하는 방법을 활용 하도록 선택 합니다.
@@ -349,5 +356,6 @@ LevelControl.cs에서 SetGoalIndex를 살펴보세요. 여기서는 syclist (AtG
 
 이전 장을 기반으로 하 여 세션을 시작 하겠습니다. 지금은 몰입 형 헤드셋의 사용자가 경로에서 "도어"로 이동 하면 HoloLens 사용자만 볼 수 있는 도구 설명이 표시 됩니다. HoloLens 사용자는 몰입 형 헤드셋의 사용자에 게이 단서를 전달 하는 일을 담당 합니다. 각 아바타가 화산 내에서 해당 하는 갈색 패드를 단계별로 실행 하면 로켓이 공간에 시작 됩니다. 장면을 다시 설정 하기 위해 60 초 후에 다시 설정 됩니다.
 
-## <a name="see-also"></a>참조
-* [MR 입력 213: 모션 컨트롤러](mixed-reality-213.md)
+## <a name="see-also"></a>참고 항목
+
+* [MR 입력 213: 동작 컨트롤러](mixed-reality-213.md)

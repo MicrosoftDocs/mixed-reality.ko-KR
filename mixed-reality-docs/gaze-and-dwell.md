@@ -1,25 +1,26 @@
 ---
-title: 헤드 게이즈(head-gaze) 및 드웰(dwell)
-description: 헤드 게이즈(head-gaze) 및 드웰(dwell) 입력 모델에 대한 개요
-author: liamartinez
-ms.author: liamar
-ms.date: 05/13/2019
+title: 응시 및 지속
+description: (눈/헤드) 응시 및 지속 입력 모델의 일반적인 개요
+author: sostel
+ms.author: sostel
+ms.date: 10/31/2019
 ms.topic: article
-keywords: 혼합 현실, 응시, 유지, 상호 작용, 디자인
-ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+keywords: 혼합 현실, 응시, 지속, 상호 작용, 디자인, 눈 추적, head 추적
+ms.openlocfilehash: d87406d0b2695cd86c40f27cb132af54ed525b25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387533"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435360"
 ---
-# <a name="head-gaze-and-dwell"></a>헤드 게이즈(head-gaze) 및 드웰(dwell)
+# <a name="gaze-and-dwell"></a>응시 및 지속
 
-손에 도구와 파트가 있으면 제스처가 어렵거나 불가능할 수 있습니다. 제스처와 같은 음성 명령은 특정 상황(예: 과도하게 소리가 큰 상황)에서 불안정할 수 있습니다. 또한 음성을 사용하여 컴퓨터를 제어하는 것이 전체적으로 일반적이지는 않지만 보편화되고 있는 것은 확실합니다. 헤드 게이즈(head-gaze) 및 드웰(dwell)은 HoloLens에서 헤드업 및 핸즈프리 작업을 수행하기에 가장 친숙하고 마스터하기 편한 메커니즘을 제공합니다. 또한 헤드 게이즈(head-gaze) 및 드웰(dwell)은 운영 환경에서 소음 간섭이나 무음 제약과 상관없이 100% 안정적입니다.
+손에 도구와 파트가 있으면 제스처가 어렵거나 불가능할 수 있습니다. 예를 들어 과도 하 게 큰 조건에서 음성 명령은 특정 컨텍스트에서 안정적이 아닐 수도 있습니다. 응시 및 유지는 HoloLens에서 실습 작업을 수행할 수 있는 친숙 하 고 간편한 마스터 메커니즘을 제공 합니다. 또한 응시 및 유지는 운영 환경에서 노이즈 간섭 또는 대기 제약 조건과 무관 한 좋은 대체 방법입니다.
+여기서는 두 가지 변형 _,_ 즉 [헤드-응시 및](gaze-and-dwell-head.md) 유지와 [눈에 잘](gaze-and-dwell-eyes.md)해 서 유지를 구분 합니다.
 
 ## <a name="scenarios"></a>시나리오
 
-헤드 게이즈(head-gaze) 및 드웰(dwell)은 손으로 다른 작업을 하고 있으면서 환경이나 주변의 제약 때문에 음성을 100% 안정적으로 사용할 수 없는 경우에 적합합니다. HoloLens를 착용하고 자동차 엔진을 수리하는 동안 참조 정보를 오버레이하는 경우가 좋은 예입니다. 엔진 칸에 기대고 있는 몸을 지탱하거나 도구를 다루느라 손을 사용할 수 없습니다. 차고 공간에서는 연장이 계속 윙윙거리면서 소리를 내기 때문에 시끄러워서 음성 명령을 실행하기 어렵습니다. 헤드 게이즈(head-gaze) 및 드웰(dwell)을 사용하면 워크플로를 방해하지 않으면서 HoloLens를 착용하고 있는 사람이 참조 자료를 자신 있게 탐색할 수 있습니다. 
+사용자가 다른 작업을 사용 중이 고, 환경 또는 소셜 제약 조건으로 인해 음성이 100% 안정적이 지 않거나 사용 가능 하지 않은 시나리오에서 뛰어나지만을 응시 하 고 유지 합니다. HoloLens를 착용하고 자동차 엔진을 수리하는 동안 참조 정보를 오버레이하는 경우가 좋은 예입니다. 엔진 칸에 기대고 있는 몸을 지탱하거나 도구를 다루느라 손을 사용할 수 없습니다. 차고 공간에서는 연장이 계속 윙윙거리면서 소리를 내기 때문에 시끄러워서 음성 명령을 실행하기 어렵습니다. 응시 및 유지를 사용 하면 HoloLens를 사용 하는 사용자가 워크플로를 중단 하지 않고 자신에 게 해당 참조 자료를 쉽게 탐색할 수 있습니다. 
 
 ## <a name="device-support"></a>장치 지원
 
@@ -33,7 +34,7 @@ ms.locfileid: "68387533"
     <tr>
         <td><strong>입력 모델</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
@@ -42,91 +43,25 @@ ms.locfileid: "68387533"
         <td>✔️ 권장</td>
         <td>✔️ 권장</td>
     </tr>
+     <tr>
+        <td>눈에 응시 및 지속</td>
+        <td>❌ 사용할 수 없음</td>
+        <td>✔️ 권장</td>
+        <td>❌ 사용할 수 없음</td>
+    </tr>
 </table>
 
-## <a name="goals"></a>목표
 
-음성을 사용하지 않는, 완전한 핸즈프리 상호 작용 메커니즘을 제공합니다.
+<br>
 
-## <a name="design-principles"></a>디자인 원칙
-
-1. “과도한 응시” 방지
-
-    헤드 게이즈(head-gaze) 및 드웰(dwell)에는 직관적인 시각 피드백이 필요하지만 피드백이 너무 많으면 불안정한 상태를 유발할 수 있습니다. 피드백은 사용자가 무엇을 타기팅하는지 파악하는 데 도움이 되어야 하지만 사용자의 의도에 반하여 자동으로 선택되어서는 안 됩니다. 텍스트, 아이콘 및 레이블을 읽으려면 선택하기 전에 정보를 흡수할 여지를 사람에게 제공하기 위한 고려가 추가로 필요합니다.
-    
-2. 최적의 속도 구하기
-    
-    드웰(dwell) 상호 작용은 탐색의 영향력에 따라 타이머가 다를 수 있습니다. 사용 빈도가 높은 함수는 일반적으로 채우기 시간이 빠른 것이 유용하고 중대한 함수는 채우기 시간이 긴 것이 유용합니다. 채우기 효과를 사용하여 타이머를 표시하면, 채우기 색상의 애니메이션 곡선이 채우기 시간이 빠른 느낌에 긍정적인 영향을 줄 수 있습니다. 빠른/중간/느린 채우기 속도 재정의 중에서 사용자가 결정할 수 있도록 고려하는 것이 필요합니다.
-    
-3. 요요 효과 절대 금지
-
-    요요 효과는 불편한 머리 움직임 패턴이며, 콘텐츠 배치와 헤드 게이즈(head-gaze) 및 드웰(dwell) 컨트롤 때문에 사람들이 반복적으로 위아래를 봐야 하는 경우에 나타날 수 있습니다. 예를 들어, 목록 탐색 아래쪽에 헤드 게이즈(head-gaze) 및 드웰(dwell) 단추가 있으면, 내려다보고 멈추기, 결과 올려다보기, 내려다보고 멈추기를 반복해야 하는 상태를 유발합니다. 이러한 패턴은 불편하기 때문에 왔다 갔다 할 필요가 줄어들도록 탐색 컨트롤을 가운데에 배치하여 피해야 합니다. 쾌적함을 위해 효과에 기반하여 드웰(dwell) 단추를 배치하는 것이 중요합니다.
-
-## <a name="ux-guidelines-and-best-practices"></a>UX 지침 및 모범 사례
-
-### <a name="target-sizes"></a>대상 크기
-  편리한 액세스를 위해서는, 헤드 게이즈(head-gaze) 및 드웰(dwell) 대상의 크기가 원활하게 대상을 지정할 수 있을 만큼 커야 하며, 지정된 시간 동안 머리가 안정적으로 대상을 향하고 있어야 합니다. 편리한 사용을 위해서는 대상의 크기가 최소 2도 이상인 것이 좋습니다. 
-
-### <a name="visual-feedback"></a>시각적 피드백
-
-드웰(dwell) 타이머를 나타내기 위해 방사형 채우기를 사용하는 경우에는 단추 가운데에서 시작합니다. 일관된 응답이 서로 다른 단추의 모두 다른 방향보다는 덜 혼란스럽습니다. 
-
-  * 이 규칙은 방향 상호 작용에 대해 달리 적용될 수도 있습니다(예: 위/아래/왼쪽/오른쪽으로 이동 등) 예를 들어, Microsoft Dynamics 365 가이드의 경우 예외적으로 다음/뒤로가 왼쪽에서 오른쪽으로 채워집니다.
-  * 토글 단추를 해제하는 등의 시나리오에서는 바깥쪽에서 방사형 채우기로 반전하는 것이 좋습니다. 단추 누르기와 반대되는 느낌은 유지하기 좋은 시각 패턴입니다. 
-
-### <a name="progressive-disclosure"></a>점진적 공개
-
-점진적인 공개란 상호 작용의 각 단계에 해당하는 세부 정보만 표시하는 것을 의미합니다. 드웰(dwell)의 경우, 드웰 대상이 강조 표시로(예: 목록 컨트롤에서) 드러납니다.
-
- ### <a name="oversized-targets"></a>너무 큰 대상
-드웰(dwell) 지역은 Microsoft Dynamics 365 가이드의 뒤로 단추처럼, 사용하기 쉽도록 비활성 아이콘보다 클 수 있습니다.
-
-### <a name="prevent-flickering-with-delayed-feedback"></a>피드백 지연으로 인한 깜박임 방지
-다른 사람이 드웰(dwell) 대상을 지나칠 때 깜박이지 않도록, 시각 피드백을 시작하기 전에 짧은 지연을 사용합니다.
-* 자주 사용하는 단추는 애플리케이션이 반응을 느끼도록 지연을 매우 짧게 유지합니다.
-* 자주 사용하지 않는 단추는 인터페이스가 불안정해지지 않도록 지연을 길게 하는 것이 더 적절할 수 있습니다.
-
-## <a name="ui-patterns"></a>UI 패턴
-
-### <a name="high-frequency-buttons"></a>높은 빈도 단추
-![Microsoft Dynamics 365 가이드 다음 단추](images/GuideNextButton.png "Microsoft Dynamics 365 가이드 다음 단추")<br>
-*높은 빈도 단추는 응용 프로그램 전체에서 일반적으로 사용 되는 단추입니다. 이에 대 한 좋은 예로 Microsoft Dynamics 365 가이드의 다음 및 뒤로 단추가 있습니다.*
-
-높은 빈도 단추는...
-* 크기가 커야 하고, 헤드 게이즈(head-gaze)로 겨냥하기 쉬워야 합니다.
-* 인체의 긴장을 피하기 위해 눈 높이 근처에 두어야 합니다.
-
-### <a name="low-frequency-buttons"></a>낮은 빈도 단추
-낮은 빈도 단추는 애플리케이션 전반에서 정기적으로 상호 작용하지 않는 단추입니다. 설정 메뉴에 액세스하는 단추 또는 모든 작업을 지우는 단추가 좋은 예입니다.
-
-* 이러한 단추는 우발적인 활성화를 피하기 위해 빈번한 헤드 게이즈(head-gaze) 경로에서 멀리 두는 것이 좋습니다. 
-
-### <a name="confirmations"></a>확인
-![Microsoft Dynamics 365 가이드 확인 대화 상자](images/GuidesConfirmation.png "Microsoft Dynamics 365 가이드 확인 대화 상자")
-
-돈을 청구하거나, 작업을 삭제하거나, 긴 프로세스를 시작하는 등 중대한 영향을 미치는 작업의 경우, 사람이 단추를 선택하도록 하는 것이 유용합니다. 헤드 게이즈(head-gaze) 및 드웰(dwell) UI의 경우 확인 대화 상자에 대한 몇 가지 패턴과 고려 사항이 있습니다.
-
-  * 주요 단추의 선택을 강조 표시합니다.
-  * 선택 강조 표시와 동시에 드웰(dwell) 대상을 나타냅니다.
-  * 보조 단추의 경우 헤드 게이즈(head-gaze) 시 드웰(dwell) 대상을 드러납니다.
-        
-### <a name="toggle-buttons"></a>토글 단추
-토글 단추를 사용하려면 다소 미묘한 논리가 제대로 작동해야 합니다. 사람이 토글 단추를 드웰(dwell)하고 활성화하면 단추를 종료했다가 돌아와서 드웰(dwell) 논리를 다시 시작해야 합니다. 토글 가능한 단추는 활성 대비 비활성 상태가 명확해야 합니다. 
-
-### <a name="list-views"></a>목록 보기
-![Microsoft Dynamics 365 가이드 확인 대화 상자](images/GuidesListView.png "Microsoft Dynamics 365 가이드 확인 대화 상자")<br>
-*목록 뷰는 헤드-응시 및 지속 입력에 대 한 특정 챌린지를 제공 합니다. 사용자는 유지 목표를 tiptoe 해야 하는 것과 같은 느낌 없이 콘텐츠를 스캔할 수 있어야 합니다.*
-
-목록 보기 디자인을 위한 팁:
-* 헤드 게이즈(head-gaze) 시 전체 행을 강조 표시하되 헤드 게이즈(head-gaze)가 특정한 드웰(dwell) 대상에 있지 않으면 드웰(dwell)을 시작하지 않습니다.
-* 시각적 노이즈를 줄이기 위해 행이 강조 표시될 때 드웰(dwell) 대상을 표시합니다.
-* 드웰(dwell) 대상의 위치가 명확하고 일관적이어야 합니다.
-* 반복 UI를 피하기 위해 드웰(dwell) 대상을 한 번에 모두 표시하지 않습니다.
-* UX에 친숙해질 수 있도록 동일한 패턴을 되도록 자주 사용합니다.
+---
  
- ## <a name="see-also"></a>참조
-* [수동으로 직접 조작](direct-manipulation.md)
-* [수동으로 가리키고 커밋](point-and-commit.md)
+ ## <a name="see-also"></a>참고 항목
+* [눈에 잘 맞는 상호 작용](eye-gaze-interaction.md)
+* [HoloLens의 눈동자 추적 2](eye-tracking.md)
+* [응시 및 커밋](gaze-and-commit.md)
+* [직접 조작](direct-manipulation.md)
+* [손 제스처](gaze-and-commit.md#composite-gestures)
+* [손 지점 및 커밋](point-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
-* [헤드 게이즈 및 커밋](gaze-and-commit.md)
-* [음성 명령](voice-design.md)
+* [음성 입력 ](voice-input.md)

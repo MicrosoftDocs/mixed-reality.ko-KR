@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, RoboRaid, 공간 사운드
-ms.openlocfilehash: 4bb050b4a4051c121c488ea38e150a8973bd7c04
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524165"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436493"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>사례 연구-RoboRaid에서 공간 소리 사용
 
-Charles Sinex, Microsoft HoloLens Experience 팀의 오디오 리드는 [RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)에 대 한 오디오를 만들 때 발생 하는 고유한 과제에 대 한 정보를 제공 합니다.
+Charles Sinex, Microsoft HoloLens Experience 팀의 오디오 리드는 [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)에 대 한 오디오를 만들 때 발생 하는 고유한 과제에 대 한 정보를 제공 합니다.
 
 ## <a name="the-tech"></a>기술
 
@@ -35,9 +35,9 @@ HoloLens 앱에 대 한 공간 소리를 만드는 프로세스는 새롭고 고
 
 Dodging 정비공는 RoboRaid에서 게임 플레이의 가장 중요 한 측면 중 하나 이며, HoloLens 환경에 대해 완전히 고유한 것입니다. 따라서 플레이어에 게 성공적인 dodges 매우 더욱 생산적인 하려고 했습니다. Doppler "whizz by"는 개발에서 매우 일찍 뛰어난 소리를 제공 합니다. 처음에는 내 계획에서 루프를 사용 하 고 볼륨, 피치 및 필터를 사용 하 여 실시간으로 조작 했습니다. 이에 대 한 구현은 매우 정교 하기 때문에 실제로 빌드하기 위해 리소스를 커밋하기 전에 Doppler 효과 구운 자산을 사용 하 여 저렴 한 프로토타입을 만들어 *를 확인 하는 방법만 확인 합니다. Microsoft의 교묘한 dev는이를 위해를 작성 하 여이를 위한 것입니다 .이를 위해는 플레이어가 플레이어의 귀를 전달 하 고 결과를 매우 놀라운 것으로 생각 하기 전에 정확히 0.7 초를 재생 합니다. 물론 더 복잡 한 솔루션을 ditched 프로토타입을 구현 했습니다.
 
-\* * (Doppler 효과를 사용 하 여 오디오 자산을 만드는 방법에 대 한 자세한 내용을 보려면 Charles Deenan [100 Whooshes 2 분](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/))을 참조 하세요. *
+\* * (Doppler 효과를 사용 하 여 오디오 자산을 만드는 방법에 대 한 자세한 내용을 보려면 Charles Deenan [100 Whooshes 2 분](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/))을 참조 하세요. *
 <br>
-![Dodging 성공적으로 완료 된 적이 있으면 플레이어가 만족 하는 축 하 합니다.](images/successful-dodge-roboraid-500px.jpg)
+dodging 성공적으로 완료 된 적이 있으면 플레이어가 게임에 만족 하는 것을 보상 하 게 됩니다. ![](images/successful-dodge-roboraid-500px.jpg)
 
 ### <a name="ditching-ineffective-sounds"></a>Ditching 비효율적인 소리
 
@@ -49,7 +49,7 @@ HoloLens 환경에 대해 고유한 것으로 생각 하는 관심 있는 문제
 
 플레이어는 분명히 적중 될 때 어떤 것도 느끼지 못할 것입니다. 따라서 플레이어에 게 happed 된 것이 무엇 인지를 확실히 알 수 있습니다. 기존 게임에서는 문자가 적중 된 것을 알 수 있는 애니메이션이 표시 될 수 있습니다. 그렇지 않으면 화면이 빨간색으로 깜박이 며 문자가 grunt 수 있습니다. 이러한 유형의 큐는 혼합 현실 환경에서 작동 하지 않기 때문에 손상이 발생 했음을 나타내는 실제 exaggerated 소리와 시각적 신호를 결합 하기로 결정 했습니다. 큰 소리를 만들어 모든 항목을 ducked 하 게 혼합 하 여 두드러지게 했습니다. 그런 다음 더 많은 작업을 수행 하기 위해 핵 sub가 싱크 되었던 것 처럼 짧은 경고 소리를 추가 했습니다. 
 <br>
-![플레이어는 RoboRaid에서 적중 되 면 시각적 표시를 표시 하 고, 손상이 발생 했음을 알리는 exaggerated 오디오 큐를 가져옵니다.](images/player-hit-roboraid-500px.jpg)
+플레이어가 RoboRaid에서 적중 될 때 ![시각적 표시를 표시 하 고, 손상 되었음을 알리는 exaggerated 오디오 큐를 가져옵니다.](images/player-hit-roboraid-500px.jpg)
 
 ### <a name="getting-big-sound-from-small-speakers"></a>작은 스피커에서 큰 소리 가져오기
 
@@ -88,10 +88,10 @@ Explosions 등의 특정 이벤트 (예:) 소리를 "더 큼"으로 만들기 �
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>오디오 엔지니어@Microsoft</td>
+<td style="border-style: none"><b>Charles Sinex</b><br>오디오 엔지니어 @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [공간 음향](spatial-sound.md)
-* [Microsoft HoloLens 용 RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)
+* [Microsoft HoloLens 용 RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)

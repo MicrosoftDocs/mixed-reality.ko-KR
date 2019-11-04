@@ -1,17 +1,17 @@
 ---
 title: HoloLens 학습을 위한 Azure 공간 앵커 (HoloLens) 2
-description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
+description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: b29f27284c352d27fb1d4d4de701a1ebc2a7cd1c
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: 141aa90f2bf5d90527a0fe1e6a812c1ce56bd0eb
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327098"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437795"
 ---
 # <a name="photon-correct-me-if-im-wrong"></a>Photon (잘못 된 경우 문제 해결)
 
@@ -29,7 +29,7 @@ ms.locfileid: "67327098"
 
 ### <a name="setting-up-photon"></a>Photon 설정
 
-1. [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) 계정을 설정 합니다. 이 작업은 전자 메일을 채우기 하 고 몇 가지 확인 단계를 진행 하는 것으로 구성 됩니다.
+1. [Photon](https://dashboard.photonengine.com//Account/SignUp) 계정을 설정 합니다. 이 작업은 전자 메일을 채우기 하 고 몇 가지 확인 단계를 진행 하는 것으로 구성 됩니다.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
@@ -62,7 +62,7 @@ ms.locfileid: "67327098"
 
 ![Module2Chapter4step4im](images/Module2chapter4step5im.png)
 
-> 참고: IP 주소 또는 기타 유사한 질문에 대 한 질문이 있는 경우 도구 모음에서 대부분의 정보를 찾을 수 있습니다 (아래 이미지 참조).
+> 참고: IP 주소 또는 다른 유사한 질문에 대 한 질문이 있는 경우 도구 모음에서 대부분의 정보를 찾을 수 있습니다 (아래 이미지 참조).
 >
 > ![Module2Chapter4step4im](images/Module2chapter4noteim.png)
 
@@ -86,7 +86,7 @@ ms.locfileid: "67327098"
 
 9. 새 unity 프로젝트를 만듭니다. Unity 허브를 열고 "새로 만들기"를 클릭 합니다. 이름을 "HLSharingProject"로 합니다. 그런 다음 만들기를 클릭 합니다. 
 
-   > 두고 컴퓨터 속도에 따라 로드 하는 데 최대 2 분이 걸릴 수 있습니다.
+   > 참고: 컴퓨터 속도에 따라 로드 하는 데 최대 2 분이 걸릴 수 있습니다.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
@@ -140,7 +140,7 @@ ms.locfileid: "67327098"
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> 두고 또한 "장면/HLSharedProjectMain" 옆의 확인란도 선택 되어 있는지 확인 합니다.
+> 참고: "장면/HLSharedProjectMain" 옆의 확인란도 선택 되어 있는지도 확인 합니다.
 
 20. 검사기 패널의 "게시 설정" 아래에서 "기능"으로 스크롤하고 다음 확인란만 표시 되어 있는지 확인 합니다.
 
@@ -158,7 +158,7 @@ ms.locfileid: "67327098"
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> 두고 Prefab를 클릭 하면 TMP Essentials에 대 한 정보를 요청 하는 팝업이 표시 될 수 있습니다. 필요에 따라 "TMP Essentials 가져오기"를 클릭 합니다.
+> 참고: prefab를 클릭 하면 TMP Essentials에 대 한 정보를 요청 하는 팝업이 표시 될 수 있습니다. 필요에 따라 "TMP Essentials 가져오기"를 클릭 합니다.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 

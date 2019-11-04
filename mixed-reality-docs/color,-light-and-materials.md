@@ -1,21 +1,21 @@
 ---
 title: 색, 조명 및 재질
-description: 혼합 현실에 대 한 콘텐츠를 디자인 하려면 환경에서 사용 하는 각 시각적 자산의 색, 조명 및 자료를 신중 하 게 고려해 야 합니다.
+description: 혼합 현실용 콘텐츠를 디자인하려면 환경에서 사용되는 시각적 자산 각각에 대한 색, 조명 및 재질을 신중하게 고려해야 합니다.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 색, 조명, 재질
-ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: c49d88c2bb53c07adcb77e8dbb0e3cd77e1e78ae
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896514"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436411"
 ---
 # <a name="color-light-and-materials"></a>색, 조명 및 재질
 
-혼합 현실에 대 한 콘텐츠를 디자인 하려면 환경에서 사용 하는 각 시각적 자산의 색, 조명 및 자료를 신중 하 게 고려해 야 합니다. 이러한 결정은 가볍고 자료를 사용 하 여 몰입 형 환경의 톤을 설정 하는 것과 같이 미적 목적을 위한 것 이며, 인상적인 색을 사용 하 여 사용자에 게 임박한 작업을 경고할 수 있습니다. 이러한 각 결정은 사용자 환경의 대상 장치에 대 한 기회 및 제약 조건과 비교 하 여 평가 해야 합니다.
+혼합 현실용 콘텐츠를 디자인하려면 환경에서 사용되는 시각적 자산 각각에 대한 색, 조명 및 재질을 신중하게 고려해야 합니다. 이러한 결정은 가볍고 자료를 사용 하 여 몰입 형 환경의 톤을 설정 하는 것과 같이 미적 목적을 위한 것 이며, 인상적인 색을 사용 하 여 사용자에 게 임박한 작업을 경고할 수 있습니다. 이러한 각 결정은 사용자 환경의 대상 장치에 대 한 기회 및 제약 조건과 비교 하 여 평가 해야 합니다.
 
 다음은 몰입 형 및 holographic 헤드셋에서 자산을 렌더링 하는 방법에 대 한 지침입니다. 이 중 상당수는 다른 기술 영역에 밀접 하 게 연결 되어 있으며 관련 된 주제 목록은이 문서의 끝에 있는 [참고](color,-light-and-materials.md#see-also) 항목 섹션에서 찾을 수 있습니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "69896514"
 
 가산적 표시의 특성으로 인해 진한 색이 투명 하 게 표시 됩니다. 순수한 검은색 개체는 실제 환경과는 다른 것 처럼 보입니다. 아래 알파 채널을 참조 하세요. "검은색"의 모양을 지정 하려면 16, 16, 16과 같은 매우 진한 회색 RGB 값을 사용해 보세요.
 
-![표준 색 및 와이드 색 영역 비교](images/640px-widegamut.png)<br>
+![일반 색 영역 및 넓은 색 영역](images/640px-widegamut.png)<br>
 *표준 색 및 와이드 색 영역 비교*
 
 ## <a name="technical-considerations"></a>기술 고려 사항
@@ -54,13 +54,25 @@ ms.locfileid: "69896514"
 ## <a name="storytelling-with-light-and-color"></a>밝은 색과 색이 있는 스토리텔링
 
 가볍고 색을 사용 하면 사용자의 환경에서 holograms를 보다 자연스럽 게 표시 하 고 사용자에 대 한 지침과 도움을 제공할 수 있습니다. Holographic 환경을 위해 조명 및 색을 탐색할 때 다음 요소를 고려 합니다.
-* **Vignetting** -자료를 어둡게 하는 ' vignette ' 효과를 사용 하면 보기 필드의 중심에 사용자의 주의를 집중할 수 있습니다. 이 효과는 사용자의 응시 벡터의 일부 반경에서 홀로그램의 재질을 어둡게 합니다. 이는 사용자의 뷰가 오블리크 또는 glancing 각도에서 holograms 때에도 적용 됩니다.
-* 색, 밝기 및 조명을 대비 하 여 개체 또는 상호 작용 지점의 **강조** 그리기 스토리텔링의 조명 방법에 대 한 자세한 내용은 [픽셀 Cinematography-컴퓨터 그래픽의 조명 방법](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf)을 참조 하세요.
 
-![조각의 장면에서 여기에 표시 된 스토리텔링 요소에 대 한 강조를 표시 하는 색을 사용 합니다.](images/640px-fragments.jpg)<br>
-*[조각의](https://www.microsoft.com/p/fragments/9nblggh5ggm8)장면에서 여기에 표시 된 스토리텔링 요소에 대 한 강조를 표시 하는 색을 사용 합니다.*
+:::row:::
+    :::column:::
+* **Vignetting** -자료를 어둡게 하는 ' vignette ' 효과를 사용 하면 보기 필드의 중심에 사용자의 주의를 집중할 수 있습니다. 이 효과는 사용자의 응시 벡터의 일부 반경에서 홀로그램의 재질을 어둡게 합니다. 이는 사용자의 뷰가 오블리크 또는 glancing 각도에서 holograms 때에도 적용 됩니다.<br>
+* 색, 밝기 및 조명을 대비 하 여 개체 또는 상호 작용 지점의 **강조** 그리기 스토리텔링의 조명 방법에 대 한 자세한 내용은 [픽셀 Cinematography-컴퓨터 그래픽의 조명 방법](https://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf)을 참조 하세요.<br>
+        <br>
+        *이미지: 스토리텔링 요소에 대해 강조 표시 하기 위해 색을 사용 합니다. [조각](https://www.microsoft.com/p/fragments/9nblggh5ggm8)에서 장면에 표시 됩니다.*
+    :::column-end:::
+        :::column:::
+        ![조각의 장면에서 여기에 표시 된 스토리텔링 요소에 대 한 강조를 표시 하는 색을 사용 합니다.](images/640px-fragments.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>참조
+
+<br>
+
+---
+
+## <a name="see-also"></a>참고 항목
 * [색 구분](hologram-stability.md#color-separation)
 * [Holograms](hologram.md)
 * [Microsoft 디자인 언어 색](https://www.microsoft.com/design/color)

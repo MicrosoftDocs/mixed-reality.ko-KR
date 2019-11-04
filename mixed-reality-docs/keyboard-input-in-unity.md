@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 키보드, 입력, unity, touchscreenkeyboard
-ms.openlocfilehash: 35f6f0df993931eea35db7b167110b341ea0c0f2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f506415f9658d9723bf31b339d63fe4569100ace
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515736"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438555"
 ---
 # <a name="keyboard-input-in-unity"></a>Unity의 키보드 입력
 
-**공간** *UnityEngine*<br>
- **형식**: *[TouchScreenKeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
+**네임 스페이스:** *unityengine*<br>
+ **유형**:  *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
 
 HoloLens는 Bluetooth 키보드를 비롯 한 다양 한 형태의 입력을 지원 하지만 대부분의 응용 프로그램에서는 모든 사용자가 실제 키보드를 사용할 수 있다고 간주할 수 없습니다. 응용 프로그램에 텍스트 입력이 필요한 경우 화면 키보드의 일부 형식을 제공 해야 합니다.
 
-Unity는 사용할 수 있는 실제 키보드가 없을 때 키보드 입력을 허용 하기 위한 *[TouchScreenKeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* 클래스를 제공 합니다.
+Unity는 사용할 수 있는 실제 키보드가 없을 때 키보드 입력을 허용 하기 위한 *[TouchScreenKeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* 클래스를 제공 합니다.
 
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Unity의 HoloLens 시스템 키보드 동작
 

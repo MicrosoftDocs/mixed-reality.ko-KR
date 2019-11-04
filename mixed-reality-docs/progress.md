@@ -6,47 +6,89 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, ui, ux
-ms.openlocfilehash: 84853a23a73bbece30c1f96b83e586642f3ab762
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 43b4802e7c821c98c847509ace950f381da12f95
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523257"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437534"
 ---
 # <a name="displaying-progress"></a>진행률 표시
 
+<br>
+
+<img src="images/HoloLens2_Loader.gif" alt="Progress ring example in HoloLens" width="940px">
+
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
-![HoloLens의 진행률 링 예](images/HoloLens2_Loader.gif)<br>
-*HoloLens의 진행률 링 예*
+<br>
+
+---
 
 ## <a name="types-of-progress"></a>진행률 유형
 
 발생 한 상황에 대 한 사용자 정보를 제공 하는 것이 중요 합니다. 혼합 현실에서는 앱이 좋은 시각적 피드백을 제공 하지 않는 경우 실제 환경 또는 개체에 의해 사용자가 쉽게 무시 수 있습니다. 데이터를 로드 하거나 장면을 업데이트 하는 경우와 같이 몇 초 정도 걸리는 상황에서는 시각적 표시기를 표시 하는 것이 좋습니다. 작업이 진행 중인 사용자를 표시 하는 두 가지 옵션은 **진행률 표시줄이** 나 **진행 링**입니다.
 
-### <a name="progress-bar"></a>진행률 표시줄
+:::row:::
+    :::column:::
+        ### <a name="progress-barbr"></a>진행률 표시줄<br>
+        진행률 표시줄에는 태스크의 완료율이 표시 됩니다. 기간이 알려진 작업 (활성화 상태의) 중에 사용 해야 하지만, 진행률은 사용자가 앱과의 상호 작용을 차단 하지 않아야 합니다.<br>
+        <br>
+        *이미지: HoloLens의 진행률 표시줄 예*
+    :::column-end:::
+        :::column:::
+        ![공간](images/spacer-20x582.png)<br>
+       HoloLens의 ![진행률 표시줄 예제](images/640px-progressbar.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-![HoloLens의 진행률 표시줄 예](images/640px-progressbar.jpg)
+<br>
 
-진행률 표시줄에는 태스크의 완료율이 표시 됩니다. 기간이 알려진 작업 (활성화 상태의) 중에 사용 해야 하지만, 진행률은 사용자가 앱과의 상호 작용을 차단 하지 않아야 합니다.
+---
 
-### <a name="progress-ring"></a>진행률 링
+:::row:::
+    :::column:::
+        ### <a name="progress-ringbr"></a>진행률 링<br>
+        진행률 링은 확정 되지 않은 상태 이며 작업이 완료 될 때까지 추가 사용자 조작이 차단 되는 경우에만 사용 해야 합니다.<br>
+        <br>
+        *이미지: HoloLens의 진행 링 예*
+    :::column-end:::
+        :::column:::
+        ![공간](images/spacer-20x582.png)<br>
+       HoloLens의 ![진행률 링 예제](images/640px-progressring.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-![HoloLens의 진행률 링 예](images/640px-progressring.jpg)
+<br>
 
-진행률 링은 확정 되지 않은 상태 이며 작업이 완료 될 때까지 추가 사용자 조작이 차단 되는 경우에만 사용 해야 합니다.
+---
 
-### <a name="progress-with-a-custom-object"></a>사용자 지정 개체의 진행률
+:::row:::
+    :::column:::
+        ### <a name="progress-with-a-custom-objectbr"></a>사용자 지정 개체의 진행률<br>
+        사용자 지정 2D/3D 개체를 사용 하 여 진행률 컨트롤을 사용자 지정 하 여 앱의 개성 및 브랜드 id에 추가할 수 있습니다.<br>
+        <br>
+        *이미지: HoloLens의 사용자 지정 메시 예제를 사용 하 여 진행*
+    :::column-end:::
+        :::column:::
+        ![공간](images/spacer-20x582.png)<br>
+       HoloLens의 사용자 지정 메시 예제를 사용 하 여 진행 ![](images/640px-progresscustom.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-![HoloLens의 사용자 지정 메시 예제로 진행](images/640px-progresscustom.jpg)
+<br>
 
-사용자 지정 2D/3D 개체를 사용 하 여 진행률 컨트롤을 사용자 지정 하 여 앱의 개성 및 브랜드 id에 추가할 수 있습니다.
+---
 
 ## <a name="best-practices"></a>모범 사례
 * 사용자가 자신의 헤드를 빈 공간으로 쉽게 이동 하 고 컨텍스트를 손실할 수 있으므로 [billboarding 또는 태그](billboarding-and-tag-along.md) 를 진행률 표시와 긴밀 하 게 구분 합니다. 사용자가 아무것도 확인할 수 없는 경우 앱이 손상 된 것 처럼 보일 수 있습니다. Billboarding 및 태그 동반은 Progress prefab에 기본 제공 됩니다.
 * 항상 사용자에 게 발생 하는 상황에 대 한 상태 정보를 제공 하는 것이 좋습니다. 진행률 prefab 상태를 제공 하기 위한 Windows 표준 링 유형 진행률을 비롯 한 다양 한 비주얼 스타일을 제공 합니다. 응용 프로그램의 브랜드에 맞게 진행률 스타일을 조정 하려는 경우 애니메이션으로 사용자 지정 메시를 사용할 수도 있습니다.
 
-## <a name="see-also"></a>참조
+<br>
+
+---
+
+## <a name="see-also"></a>참고 항목
 * [Mixed Reality Toolkit의 Progress scripts and prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
 * [경계 상자](app-bar-and-bounding-box.md)
 * [상호 작용 가능한 개체](interactable-object.md)

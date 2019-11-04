@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy 탐색기, HoloLens, Windows Mixed Reality, 아이디어 공유, 사례 연구
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523849"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436865"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>사례 연구-혼합 현실에서 galaxy 만들기
 
@@ -25,7 +25,7 @@ Andy Zibits, 프로젝트의 아트 리드 및 Karim Luccin (팀의 그래픽 �
 
 Microsoft는 생생한 공간에서 3D 개체를 직접 렌더링 하는 데 HoloLens 기능을 최대한 활용 하고자 했습니다. 따라서 사람들이 가까운 곳에서 확대 하 고 개별의 개별 궤적을 볼 수 있는 현실적인 느낌의 galaxy를 만들려고 했습니다. .
 
-개발의 첫 번째 주에는 Milky 방식의 Galaxy를 표현 하기 위한 몇 가지 목표가 제공 됩니다. 여기에는 galaxy의 모양을 만드는 데 도움이 되는 깊이, 이동 및 느낌 대규모이 필요 합니다.
+개발의 첫 번째 주에는 Milky 방식의 표현에 대 한 몇 가지 목표가 있습니다 .이는 galaxy의 모양을 만드는 데 도움이 되는 깊이, 이동 및 느낌 대규모 필요 합니다.
 
 수십억 개의 별이 있는 애니메이션 된 galaxy를 만드는 경우의 문제는 업데이트 해야 하는 단일 요소 수가 HoloLens에서 CPU를 사용 하 여 애니메이션 효과를 줄 수 있을 정도로 크지 않기 때문입니다. 이 솔루션에는 다양 한 아트와 과학이 함께 포함 되어 있습니다.
 
@@ -41,7 +41,7 @@ Microsoft는 생생한 공간에서 3D 개체를 직접 렌더링 하는 데 Hol
 
 ### <a name="creating-the-position-of-the-stars"></a>별 위치 만들기
 
-팀 멤버 중 한 명에 게 처음 위치 C# 에서 별을 생성 하는 코드를 이미 썼습니다. 별은 타원에 있고 해당 위치는 (**curveOffset**, **ellipseSize**, **권한 상승**)로 설명할 수 있습니다. 여기서 **curveOffset** 는 타원을 따라 하는 별 각도이 고, **ellipseSize** 은 타원의 차원입니다. X 및 Z를 따라, galaxy 내에서 적절 한 별 권한 상승을 활용 합니다. 따라서 각 별모양 특성을 사용 하 여 초기화 되는 버퍼 ([Unity의](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)경우)를 만들어 나머지 환경에 사용할 수 있는 GPU에 보낼 수 있습니다. 이 버퍼를 그리려면, galaxy를 나타내는 실제 메시 없이 임의의 요소 집합에서 셰이더 (GPU에서 코드)를 실행할 수 있는 [Unity의 DrawProcedural](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) 을 사용 합니다.
+팀 멤버 중 한 명에 게 처음 위치 C# 에서 별을 생성 하는 코드를 이미 썼습니다. 별은 타원에 있고 해당 위치는 (**curveOffset**, **ellipseSize**, **권한 상승**)로 설명할 수 있습니다. 여기서 **curveOffset** 는 타원을 따라 하는 별 각도이 고, **ellipseSize** 은 타원의 차원입니다. X 및 Z를 따라, galaxy 내에서 적절 한 별 권한 상승을 활용 합니다. 따라서 각 별모양 특성을 사용 하 여 초기화 되는 버퍼 ([Unity의](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)경우)를 만들어 나머지 환경에 사용할 수 있는 GPU에 보낼 수 있습니다. 이 버퍼를 그리려면, galaxy를 나타내는 실제 메시 없이 임의의 요소 집합에서 셰이더 (GPU에서 코드)를 실행할 수 있는 [Unity의 DrawProcedural](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) 을 사용 합니다.
 
 **CPU**
 
@@ -147,7 +147,7 @@ Quads 대신 다이아몬드입니다.
 
 ### <a name="a-bit-of-context-first"></a>첫 번째 컨텍스트의 비트
 
-게임에서 질감을 사용 하는 경우 질감 크기는 거의 사용 하려는 영역을 일치 하지만 다른 종류의 질감 필터링 질감의 픽셀에서 원하는 색을 보간 하는 그래픽 카드를 가져오고을 사용할 수 있습니다 ([질감 필터링<c3/>).](https://msdn.microsoft.com/library/dn642451.aspx) 관심이 있는 필터링은 가장 인접 한 4 개를 사용 하 여 모든 픽셀의 값을 계산 하는 [이중 선형 필터링](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) 입니다.
+게임에서 텍스처를 사용 하는 경우 질감 크기는 사용 하려는 영역과 거의 일치 하지 않지만, 질감 필터링을 사용 하 여 그래픽 카드를 가져와서 질감의 픽셀에서 원하는 색을 보간 ([질감 필터링](https://msdn.microsoft.com/library/dn642451.aspx)) 할 수 있습니다. 관심이 있는 필터링은 가장 인접 한 4 개를 사용 하 여 모든 픽셀의 값을 계산 하는 [이중 선형 필터링](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) 입니다.
 
 ![필터링 전 원래](images/texture-1.png)
 
@@ -203,6 +203,6 @@ Galaxy 탐색기의 개발 프로세스에 대 한 자세한 정보를 확인 �
 </table>
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [GitHub의 Galaxy 탐색기](https://github.com/Microsoft/GalaxyExplorer)
 * [YouTube의 Galaxy 탐색기 프로젝트 업데이트](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

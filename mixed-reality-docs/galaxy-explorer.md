@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: galaxy 탐색기, 사례 연구, 프로젝트, 샘플
-ms.openlocfilehash: a33a1541ef97298facfa9b0ef2d126654dd02f51
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 11cb2ad17f42fe49d84a61480dc8d43698386a1c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526548"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435405"
 ---
 # <a name="galaxy-explorer"></a>갤럭시 익스플로러
 
@@ -47,13 +47,13 @@ Microsoft HoloLens 커뮤니티는 holographic 컴퓨팅이 전 세계를 어떻
 
 에피소드 1에서 개발 팀은 브레인스토밍, concepting 및 프로토타입의 결정을 위한 독창적인 프로세스를 시작 합니다.
 
-## <a name="ep-2-lets-do-this"></a>Ep 2: 이거 해요
+## <a name="ep-2-lets-do-this"></a>Ep 2: 다음을 수행 하겠습니다.
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
 에피소드 2에서 개발 팀은 프로토타입 단계를 완료 하 고 주요 당면 하드 문제를 해결 하 고 추가로 진행할 아이디어를 파악 합니다.
 
-## <a name="ep-3-laying-foundations"></a>Ep 3: 레이아웃 기초
+## <a name="ep-3-laying-foundations"></a>Ep 3: 기초 레이아웃
 
 >[!VIDEO https://www.youtube.com/embed/fUqni6C4nmo]
 
@@ -65,13 +65,13 @@ Microsoft HoloLens 커뮤니티는 holographic 컴퓨팅이 전 세계를 어떻
 
 에피소드 4에서 팀은 과학 데이터를 가져오고, 렌더링 프로세스를 최적화 하 고, 공간 매핑을 통합 하는 개발에 더 심층적으로 다이브.
 
-## <a name="ep-5-see-what-happens"></a>Ep 5: 어떻게 되는지 확인
+## <a name="ep-5-see-what-happens"></a>Ep 5: 어떻게 되는지 확인 합니다.
 
 >[!VIDEO https://www.youtube.com/embed/Up1EDRrCrho]
 
 에피소드 5에서 개발 팀은 앱을 테스트 하 고, 수정 해야 하는 버그를 검색 하 고, 환경을 구체화 합니다.
 
-## <a name="ep-6-coming-to-life"></a>Ep 6: 출시 예정
+## <a name="ep-6-coming-to-life"></a>Ep 6: 출시
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
@@ -89,10 +89,10 @@ Microsoft HoloLens 커뮤니티는 holographic 컴퓨팅이 전 세계를 어떻
 
 ## <a name="meet-the-team"></a>팀 충족
 
-![Galaxy 탐색기 개발 팀](images/syiteampic.jpg)<br>
+Galaxy 탐색기 개발 팀 ![](images/syiteampic.jpg)<br>
 *Galaxy 탐색기 개발 팀*
 
-적절 한 팀을 구축 하는 것이 가장 중요 한 투자 중 하나입니다. 해당 개발 모델에 익숙한 게임 스튜디오의 경우와 유사 하 게이를 구성 하기로 결정 했습니다. 고정 된 시간 (3 월 30 일에 빌드 전에 쿨 효과를 만듦)이 있으므로 범위를 제어 하기 위해 11 개의 코어 팀 멤버가 선택 했습니다.
+적절 한 팀을 구축 하는 것이 가장 중요 한 투자 중 하나입니다. 해당 개발 모델에 익숙한 게임 스튜디오의 경우와 유사 하 게이를 구성 하기로 결정 했습니다. 고정 된 시간 (2016 년 3 월 30 일에 빌드 전에 쿨 효과를 만듦)을 포함 하 여 범위를 제어 하기 위해 11 개의 코어 팀 멤버가 선택 했습니다.
 
 이 프로젝트에 대해 계획을 수행 하 고, 진행률을 검토 하 고, 하루 종일 실행 되는 것을 유지 하는 생산자, Jessica로 시작 했습니다. 분홍색 머리카락을 사용 하는 것입니다. Peter (디자인 감독)와 선임 디자이너 ()가 있습니다. Galaxy 탐색기를 위한 독창적인 비전을 보유 하 고 있습니다. Jon은 맨 앞 행에서의 고, Peter는 뒤쪽의 오른쪽에서 두 번째입니다.
 
@@ -104,6 +104,6 @@ Microsoft HoloLens 커뮤니티는 holographic 컴퓨팅이 전 세계를 어떻
 
 Microsoft에서 Microsoft의 큰 스튜디오에 참여 하 고 있습니다 (게임을 진행 하지 않는 개발 팀의 경우). 많은 다른 사람들이 참여 하 고 있습니다 .이는 프로젝트 전체에서 자주 사용 되는 귀사 재능, 오디오 엔지니어 및 스튜디오 리더십에서 자주 노력 했지만, 이러한 인력 들은 광범위 한 팀이 보유 한 다른 프로젝트와 리소스를 공유 했습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [사례 연구-혼합 현실에서 galaxy 만들기](case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Galaxy 탐색기 GitHub 리포지토리](https://github.com/Microsoft/GalaxyExplorer)

@@ -1,17 +1,17 @@
 ---
 title: Unity Visual Studio 솔루션 내보내기 및 빌드
 description: 이 문서에서는 Visual Studio에서 빌드 및 배포할 수 있도록 Unity에서 혼합 현실 프로젝트를 내보내는 방법을 간략하게 설명 합니다.
-author: ''
+author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: unity, visual studio, 내보내기, 빌드, 배포
-ms.openlocfilehash: 68c86fdfe0e589536dafe2bf53c7d4e5dffcc514
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 752a9dd002d27d24d9b80a1a97cb07a44237b9e0
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525843"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435568"
 ---
 # <a name="exporting-and-building-a-unity-visual-studio-solution"></a>Unity Visual Studio 솔루션 내보내기 및 빌드
 
@@ -19,16 +19,16 @@ ms.locfileid: "63525843"
 
 ## <a name="how-to-export-from-unity"></a>Unity에서 내보내는 방법
 
-![Unity 빌드 설정](images/unitybuildsettings-300px.png)<br>
+Unity 빌드 설정 ![](images/unitybuildsettings-300px.png)<br>
 *Unity 빌드 설정*
 
 1. Unity에서 프로젝트를 내보낼 준비가 되 면 **파일** 메뉴를 열고 **빌드 설정** ...을 선택 합니다.
 2. 열려 있는 장면 **추가** 를 클릭 하 여 빌드에 장면을 추가 합니다.
 3. **빌드 설정** 대화 상자에서 다음 옵션을 선택 하 여 HoloLens를 내보냅니다.
-   * **Platform.string** *유니버설 Windows 플랫폼* 하 고 선택 항목을 적용 하려면 **스위치 플랫폼** 을 선택 해야 합니다.
-   * **SDK** *유니버설 10*.
-   * **UWP 빌드 형식:** *D3D*.
-4. **선택 사항**: **Unity C# 프로젝트:** 검사할.
+   * **Platform:** *유니버설 Windows 플랫폼* 하 고 선택 항목을 적용 하려면 **스위치 플랫폼** 을 선택 해야 합니다.
+   * **SDK:** *Universal 10*.
+   * **UWP 빌드 형식:** *D3D*입니다.
+4. **선택 사항**: **Unity C# 프로젝트:** 선택 됨.
 
 >[!NOTE]
 >이 확인란을 선택 하면 다음 작업을 수행할 수 있습니다.
@@ -58,7 +58,7 @@ Unity에서 앱C# 을 내보낼 때 "프로젝트" 확인란을 선택 하면 �
 
 응용 프로그램 빌드 및 배포의 나머지 부분은 [Visual Studio](using-visual-studio.md)에서 발생 합니다. Unity 빌드 구성을 지정 해야 합니다. Unity의 명명 규칙은 Visual Studio에서 일반적으로 사용 하는 것과 다를 수 있습니다.
 
-|  Configuration  |  설명 | 
+|  구성  |  설명 | 
 |----------|----------|
 |  디버그  |  모든 최적화를 해제 하 고 프로파일러를 사용 하도록 설정 합니다. 스크립트를 디버깅 하는 데 사용 됩니다. | 
 |  마스터  |  모든 최적화를 사용 하도록 설정 하 고 프로파일러를 사용 하지 않습니다. 스토어에 앱을 제출 하는 데 사용 됩니다. | 

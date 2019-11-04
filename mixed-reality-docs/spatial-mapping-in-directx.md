@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows mixed reality, 공간 매핑, 환경, 상호 작용, directx, winrt, api, 샘플 코드, UWP, SDK, 연습
-ms.openlocfilehash: db3f1464158c04127e456cadd5fb633336909344
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550691"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437448"
 ---
 # <a name="spatial-mapping-in-directx"></a>DirectX의 공간 매핑
 
@@ -21,6 +21,29 @@ ms.locfileid: "63550691"
 
 >[!NOTE]
 >이 문서의 코드 조각은 현재 [ C++ holographic 프로젝트 템플릿에](creating-a-holographic-directx-project.md)사용 되 C++는 것 처럼 C + 17-so-far working 규격 C++/winrt 대신/cx 사용을 보여 줍니다.  개념은 C++/winrt 프로젝트와 동일 하지만 코드를 변환 해야 합니다.
+
+## <a name="device-support"></a>장치 지원
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능과</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>공간 매핑</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="directx-development-overview"></a>DirectX 개발 개요
 
@@ -70,14 +93,14 @@ ms.locfileid: "63550691"
 </Capabilities>
 ```
 
-이 기능은 **uap2** 네임 스페이스에서 제공 됩니다. 매니페스트에이 네임 스페이스에 대 한 액세스 권한을 얻으려면 &lt;패키지 > 요소에 *xlmns* 특성으로 포함 합니다. 예를 들면 다음과 같습니다.
+이 기능은 **uap2** 네임 스페이스에서 제공 됩니다. 매니페스트에이 네임 스페이스에 대 한 액세스 권한을 얻으려면이를 &lt;Package > 요소에 *xlmns* 특성으로 포함 합니다. 예를 들면 다음과 같습니다.
 
 ```xml
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap uap2 mp"
     >
 ```
@@ -367,7 +390,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 }
 ```
 
-**참고:** 이전 코드 조각에서 사용 되는 CreateDirectXBuffer 도우미 함수는 Surface 매핑 코드 샘플을 참조 하세요. SurfaceMesh, GetDataFromIBuffer. 이제 장치 리소스 만들기가 완료 되 고 메시는 로드 되 고 업데이트 및 렌더링 준비가 된 것으로 간주 됩니다.
+**참고:** 이전 코드 조각에서 사용 되는 CreateDirectXBuffer 도우미 함수는 Surface 매핑 코드 샘플: SurfaceMesh, GetDataFromIBuffer를 참조 하세요. 이제 장치 리소스 만들기가 완료 되 고 메시는 로드 되 고 업데이트 및 렌더링 준비가 된 것으로 간주 됩니다.
 
 ### <a name="update-and-render-surface-meshes"></a>표면 메시 업데이트 및 렌더링
 
@@ -629,7 +652,7 @@ else
 }
 ```
 
-**참고:** **GatherDepthLess** 루틴은 Surface 매핑 코드 샘플을 참조 하세요. SpecialEffectPixelShader. hlsl.
+**참고:** **GatherDepthLess** 루틴은 표면 매핑 코드 샘플: SpecialEffectPixelShader. hlsl를 참조 하세요.
 
 **화면 메시 데이터를 표시로 렌더링**
 
@@ -638,7 +661,7 @@ else
 여기서 코드 샘플은 컬렉션을 그리기 위해 망상 렌더러에 지시 합니다. 이번에는 깊이 전용 패스를 지정 하지 않으므로 픽셀 셰이더를 연결 하 고 현재 가상 카메라에 대해 지정한 대상을 사용 하 여 렌더링 파이프라인을 완료 합니다.
 
 ```cpp
-// SR mesh rendering pass: Draw SR mesh over the world.
+// Spatial Mapping mesh rendering pass: Draw Spatial Mapping mesh over the world.
 context->ClearDepthStencilView(pCameraResources->GetSurfaceOcclusionDepthStencilView(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 // Set the render target to the current holographic camera's back buffer, and set the depth buffer.
@@ -650,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [홀로그램 DirectX 프로젝트 만들기](creating-a-holographic-directx-project.md)
 * [Windows. 인식 공간 API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

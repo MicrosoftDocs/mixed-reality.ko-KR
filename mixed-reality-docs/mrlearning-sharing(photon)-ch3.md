@@ -5,17 +5,17 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: d3068a1ebbbc2b6db8b563be8bf8c6e488e9491a
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: a6d1a269f45b4aaf7cbd8fea948ddcbdf0bf18e2
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701936"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437738"
 ---
 # <a name="3-connecting-multiple-users"></a>3. 여러 사용자 연결
 
-이 단원에서는 라이브 공유 환경의 일부로 여러 사용자를 연결 하는 방법에 대해 알아봅니다. 이 단원의 끝에는 여러 장치에서 응용 프로그램을 열고, 연결 된 각 사용자의 표현으로 표현 된 아바타를 볼 수 있습니다. 
+이 단원에서는 라이브 공유 환경의 일부로 여러 사용자를 연결 하는 방법에 대해 알아봅니다. 이 단원을 마치면 여러 장치에서 응용 프로그램을 열고, 참가 하는 각 사용자에 대 한 구로 표시 된 아바타를 볼 수 있습니다. 
 
 목표로
 
@@ -25,7 +25,7 @@ ms.locfileid: "68701936"
 
 ## <a name="instructions"></a>지침
 
-1. 프로젝트 패널의 자산-> 리소스-> Prefabs 폴더에서 아래 이미지에 표시 된 것 처럼 NetworkLobby prefab을 계층으로 끌어 놓습니다.
+1. 프로젝트 패널의 자산-> 리소스-> Prefabs 폴더에서 아래 이미지와 같이 NetworkLobby prefab를 계층 구조로 끌어 놓습니다.
 
 ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
@@ -49,7 +49,7 @@ ms.locfileid: "68701936"
 
 ![module3chapter3updateStep6im](images/module3chapter3updateStep6im.png) 
 
-7. 다음으로 공유 환경에 가입 하는 각 사람을 나타내는 구를 만듭니다. 방금 만든 PhotonUser 개체를 마우스 오른쪽 단추로 클릭 하 고 scrolldown "3D 개체를 클릭 한 후 구를 클릭 합니다. 그러면 구 게임 개체가 PhotonUser 개체의 자식으로 생성 됩니다.
+7. 다음으로 공유 환경에 가입 하는 각 사람을 나타내는 구를 만듭니다. 방금 만든 PhotonUser 개체를 마우스 오른쪽 단추로 클릭 하 고 "3D 개체"로 스크롤한 다음 구를 클릭 합니다. 그러면 구 게임 개체가 PhotonUser 개체의 자식으로 생성 됩니다.
 
 ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
@@ -63,7 +63,7 @@ ms.locfileid: "68701936"
 
 > 참고: 게임 개체가 계층 구조에서 삭제 되기 전에 Prefabs 폴더에 성공적으로 복사 되었는지 확인 합니다.
 
-10. 3 단계의 지침에 따라 계층 구조에 새 개체를 만들고 이름을 SharedPlayground로 합니다. 그런 다음 구성 요소 추가를 클릭 하 고 일반 네트워크 관리자를 검색 한 후이를 클릭 하 여 일반 네트워크 관리자 구성 요소를 추가 합니다. 개체의 위치를 x = 0, y = 0 및 z = 0으로 변경 합니다.
+10. 3 단계에서 설명 하는 지침에 따라 계층 구조에 새 개체를 만들고 이름을 SharedPlayground로 합니다. 그런 다음 구성 요소 추가를 클릭 하 고 일반 네트워크 관리자를 검색 합니다.  다시 클릭 하 여 일반 네트워크 관리자 구성 요소를 추가 합니다. 개체의 위치를 x = 0, y = 0 및 z = 0으로 변경 합니다.
 
 ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 

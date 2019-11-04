@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 연습, 음성 명령, 구, 인식, 음성, directx, 플랫폼, cortana, windows mixed 현실
-ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548671"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437197"
 ---
 # <a name="voice-input-in-directx"></a>DirectX의 음성 입력
 
@@ -22,7 +22,7 @@ ms.locfileid: "63548671"
 
 ## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>음성 명령을 연속 해 서 인식 하기 위해 SpeechRecognizer 사용
 
-이 섹션에서는 연속 음성 인식을 사용 하 여 앱에서 음성 명령을 사용 하도록 설정 하는 방법을 설명 합니다. 이 연습에서는 [HolographicVoiceInput](http://go.microsoft.com/fwlink/p/?LinkId=844964) 샘플의 코드를 사용 합니다. 샘플을 실행 하는 경우 등록 된 색 명령 중 하나의 이름을 말하기 회전 큐브의 색을 변경 합니다.
+이 섹션에서는 연속 음성 인식을 사용 하 여 앱에서 음성 명령을 사용 하도록 설정 하는 방법을 설명 합니다. 이 연습에서는 [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) 샘플의 코드를 사용 합니다. 샘플을 실행 하는 경우 등록 된 색 명령 중 하나의 이름을 말하기 회전 큐브의 색을 변경 합니다.
 
 먼저 새 **Windows:: Media:: SpeechRecognition:: SpeechRecognizer** 인스턴스를 만듭니다.
 
@@ -426,7 +426,7 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [음성 앱 디자인](https://msdn.microsoft.com/library/dn596121.aspx)
 * [DirectX의 공간 음향](spatial-sound-in-directx.md)
 * [SpeechRecognitionAndSynthesis 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

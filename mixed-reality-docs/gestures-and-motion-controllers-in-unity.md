@@ -2,20 +2,20 @@
 title: Unity의 제스처 및 동작 컨트롤러
 description: Unity에서 작업을 수행 하는 데는 두 가지 주요 방법, 즉 핸드 제스처와 동작 컨트롤러가 있습니다.
 author: thetuvix
-ms.author: yoyoz
+ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 제스처, 동작 컨트롤러, unity, 응시, 입력
-ms.openlocfilehash: f0d2835a08ef534af1310db35ccb81888e49aeb8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525765"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435230"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Unity의 제스처 및 동작 컨트롤러
 
-HoloLens의 [손으로](gestures.md) 는 [Unity](gaze-in-unity.md)에서 작업을 수행 하는 두 가지 주요 방법, 그리고 HOLOLENS 및 몰입 형 HMD의 [동작 컨트롤러](motion-controllers.md) 를 사용할 수 있습니다. Unity에서 동일한 Api를 통해 두 공간 입력 원본에 대 한 데이터에 액세스할 수 있습니다.
+HoloLens의 [손으로](gaze-and-commit.md#composite-gestures) 는 [Unity](gaze-in-unity.md)에서 작업을 수행 하는 두 가지 주요 방법, 그리고 HOLOLENS 및 몰입 형 HMD의 [동작 컨트롤러](motion-controllers.md) 를 사용할 수 있습니다. Unity에서 동일한 Api를 통해 두 공간 입력 원본에 대 한 데이터에 액세스할 수 있습니다.
 
 Unity는 Windows Mixed Reality의 공간 입력 데이터에 액세스 하는 두 가지 기본 방법인 공통 *입력. GetButton/input. Getbutton* api는 여러 Unity XR sdk에서 작동 하 고, *InteractionManager/GestureRecognizer* api는와 관련이 있습니다. 사용 가능한 공간 입력 데이터의 전체 집합을 노출 하는 Windows 혼합 현실입니다.
 
@@ -39,21 +39,21 @@ Windows Mixed Reality의 단추/축 ID 매핑은 다음 두 가지 방법으로 
 </tr><tr>
 <td> 아날로그 값 트리거를 선택 합니다. </td><td> 축 9 </td><td> 축 10 </td><td> Select보도 금액</td>
 </tr><tr>
-<td> 부분적으로 누른 트리거 선택 </td><td> 단추 14 <i>(게임 패드 호환성)</i> </td><td> 단추 15 <i>(게임 패드 호환성)</i> </td><td> Select보도 Sedamount &gt; 0.0</td>
+<td> 부분적으로 누른 트리거 선택 </td><td> 단추 14 <i>(게임  호환)</i></td><td> 단추 15 <i>(게임 패드 호환성)</i> </td><td> Select보도 횟수 &gt; 0.0</td>
 </tr><tr>
 <td> 메뉴 단추 누름 </td><td> 단추 6 * </td><td> 단추 7 * </td><td> menuPressed</td>
 </tr><tr>
 <td> 그립 단추 누름 </td><td> 축 11 = 1.0 (아날로그 값 없음)<br />단추 4 <i>(게임 패드 호환성)</i> </td><td> 축 12 = 1.0 (아날로그 값 없음)<br />단추 5 <i>(게임 패드 호환성)</i> </td><td> grasped</td>
 </tr><tr>
-<td> 엄지 스틱 <i>X (왼쪽:-1.0, right: 1.0)</i> </td><td> 축 1 </td><td> 축 4 </td><td> thumbstickPosition</td>
+<td> 엄지 스틱 X <i>(왼쪽:-1.0, 오른쪽: 1.0)</i> </td><td> 축 1 </td><td> 축 4 </td><td> thumbstickPosition</td>
 </tr><tr>
-<td> 엄지 스틱 <i>Y (위쪽:-1.0, 아래쪽: 1.0)</i> </td><td> 축 2 </td><td> 축 5 </td><td> thumbstickPosition</td>
+<td> 엄지 스틱 Y <i>(위쪽:-1.0, 아래쪽: 1.0)</i> </td><td> 축 2 </td><td> 축 5 </td><td> thumbstickPosition</td>
 </tr><tr>
 <td> 엄지 스틱 누름 </td><td> 단추 8 </td><td> 단추 9 </td><td> thumbstickPressed</td>
 </tr><tr>
-<td> 터치 패드 <i>X (왼쪽:-1.0, right: 1.0)</i> </td><td> 축 17 * </td><td> 축 19 * </td><td> touchpadPosition</td>
+<td> 터치 패드 X <i>(왼쪽:-1.0, 오른쪽: 1.0)</i> </td><td> 축 17 * </td><td> 축 19 * </td><td> touchpadPosition</td>
 </tr><tr>
-<td> 터치 패드 <i>Y (위쪽:-1.0, 아래쪽: 1.0)</i> </td><td> 축 18 * </td><td> 축 20 * </td><td> touchpadPosition</td>
+<td> 터치 패드 Y <i>(위쪽:-1.0, 아래쪽: 1.0)</i> </td><td> 축 18 * </td><td> 축 20 * </td><td> touchpadPosition</td>
 </tr><tr>
 <td> 터치 패드 작업 </td><td> 단추 18 * </td><td> 단추 19 * </td><td> touchpadTouched</td>
 </tr><tr>
@@ -61,7 +61,7 @@ Windows Mixed Reality의 단추/축 ID 매핑은 다음 두 가지 방법으로 
 </tr><tr>
 <td> 6DoF 그립 포즈 또는 포인터 포즈 </td><td colspan="2"> <i>그립</i> 포즈만: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. InputTracking. GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. InputTracking. GetLocalRotation</a></td><td> 전달 <i>그립</i> 또는 <i>포인터</i> 를 인수로 전달 합니다. sourcestate TryGetPosition<br />sourceState<br /></td>
 </tr><tr>
-<td> 상태 추적 </td><td colspan="2"> <i>MR 특정 API를 통해서만 사용할 수 있는 위치 정확도 및 원본 손실 위험</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState. positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceLossRisk</a></td>
+<td> 상태 추적 </td><td colspan="2"> <i>위치 정확도 및 원본 손실 위험은 MR 특정 API를 통해서만 사용할 수 있습니다</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState. positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceLossRisk</a></td>
 </tr>
 </table>
 
@@ -81,10 +81,10 @@ Windows Mixed Reality는 다양 한 폼 팩터에서 동작 컨트롤러를 지�
 몰입 형 헤드셋에서 그립 포즈는 사용자 **의 손을** 만들거나 **사용자의 손으로 보유 한 개체**(예: 소드 또는 포)를 렌더링 하는 데 가장 적합 합니다. 동작 컨트롤러에 대해 Windows에서 제공 하는 **렌더링할 모델** 은 동작 컨트롤러를 시각화할 때에도 그립 포즈를 사용 합니다.
 
 그립 포즈는 구체적으로 다음과 같이 정의 됩니다.
-* **그립 위치**: 중심 컨트롤러를 자연스럽 게 사용할 때 왼쪽 또는 오른쪽으로 조정 하 여 그립 내에서 위치를 가운데에 맞춥니다. Windows Mixed Reality 동작 컨트롤러에서이 위치는 일반적으로 보통 클릭 단추와 맞춥니다.
-* **그립 방향의 오른쪽 축입니다**. 손을 완전히 열어 평평한 5 손가락 포즈를 형성 하는 경우 야자나무 (왼쪽 야자나무에서 전방, 오른쪽 팜)에 있는 광선
-* **그립 방향의 앞 축**: 컨트롤러를 보유 하 고 있는 것 처럼 부분적으로 닫는 경우 엄지 단추가 아닌 손가락으로 형성 된 튜브를 통해 "전달" 하는 광선이 표시 됩니다.
-* **그립 방향의 위쪽 축입니다**. 오른쪽 및 전방 정의에 의해 암시 된 위쪽 축입니다.
+* **그립 위치**: 컨트롤러를 자연스럽 게 유지 하는 경우 왼쪽 또는 오른쪽으로 조정 하 여 그립 내 위치를 가운데에 맞춥니다. Windows Mixed Reality 동작 컨트롤러에서이 위치는 일반적으로 보통 클릭 단추와 맞춥니다.
+* **그립 방향 오른쪽 축**: 손 모양 5 손가락 포즈를 형성 하는 손을 완전히 열 때 palm (왼쪽 야자나무에서 오른쪽으로 뒤로)의 광선을 만듭니다.
+* **그립 방향 전방 축: 핸들**을 부분적으로 (컨트롤러를 보유 하는 것 처럼) 닫는 경우 비 엄지 손가락으로 형성 된 튜브를 통해 "전달" 하는 광선이 표시 됩니다.
+* **그립 방향 up 축**: 오른쪽 및 전방 정의에 의해 암시 된 위쪽 축입니다.
 
 Unity의 교차 공급 업체 입력 API (XR)를 통해 그립 포즈에 액세스할 수 있습니다 *[. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation*) 또는 WINDOWS MR 특정 API (*sourcestate/Rotation*, **그립** 노드에 대 한 포즈 데이터 요청)를 통해
 
@@ -118,25 +118,25 @@ Unity의 교차 공급 업체 입력 API (XR)를 통해 그립 포즈에 액세�
 <tr>
 <th> 상태 추적 </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>높은 정확도</b> </td><td style="background-color: green; color: white"> &lt;1.0 </td><td style="background-color: green; color: white"> 높음 </td><td style="background-color: green; color: white"> true</td>
+<td> <b>높은 정확도</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> 높음 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>높은 정확도 (손실 위험)</b> </td><td style="background-color: orange"> = = 1.0 </td><td style="background-color: green; color: white"> 높음 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>대략적인 정확도</b> </td><td style="background-color: orange"> = = 1.0 </td><td style="background-color: orange"> 대략 일치 </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>위치 없음</b> </td><td style="background-color: orange"> = = 1.0 </td><td style="background-color: orange"> 대략 일치 </td><td style="background-color: orange"> false</td>
+<td> <b>위치  없음</b></td><td style="background-color: orange"> = = 1.0 </td><td style="background-color: orange"> 대략 일치 </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
 이러한 동작 컨트롤러 추적 상태는 다음과 같이 정의 됩니다.
 * **높은 정확도:** 동작 컨트롤러는 헤드셋의 보기 필드 내에 있지만 일반적으로 시각적 추적에 따라 정확도가 높은 위치를 제공 합니다. 일시적으로 보기의 필드를 벗어나거나 헤드셋 센서에서 일시적으로 가려진 이동 컨트롤러 (예: 사용자)는 컨트롤러의 관성 추적을 기반으로 짧은 시간 동안 계속 해 서 정확도가 높은 포즈를 반환 합니다. 자체.
 * **높은 정확도 (손실 위험):** 사용자가 이동 컨트롤러를 헤드셋의 보기 필드 가장자리를 지나서 이동할 때 헤드셋은 곧 컨트롤러의 위치를 시각적으로 추적할 수 없습니다. 앱은 **SourceLossRisk** reach 1.0을 확인 하 여 컨트롤러가이 FOV 경계에 도달한 경우를 인식 합니다. 이 시점에서 앱은 매우 높은 품질의 동작을 안정적으로 스트리밍하는 데 필요한 컨트롤러 제스처를 일시 중지 하도록 선택할 수 있습니다.
-* **대략적인 정확도:** 컨트롤러에서 충분히 긴 시각적 추적을 분실 한 경우 컨트롤러의 위치는 대략적인 정확도 위치로 삭제 됩니다. 이 시점에서 시스템은 컨트롤러를 사용자에 게 본문 잠금을 설정 하 고, 이동 하는 동안 사용자의 위치를 추적 하 고, 내부 방향 센서를 사용 하 여 컨트롤러의 실제 방향을 계속 노출 합니다. 컨트롤러를 사용 하 여 UI 요소를 가리키고 활성화 하는 많은 앱이 정상적으로 작동 하 고, 사용자가 모르게 정확한 정확도를 사용할 수 있습니다. 입력 요구 사항이 많은 앱은 사용자에 게 오프 스크린 대상에 대 한 hitbox을 제공 하는 등의 방법으로 **positionaccuracy** 속성을 검사 하 여 정확도가 **높은** 정확도 **부터 정확도까지** 이러한 삭제를 합리적으로 선택할 수 있습니다. 이 시간 동안.
+* **대략적인 정확도:** 컨트롤러에서 충분히 긴 시각적 추적을 분실 한 경우 컨트롤러의 위치는 대략적인 정확도 위치로 삭제 됩니다. 이 시점에서 시스템은 컨트롤러를 사용자에 게 본문 잠금을 설정 하 고, 이동 하는 동안 사용자의 위치를 추적 하 고, 내부 방향 센서를 사용 하 여 컨트롤러의 실제 방향을 계속 노출 합니다. 컨트롤러를 사용 하 여 UI 요소를 가리키고 활성화 하는 많은 앱이 정상적으로 작동 하 고, 사용자가 모르게 정확한 정확도를 사용할 수 있습니다. 입력 요구 사항이 많은 앱은 사용자에 게 오프 스크린 대상에 대 한 hitbox을 제공 하는 등의 방법으로 **positionaccuracy** 속성을 검사 하 여 정확도가 **높은** **정확도부터 정확도까지** 이러한 삭제를 합리적으로 선택할 수 있습니다. 이 시간 동안.
 * **위치 없음:** 컨트롤러는 오랜 시간 동안 정확한 정확도로 작동할 수 있지만 때때로 본문 잠금 위치가 중요 하지 않은 것을 시스템에서 인식 하는 경우도 있습니다. 예를 들어 방금 설정 된 컨트롤러가 시각적으로 관찰 되지 않았거나 사용자가 다른 사용자가 선택 하는 컨트롤러를 배치할 수 있습니다. 이러한 시간에 시스템은 앱에 어떤 위치도 제공 하지 않으며 *TryGetPosition* 는 false를 반환 합니다.
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>Common Unity Api (입력. GetButton/Getbutton)
 
-**공간** *Unityengine*, *unityengine. XR*<br>
+**네임 스페이스:** *unityengine*, *unityengine. XR*<br>
 **형식**: *Input*, *XR. InputTracking*
 
 Unity는 현재 일반 입력을 사용 *합니다. GetButton/Input. Getbutton* api를 사용 하면 핸드 및 동작 컨트롤러를 포함 하 여 [oculus Sdk](https://docs.unity3d.com/Manual/OculusControllers.html), [Openvr sdk](https://docs.unity3d.com/Manual/OpenVRControllers.html) 및 Windows Mixed Reality의 입력을 노출할 수 있습니다. 앱이 입력에 이러한 Api를 사용 하는 경우 Windows Mixed Reality를 비롯 하 여 여러 XR Sdk에서 동작 컨트롤러를 쉽게 지원할 수 있습니다.
@@ -186,8 +186,8 @@ Quaternion leftRotation = InputTracking.GetLocalRotation(XRNode.LeftHand);
 
 ## <a name="windows-specific-apis-xrwsainput"></a>Windows 관련 Api (XR. WSA. 입력
 
-**공간** *UnityEngine. XR*<br>
-**형식**: *InteractionManager*, *InteractionSourceState*, *InteractionSource*, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
+**네임 스페이스:** *unityengine. XR*<br>
+**유형**: *InteractionManager*, *InteractionSourceState*, *InteractionSource*, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
 
 Windows Mixed Reality 입력 (HoloLens 용) 및 동작 컨트롤러에 대 한 자세한 정보를 보려면 *Unityengine. XR* 네임 스페이스에서 windows 관련 공간 입력 api를 사용 하도록 선택할 수 있습니다. 이를 통해 위치 정확도 나 소스 종류와 같은 추가 정보에 액세스할 수 있으므로 실습 및 컨트롤러를 구분할 수 있습니다.
 
@@ -291,8 +291,8 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
 * *InteractionSourceDetected* (원본이 활성화 됩니다.)
 * *InteractionSourceLost* (비활성 상태가 됨)
 * *InteractionSourcePressed* (누르기, 단추 누르기 또는 "Select" 재생)
-* *InteractionSourceReleased* (탭의 끝, 단추 해제 또는 "Select" 재생의 끝)
-* *InteractionSourceUpdated* (일부 상태를 이동 하거나 변경 하지 않음)
+* *InteractionSourceReleased* (탭의 끝, 단추 해제 또는 "Select" 재생 끝)
+* *InteractionSourceUpdated* (다른 상태를 이동 하거나 변경 하지 않음)
 
 ### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>기록 대상 이벤트는 누름 또는 릴리스와 가장 정확 하 게 일치 합니다.
 
@@ -305,7 +305,7 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
 직접 또는 컨트롤러에 대 한 사용자의 원래 의도에 따라 정확 하 게 대상으로 지정 하려면 해당 *InteractionSourcePressed* 또는 *InteractionSourceReleased* 입력 이벤트에서 기록 원본 포즈 또는 head 포즈를 사용 해야 합니다.
 
 사용자의 헤드 또는 해당 컨트롤러에서 기록 포즈 데이터를 사용 하 여 보도를 대상으로 지정할 수 있습니다.
-* 사용자가 [gazing](gaze.md) 된 항목을 확인 하기 위해 **대상 지정** 에 사용할 수 있는 제스처 또는 컨트롤러를 누를 때 발생 하는 시점의 헤드입니다.
+* 사용자가 [gazing](gaze-and-commit.md) 된 항목을 확인 하기 위해 **대상 지정** 에 사용할 수 있는 제스처 또는 컨트롤러를 누를 때 발생 하는 시점의 헤드입니다.
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -319,7 +319,7 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
    }
    ```
 
-* 이동 컨트롤러를 사용 하 여 사용자가 컨트롤러를 가리킨 항목을 **확인 하는** 데 사용 될 수 있는 시점에 발생 하는 소스입니다.  이는 누름이 발생 한 컨트롤러의 상태가 됩니다.  컨트롤러 자체를 렌더링 하는 경우에는 핸들 포즈 대신 포인터 포즈를 요청 하 여 사용자가 렌더링 된 컨트롤러의 자연 스러운 팁을 고려 하는 대상 광선을 만들 수 있습니다.
+* 이동 컨트롤러를 사용 하 여 사용자가 컨트롤러를 가리킨 **항목을 확인 하는** 데 사용 될 수 있는 시점에 발생 하는 소스입니다.  이는 누름이 발생 한 컨트롤러의 상태가 됩니다.  컨트롤러 자체를 렌더링 하는 경우에는 핸들 포즈 대신 포인터 포즈를 요청 하 여 사용자가 렌더링 된 컨트롤러의 자연 스러운 팁을 고려 하는 대상 광선을 만들 수 있습니다.
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args)
@@ -398,10 +398,10 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 
 ## <a name="high-level-composite-gesture-apis-gesturerecognizer"></a>상위 수준 복합 제스처 Api (GestureRecognizer)
 
-**공간** *UnityEngine. XR*<br>
-**형식**: *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
+**네임 스페이스:** *unityengine. XR*<br>
+**유형**: *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
 
-앱은 공간 입력 원본, 탭, 유지, 조작 및 탐색 제스처에 대 한 상위 수준 복합 제스처를 인식할 수도 있습니다. GestureRecognizer를 사용 하 여 [직접](gestures.md) 및 [동작 컨트롤러](motion-controllers.md) 에서 이러한 복합 제스처를 인식할 수 있습니다.
+앱은 공간 입력 원본, 탭, 유지, 조작 및 탐색 제스처에 대 한 상위 수준 복합 제스처를 인식할 수도 있습니다. GestureRecognizer를 사용 하 여 [직접](gaze-and-commit.md#composite-gestures) 및 [동작 컨트롤러](motion-controllers.md) 에서 이러한 복합 제스처를 인식할 수 있습니다.
 
 GestureRecognizer의 각 제스처 이벤트는 입력에 대 한 SourceKind와 이벤트 시점의 대상 헤드 광선을 제공 합니다. 일부 이벤트는 추가 컨텍스트별 정보를 제공 합니다.
 
@@ -490,8 +490,8 @@ void OnDestroy()
 
 [여기](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage)에서 throw를 구현 하는 방법에 대 한 예제를 찾을 수 있습니다. 이 샘플은 다음 네 가지 지침을 따릅니다.
 * **위치 대신 컨트롤러의 *속도* 를 사용**합니다. 11 월 Windows 업데이트에서는 [' ' 근사치 ' ' 위치 추적 상태](motion-controllers.md#controller-tracking-state)에 있는 경우 동작이 변경 되었습니다. 이 상태에서 컨트롤러에 대 한 속도 정보는 정확도가 높은 것으로 예상 되는 경우에도 계속 보고 됩니다 .이는 일반적으로 높은 정확도를 유지 합니다.
-* **컨트롤러의 *각도 속도* 를 통합**합니다. 이 논리는 위에 링크 된 패키지 `throwing.cs` 내의 `GetThrownObjectVelAngVel` 정적 메서드에 있는 파일에 모두 포함 됩니다.
-   1. 각도 속도가 conserved throw 된 개체는 throw 시점에 있었던 것과 동일한 각도의 속도를 유지 해야 합니다.`objectAngularVelocity = throwingControllerAngularVelocity;`
+* **컨트롤러의 *각도 속도* 를 통합**합니다. 이 논리는 위에 링크 된 패키지 내에서 `GetThrownObjectVelAngVel` 정적 메서드의 `throwing.cs` 파일에 모두 포함 됩니다.
+   1. 각도 속도가 conserved throw 된 개체는 throw 되는 순간와 동일한 각도의 속도를 유지 해야 합니다 `objectAngularVelocity = throwingControllerAngularVelocity;`.
    2. Throw 된 개체의 질량 중심은 그립 포즈의 원점에 있지 않을 수 있으므로 사용자 참조 프레임의 컨트롤러와 다른 속도를 가질 가능성이 높습니다. 이러한 방식으로 제공 되는 개체 속도의 부분은 컨트롤러 원본 주위에서 throw 된 개체의 질량 중심의 순간 탄젠트 속도입니다. 이 탄젠트 속도는 컨트롤러 원본 및 throw 된 개체의 질량 중심 사이의 거리를 나타내는 벡터와 컨트롤러의 각도 속도 간 곱입니다.
     
       ```cs
@@ -499,7 +499,7 @@ void OnDestroy()
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
    
-   3. 따라서 throw 된 개체의 총 속도는 컨트롤러의 속도와 이러한 탄젠트 속도의 합입니다.`objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. 따라서 throw 된 개체의 총 속도는 컨트롤러의 속도와 이러한 탄젠트 속도의 합입니다. `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
 * **속도를 적용 하는 *시간* 에 대 한 주의를**기울여야 합니다. 단추를 누르면 해당 이벤트가 Bluetooth를 통해 운영 체제에 20ms 최대의 시간이 걸릴 수 있습니다. 즉, 컨트롤러 상태 변경을 누른 상태에서 누르지 않음 또는 그 반대로 폴링할 때 발생 하는 컨트롤러의 정보는 실제로 이러한 변화에 대 한 것입니다. 또한 폴링 API에 의해 표시 되는 컨트롤러는 프레임이 표시 될 때 발생할 수 있는 포즈를 반영 하 여 향후 20ms 될 수 있는 것으로 예상 됩니다. 이는 보류 중인 개체를 *렌더링* 하는 데 유용 하지만 사용자가 throw를 릴리스한 순간의 궤적을 계산할 때 개체를 *대상으로 지정* 하는 데 시간이 복합어. 다행히 11 월 업데이트를 사용 하는 경우 *InteractionSourcePressed* 또는 *InteractionSourceReleased* 와 같은 Unity 이벤트가 전송 되 면이 상태에는 단추가 실제로 눌러져 있거나 해제 되었을 때의 기록 포즈 데이터가 반환 됩니다.  을 throw 하는 동안 가장 정확한 컨트롤러 렌더링과 컨트롤러를 대상으로 하려면 적절 한 폴링 및 이벤트를 올바르게 사용 해야 합니다.
    * 각 프레임을 렌더링 하는 **컨트롤러** 의 경우 응용 프로그램은 현재 프레임의 photon 시간에 대해 앞으로 예측 되는 컨트롤러에서 컨트롤러의 *GameObject* 위치를 지정 해야 합니다.  Unity 폴링 Api (예: XR)에서이 데이터를 가져옵니다 *[. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* 또는 *[XR. WSA. InteractionManager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
@@ -520,14 +520,14 @@ Throw는 향후 Windows 업데이트를 사용 하 여 계속 개선 되며 여�
 보다 자세한 사용자 지정 예제가 포함 된 단계별 자습서는 혼합 현실 아카데미에서 제공 됩니다.
 
 - [MR 입력 211: 제스처](holograms-211.md)
-- [MR 입력 213: 모션 컨트롤러](mixed-reality-213.md)
+- [MR 입력 213: 동작 컨트롤러](mixed-reality-213.md)
 
 [![MR 입력 213-동작 컨트롤러](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *MR 입력 213-동작 컨트롤러*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [제스처](gestures.md)
+* [헤드 게이즈 및 커밋](gaze-and-commit.md)
 * [모션 컨트롤러](motion-controllers.md)
 
 

@@ -6,19 +6,19 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: 현실, 쇼, 달력, 아카데미, 일정, sf, 샌프란시스코, 원자로
-ms.openlocfilehash: 0a568e5d72bb7ed502d783df2f0815f2d9c75364
-ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
+ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69020182"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438325"
 ---
 # <a name="the-realities-show"></a>현실 표시
 ![혼합 현실 디자인](images/therealitiesshow.jpg)
 
 **현실 표시는 HoloLens 2, 혼합 현실 서비스 및 MR 기술에 대 한 30 분 라이브 스트림입니다. 각 에피소드에서 기능, 기능, it에 대 한 기술, 다양 한 장치를 개발 하는 방법, 모범 사례를 추천 하는 방법 및 대상 고객의 질문에 대 한 답변을 제공 합니다. San 샌프란시스코 Reactor 단계 설정에서 전 세계 개발자에 게는 거실 환경으로 스트리밍 (경우에 따라 다른 사이트에서) 합니다.**
 
-**[여기에서 라이브 및 지난 에피소드 시청](http://aka.ms/trs)**
+**[여기에서 라이브 및 지난 에피소드 시청](https://aka.ms/trs)**
 ___
 
 ## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**HoloLens 2 및 혼합 현실 서비스** -3 월 12 2019 일, 오전 8 시 (PDT)

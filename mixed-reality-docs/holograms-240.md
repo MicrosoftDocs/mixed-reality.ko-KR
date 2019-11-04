@@ -3,18 +3,18 @@ title: MR 공유 240-여러 HoloLens 장치
 description: Holograms를 공유 하는 방법에 대 한 자세한 내용은 Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 따르세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 공유, 네트워킹, 아카데미, 자습서
-ms.openlocfilehash: 70a39a739d360a5032bc8df76b6f0bd57521d9ec
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 0d8e8f4484546d82caadf162623a6f4059eb2f00
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522339"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434571"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 
@@ -39,9 +39,9 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 인터넷 액세스로 설치 된 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
 * 개발용으로 두 개 이상의 HoloLens 장치를 [구성](using-visual-studio.md#enabling-developer-mode)했습니다.
@@ -81,7 +81,7 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 * 새 **GameObject** 를 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 선택 합니다.
 * GameObject의 이름을 **HologramCollection**로 바꿉니다.
 * **계층**에서 **HologramCollection** 개체를 선택 합니다.
-* **검사기** 에서 **변환 위치** 를로 설정 합니다. **.X 0, Y:-0.25, Z: 2**.
+* **Inspector** 에서 **변환 위치** 를 **X: 0, Y:-0.25, Z: 2**로 설정 합니다.
 * **프로젝트 패널**의 **Holograms** 폴더에서 **EnergyHub** 자산을 찾습니다.
 * **EnergyHub** 개체를 **프로젝트 패널** 에서 **계층** 으로 **HologramCollection의 자식**으로 끌어 놓습니다.
 * **파일 > 다른 이름으로 장면 저장** ...을 선택 합니다.
@@ -90,6 +90,7 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 * **재생** 을 두 번 눌러 미리 보기 모드를 중지 합니다.
 
 **Unity에서 Visual Studio로 프로젝트 내보내기**
+
 * Unity에서 **파일 > 빌드 설정**을 선택 합니다.
 * 열려 있는 장면 **추가** 를 클릭 하 여 장면을 추가 합니다.
 * **플랫폼** 목록에서 **유니버설 Windows 플랫폼** 을 선택 하 고 **플랫폼 전환**을 클릭 합니다.
@@ -108,14 +109,14 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
     * **주소** 를 HoloLens의 이름 또는 IP 주소로 설정 합니다. 장치 IP 주소를 알 수 없는 경우 **설정 > 네트워크 & 인터넷 > 고급 옵션** 을 확인 하거나 Cortana **"안녕하세요. 내 IP 주소는 무엇입니까?"** 를 확인 합니다.
     * **인증 모드** 를 **유니버설**으로 설정 된 상태로 둡니다.
     * **선택** 을 클릭 합니다.
-* **디버그 > 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device-hololens)으로 연결 해야 합니다.
+* **디버그 > 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device)으로 연결 해야 합니다.
 * HoloLens에 배치 하 고 EnergyHub 홀로그램을 찾습니다.
 
 ## <a name="chapter-2---interaction"></a>2 장-상호 작용
 
 >[!VIDEO https://www.youtube.com/embed/W60xG15a8gc]
 
-이 장에서는 holograms와 상호 작용 합니다. 먼저, [응시](gaze.md)를 시각화 하는 커서를 추가 합니다. 그런 다음 [제스처](gestures.md) 를 추가 하 고 손을 사용 하 여 holograms을 공간에 넣습니다.
+이 장에서는 holograms와 상호 작용 합니다. 먼저, [응시](gaze-and-commit.md)를 시각화 하는 커서를 추가 합니다. 그런 다음 [제스처](gaze-and-commit.md#composite-gestures) 를 추가 하 고 손을 사용 하 여 holograms을 공간에 넣습니다.
 
 ### <a name="objectives"></a>목표
 
@@ -125,6 +126,7 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 ### <a name="instructions"></a>지침
 
 **응시**
+
 * **계층 패널** 에서 **HologramCollection** 개체를 선택 합니다.
 * **검사기 패널** 에서 **구성 요소 추가** 단추를 클릭 합니다.
 * 메뉴의 검색 상자에 **응시 관리자**를 입력 합니다. 검색 결과를 선택 합니다.
@@ -132,6 +134,7 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 * **커서** 자산을 **계층 구조**에 끌어다 놓습니다.
 
 **지우는**
+
 * **계층 패널** 에서 **HologramCollection** 개체를 선택 합니다.
 * **구성 요소 추가** 를 클릭 하 고 검색 필드에 **제스처 관리자** 를 입력 합니다. 검색 결과를 선택 합니다.
 * **계층 패널**에서 **HologramCollection**를 확장 합니다.
@@ -141,6 +144,7 @@ Holograms는 공간에서 이동 하면서 전 세계에 남아 있습니다. Ho
 * **파일 > 장면 저장**을 선택 하 여 장면을 저장 합니다.
 
 **배포 및 이용**
+
 * 이전 장의 지침을 사용 하 여를 빌드하고 HoloLens에 배포 합니다.
 * 앱이 HoloLens에서 시작 되 면 헤드를 이동 하 고 EnergyHub이 응시를 따라가는 방법을 확인 합니다.
 * 홀로그램을 응시 할 때 커서가 어떻게 표시 되는지, 그리고 홀로그램에서 gazing 않을 때 점 빛의 변화를 확인 합니다.
@@ -161,6 +165,7 @@ Holograms를 확인 하 고 상호 작용 하는 데 재미 있지만 더 살펴
 
 >[!NOTE]
 >공유 서버에 연결 하려면 앱에 대해 **Internetclientserver** 및 **PrivateNetworkClientServer** 기능을 선언 해야 합니다. 이 작업은 이미 Holograms 240에 있지만 사용자 고유의 프로젝트에 대해서는이를 염두에 두어야 합니다.
+
 >1. Unity 편집기에서 "편집 > 프로젝트 설정 > 플레이어"로 이동 하 여 플레이어 설정으로 이동 합니다.
 >2. "Windows 스토어" 탭을 클릭 합니다.
 >3. "게시 설정 > 기능" 섹션에서 **Internetclientserver** 기능 및 **PrivateNetworkClientServer** 기능을 확인 합니다.
@@ -171,12 +176,14 @@ Holograms를 확인 하 고 상호 작용 하는 데 재미 있지만 더 살펴
 * **공유** Prefab을 **계층 패널로**끌어 놓습니다.
 
 다음으로 공유 서비스를 시작 해야 합니다. 공유 환경에서 한 대의 **PC** 만이 단계를 수행 해야 합니다.
+
 * Unity-위쪽 메뉴에서 **HoloToolkit-240 메뉴**를 선택 합니다.
 * 드롭다운에서 **공유 서비스 시작** 항목을 선택 합니다.
 * **개인 네트워크** 옵션을 선택 하 고 방화벽 프롬프트가 표시 되 면 **액세스 허용** 을 클릭 합니다.
 * 공유 서비스 콘솔 창에 표시 된 IPv4 주소를 적어둡니다. 이는 서비스가 실행 되는 컴퓨터와 동일한 IP입니다.
 
 공유 환경에 참여 하는 **모든 pc** 의 나머지 지침을 따릅니다.
+
 * **계층**에서 **공유** 개체를 선택 합니다.
 * **검사자**의 **공유 단계** 구성 요소에서 **서버 주소** 를 ' localhost '에서 SharingService를 실행 하는 컴퓨터의 IPv4 주소로 변경 합니다.
 * **계층** 에서 **HologramCollection** 개체를 선택 합니다.
@@ -256,7 +263,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
     {
         // Note that we have a transform.
         GotTransform = true;
-        
+
         // And send it to our friends.
         CustomMessages.Instance.SendStageTransform(transform.localPosition, transform.localRotation);
     }
@@ -295,6 +302,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * 메뉴에서 **앱 상태 관리자**검색 상자에를 입력 합니다. 검색 결과를 선택 합니다.
 
 **배포 및 이용**
+
 * HoloLens 장치에 대 한 프로젝트를 빌드합니다.
 * 첫 번째에 배포할 HoloLens를 하나 지정 합니다. EnergyHub을 시작 하기 전에 Anchor가 서비스에 업로드 될 때까지 기다려야 합니다 (30-60 초 정도 걸릴 수 있음). 업로드가 완료 될 때까지 탭 제스처는 무시 됩니다.
 * EnergyHub가 배치 된 후에는 해당 위치가 서비스에 업로드 되 고 다른 모든 HoloLens 장치에 배포할 수 있습니다.
@@ -343,7 +351,7 @@ public class AvatarSelector : MonoBehaviour
     {
         PlayerAvatarStore.Instance.DismissAvatarPicker();
 
-        LocalPlayerManager.Instance.SetUserAvatar(AvatarIndex);        
+        LocalPlayerManager.Instance.SetUserAvatar(AvatarIndex);
     }
 
     void Start()
@@ -468,7 +476,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
                 // And if we've already been sent the relative transform, we will use it.
                 if (GotTransform)
                 {
-                    // This triggers the animation sequence for the model and 
+                    // This triggers the animation sequence for the model and
                     // puts the cool materials on the model.
                     GetComponent<EnergyHubBase>().SendMessage("OnSelect");
                 }
@@ -596,6 +604,7 @@ public class AppStateManager : Singleton<AppStateManager>
 ```
 
 **배포 및 이용**
+
 * 프로젝트를 빌드하고 HoloLens 장치에 배포 합니다.
 * Ping 소리가 들리면 아바타 선택 메뉴를 찾고 공중 탭 제스처를 사용 하 여 아바타를 선택 합니다.
 * Holograms을 확인 하지 않는 경우 HoloLens가 서비스와 통신 하는 동안 커서 주위의 점 빛이 다른 색으로 전환 됩니다. 초기화 (진한 자주), 앵커 다운로드 (녹색), 위치 데이터 가져오기/내보내기 (노랑), 앵커 (파란색)를 업로드 합니다. 커서 주위의 점 조명이 기본 색 (연한 자주색) 이면 세션의 다른 플레이어와 상호 작용할 준비가 된 것입니다.
@@ -609,7 +618,7 @@ public class AppStateManager : Singleton<AppStateManager>
 
 ### <a name="objectives"></a>목표
 
-* 플레이어의 헤드 위치에 따라 공간 지도에 holograms을 배치 합니다.
+* 플레이어의 헤드 위치에 따라 공간 매핑 메시에 holograms을 배치 합니다.
 
 ### <a name="instructions"></a>지침
 
@@ -670,7 +679,7 @@ public class AppStateManager : Singleton<AppStateManager>
 
     public void ResetStage()
     {
-        // If we fall back to waiting for anchor, everything needed to 
+        // If we fall back to waiting for anchor, everything needed to
         // get us into setting the target transform state will be setup.
         if (CurrentAppState != AppState.PickingAvatar)
         {
@@ -696,7 +705,7 @@ public class AppStateManager : Singleton<AppStateManager>
                 }
                 break;
             case AppState.WaitingForAnchor:
-                // Once the anchor is established we need to run spatial mapping for a 
+                // Once the anchor is established we need to run spatial mapping for a
                 // little while to build up some meshes.
                 if (ImportExportAnchorManager.Instance.AnchorEstablished)
                 {
@@ -775,7 +784,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 
     /// <summary>
     /// When the keyword recognizer hears a command this will be called.  
-    /// In this case we only have one keyword, which will re-enable moving the 
+    /// In this case we only have one keyword, which will re-enable moving the
     /// target.
     /// </summary>
     /// <param name="args">information to help route the voice command.</param>
@@ -868,7 +877,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
                 // And if we've already been sent the relative transform, we will use it.
                 if (GotTransform)
                 {
-                    // This triggers the animation sequence for the model and 
+                    // This triggers the animation sequence for the model and
                     // puts the cool materials on the model.
                     GetComponent<EnergyHubBase>().SendMessage("OnSelect");
                 }
@@ -973,6 +982,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 ```
 
 **배포 및 이용**
+
 * 프로젝트를 빌드하고 HoloLens 장치에 배포 합니다.
 * 앱이 준비 되 면 원 안에 표시 되 고 EnergyHub이 모든 사람의 중앙에 표시 되는 방식을 확인 합니다.
 * 을 탭 하 여 EnergyHub을 놓습니다.
@@ -996,6 +1006,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * 검색 상자에 나이 **시작 관리자**를 입력 합니다. 검색 결과를 선택 합니다.
 
 **배포 및 이용**
+
 * HoloLens 장치를 빌드하고 배포 합니다.
 * 앱이 모든 장치에서 실행 되는 경우에는 공기 탭을 수행 하 여 실제 화면에서 멀리 있는 게임을 시작 합니다.
 * 멀리가 다른 플레이어의 아바타와 충돌 하는 경우 어떻게 되나요?를 참조 하세요.
@@ -1017,9 +1028,10 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * **HologramCollection** 가 선택 된 상태에서 **검사기**의 **구성 요소 추가** 단추를 클릭 합니다.
 * 메뉴의 검색 상자에 **ExplodeTarget**을 입력 합니다. 검색 결과를 선택 합니다.
 * **HologramCollection** 를 선택 하면 **계층 구조** 에서 **EnergyHub** 개체를 **검사기**의 **대상** 필드로 끕니다.
-* **HologramCollection** 를 선택 하면 **계층 구조** 에서 지 수 **개체를** **검사기**의 지 **수 필드로** 끕니다.
+* **HologramCollection** 를 선택 하면 **계층 구조** 에서 지 수 **개체를** **검사기**의 **지 수 필드로** 끕니다.
 
 **배포 및 이용**
+
 * HoloLens 장치를 빌드하고 배포 합니다.
 * 앱이 시작 되 면 함께 공동 작업 하 여 EnergyHub에서 projectiles를 시작 합니다.
 * 지가 표시 되 면 projectiles를 실행 합니다 (추가 재미를 위해 로봇이 세 번 적중).

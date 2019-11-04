@@ -6,25 +6,25 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 기계 학습, ml, 기계 학습 스튜디오, hololens, 몰입 형, vr
-ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694549"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437928"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
 <br>
 
-# <a name="mr-and-azure-307-machine-learning"></a>MR 및 Azure 307: 기계 학습
+# <a name="mr-and-azure-307-machine-learning"></a>MR 및 Azure 307: Machine learning
 
 ![최종 제품-시작](images/AzureLabs-Lab7-0.png)
 
 이 과정에서는 Azure Machine Learning Studio를 사용 하 여 혼합 현실 응용 프로그램에 Machine Learning (ML) 기능을 추가 하는 방법에 대해 설명 합니다.
 
-*Azure Machine Learning Studio* 는 개발자에 게 데이터 입력, 출력, 준비 및 시각화에 도움이 될 수 있는 많은 수의 기계 학습 알고리즘을 제공 하는 Microsoft 서비스입니다. 이러한 구성 요소를 통해 예측 분석 실험을 개발 하 고,이를 반복 하 고, 모델을 학습 하는 데 사용할 수 있습니다. 다음 교육을 통해 Azure 클라우드에서 모델을 작동 하도록 설정 하 여 새 데이터의 점수를 매길 수 있습니다. 자세한 내용은 [Azure Machine Learning Studio 페이지](https://azure.microsoft.com/en-au/services/machine-learning-studio/)를 참조 하세요.
+*Azure Machine Learning Studio* 는 개발자에 게 데이터 입력, 출력, 준비 및 시각화에 도움이 될 수 있는 많은 수의 기계 학습 알고리즘을 제공 하는 Microsoft 서비스입니다. 이러한 구성 요소를 통해 예측 분석 실험을 개발 하 고,이를 반복 하 고, 모델을 학습 하는 데 사용할 수 있습니다. 다음 교육을 통해 Azure 클라우드에서 모델을 작동 하도록 설정 하 여 새 데이터의 점수를 매길 수 있습니다. 자세한 내용은 [Azure Machine Learning Studio 페이지](https://azure.microsoft.com/services/machine-learning-studio/)를 참조 하세요.
 
 이 과정을 완료 하면 혼합 현실의 헤드셋 응용 프로그램을 사용할 수 있으며 다음 작업을 수행 하는 방법이 학습 됩니다.
 
@@ -42,14 +42,14 @@ ms.locfileid: "67694549"
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 Azure 307: 기계 학습</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR 및 Azure 307: Machine learning</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치 문서](install-the-tools.md)에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -64,7 +64,7 @@ ms.locfileid: "67694549"
 - 개발자 모드가 사용 하도록 설정 된 [Windows Mixed Reality 모던 (VR) 헤드셋](immersive-headset-hardware-details.md) 또는 [Microsoft HoloLens](hololens-hardware-details.md)
 - Azure 설정 및 ML 데이터 검색에 대 한 인터넷 액세스
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.) 
 
@@ -169,7 +169,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
     ![Azure Machine Learning Studio](images/AzureLabs-Lab7-10.png)
 
 
-## <a name="chapter-3---the-machine-learning-studio-dataset-setup"></a>3 장-Machine Learning Studio: 데이터 집합 설정
+## <a name="chapter-3---the-machine-learning-studio-dataset-setup"></a>3 장-Machine Learning Studio: 데이터 집합 설치
 
 Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를 분석 한 다음 기존 데이터 집합을 기반으로 향후 결과를 예측 하는 것입니다. 이는 일반적으로 기존 데이터를 더 많이 사용 하는 것을 의미 하므로 이후 결과를 예측 하는 알고리즘이 더 좋아집니다.
 
@@ -180,7 +180,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 이 샘플 데이터 집합에는 2017 년의 각 날짜의 매시간 가장 인기 있는 개체 레코드가 포함 되어 있습니다.
         
-![Machine Learning Studio: 데이터 집합 설정](images/AzureLabs-Lab7-11.png)
+![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-11.png)
 
 예를 들어 오후 1 시 (시간 13)에서 2017의 1 일에 가장 잘 팔리는 항목은 솔트 및 고추입니다.
 
@@ -188,17 +188,17 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 1.  **Machine Learning Studio** 포털로 다시 이동 하 여이 테이블을 ML에 대 한 **데이터 집합** 으로 추가 합니다. 화면의 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 클릭 하 여이 작업을 수행 합니다.
 
-    ![Machine Learning Studio: 데이터 집합 설정](images/AzureLabs-Lab7-12.png)
+    ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-12.png)
 
 2.  섹션은 아래쪽에서 위쪽으로 제공 되며 왼쪽에는 탐색 패널이 있습니다. **로컬 파일에서**데이터 집합을 클릭 한 다음 오른쪽에 있는 **데이터 집합**을 클릭 합니다.
 
-    ![Machine Learning Studio: 데이터 집합 설정](images/AzureLabs-Lab7-13.png)
+    ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-13.png)
 
 3.  다음 단계를 수행 하 여 새 **데이터 집합** 을 업로드 합니다.
 
     1. 하드 드라이브에서 새 데이터 집합을 **찾아볼** 수 있는 업로드 창이 표시 됩니다.
 
-        ![Machine Learning Studio: 데이터 집합 설정](images/AzureLabs-Lab7-14.png)
+        ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-14.png)
 
     2.  을 선택 하 고 다시 업로드 창에서 읽으려고 확인란을 선택 취소 합니다.
 
@@ -214,13 +214,13 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 실험 만들기를 시작 하려면 다음을 수행 합니다.
 
-1.  페이지 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 다시 클릭 하 고**빈 실험** **실험** > 을 클릭 합니다.
+1.  페이지 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 다시 클릭 한 다음 **실험** > **빈 실험**을 클릭 합니다.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-15.png)
 
 2.  새 페이지가 빈 실험으로 표시 됩니다.
 
-3.  왼쪽 패널에서 **저장 된 데이터 집합** > **내 데이터 집합** 을 확장 하 고 **ProductsTableCSV** 를 **실험 캔버스로**끌어다 놓습니다.
+3.  왼쪽 패널에서 **내 데이터** 집합 > **저장 된 데이터 집합** 을 확장 하 고 **ProductsTableCSV** 를 **실험 캔버스로**끌어다 놓습니다.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-16.png)
 
@@ -236,7 +236,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-19.png)
 
-7.  왼쪽의 **실험** 패널에서 **Machine Learning** > **기차**를 확장 합니다. **모델 학습** 항목을 실험 캔버스로 끌어다 놓습니다. 캔버스는 아래와 동일 하 게 표시 되어야 합니다.
+7.  왼쪽의 **실험** 패널에서 **Machine Learning** > **학습**을 확장 합니다. **모델 학습** 항목을 실험 캔버스로 끌어다 놓습니다. 캔버스는 아래와 동일 하 게 표시 되어야 합니다.
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-20.png)
 
@@ -252,7 +252,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 11. **다중 클래스 로지스틱 회귀** 알고리즘을 학습 하 여 시간 및 날짜를 기준으로 가장 많이 판매 되는 **제품** 을 예측 하려고 합니다. Azure Machine Learning studio에서 제공 하는 다양 한 알고리즘에 대 한 세부 정보를 설명 하기 위해이 문서에서는 다루지 않지만 [Machine Learning Algorithm 참고 자료 시트](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet) 에서 더 많은 정보를 확인할 수 있습니다.
 
-12. 왼쪽의 실험 항목 패널에서**모델** > **분류**초기화 **Machine Learning** > 를 확장 하 고 **다중 클래스 로지스틱 회귀** 항목을 실험 캔버스로 끕니다.
+12. 왼쪽의 실험 항목 패널에서 **Machine Learning** 를 확장 하 > **모델** > **분류**를 초기화 하 고 **다중 클래스 로지스틱 회귀** 항목을 실험 캔버스로 끕니다.
 
 13. **다중 클래스 로지스틱 회귀**의 아래쪽에 있는 출력을 **모델 학습** 항목의 왼쪽 위 입력에 연결 합니다.
 
@@ -266,7 +266,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
     ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-24.png)
 
-17. 왼쪽 패널의 **실험** 항목 목록에서 **Machine Learning** > **evaluate**를 확장 하 고 **모델 평가** 항목을 캔버스로 끌어 놓습니다.
+17. 왼쪽 패널의 **실험** 항목 목록에서 **Machine Learning** > **평가**를 확장 하 고 **모델 평가** 항목을 캔버스로 끌어 놓습니다.
 
 18. **점수 모델** 의 출력을 **평가 모델**의 왼쪽 위 입력에 연결 합니다.
 
@@ -330,11 +330,11 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 혼합 현실 모던 헤드셋을 설정 하 고 테스트 합니다.
 
 > [!NOTE]
->  이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [여기](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)를 클릭 하세요.
+>  이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [여기](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)를 클릭 하세요.
 
 1.  **Unity** 를 열고 **MR\_MachineLearning** 이라는 새 unity 프로젝트를 만듭니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다.
 
-2.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정** **편집** > 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
+2.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다.  > **기본 설정** **편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
 3.  그런 다음 **파일** > **빌드 설정** 으로 이동 하 고 플랫폼 ***전환*** 단추를 클릭 하 여 플랫폼을 **유니버설 Windows 플랫폼**로 전환 합니다.
 
@@ -402,7 +402,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 2.  파일 선택기를 사용 하 여 **unitypackage** 패키지를 선택 하 고 **열기**를 클릭 합니다.
 
-3.  이 자산의 구성 요소 목록이 표시 됩니다. 가져오기 **를 클릭 하**여 가져오기를 확인 합니다.
+3.  이 자산의 구성 요소 목록이 표시 됩니다. **가져오기를 클릭 하**여 가져오기를 확인 합니다.
 
     ![MLProducts Unity 패키지 가져오기](images/AzureLabs-Lab7-40.png)
 
@@ -418,7 +418,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 직렬화 및 역직렬화에 사용 되는 JSON 라이브러리의 사용을 활용 하기 위해 Newtonsoft.json DLL은에서 가져온 패키지를 사용 하 여 구현 되었습니다. 라이브러리에 올바른 구성이 있어야 합니다 (특히 코드가 작동 하지 않는 문제가 있는 경우). 
 
-이를 수행하려면:
+이렇게 하려면
 
 -  플러그 인 폴더 안의 Newtonsoft.json 파일을 마우스 왼쪽 단추를 클릭 하 고 **검사기 패널**을 확인 합니다. **모든 플랫폼이** 선택 인지 확인 합니다. **UWP 탭** 으로 이동 하 여 **처리 안 함** 이 선택 인지 확인 합니다.
 
@@ -505,7 +505,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
     > 1.  **ShelfKeeper** 구성 요소 스크립트를 마우스 왼쪽 단추를 클릭 하 여 **생성 지점** 배열을 엽니다. 하위 섹션은 배열 크기를 나타내는 **size**라는 것으로 나타납니다. **크기** 옆의 텍스트 상자에 **3** 을 입력 하 고 **enter**키를 누릅니다. 그러면 아래에 세 개의 슬롯이 생성 됩니다.
     > 2. **계층 구조** 내에서 해당 개체 옆에 있는 화살표를 마우스 왼쪽 단추를 클릭 하 여 **시간 표시** 개체를 확장 합니다. 다음으로, **검사기** 가 해당 정보를 표시 하도록 **계층 구조**내에서 ***주 카메라*** 를 클릭 합니다.
     > 3. **계층 패널**에서 **주 카메라** 를 선택 합니다. **계층 패널** 의 **날짜** 및 **시간** 개체를 **ShelfKeeper** 구성 요소에 있는 **주 카메라** 의 **검사기** 내에서 **날짜 텍스트** 및 **시간 텍스트** 슬롯으로 끕니다.
-    > 4. 이미지에 표시 된 것 처럼 **계층 패널** ( *선반* 개체 아래)의 **생성** 지점을 **3 개의** **요소** 참조 대상으로  끌어옵니다.
+    > 4. 이미지에 표시 된 것 처럼 **계층 패널** ( *선반* 개체 아래)의 **생성** 지점을 **3 개의** **요소** 참조 대상으로 끌어옵니다.
     > 
     >     ![ShelfKeeper 클래스 만들기](images/AzureLabs-Lab7-52.png)
 
@@ -527,7 +527,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 1.  **프로젝트 패널**의 **스크립트** 폴더로 이동 합니다.
 
-2.  폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **C# 스크립트**를 **만듭니다**  >  . 스크립트 **제품 예측**을 호출 합니다.
+2.  폴더 내부를 마우스 오른쪽 단추로 클릭 하 >  **C# 스크립트**를 **만듭니다** . 스크립트 **제품 예측**을 호출 합니다.
 
 3.  새 **제품 예측** 스크립트를 두 번 클릭 하 여 **Visual Studio 2017**에서 엽니다.
 
@@ -811,7 +811,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 14. **스크립트** 폴더의 **제품 예측** 클래스 스크립트를 **기본 카메라** 개체로 끌어 놓습니다.
 
-15. 장면 및 프로젝트 **파일** > 저장**장면/파일** > **저장 프로젝트**를 저장 합니다.
+15. 장면 및 프로젝트 **파일** 을 저장 하 > **장면/파일** > 저장 **프로젝트**를 저장 합니다.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>10 장-UWP 솔루션 빌드
 
@@ -819,7 +819,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 빌드:
 
-1.  **파일** > **저장 장면을**클릭 하 여 현재 장면을 저장 합니다.
+1.  **파일** > **장면 저장**을 클릭 하 여 현재 장면을 저장 합니다.
 
 2.  **파일** > **빌드 설정** 으로 이동
 

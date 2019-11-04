@@ -2,16 +2,16 @@
 title: 과정이 카메라
 description: HoloLens front camera 카메라, 작동 방식 및 개발자가 사용할 수 있는 프로필 및 해상도에 대 한 일반 정보입니다.
 author: cdedmonds
-ms.author: wguyman, cdedmonds
+ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 카메라, hololens, 컬러 카메라, 전면, hololens 2, cv, 컴퓨터 비전, fiducial, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861726"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438507"
 ---
 # <a name="locatable-camera"></a>과정이 카메라
 
@@ -25,10 +25,10 @@ HoloLens에는 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록
 * 카메라가 활성화 될 때마다 전 세계의 개인 개인 정보 취급 LED가 켜 집니다.
 * 카메라는 30, 24, 20, 15, 5fps의 다음 모드 (모든 모드에서 16:9 가로 세로 비율)를 지원 합니다.
 
-  |  비디오  |  미리 보기  |  실패할  |  뷰의 가로 필드 (H-FOV) |  권장 사용법 | 
+  |  Video  |  Preview  |  실패할  |  뷰의 가로 필드 (H-FOV) |  권장 사용법 | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45deg  |  (비디오 안정화를 사용 하는 기본 모드) | 
-  |  해당 사항 없음 |  해당 사항 없음 |  2048x1152 |  67deg |  가장 높은 해상도의 이미지 | 
+  |  해당 없음 |  해당 없음 |  2048x1152 |  67deg |  가장 높은 해상도의 이미지 | 
   |  1408x792 |  1408x792 |  1408x792 |  48deg |  비디오 안정화 전 Overscan (패딩) 해상도 | 
   |  1344x756 |  1344x756 |  1344x756 |  67deg |  Overscan를 사용 하는 넓은 FOV 비디오 모드 | 
   |  896x504 |  896x504 |  896x504 |  48deg |  이미지 처리 작업에 대 한 낮은 전원/저해상도 모드 | 
@@ -37,10 +37,10 @@ HoloLens에는 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록
 
 * 자동 흰색 잔액, 자동 노출 및 전체 이미지 처리 파이프라인이 있는 PV (자동 포커스 사진/비디오) 카메라
 * 카메라가 활성화 될 때마다 전 세계의 개인 개인 정보 취급 LED가 켜 집니다.
-* HoloLens 2는 다른 카메라 프로필을 지원 합니다. [카메라 기능을 검색 하 고 선택](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles)하는 방법을 알아봅니다.
+* HoloLens 2는 다른 카메라 프로필을 지원 합니다. [카메라 기능을 검색 하 고 선택](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles)하는 방법을 알아봅니다.
 * 카메라는 다음 프로필 및 해상도를 지원 합니다 (모든 비디오 모드는 16:9 가로 세로 비율).
   
-  | 프로필                                         | 비디오     | 미리 보기   | 실패할     | 프레임 속도 | 뷰의 가로 필드 (H-FOV) | 권장 사용법                             |
+  | 프로필                                         | Video     | Preview   | 실패할     | 프레임 속도 | 뷰의 가로 필드 (H-FOV) | 권장 사용법                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | 레거시, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64.69                            | 고품질 비디오 녹화                |
   | 레거시, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64.69                            | 고품질 사진 캡처에 대 한 미리 보기 스트림 |
@@ -49,7 +49,7 @@ HoloLens에는 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록
   | BalancedVideoAndPhoto, 120                       | 1504x846  | 1504x846  |           | 15, 30       | 64.69                            | 긴 기간 시나리오                     |
   | 비디오 회의, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
-  | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
+  | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
@@ -69,14 +69,14 @@ HoloLens에서 사진과 비디오를 사용 하는 경우 캡처된 프레임�
 
 HoloLens 설명서의 다른 곳에서 "카메라"는 "가상 게임 카메라" (앱에서 렌더링 하는 것과 같은)를 참조할 수 있습니다. 달리 지정 되지 않은 경우이 페이지의 "카메라"는 실제 RGB 색 카메라를 참조 합니다.
 
-이 페이지에 대 한 세부 정보는 [MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference) 클래스를 사용 하지만 [미디어 파운데이션 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx)을 사용 하 여 카메라 내장 함수 및 위치를 끌어오는 api도 있습니다. 자세한 내용은 [Holographic face 추적 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) 을 참조 하세요.
+이 페이지에 대 한 세부 정보는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) 클래스를 사용 하지만 [미디어 파운데이션 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx)을 사용 하 여 카메라 내장 함수 및 위치를 끌어오는 api도 있습니다. 자세한 내용은 [Holographic face 추적 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) 을 참조 하세요.
 
 ### <a name="images-with-coordinate-systems"></a>좌표계가 있는 이미지
 
-각 이미지 프레임 (사진 또는 비디오)에는 [MediaFrameReference](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)의 [CoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) 속성을 사용 하 여 액세스할 수 있는 캡처 시점에 카메라에서 [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) 를 포함 합니다. 또한 각 프레임에는 [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 속성에서 찾을 수 있는 카메라 렌즈 모델에 대 한 설명이 포함 되어 있습니다. 이러한 변환은 함께 각 픽셀에 대해 픽셀을 생성 한 photons에서 가져온 경로를 나타내는 3D 공간의 광선을 정의 합니다. 이러한 광선은 프레임의 좌표계에서 다른 좌표계 (예: [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference))로 변환을 가져와서 앱의 다른 콘텐츠와 관련 될 수 있습니다. 요약 하자면, 각 이미지 프레임은 다음을 제공 합니다.
+각 이미지 프레임 (사진 또는 비디오)에는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)의 [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) 속성을 사용 하 여 액세스할 수 있는 캡처 시점에 카메라에서 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 를 포함 합니다. 또한 각 프레임에는 [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 속성에서 찾을 수 있는 카메라 렌즈 모델에 대 한 설명이 포함 되어 있습니다. 이러한 변환은 함께 각 픽셀에 대해 픽셀을 생성 한 photons에서 가져온 경로를 나타내는 3D 공간의 광선을 정의 합니다. 이러한 광선은 프레임의 좌표계에서 다른 좌표계 (예: [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference))로 변환을 가져와서 앱의 다른 콘텐츠와 관련 될 수 있습니다. 요약 하자면, 각 이미지 프레임은 다음을 제공 합니다.
 * 픽셀 데이터 (RGB/NV12/JPEG/등 형식)
-* 캡처 위치의 [SpatialCoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem)
-* 카메라의 렌즈 모드가 포함 된 [CameraIntrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 클래스입니다.
+* 캡처 위치의 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem)
+* 카메라의 렌즈 모드가 포함 된 [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 클래스입니다.
 
 ### <a name="camera-to-application-specified-coordinate-system"></a>응용 프로그램에서 지정한 좌표계로 카메라
 
@@ -105,13 +105,13 @@ HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레
 시각적 패턴을 인식 한 다음이 개체를 응용 프로그램의 세계 공간에 놓으려면 다음과 같은 몇 가지 작업을 수행 해야 합니다.
 1. QR 코드, AR 태그, 얼굴 찾기, 원 추적기, OCR 등의 이미지 패턴 인식 도구 키트입니다.
 2. 런타임에 이미지 프레임을 수집 하 여 인식 계층으로 전달 합니다.
-3. 이미지 위치를 세계 위치 또는 세계 광선으로 다시 프로젝션 합니다. 참조 항목
+3. 이미지 위치를 세계 위치 또는 세계 광선으로 다시 프로젝션 합니다. 자세한 내용은
 4. 이러한 세계 위치에 가상 모델 배치
 
 몇 가지 중요 한 이미지 처리 링크:
-* [OpenCV](http://opencv.org/)
+* [OpenCV](https://opencv.org/)
 * [QR 태그](https://en.wikipedia.org/wiki/QR_code)
-* [FaceSDK](http://research.microsoft.com/projects/facesdk/)
+* [FaceSDK](https://research.microsoft.com/projects/facesdk/)
 * [Microsoft Translator](https://www.microsoft.com/translator/business)
 
 특히 장기 실행 이미지 인식 알고리즘을 처리할 때는 대화형 응용 프로그램 프레임 률을 유지 하는 것이 중요 합니다. 이러한 이유로 일반적으로 다음과 같은 패턴을 사용 합니다.
@@ -166,12 +166,12 @@ public static Vector3 ClosestPointBetweenRays(
 
 ### <a name="track-or-identify-tagged-stationary-or-moving-real-world-objectsfaces-using-leds-or-other-recognizer-libraries"></a>Led 또는 다른 인식기 라이브러리를 사용 하 여 태그가 지정 된 고정 또는 실제 개체/얼굴 이동 추적 또는 식별
 
-예를 들면 다음과 같습니다.
+예제:
 * Led가 있는 산업 로봇 (또는 느린 개체 이동에 대 한 QR 코드)
 * 대화방의 개체 식별 및 인식
 * 대화방에서 사람 식별 및 인식 (예: 얼굴에 holographic 연락처 카드 넣기)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [과정이 카메라 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Unity의 위치를 찾을 수 있는 카메라](locatable-camera-in-unity.md)
 * [혼합 현실 캡처](mixed-reality-capture.md)

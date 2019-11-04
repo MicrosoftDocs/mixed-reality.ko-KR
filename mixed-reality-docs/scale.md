@@ -1,21 +1,25 @@
 ---
-title: 소수 자릿수
-description: Holographic 양식에서 사실적으로 보이는 콘텐츠를 표시 하는 열쇠는 실제 세계의 시각적 통계를 최대한 긴밀 하 게 모방 하는 것입니다.
+title: 배율
+description: 홀로그램 형태로 사실적으로 보이는 콘텐츠를 표시하는 핵심 요소는 실제 세계의 시각적 통계를 최대한 긴밀하게 모방하는 것입니다.
 author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 스타일, 디자인
-ms.openlocfilehash: 169665293e2cc612a546bbee5af14387855ae96b
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: eeec28fbf98cf4386a57cde4452cd3f8977d7780
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896558"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437510"
 ---
-# <a name="scale"></a>소수 자릿수
+# <a name="scale"></a>배율
 
-Holographic 양식에서 사실적으로 보이는 콘텐츠를 표시 하는 열쇠는 실제 세계의 시각적 통계를 최대한 긴밀 하 게 모방 하는 것입니다. 즉, 실제 지역에서 개체가 있는 위치, 크기 및 구성의 이해를 이해 하는 데 도움이 될 수 있는 만큼의 시각적 신호를 통합 합니다. 개체의 배율은 이러한 시각적 신호 중 가장 중요 한 요소 중 하나 이며, 뷰어에는 개체의 크기와 해당 위치에 대 한 신호 (특히 알려진 크기의 개체)를 제공 합니다. 또한 실제 규모에서 개체를 보는 것은 일반적으로 혼합 현실에 대 한 주요 환경 차이점 중 하나로 보입니다. 이전에는 화면 기반 보기에서 사용할 수 없는 부분이 있습니다.
+홀로그램 형태로 사실적으로 보이는 콘텐츠를 표시하는 핵심 요소는 실제 세계의 시각적 통계를 최대한 긴밀하게 모방하는 것입니다. 즉, 실제 세계에서 개체의 위치, 크기 및 구성 요소를 이해하는 데 도움이 될 수 있는 만큼 시각적 신호를 최대한 많이 통합해야 합니다. 개체의 배율은 이러한 시각적 신호 중 가장 중요 한 요소 중 하나 이며, 뷰어에는 개체의 크기와 해당 위치에 대 한 신호 (특히 알려진 크기의 개체)를 제공 합니다. 또한 실제 규모에서 개체를 보는 것은 일반적으로 혼합 현실에 대 한 주요 환경 차이점 중 하나로 보입니다. 이전에는 화면 기반 보기에서 사용할 수 없는 부분이 있습니다.
+
+<br>
+
+---
 
 ## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>개체 및 환경의 규모를 제안 하는 방법
 
@@ -25,19 +29,42 @@ Holographic 양식에서 사실적으로 보이는 콘텐츠를 표시 하는 �
 
 일반적인 방법 중 하나는 사용자에 게 표시 되는 개체의 거리를 활용 하는 것입니다. 예를 들어 사용자 앞에 대형 패밀리 자동차를 시각화 하는 것이 좋습니다. 자동차가 앞에서 직접 있었던 경우 arm의 길이 내에서이는 너무 커서 사용자의 보기 필드에 적합 하지 않습니다. 이렇게 하려면 사용자가 head 및 body를 이동 하 여 전체 개체를 이해 해야 합니다. 자동차를 실내에서 더 멀리 배치 하는 경우 사용자는 보기의 해당 필드에 개체 전체를 표시 한 다음 자신에 게 더 가깝게 이동 하 여 영역을 자세히 검사 하는 방식으로 크기를 조정할 수 있습니다.
 
-[Volvo](https://www.youtube.com/watch?v=DilzwF90vec) 는이 기술을 사용 하 여 사용자에 게 실제적이 고 직관적인 방식으로 holographic 자동차의 규모를 활용 하 여 새 자동차에 대 한 showroom 환경을 만듭니다. 이 환경은 실제 테이블에서 자동차의 홀로그램으로 시작 되므로 사용자가 모델의 전체 크기와 모양을 이해할 수 있습니다. 환경에서 나중에 자동차는 장치의 보기 필드 크기 보다 더 큰 규모로 확장 되지만 사용자가 더 작은 모델에서 참조 프레임을 이미 확보 했으므로 자동차의 기능을 적절 하 게 탐색할 수 있습니다.
+:::row:::
+    :::column:::
+        **[Volvo는이 기술을 사용](https://www.youtube.com/watch?v=DilzwF90vec)** 하 여 사용자에 게 실제적이 고 직관적인 방식으로 holographic 자동차의 규모를 활용 하 여 새 자동차에 대 한 showroom 환경을 만듭니다. 이 환경은 실제 테이블에서 자동차의 홀로그램으로 시작 되므로 사용자가 모델의 전체 크기와 모양을 이해할 수 있습니다. 환경에서 나중에 자동차는 장치의 보기 필드 크기 보다 더 큰 규모로 확장 되지만 사용자가 더 작은 모델에서 참조 프레임을 이미 확보 했으므로 자동차의 기능을 적절 하 게 탐색할 수 있습니다.<br>
+        <br>
+        *이미지: HoloLens 용 Volvo 자동차 환경*
+    :::column-end:::
+        :::column:::
+       ![HoloLens 용 Volvo 자동차 환경](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-![HoloLens 용 Volvo 자동차 환경](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
-*HoloLens 용 Volvo 자동차 환경*
+
+<br>
+
+---
 
 ### <a name="use-holograms-to-modify-the-users-real-space"></a>Holograms를 사용 하 여 사용자의 실제 공간을 수정 합니다.
 
 또 다른 방법은 holograms를 사용 하 여 사용자의 실제 공간을 수정 하 고, 기존 옆면과 최대값이를 환경으로 바꾸거나, ' 구멍 ' 또는 ' w i n s '를 추가 하 여 크기가 큰 개체가 실제 공간을 ' 중단 ' 하는 것을 허용 하는 것입니다. 예를 들어 큰 트리가 대부분의 사용자에 게는 적합 하지 않을 수 있지만, 해당 상한에 가상 하늘을 배치 하면 실제 공간이 가상으로 확장 됩니다. 이를 통해 사용자는 가상 트리의 기반을 탐색 하 고 실제 수명에 표시 되는 방식에 대 한 확장을 수집한 다음 공간을 차지 하는 공간 보다 크게 확장 된 것을 확인할 수 있습니다.
 
-[Minecraft](https://minecraft.net/) 는 유사한 기법을 사용 하 여 개념 환경을 개발 했습니다. 실내의 실제 표면에 가상 창을 추가 하면 방에 있는 기존 개체가 실내의 물리적인 크기 제한을 초과 하는 매우 큰 환경의 컨텍스트에 배치 됩니다.
+:::row:::
+    :::column:::
+        Minecraft는 유사한 기법을 사용 하 여 **[개념 환경을 개발](https://minecraft.net/)** 했습니다. 실내의 실제 표면에 가상 창을 추가 하면 방에 있는 기존 개체가 실내의 물리적인 크기 제한을 초과 하는 매우 큰 환경의 컨텍스트에 배치 됩니다.<br>
+        <br>
+        *이미지: HoloLens의 Minecraft 개념 환경*
+    :::column-end:::
+        :::column:::
+       ![HoloLens를 위한 Minecraft 개념 환경](images/800px-minecraftwindow-640px.jpg)<br><br>
+    :::column-end:::
+:::row-end:::
 
-![HoloLens를 위한 Minecraft 개념 환경](images/800px-minecraftwindow-640px.jpg)<br>
-*HoloLens를 위한 Minecraft 개념 환경*
+
+<br>
+
+---
+
 
 ## <a name="experimenting-with-scale"></a>규모 실험
 
@@ -49,7 +76,11 @@ Holographic 양식에서 사실적으로 보이는 콘텐츠를 표시 하는 �
 * 실제 세계의 비교 표면에서는 여러 축을 따라 위치를 변경 하는 경우를 예로 들 수 있습니다. 즉, 개체가 더 가깝게 이동 하는 대신 드롭다운으로 표시 될 수 있습니다 (경우에 따라 3D 이동의 2D 프로젝션과 유사).
 * 마지막으로, 알려진 ' 실제 세계 ' 크기가 없는 개체 (예: 임의의 크기, UI 요소 등이 있는 임의 셰이프)의 경우 크기를 변경 하면 변화 하는 변화를 모방 하는 방법으로 기능적으로 동작할 수 있습니다. 뷰어는 기존에 있는 개체의 true 크기 또는 위치를 이해 하므로 규모를 보다 중요 한 큐로 처리할 수 있습니다.
 
-## <a name="see-also"></a>참조
+<br>
+
+---
+
+## <a name="see-also"></a>참고 항목
 * [색, 광원 및 재질](color,-light-and-materials.md)
 * [입력 체계](typography.md)
 * [공간 음향 디자인](spatial-sound-design.md)

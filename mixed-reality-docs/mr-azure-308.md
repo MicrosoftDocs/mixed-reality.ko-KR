@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 알림, 기능, 테이블, notification hubs, hololens, 몰입 형, vr
-ms.openlocfilehash: 3b6e930acd81c7d6e3addc107ec0da605d38cad1
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: d65750f37815efecae85e7bff85318a234079af8
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694609"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438752"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -26,7 +26,7 @@ ms.locfileid: "67694609"
 
 **Azure Notification Hubs** 는 개발자가 대상 및 개인 설정 된 푸시 알림을 모든 플랫폼에 보낼 수 있도록 하는 Microsoft 서비스입니다. 모두 클라우드 내에서 제공 됩니다. 이를 통해 개발자는 시나리오에 따라 최종 사용자와 통신 하거나 다양 한 응용 프로그램 간에 통신할 수 있습니다. 자세한 내용은 **Azure Notification Hubs** [페이지](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)를 참조 하세요.
 
-**Azure Functions** 는 개발자가 Azure에서 작은 코드, ' 함수 '를 실행할 수 있도록 해 주는 Microsoft 서비스입니다. 이렇게 하면 다양 한 이점을 얻을 수 있는 로컬 응용 프로그램이 아닌 클라우드로 작업을 위임할 수 있습니다. **Azure Functions** 는 C\#, F\#, node.js, Java 및 PHP를 비롯 한 몇 가지 개발 언어를 지원 합니다. 자세한 내용은 **Azure Functions** [페이지](https://docs.microsoft.com/azure/azure-functions/functions-overview)를 참조 하세요.
+**Azure Functions** 는 개발자가 Azure에서 작은 코드, ' 함수 '를 실행할 수 있도록 해 주는 Microsoft 서비스입니다. 이렇게 하면 다양 한 이점을 얻을 수 있는 로컬 응용 프로그램이 아닌 클라우드로 작업을 위임할 수 있습니다. **Azure Functions** 는 C\#, F\#, Node.js, JAVA 및 PHP를 비롯 한 몇 가지 개발 언어를 지원 합니다. 자세한 내용은 **Azure Functions** [페이지](https://docs.microsoft.com/azure/azure-functions/functions-overview)를 참조 하세요.
 
 **Azure Tables** 는 개발자가 구조화 되지 않은 SQL 데이터를 클라우드에 저장 하 여 어디서 나 쉽게 액세스할 수 있도록 하는 Microsoft 클라우드 서비스입니다. 이 서비스는 스키마 boasts 디자인 하 여 필요에 따라 테이블의 진화를 허용 하므로 매우 유연 합니다. 자세한 내용은 **Azure Tables** [페이지](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) 를 참조 하세요.
 
@@ -55,7 +55,7 @@ ms.locfileid: "67694609"
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -70,7 +70,7 @@ ms.locfileid: "67694609"
 - 개발자 모드가 사용 하도록 설정 된 [Windows Mixed Reality 모던 (VR) 헤드셋](immersive-headset-hardware-details.md) 또는 [Microsoft HoloLens](hololens-hardware-details.md)
 - Azure 설치 및 Notification Hubs 액세스를 위한 인터넷 액세스
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 - 이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 - Microsoft 개발자 포털 및 응용 프로그램 등록 포털의 소유자 여야 합니다. 그렇지 않으면 [2 장의](#chapter-2---retrieve-your-new-apps-credentials)앱에 액세스할 수 있는 권한이 없는 것입니다.
@@ -97,7 +97,7 @@ ms.locfileid: "67694609"
 
 새 앱이 나열 되는 응용 프로그램 등록 포털에 로그인 하 고 **Azure Portal**내에서 **Notification Hubs 서비스** 를 설정 하는 데 사용 되는 자격 증명을 검색 합니다.
 
-1.  [응용 프로그램 등록 포털](http://apps.dev.microsoft.com)로 이동 합니다.
+1.  [응용 프로그램 등록 포털](https://apps.dev.microsoft.com)로 이동 합니다.
 
     ![응용 프로그램 등록 포털](images/AzureLabs-Lab8-03.png)
 
@@ -157,7 +157,7 @@ ms.locfileid: "67694609"
 
 6.  서비스 인스턴스를 만든 후 알림이 포털에 표시 됩니다.
 
-    ![알림(notification)](images/AzureLabs-Lab8-09.png)
+    ![알림](images/AzureLabs-Lab8-09.png)
 
 7.  알림에서 **리소스로 이동** 단추를 클릭 하 여 새 서비스 인스턴스를 탐색 합니다. 새 **알림 허브** 서비스 인스턴스로 이동 됩니다.
 
@@ -232,7 +232,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
     
     ![](images/AzureLabs-Lab8-18.PNG)
 
-10. 오른쪽의 패널은 새 테이블을 추가 해야 하는 **Table service** 정보를 표시 하도록 변경 됩니다. 왼쪽 위 모서리에 있는 **+** **테이블** 단추를 클릭 하 여이 작업을 수행 합니다.
+10. 오른쪽의 패널은 새 테이블을 추가 해야 하는 **Table service** 정보를 표시 하도록 변경 됩니다. 이렇게 하려면 왼쪽 위 모서리에서 **테이블** **+** 단추를 클릭 합니다.
 
     ![테이블 열기](images/AzureLabs-Lab8-19.png)
 
@@ -251,7 +251,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
 1.  **Visual Studio**를 엽니다.
 
-2.  메뉴에서**클라우드 탐색기** **보기** > 를 클릭 합니다.
+2.  메뉴에서 **보기** > **클라우드 탐색기**를 클릭 합니다.
 
     ![클라우드 탐색기 열기](images/AzureLabs-Lab8-22.png)
 
@@ -272,7 +272,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
     ![장면 개체 테이블 열기](images/AzureLabs-Lab8-24.png)
 
-6.  Visual Studio 창의 중앙에서 테이블이 열립니다. **+** (더하기)가 있는 테이블 아이콘을 클릭 합니다.
+6.  Visual Studio 창의 중앙에서 테이블이 열립니다. 테이블 아이콘을 클릭 하 고 **+** ()를 클릭 합니다.
 
     ![새 테이블 추가](images/AzureLabs-Lab8-25.png)
 
@@ -321,7 +321,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
     ![메모장 열기](images/AzureLabs-Lab8-31.png)
 
-2.  메모장을 열고 아래에 JSON 구조를 삽입 합니다. 이 작업을 완료 한 후에는 데스크톱에 프로젝트를 **json**으로 저장 합니다. 이름 지정이 올바른지 확인 하는 것이 중요 합니다. 이 파일은 함수가 사용 하는 라이브러리를 정의 합니다. NuGet을 사용 하는 경우 익숙할 것입니다.
+2.  메모장을 열고 아래에 JSON 구조를 삽입 합니다. 이 작업을 완료 한 후에는 데스크톱에 프로젝트를 **json**으로 저장 합니다. 이름 지정이 올바른지 확인 하는 것이 **중요 합니다.** 이 파일은 함수가 사용 하는 라이브러리를 정의 합니다. NuGet을 사용 하는 경우 익숙할 것입니다.
 
     ```json
     {
@@ -370,7 +370,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
     8. **저장소** 섹션의 경우 **이전 단계에서 만든 저장소 서비스를 선택 해야**합니다.
 
-    9. 이 앱에 *Application Insights* 필요 하지 않으므로 자유롭게 그대로 **둡니다.**
+    9. 이 앱에 *Application Insights* 필요 **하지 않으므로 자유롭게 그대로 둡니다.**
 
     10. **만들기**를 클릭합니다.
 
@@ -388,7 +388,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
     ![리소스로 이동](images/AzureLabs-Lab8-36.png)
 
-11. 함수 옆 **+** 에 있는 더하기 () 아이콘을 클릭 하 여 *새를 만듭니다*.
+11. *함수*옆에 있는 **+** (더하기) 아이콘을 클릭 하 여 *새를 만듭니다*.
 
     ![새 함수 추가](images/AzureLabs-Lab8-37.png)
 
@@ -492,7 +492,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
 18. 코드가 준비 되 면 **저장**을 클릭 합니다.
 
-19. 그런 다음 페이지의 **\<** 오른쪽에 있는 (화살표) 아이콘을 클릭 합니다.
+19. 그런 다음 페이지의 오른쪽에 있는 **\<** (화살표) 아이콘을 클릭 합니다.
 
     ![업로드 패널 열기](images/AzureLabs-Lab8-43.png)
 
@@ -595,11 +595,11 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 31.  이제 **출력** 페이지가 아래와 일치 하지만 **사용자** 의 정보를 포함 합니다. **저장**을 눌러야 합니다.
 
 > [!WARNING]
-> *알림 허브 이름을 직접 편집 하지 마십시오* . (이전 단계를 올바르게 수행한 경우 **고급 편집기**를 사용 하 여 모두 수행 해야 합니다.
+> *알림 허브 이름을 직접 편집 하지 마십시오* . 이전 단계를 올바르게 수행한 경우에는 **고급 편집기**를 사용 하 여 모두 수행 해야 합니다.
 
 ![출력 완료](images/AzureLabs-Lab8-50.png)
 
-32. 이 시점에서 함수를 테스트 하 여 작동 하는지 확인 해야 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면 
+32. 이 시점에서 함수를 테스트 하 여 작동 하는지 확인 해야 합니다. 이렇게 하려면 다음을 수행합니다. 
 
     1. 함수 페이지로 이동 합니다.
 
@@ -641,7 +641,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 혼합 현실 모던 헤드셋을 설정 하 고 테스트 합니다.
 
 > [!NOTE] 
-> 이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [Windows Mixed Reality를 설정 하는 방법에 대 한 링크](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)를 참조 하세요.
+> 이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [Windows Mixed Reality를 설정 하는 방법에 대 한 링크](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)를 참조 하세요.
 
 1.  **Unity** 를 열고 **새로 만들기**를 클릭 합니다.
 
@@ -651,15 +651,15 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
     ![프로젝트 만들기](images/AzureLabs-Lab8-53.png)
 
-3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정** **편집** > 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다.  > **기본 설정** **편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![외부 VS 도구 설정](images/AzureLabs-Lab8-54.png)
 
-4.  그런 다음 **파일** > **빌드 설정** 으로 이동 하 고 **유니버설 Windows 플랫폼**를 선택한 후 **플랫폼 전환** 단추를 클릭 하 여 선택 항목을 적용 합니다.
+4.  그런 다음 **파일** > **빌드 설정** 으로 이동 하 고 **유니버설 Windows 플랫폼**을 선택한 후 **플랫폼 전환** 단추를 클릭 하 여 선택 항목을 적용 합니다.
 
     ![플랫폼 전환](images/AzureLabs-Lab8-55.png)
 
-5.  **파일** > **빌드 설정**에서 다음을 확인 합니다.
+5.  **파일** > **빌드 설정**에 있는 동안 다음을 확인 합니다.
 
     1.  **대상 장치가** **모든 장치로** 설정 됨
 
@@ -683,7 +683,7 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
             ![새 장면 폴더](images/AzureLabs-Lab8-57.png)
 
-        3. 새로 만든 **장면** 폴더를 연 다음 **파일 이름:** 텍스트 필드에 **\_nh Desktop\_장면을**입력 하 고 **저장**을 누릅니다.
+        3. 새로 만든 **장면** 폴더를 연 다음 **파일 이름:** 텍스트 필드에 **Nh\_Desktop\_장면**을 입력 하 고 **저장**을 누릅니다.
 
             ![새 NH_Desktop_Scene](images/AzureLabs-Lab8-58.png)
 
@@ -709,11 +709,11 @@ Notification Hubs 서비스 인스턴스를 만든 후에는 Azure Portal로 다
 
             ![tick 인터넷 클라이언트](images/AzureLabs-Lab8-60.png)
 
-8.  **빌드 설정** 으로 돌아가기 *Unity C\# 프로젝트가* 더 이상 회색으로 표시 되지 않습니다 .이 옆의 확인란을 선택 합니다.
+8.  **빌드 설정** 으로 돌아가기 *Unity C\# 프로젝트가* 더 이상 회색으로 표시 되지 않습니다. 이 옆의 확인란을 선택 합니다.
 
 9.  **빌드 설정** 창을 닫습니다.
 
-10. 장면 및 프로젝트 **파일** > 저장**장면/파일** > **저장 프로젝트**를 저장 합니다.
+10. 장면 및 프로젝트 **파일** 을 저장 하 > **장면/파일** > 저장 **프로젝트**를 저장 합니다.
 
     > [!IMPORTANT]
     > 이 프로젝트에 대 한 *Unity 설정* 구성 요소 (데스크톱 앱)를 건너뛰고 코드를 바로 계속 하려면 unitypackage를 다운로드 하 여 프로젝트에 [**사용자 지정 패키지로**](https://docs.unity3d.com/Manual/AssetPackages.html)가져온 후 챕터에서 계속 [합니다.](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-Desktop.unitypackage) [ 9](#chapter-9---create-the-tabletoscene-class-in-the-desktop-unity-project).  스크립트 구성 요소를 추가 해야 합니다.
@@ -726,7 +726,7 @@ Unity에 Azure Storage를 사용 하 게 됩니다 (자체는 Azure 용 .Net SDK
 
 SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypackage**](https://aka.ms/azstorage-unitysdk) 를 다운로드 했는지 확인 합니다. 그런 후에 다음을 수행 합니다.
 
-1.  **자산 가져오기\> 패키지\> 사용자 지정 패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.
+1.  **\> \> 패키지 가져오기 사용자 지정 패키지** 메뉴 옵션의 자산을 사용 하 여 **unitypackage** 을 Unity에 추가 합니다.
 
 2.  팝업 되는 **Unity 패키지 가져오기** 상자에서 * **플러그 인* \> * 저장소 * * * 아래의 모든 항목을 선택할 수 있습니다.  이 과정에서 필요 하지 않으므로 다른 모든 항목을 선택 취소 합니다.
 
@@ -736,11 +736,11 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
 4.  프로젝트 뷰에서 **플러그 인** 의 **저장소** 폴더로 이동 하 고 다음 플러그 인 *만*선택 합니다.
 
-    -   Microsoft.Data.Edm
-    -   Microsoft.Data.OData
+    -   Microsoft. Data Edm
+    -   Microsoft. Data OData
     -   Windowsazure.servicebus
-    -   Newtonsoft.Json
-    -   System.Spatial
+    -   Newtonsoft.json
+    -   System.string
 
 ![모든 플랫폼 선택 취소](images/AzureLabs-Lab8-62.png)
 
@@ -780,7 +780,7 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
 이 클래스를 만들려면:
 
-1.  프로젝트 패널에 있는 **자산** 폴더를 마우스 오른쪽 단추로 클릭 하 고**폴더**를 **만듭니다** > . 폴더 이름을 **스크립트**로 합니다.
+1.  프로젝트 패널에 있는 **자산** 폴더를 마우스 오른쪽 단추로 클릭 하 > **폴더**를 **만듭니다** . 폴더 이름을 **스크립트**로 합니다.
 
     ![스크립트 폴더 만들기](images/AzureLabs-Lab8-66.png)
 
@@ -788,10 +788,10 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
 2.  위에서 만든 폴더를 두 번 클릭 하 여 엽니다.
 
-3.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **TableToScene**로 합니다.
+3.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 >  **C# 스크립트** **만들기** 를 클릭 합니다. 스크립트 이름을 **TableToScene**로 합니다.
 
-    ![새 c #](images/AzureLabs-Lab8-68.png)
-    스크립트![TableToScene 이름 바꾸기](images/AzureLabs-Lab8-69.png)
+    ![새 c # 스크립트](images/AzureLabs-Lab8-68.png)
+    ![TableToScene 이름 바꾸기](images/AzureLabs-Lab8-69.png)
 
 4.  스크립트를 두 번 클릭 하 여 Visual Studio 2017에서 엽니다.
 
@@ -969,8 +969,8 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
 1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **만들기**, **C\# 스크립트**를 차례로 클릭 합니다. 스크립트 **Cloudscene** 이름
     
-    ![새 c #](images/AzureLabs-Lab8-72.png)
-    스크립트![cloudscene 이름 바꾸기](images/AzureLabs-Lab8-73.png)
+    ![새 c # 스크립트](images/AzureLabs-Lab8-72.png)
+    ![CloudScene 이름 바꾸기](images/AzureLabs-Lab8-73.png)
 
 2.  다음 네임 스페이스를 추가 합니다.
 
@@ -1146,11 +1146,11 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
     ![빌드용 새 폴더](images/AzureLabs-Lab8-77.png)
 
-    1.  새 **빌드** 폴더를 열고 **새** 폴더를 한 번 더 사용 하 여 다른 폴더를 만든 다음 이름으로 **nh\_데스크톱\_앱**을 만듭니다.
+    1.  새 **빌드** 폴더를 열고 **새 폴더** 를 한 번 더 사용 하 여 다른 폴더를 만든 다음 **데스크톱\_앱\_이름을 n h**로 합니다.
 
         ![폴더 이름 NH_Desktop_App](images/AzureLabs-Lab8-78.png)
 
-    2.  **Nh\_데스크톱\_앱** 을 선택 합니다. **폴더 선택**을 클릭 합니다. 프로젝트를 빌드하는 데 1 분 정도 걸립니다.
+    2.  **Nh\_Desktop\_앱** 을 선택 합니다. **폴더 선택**을 클릭 합니다. 프로젝트를 빌드하는 데 1 분 정도 걸립니다.
 
 4.  빌드 다음에는 새 프로젝트의 위치를 보여 주는 **파일 탐색기** 가 표시 됩니다. 그러나 다음 몇 장에서는 먼저 다른 Unity 프로젝트를 만들어야 하므로 열 필요가 없습니다.
 
@@ -1167,7 +1167,7 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
     ![이름 UnityMRNotifHub](images/AzureLabs-Lab8-80.png)
 
-3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정** **편집** > 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다.  > **기본 설정** **편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![외부 편집기를 VS로 설정](images/AzureLabs-Lab8-81.png)
 
@@ -1175,7 +1175,7 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
     ![플랫폼을 UWP로 전환](images/AzureLabs-Lab8-82.png)
 
-5.  **파일** > **빌드 설정** 으로 이동 하 여 다음을 확인 합니다.
+5.  **파일** > **빌드 설정** 으로 이동 하 고 다음을 확인 합니다.
 
     1.  **대상 장치가** **모든 장치로** 설정 됨
 
@@ -1199,7 +1199,7 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
             ![새 장면 폴더](images/AzureLabs-Lab8-84.png)
 
-        3. 새로 만든 **장면** 폴더를 연 다음 **파일 이름:** 텍스트 필드에 **\_nh MR\_장면**을 입력 하 고 **저장**을 누릅니다.
+        3. 새로 만든 **장면** 폴더를 연 다음 **파일 이름:** 텍스트 필드에 **Nh\_MR\_장면**을 입력 하 고 **저장**을 누릅니다.
 
             ![새 장면-NH_MR_Scene](images/AzureLabs-Lab8-85.png)
 
@@ -1233,7 +1233,7 @@ SDK를 고유한 프로젝트로 가져오려면 GitHub에서 최신 [**unitypac
 
 9.  이러한 변경 작업을 수행한 후 빌드 설정 창을 닫습니다.
 
-10. 장면 및 프로젝트 **파일** > 저장**장면/파일** > **저장 프로젝트**를 저장 합니다.
+10. 장면 및 프로젝트 **파일** 을 저장 하 > **장면/파일** > 저장 **프로젝트**를 저장 합니다.
 
     > [!IMPORTANT]
     > 이 프로젝트에 대 한 *Unity 설정* 구성 요소 (혼합 현실 앱)를 건너뛰고 바로 코드를 계속 사용 하려면 [unitypackage를 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20308%20-%20Cross-device%20notifications/Azure-MR-308-MR.unitypackage)하 고 프로젝트에 [**사용자 지정 패키지로**](https://docs.unity3d.com/Manual/AssetPackages.html)가져온 후 [ 14 장](#chapter-14---creating-the-tabletoscene-class-in-the-mixed-reality-unity-project). 스크립트 구성 요소를 추가 해야 합니다.
@@ -1245,9 +1245,9 @@ Unity 라이브러리 (Azure 용 .Net SDK 사용)에 대 한 Azure Storage를 �
 
 SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://aka.ms/azstorage-unitysdk)를 다운로드 했는지 확인 합니다. 그런 후에 다음을 수행 합니다.
 
-1.  **자산** > **가져오기**패키지사용자 > **지정 패키지** 메뉴 옵션을 사용 하 여 위에서 다운로드 한 unitypackage을 Unity에 추가 합니다.
+1.  위에서 다운로드 한 unitypackage을 >  > **패키지 가져오기** **사용자 지정 패키지** 메뉴 **옵션을 사용** 하 여 Unity에 추가 합니다.
 
-2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** > **저장소**아래의 모든 항목을 선택할 수 있습니다.
+2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** > **저장소**에서 모든 항목을 선택할 수 있습니다.
 
     ![패키지 가져오기](images/AzureLabs-Lab8-90.png)
 
@@ -1255,11 +1255,11 @@ SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://a
 
 4.  프로젝트 뷰에서 **플러그 인** 의 **저장소** 폴더로 이동 하 고 다음 플러그 인 *만*선택 합니다.
 
-    -   Microsoft.Data.Edm
-    -   Microsoft.Data.OData
+    -   Microsoft. Data Edm
+    -   Microsoft. Data OData
     -   Windowsazure.servicebus
-    -   Newtonsoft.Json
-    -   System.Spatial
+    -   Newtonsoft.json
+    -   System.string
 
     ![플러그 인 선택](images/AzureLabs-Lab8-91.png)
 
@@ -1303,7 +1303,7 @@ SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://a
 1.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 **만들기**, **C\# 스크립트**를 차례로 클릭 합니다. 스크립트의 이름을 **Notificationreceiver**로 합니다.
 
     ![새 c # 스크립트](images/AzureLabs-Lab8-95.png)
-    ![이름 notificationreceiver 만들기](images/AzureLabs-Lab8-96.png)
+    ![이름을 NotificationReceiver로 만듭니다](images/AzureLabs-Lab8-96.png)
 
 2.  스크립트를 두 번 클릭 하 여 엽니다.
 
@@ -1433,7 +1433,7 @@ SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://a
         }
     ```
 
-9.  다음 처리기, **채널\_pushnotificationreceived ()** 는 알림이 수신 될 때마다 트리거됩니다. 이 알림은 데스크톱 응용 프로그램에서 이동 된 Azure 테이블 엔터티가 되는 알림을 deserialize 하 고 MR 장면에서 해당 하는 GameObject를 같은 위치로 이동 합니다. 
+9.  알림을 받을 때마다 다음 처리기 **채널\_PushNotificationReceived ()** 가 트리거됩니다. 이 알림은 데스크톱 응용 프로그램에서 이동 된 Azure 테이블 엔터티가 되는 알림을 deserialize 하 고 MR 장면에서 해당 하는 GameObject를 같은 위치로 이동 합니다. 
     
     > [!IMPORTANT]
     > 코드는 Visual Studio 내에서 Nuget 패키지 관리자를 사용 하 여 Unity 프로젝트를 빌드한 후 추가 될 Azure 메시징 라이브러리를 참조 하므로 주석 처리 됩니다. 따라서 Unity 프로젝트는 주석 처리 되지 않은 경우에는 빌드할 수 없습니다. 프로젝트를 빌드한 다음 Unity로 돌아가려면 해당 코드를 **다시 주석** 으로 처리 해야 합니다.
@@ -1477,7 +1477,7 @@ SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://a
     > [!NOTE]
     > Microsoft HoloLens에 대해이를 개발 하는 경우 다음과 같이 **기본 카메라**의 *카메라* 구성 요소를 업데이트 해야 합니다.
     > - 플래그 지우기: 단색
-    > - Background: 검정
+    > - 배경: 검정
 
 ## <a name="chapter-16---build-the-mixed-reality-project-to-uwp"></a>16 장-UWP에 혼합 현실 프로젝트 빌드
 
@@ -1495,7 +1495,7 @@ SDK를 고유한 프로젝트로 가져오려면 최신 [unitypackage](https://a
 
     ![빌드 폴더 만들기](images/AzureLabs-Lab8-100.png)
 
-    1.  새 **빌드** 폴더를 열고 **새 폴더** 를 한 번 더 사용 하 여 다른 폴더를 만든 다음 이름으로 **nh\_MR\_앱**을 만듭니다.
+    1.  새 **빌드** 폴더를 열고 **새 폴더** 를 한 번 더 사용 하 여 다른 폴더를 만든 다음 이름을 **Nh\_MR\_앱**으로 이름을 추가 합니다.
 
         ![NH_MR_Apps 폴더 만들기](images/AzureLabs-Lab8-101.png)
 
@@ -1539,7 +1539,7 @@ NuGet 패키지를 가져오려면:
 
 **NuGet 패키지**를 추가한 후에는 **notificationreceiver** 클래스 내에서 일부 코드의 *주석 처리를 제거* 해야 합니다.
 
-다음을 포함합니다.
+여기에는 다음이 포함됩니다.
 
 1. 위쪽의 네임 스페이스:
 
@@ -1619,9 +1619,9 @@ NuGet 패키지를 가져오려면:
 
     ![다음 화면으로 이동](images/AzureLabs-Lab8-106.png)
 
-4.  로그인 한 계정과 연결 된 모든 응용 프로그램을 로드 합니다. 계정에 로그인 하지 않은 경우이 페이지에 로그인 **할 수 있습니다** .
+4.  로그인 한 계정과 연결 된 모든 응용 프로그램을 로드 합니다. 계정에 로그인 하지 않은 경우이 페이지 **에 로그인 할 수 있습니다** .
 
-5.  이 자습서의 시작 부분에서 만든 **스토어 앱 이름을** 찾아 선택 합니다. 그리고 **다음**을 클릭합니다.
+5.  이 자습서의 시작 부분에서 만든 **스토어 앱 이름을** 찾아 선택 합니다. **Next**를 클릭합니다.
 
     ![상점 이름 찾기 및 선택](images/AzureLabs-Lab8-107.png)
 

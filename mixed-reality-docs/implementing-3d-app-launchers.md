@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, 로고, 아이콘, 모델링, 시작 관리자, 3D 시작 관리자, 타일, 라이브 큐브, 딥 링크, secondarytile, 보조 타일, UWP
-ms.openlocfilehash: 4a8d4a696ff6ef19d7332b20580f1f5ee67bf045
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516731"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438021"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>3D 앱 응용 프로그램 구현 (UWP 앱)
 
@@ -42,12 +42,12 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 매니페스트 위쪽에서 uap5 스키마를 추가 하 고이를 무시할 수 있는 네임 스페이스로 포함 합니다.
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 다음으로 응용 프로그램의 기본 타일에서 "MixedRealityModel"를 지정 합니다.
@@ -75,7 +75,7 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 MixedRealityModel 요소는 응용 프로그램 패키지에 저장 된 3D 자산을 가리키는 파일 경로를 허용 합니다. 현재는 .bb 파일 형식을 사용 하 여 전달 되 고 [Windows Mixed Reality 3d 자산 제작 지침](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) 에 따라 작성 된 3d 모델만 지원 됩니다. 자산은 앱 패키지에 저장 되어야 하 고 현재 애니메이션은 지원 되지 않습니다. "Path" 매개 변수를 비워 두면 Windows에서 3D 시작 관리자 대신 2D 슬레이트를 표시 합니다. **참고:** 응용 프로그램을 빌드하고 실행 하기 전에 빌드 설정에서 .bb 자산을 "콘텐츠"로 표시 해야 합니다.
 
 
-![솔루션 탐색기에서. a s b를 선택 하 고 속성 섹션을 사용 하 여 빌드 설정에서 "콘텐츠"로 표시 합니다.](images/buildsetting-content-300px.png)<br>
+솔루션 탐색기에서. a s b를 선택 하 고 속성 섹션을 사용 하 여 빌드 설정에 "내용"으로 표시](images/buildsetting-content-300px.png) ![<br>
 *솔루션 탐색기에서. a s b를 선택 하 고 속성 섹션을 사용 하 여 빌드 설정에서 "콘텐츠"로 표시 합니다.*
 
 ### <a name="bounding-box"></a>경계 상자
@@ -85,13 +85,13 @@ MixedRealityModel 요소는 응용 프로그램 패키지에 저장 된 3D 자�
 경계 상자 특성에 대 한 지원은 Windows RS4 update와 함께 MixedRealityModel 요소에 대 한 속성으로 제공 됩니다. 응용 프로그램 매니페스트 맨 위에 있는 경계 상자를 먼저 정의 하려면 uap6 스키마를 추가 하 고이를 무시할 수 있는 네임 스페이스로 포함 합니다.
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 그런 다음 MixedRealityModel에서 SpatialBoundingBox 속성을 설정 하 여 경계 상자를 정의 합니다. 
 
@@ -118,7 +118,7 @@ Unity를 사용 하는 경우 응용 프로그램 매니페스트를 편집 하�
 >[!IMPORTANT]
 >3D 딥 링크 (secondaryTiles)는 2D UWP 앱 에서만 작동 합니다. 그러나 Windows Mixed Reality 홈에서 전용 앱을 시작 하는 [3d 앱 시작 관리자](implementing-3d-app-launchers.md) 를 만들 수 있습니다.
 
-응용 프로그램의 3D 모델을[ windows 혼합 현실](navigating-the-windows-mixed-reality-home.md)에 추가 하는 기능을 추가 하는 기능을 추가 하 여 Windows 혼합 현실에서 [2d 응용 프로그램](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles)을 향상 시킬 수 있습니다. 예를 들어 360 ° photo viewer 앱에 직접 연결 되는 360 ° 인화지를 만들거나, 사용자가 저자에 대 한 세부 정보 페이지를 여는 자산 컬렉션에서 3D 콘텐츠를 넣을 수 있습니다. 3D 콘텐츠를 사용 하 여 2D 응용 프로그램의 기능을 확장 하는 몇 가지 방법입니다.
+응용 프로그램의 3D 모델을 windows [혼합](navigating-the-windows-mixed-reality-home.md) 현실에 추가 하는 기능을 추가 하는 기능을 추가 하 여 Windows 혼합 [현실에서 2d](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) 응용 프로그램을 향상 시킬 수 있습니다. 메뉴가. 예를 들어 360 ° photo viewer 앱에 직접 연결 되는 360 ° 인화지를 만들거나, 사용자가 저자에 대 한 세부 정보 페이지를 여는 자산 컬렉션에서 3D 콘텐츠를 넣을 수 있습니다. 3D 콘텐츠를 사용 하 여 2D 응용 프로그램의 기능을 확장 하는 몇 가지 방법입니다.
 
 ### <a name="creating-a-3d-secondarytile"></a>3D "secondaryTile" 만들기
 
@@ -166,7 +166,7 @@ await tile.RequestCreateAsync();
 
 3D secondaryTile의 활성화 동작을 정의 하 여 사용자가 선택할 때 반응 하는 방식을 제어할 수 있습니다. 이는 purley 정보 또는 장식용 인 혼합 현실 홈에 3D 개체를 저장 하는 데 사용할 수 있습니다. 다음 활성화 동작 유형이 지원 됩니다.
 1. 기본값: 사용자가 3D secondaryTile을 선택 하면 앱이 활성화 됩니다.
-2. None: 사용자가 3D secondaryTile을 선택 하면 아무것도 발생 하지 않으며 앱이 활성화 되지 않습니다.
+2. 없음: 사용자가 3D secondaryTile을 선택 해도 아무것도 발생 하지 않으며 앱이 활성화 되지 않습니다.
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>기존 "secondaryTile" 가져오기 및 업데이트
 
@@ -202,7 +202,7 @@ if (!tile.VisualElements.MixedRealityModel.Uri.Equals(updatedUri))
 
 다른 타일 기능 및 특성과 2D 타일에 사용 되는 방법에 대 한 자세한 내용은 [UWP 앱에 대 한 타일 설명서](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * 3D 앱 시작 관리자를 포함 하는 [혼합 현실 모델 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) 입니다.
 * [3D 앱 시작 관리자 디자인 지침](3d-app-launcher-design-guidance.md)

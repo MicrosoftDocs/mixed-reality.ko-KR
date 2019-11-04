@@ -2,16 +2,16 @@
 title: 사례 연구-현실에서의 구멍 검색
 description: 이 사례 연구에서는 HoloLens에 "자동 창" 효과를 구현 하 여 사용자가 실제 환경 내에서 옆면을 볼 수 있도록 하는 방법을 설명 합니다.
 author: EricRehmeyer
-ms.author: ericrehm
-ms.date: 03/21/2018
+ms.author: bestruku
+ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 마법 창, 시차
-ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873932"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436670"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>사례 연구-현실에서의 구멍 검색
 
@@ -67,7 +67,7 @@ HoloLens를 통해 표시 되는 내용:
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-영어: HoloLens를 통해 표시 되는 항목은 어두운 현실 (예: 선글라스) 및 앱이 표시 하고자 하는 모든 holograms의 간단한 조합입니다. 하지만 스크린샷을 만들 때 카메라 이미지는 픽셀 별 투명도 값에 따라 앱의 holograms 혼합 됩니다.
+영어: HoloLens를 통해 표시 되는 내용은 어두운 현실 (예: 선글라스) 및 앱에서 표시 하려는 holograms의 간단한 조합입니다. 하지만 스크린샷을 만들 때 카메라 이미지는 픽셀 별 투명도 값에 따라 앱의 holograms 혼합 됩니다.
 
 이 문제를 해결 하는 한 가지 방법은 "검은색 상자" 자료를 깊이 버퍼에만 쓰도록 변경 하 고 다른 모든 불투명 자료를 정렬 하는 것입니다. 이에 대 한 예제를 보려면 GitHub의 [MixedRealityToolkit에서 WindowOcclusion 파일](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader)을 확인 하세요. 관련 줄이 여기에 복사 됩니다.
 
@@ -104,12 +104,12 @@ Unity 편집기에서이 모델을 보면 flowerpot 주위에 긴 검은색 상�
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Eric Rehmeyer" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Eric Rehmeyer</b><br>수석 소프트웨어 엔지니어@Microsoft</td>
+<td style="border-style: none"><b>Eric Rehmeyer</b><br>수석 소프트웨어 엔지니어 @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>참조
-* [MR 기본 101: 디바이스를 사용하는 완전한 프로젝트](holograms-101.md)
+## <a name="see-also"></a>참고 항목
+* [MR 기본 사항 101: 장치를 사용 하 여 프로젝트 완료](holograms-101.md)
 * [좌표계](coordinate-systems.md)
 * [공간 앵커](spatial-anchors.md)
 * [공간 매핑](spatial-mapping.md)

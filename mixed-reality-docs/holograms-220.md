@@ -3,28 +3,28 @@ title: MR 공간 220-공간 사운드
 description: Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 수행 하 여 공간 소리 개념에 대 한 세부 정보를 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 공간 음향
-ms.openlocfilehash: 50d17fe8c9a6e3f18b1309a59c9c41af982a7505
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a3fc054927d73cf9ac21f831caa4ec23875977bd
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526893"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434729"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 
-# <a name="mr-spatial-220-spatial-sound"></a>MR 공간 220: 공간 음향
+# <a name="mr-spatial-220-spatial-sound"></a>MR 공간 220: 공간 사운드
 
 [공간 사운드](spatial-sound.md) 를 holograms로 breathes 세계에 제공 합니다. Holograms은 가볍고 소리로 구성 되며 Holograms의 시야가 손실 되는 경우 공간 소리를 통해 찾을 수 있습니다. 공간 사운드는 라디오 공간에 배치 되는 일반적인 사운드와는 달리, 라디오 공간에 있습니다. 공간 사운드를 사용 하면 사용자, 사용자 옆 또는 머리에 있는 것 처럼 holograms 소리를 만들 수 있습니다. 이 과정에서는 다음을 수행 합니다.
 
 * Microsoft 공간 소리를 사용 하도록 개발 환경을 구성 합니다.
 * 공간 소리를 사용 하 여 상호 작용을 향상 시킵니다.
-* 공간을 공간 매핑과 함께 사용 합니다.
+* 공간을 [공간 매핑과](spatial-mapping.md)함께 사용 합니다.
 * 사운드 디자인을 이해 하 고 모범 사례를 혼합 합니다.
 * 소리를 사용 하 여 특수 효과를 향상 시키고 사용자를 혼합 현실 세계에 가져옵니다.
 
@@ -34,13 +34,13 @@ ms.locfileid: "63526893"
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td>MR 공간 220: 공간 음향</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR 공간 220: 공간 사운드</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 * 몇 가지 C# 기본적인 프로그래밍 기능.
@@ -110,8 +110,8 @@ HoloLens에 배포 하는 경우:
 
 1. Visual Studio의 맨 위 도구 모음을 사용 하 여 대상을 디버그에서 **릴리스** 로, ARM에서 **x 86**으로 변경 합니다.
 2. 로컬 컴퓨터 단추 옆에 있는 드롭다운 화살표를 클릭 하 고 **원격 컴퓨터**를 선택 합니다.
-3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
-4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device---hololens-1st-gen)으로 연결 해야 합니다.
+3. **HoloLens 장치 IP 주소** 를 입력 하 고 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정 합니다. **선택**을 클릭 합니다. 장치 IP 주소를 모르는 경우 **네트워크 & 인터넷 > 고급 옵션 > 설정**을 참조 하세요.
+4. 상단 메뉴 모음에서 **디버그-> 디버깅 하지 않고 시작** 을 클릭 하거나 **ctrl + F5**를 누릅니다. 처음으로 장치에 배포 하는 경우에는 [Visual Studio와 쌍](using-visual-studio.md#pairing-your-device)으로 연결 해야 합니다.
 
 모던 헤드셋에 배포 하는 경우:
 
@@ -170,7 +170,7 @@ Doppler level을 0으로 설정 하면 이동 (홀로그램 또는 사용자 중
 * **음성 입력 처리기**에서 **이동 숨기기**를 확장 합니다.
 * **No 함수** 를 **PolyActions**로 변경 합니다.
 
-![키워드로 숨기기로 이동](images/gohide.png)
+![키워드: 다음으로 숨기기](images/gohide.png)
 
 ### <a name="part-3---gesture-feedback"></a>3 부-제스처 피드백
 
@@ -240,8 +240,8 @@ Doppler level을 0으로 설정 하면 이동 (홀로그램 또는 사용자 중
   * **배치 사운드** **를 설정**합니다.
   * 픽업 **소리** 를 **픽업**소리로 설정 합니다.
   * **픽업 동작** 및 **배치 동작**양쪽의 오른쪽 아래에 있는 +를 누릅니다. EnergyHub를 장면에서 **없음 (개체)** 필드로 끕니다.
-    * **픽업 동작에서** **EnergyHubBase** ->  resetanimation함수 -> 를 클릭 합니다.
-    * **배치 동작에서** **EnergyHubBase** ->  onselect함수 -> 를 클릭 합니다.
+    * **픽업 동작의**에서 **함수 없음** -> **EnergyHubBase** -> **resetanimation**을 클릭 합니다.
+    * **배치 동작의**에서 **함수 없음** -> **EnergyHubBase** -> **onselect**를 클릭 합니다.
 
 ![소리 및 동작으로 이동 하려면 탭 하세요.](images/holograms220-taptoplace.png)
 
@@ -283,7 +283,7 @@ RaycastNonAlloc 메서드는 반환 되는 결과 수 뿐만 아니라 할당을
 
 Audio Occluder는 IAudioInfluencer을 구현 합니다.
 
-* **AudioEmitter**를 구매한 폐색에 연결 되는 **AudioLowPassFilter** 를 사용 하  여 효과를 적용 합니다.
+* **AudioEmitter**를 구매한 폐색에 **연결 되는** **AudioLowPassFilter** 를 사용 하 여 효과를 적용 합니다.
 * 볼륨 감쇠를 오디오 소스에 적용 합니다.
 * 중립 구분 빈도를 설정 하 고 필터를 사용 하지 않도록 설정 하 여 효과를 사용 하지 않도록 설정 합니다.
 
@@ -304,12 +304,12 @@ Audio Occluder는 IAudioInfluencer을 구현 합니다.
 * **음성 입력 처리기**에서 **이동 요금**을 확장 합니다.
 * **No 함수** 를 **PolyActions**로 변경 합니다.
 
-![키워드로 요금 청구](images/gocharge.png)
+![키워드: Go 요금](images/gocharge.png)
 
 * 확장은 **여기에서 제공**됩니다.
 * **No 함수** 를 **PolyActions**로 변경 합니다.
 
-![키워드로 여기로 오세요](images/comehere.png)
+![키워드: 여기에 제공](images/comehere.png)
 
 #### <a name="build-and-deploy"></a>빌드 및 배포
 
@@ -405,7 +405,7 @@ HoloLens는 완전히 포함 된 작업할 holographic 컴퓨터입니다. 사�
 
 음성 failover)가은 흥미로운 시나리오입니다. 만드는 환경에 따라 스테레오 (지역화 되지 않음) 사운드가 나 음성 failover)가을 spatialize 수 있습니다. Microsoft에서 게시 한 두 가지 환경에서는 각 시나리오의 뛰어난 예를 보여 줍니다.
 
-[HoloTour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) 는 스테레오 음성을 사용 합니다. 내레이터가 표시 되는 위치를 설명 하는 경우 소리는 일관적 이며 사용자의 위치에 따라 달라 지지 않습니다. 이렇게 하면 내레이터가 환경의 spatialized 소리를 벗어나지 않고 장면을 설명할 수 있습니다.
+[HoloTour](https://www.microsoft.com/store/p/holotour/9nblggh5pj87) 는 스테레오 음성을 사용 합니다. 내레이터가 표시 되는 위치를 설명 하는 경우 소리는 일관적 이며 사용자의 위치에 따라 달라 지지 않습니다. 이렇게 하면 내레이터가 환경의 spatialized 소리를 벗어나지 않고 장면을 설명할 수 있습니다.
 
 [조각은](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) 감지 형식의 spatialized 음성을 활용 합니다. 감지의 음성은 실제 사람이 대화방에 있는 것 처럼 중요 한 단서를 사용자에 게 전달 하는 데 사용 됩니다. 이를 통해 집중 교육을 더 잘 이해할 수 있습니다.
 
@@ -450,7 +450,7 @@ Unity에서는 파일의 가져오기 설정에서 스트리밍을 위해 오디
 * **공간 Blend** 슬라이더를 **3d**로 끌어 놓거나 편집 상자에 **1** 을 입력 합니다.
 * **3D 소리 설정**을 확장 합니다.
 * **Doppler Level** 을 **0**으로 설정 합니다.
-* **사용자 음성 효과**에서 **부모 개체** 를 장면의 지 수  로 설정 합니다.
+* **사용자 음성 효과**에서 **부모 개체** 를 장면의 지 수로 **설정 합니다.**
 * **최대 거리** 를 **1**로 설정 합니다.
 
 **최대 거리** 를 설정 하면 효과를 사용 하도록 설정 하기 전에 사용자에 게 부모 개체에 대 한 사용자 **음성 효과** 를 알려 줍니다.
@@ -486,12 +486,12 @@ Unity에서는 파일의 가져오기 설정에서 스트리밍을 위해 오디
 * **음성 입력 처리기**에서 지 이상 **표시**를 확장 합니다.
 * **No 함수** 를 UnderworldBase로 변경 합니다 **.**
 
-![키워드로 지 각 표시](images/showunderworld.png)
+![키워드: 지 각 표시](images/showunderworld.png)
 
 * 지 각 **지를 확장**합니다.
-* UnderworldBase **함수** 를 변경 하지 않습니다.
+* UnderworldBase **함수** 를 변경하지 않습니다.
 
-![키워드로 지 각 숨기기](images/hideunderworld.png)
+![키워드: 지 각을 숨깁니다.](images/hideunderworld.png)
 
 #### <a name="build-and-deploy"></a>빌드 및 배포
 
@@ -514,6 +514,6 @@ Unity에서는 파일의 가져오기 설정에서 스트리밍을 위해 오디
 
 ## <a name="the-end"></a>끝
 
-축하합니다. 이제 MR 공간 220 **을 완료 했습니다. 공간 사운드**.
+축하합니다. 이제 **MR 공간 220: 공간 소리**를 완료 했습니다.
 
 세계를 듣고 경험을 바탕으로 경험을 해보세요.

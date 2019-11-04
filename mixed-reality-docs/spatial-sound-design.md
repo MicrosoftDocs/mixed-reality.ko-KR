@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 공간 소리, 디자인, 스타일
-ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750309"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438282"
 ---
 # <a name="spatial-sound-design"></a>공간 음향 디자인
 
@@ -21,7 +21,7 @@ ms.locfileid: "66750309"
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>장치 지원
 
@@ -32,7 +32,7 @@ ms.locfileid: "66750309"
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
@@ -100,12 +100,12 @@ ms.locfileid: "66750309"
 
 **개체 검색 및 사용자 인터페이스**
 
-오디오 신호를 사용 하 여 사용자가 현재 보기를 벗어나 사용자의 관심을 받을 때 소리는 모든 스테레오 사운드와 방향 오디오 큐에서 방해 수 있는 다른 spatialized 사운드를 비롯 하 여 집중 하 고 강조 표시 되어야 합니다. 사용자 인터페이스의 요소 (예: 메뉴)와 연결 된 소리 및 음악의 경우 해당 개체에 소리 송신기를 연결 해야 합니다. 스테레오 및 기타 비 위치 오디오 재생을 사용 하면 사용자가 spatialized 요소를 찾기 어려울 수 있습니다 (위 참조). 공간 마스킹을 사용 하지 마십시오.
+오디오 신호를 사용 하 여 사용자가 현재 보기를 벗어나 사용자의 관심을 받을 때 소리는 모든 스테레오 사운드와 방향 오디오 큐에서 방해 수 있는 다른 spatialized 사운드를 비롯 하 여 집중 하 고 강조 표시 되어야 합니다. 사용자 인터페이스의 요소 (예: 메뉴)와 연결 된 소리 및 음악의 경우 해당 개체에 소리 송신기를 연결 해야 합니다. 스테레오 및 기타 비 위치 오디오 재생을 사용 하면 사용자가 spatialized 요소를 찾기 어려울 수 있습니다 (위 참조: 공간 마스킹 방지).
 
 **가능한 한 표준 3D 사운드에 대해 공간 소리 사용**
 
 혼합 현실에서는 최상의 사용자 환경을 위해 레거시 3D 오디오 기술이 아닌 공간 사운드를 사용 하 여 3D 오디오를 달성 해야 합니다. 일반적으로 개선 된 spatialization 표준 3D 사운드 보다 작은 CPU 비용이 될 수 있습니다. 표준 3D 오디오는 우선 순위가 낮은 소리에 사용할 수 있지만, spatialized는 실제 또는 가상 개체와 반드시 연결 되는 것은 아니며, 사용자가 앱과 상호 작용 하는 데 필요 하지 않은 개체를 찾을 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [공간 음향](spatial-sound.md)
 * [공간 매핑](spatial-mapping.md)

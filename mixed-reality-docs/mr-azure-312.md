@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 컴퓨터 비전, hololens, 모던, vr, microsoft 봇 framework v4, 웹 앱 봇, 봇 프레임 워크, microsoft 봇
-ms.openlocfilehash: 481693b5af8c946e1cb45dda5144e78a175fa771
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: dc428f01a8333bf812fe03c59a46b7a2fa20df83
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047237"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438489"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
-# <a name="mr-and-azure-312-bot-integration"></a>MR 및 Azure 312: Bot 통합
+# <a name="mr-and-azure-312-bot-integration"></a>MR 및 Azure 312: 봇 통합
 
 이 과정에서는 Microsoft 봇 Framework V4를 사용 하 여 봇을 만들어 배포 하 고 Windows Mixed Reality 응용 프로그램을 통해 통신 하는 방법에 대해 설명 합니다. 
 
@@ -38,14 +38,14 @@ ms.locfileid: "70047237"
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 Azure 312: Bot 통합</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR 및 Azure 312: 봇 통합</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > 이 과정에서 주로 HoloLens에 초점을 맞춘 반면,이 과정에서 배운 내용을 Windows Mixed Reality 모던 (VR) 헤드셋에도 적용할 수 있습니다. 모던 (VR) 헤드셋은 액세스할 수 있는 카메라를 포함 하지 않으므로 PC에 연결 된 외부 카메라가 필요 합니다. 이 과정을 진행 하면서 모던 (VR) 헤드셋을 지원 하기 위해 사용 해야 하는 변경 내용에 대 한 정보를 볼 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (7 월 2018)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -60,7 +60,7 @@ ms.locfileid: "70047237"
 - 개발자 모드가 사용 하도록 설정 된 [Windows Mixed Reality 모던 (VR) 헤드셋](immersive-headset-hardware-details.md) 또는 [Microsoft HoloLens](hololens-hardware-details.md)
 - Azure 및 Azure Bot 검색을 위한 인터넷 액세스. 자세한 내용은 [다음 링크](https://dev.botframework.com/)를 참조 하세요.
 
-### <a name="before-you-start"></a>시작하기 전 주의 사항
+### <a name="before-you-start"></a>시작하기 전 확인 사항
 
 1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 2.  HoloLens를 설정 하 고 테스트 합니다. HoloLens를 설정 하는 데 지원이 필요한 경우 [hololens 설정 문서를 방문](https://docs.microsoft.com/hololens/hololens-setup)해야 합니다. 
@@ -88,7 +88,7 @@ ms.locfileid: "70047237"
 
     ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-03.png)
 
-5.  **솔루션 탐색기** 에서 *프로젝트* **mybot**을 마우스 오른쪽 단추로 클릭 하 고 **클래스** **추가** **|** 를 클릭 합니다.
+5.  **솔루션 탐색기** 에서 *프로젝트* **mybot**을 마우스 오른쪽 단추로 클릭 하 고 **|** **클래스** **추가** 를 클릭 합니다.
 
     ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-04.png)
 
@@ -98,7 +98,7 @@ ms.locfileid: "70047237"
 
 7.  이전 지점을 반복 하 여 **ConversationContext**라는 다른 클래스를 만듭니다. 
 
-8.  **솔루션 탐색기** 에서 **wwwroot** 를 마우스 오른쪽 단추로 클릭 하 고 **새 항목** **추가** **|** 를 클릭 합니다. **HTML 페이지** 를 선택 합니다 .이 페이지는 하위 섹션 웹에서 찾을 수 있습니다. 파일 이름을 **html.actionlink**로 합니다. **추가**를 클릭합니다.
+8.  **솔루션 탐색기** 에서 **wwwroot** 를 마우스 오른쪽 단추로 클릭 하 고 **|** **새 항목** **추가** 를 클릭 합니다. **HTML 페이지** 를 선택 합니다 .이 페이지는 하위 섹션 웹에서 찾을 수 있습니다. 파일 이름을 **html.actionlink**로 합니다. **추가**를 클릭합니다.
 
     ![Bot 응용 프로그램 만들기](images/AzureLabs-Lab312-06.png)
 
@@ -249,13 +249,13 @@ ms.locfileid: "70047237"
     }
     ```
 
-14. 변경 내용을 저장 해야 합니다. 이렇게 하려면 Visual Studio의 맨 위에 있는 도구 모음에서 **파일** > **모두 저장**으로 이동 합니다.
+14. 변경 내용을 저장 하려면 Visual Studio 맨 위에 있는 도구 모음에서 **파일** > **모두 저장**으로 이동 합니다.
 
 ## <a name="chapter-2---create-the-azure-bot-service"></a>2 장-Azure Bot Service 만들기
 
 이제 bot에 대 한 코드를 빌드 했으므로 Azure Portal에서 *웹 앱 봇* 서비스의 인스턴스에 게시 해야 합니다. 이 장에서는 Azure에서 봇 서비스를 만들고 구성 하는 방법을 보여 주고 코드를 게시 합니다.
 
-1.  먼저, Azure Portal (https://portal.azure.com) 에 로그인 합니다. 
+1.  먼저 Azure Portal (https://portal.azure.com) 에 로그인 합니다. 
 
     1. 아직 Azure 계정이 없는 경우 새로 만들어야 합니다. 교실 또는 랩 상황에서이 자습서를 수행 하는 경우 강사 또는 proctors 중 하나에 문의 하 여 새 계정을 설정 하는 데 도움이 될 수 있습니다.
 
@@ -342,7 +342,7 @@ ms.locfileid: "70047237"
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-20.png)
 
-2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. **Hololens 봇**을 삽입 합니다. 프로젝트 템플릿이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
+2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. **HoloLens 봇**을 삽입 합니다. 프로젝트 템플릿이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab312-21.png)
 
@@ -356,7 +356,7 @@ ms.locfileid: "70047237"
 
 5.  아직 **파일 > 빌드 설정을** 사용 하 고 있는지 확인 합니다.
 
-    1.  **대상 장치가** **Hololens** 로 설정 됨
+    1.  **대상 장치가** **HoloLens** 로 설정 됨
 
         > 모던 헤드셋의 경우 **대상 장치** 를 *모든 장치로*설정 합니다.
 
@@ -437,7 +437,7 @@ ms.locfileid: "70047237"
 
 Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에서 제공 되는 Unity 패키지를 사용 합니다.
 
-1.  **자산** **가져오기 패키지 사용자 지정** **패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.  >  > 
+1.   >  > **패키지 가져오기** **사용자 지정 패키지** 메뉴 옵션의 **자산** 을 사용 하 여 *unitypackage* 을 Unity에 추가 합니다.
 
     ![Newtonsoft.json 라이브러리 가져오기](images/AzureLabs-Lab312-34.png)
 
@@ -460,7 +460,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
 6.  다음으로 **newtonsoft.json** 폴더 내에서 **WSA** 폴더를 열어야 합니다. 방금 구성한 파일의 복사본이 표시 됩니다. 파일을 선택 하 고 검사기에서 다음을 확인 합니다.
     -   **모든 플랫폼이** **선택 취소** 되어 있음 
-    -   **만** **WSAPlayer** **확인** 됨
+    -   **WSAPlayer** 만 **선택** 됩니다.
     -   **Dont 프로세스** 를 **선택 했습니다** .
 
     ![](images/AzureLabs-Lab312-35d.png)
@@ -471,7 +471,7 @@ Newtonsoft.json 라이브러리를 프로젝트로 가져오려면이 과정에�
 
     ![카메라 설정](images/AzureLabs-Lab312-32.png)
  
-2.  기호를 **+** 클릭 합니다. 새 **태그** 의 이름을 **BotTag**, *Save*로 합니다.
+2.  **+** 기호를 클릭 합니다. 새 **태그** 의 이름을 **BotTag**, *Save*로 합니다.
 
     ![카메라 설정](images/AzureLabs-Lab312-33.png)
 
@@ -1251,7 +1251,7 @@ Bot Service로 메시지를 보내기 위해 **SendMessageToBot ()** 코 루틴�
 
 HoloLens에 배포 하려면:
 
-1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+1.  HoloLens의 IP 주소 (원격 배포의 경우)가 필요 하 고 HoloLens가 **개발자 모드**에 있는지 확인 합니다. 이렇게 하려면 다음을 수행합니다.
 
     1. HoloLens를 입고 하는 동안 **설정을**엽니다.
     2. **네트워크 & 인터넷 > wi-fi > 고급 옵션** 으로 이동 합니다.

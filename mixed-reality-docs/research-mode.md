@@ -6,21 +6,21 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: 연구 모드, cv, rs4, 컴퓨터 비전, 연구, HoloLens
-ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 307df0c226221422f13af09d8f4944c22ead3865
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829928"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438307"
 ---
 # <a name="hololens-research-mode"></a>HoloLens 연구 모드
 
 > [!NOTE]
 > 이 기능은 HoloLens 용 [Windows 10 4 월 2018 업데이트](release-notes-april-2018.md) 의 일부로 추가 되었으며 이전 릴리스에서는 사용할 수 없습니다.
 
-연구 모드는 장치의 키 센서에 대 한 응용 프로그램 액세스를 제공 하는 HoloLens의 새로운 기능입니다. 이러한 개체는 다음과 같습니다.
+연구 모드는 장치의 키 센서에 대 한 응용 프로그램 액세스를 제공 하는 HoloLens의 새로운 기능입니다. 다음이 포함됩니다.
 - 지도 작성 및 헤드 추적을 위해 시스템에서 사용 하는 네 가지 환경 추적 카메라입니다.
-- 깊이 카메라 데이터의 두 가지 버전으로, 자주 사용 하는 빈도 (30FPS) 근거리 검출에 사용 되며, 일반적으로 공간 매핑에서 사용 되는 빈도가 낮은 (1 FPS) 원거리 감지 기능을 위한 것입니다.
+- 깊이 카메라 데이터의 두 가지 버전으로, 자주 사용 하는 빈도 (30FPS) 근거리 검출에 사용 되 고, 자주 사용 되는 (1-5 FPS), 더 낮은 주파수 (FPS)의 경우 현재 공간 매핑에서 사용 됩니다.
 - HoloLens에서 깊이를 계산 하는 데 사용 되는 IR 반사 스트림의 두 가지 버전이 며, 이러한 이미지는 HoloLens에서 발생 하며 주변 광원의 영향을 받지 않습니다.
 
 ![연구 모드 앱 스크린샷](images/sensor-stream-viewer.jpg)<br>
@@ -35,7 +35,7 @@ ms.locfileid: "66829928"
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
@@ -59,7 +59,7 @@ ms.locfileid: "66829928"
 
 그런 다음 HoloLens와 동일한 Wi-fi 네트워크에 연결 된 웹 브라우저를 사용 하 여 HoloLens의 IP 주소로 이동 합니다 ( **설정 > 네트워크 & 인터넷 > wi-fi > 하드웨어 속성**). 이는 [장치 포털](using-the-windows-device-portal.md)이며 포털의 "시스템" 섹션에서 "연구 모드" 페이지를 찾을 수 있습니다.
 
-![HoloLens 장치 포털의 연구 모드 탭](images/ResearchModeDevPortal.png)<br>
+HoloLens 장치 포털의 ![연구 모드 탭](images/ResearchModeDevPortal.png)<br>
 *HoloLens 장치 포털의 연구 모드*
 
 **센서 스트림에 대 한 액세스 허용**을 선택한 후에는 HoloLens를 다시 부팅 해야 합니다. 이 작업은 장치 포털의 페이지 맨 위에 있는 "전원" 메뉴 항목 아래에서 수행할 수 있습니다.
@@ -78,8 +78,8 @@ ms.locfileid: "66829928"
 
 HoloLensForCV 리포지토리에서 [문제 추적기](https://github.com/Microsoft/HololensForCV/issues) 를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
+* [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [HoloLensForCV GitHub 리포지토리](https://github.com/Microsoft/HoloLensForCV)
 * [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)

@@ -6,22 +6,22 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, media services, 스트리밍 비디오, 360, 몰입 형, vr
-ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896581"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438569"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
 <br> 
 
-# <a name="mr-and-azure-306-streaming-video"></a>MR 및 Azure 306: 비디오 스트리밍
+# <a name="mr-and-azure-306-streaming-video"></a>MR 및 Azure 306: 스트리밍 비디오
 
-![최종 제품 시작](images/AzureLabs-Lab6-00.png)
-![최종 제품-시작](images/AzureLabs-Lab6-01.png)
+최종 제품 시작](images/AzureLabs-Lab6-00.png)
+![최종 제품 시작을 ![](images/AzureLabs-Lab6-01.png)
 
 이 과정에서는 Azure Media Services을 Windows Mixed Reality VR 환경에 연결 하 여 몰입 형 헤드셋에서 스트리밍 360도 비디오 재생을 허용 하는 방법을 알아봅니다. 
 
@@ -43,11 +43,11 @@ ms.locfileid: "69896581"
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> MR 및 Azure 306: 비디오 스트리밍</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
+<td> MR 및 Azure 306: 스트리밍 비디오</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치 문서](install-the-tools.md)에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -63,13 +63,13 @@ ms.locfileid: "69896581"
 - Azure 설정 및 데이터 검색을 위한 인터넷 액세스
 - Mp4 형식의 2 360 수준 비디오 ( [이 다운로드 페이지에서](https://www.mettle.com/360vr-master-series-free-360-downloads-page)일부 로열티 없는 비디오를 찾을 수 있음)
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 2.  혼합 현실 모던 헤드셋을 설정 하 고 테스트 합니다.
 
     > [!NOTE]
-    > 이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [Windows Mixed Reality를 설정 하는 방법에 대 한 링크](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)를 클릭 하세요.
+    > 이 과정에서는 동작 컨트롤러가 필요 **하지** 않습니다. 모던 헤드셋을 설정 하는 데 지원이 필요한 경우 [Windows Mixed Reality를 설정 하는 방법에 대 한 링크](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)를 클릭 하세요.
 
 ## <a name="chapter-1---the-azure-portal-creating-the-azure-storage-account"></a>1 장-Azure Portal: Azure Storage 계정 만들기
 
@@ -96,7 +96,7 @@ ms.locfileid: "69896581"
 
     3.  **계정 종류**에 대해 **저장소 (범용 v1)** 를 선택 합니다.
 
-    4.  에 대 한 **성능**, 선택 **Standard* 합니다.**
+    4.  **성능**으로 **표준 *을 선택 합니다.**
 
     5.  **복제** 의 경우 **LRS (로컬 중복 저장소)** 를 선택 합니다.
 
@@ -243,7 +243,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 23. 항목 지점인 **로케이터**를 자산의 파일/s로 설정 하 라는 메시지가 표시 됩니다. 시나리오에 대해 다음 속성을 설정 합니다.
 
-    1.   > '**점진적**' 로케이터 유형입니다.
+    1.   > **점진적**으로 **로케이터 유형** 입니다.
 
     2.  **날짜** 및 **시간은** 현재 날짜부터 미래의 시간 (이 경우 100 년)으로 설정 됩니다. 그대로 두거나에 맞게 변경 합니다.
 
@@ -275,7 +275,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     ![Azure 포털](images/AzureLabs-Lab6-28.png)
 
-2.  이제 Unity 프로젝트 이름을 제공 하 고 **MR\_360videostreaming**을 삽입 해야 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 위치에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
+2.  이제 Unity 프로젝트 이름을 제공 하 고 **MR\_360VideoStreaming**을 삽입 해야 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 위치에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![Azure 포털](images/AzureLabs-Lab6-29.png)
 
@@ -309,7 +309,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     1.  **기타 설정** 탭에서 다음을 수행 합니다.
 
-        1.  **스크립팅** **런타임 버전** 은 **안정적** 이어야 합니다 (.net 3.5에 해당).
+        1.  **Scripting** **Runtime 버전** 은 **안정적** 이어야 합니다 (.net 3.5 해당).
 
         2. **Scripting 백엔드** 는 .net 이어야 합니다 **.**
 
@@ -329,7 +329,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 8.  이러한 변경을 수행한 후에는 **빌드 설정** 창을 닫습니다.
 
-9.  프로젝트를 저장 합니다 **파일* *프로젝트 **저장 합니다.
+9.  프로젝트를 저장 합니다. **파일* * 프로젝트 저장 * *.
 
 
 
@@ -346,7 +346,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     ![Into Out구에 Unity 패키지 가져오기](images/AzureLabs-Lab6-35.png)
 
-2.  파일 선택기를 사용 하 여 **unitypackage** 패키지를 선택 하 고 **열기**를 클릭 합니다. 이 자산의 구성 요소 목록이 표시 됩니다. 가져오기를 클릭 하 여가져오기를 확인 합니다.
+2.  파일 선택기를 사용 하 여 **unitypackage** 패키지를 선택 하 고 **열기**를 클릭 합니다. 이 자산의 구성 요소 목록이 표시 됩니다. **가져오기를 클릭 하**여 가져오기를 확인 합니다.
 
     ![Into Out구에 Unity 패키지 가져오기](images/AzureLabs-Lab6-36.png)
 
@@ -356,7 +356,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
     1.  **모델** 폴더를 열면 **Into out구에** 모델을 가져왔는지 확인 합니다.
 
-    2.  **재질** 폴더 내에서 GazeButton에서 사용 되는 buttonmaterial 이라는 재질과 함께 **Inlambert1 out구** 자료를 찾을 수 있습니다 .이는 곧 표시 될 것입니다.
+    2.  **재질** 폴더 내에서 GazeButton에서 사용 되는 *buttonmaterial*이라는 재질과 함께 **inlambert1 out구** 자료를 찾을 수 있습니다 .이는 곧 표시 될 것입니다.
 
     3.  **Prefabs** 폴더에는 **insideoutsphere** *모델* 및 *GazeButton*를 모두 포함 하는 **inprefab out구가** 포함 되어 있습니다.
 
@@ -371,13 +371,13 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
         2. 회전 = **X**: 0, **Y**: 0, **Z**: 0.
 
-        3. 배율 **X**: 1, **Y**: 1, **Z**: 1.
+        3. 크기 조정 **X**: 1, **Y**: 1, **Z**: 1.
 
     2.  **카메라**
 
         1. **플래그 지우기**: 단색입니다.
 
-        2.  **클립 평면**: 주위 0.1, 지금: 6.
+        2.  **클리핑 평면**: 근거리: 0.1, 먼: 6.
 
             ![Into Out구에 Unity 패키지 가져오기](images/AzureLabs-Lab6-38.png)
 
@@ -604,7 +604,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
     ```
 
     > [!TIP] 
-    > **ChangeScene ()** 메서드는 *조건 연산자*라는 유용한\# C 기능을 사용 합니다. 이렇게 하면 조건을 확인 한 다음 검사 결과에 따라 반환 되는 값을 모두 단일 문 내에서 수행할 수 있습니다. [조건 연산자에 대 한 자세한 내용을 보려면이 링크를](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)따르세요.
+    > **ChangeScene ()** 메서드는 *조건 연산자*라고 하는 유용한 C\# 기능을 사용 합니다. 이렇게 하면 조건을 확인 한 다음 검사 결과에 따라 반환 되는 값을 모두 단일 문 내에서 수행할 수 있습니다. [조건 연산자에 대 한 자세한 내용을 보려면이 링크를](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)따르세요.
 
 11. Unity로 반환 하기 전에 Visual Studio에서 변경 내용을 저장 합니다.
 
@@ -614,18 +614,18 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 14. 아래 이미지에 표시 된 것 처럼 **계층 패널** 에서 **구** 슬롯으로 **in의 out구** 개체를 끌어 옵니다.
 
-    ![Videocontroller 클래스](images/AzureLabs-Lab6-47.png)
-    ![만들기 videocontroller 클래스 만들기](images/AzureLabs-Lab6-48.png)
+    videocontroller 클래스](images/AzureLabs-Lab6-47.png)
+    만드는 ![![비디오 컨트롤러 클래스를 만듭니다](images/AzureLabs-Lab6-48.png)
 
 ## <a name="chapter-6---create-the-gaze-class"></a>6 장-응시 클래스 만들기
 
-이 클래스는 사용자가 보고 있는 개체를 검색 하기 위해 **기본 카메라**에서 전달 되는 **raycast** 를 만드는 역할을 합니다. 이 경우에는 사용자 가 장면의 **GazeButton** 개체를 보고 동작을 트리거할 수 있는지 여부를 확인 해야 합니다.
+이 클래스는 사용자가 보고 있는 개체를 검색 하기 위해 **기본 카메라**에서 전달 되는 **raycast** 를 만드는 역할을 합니다. 이 경우에는 사용자가 장면의 **GazeButton** 개체를 보고 동작을 트리거할 수 있는지 여부를 확인 **해야 합니다.**
 
 이 클래스를 만들려면:
 
 1.  이전에 만든 **스크립트** 폴더로 이동 합니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **프로젝트** 패널 **만듭니다* *C\# 스크립트** 합니다. 스크립트 이름을 **응시**로 합니다.
+2.  **프로젝트** 패널을 마우스 오른쪽 단추로 클릭 하 고 **만들기* * C\# 스크립트 * *를 클릭 합니다. 스크립트 이름을 **응시**로 합니다.
 
 3.  새 ***응시*** 스크립트를 두 번 클릭 하 여 **Visual Studio 2017** 에서 엽니다.
 
@@ -729,7 +729,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 8.  Unity로 반환 하기 전에 Visual Studio에서 변경 내용을 저장 합니다.
 
-9.  Scripts 폴더의 Scripts 클래스를 클릭 하 고 **계층** 패널의 기본 카메라 개체로 끕니다.
+9.  Scripts 폴더의 Scripts **클래스를** 클릭 하 고 **계층** 패널의 기본 카메라 개체로 끕니다.
 
 ## <a name="chapter-7---setup-the-two-unity-scenes"></a>7 장-두 Unity 장면 설정
 
@@ -763,7 +763,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 8.  **빌드 설정** 창을 닫고 **VideoScene2**을 두 번 클릭 합니다.
 
-9.  두 번째 장면을 연 상태에서 **InGazeButton**자식 개체를 클릭 하 고 다음과 같이 변환을 설정 합니다.
+9.  두 번째 장면을 연 상태에서 **InGazeButton** 자식 개체를 클릭 하 고다음과 같이 변환을 설정 합니다.
 
     |            |    변환 위치   |           |
     | :---------:| :-----------------------: | :--------:|
@@ -797,8 +797,8 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 15. **프로젝트 패널**내에서 **재질** 폴더로 이동 합니다. **Buttonmaterial** 재질을 복제 합니다. 키보드에서 **Ctrl** + **D** 를 누르거나 **재질**을 마우스 왼쪽 단추로 클릭 한 다음 파일 **편집** 메뉴 옵션에서 **중복**을 선택 합니다.
 
-    ![7 장--두 unity 장면을](images/AzureLabs-Lab6-55.png)
-    ![설정 7 장--두 unity 장면을 설정 합니다.](images/AzureLabs-Lab6-56.png)
+    7 장 ![--두 Unity 장면을 설정](images/AzureLabs-Lab6-55.png)
+    ![7 장--두 Unity 장면을 설정](images/AzureLabs-Lab6-56.png)
 
 16. 새 **buttonmaterial** 재질 (여기서는 **buttonmaterial 1**이라고 함)을 선택 하 고 **검사기**내에서 **albedo** 색 창을 클릭 합니다. 다른 색을 선택할 수 있는 팝업이 표시 됩니다. 여기서 원하는 것을 선택 하 고 팝업을 닫습니다. 자료는 자체 인스턴스가 되며 원본과 다릅니다.
 
@@ -824,7 +824,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 1.  **파일 > 저장**을 클릭 하 여 현재 장면을 저장 합니다.
 
-2.  **\# Unity C 프로젝트** 라는 상자를 선택 합니다 .이는 빌드를 완료 한 후 클래스를 편집 하는 데 사용할 수 있으므로 중요 합니다.
+2.  **Unity C\# 프로젝트** 라는 상자를 선택 합니다 .이는 빌드를 완료 한 후 클래스를 편집할 수 있도록 하기 때문에 중요 합니다.
 
 3.  **파일 > 빌드 설정**으로 이동 하 고 **빌드**를 클릭 합니다.
 
@@ -834,8 +834,8 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 6.  새 폴더를 클릭 한 다음 **폴더 선택**을 클릭 하 여 해당 폴더를 선택 하 고 해당 위치에서 빌드를 시작 합니다.
 
-    ![8 장--uwp 솔루션](images/AzureLabs-Lab6-60.png)
-    ![빌드 8 장--uwp 솔루션 빌드](images/AzureLabs-Lab6-61.png)
+    ![장 8 장--![챕터를](images/AzureLabs-Lab6-60.png)
+    UWP 솔루션 빌드](images/AzureLabs-Lab6-61.png)
 
 7.  Unity가 빌드를 완료 하면 (시간이 걸릴 수 있음) 빌드 위치에서 **파일 탐색기** 창이 열립니다.
 

@@ -5,22 +5,22 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: 934171f26571b3219bbe390aff44349fb6908f74
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861713"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437131"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Windows Mixed Reality 개발자 설명서에 기여
 
 [Windows Mixed Reality 개발자 설명서에 대 한 공용 리포지토리](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)를 시작 합니다. 이 리포지토리에서 만들거나 편집 하는 모든 문서는 **공용에 표시 됩니다.** 
 
-Windows Mixed Reality 문서는 이제 GitHub-flavored Markdown (Markdig 기능 포함)를 사용 하는 docs.microsoft.com 플랫폼에 있습니다. 기본적으로이 리포지토리에서 편집 하는 콘텐츠는에 https://docs.microsoft.com/windows/mixed-reality 표시 되는 서식이 지정 되 고 스타일이 지정 된 페이지로 전환 됩니다. 
+Windows Mixed Reality 문서는 이제 GitHub-flavored Markdown (Markdig 기능 포함)를 사용 하는 docs.microsoft.com 플랫폼에 있습니다. 기본적으로이 리포지토리에서 편집 하는 콘텐츠는 https://docs.microsoft.com/windows/mixed-reality 표시 되는 서식이 지정 되 고 스타일이 지정 된 페이지로 전환 됩니다. 
 
 이 페이지에서는 Markdown 기본 사항에 대 한 링크 뿐만 아니라 기여에 대 한 기본 단계 및 지침을 설명 합니다. 기여를 주셔서 감사 합니다.
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 아직 없는 경우 [GitHub 계정을 만들어야](https://github.com/join)합니다.
 
@@ -48,12 +48,12 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
    ![문서를 편집 합니다.](images/editpage.png)
 3. 문서의 내용을 편집 합니다 (지침은 아래의 ["Markdown 기본 사항"](#markdown-basics) 참조).
 4. 각 아티클의 위쪽에서 메타 데이터를 관련 항목으로 업데이트 합니다.
-   * 제목과 문서를 볼 때 브라우저 탭에 표시 되는 페이지 제목입니다. 이는 SEO 및 인덱싱에 사용 되므로 필요 하지 않은 경우에는 제목을 변경 하지 않아야 합니다. 단, 설명서를 공개 하기 전에는이 작업이 중요 하지 않습니다.
-   * 한 문서 내용에 대 한 간략 한 설명을 작성 합니다. 이는 SEO 및 검색을 지원 합니다.
-   * 자신이 페이지의 주 소유자 인 경우 여기에 GitHub 별칭을 추가 합니다.
-   * ms author: 페이지의 주 소유자 인 경우 여기에 Microsoft 별칭을 추가 합니다 (필요 @microsoft.com하지 않음, 별칭만).
-   * ms. 날짜: 주요 콘텐츠를 페이지에 추가 하는 경우에는 날짜를 업데이트 합니다. 자세한 내용은 설명, 서식 지정, 문법 또는 맞춤법과 같은 수정 사항은 업데이트 하지 않습니다.
-   * 어 SEO의 키워드 지원 (검색 엔진 최적화). 문서와 관련 된 키워드를 쉼표와 공백으로 구분 하 여 추가 합니다 (목록에서 마지막 키워드 뒤에 문장 부호는 없음). 모든 문서에 적용 되는 전역 키워드는 다른 곳에서 관리 되므로 추가할 필요가 없습니다. 
+   * 제목:이 문서를 볼 때 브라우저 탭에 표시 되는 페이지 제목입니다. 이는 SEO 및 인덱싱에 사용 되므로 필요 하지 않은 경우에는 제목을 변경 하지 않아야 합니다. 단, 설명서를 공개 하기 전에는이 작업이 중요 하지 않습니다.
+   * 설명: 문서 콘텐츠에 대 한 간단한 설명을 작성 합니다. 이는 SEO 및 검색을 지원 합니다.
+   * 작성자: 페이지의 기본 소유자 인 경우 여기에 GitHub 별칭을 추가 합니다.
+   * ms author: 페이지의 기본 소유자 인 경우 여기에 Microsoft 별칭을 추가 합니다 (@microsoft.com, 별칭만 필요 없음).
+   * ms. 날짜: 페이지에 주요 콘텐츠를 추가 하는 경우에는 날짜를 업데이트 하지만 설명, 서식, 문법 또는 철자와 같은 픽스는 업데이트 하지 않습니다.
+   * 키워드: SEO의 키워드 지원 (검색 엔진 최적화). 문서와 관련 된 키워드를 쉼표와 공백으로 구분 하 여 추가 합니다 (목록에서 마지막 키워드 뒤에 문장 부호는 없음). 모든 문서에 적용 되는 전역 키워드는 다른 곳에서 관리 되므로 추가할 필요가 없습니다. 
 5. 문서 편집을 완료 한 후 아래로 스크롤하여 **파일 변경 내용 제안** 단추를 클릭 합니다.
 6. 다음 페이지에서 **끌어오기 요청 만들기** 를 클릭 하 여 자동으로 만들어진 분기를 ' 마스터 '에 병합 합니다.
 7. 편집 하려는 다음 문서에 대해 위의 단계를 반복 합니다.
@@ -62,7 +62,7 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
 
 변경 시 기존 아티클의 이름을 바꾸거나 삭제 하는 경우에는 리디렉션을 추가 해야 합니다. 이렇게 하면 기존 문서에 대 한 링크를 가진 모든 사용자가 올바른 위치가 됩니다. 리디렉션은 리포지토리의 루트에 있는. openpublishing. 리디렉션 파일을 통해 관리 됩니다.
 
-. Openpublishing. 리디렉션에 리디렉션을 추가 하려면 `redirections` 배열에 항목을 추가 합니다.
+. Openpublishing에 리디렉션을 추가 하려면 `redirections` 배열에 항목을 추가 합니다.
 
 ```json
 {
@@ -74,9 +74,9 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
         },
 ```
 
-- 는 `source_path` 제거 하는 이전 아티클의 상대 저장소 경로입니다. 경로는로 시작 `mixed-reality-docs` 하 고로 `.md`끝나야 합니다.
-- 는 `redirect_url` 이전 문서에서 새 아티클에 대 한 상대 공용 URL입니다. 이 url은 리포지토리 경로가 아니라 공용 url `mixed-reality-docs` 을 `.md`참조 하므로이 url에 또는가 포함 **되지** 않아야 합니다. 를 사용 하 여 `#section` 새 문서 내의 섹션에 연결할 수 있습니다. 필요한 경우 여기서 다른 사이트에 대 한 절대 경로를 사용할 수도 있습니다.
-- `redirect_document_id`이전 파일의 문서 ID를 유지할지 여부를 나타냅니다. 기본값은 `false`입니다. 리디렉션된 `true` 아티클의 `ms.documentid` 특성 값을 유지 하려는 경우에 사용 합니다. 문서 ID를 유지 하는 경우 페이지 보기 및 순위와 같은 데이터가 대상 문서에 전송 됩니다. 리디렉션이 주로 이름 바꾸기 인 경우에는이 작업을 수행 하 고, 동일한 콘텐츠 중 일부만 포함 하는 다른 문서에 대 한 포인터는 그렇지 않습니다.
+- `source_path`은 제거 하는 이전 아티클의 상대 저장소 경로입니다. 경로가 `mixed-reality-docs` 시작 하 고 `.md`로 끝나야 합니다.
+- `redirect_url`는 이전 문서에서 새 문서에 대 한 상대 공용 URL입니다. 이 URL은 리포지토리 경로가 아니라 공용 URL을 참조 하므로 `mixed-reality-docs` 또는 `.md`를 포함 **하지** 않아야 합니다. `#section`를 사용 하 여 새 문서 내의 섹션에 연결할 수 있습니다. 필요한 경우 여기서 다른 사이트에 대 한 절대 경로를 사용할 수도 있습니다.
+- `redirect_document_id` 이전 파일의 문서 ID를 유지할지 여부를 나타냅니다. 기본값은 `false`입니다. 리디렉션된 아티클의 `ms.documentid` 특성 값을 유지 하려면 `true`을 사용 합니다. 문서 ID를 유지 하는 경우 페이지 보기 및 순위와 같은 데이터가 대상 문서에 전송 됩니다. 리디렉션이 주로 이름 바꾸기 인 경우에는이 작업을 수행 하 고, 동일한 콘텐츠 중 일부만 포함 하는 다른 문서에 대 한 포인터는 그렇지 않습니다.
 
 리디렉션을 추가 하는 경우에도 이전 파일을 삭제 해야 합니다.
 
@@ -111,7 +111,7 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
 
 5. [위의 섹션](#editing-an-existing-article)에 설명 된 지침에 따라 관련 메타 데이터 필드를 입력 합니다.
 6. [Markdown 기본 사항을](#markdown-basics)사용 하 여 문서 콘텐츠를 작성 합니다.
-7. 문서의 맨 `## See also` 아래에 있는 섹션을 다른 관련 문서에 대 한 링크와 함께 추가 합니다.
+7. 문서의 맨 아래에 있는 `## See also` 섹션을 추가 하 여 다른 관련 문서에 대 한 링크를 제공 합니다.
 8. 완료 되 면 **새 파일 커밋**을 클릭 합니다.
 9. **새 끌어오기 요청** 을 클릭 하 고 분기의 ' 마스터 ' 분기를 MicrosoftDocs/mixed-현실 ' master '에 병합 합니다. 화살표가 올바른 방법을 가리키고 있는지 확인 합니다.
 
@@ -127,7 +127,7 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
 
 ### <a name="adding-tables"></a>테이블 추가
 
-스타일 docs.microsoft.com 스타일을 지정 하는 방식 때문에 인라인 CSS를 시도 하더라도 테두리나 사용자 지정 스타일은 없습니다. 짧은 시간 동안 작동 하는 것 처럼 보이지만 결국 플랫폼은 테이블에서 스타일을 제거 합니다. 따라서 미리 계획 하 고 테이블을 단순하게 유지 합니다. [Markdown 테이블을 쉽게 만들 수 있는 사이트는 다음과 같습니다](http://www.tablesgenerator.com/markdown_tables).
+스타일 docs.microsoft.com 스타일을 지정 하는 방식 때문에 인라인 CSS를 시도 하더라도 테두리나 사용자 지정 스타일은 없습니다. 짧은 시간 동안 작동 하는 것 처럼 보이지만 결국 플랫폼은 테이블에서 스타일을 제거 합니다. 따라서 미리 계획 하 고 테이블을 단순하게 유지 합니다. [Markdown 테이블을 쉽게 만들 수 있는 사이트는 다음과 같습니다](https://www.tablesgenerator.com/markdown_tables).
 
 [Visual Studio Code에 대 한 Docs Markdown 확장](https://docs.microsoft.com/teamblog/docs-extension) 은 [Visual Studio Code (아래 참조)](#using-visual-studio-code) 를 사용 하 여 문서를 편집 하는 경우에도 테이블을 쉽게 생성할 수 있습니다.
 
@@ -152,7 +152,7 @@ GitHub 계정을 설정할 때 다음과 같은 보안 예방 조치를 권장 �
 >[!NOTE]
 >Microsoft 직원만 review.docs.microsoft.com에서 변경 내용을 미리 볼 수 있습니다.
 
-Microsoft 직원: 기여를 ' 마스터 ' 분기에 병합 한 후에는에서 https://review.docs.microsoft.com/windows/mixed-reality?branch=master 공개 되기 전에 설명서의 모양을 확인할 수 있습니다 (왼쪽 열의 목차를 사용 하 여 문서 찾기).
+Microsoft 직원: 기여를 ' 마스터 ' 분기에 병합 한 후에는 https://review.docs.microsoft.com/windows/mixed-reality?branch=master 에서 공개 되기 전에 설명서의 모양을 확인할 수 있습니다 (왼쪽 열의 목차를 사용 하 여 문서 찾기).
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>브라우저에서 편집 및 데스크톱 클라이언트를 사용 하 여 편집
 
@@ -168,7 +168,7 @@ Microsoft 직원: 기여를 ' 마스터 ' 분기에 병합 한 후에는에서 h
 
 [위에](#editing-in-the-browser-vs-editing-with-a-desktop-client)나열 된 이유 때문에 웹 브라우저가 아닌 데스크톱 클라이언트를 사용 하 여 문서를 편집 하는 것이 좋습니다. [Visual Studio Code](https://code.visualstudio.com/)를 사용 하는 것이 좋습니다.
 
-### <a name="setup"></a>설치 프로그램
+### <a name="setup"></a>설정
 
 이 리포지토리를 사용 하도록 Visual Studio Code를 구성 하려면 다음 단계를 수행 합니다.
 
@@ -219,7 +219,7 @@ Visual Studio Code를 사용 하 여 설명서를 변경 하려면 다음 워크
 
 - [Visual Studio Code 용 Docs Markdown 확장](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) - **Alt + M** 을 사용 하 여 다음과 같은 docs 제작 옵션 메뉴를 표시 합니다.
    - 업로드 한 이미지를 검색 하 고 참조 합니다.
-   - 목록과 같이 `>[!NOTE]`목록, 테이블 및 문서 특정 호출 등의 서식을 추가 합니다.
+   - 목록, 테이블 및 `>[!NOTE]`와 같이 문서 특정 호출 등의 서식을 추가 합니다.
    - 내부 링크와 책갈피를 검색 하 고 참조 합니다 (페이지 내의 특정 섹션에 대 한 링크).
    - 서식 지정 오류가 강조 표시 됩니다. 자세한 내용은 오류를 마우스로 가리키십시오.
 - [코드 맞춤법 검사기](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) -철자가 잘못 된 단어에는 밑줄이 그어집니다. 철자가 잘못 된 단어를 마우스 오른쪽 단추로 클릭 하 여 변경 하거나 사전에 저장 합니다.

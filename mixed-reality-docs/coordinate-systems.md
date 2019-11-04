@@ -6,20 +6,20 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 좌표계, 공간 좌표계, 방향 전용, 고정 크기 조정, 대규모, 공간 규모, 전 세계 규모, 360 학위, 고가, 실내, 실내, 세계, 눈금, 위치, 방향, 고정, 연결 된, 스테이지, 앵커, 공간 앵커, 세계에서 잠김, 세계 잠금, 본문 잠금, 본문 잠금, 경계, 지 속성, 공유, 손실 추적, 클라우드 공간 앵커
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829864"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436149"
 ---
 # <a name="coordinate-systems"></a>좌표계
 
-혼합 현실 앱은 해당 코어에서 실제 개체와 같은 모양과 소리를 [holograms](hologram.md) 합니다. 이를 위해서는 전 세계의 실제 방에 있든, 사용자가 만든 가상 영역 인지 여부에 관계 없이 전 세계에 있는 holograms의 위치를 정확 하 게 지정 하 고 방향이 지정 됩니다. Holograms의 위치와 방향 또는 [응시](gaze.md) 광선 또는 [손으로](gestures.md)와 같은 다른 기 하 도형에 대 한 정보를 파악 **하는 경우 Windows는 해당 기 하 도형을 표현할 수 있는 다양 한 실제 좌표계를 제공 합니다. 공간 좌표계**.
+혼합 현실 앱은 해당 코어에서 실제 개체와 같은 모양과 소리를 [holograms](hologram.md) 합니다. 이를 위해서는 전 세계의 실제 방에 있든, 사용자가 만든 가상 영역 인지 여부에 관계 없이 전 세계에 있는 holograms의 위치를 정확 하 게 지정 하 고 방향이 지정 됩니다. Holograms의 위치와 방향 또는 [응시](gaze-and-commit.md) 광선 또는 [손으로](hands-and-tools.md)와 같은 다른 기 하 도형에 대 한 정보를 파악 **하는 경우 Windows는 해당 기 하 도형을 표현할 수 있는 다양 한 실제 좌표계를 제공 합니다. 공간 좌표계**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>장치 지원
 
@@ -31,9 +31,9 @@ ms.locfileid: "66829864"
     <col width="20%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
@@ -66,6 +66,12 @@ ms.locfileid: "66829864"
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">장면 이해</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>혼합 현실 환경 크기 조정
@@ -75,7 +81,7 @@ ms.locfileid: "66829864"
 
 | 환경 크기 조정 | 요구 사항 | 예제 환경 | 
 |----------|----------|----------|
-|  **방향 전용** |  **헤드셋 방향** (무게 맞춤) |  360 ° 비디오 뷰어 | 
+|  **방향 전용** |  **헤드셋 방향** (중력 맞춤) |  360 ° 비디오 뷰어 | 
 |  **크기 조정** |  위의 경우 0 위치를 기준으로 하는 **헤드셋 위치** + |  경주 게임 또는 공간 시뮬레이터 | 
 |  **수평 확장** |  위의 단계와 **스테이지 층** |  현재 위치에서 오리와 닷지 작업 게임  | 
 |  **공간 규모** |  위의 단계와 **스테이지 경계 polygon** |  퍼즐을 중심으로 하는 퍼즐 게임 | 
@@ -93,7 +99,7 @@ ms.locfileid: "66829864"
 |  **예** |  **예** |  **예** |  **예** |  아니요 |  **대화방** | 
 |  **예** |  **예** |  **예** |  **예** |  **예** |  **World** | 
 
-참조의 스테이지 프레임은 HoloLens에서 아직 지원 되지 않습니다. HoloLens의 공간 규모 앱은 현재 사용자의 바닥 및 벽을 찾기 위해 [공간 매핑을](spatial-mapping.md) 사용 해야 합니다.
+참조의 스테이지 프레임은 HoloLens에서 아직 지원 되지 않습니다. HoloLens의 공간 규모 앱은 현재 사용자의 바닥 및 벽을 찾기 위해 [공간 매핑](spatial-mapping.md) 또는 [장면 이해](scene-understanding.md) 를 사용 해야 합니다.
 
 ## <a name="spatial-coordinate-systems"></a>공간 좌표계
 
@@ -221,7 +227,7 @@ HoloLens, iOS 및 Android 디바이스에서 비대칭 홀로그램 지속에 <a
 
 경우에 따라 홈 또는 기타 공간에 동일한 두 개의 영역이 있을 수 있습니다. 예를 들어 두 개의 동일한 회의실, 동일한 두 개의 동일한 모퉁이 영역, 장치의 보기 필드를 포함 하는 두 개의 매우 동일한 포스터입니다. 이러한 시나리오에서 장치는 때때로 동일한 부분을 혼동 하 고 내부 표현에서 동일 하 게 표시 될 수 있습니다. 이로 인해 일부 영역의 holograms 다른 위치에 나타날 수 있습니다. 환경에 대 한 내부 표현이 손상 되었기 때문에 장치에서 추적 손실을 자주 시작할 수 있습니다. 이 경우 시스템의 환경적 이해를 다시 설정 하는 것이 좋습니다. 지도를 다시 설정 하면 모든 공간 앵커 배치가 손실 됩니다. 이렇게 하면 헤드셋이 환경의 고유한 영역에서 잘 추적 됩니다. 그러나 장치가 동일한 영역 간에 혼동 되는 경우 문제가 다시 발생할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [공간 좌표계 및 holographic 렌더링의 GDC 2017 프레젠테이션](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Unity의 좌표계](coordinate-systems-in-unity.md)
 * [DirectX의 좌표계](coordinate-systems-in-directx.md)

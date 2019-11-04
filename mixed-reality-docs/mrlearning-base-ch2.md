@@ -1,21 +1,21 @@
 ---
 title: 자습서를 시작 합니다. 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성
-description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
+description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
-ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
+keywords: 혼합 현실, Unity, 자습서, Hololens
+ms.openlocfilehash: 6ce5d96e98fd5489632f942c9b9f4885a7aa1480
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629176"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437773"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성 
 
-이전 단원에서는 HoloLens 2에 대 한 첫 번째 응용 프로그램을 시작 하 여 MRTK (Mixed Reality Toolkit)에서 제공 해야 하는 기능 중 일부에 대해 알아보았습니다. 다음 단원에서는 UI 텍스트 패널과 함께 단추를 만들고 구성 하는 방법과 기본 상호 작용 (touch)을 사용 하 여 각 단추와 상호 작용 하는 방법을 배웁니다. 개체의 크기, 사운드 및 색상 변경과 같은 간단한 작업과 효과도 추가로 살펴봅니다. 이 모듈에서는 공간 메시 시각화를 해제 하는 것부터 MRTK 프로필 수정에 대 한 기본 개념을 소개 합니다. 
+이전 단원에서는 HoloLens 2에 대 한 첫 번째 응용 프로그램을 시작 하 여 MRTK (Mixed Reality Toolkit)에서 제공 해야 하는 기능 중 일부에 대해 알아보았습니다. 다음 단원에서는 UI 텍스트 패널과 함께 단추를 만들고 구성 하는 방법과 기본 상호 작용 (touch)을 사용 하 여 각 단추와 상호 작용 하는 방법을 배웁니다. 개체의 크기, 사운드 및 색상 변경과 같은 간단한 작업과 효과도 추가로 살펴봅니다. 이 모듈에서는 [공간 매핑](spatial-mapping.md) 메시 시각화를 해제 하는 것부터 MRTK 프로필 수정에 대 한 기본 개념을 소개 합니다. 
 
 ## <a name="objectives"></a>목표
 
@@ -50,11 +50,11 @@ ms.locfileid: "69629176"
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. 다음으로 표시 옵션의 설정을 “occlusion”(폐색)으로 조정합니다. 이렇게 하면 공간 메쉬가 표시 되지 않지만 공간 메시 뒤의 게임 개체 (폐색 라고도 함)는 숨겨집니다.
+5. 다음으로 표시 옵션의 설정을 “occlusion”(폐색)으로 조정합니다. 이렇게 하면 공간 매핑 메쉬가 표시 되지 않지만 공간 매핑 메시 뒤에 있는 게임 개체 (폐색 라고도 함)도 숨겨집니다.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->참고: 공간 매핑 메시가 보이지 않더라도 여전히 존재하며 상호 작용이 가능합니다. 표시 되는 벽 뒤의 홀로그램 처럼 공간 매핑 메시 뒤의 holograms는 폐색 설정 때문에 표시 되지 않습니다.
+>참고: 공간 매핑 메시는 표시 되지 않지만 여전히 존재 하며 상호 작용할 수 있습니다. 표시 되는 벽 뒤의 홀로그램 처럼 공간 매핑 메시 뒤의 holograms는 폐색 설정 때문에 표시 되지 않습니다.
 
 축하합니다. MRTK 프로필에서 설정을 수정하는 방법을 알아보았습니다. 여기서 알 수 있듯이, MRTK 설정을 조정하려면 기본 프로필의 복사본을 만들어야 편집할 수 있습니다. 새 설정을 사용 하 여 프로필을 만들거나 기본 프로필을 다시 참조할 수 있는 경우에만 다시 편집할 수 없는 기본 프로필이 항상 포함 됩니다. 조정할 수 있는 설정은 다양합니다. MRTK 프로필 설정에 대한 전체 참조는 https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html 에서 MRTK 설명서를 참조하세요.
 
@@ -83,7 +83,7 @@ ms.locfileid: "69629176"
 
 6. 장면에 큐브를 추가합니다. 계층 영역을 마우스 오른쪽 단추로 클릭 하 고 3D 개체를 선택한 다음 큐브를 클릭 합니다. 이제 디스플레이에 큐브가 표시됩니다. 매우 큰 것으로 표시 됩니다. 계층 영역에서 큐브를 선택 하는 동안 좌표를 조정 하 여 크기를 줄일 수 있습니다. 배율 값을 x = 0.1, y = 0.1 및 z = 0.1로 설정합니다. 큐브를 장면에 배치하고 누를 수 있는 단추 근처에 놓지만 단추와 겹치지는 않아야 합니다. 아래 이미지에서 큐브의 위치는 x = 0, y = 0.2, z = 1입니다. 
 
-   > 참고: 일반적으로 Unity의 1단위는 실제 세계의 1미터와 같습니다. 여기에는 예외가 있습니다. 예를 들어, 개체가 크기 조정된 객체의 자식인 경우입니다.
+   > 참고: 일반적으로 Unity의 1 단위는 물리적 세계에서 1 미터와 거의 동일 합니다. 여기에는 예외가 있습니다. 예를 들어, 개체가 크기 조정된 객체의 자식인 경우입니다.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
@@ -143,7 +143,7 @@ Grid 개체 컬렉션 구성 요소를 사용 하면 간단한 행, 열 또는 �
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->참고: 자식 개체나 부모 개체의 방향에 따라, 향후 프로젝트에서는 방향 설정을 다르게 조정해야 할 수도 있습니다. 컬렉션에 있는 개체의 크기에 따라 Cell Width(셀 너비)와 Cell Height(셀 높이) 필드도 다르게 정의해야 할 수 있습니다.
+>참고: 자식 개체 또는 부모 개체의 방향에 따라 이후 프로젝트에서 방향 설정을 다르게 조정 해야 할 수도 있습니다. 컬렉션에 있는 개체의 크기에 따라 Cell Width(셀 너비)와 Cell Height(셀 높이) 필드도 다르게 정의해야 할 수 있습니다.
 
 ### <a name="adding-text-into-your-scene"></a>장면에 텍스트 추가
 
@@ -168,7 +168,7 @@ Grid 개체 컬렉션 구성 요소를 사용 하면 간단한 행, 열 또는 �
 ![Lesson2 Chapter4 Step5](images/Lesson2_Chapter4_Step5.JPG)
 
 ## <a name="congratulations"></a>축하합니다.
-이 단원에서는 MRTK 프로필 설정(예: 공간 인식 메시 표시 유형)을 복사, 사용자 지정 및 구성하는 방법을 알아보았습니다. HoloLens 2에서 추적되는 손을 사용하여 단추와 상호 작용하고 이벤트 트리거하는 방법도 알아보았습니다. 마지막으로 Grid Object Collection 구성 요소인 Unity의 Text Mesh Pro를 사용하여 간단한 UI 인터페이스를 만드는 방법을 알아보았습니다.
+이 단원에서는 MRTK 프로필 설정 (즉, 공간 인식 메시 표시 유형)을 복사, 사용자 지정 및 구성 하는 방법을 배웠습니다. 또한 HoloLens 2에서 추적 된 실습을 사용 하 여 이벤트를 트리거하는 단추와 상호 작용 하는 방법을 배웠습니다. 마지막으로 Grid Object Collection 구성 요소인 Unity의 Text Mesh Pro를 사용하여 간단한 UI 인터페이스를 만드는 방법을 알아보았습니다.
 
-[다음 단원: 4. 동적 콘텐츠 배치 및 해결기 사용](mrlearning-base-ch3.md)
+[다음 단원: 4. 동적 콘텐츠 배치 및 solvers 사용](mrlearning-base-ch3.md)
 

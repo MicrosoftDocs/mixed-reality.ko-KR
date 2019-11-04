@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, 테스트
-ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507906"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437388"
 ---
 # <a name="testing-your-app-on-hololens"></a>HoloLens에서 앱 테스트
 
@@ -42,18 +42,16 @@ Holographic 앱은 다양 한 환경 집합에서 원활 하 게 실행 해야 �
 3. **홀로그램 품질 지침을 따릅니다.** [홀로그램 품질 지침](hologram-stability.md) 을 구현 하는 성능의 앱은 사용자 discomfort 수 있습니다.
 4. **세로 방향으로 holograms를 균등 하 게 배포 합니다.** 사용자가 위로 또는 아래로 이동 하는 오랜 시간 동안이를 사용 하 여 피로 수 있습니다.
 
+
 ## <a name="input"></a>입력
 
-### <a name="gaze-and-gestures"></a>응시 및 제스처
+### <a name="interaction-models"></a>상호 작용 모델
 
-[응시](gaze.md) 는 사용자가 holograms 및 환경을 목표로 할 수 있도록 하는 HoloLens의 기본 입력 형식입니다. 커서 위치에 따라 응시의 대상 위치를 시각적으로 볼 수 있습니다. 일반적으로는 마우스 커서를 사용 하 여 응시 커서를 연결 합니다.
-
-[제스처](gestures.md) 는 마우스 클릭 처럼 holograms와 상호 작용 하는 방법입니다. 대부분의 경우 마우스 및 터치 동작이 동일 하지만 서로 다른 경우를 이해 하 고 유효성을 검사 하는 것이 중요 합니다.
+홀로그램 상호 작용이 선택한 [상호 작용 모델과](interaction-fundamentals.md)함께 작동 하는지 확인 합니다.
+내게 필요한 옵션을 지원 하기 위해 이러한 액세서리를 필요로 하는 경우 마우스 및 키보드와 같은 다른 보조 프로그램을 사용 하 여 유효성을 검사 하는 것도 좋습니다.
 
 **앱이 마우스 및 터치와 다른 동작을 수행 하는 경우 유효성을 검사 합니다.** 이렇게 하면 불일치를 식별 하 고 설계 결정에 도움을 제공 하 여 사용자에 게 보다 자연스럽 게 환경을 만들 수 있습니다. 예를 들어 가리키기에 따라 동작을 트리거합니다.
 
-> [!NOTE]
-> HoloLens 2에 대 한 추가 지침은 [곧](index.md#news-and-notes)제공 될 예정입니다.
 
 ### <a name="custom-voice-commands"></a>사용자 지정 음성 명령
 
@@ -114,5 +112,5 @@ Holographic 앱은 다양 한 환경 집합에서 원활 하 게 실행 해야 �
 
 앱이 [Windows 스토어에 게시](submitting-an-app-to-the-microsoft-store.md)될 수 있는 가장 좋은 기회를 제공 하려면 인증을 위해 제출 하기 전에 로컬에서 유효성을 검사 하 고 테스트 합니다. 앱이 Holographic 장치 제품군을 대상으로 하는 경우 [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) 는 PC 에서만 로컬 정적 분석 테스트를 실행 합니다. HoloLens에서 테스트가 실행 되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Windows 스토어에 앱 제출](submitting-an-app-to-the-microsoft-store.md)

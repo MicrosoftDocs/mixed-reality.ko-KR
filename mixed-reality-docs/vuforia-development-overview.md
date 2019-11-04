@@ -1,17 +1,17 @@
 ---
 title: Unity에서 Vuforia 사용
 description: Vuforia를 활용 하 여 Unity에서 Windows Mixed Reality 응용 프로그램을 빌드합니다.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, 표식, 좌표, 참조 프레임, 추적
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437133"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Unity에서 Vuforia 엔진 사용
 
@@ -64,18 +64,18 @@ HoloLens 용 Vuforia 엔진 앱을 개발 하는 것은 기본적으로 다른 �
 
 ## <a name="the-vuforia-developer-portal"></a>Vuforia 개발자 포털
 
-Vuforia 엔진 및 HoloLens를 사용 하 여 자체 AR 환경을 만들려는 개발자는 [developer.vuforia.com](https://developer.vuforia.com/)에서 Vuforia 개발자 포털에 등록 해야 합니다. 포털에서 개발자는 커뮤니티 토론, 모든 Vuforia 엔진 기능에 대 한 심층 설명서를 포함 하는 [라이브러리](https://library.vuforia.com/) 및 사용자가 사용할 수 있는 Vuforia [대상 관리자](https://developer.vuforia.com/target-manager) 에 참여할 수 있는 [Vuforia 엔진 포럼](https://developer.vuforia.com/forum) 에 액세스할 수 있습니다. 고유한 사용자 지정 대상을 만듭니다. 또한 개발자는 [Vuforia 라이선스 관리자](https://developer.vuforia.com/license-manager)를 사용 하 여 무료 개발자 라이선스에 등록할 수 있습니다.
+Vuforia 엔진 및 HoloLens를 사용 하 여 자체 AR 환경을 만들려는 개발자는 [developer.vuforia.com](https://developer.vuforia.com/)에서 Vuforia 개발자 포털에 등록 해야 합니다. 포털에서 개발자는 커뮤니티 토론, 모든 Vuforia 엔진 기능에 대 한 심층 설명서를 포함 하는 [라이브러리](https://library.vuforia.com/) 및 사용자가 사용할 수 있는 [Vuforia 대상 관리자](https://developer.vuforia.com/target-manager) 에 참여할 수 있는 [Vuforia 엔진 포럼](https://developer.vuforia.com/forum) 에 액세스할 수 있습니다. 고유한 사용자 지정 대상을 만듭니다. 또한 개발자는 [Vuforia 라이선스 관리자](https://developer.vuforia.com/license-manager)를 사용 하 여 무료 개발자 라이선스에 등록할 수 있습니다.
 
 ## <a name="extended-tracking-with-vuforia"></a>Vuforia를 사용 하 여 확장 추적
 
 [확장 추적은](https://library.vuforia.com/articles/Training/Extended-Tracking) 대상이 더 이상 표시 되지 않는 경우에도 추적을 유지 하는 환경 지도를 만듭니다. HoloLens에서 수행 하는 공간 매핑에 해당 하는 Vuforia 엔진입니다. 대상에 대해 확장 된 추적을 사용 하도록 설정 하면 해당 대상의 포즈를 공간 매핑 시스템에 전달할 수 있습니다. 이러한 방식으로 대상은 Vuforia 엔진과 HoloLens 공간 좌표계 모두에 있을 수 있지만 동시에 존재할 수는 없습니다.
 
-![Unity 설정 창](images/vuforia-extendedtracking.png)<br>
+Unity 설정 창 ![](images/vuforia-extendedtracking.png)<br>
 *Unity 설정 창*
 
 **대상에 대 한 확장 추적 설정**
 
-Vuforia 엔진은 확장 된 추적을 사용 하는 대상의 포즈를 HoloLens 공간 좌표계로 자동으로 변환 합니다. 이를 통해 HoloLens는 추적을 사용 하 고 콘텐츠 확대를 대상 환경의 공간 맵에 통합할 수 있습니다. 이 프로세스는 Unity에서 Vuforia 엔진과 혼합 현실 Api 사이에서 발생 하며 개발자의 프로그래밍이 필요 하지 않습니다 .이는 자동으로 처리 됩니다.
+Vuforia 엔진은 확장 된 추적을 사용 하는 대상의 포즈를 HoloLens 공간 좌표계로 자동으로 변환 합니다. 이를 통해 HoloLens는 추적을 사용 하 여 모든 콘텐츠 확대를 대상의 주변 공간 매핑에 통합할 수 있습니다. 이 프로세스는 Unity에서 Vuforia 엔진과 혼합 현실 Api 사이에서 발생 하며 개발자의 프로그래밍이 필요 하지 않습니다 .이는 자동으로 처리 됩니다.
 
 **수행 되는 작업은 다음과 같습니다.**
 1. Vuforia의 대상 추적기는 대상을 인식 합니다.
@@ -89,7 +89,7 @@ Vuforia 엔진은 확장 된 추적을 사용 하는 대상의 포즈를 HoloLen
 **참고:** Vuforia 7.2부터 확장 된 추적은 더 이상 대상 별로 사용 하도록 설정 되지 않습니다. 대신 개발자는 장면의 모든 대상에서 유사한 기능을 사용 하도록 장치 추적을 켤 수 있습니다.
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [도구 설치](install-the-tools.md)
 * [좌표계](coordinate-systems.md)
 * [공간 매핑](spatial-mapping.md)

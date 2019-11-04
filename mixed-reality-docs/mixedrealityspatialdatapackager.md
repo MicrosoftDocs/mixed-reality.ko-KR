@@ -6,12 +6,12 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: lbe, MixedRealitySpatialDataPackager, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65942109"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438481"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>혼합 현실 공간 데이터 포장기 설명서
 
@@ -19,9 +19,32 @@ ms.locfileid: "65942109"
 > 이 도구 및 해당 작업은 있는 그대로 제공 됩니다. 이는 아무런 공지 없이 변경 될 수 있으며 이후 Windows 또는 Windows Mixed Reality HMD 릴리스와 호환 되지 않을 수 있습니다.
 
 ## <a name="download"></a>다운로드
- [여기에서 MixedRealitySpatialDataPackager](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip) 다운로드
+ [여기에서 MixedRealitySpatialDataPackager](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip) 다운로드
 
-## <a name="quickstart"></a>빠른 시작
+## <a name="device-support"></a>장치 지원
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>기능과</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
+    </tr>
+     <tr>
+        <td>혼합 현실 공간 데이터 패키지 작성</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
+</table>
+
+## <a name="quickstart"></a>빠른
 
 혼합 현실 공간 데이터 포장기 도구는 두 단계 내보내기 및 가져오기 프로세스를 통해 대상 앱의 공간 데이터를 한 PC에서 다른 PC로 복사 합니다. 이 도구는 관리자 권한으로 실행 해야 하며 가져올 때 기존 공간 데이터를 삭제 해야 합니다. 내보내기는 기존 공간 데이터를 그대로 유지 합니다.
 

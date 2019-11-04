@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 렌더링, 홀로그램
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415407"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437528"
 ---
 # <a name="rendering"></a>렌더링
 
@@ -27,9 +27,9 @@ Holographic 렌더링을 사용 하면 응용 프로그램이 실제 세계에 �
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
@@ -93,9 +93,9 @@ Windows Mixed Reality에서는 **holographic 카메라**의 개념을 소개 합
 ## <a name="supported-resolutions-on-hololens-2"></a>HoloLens 2에서 지원 되는 해상도
 
 > [!NOTE]
-> HoloLens 2에 대 한 추가 지침은 [곧](index.md#news-and-notes)제공 될 예정입니다.
+> HoloLens 2에 대 한 추가 지침은 [곧](news.md)제공 될 예정입니다.
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [홀로그램 안정성](hologram-stability.md)
 * [DirectX의 렌더링](rendering-in-directx.md)

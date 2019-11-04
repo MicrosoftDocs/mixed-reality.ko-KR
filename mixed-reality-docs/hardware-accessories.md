@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 방법, 액세서리, bluetooth, bt, 컨트롤러, 게임 패드, clicker, xbox
-ms.openlocfilehash: c25f849cbf05a78ba2fe7118dbe160d05e0f5e3f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526618"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435150"
 ---
 # <a name="hardware-accessories"></a>하드웨어 액세서리
 
@@ -19,7 +19,7 @@ Windows Mixed Reality 장치는 액세서리를 지원 합니다. Bluetooth 또�
 
 HoloLens에서 액세서리를 사용 하는 두 가지 일반적인 시나리오는 공기 탭 제스처와 가상 키보드를 대체 하는 것입니다. 이를 위해 가장 일반적인 두 가지 액세서리는 **HoloLens Clicker** 및 **Bluetooth 키보드**입니다. Microsoft HoloLens에는 Bluetooth 4.1 라디오가 포함 되어 있으며 [BLUETOOTH HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) 및 [bluetooth GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) 프로필을 지원 합니다.
 
-Windows Mixed Reality 몰입 형 헤드셋은 [응시](gaze.md) 및 [음성](voice-input.md)이외의 입력을 위한 액세서리를 요구 합니다. 지원 되는 액세서리는 **키보드 및 마우스**, **게임 패드**및 **[동작 컨트롤러](motion-controllers.md)** 를 포함 합니다.
+Windows Mixed Reality 몰입 형 헤드셋은 [응시](gaze-and-commit.md) 및 [음성](voice-input.md)이외의 입력을 위한 액세서리를 요구 합니다. 지원 되는 액세서리는 **키보드 및 마우스**, **게임 패드**및 **[동작 컨트롤러](motion-controllers.md)** 를 포함 합니다.
 
 ## <a name="pairing-bluetooth-accessories"></a>Bluetooth 액세서리 페어링
 
@@ -29,7 +29,7 @@ Microsoft HoloLens와 Bluetooth 주변 장치를 페어링 하는 것은 Windows
 3. 슬라이더 스위치를 사용 하 여 Bluetooth 라디오가 꺼진 경우 켭니다.
 4. Bluetooth 장치를 페어링 모드로 전환 합니다. 장치 마다 다릅니다. 대부분의 Bluetooth 장치에서 하나 이상의 단추를 누르고 있으므로이 작업을 수행할 수 있습니다.
 5. 장치 이름이 Bluetooth 장치 목록에 표시 될 때까지 기다립니다. 장치를 선택 하는 경우 장치를 선택 하 고 **쌍** 단추를 선택 합니다. 근처에 많은 Bluetooth 장치가 있는 경우 연결 하려는 장치를 보려면 Bluetooth 장치 목록의 맨 아래로 스크롤해야 할 수도 있습니다.
-6. Bluetooth 주변 장치를 입력 기능과 페어링 하는 경우 (예: Bluetooth 키보드), 6 자리 또는 8 자리 pin이 표시 될 수 있습니다. 주변 장치에 pin을 입력 하 고 enter 키를 눌러 Microsoft HoloLens와 페어링 합니다.
+6. 입력 기능 (예: Bluetooth 키보드)과 Bluetooth 주변 장치를 페어링 하는 경우 6 자리 또는 8 자리 pin이 표시 될 수 있습니다. 주변 장치에 pin을 입력 하 고 enter 키를 눌러 Microsoft HoloLens와 페어링 합니다.
 
 ## <a name="motion-controllers"></a>동작 컨트롤러
 
@@ -39,7 +39,7 @@ Windows Mixed Reality [동작 컨트롤러](motion-controllers.md) 는 몰입 �
 
 ## <a name="hololens-clicker"></a>HoloLens Clicker
 
-HoloLens Clicker는 hololens 용으로 특별히 구축 된 첫 번째 주변 장치 이며 HoloLens Development Edition에 포함 되어 있습니다. HoloLens Clicker를 사용 하면 사용자가 최소한의 손을 클릭 하 여 클릭 하 고 이동 하 여 이동 제스처를 바꿀 수 있습니다. 모든 [제스처](gestures.md)를 대체 하지는 않습니다. 예를 들어 [블 룸](gestures.md#bloom) 및 [크기 조정 또는 이동](gestures.md#composite-gestures) 제스처는 직접 동작을 사용 합니다. HoloLens clicker는 간단한 단추가 있는 방향 센서 장치입니다. Bluetooth 저 에너지 (BTLE)를 사용 하 여 HoloLens에 연결 합니다.
+HoloLens Clicker는 hololens 용으로 특별히 구축 된 첫 번째 주변 장치 이며 HoloLens Development Edition에 포함 되어 있습니다. HoloLens Clicker를 사용 하면 사용자가 최소한의 손을 클릭 하 여 클릭 하 고 이동 하 여 이동 제스처를 바꿀 수 있습니다. 모든 [제스처](gaze-and-commit.md#composite-gestures)를 대체 하지는 않습니다. 예를 들어 [블 룸](system-gesture.md#bloom) 및 [크기 조정 또는 이동](gaze-and-commit.md#composite-gestures) 제스처는 직접 동작을 사용 합니다. HoloLens clicker는 간단한 단추가 있는 방향 센서 장치입니다. Bluetooth 저 에너지 (BTLE)를 사용 하 여 HoloLens에 연결 합니다.
 
 ![HoloLens Clicker](images/hololens-clicker-500px.jpg)
 

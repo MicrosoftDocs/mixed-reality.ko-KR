@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, cpu, gpu, 렌더링, 가비지 수집, hololens
-ms.openlocfilehash: 16a923697985e3686992dc31ea8e6fc39249c276
-ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
+ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817347"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438122"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대 한 성능 권장 사항
 
@@ -38,7 +38,7 @@ Unity는 다음에 대 한 유용한 설명서를 제공 합니다.
 
 #### <a name="cache-references"></a>캐시 참조
 
-모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[getcomponent\<T > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 가장 많이 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag는 실제로 저렴가 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 합니다.
+모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[Getcomponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 가장 많이 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag *는 실제로 저렴* 가 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 합니다.
 
 ```CS
 using UnityEngine;
@@ -76,7 +76,7 @@ public class ExampleClass : MonoBehaviour
 > GetComponent (string) 사용 안 합니다. <br/>
 > *[Getcomponent ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 를 사용 하는 경우 몇 가지 오버 로드가 있습니다. 항상 형식 기반 구현을 사용 하 고 문자열 기반 검색 오버 로드를 사용 하지 않는 것이 중요 합니다. 장면에서 문자열로 검색 하는 것은 유형별로 검색 하는 것 보다 훨씬 더 비쌉니다. <br/>
 > 좋음 구성 요소 GetComponent (Type 유형) <br/>
-> 좋음 T getcomponent\<t > () <br/>
+> 좋음 T GetComponent\<T > () <br/>
 > 올바르지 구성 요소 GetComponent (문자열) > <br/>
 
 #### <a name="avoid-expensive-operations"></a>비용이 많이 드는 작업 방지
@@ -117,6 +117,31 @@ public class ExampleClass : MonoBehaviour
 
     [Boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) 은 C# 언어 및 런타임의 핵심 개념입니다. Char, int, bool 등의 값 형식 변수를 참조 형식 변수로 래핑하는 프로세스입니다. 값으로 형식화 된 변수가 "boxed" 이면 관리 되는 힙에 저장 된 System.object의 내부에 래핑됩니다. 따라서 가비지 수집기에서 메모리를 할당 하 고 결국 삭제를 처리 해야 합니다. 이러한 할당과 할당 해제는 성능 비용을 초래 하 고 많은 시나리오에서 불필요 하거나 더 저렴 한 방법으로 쉽게 바꿀 수 있습니다.
 
+    개발에서 boxing의 가장 일반적인 형태 중 하나는 [nullable 값 형식을](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/)사용 하는 것입니다. 일반적으로 작업에서 값을 가져오려고 할 때 오류가 발생 하는 경우 함수에서 값 형식에 대해 null을 반환할 수 있기를 원합니다. 이 방법의 잠재적인 문제는 이제 힙에서 할당이 발생 하므로 나중에 가비지를 수집 해야 한다는 것입니다.
+
+    **의 boxing 예C#**
+
+    ```csharp
+    // boolean value type is boxed into object boxedMyVar on the heap
+    bool myVar = true;
+    object boxedMyVar = myVar;
+    ```
+
+    **Nullable 값 형식을 통한 문제 boxing의 예**
+
+    이 코드는 Unity 프로젝트에서 만들 수 있는 더미 파티클 클래스를 보여 줍니다. `TryGetSpeed()`를 호출 하면 힙에 대 한 개체 할당이 발생 하며,이는 나중에 가비지 수집 해야 합니다. 이 예제는 특히 현재 속도를 요청 하는 장면에 1000 개 이상의 파티클이 있을 수 있기 때문에 문제가 발생 합니다. 따라서 1000 개의 개체가 할당 되 고 결과적으로 성능이 크게 저하 되는 모든 프레임을 할당 취소 하 게 됩니다. 오류를 나타내기 위해-1과 같은 음수 값을 반환 하는 함수를 다시 작성 하면이 문제를 방지 하 고 스택에 메모리를 유지 합니다.
+
+    ```csharp
+        public class MyParticle
+        {
+            // Example of function returning nullable value type
+            public int? TryGetSpeed()
+            {
+                // Returns current speed int value or null if fails
+            }
+        }
+    ```
+
 #### <a name="repeating-code-paths"></a>반복 코드 경로
 
 반복 Unity 콜백 함수 (즉, 초당 여러 번 실행 되는 업데이트) 및/또는 프레임을 매우 신중 하 게 작성 해야 합니다. 여기에서 비용이 많이 드는 작업은 성능에 크게 영향을 미칠 수 있습니다.
@@ -132,7 +157,7 @@ public class ExampleClass : MonoBehaviour
     ```
 
 >[!NOTE]
-> Update ()는이 성능 문제를 가장 일반적으로 노력, 다음과 같은 다른 반복 Unity 콜백은 다음과 같이 바람직하지 않은 경우에도 동일 하지 않을 수 있습니다. FixedUpdate (), Behaviour (), OnPostRender ", OnPreRender (), OnRenderImage () 등 
+> Update ()는이 성능 문제의 가장 일반적인 노력 이지만, 다음과 같은 다른 반복 Unity 콜백은 FixedUpdate (), Behaviour (), OnPostRender ", OnPreRender (), OnRenderImage () 등의 경우와 동일 합니다. 
 
 2) **프레임당 한 번 실행 되도록 하는 작업**
 
@@ -153,7 +178,9 @@ public class ExampleClass : MonoBehaviour
 
 3) **인터페이스 및 가상 구문 방지**
 
-    인터페이스를 통해 함수 호출을 호출 하거나 직접 개체를 호출 하거나 가상 함수를 호출 하는 것이 직접 구문 또는 직접 함수 호출을 활용 하는 것 보다 훨씬 더 비쌉니다. 가상 함수 또는 인터페이스가 필요 하지 않은 경우 제거 해야 합니다. 그러나 이러한 접근 방식에 대 한 성능 저하는 일반적으로 개발 공동 작업, 코드 가독성 및 코드 유지 관리를 간소화 하는 것입니다. 
+    인터페이스를 통해 함수 호출을 호출 하거나 직접 개체를 호출 하거나 가상 함수를 호출 하는 것이 직접 구문 또는 직접 함수 호출을 활용 하는 것 보다 훨씬 더 비쌉니다. 가상 함수 또는 인터페이스가 필요 하지 않은 경우 제거 해야 합니다. 그러나 이러한 접근 방식에 대 한 성능 저하는 일반적으로 개발 공동 작업, 코드 가독성 및 코드 유지 관리를 간소화 하는 것입니다.
+
+    일반적으로이 멤버를 덮어써야 하는 것으로 예상 되는 것이 확실 하지 않으면 필드 및 함수를 가상으로 표시 하지 않는 것이 좋습니다. 프레임 당 여러 번 또는 `UpdateUI()` 메서드와 같이 프레임당 한 번 호출 되는 빈도가 높은 코드 경로에 특히 주의 해야 합니다.
 
 4) **값으로 구조체 전달 방지**
 
@@ -191,7 +218,7 @@ Unity에는 플랫폼에 대 한 일괄 처리 그리기 호출에 대 한 개�
 Unity에서 단일 패스 인스턴스화된 렌더링을 사용 하면 각 눈동자에 대 한 그리기 호출을 하나의 인스턴스화된 그리기 호출로 줄일 수 있습니다. 두 그리기 호출 사이의 캐시 일관성으로 인해 GPU 에서도 약간의 성능도 향상 되었습니다.
 
 Unity 프로젝트에서이 기능을 사용 하도록 설정 하려면
-1)  **플레이어 XR 설정** 열기 (**프로젝트 설정** >  **편집** > **플레이어** > **XR 설정**으로 이동)
+1)  **플레이어 XR 설정** 열기 ( **편집** > **프로젝트 설정** > **플레이어** > **XR 설정**으로 이동)
 2) **스테레오 렌더링 방법** 드롭다운 메뉴에서 **단일 패스 인스턴스** 를 선택 합니다 (**가상 현실 지원 됨** 확인란을 선택 해야 함).
 
 이 렌더링 방법에 대 한 자세한 내용은 Unity에서 다음 문서를 참조 하세요.
@@ -219,30 +246,38 @@ Unity는 많은 정적 개체를 일괄 처리 하 여 GPU에 대 한 그리기 
 
 일괄 처리는 여러 Gameobject가 동일한 자료를 공유할 수 있는 경우에만 발생할 수 있습니다. 일반적으로이는 Gameobject가 해당 재질에 대해 고유한 질감을 가질 필요에 의해 차단 됩니다. [질감 Atlasing](https://en.wikipedia.org/wiki/Texture_atlas)하는 메서드를 하나의 큰 질감으로 결합 하는 것이 일반적입니다.
 
-또한 일반적으로 메시를 가능한 한 GameObject 결합 하는 것이 좋습니다. Unity의 각 렌더러는 연결 된 그리기 호출을 포함 하 고 하나의 렌더러에서 결합 된 메시를 제출 합니다. 
+또한 일반적으로 메시를 가능한 한 GameObject 결합 하는 것이 좋습니다. Unity의 각 렌더러는 연결 된 그리기 호출을 포함 하 고 하나의 렌더러에서 결합 된 메시를 제출 합니다.
 
 >[!NOTE]
 > 렌더러의 속성을 수정 하는 중입니다. 런타임에 재질은 재질의 복사본을 만들고 일괄 처리를 중단 시킬 수 있습니다. Gameobject에서 공유 재질 속성을 수정 하려면 렌더러를 사용 합니다.
 
 ## <a name="gpu-performance-recommendations"></a>GPU 성능 권장 사항
 
-[Unity에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 에 대 한 자세한 정보 
+[Unity에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 에 대 한 자세한 정보
 
 ### <a name="optimize-depth-buffer-sharing"></a>깊이 버퍼 공유 최적화
 
-일반적으로 **플레이어 XR 설정** 에서 **깊이 버퍼 공유** 를 사용 하도록 설정 하 여 [홀로그램 안정성](Hologram-stability.md)을 최적화 하는 것이 좋습니다. 그러나이 설정을 사용 하 여 깊이 기반 지연 단계를 사용 하도록 설정 하는 경우 **24 비트 깊이 형식**대신 **16 비트 깊이 형식을** 선택 하는 것이 좋습니다. 16 비트 깊이 버퍼는 깊이 버퍼 트래픽과 관련 된 대역폭 (그리고 그에 따라 전원)을 크게 감소 시킵니다. 이는 큰 전력이 될 수 있지만 [z](https://en.wikipedia.org/wiki/Z-fighting) 가 24 비트 보다 16 비트를 사용 하는 경우에는 작은 깊이 범위의 환경에만 적용 됩니다. 이러한 아티팩트를 방지 하려면 [Unity 카메라](https://docs.unity3d.com/Manual/class-Camera.html) 의 near/far 클립 평면을 수정 하 여 더 낮은 정밀도를 고려 합니다. HoloLens 기반 응용 프로그램의 경우 Unity 기본 1000m 대신 5천만 개의 먼 클립 평면은 일반적으로 z-싸 우를 제거할 수 있습니다.
+일반적으로 **플레이어 XR 설정** 에서 **깊이 버퍼 공유** 를 사용 하도록 설정 하 여 [홀로그램 안정성](Hologram-stability.md)을 최적화 하는 것이 좋습니다. 그러나이 설정을 사용 하 여 깊이 기반 지연 단계를 사용 하도록 설정 하는 경우 **24 비트 깊이 형식**대신 **16 비트 깊이 형식을** 선택 하는 것이 좋습니다. 16 비트 깊이 버퍼는 깊이 버퍼 트래픽과 관련 된 대역폭 (그리고 그에 따라 전원)을 크게 감소 시킵니다. 이는 전력 감소 및 성능 향상에 모두 큰 승리를 가질 수 있습니다. 그러나 *16 비트 깊이 형식을*사용 하는 경우 두 가지 가능한 음수 결과가 있습니다.
+
+**Z-싸 우**
+
+축소 된 깊이 범위 충실도는 24 비트 보다 16 비트를 사용 하 여 [z](https://en.wikipedia.org/wiki/Z-fighting) 를 더 많이 교환할 수 있도록 합니다. 이러한 아티팩트를 방지 하려면 [Unity 카메라](https://docs.unity3d.com/Manual/class-Camera.html) 의 near/far 클립 평면을 수정 하 여 더 낮은 정밀도를 고려 합니다. HoloLens 기반 응용 프로그램의 경우 Unity 기본 1000m 대신 5천만 개의 먼 클립 평면은 일반적으로 z-싸 우를 제거할 수 있습니다.
+
+**사용 하지 않도록 설정 된 스텐실 버퍼**
+
+Unity에서 [16 비트 깊이의 렌더링 질감](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html)을 만드는 경우 스텐실 버퍼가 생성 되지 않습니다. Unity 설명서 당 24 비트 깊이 형식을 선택 하면 24 비트 z 버퍼 뿐만 아니라 [8 비트 스텐실 버퍼](https://docs.unity3d.com/Manual/SL-Stencil.html) (일반적으로 HoloLens와 같은 경우에 32 비트를 장치에 적용할 수 있는 경우)가 생성 됩니다.
 
 ### <a name="avoid-full-screen-effects"></a>전체 화면 효과 방지
 
-전체 화면에서 작동 하는 기술은 모든 프레임의 크기가 수백만 작업 이므로 상당한 비용이 들 수 있습니다. 따라서 앤티앨리어스, 블 룸 등의 [사후 처리 효과](https://docs.unity3d.com/Manual/PostProcessingOverview.html) 를 방지 하는 것이 좋습니다. 
+전체 화면에서 작동 하는 기술은 모든 프레임의 크기가 수백만 작업 이므로 상당한 비용이 들 수 있습니다. 따라서 앤티앨리어스, 블 룸 등의 [사후 처리 효과](https://docs.unity3d.com/Manual/PostProcessingOverview.html) 를 방지 하는 것이 좋습니다.
 
 ### <a name="optimal-lighting-settings"></a>최적의 조명 설정
 
-Unity의 [실시간 글로벌 조명은 전 세계](https://docs.unity3d.com/Manual/GIIntro.html) 의 시각적 결과를 제공할 수 있지만 상당한 비용이 드는 조명 계산이 포함 됩니다. **Windows** > **렌더링** 조명 설정을 통해 모든 Unity 장면 파일에 대해 실시간 글로벌 조명을 사용 하지 않도록 설정 하 > 실시간 글로벌 조명 선택을 취소 하는 것이 좋습니다. >  
+Unity의 [실시간 글로벌 조명은 전 세계](https://docs.unity3d.com/Manual/GIIntro.html) 의 시각적 결과를 제공할 수 있지만 상당한 비용이 드는 조명 계산이 포함 됩니다. **창을** 통해 모든 Unity 장면 파일에 대해 실시간 글로벌 조명을 사용 하지 않도록 설정 하는 것이 좋습니다. > **렌더링** > **조명 설정을** 사용 하 여 **실시간 글로벌 조명을**선택 취소 >.
 
-또한 모든 섀도 캐스팅을 사용 하지 않도록 설정 하는 것이 좋습니다 .이 경우에도 Unity 장면에 비용이 많이 드는 GPU 패스가 추가 됩니다. 그림자는 빛 당 사용 하지 않도록 설정할 수 있지만 품질 설정을 통해 전체적으로 제어할 수도 있습니다. 
- 
- > **프로젝트 설정을**편집한 다음 **품질** 범주를 선택 하 > UWP 플랫폼에 대해 저품질 **품질** 을 선택 합니다. 그림자를 **사용 하지 않도록**설정 하려면 **shadows** 속성을 설정 하면 됩니다.
+또한 모든 섀도 캐스팅을 사용 하지 않도록 설정 하는 것이 좋습니다 .이 경우에도 Unity 장면에 비용이 많이 드는 GPU 패스가 추가 됩니다. 그림자는 빛 당 사용 하지 않도록 설정할 수 있지만 품질 설정을 통해 전체적으로 제어할 수도 있습니다.
+
+ > **프로젝트 설정을** **편집한** 다음 **품질** 범주를 선택 하 > UWP 플랫폼 **에 대해 저품질를 선택** 합니다. 그림자를 **사용 하지 않도록**설정 하려면 **shadows** 속성을 설정 하면 됩니다.
 
 ### <a name="reduce-poly-count"></a>Poly 수 줄이기
 
@@ -282,7 +317,7 @@ Unity는 Unity 표준 셰이더에 비해 훨씬 빠르게 unlit, 꼭 짓 점, �
 
 #### <a name="shader-preloading"></a>셰이더 미리 로드
 
-셰이더 *미리* 로드 및 기타 트릭을 사용 하 여 [셰이더 로드 시간](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html)을 최적화 합니다. 특히 셰이더 미리 로드는 런타임 셰이더 컴파일 때문에 어떤 hitches 표시 되지 않음을 의미 합니다.
+셰이더 *미리* 로드 및 기타 트릭을 사용 하 여 [셰이더 로드 시간](https://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html)을 최적화 합니다. 특히 셰이더 미리 로드는 런타임 셰이더 컴파일 때문에 어떤 hitches 표시 되지 않음을 의미 합니다.
 
 ### <a name="limit-overdraw"></a>과도 한 그리기 제한
 
@@ -320,7 +355,7 @@ Unity는 메모리 관리와 관련 하 여 보다 효율적인 코드를 작성
 
 시작 장면을 로드 하는 동안 holographic 시작 화면이 사용자에 게 표시 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [Unity 게임에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Unity 게임에서 가비지 수집 최적화](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [물리학 모범 사례 [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)

@@ -3,15 +3,15 @@ title: 사용자 지정 Holographic Remoting 플레이어 작성
 description: 사용자 지정 Holographic 원격 플레이어 앱을 만들면 원격 컴퓨터에 렌더링 된 콘텐츠를 HoloLens 2로 표시할 수 있는 사용자 지정 응용 프로그램을 만들 수 있습니다. 이 문서에서는이를 달성할 수 있는 방법에 대해 설명 합니다.
 author: NPohl-MSFT
 ms.author: nopohl
-ms.date: 08/01/2019
+ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: fdc3d3bbd72d0812377d6a70c975f2111e1a2224
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 982a3f42014d8f5eb9ba181247fee9825fb78371
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718097"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434314"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>사용자 지정 Holographic Remoting 플레이어 앱 작성
 
@@ -22,12 +22,12 @@ ms.locfileid: "68718097"
 
 Holographic 원격 플레이어를 사용 하면 앱에서 데스크톱 PC 또는 UWP 장치 (예: Xbox One)에서 [렌더링](rendering.md) 된 Holographic 콘텐츠를 표시 하 여 더 많은 시스템 리소스에 액세스할 수 있습니다. Holographic Remoting player 앱은 입력 데이터를 Holographic Remoting 호스트 응용 프로그램으로 스트리밍하 고 비디오 및 오디오 스트림으로 몰입 형 보기를 다시 받습니다. 연결은 표준 Wi-fi를 사용 하 여 수행 됩니다. 플레이어 앱을 만들려면 NuGet 패키지를 사용 하 여 UWP 앱에 Holographic 원격을 추가 하 고, 연결을 처리 하 고 몰입 형 뷰를 표시 하는 코드를 작성 합니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 좋은 출발점은 이미 Windows Mixed Reality API를 대상으로 하는 작동 하는 DirectX 기반 UWP 앱입니다. 자세한 내용은 [DirectX 개발 개요](directx-development-overview.md)를 참조 하세요. 기존 앱이 없고 처음부터 시작 하려면 [ C++ holographic 프로젝트 템플릿이](creating-a-holographic-directx-project.md) 좋은 출발점입니다.
 
 >[!IMPORTANT]
->Holographic 원격을 사용 하는 모든 앱은 [다중 스레드 아파트](https://docs.microsoft.com/en-us/windows/win32/com/multithreaded-apartments)를 사용 하도록 작성 되어야 합니다. [단일 스레드 아파트](https://docs.microsoft.com/en-us/windows/win32/com/single-threaded-apartments) 사용 하는 것은 지원 되지만, 재생 하는 동안 일지 성능이 저하 되 고 가능 합니다. /Winrt C++ [winrt:: init_apartment](https://docs.microsoft.com/en-us/windows/uwp/cpp-and-winrt-apis/get-started) 를 사용 하는 경우 다중 스레드 아파트는 기본값입니다.
+>Holographic 원격을 사용 하는 모든 앱은 [다중 스레드 아파트](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)를 사용 하도록 작성 되어야 합니다. [단일 스레드 아파트](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) 사용 하는 것은 지원 되지만, 재생 하는 동안 일지 성능이 저하 되 고 가능 합니다. /Winrt C++ [winrt:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) 를 사용 하는 경우 다중 스레드 아파트는 기본값입니다.
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Holographic 원격 NuGet 패키지 가져오기
 
@@ -40,7 +40,7 @@ Visual Studio에서 프로젝트에 NuGet 패키지를 추가 하려면 다음 �
 6. 표시 되는 다음 대화 상자는 사용권 계약입니다. **동의** 함을 클릭 하 여 사용권 계약에 동의 합니다.
 
 >[!IMPORTANT]
-><a name="idl"></a>NuGet ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` 패키지 내에는 Holographic Remoting에서 노출 하는 API에 대 한 자세한 설명서가 포함 되어 있습니다.
+><a name="idl"></a>NuGet 패키지 내의 ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` Holographic Remoting에서 노출 하는 API에 대 한 자세한 설명서를 포함 합니다.
 
 ## <a name="modify-the-packageappxmanifest-of-the-application"></a>응용 프로그램의 appxmanifest.xml을 수정 합니다.
 
@@ -92,9 +92,9 @@ m_playerContext = winrt::Microsoft::Holographic::AppRemoting::PlayerContext::Cre
 ```
 
 >[!WARNING]
->Holographic Remoting은 원격 특정 런타임을 사용 하 여 Windows의 일부인 Windows Mixed Reality 런타임을 대체 하는 방식으로 작동 합니다. 플레이어 컨텍스트를 만드는 동안이 작업을 수행 합니다. 이러한 이유로 플레이어 컨텍스트를 만들기 전에 Windows Mixed Reality API를 호출 하면 예기치 않은 동작이 발생할 수 있습니다. 권장 되는 방법은 혼합 현실 API와의 상호 작용 전에 가능한 한 빨리 플레이어 컨텍스트를 만드는 것입니다. 이후에 만들어지거나 검색 된 개체를 사용 하 여를 호출 하기 전에 Windows Mixed Reality ```PlayerContext::Create()``` API를 통해 만들어지거나 검색 된 개체를 혼합 하지 마세요.
+>Holographic Remoting은 원격 특정 런타임을 사용 하 여 Windows의 일부인 Windows Mixed Reality 런타임을 대체 하는 방식으로 작동 합니다. 플레이어 컨텍스트를 만드는 동안이 작업을 수행 합니다. 이러한 이유로 플레이어 컨텍스트를 만들기 전에 Windows Mixed Reality API를 호출 하면 예기치 않은 동작이 발생할 수 있습니다. 권장 되는 방법은 혼합 현실 API와의 상호 작용 전에 가능한 한 빨리 플레이어 컨텍스트를 만드는 것입니다. 이후에 만들어지거나 검색 된 개체를 사용 하 여 ```PlayerContext::Create()```를 호출 하기 전에 Windows Mixed Reality API를 통해 만들어지거나 검색 된 개체를 혼합 하지 마세요.
 
-그런 다음 [HolographicSpace. CreateForCoreWindow](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow)를 호출 하 여 HolographicSpace를 만들 수 있습니다.
+그런 다음 [HolographicSpace. CreateForCoreWindow](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicspace.createforcorewindow)를 호출 하 여 HolographicSpace를 만들 수 있습니다.
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(window);
@@ -104,11 +104,11 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 
 플레이어 앱이 콘텐츠를 렌더링할 준비가 되 면 호스트에 대 한 연결을 설정할 수 있습니다.
 
-시나리오별 방법 중 하나로 연결을 설정할 수 있습니다.
+다음 방법 중 하나로 연결을 설정할 수 있습니다.
 1) HoloLens 2에서 실행 되는 플레이어 앱은 호스트 앱에 연결 됩니다.
 2) 호스트 앱은 HoloLens 2에서 실행 중인 플레이어 앱에 연결 합니다.
 
-플레이어 앱에서 호스트로 연결 하려면 호스트 이름 및 포트를 ```Connect``` 지정 하는 플레이어 컨텍스트의 메서드를 호출 합니다. 기본 포트는 **8265**입니다.
+플레이어 앱에서 호스트로 연결 하려면 호스트 이름 및 포트를 지정 하는 플레이어 컨텍스트의 ```Connect``` 메서드를 호출 합니다. 기본 포트는 **8265**입니다.
 
 ```cpp
 try
@@ -122,9 +122,9 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Any C++/winrt API ```Connect``` 와 마찬가지로 처리 해야 하는 winrt:: hresult_error을 throw 할 수 있습니다.
+>모든 C++/WINRT API ```Connect```는 처리 해야 하는 WinRT:: hresult_error을 throw 할 수 있습니다.
 
-플레이어 앱에서 들어오는 연결을 수신 하는 작업은 메서드를 ```Listen``` 호출 하 여 수행할 수 있습니다. 이 호출 중에 핸드셰이크 포트와 전송 포트를 모두 지정할 수 있습니다. 핸드셰이크 포트는 초기 핸드셰이크에 사용 됩니다. 그런 다음 데이터는 전송 포트를 통해 전송 됩니다. 기본적으로 포트 번호 **8265** 및 **8266** 이 사용 됩니다.
+플레이어 앱에서 들어오는 연결을 수신 하는 작업은 ```Listen``` 메서드를 호출 하 여 수행할 수 있습니다. 이 호출 중에 핸드셰이크 포트와 전송 포트를 모두 지정할 수 있습니다. 핸드셰이크 포트는 초기 핸드셰이크에 사용 됩니다. 그런 다음 데이터는 전송 포트를 통해 전송 됩니다. 기본적으로 포트 번호 **8265** 및 **8266** 이 사용 됩니다.
 
 ```cpp
 try
@@ -140,7 +140,7 @@ catch(winrt::hresult_error& e)
 
 ## <a name="handling-connection-related-events"></a>연결 관련 이벤트 처리
 
-는 ```PlayerContext``` 연결 상태를 모니터링 하는 세 개의 이벤트를 노출 합니다.
+```PlayerContext```는 연결 상태를 모니터링 하는 세 개의 이벤트를 노출 합니다.
 1) OnConnected: 호스트에 대 한 연결이 성공적으로 설정 되 면 트리거됩니다.
 ```cpp
 m_onConnectedEventToken = m_playerContext.OnConnected([]() 
@@ -148,7 +148,7 @@ m_onConnectedEventToken = m_playerContext.OnConnected([]()
     // Handle connection successfully established
 });
 ```
-2) OnDisconnected: 설정 된 연결이 종료 되거나 연결을 설정할 수 없는 경우에 트리거됩니다.
+2) OnDisconnected: 설정 된 연결이 종료 되거나 연결을 설정할 수 없는 경우 트리거됩니다.
 ```cpp
 m_onDisconnectedEventToken = m_playerContext.OnDisconnected([](ConnectionFailureReason failureReason)
 {
@@ -170,18 +170,18 @@ m_onListeningEventToken = m_playerContext.OnListening([]()
 });
 ```
 
-또한 플레이어 컨텍스트의 속성을 ```ConnectionState``` 사용 하 여 연결 상태를 쿼리할 수 있습니다.
+또한 플레이어 컨텍스트의 ```ConnectionState``` 속성을 사용 하 여 연결 상태를 쿼리할 수 있습니다.
 ```cpp
 winrt::Microsoft::Holographic::AppRemoting::ConnectionState state = m_playerContext.ConnectionState();
 ```
 
 ## <a name="display-the-remotely-rendered-frame"></a>원격으로 렌더링 된 프레임을 표시 합니다.
 
-원격으로 렌더링 된 콘텐츠를 표시 하려면 ```PlayerContext::BlitRemoteFrame()``` [HolographicFrame](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe)를 렌더링 하는 동안를 호출 합니다. 
+원격으로 렌더링 된 콘텐츠를 표시 하려면 [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe)를 렌더링 하는 동안 ```PlayerContext::BlitRemoteFrame()```를 호출 합니다. 
 
-```BlitRemoteFrame()```현재 HolographicFrame에 대 한 백 버퍼가 렌더링 대상으로 바인딩되어야 합니다. 백 버퍼는 [Direct3D11BackBuffer](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) 속성을 통해 [HolographicCameraRenderingParameters](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) 에서 받을 수 있습니다.
+```BlitRemoteFrame()```를 사용 하려면 현재 HolographicFrame의 백 버퍼가 렌더링 대상으로 바인딩되어야 합니다. 백 버퍼는 [Direct3D11BackBuffer](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.direct3d11backbuffer) 속성을 통해 [HolographicCameraRenderingParameters](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.getrenderingparameters) 에서 받을 수 있습니다.
 
-호출 되 면 ```BlitRemoteFrame()``` 호스트 응용 프로그램에서 수신 된 최신 프레임을 HolographicFrame의 백 버퍼에 복사 합니다. 원격 응용 프로그램에서 원격 프레임을 렌더링 하는 동안 포커스 지점을 지정 하는 경우에도 포커스 지점 집합이 설정 됩니다.
+이 호출 되 면 ```BlitRemoteFrame()``` 호스트 응용 프로그램에서 마지막으로 받은 프레임을 HolographicFrame의 백 버퍼에 복사 합니다. 원격 응용 프로그램에서 원격 프레임을 렌더링 하는 동안 포커스 지점을 지정 하는 경우에도 포커스 지점 집합이 설정 됩니다.
 
 ```cpp
 // Blit the remote frame into the backbuffer for the HolographicFrame.
@@ -189,33 +189,51 @@ winrt::Microsoft::Holographic::AppRemoting::BlitResult result = m_playerContext.
 ```
 
 >[!NOTE]
->```PlayerContext::BlitRemoteFrame()```현재 프레임의 포커스 지점을 덮어쓸 수 있습니다. 
->- 대체 (fallback) 포커스 지점을 지정 하려면 이전 ```PlayerContext::BlitRemoteFrame()```에 [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) 를 호출 합니다. 
->- 원격 포커스 지점을 과도 하 게 쓰려면 [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) ```PlayerContext::BlitRemoteFrame()```를 호출 합니다.
+>```PlayerContext::BlitRemoteFrame()``` 현재 프레임의 포커스 지점을 덮어쓸 수 있습니다. 
+>- 대체 (fallback) 포커스 지점을 지정 하려면 ```PlayerContext::BlitRemoteFrame()```하기 전에 [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) 를 호출 합니다. 
+>- 원격 포커스 지점을 덮어쓰려면 ```PlayerContext::BlitRemoteFrame()```후 [HolographicCameraRenderingParameters:: SetFocusPoint](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint) 를 호출 합니다.
 
-성공 하면를 ```BlitRemoteFrame()``` 반환 ```BlitResult::Success_Color```합니다. 그렇지 않으면 실패 원인을 반환 합니다.
-- ```BlitResult::Failed_NoRemoteFrameAvailable```: 사용할 수 있는 원격 프레임이 없기 때문에 실패 했습니다.
+성공 하면 ```BlitRemoteFrame()```에서 ```BlitResult::Success_Color```를 반환 합니다. 그렇지 않으면 실패 원인을 반환 합니다.
+- ```BlitResult::Failed_NoRemoteFrameAvailable```: 원격 프레임을 사용할 수 없기 때문에 실패 했습니다.
 - ```BlitResult::Failed_NoCamera```: 카메라가 없어 실패 했습니다.
+- ```BlitResult::Failed_RemoteFrameTooOld```: 원격 프레임이 너무 오래 되어 실패 했습니다 (PlayerContext:: BlitRemoteFrameTimeout 속성 참조).
+
+## 선택 사항: BlitRemoteFrameTimeout 설정<a name="BlitRemoteFrameTimeout"></a>
+>[!IMPORTANT]
+> ```PlayerContext::BlitRemoteFrameTimout``` 버전 [2.0.9](holographic-remoting-version-history.md#v2.0.9)부터 지원 됩니다. 
+
+```PlayerContext::BlitRemoteFrameTimeout``` 속성은 새 원격 프레임을 받지 못한 경우 원격 프레임을 다시 사용 하는 시간을 지정 합니다. 
+
+일반적인 사용 사례는 특정 시간 동안 새 프레임을 받지 못한 경우 BlitRemoteFrame 시간 제한을 사용 하 여 빈 화면을 표시 하는 것입니다. 사용 하도록 설정 하면 ```BlitRemoteFrame``` 메서드의 반환 형식을 사용 하 여 로컬로 렌더링 된 대체 콘텐츠로 전환할 수도 있습니다. 
+
+시간 제한을 사용 하도록 설정 하려면 속성 값을 100ms 보다 크거나 같은 기간으로 설정 합니다. 시간 제한을 사용 하지 않도록 설정 하려면 속성을 0 duration으로 설정 합니다. 제한 시간을 설정 하 고 설정 된 기간 동안 원격 프레임을 받지 못한 경우에는 BlitRemoteFrame이 실패 하 고 새 원격 프레임을 받을 때까지 ```Failed_RemoteFrameTooOld``` 반환 됩니다.
+
+```cpp
+using namespace std::chrono_literals;
+
+// Set the BlitRemoteFrame timeout to 0.5s
+m_playerContext.BlitRemoteFrameTimeout(500ms);
+```
 
 ## <a name="optional-get-statistics-about-the-last-remote-frame"></a>선택 사항: 마지막 원격 프레임에 대 한 통계 가져오기
 
-성능 또는 네트워크 문제를 진단 하려면 ```PlayerContext::LastFrameStatistics``` 속성을 통해 마지막 원격 프레임에 대 한 통계를 검색할 수 있습니다. [HolographicFrame::P resentusingcurrentprediction](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)를 호출 하는 동안 통계가 업데이트 됩니다.
+성능 또는 네트워크 문제를 진단 하려면 ```PlayerContext::LastFrameStatistics``` 속성을 통해 마지막 원격 프레임에 대 한 통계를 검색할 수 있습니다. [HolographicFrame::P resentusingcurrentprediction](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction)를 호출 하는 동안 통계가 업데이트 됩니다.
 
 ```cpp
 // Get statistics for the last presented frame.
 winrt::Microsoft::Holographic::AppRemoting::PlayerFrameStatistics statistics = m_playerContext.LastFrameStatistics();
 ```
 
-자세한 내용은```Microsoft.Holographic.AppRemoting.idl``` [파일](#idl)의 ```PlayerFrameStatistics```설명서를 참조 하세요.
+자세한 내용은 ```Microsoft.Holographic.AppRemoting.idl``` [파일](#idl)의 ```PlayerFrameStatistics``` 설명서를 참조 하십시오.
 
 ## <a name="optional-custom-data-channels"></a>선택 사항: 사용자 지정 데이터 채널
 
 사용자 지정 데이터 채널은 이미 설정 된 원격 연결을 통해 사용자 데이터를 전송 하는 데 사용할 수 있습니다. 자세한 내용은 [사용자 지정 데이터 채널](holographic-remoting-custom-data-channels.md) 을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
-* [사용자 지정 Holographic 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
+* [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
 * [Holographic 원격을 사용 하 여 보안 연결 설정](holographic-remoting-secure-connection.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
-* [Holographic 원격 소프트웨어 사용 조건](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)

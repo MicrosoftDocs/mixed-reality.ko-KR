@@ -6,22 +6,22 @@ ms.author: willyang
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 앱 패턴
-ms.openlocfilehash: 97f8039dcd9bbf8ee3d6c7be926db16b60a76b97
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 62a0b76ba7853262a46b34466a6d3b0567bc137d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63549123"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438269"
 ---
 # <a name="types-of-mixed-reality-apps"></a>혼합 현실 앱 유형
 
-Windows Mixed Reality 용 응용 프로그램을 개발할 때의 이점 중 하나는 플랫폼에서 지원할 수 있는 환경 스펙트럼이 있다는 것입니다. Windows Mixed Reality는 완전히 몰입 형 가상 환경에서 사용자의 현재 환경에 대 한 경량 정보를 계층화 하는 데 사용 되는 강력한 도구 집합을 제공 합니다. 앱 작성자는 이러한 스펙트럼의 경험에 따라 개발 프로세스 초기에를 파악 하는 것이 중요 합니다. 이러한 결정은 궁극적으로 앱 디자인 구성을 및 개발에 대 한 기술 경로에 영향을 줍니다.
+Windows Mixed Reality용 앱 개발의 장점 중 하나는 플랫폼에서 지원할 수 있는 다양한 환경이 있다는 것입니다. Windows Mixed Reality는 완전 몰입형 가상 환경에서 사용자의 현재 환경에 대한 경량 정보 계층화까지 모든 환경에 생동감을 주는 강력한 도구 세트를 제공합니다. 앱 작성자는 이러한 스펙트럼의 경험에 따라 개발 프로세스 초기에를 파악 하는 것이 중요 합니다. 이러한 결정은 궁극적으로 앱 디자인 구성을 및 개발에 대 한 기술 경로에 영향을 줍니다.
 
 ## <a name="enhanced-environment-apps-hololens-only"></a>향상 된 환경 앱 (HoloLens에만 해당)
 
 혼합 현실에서 사용자에 게 가치를 가져올 수 있는 가장 강력한 방법 중 하나는 사용자의 현재 환경에서 디지털 정보 또는 콘텐츠 배치를 촉진 하는 것입니다. 이는 향상 된 환경 앱입니다. 이 접근 방식은 실제 환경에서 디지털 콘텐츠를 상황별로 배치 하는 것이 가장 중요 하며 사용자 환경에서 사용자의 실제 환경 "존재"를 유지 하는 응용 프로그램에 널리 사용 됩니다. 이 접근 방식을 사용 하면 사용자가 확인 하는 혼합 현실 앱이 실제로 환경의 일부인 것으로 간주 하 여 실제 작업에서 디지털 작업으로 쉽게 이동 하 고 쉽게 다시 안으로 수 있습니다.
 
-![향상 된 환경 앱](images/enhancedenvironmentapps-640px.jpg)<br>
+향상 된 환경 앱을 ![](images/enhancedenvironmentapps-640px.jpg)<br>
 *향상 된 환경 앱*
 
 **예제 사용**
@@ -60,7 +60,7 @@ Windows Mixed Reality가 사용자 환경을 인식 하 고 매핑하는 기능�
 * 사용자가 자체와 완전히 분리 된 공간을 사용할 수 있도록 하는 몰입 형 앱 (즉, 유명한 빌딩, 박물관, 인기 있는 도시를 안내)
 * 사용자를 중심으로 이벤트 또는 시나리오를 오케스트레이션 하는 몰입 형 앱 (즉, 전투 또는 성능)
 
-## <a name="see-also"></a>참조
-* [개발 개요](development-overview.md)
+## <a name="see-also"></a>참고 항목
+* [개발 개요](development.md)
 * [앱 모델](app-model.md)
 * [앱 보기](app-views.md)

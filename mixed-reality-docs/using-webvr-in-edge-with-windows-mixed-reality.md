@@ -6,12 +6,12 @@ ms.author: yabahman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: WebVR, WebXR, WinMR, WebAR, web vr, web xr, 웹 mr, 웹 ar, 360, 360 비디오, 360 비디오, 360 photo, 360 사진, 360 콘텐츠, 몰입 형 웹, immersiveweb, IW
-ms.openlocfilehash: fab17f4dcecc34d8f1ca4836dce6de90522899cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 87805d2c40e9e63cdf3e432189b9deb7d575a380
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548763"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437208"
 ---
 # <a name="using-webvr-in-microsoft-edge-with-windows-mixed-reality"></a>Windows Mixed Reality와 함께 Microsoft Edge에서 WebVR 사용
 
@@ -25,14 +25,14 @@ WebVR API는 스테레오 WebGL 장면을 HMD로 다시 렌더링 하는 데 사
 
 모던 헤드셋의 WebVR 콘텐츠에 액세스 하기 위한 지침은 [열성적인 'S Guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/webvr)(영문)에서 찾을 수 있습니다.
 
-## <a name="see-also"></a>관련 항목
-* [WebVR 정보](http://webvr.info)
+## <a name="see-also"></a>참고 항목
+* [WebVR 정보](https://webvr.info)
 * [WebVR 사양](https://w3c.github.io/webvr/)
 * [WebVR API](https://msdn.microsoft.com/library/mt806281(v=vs.85).aspx)
 * [WebGL API](https://msdn.microsoft.com/library/bg182648(v=vs.85).aspx)
 * [게임 패드 API](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) 및 [게임 패드 확장](https://w3c.github.io/gamepad/extensions.html)
 * [WebGL에서 손실 된 컨텍스트 처리](https://www.khronos.org/webgl/wiki/HandlingContextLost)
-* [Pointerlock](http://www.w3.org/TR/pointerlock/)
+* [Pointerlock](https://www.w3.org/TR/pointerlock/)
 * [글 Tf](https://www.khronos.org/gltf)
 * [Babylon를 사용 하 여 WebVR 사용](https://docs.microsoft.com/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game)
 

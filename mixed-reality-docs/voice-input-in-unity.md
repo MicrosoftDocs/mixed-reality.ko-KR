@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 음성 입력, KeywordRecognizer, GrammarRecognizer, 마이크, 받아쓰기, 음성
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548687"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438193"
 ---
 # <a name="voice-input-in-unity"></a>Unity의 음성 입력
+
+>[!NOTE]
+>아래 정보 대신, 음성 정확도 결과가 훨씬 더 뛰어난 인식 음성 서비스 SDK 용 Unity 플러그 인을 사용 하는 것이 좋습니다 .이를 통해 대화, 의도 기반 등의 음성 텍스트 디코딩 및 고급 음성 기능에 쉽게 액세스할 수 있습니다. 상호 작용, 번역, 텍스트 음성 변환 및 자연어 음성 인식이 있습니다. 샘플을 찾고 설명서. https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 Unity는 Unity 응용 프로그램에 [음성 입력](voice-input.md) 을 추가 하는 세 가지 방법을 제공 합니다.
 
@@ -37,8 +40,8 @@ KeywordRecognizer (두 가지 유형의 PhraseRecognizers 중 하나)를 사용 
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
-**공간** *UnityEngine. Windows. Speech*<br>
-**종류** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**네임 스페이스:** *Unityengine. Windows. Speech*<br>
+**유형:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
 몇 가지 using 문을 사용 하 여 몇 가지 키 입력을 저장 해야 합니다.
 
@@ -99,12 +102,12 @@ keywordRecognizer.Start();
 
 ### <a name="grammarrecognizer"></a>GrammarRecognizer
 
-**공간** *UnityEngine. Windows. Speech*<br>
-**형식**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**네임 스페이스:** *Unityengine. Windows. Speech*<br>
+**유형**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-GrammarRecognizer는 SRGS를 사용 하 여 인식 문법을 지정 하는 경우에 사용 됩니다. 이는 앱에 몇 개의 키워드 이상이 있거나 더 복잡 한 구를 인식 하거나 명령 집합을 쉽게 설정 하 고 해제 하려는 경우에 유용할 수 있습니다. 참조 파일 형식 정보에 대해 [SRGS XML을 사용 하 여 문법을 만듭니다](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) .
+GrammarRecognizer는 SRGS를 사용 하 여 인식 문법을 지정 하는 경우에 사용 됩니다. 이는 앱에 몇 개의 키워드 이상이 있거나 더 복잡 한 구를 인식 하거나 명령 집합을 쉽게 설정 하 고 해제 하려는 경우에 유용할 수 있습니다. 참조: 파일 형식 정보는 [SRGS XML을 사용 하 여 문법 만들기](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) 를 참조 하세요.
 
-SRGS 문법이 있고 [Streamingassets 폴더](http://docs.unity3d.com/Manual/StreamingAssets.html)의 프로젝트에 있습니다.
+SRGS 문법이 있고 [Streamingassets 폴더](https://docs.unity3d.com/Manual/StreamingAssets.html)의 프로젝트에 있습니다.
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
@@ -141,8 +144,8 @@ grammarRecognizer.Start();
 
 ## <a name="dictation"></a>받아쓰기
 
-**공간** *UnityEngine. Windows. Speech*<br>
-**형식**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
+**네임 스페이스:** *Unityengine. Windows. Speech*<br>
+**유형**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
 DictationRecognizer를 사용 하 여 사용자의 음성을 텍스트로 변환 합니다. DictationRecognizer는 [받아쓰기](voice-input.md#dictation) 기능을 노출 하 고, 가설 및 구가 완료 된 이벤트에 대 한 등록 및 수신 대기를 지원 하므로, 나중에 말할 때 사용자에 게 피드백을 제공할 수 있습니다. Start () 및 Stop () 메서드는 각각 받아쓰기 인식을 사용 하거나 사용 하지 않도록 설정 합니다. 인식기를 사용 하 여 작업을 완료 한 후에는 Dispose () 메서드를 사용 하 여 사용 하는 리소스를 해제 해야 합니다. 이러한 리소스는 가비지 수집 중에 해제 되지 않은 경우 추가 성능 비용으로 자동으로 해제 됩니다.
 

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 좌표계, 공간 좌표계, 전세계 규모, 세계, 규모, 위치, 방향, 앵커, 공간 앵커, 세계 잠금, 전세계 잠금, 지속성, 공유
-ms.openlocfilehash: 27b1dcd86c7edba176ca54840bdd27550736a16d
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387734"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438022"
 ---
 # <a name="spatial-anchors"></a>공간 앵커
 
@@ -22,7 +22,7 @@ ms.locfileid: "68387734"
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 공간</a> 앵커를 사용 하 여 클라우드 앵커를 만들면 응용 프로그램은 여러 HoloLens, IOS 및 Android 장치에서 공간 앵커를 공유할 수 있습니다. 각 장치가 동일한 공간 앵커를 사용 하 여 홀로그램을 렌더링 하도록 하면 홀로그램은 실제 세계의 동일한 위치에 표시 됩니다. 이렇게 실제 세계 공유 환경을 제공합니다.
 * HoloLens, iOS 및 Android 디바이스에서 비대칭 홀로그램 지속에 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>를 사용할 수도 있습니다. 유지되는 클라우드 공간 앵커를 공유하면 여러 디바이스가 동시에 함께 존재하지 않는 경우에도 시간 경과에 따라 같은 지속형 홀로그램을 관찰할 수 있습니다.
 
-5 미터 지름 내에 유지 되는 테더 링 된 desktop 헤드셋에 대 한 대규모 또는 공간 규모의 환경을 제공 하기 위해, 공간 앵커 대신 스테이지 프레임을 사용 하 여 [참조의 스테이지 프레임](coordinate-systems.md#stage-frame-of-reference) 을 사용 하 여 단일 좌표계를 제공 합니다. 모든 콘텐츠를 렌더링 합니다. 그러나 응용 프로그램에서 사용자가 HoloLens에서 5 미터를 wander 수 있게 하려는 경우 건물 전체에 걸쳐 작동 하는 경우 콘텐츠를 안정적으로 유지 하려면 공간 앵커가 필요 합니다.
+5 미터 지름 내에 유지 되는 테더 링 된 desktop 헤드셋에 대 한 대규모 또는 공간 규모의 환경을 위해 일반적으로 공간 앵커 대신 [스테이지 프레임](coordinate-systems.md#stage-frame-of-reference) 을 사용 하 여 단일 좌표계를 제공 합니다. 모든 콘텐츠를 렌더링 합니다. 그러나 응용 프로그램에서 사용자가 HoloLens에서 5 미터를 wander 수 있게 하려는 경우 건물 전체에 걸쳐 작동 하는 경우 콘텐츠를 안정적으로 유지 하려면 공간 앵커가 필요 합니다.
 
 공간 앵커는 세계에서 고정 상태를 유지해야 하는 홀로그램에 적합합니다. 배치된 앵커는 이동할 수 없습니다. 동적 holograms 사용자와 함께 태그를 추가 하는 데 더 적합 한 앵커에 대 한 대안이 있습니다. 고정 참조 프레임(Unity의 세계 좌표의 기초) 또는 일체형 참조 프레임을 사용하여 동적 홀로그램을 배치하는 것이 가장 좋습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "68387734"
 
 일반적으로 사용자는 공간 앵커를 명시적으로 배치 합니다.
 
-예를 들어 HoloLens에서 응용 프로그램은 사용자의 [응시](gaze.md) 광선과 [공간 매핑](spatial-mapping.md) 메시를 교차 하 여 사용자가 홀로그램 위치를 결정할 수 있도록 합니다. 사용자가 해당 홀로그램 위치를 클릭 하 여 교차 지점에 공간 앵커를 만든 다음 해당 앵커 좌표계의 원점에 홀로그램을 놓습니다.
+예를 들어 HoloLens에서 응용 프로그램은 사용자의 [응시](gaze-and-commit.md) 광선과 [공간 매핑](spatial-mapping.md) 메시를 교차 하 여 사용자가 홀로그램 위치를 결정할 수 있도록 합니다. 사용자가 해당 홀로그램 위치를 클릭 하 여 교차 지점에 공간 앵커를 만든 다음 해당 앵커 좌표계의 원점에 홀로그램을 놓습니다.
 
 로컬 공간 앵커는 쉽고 빠르게 만들 수 있습니다. 여러 앵커가 기본 센서 데이터를 공유할 수 있는 경우 시스템은 내부 데이터를 통합 합니다. 일반적으로 holograms의 고정 그룹과 같이 아래에 설명 된 경우를 제외 하 고 사용자가 명시적으로 배치 하는 각 홀로그램에 대해 새 로컬 공간 앵커를 만들어야 합니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "68387734"
 
 클라우드 공간 앵커의 경우 상황에 따라 스토리지를 확장할 수 있습니다. 필요한 만큼 클라우드 앵커를 저장할 수 있으며, 사용자가 해당 앵커에서 holograms를 다시 찾을 필요가 없는 경우에만 릴리스를 해제할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [좌표계](coordinate-systems.md)
 * [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

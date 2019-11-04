@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 배포, unity, visual studio, HoloLens, HoloLens 2, 모던 헤드셋
-ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522315"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436968"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Unity 및 Visual Studio 사용에 대 한 모범 사례
 
@@ -35,7 +35,7 @@ Unity의 .NET scripting 백 엔드 지원은 Unity 2018에서 더 이상 사용 
 
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 
-다운로드 [Visual Studio Tools for Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
+다운로드 [Visual Studio Tools for Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
 **Visual Studio Tools for Unity의 이점**
 * 중단점을 배치 하 고 변수와 복잡 한 식을 평가 하 여 Visual Studio에서 Unity의 편집기 내 재생 모드를 디버그 합니다.
@@ -57,7 +57,7 @@ UWP Visual Studio 솔루션을 소스 제어에 체크 인 하면 새 Windows SD
 
 자산을 텍스트 형식으로 저장 하면 Visual Studio에서 콘텐츠 변경 차이을 보다 쉽게 검토할 수 있습니다. **Asset Serialization** 모드를 **텍스트 강제 적용**으로 변경 하 여 "> 프로젝트 설정 편집 > 편집기"에서이 기능을 사용 하도록 설정할 수 있습니다. 그러나 텍스트 자산 파일 변경 내용을 병합 하는 것은 오류가 발생 하기 쉬우며 권장 되지 않으므로 소스 제어 시스템에서 단독 이진 체크 아웃을 사용 하도록 설정 하는 것이 좋습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [Visual Studio Tools for Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [IL2CPP에 대 한 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*Unityscriptanalyzer* Visual Studio 확장](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

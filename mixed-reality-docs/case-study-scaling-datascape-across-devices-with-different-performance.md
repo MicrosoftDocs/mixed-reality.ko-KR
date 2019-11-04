@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 모던 헤드셋, 성능 최적화, VR, 사례 연구
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523379"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436508"
 ---
 # <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>사례 연구-다양 한 성능으로 장치에서 고가는 크기 조정
 
@@ -43,7 +43,7 @@ Map의 경우 그림자 및 복잡 한 조명과 같은 표준 Unity 기능을 �
 
 ## <a name="background-on-cloud-data"></a>클라우드 데이터의 배경
 
-클라우드 데이터는 noaa 서버 http://nomads.ncep.noaa.gov/) 에서 다운로드 되었으며, 각각 클라우드의 위쪽 및 아래쪽 높이와 표의 각 셀에 대 한 클라우드의 밀도를 포함 하는 세 개의 고유한 2d 계층으로 제공 됩니다. 데이터는 각 구성 요소가 질감의 빨강, 녹색 및 파랑 구성 요소에 저장 된 클라우드 정보 질감으로 처리 되어 GPU에 쉽게 액세스할 수 있습니다.
+클라우드 데이터는 NOAA 서버 (https://nomads.ncep.noaa.gov/) 에서 다운로드 되었으며, 각각 클라우드의 위쪽 및 아래쪽 높이와 표의 각 셀에 대 한 클라우드의 밀도를 포함 하는 세 개의 고유한 2D 계층으로 제공 됩니다. 데이터는 각 구성 요소가 질감의 빨강, 녹색 및 파랑 구성 요소에 저장 된 클라우드 정보 질감으로 처리 되어 GPU에 쉽게 액세스할 수 있습니다.
 
 ## <a name="geometry-clouds"></a>기 하 도형 클라우드
 
@@ -306,16 +306,16 @@ Cloudy vs와 같이 다양 한 렌더링 조건이 있는 앱에서 안정적인
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>소프트웨어 엔지니어@Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>소프트웨어 엔지니어 @Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>소프트웨어 엔지니어@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>소프트웨어 엔지니어 @Microsoft</td>
 </tr>
 </table>
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)
 * [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)
 

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱, uwp, 제출, 제출, 필터, 메타 데이터, 시스템 요구 사항, 키워드, wack, 인증, 패키지, appx, 머천다이징
-ms.openlocfilehash: af8ee89b2cae42fc3abeec072acde20f437eb820
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 63377239498319e84666ba0dbdbe36ce626901c5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387744"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437440"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Microsoft Store에 앱 제출
 
@@ -27,9 +27,9 @@ ms.locfileid: "68387744"
 
 | 필수 자산 | 권장 크기 조정 | 이미지 형식 | 표시 되는 위치 | 
 |----------|----------|----------|------------------|
-| 71x71 정사각형 로고 | Any |  PNG | 해당 사항 없음 | 
+| 71x71 정사각형 로고 | 임의 |  PNG | 해당 없음 | 
 | 150x150 정사각형 로고 | 150x150 (100% scale) 또는 225x225 (150% scale) | PNG | Pin 및 모든 앱 시작 (310x310이 제공 되지 않은 경우), 스토어 검색 제안, 스토어 목록 페이지, 스토어 찾아보기, 스토어 검색 | 
-|  310x150 너비가 긴 로고 |  Any  |  PNG  |  해당 사항 없음 | 
+|  310x150 너비가 긴 로고 |  임의  |  PNG  |  해당 없음 | 
 |  스토어 로고 |  75x75 (150% scale)  |  PNG  |  파트너 센터, 보고서 앱, 리뷰 작성, 내 라이브러리 | 
 |  시작 화면 |  930x450 (150% scale)  |  PNG  |  2D 앱 시작 관리자 (슬레이트) | 
 
@@ -53,7 +53,7 @@ Microsoft에서 게시 한 일부 앱의 응용 프로그램에 3D 시작 관리
 
 Visual Studio에서 새 유니버설 Windows 프로젝트를 만들 때 대상 및 최소 Windows 버전을 설정 하 라는 메시지가 표시 됩니다. "프로젝트" 메뉴에서 기존 프로젝트에 대 한이 설정을 변경 하 고 드롭다운 메뉴의 아래쪽에 있는 "앱 이름 > 속성 <"로 변경할 수도 있습니다.
 
-![Visual Studio 2019의 최소 및 대상 플랫폼 버전 설정](images/visual-studio-min-version-500px.png)<br>
+Visual Studio 2019의 최소 및 대상 플랫폼 버전 ![설정](images/visual-studio-min-version-500px.png)<br>
 Visual Studio에서 최소 및 대상 플랫폼 버전 설정
 
 ### <a name="specifying-target-device-families"></a>대상 장치 패밀리 지정
@@ -116,7 +116,7 @@ Visual Studio 솔루션의 프로젝트 메뉴에서 "스토어 > 앱을 스토�
 
 일반적인 지침은 장치에 적용 가능한 가장 높은 버전 번호 패키지가 저장소에 의해 배포 되는 것입니다.
 
-Windows 범용 패키지와 Holographic 패키지 및 Windows 범용 패키지의 버전 번호가 높은 경우 HoloLens 사용자는 Windows. Holographic 대신 더 높은 버전 번호의 Windows를 다운로드 합니다. 패키지. 이 문제에 대 한 솔루션 몇 가지가 있습니다.
+Windows 범용 패키지와 Holographic 패키지 및 Windows 범용 패키지의 버전 번호가 높은 경우 HoloLens 사용자는 Windows. Holographic 대신 더 높은 버전 번호의 Windows를 다운로드 합니다. 패키지. 이 문제에 대 한 몇 가지 해결 방법이 있습니다.
 1. Holographic와 같은 플랫폼별 패키지의 버전이 Windows와 같은 플랫폼을 알 수 없는 패키지 보다 항상 높은 지 확인 합니다.
 2. 플랫폼별 패키지를 사용 하는 경우에는 앱을 Windows로 패키지 하지 마십시오. 대신, 사용 하려는 특정 플랫폼에 대 한 Windows 범용 패키지를 패키지 합니다.
 
@@ -182,7 +182,7 @@ Unity 프로젝트를 기반으로 하는 혼합 현실 앱을 제출 하는 경
 
 "최소 하드웨어" 또는 입력 형식에 대 한 "권장 하드웨어" 확인란을 선택 하는 방법에 대해 설명 합니다. 
 
-이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
+예를 들어 다음과 같은 가치를 제공해야 합니다. 
 * 게임에 동작 컨트롤러가 필요 하지만 마이크를 통해 음성 입력을 허용 하는 경우 "Windows Mixed Reality 동작 컨트롤러" 옆에 있는 "최소 하드웨어" 확인란을 선택 하 고 "마이크" 옆에 있는 "권장 하드웨어" 확인란을 선택 합니다. 
 * Xbox 컨트롤러/게임 패드 또는 동작 컨트롤러 중 하나를 사용 하 여 게임을 재생할 수 있는 경우 "Xbox 컨트롤러 또는 게임 패드" 옆에 있는 "최소 하드웨어" 확인란을 선택 하 고 "Windows Mixed Reality 동작" 옆의 "권장 하드웨어" 확인란을 선택 합니다. 컨트롤러의 경우 "동작 컨트롤러는 게임 패드의 단계별 경험을 제공할 가능성이 높습니다.
 
@@ -190,7 +190,7 @@ Unity 프로젝트를 기반으로 하는 혼합 현실 앱을 제출 하는 경
 
 응용 프로그램을 사용 하는 데 몰입 형 헤드셋이 필요 하거나 선택 사항 인지 여부를 나타내는 것은 고객 만족도 및 교육에 매우 중요 합니다.
 
-앱을 몰입 형 헤드셋을 통해서만 사용할 *수 있는 경우* "Windows Mixed Reality 모던 헤드셋" 옆에 있는 "최소 하드웨어" 확인란을 선택 합니다. 이는 구매 단추 위에 경고로 스토어의 앱 제품 세부 정보 페이지에 표시 되며, 고객이 기존 데스크톱 앱과 같은 PC에서 작동 하는 앱을 구매 하는 것으로 생각 하지 않습니다.
+앱을 몰입 형 헤드셋을 통해서만 사용할 수 있는 경우 "Windows Mixed Reality 모던 헤드셋" 옆 *에 있는 "* 최소 하드웨어" 확인란을 선택 합니다. 이는 구매 단추 위에 경고로 스토어의 앱 제품 세부 정보 페이지에 표시 되며, 고객이 기존 데스크톱 앱과 같은 PC에서 작동 하는 앱을 구매 하는 것으로 생각 하지 않습니다.
 
 앱이 기존 PC 앱과 같은 데스크톱에서 실행 되는 경우 모던 헤드셋이 연결 된 경우 (앱의 전체 콘텐츠를 사용할 수 있는지 여부에 관계 없이) VR 환경을 제공 하지만, "Windows Mixed Reality" 옆의 "권장 하드웨어" 확인란을 선택 합니다. 모던 헤드셋. " 앱이 몰입 형 헤드셋이 연결 되지 않은 기존 데스크톱 앱으로 작동 하는 경우 앱의 제품 세부 정보 페이지에서 [구매] 단추 위에 경고가 표시 되지 않습니다.
 
@@ -204,7 +204,7 @@ Unity 프로젝트를 기반으로 하는 혼합 현실 앱을 제출 하는 경
 
 혼합 현실 앱에서 PC에 연결 된 몰입 형 헤드셋을 사용 하는 경우에만 적용 됩니다. 혼합 현실 앱이 HoloLens 에서만 실행 되는 경우 HoloLens에 하드웨어 구성이 하나만 있으므로 PC 사양을 나타낼 필요가 없습니다.
 
-### <a name="device-family-availability"></a>디바이스 패밀리 가용성
+### <a name="device-family-availability"></a>장치 패밀리 가용성
 
 Visual Studio에서 [앱을 올바르게 패키지](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) 한 경우 앱 제출 프로세스의 패키지 페이지에서 앱을 업로드 하면 앱을 사용할 수 있는 장치 패밀리를 식별 하는 테이블이 생성 됩니다.
 
@@ -216,7 +216,7 @@ Visual Studio에서 [앱을 올바르게 패키지](https://docs.microsoft.com/w
 >[!TIP]
 >파트너 센터에서 패키지 매니페스트와 앱/게시자 계정 정보 간의 불일치와 관련 된 응용 프로그램의 패키지를 업로드할 때 많은 개발자가 오류를 실행 합니다. 이러한 오류는 Windows 개발자 계정에 연결 된 것과 동일한 계정 (파트너 센터에 로그인 하는 데 사용 하는 계정)을 사용 하 여 Visual Studio에 로그인 하면 자주 방지할 수 있습니다. 동일한 계정을 사용 하는 경우 앱을 패키지 하기 전에 Microsoft Store에서 해당 id와 앱을 연결할 수 있습니다.
 
-![앱을 Microsoft Store 연결](images/associate-your-app-700px.png)<br>
+앱을 Microsoft Store에 연결 ![](images/associate-your-app-700px.png)<br>
 Visual Studio의 Microsoft Store에 앱 연결
 
 ### <a name="store-listing-page"></a>스토어 목록 페이지
@@ -226,16 +226,16 @@ Visual Studio의 Microsoft Store에 앱 연결
 >[!IMPORTANT]
 >앱이 스토어에 의해 올바르게 분류 되 고 Windows Mixed Reality 고객이 검색할 수 있도록 하려면 앱에 대 한 "검색 용어" 중 하나로 **"Windows Mixed reality"** 를 추가 해야 합니다. "공유 필드"를 확장 하 여 검색 단어를 찾을 수 있습니다. 섹션).
 
-![검색 용어에 Windows Mixed Reality 추가](images/search-terms-800px.png)<br>
+검색 단어에 Windows Mixed Reality를 추가 ![](images/search-terms-800px.png)<br>
 용어 검색에 "Windows Mixed Reality" 추가
 
 ## <a name="offering-a-free-trial-for-your-game-or-app"></a>게임 또는 앱에 대 한 무료 평가판 제공
 
 대부분의 소비자는 Windows Mixed Reality 모던 헤드셋을 구입 하기 전에 가상 현실에 대 한 경험이 없도록 제한 됩니다. 이는 강한 게임에서 짐작할 수 있는 것을 알 수 없으며 몰입 형 환경에서 자신의 편안한 임계값에 익숙하지 않을 수 있습니다. 많은 고객이 Windows mixed reality [pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)로 직장 배지가 달린 되지 않는 Pc에서 Windows mixed reality 몰입 형 헤드셋을 사용해 볼 수도 있습니다. 이러한 고려 사항 때문에 유료 현실 앱 또는 게임의 [무료 평가판](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) 을 제공 하는 것이 좋습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [혼합 현실](mixed-reality.md)
-* [개발 개요](development-overview.md)
+* [개발 개요](development.md)
 * [앱 보기](app-views.md)
 * [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)
 * [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)

@@ -1,25 +1,24 @@
 ---
-title: Windows Mixed Reality 용 SteamVR 응용 프로그램 업데이트
+title: SteamVR 응용 프로그램 업데이트
 description: Windows Mixed Reality 헤드셋의 호환성을 최대화 하기 위해 SteamVR 응용 프로그램을 업데이트 하는 최선의 방법입니다.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: SteamVR, 호환성
-ms.openlocfilehash: db21651df8e586edf500f0d05def4b1ea5474284
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6479130b14b8b50828ebecd3a648fd8a425aec15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548665"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438207"
 ---
-# <a name="updating-your-steamvr-application-for-windows-mixed-reality"></a>Windows Mixed Reality 용 SteamVR 응용 프로그램 업데이트
-
+# <a name="updating-your-steamvr-application"></a>SteamVR 응용 프로그램 업데이트
 개발자가 Windows Mixed Reality 헤드셋에서 실행할 SteamVR 환경을 테스트 하 고 최적화 하는 것이 좋습니다. 이 설명서는 개발자가 Windows Mixed Reality에서 뛰어난 환경을 실행 하기 위해 수행할 수 있는 일반적인 개선 사항에 대해 설명 합니다.
 
 ## <a name="initial-setup-instructions"></a>초기 설치 지침
 
-Windows Mixed Reality에서 게임 또는 앱 테스트를 시작 하려면 먼저 [시작 가이드](http://aka.ms/WindowsMixedRealitySteamVR) 를 따르세요.
+Windows Mixed Reality에서 게임 또는 앱 테스트를 시작 하려면 먼저 [시작 가이드](https://aka.ms/WindowsMixedRealitySteamVR) 를 따르세요.
 
 ## <a name="controller-models"></a>컨트롤러 모델
 1. 앱이 컨트롤러 모델을 렌더링 하는 경우:
@@ -59,13 +58,13 @@ Windows Mixed Reality 동작 컨트롤러는 다른 SteamVR 동작 컨트롤러�
 
 사용자 의견은 Windows Mixed Reality SteamVR 환경을 개선 하는 데 유용 합니다. [Windows 피드백 허브](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/filing-feedback)를 통해 모든 피드백 및 버그를 제출 하세요. [SteamVR 피드백을 최대한 활용 하는 방법에 대 한](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality#sharing-feedback-on-steamvr)몇 가지 팁은 다음과 같습니다.
 
-공유에 대 한 질문이 나 의견이 있는 경우 [스트림 포럼](http://steamcommunity.com/app/719950/discussions/)에서 연락할 수도 있습니다.
+공유에 대 한 질문이 나 의견이 있는 경우 [스트림 포럼](https://steamcommunity.com/app/719950/discussions/)에서 연락할 수도 있습니다.
 
 ## <a name="faqs-and-troubleshooting"></a>Faq 및 문제 해결
 
 경험을 설정 하거나 재생 하는 일반적인 문제를 실행 하는 경우 [최신 문제 해결 단계를 확인](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#steamvr)하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [도구 설치](install-the-tools.md)
 * [헤드셋 및 동작 컨트롤러 드라이버 기록](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 * [Windows Mixed Reality 최소 PC 하드웨어 호환성 지침](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)

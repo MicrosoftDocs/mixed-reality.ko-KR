@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloSketch, HoloLens, Windows Mixed Reality, 스케치, 앱
-ms.openlocfilehash: d7f94a09bf4a8a16000c2345adf1a046dab4bd15
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d6d22aae7709bcc1a33b142a100d1a0f9645d3cc
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524404"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436948"
 ---
 # <a name="case-study---building-holosketch-a-spatial-layout-and-ux-sketching-app-for-hololens"></a>사례 연구-HoloSketch, 공간 레이아웃 및 HoloLens 용 UX 스케치 앱 빌드
 
@@ -20,7 +20,7 @@ HoloSketch는 holographic 환경을 빌드하는 데 도움이 되는 장치 상
 ![HoloSketch: HoloLens 용 공간 레이아웃 및 UX 스케치 앱입니다.](images/holosketch-image-01-640px.png)<br>
 *HoloSketch: HoloLens 용 공간 레이아웃 및 UX 스케치 앱*
 
-![빠른 시각화 및 반복을 위한 간단한 UX 레이아웃 도구입니다.](images/holosketch-image-02.png)<br>
+빠른 시각화 및 반복을 위한 간단한 UX 레이아웃 도구를 ![합니다.](images/holosketch-image-02.png)<br>
 *빠른 시각화 및 반복을 위한 간단한 UX 레이아웃 도구입니다.*
 
 ## <a name="features"></a>기능
@@ -49,7 +49,7 @@ OneDrive를 통해 혼합 된 현실 공간으로 PNG/JPG 이미지 또는 3D FB
 
 HoloSketch는 Bluetooth 마우스/키보드, 제스처 및 음성 명령을 지원 합니다.
 
-## <a name="background"></a>배경
+## <a name="background"></a>백그라운드
 
 ### <a name="importance-of-experiencing-your-design-in-the-device"></a>장치에서 디자인이 발생 하는 중요성
 
@@ -70,21 +70,21 @@ UX 흐름과 시나리오를 다른 사용자에 게 효과적으로 전달 하�
 
 HoloSketch를 사용 하 여 개발 도구 및 장치 포털 페어링을 포함 하지 않고이 프로세스를 간소화 하려고 했습니다. OneDrive를 사용 하 여 사용자는 2D/3D 자산을 HoloLens에 쉽게 배치할 수 있습니다.
 
-![HoloSketch를 사용한 간소화 된 프로세스](images/holosketch-image-04-1000px.png)<br>
+HoloSketch](images/holosketch-image-04-1000px.png) ![간소화 된 프로세스<br>
 *HoloSketch를 사용한 간소화 된 프로세스*
 
 ### <a name="encouraging-three-dimensional-design-thinking-and-solutions"></a>3 차원 디자인 고려 및 솔루션을 장려 합니다.
 
-이 도구를 통해 디자이너는 진정한 3 차원 공간에서 솔루션을 탐색 하 고 2D로는 중단 하지 않을 수 있습니다. Hololens의 경우 배경이 실제 세계 이기 때문에 UI에 대 한 3D 배경을 만드는 방법에 대해 생각해 서는 안 됩니다. HoloSketch은 디자이너에서 Hololens의 3D 디자인을 쉽게 탐색 하는 방법을 엽니다.
+이 도구를 통해 디자이너는 진정한 3 차원 공간에서 솔루션을 탐색 하 고 2D로는 중단 하지 않을 수 있습니다. HoloLens의 경우 배경이 실제 세계 이기 때문에 UI에 대 한 3D 배경을 만드는 방법에 대해 생각해 서는 안 됩니다. HoloSketch은 디자이너에서 HoloLens의 3D 디자인을 쉽게 탐색 하는 방법을 엽니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기를
 
 ### <a name="how-to-import-2d-images-jpgpng-into-holosketch"></a>2D 이미지 (JPG/PNG)를 HoloSketch로 가져오는 방법
 
 * ' Documents/HoloSketch ' OneDrive 폴더에 JPG/PNG 이미지를 업로드 합니다.
 * HoloSketch의 OneDrive 메뉴에서 이미지를 선택 하 고 환경에 저장할 수 있습니다.
 
-![2D 이미지 가져오기](images/import-2d-images-1000px.jpg)<br>
+2D 이미지를 가져오는 ![](images/import-2d-images-1000px.jpg)<br>
 *OneDrive를 통해 이미지 및 3D 개체 가져오기*
 
 ### <a name="how-to-import-3d-objects-into-holosketch"></a>HoloSketch에 3D 개체를 가져오는 방법
@@ -118,17 +118,17 @@ OneDrive 폴더에 업로드 하기 전에 다음 단계에 따라 3D 개체를 
    ![검사기 패널의 아래쪽에서 드롭다운을 클릭 하 고 새 고유 이름을 할당 합니다.](images/holosketch-14-assetbundles-1000px.png)
 
 10. 모델 개체에 대 한 미리 보기 이미지를 준비 합니다. 
-   ![이미지를 프로젝트 패널로 끌고 개체에 사용 되는 이름을 할당 합니다.](images/holosketch-15-assetbundles-1000px.png)
+   이미지를 프로젝트 패널로 끌어와 개체에 사용 되는 이름을 할당 ![합니다.](images/holosketch-15-assetbundles-1000px.png)
 
 11. Unity 프로젝트의 ' Asset ' 폴더 아래에 ' Assetbundles ' 이라는 폴더를 만듭니다.
 
 12. 자산 메뉴에서 ' AssetBundles 빌드 '를 선택 하 여 파일을 생성 합니다. 
-   ![자산 메뉴에서 ' AssetBundles 빌드 '를 선택 하 여 파일을 생성 합니다.](images/holosketch-15a-assetbundles.png)
+   자산 메뉴에서 ![' AssetBundles 빌드 '를 선택 하 여 파일을 생성 합니다.](images/holosketch-15a-assetbundles.png)
 
 
 13. **생성 된 파일을 OneDrive의/Files/Documents/HoloSketch 폴더에 업로드 합니다.** Asset_unique_name 파일만 업로드 합니다. 매니페스트 파일이 나 AssetBundles 파일을 업로드할 필요가 없습니다. <br>
-![파일/문서/HoloSketch/폴더](images/holosketch-onedriveupload-1000px.png)
-![에 파일 추가 HoloSketch의 OneDrive 메뉴에 3d 개체가 추가 된 것을 볼 수 있습니다.](images/holosketch-14-onedriveexample-1000px.jpg)
+파일/문서/HoloSketch/폴더 ![](images/holosketch-onedriveupload-1000px.png)
+에 파일을 추가 ![HoloSketch의 OneDrive 메뉴에 3D 개체가 추가 된 것을 볼 수](images/holosketch-14-onedriveexample-1000px.jpg)
 
 ## <a name="how-to-manipulate-the-objects"></a>개체를 조작 하는 방법
 
@@ -136,7 +136,7 @@ HoloSketch는 3D 소프트웨어에서 널리 사용 되는 기존 인터페이�
 
 ### <a name="object-manipulation-modes"></a>개체 조작 모드
 
-![개체를 조작 하는 방법](images/holosketch-image-06-1000px.png)<br>
+개체를 조작 하는 방법 ![](images/holosketch-image-06-1000px.png)<br>
 *개체를 조작 하는 방법*
 
 ### <a name="contextual-and-tool-belt-menus"></a>상황별 및 도구 벨트 메뉴
@@ -147,11 +147,11 @@ HoloSketch는 3D 소프트웨어에서 널리 사용 되는 기존 인터페이�
 
 메뉴 항목:
 * **레이아웃 화면:** 이는 여러 개체를 레이아웃 하 고 그룹으로 관리할 수 있는 3D 그리드 시스템입니다. 레이아웃 화면에서 두 번 탭 하 여 개체를 추가 합니다.
-* **기본형** Massing 연구에는 큐브, 구, 실린더 및 원추를 사용 합니다.
+* **기본 형식:** Massing 연구에는 큐브, 구, 실린더 및 원추를 사용 합니다.
 * **OneDrive:** OneDrive 메뉴를 열어 개체를 가져옵니다.
 * **도움말:** 도움말 화면을 표시 합니다.
 
-![상황에 맞는 메뉴](images/holosketch-image-07.png)<br>
+상황에 맞는 메뉴를 ![](images/holosketch-image-07.png)<br>
 *상황에 맞는 메뉴*
 
 **도구 벨트 메뉴 사용**
@@ -160,7 +160,7 @@ HoloSketch는 3D 소프트웨어에서 널리 사용 되는 기존 인터페이�
 
 ## <a name="using-keyboard-gestures-and-voice-commands"></a>키보드, 제스처 및 음성 명령 사용
 
-![키보드, 제스처 및 음성 명령](images/holosketch-image-08-1000px.png)<br>
+키보드, 제스처 및 음성 명령 ![](images/holosketch-image-08-1000px.png)<br>
 *키보드, 제스처 및 음성 명령*
 
 ## <a name="download-the-app"></a>앱 다운로드
@@ -169,8 +169,8 @@ HoloSketch는 3D 소프트웨어에서 널리 사용 되는 기존 인터페이�
 <tr>
 <td style="border-style: none" width="60px"><img alt="HoloSketch app icon" width="60" height="60" src="images/holosketch-app-icon.png">
 </td>
-<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">Microsoft Store에서 무료로 HoloSketch 앱 다운로드 및 설치</a>
-</td>
+<td style="border-style: none"><a href="https://www.microsoft.com/store/p/holosketch/9p3br4t5m4tv">Microsoft Store
+에서 무료로 HoloSketch 앱을 다운로드 하 여 설치</a> 합니다.</td>
 </tr>
 </table>
 
@@ -190,10 +190,10 @@ HoloSketch는 3D 소프트웨어에서 널리 사용 되는 기존 인터페이�
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>동 Yoon 공원</b><br>UX 디자이너@Microsoft</td>
+<td style="border-style: none"><b>동 Yoon 공원</b><br>UX 디자이너 @Microsoft</td>
 </tr>
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Patrick Sebring" width="60" height="60" src="images/paseb-60px.jpg"></td>
-<td style="border-style: none"><b>Patrick Sebring</b><br>개발@Microsoft</td>
+<td style="border-style: none"><b>Patrick Sebring</b><br>개발자 @Microsoft</td>
 </tr>
 </table> 

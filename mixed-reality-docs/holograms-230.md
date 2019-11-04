@@ -3,18 +3,18 @@ title: MR 공간 230-공간 매핑
 description: Unity, Visual Studio 및 HoloLens를 사용 하 여이 코딩 연습을 수행 하 여 공간 매핑 개념에 대 한 자세한 내용을 알아보세요.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, 아카데미, 자습서, 공간 매핑, 표면 재구성, 메시
-ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: cf4a2dd3e5eb74c0aaf849442e5f5e404d7cb661
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993557"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434573"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
 
 <br>
 
@@ -40,9 +40,9 @@ ms.locfileid: "64993557"
 </tr>
 </table>
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 * 몇 가지 C# 기본적인 프로그래밍 기능.
@@ -69,7 +69,7 @@ ms.locfileid: "64993557"
 >[!VIDEO https://www.youtube.com/embed/y2Y4LhK6TEM]
 
 * **Unity**를 시작 합니다.
-* 새로 만들기 **를 선택 하** 여 새 프로젝트를 만듭니다.
+* 새로 **만들기를 선택 하** 여 새 프로젝트를 만듭니다.
 * 프로젝트 이름을 **Planetarium**로 합니다.
 * **3d** 설정이 선택 되어 있는지 확인 합니다.
 * **Create Project**를 클릭합니다.
@@ -77,12 +77,12 @@ ms.locfileid: "64993557"
 * **검사기** 패널에서 녹색 **Windows 스토어** 아이콘을 찾아 선택 합니다.
 * **기타 설정**을 확장 합니다.
 * **렌더링** 섹션에서 **가상 현실 지원** 옵션을 선택 합니다.
-* **Windows Holographic** 가 **가상 현실 sdk**목록에 나타나는지 확인 합니다. 그렇지 않은 경우 목록 아래쪽 **+** 의 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.
+* **Windows Holographic** 가 **가상 현실 sdk**목록에 나타나는지 확인 합니다. 그렇지 않은 경우 목록 맨 아래에 있는 **+** 단추를 선택 하 고 **Windows Holographic**를 선택 합니다.
 * **게시 설정**을 확장 합니다.
 * **기능** 섹션에서 다음 설정을 확인 합니다.
     * InternetClientServer
     * PrivateNetworkClientServer
-    * 마이크
+    * Microphone
     * SpatialPerception
 * **편집 > 프로젝트 설정 > 품질** 로 이동 합니다.
 * **검사기** 패널의 Windows 스토어 아이콘에서 ' default ' 행 아래의 검은색 드롭다운 화살표를 선택 하 고 기본 설정을 **매우 낮음**으로 변경 합니다.
@@ -101,7 +101,7 @@ ms.locfileid: "64993557"
 * **계층** 패널에서 **Cursor** 개체를 선택 합니다.
 * **검사기** 패널에서 **계층** 드롭다운을 클릭 하 고 **계층 편집 ...** 을 선택 합니다.
 * **사용자 계층 31** 의 이름을 "**SpatialMapping**"로 합니다.
-* 새 장면 저장: **파일 > 다른 이름으로 장면 저장 ...**
+* 새 장면: 파일 > 저장 하 고 다른 **이름으로 장면 저장** ...
 * **새 폴더** 를 클릭 하 고 폴더 이름을 **장면**으로 합니다.
 * 파일 이름을 "**Planetarium**"로 하 고 해당 파일을 **백그라운드** 폴더에 저장 합니다.
 
@@ -110,14 +110,17 @@ ms.locfileid: "64993557"
 >[!VIDEO https://www.youtube.com/embed/888oW51z_cE]
 
 **목표로**
+
 * SurfaceObserver 및 해당 설정이 경험 및 성능에 미치는 영향에 대해 알아봅니다.
 * 회의실의 메시를 수집 하는 방 스캔 환경을 만듭니다.
 
-**지침**
+**따릅니다**
+
 * **프로젝트** 패널 **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** 폴더에서 **SpatialMapping** prefab를 찾습니다.
 * **SpatialMapping** Prefab를 **계층** 패널로 끌어 & 놓습니다.
 
 **빌드 및 배포 (1 부)**
+
 * Unity에서 **파일 > 빌드 설정**을 선택 합니다.
 * 열려 있는 장면 **추가** 를 클릭 하 여 **Planetarium** 장면을 빌드에 추가 합니다.
 * **플랫폼** 목록에서 **유니버설 Windows 플랫폼** 을 선택 하 고 **플랫폼 전환**을 클릭 합니다.
@@ -142,6 +145,7 @@ ms.locfileid: "64993557"
 **빌드 및 배포 (2 부)**
 
 이제 공간 매핑이 성능에 영향을 줄 수 있는 방법을 살펴보겠습니다.
+
 * Unity에서 **Window > Profiler**를 선택 합니다.
 * **> GPU 추가 Profiler**를 클릭 합니다.
 * **활성 프로파일러 > <Enter IP>** 를 클릭 합니다.
@@ -150,13 +154,14 @@ ms.locfileid: "64993557"
 * GPU에서 프레임을 렌더링 하는 데 걸리는 시간 (밀리초)을 관찰 합니다.
 * 장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.
 * Visual Studio로 돌아가서 **SpatialMappingObserver.cs**을 엽니다. 이 파일은 어셈블리-CSharp (유니버설 Windows) 프로젝트의 HoloToolkit\SpatialMapping 폴더에서 찾을 수 있습니다.
-* **활성 ()** 함수를 찾고 다음 코드 줄을 추가 합니다. **TrianglesPerCubicMeter = 1200;**
+* 해제 **()** 함수를 찾고 다음 코드 줄을 추가 합니다. **TrianglesPerCubicMeter = 1200;**
 * 장치에 프로젝트를 다시 배포 하 고 **프로파일러를 다시 연결**합니다. 프레임을 렌더링 하는 시간 (밀리초)의 변경 내용을 관찰 합니다.
 * 장치에서 응용 프로그램이 실행 되는 것을 중지 합니다.
 
 **Unity에서 저장 및 로드**
 
 마지막으로 대화방 메시를 저장 하 고 Unity에 로드 하겠습니다.
+
 * Visual Studio로 돌아가서 이전 섹션에서 **TrianglesPerCubicMeter** **()** 함수에 추가한 줄을 제거 합니다.
 * 장치에 프로젝트를 다시 배포 합니다. 이제 입방 미터 당 **500** 삼각형으로 실행 해야 합니다.
 * 브라우저를 열고 HoloLens IPAddress를 입력 하 여 **Windows 장치 포털로**이동 합니다.
@@ -164,7 +169,7 @@ ms.locfileid: "64993557"
 * **표면 재구성** 아래에서 **업데이트** 단추를 선택 합니다.
 * HoloLens에서 스캔 한 영역이 표시 창에 표시 되는지 확인 합니다.
 * 회의실 검색을 저장 하려면 **저장** 단추를 누릅니다.
-* **다운로드** 폴더를 열어서 저장 된 **대화방 모델을**찾습니다.
+* **다운로드** 폴더를 열어서 저장 된 **대화방 모델을 찾습니다.**
 * **Srmesh. .obj** 를 Unity 프로젝트의 **자산** 폴더에 복사 합니다.
 * Unity의 **계층** 패널에서 **SpatialMapping** 개체를 선택 합니다.
 * **개체 표면 관찰자 (스크립트)** 구성 요소를 찾습니다.
@@ -183,10 +188,12 @@ ms.locfileid: "64993557"
 >[!VIDEO https://www.youtube.com/embed/RnkvXl-aXD4]
 
 **목표로**
+
 * 셰이더의 기본 사항에 대해 알아봅니다.
 * 주변을 시각화 합니다.
 
-**지침**
+**따릅니다**
+
 * Unity의 **계층 구조** 패널에서 **SpatialMapping** 개체를 선택 합니다.
 * **검사기** 패널에서 **공간 매핑 관리자 (스크립트)** 구성 요소를 찾습니다.
 * **표면 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.
@@ -198,6 +205,7 @@ ms.locfileid: "64993557"
     3. 렌더링할 픽셀의 색을 설정 합니다.
 
 **빌드 및 배포**
+
 * Unity로 돌아가서 **재생** 을 눌러 미리 보기 모드를 시작 합니다.
 * 저장 된 검색 데이터에서 자동으로 로드 되는 실내 메시의 모든 세로 화면에서 파란색 선이 렌더링 됩니다.
 * **장면** 탭으로 전환 하 여 대화방 보기를 조정 하 고 전체 대화방 메쉬가 Unity에 표시 되는 방식을 확인 합니다.
@@ -215,15 +223,18 @@ Unity는 자료를 미리 보는 많은 작업을 수행 하지만 항상 장치
 >[!VIDEO https://www.youtube.com/embed/kaUKiNiDxwY]
 
 **목표로**
+
 * 응용 프로그램에서 사용할 공간 매핑 데이터를 처리 하는 방법을 알아봅니다.
 * 공간 매핑 데이터를 분석 하 여 평면을 찾고 삼각형을 제거 합니다.
 * 홀로그램 배치에 평면을 사용 합니다.
 
-**지침**
+**따릅니다**
+
 * Unity의 **Project** panel **Holograms** 폴더에서 **SpatialProcessing** 개체를 찾습니다.
 * **SpatialProcessing** 개체를 **계층** 패널로 끌어 & 놓습니다.
 
 SpatialProcessing prefab에는 공간 매핑 데이터를 처리 하기 위한 구성 요소가 포함 되어 있습니다. **SurfaceMeshesToPlanes.cs** 는 공간 매핑 데이터를 기반으로 평면을 찾아서 생성 합니다. 우리는 응용 프로그램에서 비행기를 사용 하 여 벽, 층 및 최대값이을 나타냅니다. 이 prefab에는 공간 매핑 메시에서 꼭 짓 점을 제거할 수 있는 **RemoveSurfaceVertices.cs** 도 포함 됩니다. 이를 사용 하 여 메시에 구멍을 만들거나 더 이상 필요 하지 않은 불필요 한 삼각형 (평면을 대신 사용할 수 있음)을 제거할 수 있습니다.
+
 * Unity의 **Project** panel **Holograms** 폴더에서 **SpaceCollection** 개체를 찾습니다.
 * **SpaceCollection** 개체를 **계층** 패널로 끌어 놓습니다.
 * **계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.
@@ -231,6 +242,7 @@ SpatialProcessing prefab에는 공간 매핑 데이터를 처리 하기 위한 �
 * **PlaySpaceManager.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
 PlaySpaceManager.cs는 응용 프로그램 관련 코드를 포함 합니다. 이 스크립트에 기능을 추가 하 여 다음 동작을 사용 하도록 설정 합니다.
+
 1. 검색 시간 제한 (10 초)을 초과 하 고 나면 공간 매핑 데이터 수집을 중지 합니다.
 2. 공간 매핑 데이터를 처리 합니다.
     1. SurfaceMeshesToPlanes를 사용 하 여 평면 (벽, 층, 최대값이 등)을 보다 간단 하 게 표현할 수 있습니다.
@@ -384,7 +396,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
         {
             // We do not have enough floors/walls to place our holograms on...
 
-            // 3.a: Re-enter scanning mode so the user can find more surfaces by 
+            // 3.a: Re-enter scanning mode so the user can find more surfaces by
             // calling StartObserver() on the SpatialMappingManager.Instance.
             SpatialMappingManager.Instance.StartObserver();
 
@@ -434,6 +446,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 ```
 
 **빌드 및 배포**
+
 * HoloLens에 배포 하기 전에 Unity의 **재생** 단추를 눌러 재생 모드로 전환 합니다.
 * 파일에서 대화방 메시를 로드 한 후에는 공간 매핑 메시에서 처리가 시작 될 때까지 10 초 정도 기다립니다.
 * 처리가 완료 되 면 비행기가 바닥, 벽, 천장 등을 나타내는 것 처럼 보입니다.
@@ -449,10 +462,12 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 >[!VIDEO https://www.youtube.com/embed/Srhtpid1uZc]
 
 **목표로**
+
 * 홀로그램이 표면에 맞는지 확인 합니다.
 * 홀로그램을 화면에 맞출 수 없는 경우 사용자에 게 피드백을 제공 합니다.
 
-**지침**
+**따릅니다**
+
 * Unity의 **계층 구조** 패널에서 **SpatialProcessing** 개체를 선택 합니다.
 * **검사기** 패널에서 **평면 (스크립트) 구성 요소에 대 한 표면 메시** 를 찾습니다.
 * **그리기 평면** 속성을 **없음** 으로 변경 하 여 선택을 취소 합니다.
@@ -460,6 +475,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 * **프로젝트** 패널의 **Scripts** 폴더에서 **Placeable.cs** 를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
 **동적 배치** 가능 스크립트는 평면 찾기가 완료 된 후 생성 된 포스터 및 프로젝션 상자에 이미 연결 되어 있습니다. 코드의 주석 처리를 제거 하기만 하면 됩니다 .이 스크립트는 다음을 수행 합니다.
+
 1. 홀로그램의 중심에서 raycasting로 화면에 맞출 수 있는지 여부와 경계 큐브의 4 개 모퉁이를 확인 합니다.
 2. 표면 법선을 확인 하 여 홀로그램을 가만히 놓을 수 있을 만큼 부드러운 지 확인 합니다.
 3. 홀로그램 주위에 경계 큐브를 렌더링 하 여 배치 하는 동안 실제 크기를 표시 합니다.
@@ -482,7 +498,7 @@ using Academy.HoloToolkit.Unity;
 /// </summary>
 public enum PlacementSurfaces
 {
-    // Horizontal surface with an upward pointing normal.    
+    // Horizontal surface with an upward pointing normal.
     Horizontal = 1,
 
     // Vertical surface with a normal facing the user.
@@ -909,7 +925,7 @@ public class Placeable : MonoBehaviour
     /// The target surface's normal vector.
     /// </param>
     /// <remarks>
-    /// The aligntoVerticalSurface parameter is ignored if the object
+    /// The alignToVerticalSurface parameter is ignored if the object
     /// is to be placed on a horizontalSurface
     /// </remarks>
     private void OrientObject(bool alignToVerticalSurface, Vector3 surfaceNormal)
@@ -1006,7 +1022,7 @@ public class Placeable : MonoBehaviour
             shadowAsset.GetComponent<Renderer>().sharedMaterial = NotPlaceableShadowMaterial;
         }
 
-        // Show the shadow asset as appropriate.        
+        // Show the shadow asset as appropriate.
         if (position != Vector3.zero)
         {
             // Position the shadow a small distance from the target surface, along the normal.
@@ -1052,6 +1068,7 @@ public class Placeable : MonoBehaviour
 ```
 
 **빌드 및 배포**
+
 * 이전과 마찬가지로 프로젝트를 빌드하고 HoloLens에 배포 합니다.
 * 공간 매핑 데이터의 검색 및 처리가 완료 될 때까지 기다립니다.
 * 태양계가 표시 되 면 아래 투영 상자를 응시 하 고 선택 제스처를 수행 하 여 이동 합니다. 투영 상자를 선택 하는 동안에는 경계 큐브가 투영 상자 주위에 표시 됩니다.
@@ -1063,24 +1080,28 @@ public class Placeable : MonoBehaviour
 >[!VIDEO https://www.youtube.com/embed/6Xrzh_w-7SE]
 
 **목표로**
+
 * 홀로그램을 공간 매핑 메시로 폐색 여부를 확인 합니다.
 * 흥미로운 효과를 얻기 위해 다른 폐색 기술을 적용 합니다.
 
-**지침**
+**따릅니다**
 
 먼저 공간 매핑 메시가 실제 세계를 occluding 하지 않고 다른 holograms을 려 수 있도록 합니다.
+
 * **계층** 패널에서 **SpatialProcessing** 개체를 선택 합니다.
 * **검사기** 패널에서 **재생 공간 관리자 (스크립트)** 구성 요소를 찾습니다.
 * **보조 재질** 속성의 오른쪽에 있는 원을 클릭 합니다.
 * **폐색** 재질을 찾아 선택 하 고 창을 닫습니다.
 
 다음으로 지구에 특별 한 동작을 추가 하 여 다른 홀로그램 (예: sun)에 의해 폐색 될 때마다 파란색 강조 표시를 하거나 공간 매핑 메시로 이동 합니다.
+
 * **프로젝트** 패널의 **Holograms** 폴더에서 **SolarSystem** 개체를 확장 합니다.
 * **지구**를 클릭 합니다.
 * **검사기** 패널에서 지구 재질 (최하위 구성 요소)을 찾습니다.
 * **셰이더 드롭다운에서**셰이더를 **사용자 지정 > OcclusionRim**로 변경 합니다. 그러면 다른 개체에 의해 폐색 될 때마다 지구 주위에 파란색 강조 표시가 렌더링 됩니다.
 
 마지막으로, 태양계에서 행성에 대해 x-레이 비전 효과를 사용 하도록 설정 하겠습니다. 다음을 수행 하려면 **PlanetOcclusion.cs** (Scripts\SolarSystem 폴더에 있음)를 편집 해야 합니다.
+
 1. SpatialMapping 계층 (방 메시 및 평면)에서 행성을 폐색 여부를 확인 합니다.
 2. SpatialMapping 계층에 의해 폐색 될 때마다 전 세계의 와이어 프레임 표현을 표시 합니다.
 3. SpatialMapping 계층에 의해 차단 되지 않는 행성의 와이어 프레임 표현을 숨깁니다.
@@ -1179,6 +1200,7 @@ public class PlanetOcclusion : MonoBehaviour
 ```
 
 **빌드 및 배포**
+
 * 평소 처럼 응용 프로그램을 빌드하고 HoloLens에 배포 합니다.
 * 공간 매핑 데이터의 스캔 및 처리가 완료 될 때까지 기다립니다 (벽에 파란색 선이 표시 되어야 함).
 * 태양계의 투영 상자를 찾아 선택한 다음 벽 옆 또는 카운터 뒤에 있는 상자를 설정 합니다.
@@ -1188,7 +1210,8 @@ public class PlanetOcclusion : MonoBehaviour
 
 ## <a name="the-end"></a>끝
 
-축하합니다. 이제 MR 공간 230 **을 완료 했습니다. 공간 매핑입니다**.
+축하합니다. 이제 **MR 공간 230: 공간 매핑을**완료 했습니다.
+
 * 환경을 검색 하 고 공간 매핑 데이터를 Unity로 로드 하는 방법을 알고 있습니다.
 * 셰이더의 기본 사항과 자료를 사용 하 여 전 세계를 다시 시각화 하는 방법을 이해 하 고 있습니다.
 * 평면을 찾고 메시에서 삼각형을 제거 하는 새로운 처리 기법을 배웠습니다.
