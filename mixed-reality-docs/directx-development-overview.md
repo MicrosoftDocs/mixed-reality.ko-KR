@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, holographic 렌더링, 네이티브, 네이티브 앱, WinRT, WinRT 앱, 플랫폼 Api, 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: 698ccb57a39189b9c0634c47ad6cbd6325c06caa
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435590"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641088"
 ---
 # <a name="directx-development-overview"></a>DirectX 개발 개요
 
@@ -49,7 +49,7 @@ Windows Mixed Reality는 다음과 같은 [두 가지 종류의 앱을](app-view
 * [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
 * [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 * [DirectX의 음성 입력](voice-input-in-directx.md)
-* [DirectX의 공간 음향](spatial-sound-in-directx.md)
+* [공간 음향](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)
 * [DirectX의 공간 매핑](spatial-mapping-in-directx.md)
 
 

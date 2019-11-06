@@ -1,23 +1,31 @@
 ---
-title: 공간 음향
-description: 혼합 현실 응용 프로그램에서 공간 소리를 사용 하면 3D 공간에 소리를 convincingly 수 있습니다.
-author: hak0n
-ms.author: hakons
-ms.date: 03/21/2018
+title: 혼합 현실에서 오디오
+description: 혼합 현실에서 오디오는 UI 상호 작용의 사용자 신뢰도를 높이고 경험을 컨퍼런스 수 있습니다.
+author: kegodin
+ms.author: kegodin
+ms.date: 11/07/2019
 ms.topic: article
 keywords: 공간 음향, 서라운드 사운드, 3d 오디오, 3d 소리, 공간 오디오
-ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1930017903439aee3ac53b6c4be344fdc44c356f
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437399"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641111"
 ---
-# <a name="spatial-sound"></a>공간 음향
+# <a name="audio-in-mixed-reality"></a>혼합 현실에서 오디오
+오디오는 혼합 현실에서 디자인 및 생산성의 필수적인 부분으로, 다음과 같은 작업을 수행할 수 있습니다.
+* 제스처 및 음성 기반 상호 작용의 사용자 신뢰도 향상
+* 사용자에 게 다음 단계로 안내
+* 가상 개체를 실제 세계와 효과적으로 결합
 
-개체를 볼 수 없는 경우에는 소리를 통해 무엇을 하 고 있는지 확인할 수 있는 방법 중 하나입니다. Windows Mixed Reality에서 오디오 엔진은 방향, 거리 및 환경 시뮬레이션을 사용 하 여 3D 소리를 시뮬레이션 하 여 혼합 현실 환경의 aural 구성 요소를 제공 합니다. 개발자는 응용 프로그램에서 공간 소리를 사용 하 여 모든 사용자에 게 3 차원 공간 (구)의 소리를 convincingly 수 있습니다. 이러한 소리는 실제 물리적 개체 또는 사용자 환경에서 혼합 현실 holograms에서 가져온 것 처럼 보입니다. [Holograms](hologram.md) 는 빛이 고 때로는 소리가 나도록 하는 개체 이기 때문에, 소리 구성 요소를 사용 하 여 더 많은 이익은를 만들고 더 몰입 형 환경을 만들 수 있습니다.
+HoloLens를 비롯 하 여 혼합 현실 헤드셋의 짧은 대기 시간 헤드 추적으로 고품질 HRTF 기반 spatialization을 사용할 수 있습니다. 응용 프로그램의 Spatializing 오디오는 다음과 같습니다.
+* 시각적 요소에 주의를 기울여야 합니다.
+* 사용자가 실제 환경에 대 한 인식을 유지 하도록 지원
 
-Holograms는 사용자의 응시가 가리키는 경우에만 시각적으로 나타날 수 있지만 앱의 소리는 모든 방향에서 제공 될 수 있습니다. 위, 아래, 옆, 등 이 기능을 사용 하 여 현재 사용자의 보기에 있지 않을 수 있는 개체에 주의를 기울일 수 있습니다. 사용자는 혼합 현실 세계의 원본에서 소리를 emanating 수 있습니다. 예를 들어, 사용자가 개체에 가까이 있거나 개체가 가까이 있을 때 볼륨이 늘어납니다. 마찬가지로 개체가 사용자를 중심으로 이동 하거나 그 반대의 경우에도 공간 소리는 소리를 개체에서 직접 가져오는 것에 대 한 효과를 제공 합니다.
+Acoustics를 더 깊게 추가 하면 holograms가 혼합 된 환경에 연결 되 고 환경 및 개체 상태에 대 한 큐를 제공할 수 있습니다.
+
+오디오를 사용 하는 디자인에 대 한 자세한 예제는 [소리 디자인](spatial-sound-design.md)을 참조 하세요.
 
 <br>
 
@@ -39,38 +47,52 @@ Holograms는 사용자의 응시가 가리키는 경우에만 시각적으로 �
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
-        <td>공간 음향</td>
+        <td>Spatialization</td>
         <td>✔️</td>
         <td>✔️</td>
-        <td>✔️ (헤드폰 사용)</td>
+        <td>✔️</td>
+    </tr>
+     <tr>
+        <td>Spatialization 하드웨어 가속</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
     </tr>
 </table>
 
-## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>인식 되는 위치 및 소리 거리 시뮬레이션
+## <a name="using-sounds-in-mixed-reality"></a>혼합 현실에서 소리 사용
+[혼합 현실에서 소리를 사용 하](spatial-sound-design.md) 는 경우 터치 및 키보드와 마우스 응용 프로그램에서와 다른 방법이 필요할 수 있습니다. 핵심 설계 결정에는 spatialize 소리와 sonify에 대 한 상호 작용이 포함 됩니다. 이러한 결정은 사용자 신뢰도, 생산성 및 학습 곡선에 크게 영향을 미칠 수 있습니다.
 
-사운드가 귀에 도달 하는 방식을 분석 하 여이를 통해 소리를 내보내는 개체의 거리와 방향을 결정 합니다. HRTF (또는 Head 관련 전송 함수)는 귀가 특정 시점에서 소리를 받는 방법에 대 한 spectral 응답을 모델링 하 여이 상호 작용을 시뮬레이션 합니다. 공간 오디오 엔진은 개인 설정 된 HRTFs를 사용 하 여 혼합 현실 경험을 확장 하 고 다양 한 방향 및 거리에서 발생 하는 소리를 시뮬레이션 합니다.
+### <a name="case-studies"></a>사례 연구
+HoloTour는 전 세계의 tourist 및 과거 사이트로 사용자를 이동 합니다. 다음 사례 연구에서는 HoloTour의 사운드 디자인에 대해 설명 합니다. [HoloTour에 대 한 소리 설계](case-study-spatial-sound-design-for-holotour.md). 특수 마이크와 렌더링 설치 프로그램을 사용 하 여 주체 공간을 캡처 했습니다.
+
+RoboRaid는 HoloLens의 에너지 슈팅입니다. 다음 사례 연구에서는 공간 오디오를 사용 하 여 [RoboRaid에 대 한 사운드 디자인](case-study-using-spatial-sound-in-roboraid.md)을 최대한 활용할 수 있도록 하기 위한 디자인 선택에 대해 설명 합니다.
+
+## <a name="spatialization"></a>Spatialization
+Spatialization는 공간 오디오의 방향 구성 요소입니다. 7\.1 home 극장 설치를 사용 하는 경우 spatialization는 큰 스피커 간을 이동 하는 것 처럼 간단 합니다. 그러나 혼합 현실에서 헤드폰이 있으면 정확도 및 편안 하 게 HRTF 기반 기술을 사용 하는 것이 필수적입니다. Windows에서는 HRTF 기반 spatialization를 제공 하며이 지원은 HoloLens 2에서 하드웨어 가속 됩니다.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Azimuth (왼쪽 또는 오른쪽 오디오) 큐는 각 귀에서 소리가 도착할 때의 차이에서 발생 합니다. 위쪽 및 아래쪽 큐는 외부 귀 모양 (pinnae)에서 생성 된 spectral 변경 내용에서 시작 됩니다. 오디오가 어디에서 오는지를 지정 하 여 시스템은 서로 다른 시간에 도착 하는 소리의 경험을 시뮬레이션할 수 있습니다. HoloLens에서 azimuth spatialization는 개인 설정 되어 있지만 권한 상승 시뮬레이션은 평균 anthropometrics 집합을 기반으로 합니다. 따라서 상승 정확성은 azimuth 정확도 보다 정확도가 떨어질 수 있습니다.
+### <a name="should-i-spatialize"></a>Spatialize?
+혼합 현실 응용 프로그램의 많은 소리는 수신기의 헤드에서 소리를 spatialization 하 고 전 세계에 배치 하는에서 혜택을 받습니다. 응용 프로그램에서 spatialization를 가장 효과적으로 사용 하는 방법에 대 한 제안은 [공간 음향 디자인](spatial-sound-design.md) 을 참조 하세요.
 
-또한 소리의 특징은 존재 하는 환경에 따라 변경 됩니다. 예를 들어, 동굴의 shouting는 음성이 벽, 층 및 최대값이에 바운스 하 여 에코 효과를 생성 합니다. 공간 사운드의 방 모델 설정은 이러한 반사를 재현 특정 오디오 환경에 소리를 놓습니다. 이 설정을 사용 하 여 더 몰입 형 오디오 환경을 만들기 위해 해당 공간에서 소리를 시뮬레이션 하는 사용자의 실제 위치를 일치 시킬 수 있습니다.
+### <a name="spatializer-personalization"></a>Spatializer 개인 설정
+HRTFs는 frequency 스펙트럼 간의 수준 및 단계 차이를 조작 합니다. 실제 모델 및 사용자 헤드, 몸통 및 귀 셰이프 (pinnae)의 측정을 기반으로 합니다. 우리의 brains는 이러한 차이에 대응 하 여 소리 방향에 대 한 인식의 증가를 제공 합니다. 
 
-## <a name="integrating-spatial-sound"></a>공간 사운드 통합
+모든 개인에 게는 고유한 귀 모양, 헤드 크기 및 귀 위치가 있으므로 가장 적합 한 HRTFs는 사용자에 게 맞는 것입니다. HoloLens는 헤드셋에서 IPD (pupilary distance)를 사용 하 여 spatialization 정확도를 높여 헤드 크기에 대 한 HRTFs를 조정 합니다.
 
-혼합 현실의 일반적인 원칙은 사용자의 물리적 환경 또는 가상 환경에서 [holograms](hologram.md) 하는 것입니다. holograms에서 발생 하는 대부분의 소리는 spatialized 여야 합니다. HoloLens에는 자연스럽 게 CPU 및 메모리 예산 고려 사항이 있지만 CPU의 12% 미만 (4 코어 중 하나를 ~ 70% 미만)을 사용 하는 동안 10-12 공간 사운드 음성을 사용할 수 있습니다. 공간 음향 음성에 권장 되는 용도는 다음과 같습니다.
-* (개체 강조 표시, 특히 뷰를 벗어난 경우)를 응시 합니다. 홀로그램에 사용자의 주의가 필요한 경우 해당 홀로그램에서 소리를 재생 합니다 (예: 가상 dog 짖). 이렇게 하면 사용자가 홀로그램을 볼 수 없을 때 해당 홀로그램을 찾을 수 있습니다.
-* Audio Haptics (touchless 상호 작용을 위한 반응 오디오). 예를 들어 사용자의 손 또는 이동 컨트롤러가 제스처 프레임을 들어가거나 종료할 때 소리를 재생 합니다. 또는 사용자가 홀로그램을 선택할 때 소리를 재생 합니다.
-* 집중 교육 (사용자 주변 주변 소리).
+### <a name="spatializer-platform-support"></a>Spatializer 플랫폼 지원
+Windows에서는 [ISPATIALAUDIOCLIENT API](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)를 통해 hrtfs를 비롯 한 spatialization을 제공 합니다. 이 API는 HoloLens 2 HRTF 하드웨어 가속을 응용 프로그램에 노출 합니다.
 
-또한 공간 사운드를 사용 하 여 표준 스테레오 소리를 혼합 하는 것이 실제적인 환경을 만드는 데 효과적일 수 있는 반면, 반사 ()와 같이 공간 소리의 미묘한 측면을 위해 공간을 확보 하려면 스테레오 사운드를 distance)를 사용할 수 있습니다.
+### <a name="spatializer-middleware-support"></a>Spatializer 미들웨어 지원
+Windows ' HRTFs에 대 한 지원은 일부 타사 오디오 엔진에서 사용할 수 있습니다.
+* [Unity 오디오 엔진](spatial-sound-in-unity.md) 플러그 인은 HRTF xapo를 호출 합니다.
+* [Wtoaudio 엔진 플러그 인](https://www.audiokinetic.com/products/plug-ins/msspatial/) 은 ISpatialAudioClient API를 호출 합니다.
 
-Windows의 공간 사운드 엔진은 재생에 대해 48k 샘플 비율도 지원 합니다. Unity와 같은 대부분의 미들웨어는 소리 파일을 지원 되는 형식으로 자동으로 변환 하지만 Windows 오디오 Api를 직접 사용 하는 경우 콘텐츠 형식을 효과에서 지 원하는 형식과 일치 시킵니다.
+## <a name="acoustics"></a>Acoustics
+공간 오디오는 방향 보다 약 할 수 있습니다. 폐색, 장애물, 반향, portalling 및 원본 모델링를 포함 한 다른 차원을 통칭 하 여 ' acoustics ' 이라고 합니다. Acoustics를 사용 하지 않으면 spatialized 소리에는 인식 거리가 없습니다.
 
-## <a name="see-also"></a>참고 항목
-* [MR 공간 220](holograms-220.md)
-* [Unity의 공간 음향](spatial-sound-in-unity.md)
-* [DirectX의 공간 음향](spatial-sound-in-directx.md)
-* [공간 음향 디자인](spatial-sound-design.md)
+Acoustics 처리의 범위는 단순에서 매우 복잡 합니다. 오디오 엔진에서 지원 되는 것과 같은 간단한 반향를 사용 하 여 수신기 주변 환경에 spatialized 소리를 푸시할 수 있습니다. [Project acoustics](https://aka.ms/acoustics)와 같은 acoustics 시스템에서 더 풍부 하 고 뛰어난 acoustics 처리를 사용할 수 있습니다. Project Acoustics는 벽, 도어 및 기타 장면 기 하 도형의 효과를 소리로 모델링할 수 있으며, 관련 장면 기 하 도형을 개발 시에 알려진 경우에는 효과적인 옵션입니다.
+

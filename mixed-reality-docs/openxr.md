@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, 네이티브, 네이티브 앱 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: cf8795e6fed7db9fd0743d0902ce1585d56fa5e0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438140"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641128"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -90,7 +90,7 @@ Windows Mixed Reality OpenXR 런타임은 올해의 마지막에는 HoloLens 2 �
 * [손 모양 articulation + 손 모양](hands-and-tools.md)
 * [응시](eye-tracking.md)
 * [보조 뷰 구성 (혼합 현실 캡처)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
-* [공간 매핑](spatial-mapping.md)
+* [장면 이해](scene-understanding.md)
 * Windows SDK Api와의 상호 운용성
 
 이러한 확장 중 일부는 공급 업체별 MSFT 확장으로 시작 될 수 있지만, Microsoft 및 기타 OpenXR runtime 공급 업체는 이러한 여러 기능 영역에 대 한 공급 업체 확장 또는 KHR 확장을 디자인 하기 위해 함께 작업 하 고 있습니다.  이렇게 하면 핵심 사양과 마찬가지로 해당 기능에 대해 작성 하는 코드를 런타임 공급 업체 간에 이식할 수 있습니다.
