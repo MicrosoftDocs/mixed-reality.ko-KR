@@ -6,16 +6,16 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 릴리스 정보, os, 플랫폼, 기능, 상용 제품군
-ms.openlocfilehash: 2fde8665f3572589abd3dcdfb3747ca487b66afb
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: dcac64524cd8d1b1f2b0a496c4dcd2ad2fc7b690
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524299"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438101"
 ---
 # <a name="release-notes---august-2016"></a>릴리스 정보-8 월 2016
 
-HoloLens 팀은 Windows 참가자 프로그램의 개발자가 작업의 우선 순위를 지정 하는 피드백을 수신 대기 합니다. 피드백 허브, [개발자 포럼](https://forums.hololens.com) [ @HoloLens및 Twitter ](https://twitter.com/hololens)를 통해 피드백을 계속 해 서 [보내](give-us-feedback.md) 주세요. Windows 10에서 기념일 업데이트를 수용 하는 경우 HoloLens 팀은 holographic 환경에 대 한 향상 된 기능을 제공 합니다. 이 업데이트에서는 중요 한 수정 사항, 개선 사항 및 비즈니스에서 요청 하 고 Microsoft HoloLens 상용 제품군에서 사용 가능한 기능 소개에 초점을 맞추고 있습니다.
+HoloLens 팀은 Windows 참가자 프로그램의 개발자가 작업의 우선 순위를 지정 하는 피드백을 수신 대기 합니다. [@HoloLens를 통해 ](https://twitter.com/hololens)피드백 허브, [개발자 포럼](https://forums.hololens.com) 및 Twitter를 통해 피드백을 계속 해 서 [제공](give-us-feedback.md) 해 주세요. Windows 10에서 기념일 업데이트를 수용 하는 경우 HoloLens 팀은 holographic 환경에 대 한 향상 된 기능을 제공 합니다. 이 업데이트에서는 중요 한 수정 사항, 개선 사항 및 비즈니스에서 요청 하 고 Microsoft HoloLens 상용 제품군에서 사용 가능한 기능 소개에 초점을 맞추고 있습니다.
 
 **최신 릴리스:** Windows Holographic 8 월 2016 업데이트 (**10.0.14393.0**, Windows 10 기념일 릴리스)
 
@@ -29,11 +29,11 @@ HoloLens 팀은 Windows 참가자 프로그램의 개발자가 작업의 우선 
 
 **업데이트 된 HoloLens 에뮬레이터** 또한 업데이트 된 버전의 HoloLens 에뮬레이터를 출시 했습니다.
 
-**게임 패드 지원** 이제 HoloLens를 사용 하 여 Bluetooth gamepads를 페어링 하 고 사용할 수 있습니다. 새로 릴리스된 Xbox 무선 컨트롤러는 Bluetooth 기능을 갖추고 있으며 즐겨 사용 하는 게임 패드를 사용 하는 게임 및 앱을 재생 하는 데 사용할 수 있습니다. Xbox 무선 컨트롤러 S를 HoloLens와 연결 하려면 먼저 [컨트롤러 업데이트](http://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) 를 적용 해야 합니다. Xbox 무선 컨트롤러는 [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) 및 [Windows.Gaming.Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) Api에서 지원 됩니다. Bluetooth 컨트롤러의 추가 모델은 [Windows. 게이밍](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) API를 통해 액세스할 수 있습니다.
+**게임 패드 지원** 이제 HoloLens를 사용 하 여 Bluetooth gamepads를 페어링 하 고 사용할 수 있습니다. 새로 릴리스된 Xbox 무선 컨트롤러는 Bluetooth 기능을 갖추고 있으며 즐겨 사용 하는 게임 패드를 사용 하는 게임 및 앱을 재생 하는 데 사용할 수 있습니다. Xbox 무선 컨트롤러 S를 HoloLens와 연결 하려면 먼저 [컨트롤러 업데이트](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) 를 적용 해야 합니다. Xbox 무선 컨트롤러는 [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053(v=vs.85).aspx) 및 [Windows.Gaming.Input](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) Api에서 지원 됩니다. Bluetooth 컨트롤러의 추가 모델은 [Windows. 게이밍](https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx) API를 통해 액세스할 수 있습니다.
 
 ## <a name="improvements-and-fixes"></a>향상 된 기능 및 픽스
 
-Microsoft는 Windows 10 기념일 업데이트의 나머지 부분과 동기화 하 고 있으므로 Hololens 관련 픽스 외에도 Windows 업데이트를 통해 플랫폼 안정성과 성능을 향상 시킬 수 있는 모든 것을 받게 됩니다. 사용자 의견은 매우 중요 하며 릴리스에 대 한 수정 사항의 우선 순위를 지정 합니다.
+Microsoft는 Windows 10 기념일 업데이트의 나머지 부분과 동기화 하 고 있으므로 HoloLens 관련 픽스 외에도 Windows 업데이트를 통해 플랫폼 안정성과 성능을 향상 시킬 수 있는 모든 것을 받게 됩니다. 사용자 의견은 매우 중요 하며 릴리스에 대 한 수정 사항의 우선 순위를 지정 합니다.
 
 다음 환경이 개선 되었습니다.
 * 로그인 환경.
@@ -60,15 +60,15 @@ Microsoft HoloLens 상용 Suite를 구매 하려면 로컬 Microsoft 계정 관�
 ### <a name="key-commercial-features"></a>주요 상업용 기능 
 
 * **키오스크 모드.** HoloLens 키오스크 모드를 사용 하면 데모 또는 전시 환경을 지원 하기 위해 실행할 앱을 제한할 수 있습니다.<br>
-  ![키오스크 모드를 사용 하 여 HoloLens는 선택한 앱에 직접 실행 됩니다.](images/201608-kioskmode-400px.png)
+  키오스크 모드 ![HoloLens는 선택한 앱에 직접 실행 됩니다.](images/201608-kioskmode-400px.png)
 * **HoloLens 용 MDM (모바일 장치 관리).** IT 부서는 Microsoft Intune 같은 솔루션을 사용 하 여 여러 HoloLens 장치를 동시에 관리할 수 있습니다. 설정을 관리하고 앱을 선택해서 설치하며 조직의 요구에 부합하는 보안 구성을 설정할 수 있습니다.<br>
-  ![HoloLens의 모바일 장치 관리는 여러 장치에서 엔터프라이즈급 장치 관리 기능을 제공 합니다.](images/201608-enterprisemanagement-400px.png)
+  HoloLens의 모바일 장치 관리 ![여러 장치에서 엔터프라이즈급 장치 관리를 제공 합니다.](images/201608-enterprisemanagement-400px.png)
 * **비즈니스에 대 한 Windows 업데이트입니다.** 장치에 대 한 제어 된 운영 체제 업데이트 및 장기 서비스 분기에 대 한 지원.
 * **데이터 보안.** 다른 Windows 장치와 동일한 수준의 보안 보호를 제공 하기 위해 HoloLens에서 BitLocker 데이터 암호화가 사용 됩니다.
 * **회사 액세스.** 조직의 모든 사용자가 HoloLens의 가상 개인 네트워크를 통해 회사 네트워크에 원격으로 연결할 수 있습니다. HoloLens는 자격 증명이 필요한 Wi-fi 네트워크에도 액세스할 수 있습니다.
 * **비즈니스에 대 한 Microsoft Store입니다.** IT 부서에서 특정 HoloLens 사용에 대 한 회사 앱만 포함 하는 엔터프라이즈 개인 저장소를 설정할 수도 있습니다. 엔터프라이즈 소프트웨어를 선택한 엔터프라이즈 사용자 그룹에 안전 하 게 배포 합니다.
 
-### <a name="development-edition-vs-commercial-suite"></a>개발 에디션 및 상용 제품군
+### <a name="development-edition-vs-commercial-suite"></a>개발 버전 및 상용 제품군
 
 <table>
 <tr>
@@ -116,7 +116,7 @@ Microsoft HoloLens 상용 Suite를 구매 하려면 로컬 Microsoft 계정 관�
 * [릴리스 정보 - 2016년 5월](release-notes-may-2016.md)
 * [릴리스 정보 - 2016년 3월](release-notes-march-2016.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [HoloLens 알려진 문제](hololens-known-issues.md)
 * [상용 기능](commercial-features.md)
 * [도구 설치](install-the-tools.md)
