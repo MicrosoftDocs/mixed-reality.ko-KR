@@ -1,111 +1,118 @@
 ---
-title: 공간 음향 디자인
+title: 혼합 현실 응용 프로그램에서 소리 사용
 description: 공간 사운드는 혼합 현실 응용 프로그램에서 집중 교육, 접근성 및 UX 디자인을 위한 강력한 도구입니다.
-author: joekellyms
-ms.author: joekelly
-ms.date: 03/21/2018
+author: kegodin
+ms.author: kegodin
+ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 공간 소리, 디자인, 스타일
-ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c069095808eaa9d31b1ffa41dbaa29c9f635837b
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438282"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641059"
 ---
-# <a name="spatial-sound-design"></a>공간 음향 디자인
+# <a name="using-sound-in-mixed-reality-applications"></a>혼합 현실 응용 프로그램에서 소리 사용
 
-공간 사운드는 혼합 현실 응용 프로그램에서 집중 교육, 접근성 및 UX 디자인을 위한 강력한 도구입니다.
-
-[Marco](https://en.wikipedia.org/wiki/Marco_Polo_(game))를 재생 한 적이 있거나 전화를 사용 하 여 찾을 수 있는 경우에는 공간 소리의 중요성에 대해 잘 알고 있어야 합니다. 일상 생활의 소리 큐를 사용 하 여 개체를 찾거나, 사용자의 주의가 필요 하거나, 환경을 보다 잘 이해할 수 있습니다. 응용 프로그램의 사운드가 실제 세계에서와 같이 작동 하는 것 처럼 동작 하기 때문에 가상 세계를 더 많이 설득 하 고 사용할 수 있습니다.
+소리를 사용 하 여 사용자의 응용 프로그램 상태 모델을 멘 탈 합니다. 적절 한 경우 spatialization를 사용 하 여 혼합 된 세계에 소리를 놓습니다. 이러한 방식으로 청각 및 시각적 개체를 연결 하면 많은 상호 작용의 직관적인 특성을 deepens 사용자 자신감을 높일 수 있습니다.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>장치 지원
+## <a name="when-should-i-add-sounds"></a>소리를 추가 해야 하는 경우
+혼합 현실 응용 프로그램은 실제 인터페이스의 부족으로 인해 2D 화면에서 응용 프로그램 보다 사운드가 더 많이 필요 합니다. 소리는 사용자에 게 알리거나 상호 작용을 강화할 때 추가 해야 합니다.
 
-<table>
-    <colgroup>
-    <col width="33%" />
-    <col width="33%" />
-    <col width="33%" />
-    </colgroup>
-    <tr>
-        <td><strong>기능과</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
-    </tr>
-     <tr>
-        <td>공간 음향 디자인</td>
-        <td>✔️</td>
-        <td>✔️</td>
-    </tr>
-</table>
+### <a name="inform-and-reinforce"></a>알림 및 보강
+* 알림과 같이 사용자가 시작 하지 않은 이벤트의 경우 사용자에 게 변경이 발생 했음을 알리는 소리를 추가 하는 것이 좋습니다.
+* 상호 작용에는 여러 단계가 있을 수 있습니다. 소리 전환을 강화 하려면 소리를 사용 하는 것이 좋습니다.
+
+상호 작용, 이벤트 및 제안 된 사운드 특성의 예는 아래를 참조 하세요.
+
+### <a name="exercise-restraint"></a>운동 지지대
+사용자는 오디오 정보에 대해 무제한 용량을 갖지 않습니다.
+* 각 사운드는 특정 한 중요 한 정보를 전달 해야 합니다.
+* 사용자에 게 알리는 소리를 재생할 때 다른 소리의 볼륨을 일시적으로 줄입니다.
+* 단추 가리키기 소리 (아래 참조)에서 소리를 과도 하 게 트리거하지 않도록 시간 지연을 추가 합니다.
+
+### <a name="dont-rely-solely-on-sounds"></a>소리만 사용 하지 않음
+사용 되는 소리는 사용자가이를 듣지 못할 경우 유용 하지만, 소리를 끄면 응용 프로그램을 사용할 수 있습니다.
+* 사용자가 청각 장애가 있을 수 있습니다.
+* 응용 프로그램을 큰 환경에서 사용할 수 있습니다.
+* 사용자에 게 장치 오디오를 사용 하지 않도록 설정 하는 개인 정보나 기타 이유가 있을 수 있습니다.
+
+## <a name="how-should-i-sonify-interactions"></a>상호 작용을 어떻게 sonify 하나요?
+혼합 현실의 상호 작용 형식에는 제스처, 직접 조작 및 음성이 포함 됩니다. 이러한 상호 작용의 소리를 선택 하거나 디자인 하려면 다음의 제안 된 특성을 사용 합니다.
+
+### <a name="gesture-interactions"></a>제스처 상호 작용
+혼합 현실에서 사용자는 커서를 사용 하 여 단추와 상호 작용할 수 있습니다. 단추 동작은 사용자가 상호 작용을 취소할 수 있도록 단추를 눌렀다 놓은 경우를 제외 하 고 사용자가 단추를 눌렀다 놓으면 일반적으로 수행 됩니다. 이러한 단계를 보강 하려면 소리를 사용 합니다. 또한 사용자가 먼 단추를 대상으로 하는 것을 지원 하려면 커서 가리키기 소리를 사용 하는 것이 좋습니다.
+* 단추 누르기 소리를 tactile 클릭 해야 합니다. 예: [MRTK_ButtonPress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 단추를 누르지 않는 소리는 비슷한 tactile 느낌을 가져야 합니다. 볼록 피치와 누르기 사운드가 있으면 완료 강화. 예: [MRTK_ButtonUnpress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* 가리키기 소리의 경우 낮은 빈도 thud 또는 범프와 같이 약한 및 비 위협 사운드를 사용 하는 것이 좋습니다.
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>혼합 현실 개발을 위한 4 가지 주요 작업 공간 소리
+### <a name="direct-manipulation"></a>직접 조작
+HoloLens 2에서는 두 개의 부분으로 된 손 모양 추적을 통해 사용자 인터페이스 요소를 직접 조작할 수 있습니다. 소리는 물리적 피드백이 없다는 중요 한 대체 항목입니다.
 
-기본적으로 소리는 스테레오로 재생 됩니다. 이는 소리가 공간 위치 없이 재생 됨을 의미 하므로 사용자는 소리의 출처를 알 수 없습니다. 공간 사운드는 혼합 현실 개발을 위한 4 가지 주요 작업을 수행 합니다.
+사용자가 키 이동의 아래쪽에 도달 했을 때 물리적으로 표시 되지 않기 때문에 직접 조작에서 **단추 누르기** 소리가 중요 합니다. 주요 여행에 대 한 시각적 표시기는 작은, 미묘한 및 폐색 수 있습니다. 제스처 상호 작용의 경우와 마찬가지로 단추 누름은 클릭과 같은 짧은 tactile 소리를 가져야 하 고, unpresses는 볼록 피치를 사용 하 여 비슷한 클릭을 가져야 합니다.
+* 예: [MRTK_ButtonPress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 예: [MRTK_ButtonUnpress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
 
-**접지가**
+직접 조작에서 **잡기** 나 **릴리스** 를 확인 하는 것은 시각적으로 통신 하기 어렵습니다. 사용자의 손을 시각적 효과를 발휘 하는 경우가 많으며, 하드 없는 개체는 실제 시각적으로 "잡기"를 하지 않습니다. 반면에 소리는 성공적인 잡기와 릴리스 상호 작용을 효과적으로 전달할 수 있습니다.
+* 잡기 작업에는 개체 주위에 손가락을 muffled 하는 것을 evokes 하는 짧고 약간의 tactile 사운드가 있어야 합니다. 경우에 따라 소리를 이동 하는 경우 소리의 영향을 whoosh 하는 "" 사운드가 수반 됩니다. 예: [MRTK_Move_Start](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* 릴리스 작업에는 유사 하 고 tactile 소리가 있어야 하 고, 일반적으로 광고에서 중단 되 고, 그 다음에는 영향을 주고 개체 정착를 전달 하는 "whoosh"가 발생 합니다. 예: [MRTK_Move_End](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
-소리를 사용 하지 않으면 가상 개체를 사용 하는 것이 효과적으로 중단 됩니다. 실제 개체와 마찬가지로 이러한 개체를 볼 수 없는 경우에도이 개체를 듣고 어디서 나 찾을 수 있게 하려고 합니다. 가상 개체를 실제 세계와 혼합 하기 위해 시각적으로 접지 해야 하는 것과 마찬가지로 접지 된 통화 해야 합니다. 공간 사운드는 진정한 세계 오디오 환경과 디지털 오디오 환경을 원활 하 게 혼합 합니다.
+**그리기** 상호 작용은 사용자 손을 이동 하 여 볼륨을 제어 하는 반복, 영구 사운드를 사용 해야 하며, 사용자 손을 계속 사용 하는 경우, 사용자 손을 빠르게 이동할 때의 최대 볼륨에 해당 볼륨을 완전히 자동으로 유지 합니다.
 
-**사용자 주의**
 
-혼합 현실 환경에서는 사용자가 원하는 위치를 가정 하 고 시각적 개체를 시각적으로 표시 하는 것을 예측할 수 없습니다. 그러나 소리를 재생 하는 개체가 뒤에 있는 경우에도 사용자가 소리 재생을 항상 사용할 수 있습니다. 사람들은 소리로 인 한 주의가 필요 하다 고 생각 하는 데 사용 됩니다. 우리는 우리가 instinctually 개체를 살펴보겠습니다. 사용자의 응시를 시각적으로 가리키기 위해 화살표를 사용 하는 대신 특정 위치에 전달 하려는 경우 해당 위치에 소리를 배치 하는 것이 매우 자연스럽 고 빠른 방법입니다.
 
-**집중 교육**
+### <a name="voice-interactions"></a>음성 상호 작용
+음성 상호 작용에는 종종 미묘한 시각적 요소가 있습니다. 소리를 사용 하 여 상호 작용 단계를 보강 합니다. 제스처와 직접 조작 소리를 구분 하기 위해 더 많은 톤 소리를 선택 하는 것이 좋습니다.
 
-개체를 이동 하거나 충돌 하는 경우 일반적으로 자료 간의 상호 작용을 듣습니다. 따라서 개체가 실제 세계에서 동일 하 게 작동 하지 않는 경우 볼륨을 사용 하 여 다른 방식으로 동영상을 시청 하는 것과 같은 집중 교육 수준이 손실 됩니다. 실제 세계의 모든 소리는 특정 시점에서 제공 됩니다. 헤드를 켜면 이러한 소리가 들리는 위치에서 변화를 듣고 이러한 방식으로 모든 소리의 위치를 추적할 수 있습니다. Spatialized 소리는 볼 수 있는 것 이상의 "느낌"을 구성 합니다.
+* 음성 **명령 확인**에는 양수의 톤을 사용 합니다. 이 경우에는 톤 및 주요 음악 간격이 적용 됩니다.
+* 음성 명령 **실패**에 대해 더 짧고 긍정적으로 떨어지는 톤을 사용 합니다. 음수 소리 방지 대신 더 percussive 중립적인 소리를 사용 하 여 응용 프로그램이 상호 작용에서 이동 하는 것을 통신 합니다.
+* 응용 프로그램에서 절전 모드 해제 단어를 사용 하는 경우, 장치에서 **수신 대기를 시작**하 고 응용 프로그램이 수신 대기 하는 동안 미묘한 반복 소리가 발생 하면 짧은 gentle 톤을 사용 합니다. 
 
-**상호 작용 디자인**
+### <a name="notifications"></a>알림
+알림은 응용 프로그램 상태 변경 내용 및 사용자가 시작 하지 않은 기타 이벤트 (예: 프로세스 완료, 메시지 및 호출)를 전달 합니다.
 
-대부분의 일반적인 대화형 환경에서 UI 사운드 효과와 같은 상호 작용 사운드는 표준 mono 또는 스테레오로 재생 됩니다. 그러나 UI를 포함 하 여 혼합 현실의 모든 항목이 3D 공간에 존재 하기 때문에 이러한 개체는 spatialized 소리를 활용 합니다. 실제 세계의 단추를 누르면 소리는 해당 단추에서 제공 됩니다. 상호 작용 사운드를 spatializing 하 여 보다 자연스럽 고 실제적인 사용자 환경을 제공 합니다.
+혼합 현실에서 이동 하는 개체는 사용자의 뷰 필드 밖으로 이동할 수 있습니다. 개체 및 동작 속도에 따라 달라 지는 spatialized 소리를 사용 하 여 **애니메이션 개체** 를 함께 제공 합니다.
+* 또한 애니메이션의 끝에서 spatialized 소리를 재생 하 여 사용자에 게 새 위치를 알려 줍니다.
+* 점진적 이동의 경우 이동 중에 "whoosh" 소리를 사용 하면 사용자가 개체를 추적 하는 데 도움이 됩니다.
 
-## <a name="best-practices-when-using-spatial-sound"></a>공간 사운드 사용에 대 한 모범 사례
+**메시지 알림은** 종종 여러 번 들릴 수 있으며, 경우에 따라 빠르게 연속 해 서 발생할 수 있습니다. 이는 작동 하지 않는 것이 중요 합니다. 중간 범위의 긍정 색조 사운드는 여기에 적용 됩니다.
 
-**합성 또는 자연스럽 게 소리나는 소리 보다 실제 소리는 잘 작동 합니다.**
+* 호출은 휴대폰 벨 소리와 비슷한 품질을 가져야 합니다. 이는 일반적으로 사용자가 호출에 대답할 때까지 재생 하는 반복 음악 문구입니다.
+* 음성 통신 연결 및 연결 끊기에는 짧은 톤 소리가 있어야 합니다. 연결 소리에는 성공적인 연결을 나타내는 긍정 톤이 있어야 하 고, 연결 끊김 소리는 호출 완료를 나타내는 중립 소리 여야 합니다.
 
-사용자에 게 더 친숙 한 것은 소리를 사용 하는 것입니다 .이를 통해 더 많은 실제 느낌을 얻을 수 있으며, 사용자가 환경에서 쉽게 찾을 수 있습니다. 예를 들어, 인간 음성은 매우 일반적인 유형의 소리 이며, 사용자는 실내에서 실제 사용자 만큼 빠르게 찾을 수 있습니다.
+## <a name="spatialization"></a>Spatialization
+Spatialization는 스테레오 헤드폰 또는 스피커를 사용 하 여 혼합 된 세계에 소리를 놓습니다.
 
-**기대가 시뮬레이션**
+### <a name="which-sounds-should-i-spatialize"></a>어떤 소리를 spatialize?
+공간 위치가 있는 이벤트와 연결 된 경우에는 소리를 spatialized 해야 합니다. 여기에는 UI, 합의서 등 AI 음성 및 시각적 표시기가 포함 됩니다.
 
-특정 방향에서 나오는 소리를 사용 하는 경우에는 공간 큐에 관계 없이 해당 방향에 주의를 기울여야 합니다. 예를 들어 대부분의 경우에는 미국 위에 있습니다. Bird의 소리를 재생 하면 그 아래에 소리를 둔 경우에도 사용자가 조회 될 가능성이 큽니다. 이는 일반적으로 혼란 스 러 울 수 있으며, 보다 자연 스러운 경험을 위해 이러한 기대와 같은 기대로 작업 하는 것이 좋습니다.
+Spatializing **사용자 인터페이스** 요소를 사용 하면 잠긴 스테레오 사운드 수를 제한 하 여 사용자의 sonic "공간"을 혼잡 수 있습니다. 특히 직접 조작 상호 작용에서 오디오 피드백이 spatialized 때 터치, 잡기 및 해제가 더 자연스럽 게 됩니다. 그러나 이러한 요소의 거리 감쇠와 관련 하 여 아래를 참조 하십시오.
 
-**대부분의 소리는 spatialized 여야 합니다.**
+Spatializing **시각적 표시기** 와  **_합의서 등_ AI 음성** 은 사용자가 보기의 필드 외부에 있는 경우 사용자에 게 알려 줍니다.
+    
+이와 대조적으로 잘 정의 된 공간 위치가 없는  **_faceless_ AI 음성**및 기타 요소에 대 한 spatialization 방지 합니다. 관련 시각적 요소가 없는 Spatialization는 사용자가 찾을 수 없는 시각적 요소가 있다는 것을 방해 수 있습니다.
 
-위에서 언급 한 바와 같이 혼합 현실의 모든 항목은 3D 공간에 존재 합니다. 특히 메뉴 또는 다른 UI에 연결 된 경우에도 음악이 spatialization 이점을 누릴 수 있습니다.
+Spatialization를 추가 하면 몇 가지 CPU 비용이 발생 합니다. 대부분의 응용 프로그램은 동시에 두 개의 소리를 재생 합니다. 이 경우 spatialization 비용은 무시할 수 있습니다. MRTK 프레임 요금 모니터를 사용 하 여 spatialization를 추가할 때의 영향을 판단할 수 있습니다. 
 
-**보이지 않는 송신기 방지**
+### <a name="when-and-how-should-i-apply-distance-based-attenuation"></a>거리 기반 감쇠를 적용 하는 시기 및 방법
+실제 세계에서 멀리 떨어져 있는 소리는 더 조용한 것입니다. 오디오 엔진은 원본 거리를 기준으로이 감쇠를 모델링할 수 있습니다. 관련 정보를 통신할 때 거리 기반 감쇠를 사용 합니다.
 
-우리는 조건 화 된 소리를 확인 하는 데 도움이 되었기 때문에 시각적으로 존재 하지 않는 소리를 찾는 것은 자연스럽 고 unnerving 경험이 될 수 있습니다. 실제 세계의 소리는 빈 공간에서 제공 되지 않으므로 사용자의 즉각적인 환경 내에 오디오 덤프가 배치 될 수도 있음을 확인 해야 합니다.
+**시각적 표시기**, **애니메이션 holograms**및 기타 정보 사운드에 대 한 거리가 일반적으로 사용자와 관련이 있습니다. 거리 기반 감쇠를 사용 하 여 이러한 큐를 직관적으로 제공 합니다.
+* 혼합 된 세계 공간의 크기에 맞게 각 원본에 대 한 감쇠 곡선을 조정 합니다. 오디오 엔진의 기본 곡선은 종종 매우 큰 (kilometer) 공간을 차지 합니다.
 
-**공간 마스킹 방지**
+단추 및 기타 상호 작용 **의 점진적 단계** 를 강화 하는 소리는 감쇠를 적용 하지 않아야 합니다. 이러한 소리의 강화 효과는 일반적으로 단추에 대 한 거리를 전달 하는 것 보다 더 중요 합니다. 많은 단추 클릭이 연속적으로 들릴 때 특히 키보드를 사용 하면 변형이 혼란을 수 있습니다.
 
-공간 사운드는 다른 사운드에서 과도 하 게 사용할 수 있는 매우 미묘한 음향 신호에 의존 합니다. 스테레오 음악이 나 주변 소리를 사용 하는 경우 사용자가 쉽게 찾을 수 있도록 하는 spatialized 소리의 세부 정보를 위한 공간을 확보 하 고 실제 및 자연 스러운 소리를 유지 하기 위해 혼합에서 충분 한 공간을 확보 해야 합니다.
+### <a name="which-spatialization-technology-should-i-use"></a>어떤 spatialization 기술을 사용 해야 하나요?
+헤드폰 또는 HoloLens 스피커를 사용 하는 경우 HRTF (head 관련 전송 함수) 기반 spatialization 기술을 사용 합니다. 실제 세계의 헤드를 중심으로 하는 소리 전파를 모델링 합니다. 사운드 소스가 헤드의 한쪽 면에서 멀리 떨어져 있는 경우에도 약간의 감쇠 및 지연이 있는 거리가 먼 귀에 전파 됩니다. 이와 대조적으로 스피커 패닝은 감쇠만 사용 하 고 소리가 오른쪽에 있는 경우 왼쪽 귀에 전체 감쇠를 적용 하 고 그 반대의 경우도 마찬가지입니다. 이는 정상적인 청력 수신기에 불편 하 게 사용할 수 있으며 한 가지 귀에서 청각 장애가 있는 수신기에 액세스할 수 없습니다.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>공간 사운드를 사용할 때 유의 해야 하는 일반적인 개념
+## <a name="next-steps"></a>다음 단계
+* [Unity에서 공간 소리 사용](spatial-sound-in-unity.md)
+* [Roboraid의 사례 연구](case-study-using-spatial-sound-in-roboraid.md)
+* [HoloTour의 사례 연구](case-study-spatial-sound-design-for-holotour.md)
 
-**공간 사운드는 시뮬레이션입니다.**
-
-공간 사운드가 가장 자주 사용 되는 것은 세계의 실제 또는 가상 개체에서 emanating 것 처럼 보입니다. 따라서 spatialized 소리는 이러한 개체에서 가장 적합 한 것을 알 수 있습니다.
-
-공간 사운드의 인식 정확도는 개체의 크기와 사용자의 거리에 따라 차이가 눈에 띄게 될 수 있다는 것을 의미 합니다. 작은 개체의 경우 개체의 중심점은 일반적으로 충분 합니다. 큰 개체의 경우 소리를 생성 해야 하는 개체 내의 특정 위치에서 소리 송신기 또는 여러 송신기를 사용할 수 있습니다.
-
-**모든 소리 정규화**
-
-거리 감쇠는 실제 세계에서와 같이 사용자의 첫 번째 미터 내에서 신속 하 게 발생 합니다. 모든 오디오 파일은 물리적으로 정확한 거리 감쇠를 보장 하기 위해 정규화 해야 하며, 몇 미터 떨어진 경우 (해당 하는 경우) 소리가 들릴 수 있는지 확인 해야 합니다. 공간 오디오 엔진은 특정 거리 (감쇠와 "거리 신호"의 조합 포함)에 있는 것 처럼 소리를 "느낌" 하는 데 필요한 감쇠를 처리 하 고 그 위에 감쇠를 적용 하 여 효과를 줄일 수 있습니다. 실제 개체를 시뮬레이션 하는 것 외에도 *공간 사운드* 소리의 초기 거리는 오디오의 적절 한 조합에 충분 합니다.
-
-**개체 검색 및 사용자 인터페이스**
-
-오디오 신호를 사용 하 여 사용자가 현재 보기를 벗어나 사용자의 관심을 받을 때 소리는 모든 스테레오 사운드와 방향 오디오 큐에서 방해 수 있는 다른 spatialized 사운드를 비롯 하 여 집중 하 고 강조 표시 되어야 합니다. 사용자 인터페이스의 요소 (예: 메뉴)와 연결 된 소리 및 음악의 경우 해당 개체에 소리 송신기를 연결 해야 합니다. 스테레오 및 기타 비 위치 오디오 재생을 사용 하면 사용자가 spatialized 요소를 찾기 어려울 수 있습니다 (위 참조: 공간 마스킹 방지).
-
-**가능한 한 표준 3D 사운드에 대해 공간 소리 사용**
-
-혼합 현실에서는 최상의 사용자 환경을 위해 레거시 3D 오디오 기술이 아닌 공간 사운드를 사용 하 여 3D 오디오를 달성 해야 합니다. 일반적으로 개선 된 spatialization 표준 3D 사운드 보다 작은 CPU 비용이 될 수 있습니다. 표준 3D 오디오는 우선 순위가 낮은 소리에 사용할 수 있지만, spatialized는 실제 또는 가상 개체와 반드시 연결 되는 것은 아니며, 사용자가 앱과 상호 작용 하는 데 필요 하지 않은 개체를 찾을 수 있습니다.
-
-## <a name="see-also"></a>참고 항목
-* [공간 음향](spatial-sound.md)
-* [공간 매핑](spatial-mapping.md)

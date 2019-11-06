@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 연습, 음성 명령, 구, 인식, 음성, directx, 플랫폼, cortana, windows mixed 현실
-ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0dcfaae13f763c9b8a06910f11558d2fd8e00276
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437197"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641081"
 ---
 # <a name="voice-input-in-directx"></a>DirectX의 음성 입력
 
@@ -428,5 +428,4 @@ catch (Exception^ exception)
 
 ## <a name="see-also"></a>참고 항목
 * [음성 앱 디자인](https://msdn.microsoft.com/library/dn596121.aspx)
-* [DirectX의 공간 음향](spatial-sound-in-directx.md)
 * [SpeechRecognitionAndSynthesis 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
