@@ -39,6 +39,7 @@
 ### [실내 스캔 시각화](room-scan-visualization.md)
 ### [장면 이해](scene-understanding.md)
 ### [공간 앵커](spatial-anchors.md)
+### [소리](spatial-sound.md)
 ### [공간 매핑](spatial-mapping.md)
 ### [시스템 제스처](system-gesture.md)
 ### [혼합 현실 앱의 종류](types-of-mixed-reality-apps.md)
@@ -65,7 +66,6 @@
 ### 스타일
 #### [색, 광원 및 재질](color,-light-and-materials.md)
 #### [배율](scale.md)
-#### [공간 음향](spatial-sound.md)
 #### [공간 음향 디자인](spatial-sound-design.md)
 #### [입력 체계](typography.md)
 ### 컨트롤 및 동작
@@ -193,7 +193,6 @@
 #### [헤드 및 시선 응시](gaze-in-directx.md)
 #### [실습 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)
 #### [음성 입력 ](voice-input-in-directx.md)
-#### [공간 음향](spatial-sound-in-directx.md)
 #### [공간 매핑](spatial-mapping-in-directx.md)
 #### [장면 이해](scene-understanding-sdk.md)
 #### [공유 공간 앵커](shared-spatial-anchors-in-directx.md)
