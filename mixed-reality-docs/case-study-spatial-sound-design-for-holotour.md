@@ -6,12 +6,12 @@ ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, 공간 음향, 사례 연구
-ms.openlocfilehash: eca675534dba12dd65a20fb9d85e4df57f725288
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e1da80bd647084aa4d7839c0f1b1848b46c2b1b4
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522434"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641151"
 ---
 # <a name="case-study---spatial-sound-design-for-holotour"></a>사례 연구-HoloTour에 대 한 공간 음향 디자인
 
@@ -27,13 +27,13 @@ HoloTour를 사용 하 여 HoloLens의 공간 음향 기능을 활용 하 여 �
 
 ## <a name="behind-the-scenes"></a>백그라운드 작업
 
-다음 두 가지 위치의 HoloTour 환경을 만들었습니다. 로마 및 Machu 이러한 투어가 인증을 받을 수 있도록 하기 위해 일반적인 소리를 사용 하지 않고, 대신 filming 위치에서 직접 오디오를 캡처하는 것이 좋습니다.
+두 개의 다른 위치인 로마 및 Machu HoloTour 환경을 만들었습니다. 이러한 투어가 인증을 받을 수 있도록 하기 위해 일반적인 소리를 사용 하지 않고, 대신 filming 위치에서 직접 오디오를 캡처하는 것이 좋습니다.
 
 ### <a name="capturing-the-audio"></a>오디오 캡처
 
 [HoloTour에 대 한 시각적 콘텐츠 캡처에 대 한 microsoft의 사례 연구](case-study-capturing-and-creating-content-for-holotour.md)에서는 카메라 rig의 사용자 지정 디자인에 대해 알아보았습니다. Tripod의 특정 크기에 맞게 설계 된 3D 인쇄 틀에 포함 된 14 개의 GoPro 카메라로 이루어져 있습니다. 이 rig에서 오디오를 캡처하려면 카메라 아래에 4 개의 마이크 배열을 추가 했습니다 .이는 tripod의 기본에 해당 하는 컴팩트 4 채널 기록 단위로 제공 됩니다. 카메라의 보기를 려 하지 않고 크기가 매우 작은 경우에도 잘 수행 되지 않는 마이크를 선택 했습니다.
 
-![사용자 지정 카메라 및 마이크 rig](images/camera-rig-microphones-300px.png)<br>
+사용자 지정 카메라 및 마이크 rig를 ![](images/camera-rig-microphones-300px.png)<br>
 *사용자 지정 카메라 및 마이크 rig*
 
 이 설치는 카메라의 정확한 위치에서 4 방향으로 소리를 캡처하여 공간 소리를 사용 하 여 3D aural 파노라마를 다시 만들 수 있는 충분 한 정보를 제공 합니다 .이는 나중에 360 수준 비디오에 동기화 할 수 있습니다.
@@ -59,26 +59,25 @@ HoloTour를 사용 하 여 HoloLens의 공간 음향 기능을 활용 하 여 �
 ## <a name="tips-and-tricks"></a>팁과 요령
 
 장면에 오디오를 함께 배치 하는 경우에는 몇 가지 추가 방법을 사용 하 여 HoloLens의 공간 음향 기능을 완벽 하 게 활용 하 여 방향성 및 집중 교육을 추가로 강조 표시할 수 있습니다. 다음에 HoloTour을 시도할 때 수신 대기 하는 아래와 같은 목록을 제공 했습니다.
-* **대상 찾기**: 이는 holographic 프레임의 특정 개체나 영역을 확인 하는 경우에만 트리거되는 소리입니다. 예를 들어 로마 Piazza Navona에서 번 지 카페의 방향을 살펴보면 바쁜 식당의 소리를 약간 트리거할 수 있습니다.
-* **로컬 비전**: HoloTour의 경험에는 holograms가 포함 하는 둘러보기 가이드에서 심층적으로 토픽을 탐색 하는 특정 한 기능이 포함 되어 있습니다. 예를 들어, dissolves에 대 한 외관에서 oculus를 표시 하기 위해, reverberating 내부에서 3D 송신기로 배치 된 오디오는 사용자가 내부 모델을 탐색할 수 있도록 합니다.
+* **대상 찾기**: holographic 프레임의 특정 개체 또는 영역을 확인 하는 경우에만 트리거되는 소리입니다. 예를 들어 로마 Piazza Navona에서 번 지 카페의 방향을 살펴보면 바쁜 식당의 소리를 약간 트리거할 수 있습니다.
+* **로컬 비전**: HoloTour에는 holograms가 포함 하는 둘러보기 가이드에서 심층적으로 토픽을 탐색 하는 특정 한 기능이 포함 되어 있습니다. 예를 들어, dissolves에 대 한 외관에서 oculus를 표시 하기 위해, reverberating 내부에서 3D 송신기로 배치 된 오디오는 사용자가 내부 모델을 탐색할 수 있도록 합니다.
 * **향상**된 방향: 많은 장면에서 방향에 추가 하는 다양 한 방식으로 소리를 넣었습니다. 예를 들어, 장면의 소리는 사용자에 게 충분 한 별도의 송신기로 배치 되어 재생 공간을 중심으로 ' sonic 시차 '가 될 수 있습니다. 페루의 Salinas de (페루) 장면에서 일부 스트림의 개별 큐브 뷰는 개별 송신기로 배치 되어 사용자에 게 해당 위치의 인증 된 소리를 둘러싼 더 몰입 형 주변 환경을 구축 했습니다.
-* **스플라인 내보내기**: 이 특수 공간 사운드 내보내기는 연결 된 개체의 시각적 위치를 기준으로 3D 공간으로 이동 합니다. 이에 대 한 예는 스플라인 송신기를 사용 하 여 방향성과 움직임의 고유한 의미를 제공 하는 Machu Con추의 학습 이었습니다.
-* **음악 및 SFX**: 더 다양 한 스타일 또는 시네마 방식을 나타내는 HoloTour의 특정 측면은 음악 및 음향 효과를 사용 하 여 감정적 영향을 heighten 합니다. 로마 둘러보기의 끝 부분에 있는 글 글 전투에서 whooshes 또는 stingers와 같은 특수 효과를 사용 하 여 레이블이 장면에 표시 되는 효과를 강화 했습니다.
+* **스플라인 내보내기**:이 특수 공간 사운드 내보내기는 연결 된 개체의 시각적 위치를 기준으로 3d 공간에서 이동 합니다. 이에 대 한 예는 스플라인 송신기를 사용 하 여 방향성과 움직임의 고유한 의미를 제공 하는 Machu Con추의 학습 이었습니다.
+* **Music AND SFX**: 보다 스타일이 있는 또는 시네마 접근 방식을 나타내는 HoloTour의 특정 측면은 음악 및 음향 효과를 사용 하 여 감정적 효과를 heighten 합니다. 로마 둘러보기의 끝 부분에 있는 글 글 전투에서 whooshes 또는 stingers와 같은 특수 효과를 사용 하 여 레이블이 장면에 표시 되는 효과를 강화 했습니다.
 
 ## <a name="about-the-author"></a>작성자 정보
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason Syltebo</b><br>오디오 디자이너@Microsoft</td>
+<td style="border-style: none"><b>Jason Syltebo</b><br>오디오 디자이너 @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [공간 음향](spatial-sound.md)
 * [공간 음향 디자인](spatial-sound-design.md)
 * [Unity의 공간 음향](spatial-sound-in-unity.md)
-* [MR 공간 220](holograms-220.md)
-* [동영상: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+* [비디오: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
 
  
