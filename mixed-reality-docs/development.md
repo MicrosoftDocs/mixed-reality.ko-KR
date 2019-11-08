@@ -1,240 +1,158 @@
 ---
 layout: LandingPage
-title: 개발
+title: 도구 및 아키텍처 알아보기
 description: HoloLens 및 몰입형 헤드셋에 대한 혼합 현실 개발자 설명서입니다.
 author: grbury
 ms.author: grbury
-ms.date: 02/12/2019
-ms.topic: article
+ms.date: 08/27/2019
+ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: bf80b676d03fce9011f5952af476dcaa5e2b4eb2
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507915"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435688"
 ---
-# <a name="development-launchpad"></a>개발 실행 패드
-
-## <a name="article-categories"></a>문서 범주
+# <a name="learn-the-tools-and-architecture"></a>도구 및 아키텍처 알아보기
 
 
-<ul class="panelContent cardsF">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/GetStartedIcon.png" alt="Get started icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>시작</h3>
-                        <p>
-                            <a href="mixed-reality.md">혼합 현실이란?</a>
-                        </p>
-                        <p>
-                            <a href="install-the-tools.md">도구 설치</a>
-                        </p>
-                        <p>
-                            <a href="mrlearning-base-ch1.md">MR 학습: HoloLens 2 및 MRTK v2</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-        <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloLens_Icon_120x130.png" alt="Devices icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>장치</h3>
-                          <p>
-                            <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
-                        </p>
-                        <p>
-                            <a href="hololens-hardware-details.md">HoloLens(1세대)</a>
-                        </p>
-                        <p>
-                            <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/AzureSpatialAnchors_Icon_120x130.png" alt="Azure Spatial Anchors icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>서비스</h3>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
-                        </p>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank">Speech Services</a>
-                        </p>
-                        <p>
-                            <a href="https://docs.microsoft.com/azure/cognitive-services/computer-vision/" target="_blank">Vision Services</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/Unity_Icon_120x130.png" alt="Developer techologies icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>개발자 기술</h3>
-                        <p>
-                            <a href="unity-development-overview.md">Unity</a>
-                        </p>
-                        <p>
-                            <a href="directx-development-overview.md">사용자 지정 엔진(DirectX)</a>
-                        </p>
-                        <p>
-                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
-                        </p>                
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/PortingGuides-icon_120x130.png" alt="Porting guides icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>포팅 가이드</h3>
-                        <p>
-                            <a href="mrtk-porting-guide.md">HoloLens(1세대)에서<br>HoloLens 2로 앱 업데이트</a>
-                        </p>
-                        <p>
-                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Mixed Reality Toolkit(MRTK)<br>API 이식 가이드</a>
-                        </p>
-                        <p>
-                            <a href="porting-guides.md">몰입형 헤드셋 앱</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/App_patterns_Icon_120x130.png" alt="Development fundamentals icon">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>개발 기본 사항</h3>
-                        <p>
-                            <a href="Interaction-fundamentals.md">직관적 상호 작용</a>
-                        </p>
-                        <p>
-                            <a href="rendering.md">홀로그램 렌더링</a>
-                        </p>
-                         <p>
-                            <a href="testing-your-app-on-hololens.md">앱 테스트</a>
-                        </p>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>    
-</ul>
+![Mixed Reality Academy에서 자료를 사용하는 팀](images/Development_Hero.png)
 
-## <a name="overview"></a>개요
+## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 
-혼합 현실 애플리케이션은 [UWP(유니버설 Windows 플랫폼)](https://dev.windows.com/getstarted)로 빌드됩니다. 모든 혼합 현실 애플리케이션은 UWP 애플리케이션입니다. 모든 UWP 애플리케이션은 Windows Mixed Reality 디바이스에서 실행되도록 설정할 수 있습니다. Windows 10이 있으며 Unity와 같은 미들웨어 도구에 익숙한 경우 지금 바로 혼합 현실 환경을 빌드할 수 있습니다.
+2016년 Microsoft에서 열정적인 개발자를 대상으로 하는 HoloLens를 시작함에 따라 팀에서 이미 Microsoft 내외부의 스튜디오와 제휴하여 디바이스의 시작 환경을 구축했습니다. 이러한 팀은 혼합 현실 디자인의 새로운 분야에서 기회와 과제를 모두 수행하고 찾아냄으로써 학습했습니다. [자세한 정보](case-study-expanding-the-design-process-for-mixed-reality.md)
+
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/A784OdX8xzI]
-
-## <a name="basics-of-mixed-reality-development"></a>혼합 현실 개발 기본 사항
-
-[혼합 현실](mixed-reality.md) 환경에서는 환경 이해를 위한 새로운 Windows 기능이 지원됩니다. 이러한 기능을 통해 개발자는 실제 세상에 [홀로그램](hologram.md)을 배치할 수 있으며, 사용자는 그야말로 걸어다니면서 디지털 세계를 이동할 수 있습니다. 
-
-다음은 혼합 현실 개발을 위한 핵심 구성 요소입니다.
-
-<table>
-<tr>
-<th style="width:175px">입력</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens(1세대)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
-</tr><tr>
-<td> <a href="gaze.md">머리 응시</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gaze.md">응시</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
- <td> <a href="gestures.md">연결된 손</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="gestures.md">제스처</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-input.md">음성</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="hardware-accessories.md">게임 패드</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="motion-controllers.md">모션 컨트롤러</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<th style="width:175px">인식 및 공간 기능</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens(1세대)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md">세계 좌표</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-sound.md">공간 음향</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">공간 매핑</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
-</table>
+---
 
 
+## <a name="what-technology-path-are-you-interested-in"></a>관심이 있는 기술 경로는 무엇인가요? 
 
-[HoloLens](hololens-hardware-details.md)의 기본 조작 모델은 [응시](gaze.md), [제스처](gestures.md) 및 [음성](voice-input.md)으로, *GGV*라고도 합니다. [Windows Mixed Reality 몰입형 헤드셋](immersive-headset-hardware-details.md)의 경우도 응시 및 음성을 사용하지만 제스처를 위해 [모션 컨트롤러](motion-controllers.md)를 바꿉니다.
 
-모든 혼합 현실 디바이스는 마우스, 키보드, 게임 패드 등과 같이 Windows에서 사용할 수 있는 입력 에코 시스템을 활용합니다. HoloLens를 사용할 경우 [하드웨어 액세서리](hardware-accessories.md)가 Bluetooth를 통해 연결됩니다. 몰입형 헤드셋을 사용하면 액세서리는 Bluetooth, USB 및 기타 지원되는 프로토콜을 통해 호스트 PC에 연결됩니다.
+:::row:::   
+    :::column:::    
+       [![Unity](images/unity_logo.png)](development.md#unity)<br>
+        **[Unity](development.md#unity)**<br>   
+        혼합 현실 앱을 구축하는 가장 빠른 경로는 Unity를 사용하는 것입니다. 
+    :::column-end:::    
+    :::column:::    
+        [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
+         **[Unreal](development.md#unreal)**<br>    
+        HoloLens 2에 대한 프로덕션 대비 지원도 Unreal Engine 4.23에 포함됩니다.    
+    :::column-end:::
+    :::column:::    
+        [![WebVR](images/WebVR_logo.png)](development.md#webvr)<br>
+        **[WebVR](development.md#webvr)**<br>
+        WebVR은 브라우저에서 VR 경험을 가능하게 하는 공개 사양입니다. 
+    :::column-end:::        
+    :::column:::    
+        [![Native](images/VisualStudio-small_logo.png)](development.md#native)<br>
+        **[Native](development.md#native)**<br> 
+        Windows Mixed Reality API로 직접 코딩하여 혼합 현실 앱을 만들 수 있습니다. 
+    :::column-end:::    
+:::row-end:::
 
-[좌표](coordinate-systems.md), [공간 음향](spatial-sound.md) 및 [공간 매핑](spatial-mapping.md)과 같은 환경 이해 기능은 혼합 현실에 필요한 기능을 제공합니다. 공간 매핑은 HoloLens에 고유하게 사용되며, 홀로그램이 사용자 및 주변의 실제 세계와 상호 작용할 수 있도록 합니다. 좌표계는 사용자의 움직임이 디지털 세계의 움직임에 영향을 미치도록 합니다.
+<br>
 
-홀로그램은 빛과 소리로 구성되며 [렌더링](rendering.md)에 의존합니다. [Windows Mixed Reality 홈](navigating-the-windows-mixed-reality-home.md)(“셸”이라고도 함)이 나타내는 것처럼 배치 및 지속성 환경을 이해하면 사용자 환경에서 더 편리하게 작업할 수 있습니다.
+---
 
-## <a name="tools-for-developing-mixed-reality"></a>혼합 현실 개발을 위한 도구
+## <a name="unity"></a>Unity
 
-사용하는 도구는 빌드하려는 [앱의 스타일](app-views.md)에 따라 다릅니다.
-* [2D 뷰가 있는 앱](building-2d-apps.md)은 Windows Phone, PC, 태블릿과 같은 환경에 적합한 UWP 애플리케이션을 빌드하기 위한 도구를 활용합니다. 이러한 애플리케이션은 Windows Mixed Reality 홈에 배치된 2D 프로젝션을 통해 사용할 수 있으며 여러 디바이스 유형(휴대폰 및 PC 포함)에서 작동합니다.
-* 몰입형 및 홀로그래픽 애플리케이션은 Windows Mixed Reality API를 활용하도록 디자인된 도구가 필요합니다. 혼합 현실 애플리케이션을 빌드하려면 [Unity를 사용하는 것이 좋습니다](unity-development-overview.md). 고유한 엔진 구빌드에 관심이 있는 개발자는 [DirectX 및 기타 Windows API를 사용](directx-development-overview.md)할 수 있습니다.
 
-빌드 중인 앱 유형에 관계없이, 다음과 같은 도구를 통해 앱 개발 환경을 원활하게 사용할 수 있습니다.
-* [Visual Studio 및 Windows SDK](using-visual-studio.md)
-* [Windows 디바이스 포털](using-the-windows-device-portal.md)
-* [HoloLens 에뮬레이터](using-the-hololens-emulator.md)
-* [Windows Mixed Reality 시뮬레이터](using-the-windows-mixed-reality-simulator.md)
-* [앱 품질 기준](app-quality-criteria.md)
+### <a name="unity-development-overviewunity-development-overviewmd"></a>[Unity 개발 개요](unity-development-overview.md)
+시간을 내어 Unity 자습서를 살펴보는 것이 좋습니다. 자산이 필요한 경우 Unity에는 포괄적인 자산 저장소가 있습니다. 
 
+<br>
+
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unitymrtk-getting-startedmd"></a>[Microsoft의 Unity용 MRTK(Mixed Reality Toolkit)](mrtk-getting-started.md)
+Unity가 포함된 MRTK v2는 혼합 현실 애플리케이션용 오픈 소스 플랫폼 간 개발 키트입니다. MRTK 버전 2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션의 개발을 가속화하기 위한 것입니다.
+
+<br>
+
+### <a name="open-source-sample-apps-and-step-by-step-tutorialstutorialsmd"></a>[오픈 소스 샘플 앱 및 단계별 자습서](tutorials.md)
+HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다. 이 자습서는 MRTK 2.0(Mixed Reality Toolkit 2.0)을 기반으로 합니다.
+
+<br>
+
+### <a name="hand-interaction-examples-scene-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationgettingstartedwiththemrtkhtmlopen-and-run-the-handinteractionexamples-scene-in-editor"></a>[Unity의 손 상호 작용 예시 장면(MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor)
+HandInteractionExamples.unity 예시 장면에는 연결식 손 입력에 중점을 둔 다양한 유형의 상호 작용 및 UI 컨트롤이 있습니다.
+>[!NOTE]
+>MRTK Foundation 및 Example Unity 패키지를 설치해야 합니다.
+
+### <a name="eye-tracking-examples-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationeyetrackingeyetracking_examplesoverviewhtml"></a>[Unity의 시선 추적 예시(MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html)
+이 페이지에서는 제공된 MRTK 시선 추적 예제를 기반으로 MRTK에서 시선 추적을 빠르게 사용하기 시작하는 방법을 설명합니다.
+>[!NOTE]
+>MRTK Foundation 및 Example Unity 패키지를 설치해야 합니다.
+
+<br>
+
+---
+
+## <a name="unreal"></a>Unreal
+
+### <a name="unreal-development-overviewunreal-development-overviewmd"></a>[Unreal 개발 개요](unreal-development-overview.md)
+Unreal을 사용하여 혼합 현실 앱을 빌드하는 방법을 알아봅니다.
+
+<br>
+
+---
+
+## <a name="webvr"></a>WebVR    
+
+### <a name="babylon-development-overviewhttpsdocbabylonjscom"></a>[Babylon 개발 개요](https://doc.babylonjs.com/)  
+Babylon을 통해 혼합 현실 앱을 빌드하는 방법을 알아봅니다. 시간을 내어 Babylon 자습서를 살펴보는 것이 좋습니다.
+
+<br>
+
+---
+
+## <a name="native"></a>기본
+
+
+### <a name="native-development-overviewdirectx-development-overviewmd"></a>[네이티브 개발 개요](directx-development-overview.md)
+네이티브 혼합 현실 앱을 빌드하는 가장 빠른 길입니다.
+
+<br>
+
+### <a name="directx-uwp-app-templates-for-mixed-realityhttpsmarketplacevisualstudiocomitemsitemnamewindowsmixedrealityteamwindowsmixedrealityapptemplatesvsix"></a>[혼합 현실용 DirectX UWP 앱 템플릿](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)
+DirectX를 사용하여 혼합 현실 앱을 작성하는 데 필요한 모든 필수 정보를 포함합니다.
+
+<br>
+
+---
+
+
+## <a name="what-would-you-like-to-do-next"></a>다음에 수행할 작업은 무엇인가요?
+
+
+:::row:::
+    :::column:::
+       [![기본 사항 이해](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+        **[기본 사항 이해](index.md#understand-the-basics)**<br>
+        혼합 현실을 정의하는 것이 무엇이며, 혼합 현실이 어떻게 사용되는지에 대해 더 잘 이해합니다.
+    :::column-end:::
+    :::column:::
+        [![개발자 되기](images/icon-design.jpg)](design.md)<br>
+         **[개발자 되기](design.md)**<br>
+        디자인 및 프로토타입 생성을 시작하는 데 필요한 기본 개념을 알아봅니다.
+    :::column-end:::
+    :::column:::
+        [![도구 설치](images/icon-developer.jpg)](install-the-tools.md)<br>
+         **[도구 설치](install-the-tools.md)**<br>
+        설치 체크리스트를 사용하여 HoloLens와 혼합 현실용 앱을 빌드하는 데 필요한 도구를 구합니다.
+    :::column-end:::
+    :::column:::
+        [![이벤트 참가](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+         **[이벤트 참가](sf-academy-events.md)**<br>
+        하드웨어를 살펴보고 첫 번째 HoloLens 2 애플리케이션을 만들기 위한 실습 자습서를 받으세요.
+    :::column-end:::
+:::row-end:::
+
+
+<br>
+
+<br>
