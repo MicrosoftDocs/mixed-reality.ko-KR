@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9d76d5323705c001dbafe4411a9334dd3403d0ca
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437563"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926235"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Azure 공간 앵커를 공유 환경에 통합
 
 이 단원에서는 Azure 공간 앵커 (GLOBAL.ASA)를 공유 환경에 통합 하는 방법에 대해 알아봅니다. 모든 참가자가 동일한 물리적 위치에 있는 개체를 볼 수 있도록 실제 환경에서 가상 환경을 고정 하는 경우에는 여러 개의 공동 배치 된 장치에서 일반적인 참조를 사용할 수 있습니다.
 
-이 단원을 계속 진행 하기 전에, Azure 계정 및 리소스를 만들고, Azure 계정 및 리소스를 만들고, Azure를 공유 환경에 통합 하기 전에 필요한 다른 기본 빌딩 블록을 설명 하는 GLOBAL.ASA 학습 모듈을 완료 해야 합니다.
+이 단원을 계속 진행 하기 전에 먼저 Azure 계정 및 리소스를 만들고, Azure 계정 및 리소스를 만들고, Azure를 공유 환경에 통합 하기 전에 필요한 다른 기본 구성 요소를 포함 하는 GLOBAL.ASA 학습 모듈을 완료 해야 합니다.
 
 목표로
 
@@ -37,7 +37,7 @@ ms.locfileid: "73437563"
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. 이제 계층 구조에서 ShareAzureAnchorButton을 선택 하 고 Inaspector 패널로 이동 합니다. 아래 이미지에 표시 된 드롭다운 메뉴로 스크롤하고 AnchorModuleScript를 선택 하 고 ShareAnchorNetework ()를 클릭 합니다.
+4. 이제 계층 구조에서 ShareAzureAnchorButton을 선택 하 고 주목를 검사기 패널로 이동 합니다. 아래 이미지에 표시 된 드롭다운 메뉴로 스크롤하고 AnchorModuleScript를 선택 하 고 ShareAnchorNetwork ()를 클릭 합니다.
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 

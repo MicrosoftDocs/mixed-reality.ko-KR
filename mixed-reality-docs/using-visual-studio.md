@@ -1,24 +1,24 @@
 ---
 title: Visual Studio를 사용 하 여 배포 및 디버그
-description: Visual Studio를 사용 하 여 HoloLens 및 Windows Mixed Reality 앱을 빌드, 디버그 및 배포 하는 방법입니다.
+description: Visual Studio를 사용 하 여 HoloLens 및 Windows Mixed Reality 앱을 빌드, 디버그 및 배포 하는 방법을 알아봅니다.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
 keywords: Visual Studio, HoloLens, 혼합 현실, 디버그, 배포
-ms.openlocfilehash: 2b84183417a1bd4eaa90eef58bebe2b65966b933
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437330"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914117"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Visual Studio를 사용 하 여 배포 및 디버그
 
-DirectX 또는 Unity를 사용 하 여 혼합 현실 앱을 개발할 지 여부에 관계 없이 Visual Studio를 사용 하 여 디버깅 하 고 배포할 수 있습니다. 이 섹션에서는 다음에 대해 설명 합니다.
-* Visual Studio를 통해 HoloLens 또는 Windows Mixed Reality 모던 헤드셋에 응용 프로그램을 배포 하는 방법입니다.
-* Visual Studio에 기본 제공 되는 HoloLens 에뮬레이터를 사용 하는 방법입니다.
-* 혼합 현실 앱을 디버그 하는 방법입니다.
+DirectX 또는 Unity를 사용 하 여 혼합 현실 앱을 개발할 지 여부에 관계 없이 Visual Studio를 사용 하 여 디버깅 하 고 배포할 수 있습니다. 이 섹션에서는 다음 방법에 대해 설명 합니다.
+* Visual Studio를 통해 HoloLens 또는 Windows Mixed Reality 모던 헤드셋에 응용 프로그램을 배포 합니다.
+* Visual Studio에 기본 제공 되는 HoloLens 에뮬레이터를 사용 합니다.
+* 혼합 현실 앱을 디버그 합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 1. 설치 지침은 [도구 설치](install-the-tools.md) 를 참조 하세요.
@@ -48,7 +48,7 @@ PC에 연결 된 Windows Mixed Reality 헤드셋으로 작업 하는 경우 PC�
 ## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Wi-fi를 통한 앱 배포 (첫 번째 gen)
 1. Visual Studio에서 x86 빌드 구성 ![앱에 대 한 **x86** 빌드 구성을 선택](images/x86setting.png)
 2. 배포 대상 드롭다운 메뉴에서 **원격 컴퓨터** 를 선택 하 여 Visual Studio에서 원격 컴퓨터 배포 대상 ![](images/remotemachinesetting.png)
-3. 및 C++ JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 이동 합니다. 프로젝트 C# 의 경우 연결을 구성 하기 위한 대화 상자가 자동으로 팝업 됩니다.
+3. 및 C++ JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 이동 합니다. 프로젝트 C# 의 경우 연결을 구성 하는 대화 상자가 자동으로 나타납니다.
   a. **주소** 또는 **컴퓨터 이름** 필드에 장치의 IP 주소를 입력 합니다. **설정 > Network & Internet > 고급 옵션**에서 HOLOLENS의 ip 주소를 찾거나 Cortana에서 "내 IP 주소는 무엇입니까?"를 선택할 수 있습니다.
   b. Visual Studio에서 원격 연결 대화![인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정](images/remotedeploy.png)
 4. **디버그 > 디버깅 시작** 을 선택 하 여 앱을 배포 하 고 Visual Studio에서 디버깅 하지 않고 시작![디버깅을 시작](images/deploywithdebugging.png)
@@ -57,9 +57,9 @@ PC에 연결 된 Windows Mixed Reality 헤드셋으로 작업 하는 경우 PC�
 ## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Wi-fi를 통한 앱 배포-HoloLens 2
 1. Visual Studio에서 앱 ![ARM64 빌드 구성에 대 한 **ARM** 또는 **ARM64** 빌드 구성을 선택](images/arm64setting.png)
 2. 배포 대상 드롭다운 메뉴에서 **원격 컴퓨터** 를 선택 하 여 Visual Studio에서 원격 컴퓨터 배포 대상 ![](images/remotemachinesetting_arm64.png)
-3. 및 C++ JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 이동 합니다. 프로젝트 C# 의 경우 연결을 구성 하기 위한 대화 상자가 자동으로 팝업 됩니다.
+3. 및 C++ JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 이동 합니다. 프로젝트 C# 의 경우 연결을 구성 하는 대화 상자가 자동으로 나타납니다.
   a. **주소** 또는 **컴퓨터 이름** 필드에 장치의 IP 주소를 입력 합니다. **설정 > Network & Internet > 고급 옵션**에서 HOLOLENS의 ip 주소를 찾거나 Cortana에서 "내 IP 주소는 무엇입니까?"를 선택할 수 있습니다.
-  b. Visual Studio에서 원격 연결 대화![인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** 로 설정](images/remotedeploy.png)
+  b. Visual Studio에서 인증 모드를 **유니버설 (암호화 되지 않은 프로토콜)** ![원격 연결 대화 상자로 설정](images/remotedeploy.png)
 4. **디버그 > 디버깅 시작** 을 선택 하 여 앱을 배포 하 고 Visual Studio에서 디버깅 하지 않고 시작![디버깅을 시작](images/deploywithdebugging.png)
 5. PC에서 HoloLens에 앱을 처음으로 배포할 때 PIN을 입력 하 라는 메시지가 표시 됩니다. 아래 **장치** 연결 지침을 따릅니다.
 

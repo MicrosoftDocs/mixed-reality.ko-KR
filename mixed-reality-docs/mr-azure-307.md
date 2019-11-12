@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 기계 학습, ml, 기계 학습 스튜디오, hololens, 몰입 형, vr
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437928"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926614"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -731,7 +731,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))
@@ -849,7 +849,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 1.  새 Unity 빌드 ( **앱** 폴더)로 이동 하 여 **Visual Studio**에서 솔루션 파일을 엽니다.
 
-2.  Visual Studio를 연 상태에서 MachineLearningLab_Build 솔루션을 마우스 오른쪽 단추로 클릭 하 고 (Visual Studio의 오른쪽에 있음) 솔루션 탐색기에서 NuGet 패키지 복원을 클릭 하 여 수행할 수 있는 NuGet 패키지를 복원 해야 합니다.
+2.  Visual Studio를 연 상태에서 NuGet 패키지를 복원 해야 합니다 .이 작업은 솔루션 탐색기 (Visual Studio의 오른쪽에 있음)에서 MachineLearningLab_Build 솔루션을 마우스 오른쪽 단추로 클릭 한 다음 NuGet 패키지 복원을 클릭 하 여 수행할 수 있습니다.
 
     ![NuGet 패키지 추가](images/AzureLabs-Lab7-57.png)
 

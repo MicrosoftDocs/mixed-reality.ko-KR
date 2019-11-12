@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 제스처, 동작 컨트롤러, unity, 응시, 입력
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435230"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926567"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Unity의 제스처 및 동작 컨트롤러
 
@@ -145,7 +145,7 @@ Unity는 현재 일반 입력을 사용 *합니다. GetButton/Input. Getbutton* 
 
 일반 Unity 입력 Api를 사용 하려면 일반적으로 [Unity 입력 관리자](https://docs.unity3d.com/Manual/ConventionalGameInput.html)에서 단추와 축을 논리적 이름에 연결 하 여 단추 또는 축 id를 각 이름에 바인딩하는 것으로 시작 합니다. 그런 다음 해당 논리적 단추/축 이름을 참조 하는 코드를 작성할 수 있습니다.
 
-예를 들어 왼쪽 동작 컨트롤러의 트리거 단추를 전송 작업에 매핑하려면 **> 프로젝트 설정 편집** 으로 이동 하 여 Unity 내에서 입력 > 하 고 축 아래에서 제출 섹션의 속성을 확장 합니다. **식이 양의 단추나** **Alt 긍정 단추** 속성을 다음과 같이 **조이스틱 단추 14**로 변경 합니다.
+예를 들어 왼쪽 동작 컨트롤러의 트리거 단추를 전송 작업에 매핑하려면 **> 프로젝트 설정 편집** 으로 이동 하 여 Unity 내에서 입력 > 하 고 축 아래에서 제출 섹션의 속성을 확장 합니다. **긍정 단추** 또는 **Alt 긍정 단추** 속성을 다음과 같이 **조이스틱 단추 14**로 변경 합니다.
 
 ![Unity의 InputManager](images/unity-input-manager.png)<br>
 *Unity InputManager*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>제스처 캡처 시작
 
-기본적으로 *GestureRecognizer* 는 *Startcapturinggestures ()* 를 호출할 때까지 입력을 모니터링 하지 않습니다. *Stopcapturinggestures ()* 가 처리 된 프레임 보다 먼저 입력이 수행 되 면 *Stopcap의 ing제스처 ()* 가 호출 된 후에 제스처 이벤트가 생성 될 수 있습니다. *GestureRecognizer* 는 제스처가 실제로 발생 한 previou 프레임 중에 설정 되었는지 여부를 기억할 것 이므로이 프레임의 응시 대상에 따라 제스처 모니터링을 시작 및 중지 하는 것은 안정적입니다.
+기본적으로 *GestureRecognizer* 는 *Startcapturinggestures ()* 를 호출할 때까지 입력을 모니터링 하지 않습니다. *Stopcapturinggestures ()* 가 처리 된 프레임 보다 먼저 입력이 수행 되 면 *Stopcap의 ing제스처 ()* 가 호출 된 후에 제스처 이벤트가 생성 될 수 있습니다. *GestureRecognizer* 는 제스처가 실제로 발생 한 이전 프레임의 설정 또는 해제 여부를 기억할 것 이므로이 프레임의 응시 대상에 따라 제스처 모니터링을 시작 및 중지 하는 것은 안정적입니다.
 
 ```cs
 recognizer.StartCapturingGestures();

@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱 품질 기준, 혼합 현실, 혼합 현실 앱
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437043"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926585"
 ---
 # <a name="app-quality-criteria"></a>앱 품질 기준
 
@@ -124,7 +124,7 @@ ms.locfileid: "73437043"
 * Holograms 및 환경을 중심으로 이동 하 여 스윔 및 jumpiness와 같은 동작을 찾습니다. 이 유형의 동작은 장치에서 환경을 추적 하지 않거나 공간 앵커에 대 한 거리를 발생 시킬 수 있습니다.
 * 프레임에 큰 holograms 여러 개 있는 경우 다양 한 수준에서 홀로그램 동작을 관찰 하 여 헤드 위치를 측면에서 쪽으로 이동 합니다. shakiness가 표시 되 면 안정화 평면으로 인해 발생할 수 있습니다.
 
-### <a name="recomendations"></a>권장 사항
+### <a name="recommendations"></a>권장 사항
 
 * 개발 작업을 시작할 때 프레임 속도 카운터를 추가 합니다.
 * 안정화 평면을 사용 합니다.
@@ -188,7 +188,7 @@ ms.locfileid: "73437043"
 * 공간 맵은 전체 자릿수가 필요 하지 않은 경우 화면에 개체를 배치 하는 데 유용 합니다.
 * 최상의 정밀도를 위해 마커 또는 포스터를 사용 하 여 최종 보정에 대 한 holograms 및 Xbox 컨트롤러 (또는 일부 수동 맞춤 메커니즘)를 설정 합니다.
 * 매우 큰 holograms을 논리적 부분으로 분리 하 고 각 부분을 표면에 정렬 하는 것이 좋습니다.
-* IPD (interpupilary distance)를 잘못 설정 하면 홀로그램 맞춤에도 영향을 미칠 수 있습니다. 항상 사용자의 IPD으로 HoloLens를 구성 합니다.
+* IPD (interpupillary distance)를 잘못 설정 하면 홀로그램 맞춤에도 영향을 미칠 수 있습니다. 항상 사용자의 IPD으로 HoloLens를 구성 합니다.
 
 ### <a name="resources"></a>리소스
 
@@ -523,7 +523,7 @@ Holograms은 "실제" 개체와 거의 동일한 방식으로 사용자의 위�
 ### <a name="how-to-measure"></a>측정 방법
 
 * 앱은 일관 된 [표준 입력 메서드를 사용 합니다.](interaction-fundamentals.md)
-* 앱에 customer 입력이 있는 경우 다음을 통해 명확 하 게 전달 됩니다.
+* 앱에 사용자 지정 입력이 있는 경우 다음을 통해 명확 하 게 전달 됩니다.
 * 첫 실행 환경
 * 소개 화면
 * 도구 설명

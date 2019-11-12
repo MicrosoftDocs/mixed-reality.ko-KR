@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 배포, unity, visual studio, HoloLens, HoloLens 2, 모던 헤드셋
-ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436968"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926545"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Unity 및 Visual Studio 사용에 대 한 모범 사례
 
@@ -45,7 +45,7 @@ Unity의 .NET scripting 백 엔드 지원은 Unity 2018에서 더 이상 사용 
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>손쉬운 C# 조정을 위해 클래스 변수 노출
 
-클래스 변수를 노출 하는 방법에는 두 가지가 있습니다. 이 작업을 수행 하는 권장 방법은 전용 변수에 [SerializeField] 특성을 추가 하는 것입니다. 이렇게 하면 편집기에서 액세스할 수 있지만 프로그래밍 방식으로 노출 되는 것은 아닙니다.  다른 옵션은 클래스 변수를 C# public으로 설정 하 여 편집기 UI에서 노출 하는 것입니다. 
+클래스 변수를 노출 하는 방법에는 두 가지가 있습니다. 이 작업을 수행 하는 권장 방법은 전용 변수에 [SerializeField] 특성을 추가 하는 것입니다. 이렇게 하면 편집기에서 액세스할 수 있지만 프로그래밍 방식으로 노출 되지는 않습니다.  다른 옵션은 클래스 변수를 C# public으로 설정 하 여 편집기 UI에서 노출 하는 것입니다. 
 
 두 방법 모두 편집기에서 재생 하는 동안 변수를 쉽게 수정할 수 있습니다. 이 기능은 상호 작용 정비공 속성을 튜닝 하는 데 특히 유용 합니다.
 
