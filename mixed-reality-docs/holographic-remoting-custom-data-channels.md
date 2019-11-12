@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: a862fa52695c7bfb94b58c6c0b85606a112835da
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2861c780c5d7e516d5b7ddc757bbcba6da7e6559
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434280"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926664"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>사용자 지정 Holographic 원격 데이터 채널
 
@@ -38,7 +38,7 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-연결이 성공적으로 설정 된 후에는 호스트 측 및/또는 플레이어 쪽에서 새 데이터 채널 만들기를 시작할 수 있습니다. RemoteContext와 PlayerContext는 모두이 작업을 수행 하는 ```CreateDataChannel()``` 메서드를 제공 합니다. 첫 번째 매개 변수는 susequent 작업에서 데이터 채널을 식별 하는 데 사용 되는 채널 ID입니다. 두 번째 매개 변수는이 채널의 데이터가 다른 쪽으로 전송 되는 우선 순위를 지정 하는 우선 순위입니다. 채널 Id의 유효한 범위는 0부터 시작 하 고, 호스트 측의 경우 63을 포함 하 고, 플레이어 쪽에 대 한 127을 포함 하 여 64까지 포함 합니다. 유효한 우선 순위는 ```Low```, ```Medium``` 또는 ```High``` (양쪽 모두)입니다.
+연결이 성공적으로 설정 된 후에는 호스트 측 및/또는 플레이어 쪽에서 새 데이터 채널 만들기를 시작할 수 있습니다. RemoteContext와 PlayerContext는 모두이 작업을 수행 하는 ```CreateDataChannel()``` 메서드를 제공 합니다. 첫 번째 매개 변수는 후속 작업에서 데이터 채널을 식별 하는 데 사용 되는 채널 ID입니다. 두 번째 매개 변수는이 채널의 데이터가 다른 쪽으로 전송 되는 우선 순위를 지정 하는 우선 순위입니다. 채널 Id의 유효한 범위는 0부터 시작 하 고, 호스트 측의 경우 63을 포함 하 고, 플레이어 쪽에 대 한 127을 포함 하 여 64까지 포함 합니다. 유효한 우선 순위는 ```Low```, ```Medium``` 또는 ```High``` (양쪽 모두)입니다.
 
 **호스트** 쪽에서 데이터 채널 만들기를 시작 하려면 다음을 수행 합니다.
 ```cpp
@@ -95,7 +95,7 @@ m_customChannelClosedEventRevoker = m_customDataChannel.OnClosed(winrt::auto_rev
 
 ## <a name="sending-data"></a>데이터 보내기
 
-사용자 지정 데이터 채널을 통해 데이터를 보내려면 ```IDataChannel::SendData()``` 메서드를 사용 합니다. 첫 번째 매개 변수는 보내야 하는 데이터에 대 한 ```winrt::array_view<const uint8_t>```입니다. 두 번째 매개 변수는 다른 쪽에서 수신을 승인할 때까지 데이터를 다시 전송 해야 하는지 여부를 지정 합니다. 
+사용자 지정 데이터 채널을 통해 데이터를 보내려면 ```IDataChannel::SendData()``` 메서드를 사용 합니다. 첫 번째 매개 변수는 보내야 하는 데이터에 대 한 ```winrt::array_view<const uint8_t>```입니다. 두 번째 매개 변수는 다른 쪽에서 수신을 승인할 때까지 데이터를 다시 보내야 하는 위치를 지정 합니다. 
 
 >[!IMPORTANT]
 >네트워크 상태가 잘못 된 경우 동일한 데이터 패킷이 두 번 이상 도착할 수 있습니다. 수신 코드에서이 상황을 처리할 수 있어야 합니다.

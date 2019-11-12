@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, application insights, hololens, 몰입 형, vr
-ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 481fe3fc16ada06085a64c86867a1a892c76f2ad
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694566"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926895"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -47,7 +47,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (7 월 2018)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -63,7 +63,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 - 기본 제공 마이크가 있는 헤드폰 집합 (헤드셋에 기본 제공 mic 및 스피커가 없는 경우)
 - Azure 설정 및 Application Insights 데이터 검색을 위한 인터넷 액세스
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.)
 
@@ -128,7 +128,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
     >  이 웹 페이지를 열어 쉽게 액세스할 수 있게 되 면 수집 된 데이터를 확인 하기 위해 여기로 다시 돌아옵니다.
 
     > [!IMPORTANT]
-    > Application Insights를 구현 하려면 세 가지 특정 값 (3)을 사용 해야 합니다. **계측 키**, **응용 프로그램 ID**및 **API 키**를 입력 합니다. 아래에는 서비스에서 이러한 값을 검색 하는 방법이 나와 있습니다. 이 값은 코드에서 곧 사용 되므로 빈 *메모장* 페이지에서이 값을 기록해 두어야 합니다.
+    > Application Insights를 구현 하려면 **계측 키**, **응용 프로그램 ID**및 **API 키**의 세 가지 특정 값 (3)을 사용 해야 합니다. 아래에는 서비스에서 이러한 값을 검색 하는 방법이 나와 있습니다. 이 값은 코드에서 곧 사용 되므로 빈 *메모장* 페이지에서이 값을 기록해 두어야 합니다.
 
 9.  **계측 키**를 찾으려면 서비스 함수 목록을 아래로 스크롤하고 **속성**을 클릭 해야 합니다. 그러면 표시 되는 탭에 **서비스 키**가 표시 됩니다.
 
@@ -159,11 +159,11 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab309-11.png)
 
-2.  이제 Unity 프로젝트 이름을 제공 하 고 **MR\_Azure\_application\_Insights**를 삽입 해야 합니다. *템플릿이* **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 *위치* 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
+2.  이제 Unity 프로젝트 이름을 제공 하 고 **Azure\_응용 프로그램\_Insights\_Azure**에 삽입 해야 합니다. *템플릿이* **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 *위치* 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab309-12.png)
 
-3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **기본 설정 편집 \>**  으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
+3.  Unity를 연 상태에서 기본 **스크립트 편집기** 가 **Visual Studio**로 설정 되어 있는지 확인 하는 것이 좋습니다. **\> 기본 설정 편집** 으로 이동한 다음 새 창에서 **외부 도구**로 이동 합니다. **외부 스크립트 편집기** 를 **Visual Studio 2017**로 변경 합니다. **기본 설정** 창을 닫습니다.
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab309-13.png)
 
@@ -171,7 +171,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     ![Unity 프로젝트 설정](images/AzureLabs-Lab309-14.png)
 
-5.  **파일\> 빌드 설정** 으로 이동 하 여 다음을 확인 합니다.
+5.  **파일 \> 빌드 설정** 으로 이동 하 고 다음을 확인 합니다.
 
     1.  **대상 장치가** **모든 장치로** 설정 됨
 
@@ -207,7 +207,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     1.  **기타 설정** 탭에서 다음을 수행 합니다.
 
-        1.  **스크립팅** **런타임 버전** 은 **실험적 (.Net 4.6와 동일)** 이어야 하며,이 경우 편집기를 다시 시작 해야 합니다.
+        1.  **Scripting** **Runtime 버전** 은 **실험적 (.net 4.6 이와 동일)** 이어야 하며,이 경우 편집기를 다시 시작 해야 합니다.
 
         2.  **Scripting 백엔드** 는 **.net** 이어야 합니다.
 
@@ -229,7 +229,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 10.  빌드 설정 창을 닫습니다.
 
-11.  장면 및 프로젝트를 저장 합니다 (**파일** > **저장 장면/파일** > **저장 프로젝트**).
+11.  장면 및 프로젝트를 저장 합니다 (**파일** > **장면/파일** 저장 > **프로젝트 저장**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>3 장-Unity 패키지 가져오기
@@ -242,7 +242,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 사용자 고유의 프로젝트로 Application Insights를 가져오려면 플러그 인을 포함 하는 ['. unitypackage '를 다운로드](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20309%20-%20Application%20insights/AppInsights_LabPlugins.unitypackage)했는지 확인 합니다. 그런 후에 다음을 수행 합니다.
 
-1.  **자산 가져오기\> 패키지\> 사용자 지정 패키지** 메뉴 옵션을 사용 하 여 unitypackage을 Unity에 추가 합니다.
+1.  **\> \> 패키지 가져오기 사용자 지정 패키지** 메뉴 옵션의 자산을 사용 하 여 **unitypackage** 을 Unity에 추가 합니다.
 
 2.  표시 되는 **Unity 패키지 가져오기** 상자에서 **플러그 인** 을 포함 하 여 모든 항목을 선택 했는지 확인 합니다.
 
@@ -275,7 +275,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 이 장에서는 카메라와 컨트롤을 설정 하 여 사용자가 장면을 보고 이동할 수 있도록 합니다.
 
-1.  계층 패널에서 빈 영역을 마우스 오른쪽 단추로 클릭 한 다음**빈**영역 **만들기** > 를 클릭 합니다.
+1.  계층 패널에서 빈 영역을 마우스 오른쪽 단추로 클릭 한 다음 **Create** > **empty**를 클릭 합니다.
 
     ![카메라 및 사용자 컨트롤 설정](images/AzureLabs-Lab309-26.png)
 
@@ -317,7 +317,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-33.png)
 
-4.  다른 셰이프를 더 쉽게 볼 수 있도록 **평면** 개체에 사용할 기본 자료를 만듭니다. *프로젝트 패널로*이동 하 고,를 마우스 오른쪽 단추로 클릭 한 다음 **만들기**를클릭 하 여 새 폴더를 만듭니다. 이름을 **재질**로 합니다.
+4.  다른 셰이프를 더 쉽게 볼 수 있도록 **평면** 개체에 사용할 기본 자료를 만듭니다. *프로젝트 패널로*이동 하 고,를 마우스 오른쪽 단추로 클릭 한 다음 **만들기**를 클릭 **하 여 새**폴더를 만듭니다. 이름을 **재질**로 합니다.
 
     ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-34.png) ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-35.png)
 
@@ -325,7 +325,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-36.png) ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-37.png)
 
-6.  새 **파랑** 자료를 선택한 상태에서 *검사기*를 확인 하 고 **albedo**와 함께 사각형 창을 클릭 합니다. 파란색을 선택 합니다 (아래 **그림은 16 진수 색: \#3592FFFF**). 선택한 후 닫기 단추를 클릭 합니다.
+6.  새 **파랑** 자료를 선택한 상태에서 *검사기*를 확인 하 고 **albedo**와 함께 사각형 창을 클릭 합니다. 파란색을 선택 합니다 (아래 그림은 **16 진수 색: \#3592FFFF**). 선택한 후 닫기 단추를 클릭 합니다.
 
     ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-38.png)
 
@@ -339,11 +339,11 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 9.  *계층 패널*에서 빈 영역을 마우스 오른쪽 단추로 클릭 한 다음 **3D 개체, 큐브**를 클릭 합니다.
 
-    -  **큐브** 를 선택한 상태에서 해당 **변환** *위치* 를 다음과 같이 변경 합니다. **0, 0, 10**.
+    -  **큐브** 를 선택한 상태에서 해당 **변환** *위치* 를 **0, 0, 10**으로 변경 합니다.
 
 10. *계층 패널*에서 빈 영역을 마우스 오른쪽 단추로 클릭 한 다음 **3D 개체, 구를**클릭 합니다.
 
-    -  **구가** 선택 된 상태에서 해당 **변환** *위치* 를 다음과 같이 변경 합니다. **10, 0, 0**입니다.
+    -  **구가** 선택 된 상태에서 해당 **변환** *위치* 를 **10, 0, 0**으로 변경 합니다.
 
     ![Unity 장면에서 개체 설정](images/AzureLabs-Lab309-40.png)
 
@@ -352,7 +352,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 11. 응용 프로그램을 실행 하는 경우 장면 내에서 개체를 식별할 수 있어야 합니다 .이를 위해서는 태그를 지정 해야 합니다. 개체 중 하나를 선택 하 고 *검사기* 패널에서 **태그 추가**...를 클릭 합니다. 그러면 *검사기* 가 **& 레이어** 패널의 태그로 바뀝니다.
 
-    ![Unity 장면](images/AzureLabs-Lab309-41.png) 에서 개체 설정![](images/AzureLabs-Lab309-42.png)
+    Unity 장면](images/AzureLabs-Lab309-41.png)에서 개체를 설정 ![![](images/AzureLabs-Lab309-42.png)
 
 12. **+ (더하기)** 기호를 클릭 한 다음 태그 이름을 **objectinscene**으로 입력 합니다.
 
@@ -361,9 +361,9 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
     > [!WARNING]
     > 태그에 다른 이름을 사용 하는 경우에는 나중에이 변경 내용이 *DataFromAnalytics*, *Objecttrigger*및 *응시*로 설정 되었는지 확인 하 여 장면 내에서 개체가 검색 되 고 검색 되도록 해야 합니다.
 
-13. 태그를 만든 후에는 세 개체 모두에 적용 해야 합니다. *계층*에서 **shift** 키를 누른 상태에서 **캡슐**, **큐브**및 **구**개체를 클릭 한 다음 *검사기*에서 **태그**옆에 있는 드롭다운 메뉴를 클릭 하 고 *objectinscene* 클릭 합니다. 만든 태그입니다.
+13. 태그를 만든 후에는 세 개체 모두에 적용 해야 합니다. *계층 구조*에서 **shift** 키를 누른 상태에서 **캡슐**, **큐브**및 **구**개체를 클릭 한 다음 *검사기*에서 **태그**옆에 있는 드롭다운 메뉴를 클릭 하 고 만든 *objectinscene* 태그를 클릭 합니다.
 
-    ![Unity 장면](images/AzureLabs-Lab309-44.png) 에서 개체 설정![](images/AzureLabs-Lab309-45.png)
+    Unity 장면](images/AzureLabs-Lab309-44.png)에서 개체를 설정 ![![](images/AzureLabs-Lab309-45.png)
 
 ## <a name="chapter-6---create-the-applicationinsightstracker-class"></a>6 장-ApplicationInsightsTracker 클래스 만들기
 
@@ -377,11 +377,11 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 이 클래스를 만들려면:
 
-1.  *프로젝트 패널*을 마우스 오른쪽 단추로 클릭 한 다음**폴더** **만들기** > 를 클릭 합니다. 폴더 이름을 **스크립트**로 합니다.
+1.  *프로젝트 패널*을 마우스 오른쪽 단추로 클릭 하 고 > **폴더**를 **만듭니다** . 폴더 이름을 **스크립트**로 합니다.
 
     ![ApplicationInsightsTracker 클래스 만들기](images/AzureLabs-Lab309-46.png)  ![ApplicationInsightsTracker 클래스 만들기](images/AzureLabs-Lab309-47.png)
 
-2.  **Scripts** 폴더를 만든 다음 두 번 클릭 하 여 엽니다. 그런 다음 해당 폴더 내에서 **C# 스크립트** **만들기**  >  를 마우스 오른쪽 단추로 클릭 합니다. 스크립트 이름을 **ApplicationInsightsTracker**로 합니다.
+2.  **Scripts** 폴더를 만든 다음 두 번 클릭 하 여 엽니다. 그런 다음 해당 폴더 내에서 >  **C# 스크립트** **만들기** 를 마우스 오른쪽 단추로 클릭 합니다. 스크립트 이름을 **ApplicationInsightsTracker**로 합니다.
 
 3.  새 **ApplicationInsightsTracker** 스크립트를 두 번 클릭 하 여 **Visual Studio**에서 엽니다.
 
@@ -505,11 +505,11 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **응시**로 합니다.
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 >  **C# 스크립트** **만들기** 를 클릭 합니다. 스크립트 이름을 **응시**로 합니다.
 
 3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
-4.  기존 코드를 다음으로 바꿉니다.
+4.  기존 코드를 다음 코드로 바꿉니다.
 
     ```csharp
         using UnityEngine;
@@ -699,9 +699,9 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 **Objecttrigger**의 이름을로 합니다.
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 >  **C# 스크립트** **만들기** 를 클릭 합니다. 스크립트 **Objecttrigger**의 이름을로 합니다.
 
-3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다. 기존 코드를 다음으로 바꿉니다.
+3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다. 기존 코드를 다음 코드로 바꿉니다.
 
     ```csharp
         using UnityEngine;
@@ -771,7 +771,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 이름을 **DataFromAnalytics**로 합니다.
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 >  **C# 스크립트** **만들기** 를 클릭 합니다. 스크립트 이름을 **DataFromAnalytics**로 합니다.
 
 3.  스크립트를 두 번 클릭 하 여 Visual Studio에서 엽니다.
 
@@ -868,7 +868,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
         /// <returns></returns>
         private IEnumerator GetWebRequest(KeyValuePair<string, int> webQueryPair)
         {
-            // Set the URL and count as their own variables (for readibility).
+            // Set the URL and count as their own variables (for readability).
             string url = webQueryPair.Key;
             int currentCount = webQueryPair.Value;
 
@@ -991,7 +991,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 ## <a name="chapter-10---create-the-movement-class"></a>10 장-이동 클래스 만들기
 
-**이동** 스크립트는 생성 해야 하는 다음 스크립트입니다. 이 담당 합니다.
+**이동** 스크립트는 생성 해야 하는 다음 스크립트입니다. 다음을 담당 합니다.
 
 - 카메라가 보이는 방향에 따라 기본 카메라를 이동 합니다.
 - 장면 개체에 다른 모든 스크립트를 추가 합니다.
@@ -1000,11 +1000,11 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
 1.  **Scripts** 폴더를 두 번 클릭 하 여 엽니다.
 
-2.  마우스 오른쪽 단추로 클릭 합니다 **스크립트** 폴더를 클릭 **Create** >  **C# 스크립트**. 스크립트 **이동**의 이름을로 합니다.
+2.  **Scripts** 폴더 내부를 마우스 오른쪽 단추로 클릭 하 고 >  **C# 스크립트** **만들기** 를 클릭 합니다. 스크립트 **이동**의 이름을로 합니다.
 
 3.  스크립트를 두 번 클릭 하 여 *Visual Studio*에서 엽니다.
 
-4.  기존 코드를 다음으로 바꿉니다.
+4.  기존 코드를 다음 코드로 바꿉니다.
 
     ```csharp
         using UnityEngine;
@@ -1059,7 +1059,7 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
         }
     ```
 
-5.  Move 클래스 **의** empty **Update ()** 메서드 *아래* 에서 사용자가 손 컨트롤러를 사용 하 여 가상 공간을 이동할 수 있도록 하는 다음 메서드를 삽입 합니다.
+5.  Move 클래스의 empty **Update ()** 메서드 *아래* 에서 사용자가 손 컨트롤러를 사용 하 여 가상 공간을 이동할 수 있도록 하는 다음 메서드를 **삽입 합니다.**
 
     ```csharp
         /// <summary>
@@ -1215,19 +1215,19 @@ Application Insights는 개발자가 응용 프로그램에서 분석을 수집 
 
     ![UWP 솔루션에 Unity 프로젝트 빌드](images/AzureLabs-Lab309-51.png)
 
-    1.  새 **빌드** 폴더를 열고 **새 폴더** 를 한 번 더 사용 하 여 다른 폴더를 만든 다음 **MR\_Azure\_application\_Insights**로 이름을로 합니다.
+    1.  새 **빌드** 폴더를 열고 **새 폴더** 를 한 번 더 사용 하 여 다른 폴더를 만든 다음 **Azure\_application\_Insights\_** 합니다.
 
         ![UWP 솔루션에 Unity 프로젝트 빌드](images/AzureLabs-Lab309-52.png)
 
-    2.  **MR\_Azure\_applicationInsights\_** 폴더를 선택 하 고 **폴더 선택**을 클릭 합니다. 프로젝트를 빌드하는 데 1 분 정도 걸립니다.
+    2.  **MR\_Azure\_application\_Insights** 폴더를 선택 하 고 **폴더 선택**을 클릭 합니다. 프로젝트를 빌드하는 데 1 분 정도 걸립니다.
 
 4.  *빌드*다음에는 새 프로젝트의 위치를 보여 주는 **파일 탐색기** 가 표시 됩니다.
 
 ## <a name="chapter-13---deploy-mr_azure_application_insights-app-to-your-machine"></a>13 장-컴퓨터에 MR_Azure_Application_Insights 앱 배포
 
-로컬 컴퓨터에 **MR\_Azure\_application\_Insights** 앱을 배포 하려면 다음을 수행 합니다.
+로컬 컴퓨터에서 **MR\_Azure\_application\_Insights** 앱을 배포 하려면 다음을 수행 합니다.
 
-1.  **Visual Studio**에서 **MR\_\_Azure application\_Insights** 앱의 솔루션 파일을 엽니다.
+1.  **Visual Studio**에서 **Azure\_application\_Insights 앱\_** 의 솔루션 파일을 엽니다.
 
 2.  **솔루션 플랫폼**에서 **X86, 로컬 컴퓨터**를 선택 합니다.
 

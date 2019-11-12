@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, 제스처, 상호 작용, 디자인
-ms.openlocfilehash: b46f642babb18387da2e76d5bdbb7631577c85de
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439824"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926724"
 ---
 # <a name="system-gesture"></a>시스템 제스처
 
@@ -62,7 +62,7 @@ HoloLens (첫 번째 gen)에서 시작 메뉴를 표시 하기 위해 꽃 벚꽃
     :::column-end:::
     :::column:::
         ![블 룸 open](images/bloom-open.png)<br>
-        **2 단계: 간편 하 게 spreaded**<br>
+        **2 단계: 간편 하 게 확산 된 팜**<br>
     :::column-end:::
 :::row-end:::
 

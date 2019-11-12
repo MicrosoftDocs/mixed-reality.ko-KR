@@ -6,16 +6,16 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interaction, voice
-ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437221"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926708"
 ---
 # <a name="voice-commanding"></a>음성 명령
 
-음성 명령을 사용하는 경우 응시는 일반적으로 타기팅 메커니즘, 즉 포인터("선택")로서 또는 애플리케이션으로 명령을 보내기 위해("보기, 말하기") 사용됩니다. 물론, 일부 음성 명령은 "go to start" 또는 "Hey, Cortana"와 같이 대상이 전혀 필요하지 않습니다.
+음성 명령을 사용 하는 경우에는 일반적으로 포인터 ("select")를 사용 하거나 명령을 응용 프로그램으로 전달 ("참조) 하는 방식으로 대상 지정 메커니즘으로 사용 됩니다. 물론, 일부 음성 명령은 "go to start" 또는 "Hey, Cortana"와 같이 대상이 전혀 필요하지 않습니다.
 
 
 ## <a name="device-support"></a>장치 지원

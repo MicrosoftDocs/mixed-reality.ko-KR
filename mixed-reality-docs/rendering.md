@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 렌더링, 홀로그램
-ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437528"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926855"
 ---
 # <a name="rendering"></a>렌더링
 
-Holographic 렌더링을 사용 하면 응용 프로그램이 실제 세계에 정확 하 게 배치 되었는지 아니면 사용자가 만든 가상 영역 내에서 정확 하 게 배치 되었는지 여부에 관계 없이 사용자를 대상으로 하는 위치에서 홀로그램을 그릴 수 있습니다. [Holograms](hologram.md) 는 소리 및 조명의 개체입니다. 렌더링을 사용 하면 지 수를 사용 하 여 빛을 추가할 수 있습니다.
+Holographic 렌더링을 사용 하면 응용 프로그램이 실제 세계에 정확 하 게 배치 되었는지 아니면 사용자가 만든 가상 영역 내에서 정확 하 게 배치 되었는지 여부에 관계 없이 사용자를 대상으로 하는 위치에서 홀로그램을 그릴 수 있습니다. [Holograms](hologram.md) 는 소리 및 조명의 개체입니다. 렌더링을 사용 하면 응용 프로그램에서 조명을 추가할 수 있습니다.
 
 ## <a name="device-support"></a>장치 지원
 

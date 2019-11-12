@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, 로고, 아이콘, 모델링, 시작 관리자, 3D 시작 관리자, 타일, 라이브 큐브, 딥 링크, secondarytile, 보조 타일, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438021"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926764"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>3D 앱 응용 프로그램 구현 (UWP 앱)
 
@@ -164,7 +164,7 @@ await tile.RequestCreateAsync();
 > [!NOTE]
 > 이 기능은 Windows RS4 업데이트를 통해 지원 될 예정입니다. 이 기능을 사용 하려는 경우 응용 프로그램이 10.0.17125 이상 Windows SDK 버전을 대상으로 하 고 있는지 확인 합니다.
 
-3D secondaryTile의 활성화 동작을 정의 하 여 사용자가 선택할 때 반응 하는 방식을 제어할 수 있습니다. 이는 purley 정보 또는 장식용 인 혼합 현실 홈에 3D 개체를 저장 하는 데 사용할 수 있습니다. 다음 활성화 동작 유형이 지원 됩니다.
+3D secondaryTile의 활성화 동작을 정의 하 여 사용자가 선택할 때 반응 하는 방식을 제어할 수 있습니다. 이는 순수 하 게 정보를 제공 하거나 장식 하는 혼합 현실 홈에 3D 개체를 저장 하는 데 사용할 수 있습니다. 다음 활성화 동작 유형이 지원 됩니다.
 1. 기본값: 사용자가 3D secondaryTile을 선택 하면 앱이 활성화 됩니다.
 2. 없음: 사용자가 3D secondaryTile을 선택 해도 아무것도 발생 하지 않으며 앱이 활성화 되지 않습니다.
 

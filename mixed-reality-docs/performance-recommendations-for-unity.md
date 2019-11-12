@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, cpu, gpu, 렌더링, 가비지 수집, hololens
-ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438122"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926866"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대 한 성능 권장 사항
 
@@ -273,7 +273,7 @@ Unity에서 [16 비트 깊이의 렌더링 질감](https://docs.unity3d.com/Scri
 
 ### <a name="optimal-lighting-settings"></a>최적의 조명 설정
 
-Unity의 [실시간 글로벌 조명은 전 세계](https://docs.unity3d.com/Manual/GIIntro.html) 의 시각적 결과를 제공할 수 있지만 상당한 비용이 드는 조명 계산이 포함 됩니다. **창을** 통해 모든 Unity 장면 파일에 대해 실시간 글로벌 조명을 사용 하지 않도록 설정 하는 것이 좋습니다. > **렌더링** > **조명 설정을** 사용 하 여 **실시간 글로벌 조명을**선택 취소 >.
+Unity의 [실시간 글로벌](https://docs.unity3d.com/Manual/GIIntro.html) 조명은 뛰어난 시각적 결과를 제공할 수 있지만 상당한 비용이 드는 조명 계산을 포함 합니다. **창을** 통해 모든 Unity 장면 파일에 대해 실시간 글로벌 조명을 사용 하지 않도록 설정 하는 것이 좋습니다. > **렌더링** > **조명 설정을** 사용 하 여 **실시간 글로벌 조명을**선택 취소 >.
 
 또한 모든 섀도 캐스팅을 사용 하지 않도록 설정 하는 것이 좋습니다 .이 경우에도 Unity 장면에 비용이 많이 드는 GPU 패스가 추가 됩니다. 그림자는 빛 당 사용 하지 않도록 설정할 수 있지만 품질 설정을 통해 전체적으로 제어할 수도 있습니다.
 
@@ -301,7 +301,7 @@ Unity의 [실시간 글로벌 조명은 전 세계](https://docs.unity3d.com/Man
 
     ![Unity 표준 셰이더 작업](images/unity-standard-shader-compilation.png)
 
-#### <a name="optmize-pixel-shaders"></a>공간 픽셀 셰이더
+#### <a name="optimize-pixel-shaders"></a>픽셀 셰이더 최적화
 
 위의 메서드를 사용 하 여 컴파일된 통계 결과를 살펴보면 [조각 셰이더가](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) 일반적으로 평균에서 [꼭 짓 점 셰이더](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) 보다 많은 작업을 실행 합니다. 꼭 짓 점 셰이더 라고도 하는 조각 셰이더는 화면 출력에서 픽셀 단위로 실행 되는 반면 꼭 짓 점 셰이더는 화면에 그려지는 모든 망상의 꼭 짓 점 마다 실행 됩니다. 
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 91935cb5b465e51d3948f68b818f93ba52b215f1
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438387"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914414"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. Unity를 개발할 준비 하는 중 
 
@@ -28,7 +28,7 @@ ms.locfileid: "73438387"
 
 ## <a name="instructions"></a>지침
 
-1. 여기를 클릭 하 여 Mixed Reality Toolkit unity 패키지를 다운로드 하 고 저장 [합니다.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
+1. 여기를 클릭 하 여 Mixed Reality Toolkit Foundation unity 패키지를 다운로드 하 고 저장 합니다 [.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage)
 
 2. Unity에서 자산 메뉴를 클릭 하 고 패키지 가져오기를 선택한 다음 사용자 지정 패키지를 클릭 합니다.
 
@@ -50,13 +50,15 @@ ms.locfileid: "73438387"
 
 ![Module3Chapter2step5im](images/module3chapter2step5im.PNG)
 
-6. 완료 되 면 프로필을 사용자 지정할 수 있는 새 구성 파일이 표시 됩니다. 복사 및 사용자 지정을 클릭 합니다.
+6. 완료 되 면 프로필을 사용자 지정할 수 있는 새 구성 파일이 표시 됩니다. 
 
-![Module3Chapter2step6ima](images/module3chapter2step6ima.PNG)
+![Module2Chapter1step4im](images/Module2Chapter1step4im.PNG)
 
-![Module3Chapter2step6imb](images/module3chapter2step6imb.PNG)
+7. 계층에서 혼합-현실 도구 키트 (MRTK)를 선택 합니다. 검사기 패널에서 Mixed Reality Toolkit 스크립트를 찾아 아래 그림에 표시 된 것 처럼 "& 사용자 지정 복사" 단추를 누릅니다.  이 작업 뒤에 pop가 나타나고 팝업 메뉴에서 복제 옵션을 선택 합니다.
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
+
+![Module3Chapter2step6imd](images/module3chapter2step6imd.PNG)
 
 7. 아래로 스크롤하여 진단 창을 숨기려면 진단 시스템 사용을 선택 취소 합니다. 응용 프로그램을 개발 하는 동안 진단 창을 사용 하도록 설정 하 여 성능을 모니터링 한 다음 프로덕션 또는 응용 프로그램 데모 중에 사용 하지 않도록 설정 하는 것이 좋습니다. 
 

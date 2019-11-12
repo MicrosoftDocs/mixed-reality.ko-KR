@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 얼굴 인식, hololens, 몰입 형, vr
-ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 23676684c2ec325f9d6f1924e7a0bad14d41f13e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438499"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926787"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -223,7 +223,7 @@ Azure에서 *Face API* 서비스를 사용 하려면 응용 프로그램에서 �
 
     ![새 Unity 프로젝트를 시작 합니다.](images/AzureLabs-Lab4-08.png)
 
-2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. **MR_FaceRecognition**을 삽입 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
+2.  이제 Unity 프로젝트 이름을 제공 해야 합니다. **MR_FaceRecognition**를 삽입 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![새 Unity 프로젝트에 대 한 세부 정보를 제공 합니다.](images/AzureLabs-Lab4-09.png)
 
@@ -575,7 +575,7 @@ FaceAnalysis 클래스의 목적은 Azure 얼굴 인식 서비스와 통신 하�
             facesToIdentify.maxNumOfCandidatesReturned = 1;
             facesToIdentify.confidenceThreshold = 0.5;
 
-            // Serialise to Json format
+            // Serialize to Json format
             string facesToIdentifyJson = JsonConvert.SerializeObject(facesToIdentify);
             // Change the object into a bytes array
             byte[] facesData = Encoding.UTF8.GetBytes(facesToIdentifyJson);
@@ -769,7 +769,7 @@ FaceAnalysis 클래스의 목적은 Azure 얼굴 인식 서비스와 통신 하�
         }
 
         /// <summary>
-        /// Register the full execution of the Photo Capture. If successfull, it will begin the Image Analysis process.
+        /// Register the full execution of the Photo Capture. If successful, it will begin the Image Analysis process.
         /// </summary>
         void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
         {
@@ -809,7 +809,7 @@ FaceAnalysis 클래스의 목적은 Azure 얼굴 인식 서비스와 통신 하�
 
     ![Visual Studio에서 솔루션을 배포 합니다.](images/AzureLabs-Lab4-25.png)
 
-7.  앱 폴더를 연 다음, 위에 표시 된 대로 새 프로젝트 솔루션을 엽니다.
+7.  앱 폴더를 연 다음, MR_FaceRecognition 위에 표시 된 대로 새 프로젝트 솔루션을 엽니다.
 
 
 ## <a name="chapter-9---deploying-your-application"></a>9 장-응용 프로그램 배포

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, holographic 렌더링, 네이티브, 네이티브 앱, WinRT, WinRT 앱, 플랫폼 Api, 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 0af73314c3c93d230ef87ed468f718f5b3e1813c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641088"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926628"
 ---
 # <a name="directx-development-overview"></a>DirectX 개발 개요
 
@@ -44,7 +44,7 @@ Windows Mixed Reality는 다음과 같은 [두 가지 종류의 앱을](app-view
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>혼합 현실 기능 및 입력 추가
 
-몰입 형 appslication에 게 가능한 최상의 환경을 사용 하도록 설정 하려면 다음 주요 구성 요소를 지원 해야 합니다.
+모던 응용 프로그램 사용자에 게 가능한 최상의 환경을 사용 하도록 설정 하려면 다음 주요 구성 요소를 지원 해야 합니다.
 
 * [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
 * [DirectX의 헤드 및 모션 컨트롤러](hands-and-motion-controllers-in-directx.md)

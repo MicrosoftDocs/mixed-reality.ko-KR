@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 75e7c276560b4efbbdcbf2ea7579ed5ad7aadb4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926646"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
@@ -21,7 +21,7 @@ ms.locfileid: "73439234"
 ## 버전 2.0.14 (2019 년 10 월 26 일)<a name="v2.0.14"></a>
 * 새 PerceptionDevice Api에 대 한 지원 (Windows 10 11 월 2019 업데이트).
 * SpatialGestureRecognizer에 의해 트리거되는 고정 제스처 이벤트를 방지 하는 문제를 해결 했습니다.
-* SpatialSurfaceObserver. SetBoundingVolume를 사용할 때 theading 문제가 해결 되었습니다.
+* SpatialSurfaceObserver. SetBoundingVolume를 사용 하는 경우 스레딩 문제가 수정 되었습니다.
 
 ## 버전 2.0.12 이상을 (2019 년 10 월 18 일)<a name="v2.0.12"></a>
 * NavigationRail (X/Y/Z)을 사용 하는 경우 SpatialGestureRecognizer의 충돌이 수정 되었습니다.

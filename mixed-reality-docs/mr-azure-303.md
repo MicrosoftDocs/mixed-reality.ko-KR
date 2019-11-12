@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 언어 이해 인텔리전스 서비스, luis, hololens, 몰입 형, vr
-ms.openlocfilehash: fb00fe9079e49a7ada507e7407ef45fa7eeb0d7e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9b3e4f081dc8a054d783246554f904a38f43f26c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555155"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926812"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -51,7 +51,7 @@ ms.locfileid: "63555155"
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치](install-the-tools.md) 문서에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -67,7 +67,7 @@ ms.locfileid: "63555155"
 - 기본 제공 마이크가 있는 헤드폰 집합 (헤드셋에 기본 제공 mic 및 스피커가 없는 경우)
 - Azure 설정 및 LUIS 검색을 위한 인터넷 액세스
 
-## <a name="before-you-start"></a>시작하기 전 주의 사항
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 1.  이 프로젝트를 빌드하는 데 문제가 발생 하지 않도록 하려면 루트 또는 루트 폴더에이 자습서에서 언급 한 프로젝트를 만드는 것이 좋습니다. (긴 폴더 경로는 빌드 시에 문제를 일으킬 수 있습니다.) 
 2.  컴퓨터에서 받아쓰기를 사용 하도록 허용 하려면 **Windows 설정 > 개인 정보 > 음성, 필기 & 입력** 으로 이동 하 고 단추를 눌러 **음성 서비스를 켜고 제안을 입력**합니다.
@@ -125,7 +125,7 @@ Azure에서 *Language Understanding* 서비스를 사용 하려면 응용 프로
     ![LUIS 키 액세스](images/AzureLabs-Lab3-06.png)
 
 9.  이 자습서에서 응용 프로그램은 서비스에 대 한 호출을 수행 해야 하며, 서비스의 구독 키를 사용 하 여 수행 됩니다.
-10. *LUIS API* 서비스의 *빠른 시작* 페이지에서 첫 번째 단계로 이동 하 고 *키*를 클릭 한 다음 **키** 를 클릭 합니다 .이를 위해 서비스 탐색 메뉴에 있는 파란색 하이퍼링크 키를 클릭 하 여이를 수행할 수도 있습니다. 키 아이콘). 이렇게 하면 서비스 *키*가 표시 됩니다.
+10. *LUIS API* 서비스의 *빠른 시작* 페이지에서 첫 번째 단계로 이동 하 고 키를 클릭 한 다음 *키를 클릭*합니다 .이를 위해 서비스 탐색 메뉴에서 키 아이콘으로 표시 되는 파란색 하이퍼링크 키 **를 클릭 하** 여이를 수행할 수도 있습니다. 이렇게 하면 서비스 *키*가 표시 됩니다.
 11. 프로젝트에서 나중에 필요 하므로 표시 된 키 중 하나를 복사 합니다. 
 12. *서비스* 페이지에서 LUIS 앱 내에서 새 서비스를 만드는 데 사용할 웹 페이지로 리디렉션되는 *Language Understanding 포털* 을 클릭 합니다. 
 
@@ -177,7 +177,7 @@ Azure에서 *Language Understanding* 서비스를 사용 하려면 응용 프로
 
     -   *업사이징*
     -   *줄이지*
-    -   *target*
+    -   *대상을*
 
 결과는 아래 이미지와 같아야 합니다.
 
@@ -301,7 +301,7 @@ change the color of this object to blue
 26. *리소스 및 키*섹션에서 다음을 수행 합니다.
 
     1.  Azure Portal에서 서비스 인스턴스에 대해 설정한 지역을 선택 합니다.
-    2.  아래에서 **Starter_Key** 요소를 확인 하 고 무시 합니다.
+    2.  아래 **Starter_Key** 요소를 확인 하 고 무시 합니다.
     3.  **키 추가** 를 클릭 하 고 서비스 인스턴스를 만들 때 Azure Portal에서 가져온 *키* 를 삽입 합니다. Azure와 LUIS 포털이 동일한 사용자에 게 로그인 하는 경우 *테 넌 트 이름*, *구독 이름*및 사용 하려는 *키* 에 대 한 드롭다운 메뉴가 제공 됩니다 (이전에는 azure portal에서 제공한 것과 동일한 이름을 사용).
 
     > [!IMPORTANT] 
@@ -315,7 +315,7 @@ change the color of this object to blue
 
     ![새 Unity 프로젝트를 시작 합니다.](images/AzureLabs-Lab3-24.png)
 
-2.  이제 Unity 프로젝트 이름, insert **MR_LUIS**을 제공 해야 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
+2.  이제 Unity 프로젝트 이름, insert **MR_LUIS**를 제공 해야 합니다. 프로젝트 형식이 **3d**로 설정 되었는지 확인 합니다. 위치를 적절 한 **위치** 에 적절 하 게 설정 합니다. 루트 디렉터리에 가까울수록 좋습니다. 그런 다음 **프로젝트 만들기**를 클릭 합니다.
 
     ![새 Unity 프로젝트에 대 한 세부 정보를 제공 합니다.](images/AzureLabs-Lab3-25.png)
  
@@ -397,7 +397,7 @@ change the color of this object to blue
 
     1. *Sphere*
     2. *원통형*
-    3. *Cube*
+    3. *큐브*
     4. *3D 텍스트*
 
 4.  결과 장면 *계층 구조* 는 아래 이미지에 있는 것과 같아야 합니다.
@@ -424,7 +424,7 @@ change the color of this object to blue
 
     |       | 변환 *위치* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **Y**                  | **Z** |
+    | **.X** | **X.y**                  | **-** |
     | 0     | -1                     | 0     |
 
 
@@ -432,28 +432,28 @@ change the color of this object to blue
 
     |       | 변환 *위치* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **Y**                  | **Z** |
+    | **.X** | **X.y**                  | **-** |
     | 2     | 1                      | 2     |
 
 11. **원통** 을 마우스 왼쪽 단추를 클릭 하 여 선택 합니다. *검사기 패널* 에서 *변형* 구성 요소를 다음 값으로 설정 합니다.
 
     |       | 변환 *위치* |       |
     |:-----:|:----------------------:|:-----:|
-    | **X** | **Y**                  | **Z** |
+    | **.X** | **X.y**                  | **-** |
     | -2    | 1                      | 2     |
 
 12. **큐브** 를 마우스 왼쪽 단추를 클릭 하 여 선택 합니다. *검사기 패널* 에서 *변형* 구성 요소를 다음 값으로 설정 합니다.
 
     |        | 변환 *위치* |       |  \| |       | 변환- *회전* |       |
     |:------:|:----------------------:|:-----:|:---:|:-----:|:----------------------:|:-----:|
-    | **X** | **Y**                   | **Z** |  \| | **X** | **Y**                  | **Z** |
-    | 0     | 1                       | 4     |  \| | 45    | 45                     | 0     | 
+    | **.X** | **X.y**                   | **-** |  \| | **.X** | **X.y**                  | **-** |
+    | 0     | 1                       | 추가를 클릭합니다.     |  \| | 45    | 45                     | 0     | 
 
 13. **새 텍스트** 개체를 마우스 왼쪽 단추를 클릭 하 여 선택 합니다. *검사기 패널* 에서 *변형* 구성 요소를 다음 값으로 설정 합니다.
 
     |       | 변환 *위치* |       |  \| |       | 변환- *배율* |       |
     |:-----:|:----------------------:|:-----:|:---:|:-----:|:-------------------:|:-----:|
-    | **X** | **Y**                  | **Z** |  \| | **X** | **Y**               | **Z** |
+    | **.X** | **X.y**                  | **-** |  \| | **.X** | **X.y**               | **-** |
     | -2    | 6                      | 9     |  \| | 0.1   | 0.1                 | 0.1   | 
 
 14. **텍스트 메시** 구성 요소의 **글꼴 크기** 를 **50**로 변경 합니다.
@@ -612,7 +612,7 @@ Azure LUIS 서비스에 대 한 호출을 수행 하는 *Luismanager* 클래스�
         using UnityEngine.Networking;
     ```
 
-5.  먼저 Azure에서 deserialize 된 JSON 응답을 나타내는 동일한 스크립트 파일 ( *Start ()* 메서드 위에 있는)의 *luismanager* 클래스 내에서 세 **개의 클래스를** 만듭니다.
+5.  먼저 Azure에서 deserialize 된 JSON 응답을 나타내는 동일한 스크립트 파일 ( *Start ()* 메서드 위에 있는)의 *luismanager* **클래스 내에서 세 개의 클래스를** 만듭니다.
 
     ```csharp
         [Serializable] //this class represents the LUIS response
@@ -721,7 +721,7 @@ Azure LUIS 서비스에 대 한 호출을 수행 하는 *Luismanager* 클래스�
                 entityDic.Add(ed.type, ed.entity);
             }
 
-            // Depending on the topmost recognised intent, read the entities name
+            // Depending on the topmost recognized intent, read the entities name
             switch (aQuery.topScoringIntent.intent)
             {
                 case "ChangeObjectColor":
@@ -871,7 +871,7 @@ Azure LUIS 서비스에 대 한 호출을 수행 하는 *Luismanager* 클래스�
 
     ```csharp
         /// <summary>
-        /// Determines which obejct reference is the target GameObject by providing its name
+        /// Determines which object reference is the target GameObject by providing its name
         /// </summary>
         private GameObject FindTarget(string name)
         {
@@ -983,8 +983,8 @@ Azure LUIS 서비스에 대 한 호출을 수행 하는 *Luismanager* 클래스�
     2. *계층 패널*에서 *동작*:
 
         - **구** 개체를 *구* 참조 대상 상자로 끌어 옵니다.
-        - 원통을  *원통* 참조 대상 상자로 끌어 옵니다.
-        - 큐브를  *큐브* 참조 대상 상자로 끌어 옵니다.
+        - **원통을** *원통* 참조 대상 상자로 끌어 옵니다.
+        - **큐브를** *큐브* 참조 대상 상자로 끌어 옵니다.
 
     3. *응시*:
 
@@ -1040,8 +1040,8 @@ Unity 편집기에서 응용 프로그램이 작동 하는지 확인 한 후에�
 5.  *빌드* 폴더를 만들고 해당 폴더 내에서 원하는 적절 한 이름을 사용 하 여 다른 폴더를 만듭니다. 
 6.  **폴더 선택** 을 클릭 하 여 해당 위치에서 빌드를 시작 합니다.
  
-    ![빌드 폴더](images/AzureLabs-Lab3-44.png)
-    ![만들기 빌드 폴더 선택](images/AzureLabs-Lab3-45.png)
+    빌드 폴더 만들기 ![](images/AzureLabs-Lab3-44.png)
+    ![빌드 폴더를 선택](images/AzureLabs-Lab3-45.png)
  
 7.  Unity가 빌드를 완료 하면 (시간이 걸릴 수 있음) 빌드 위치에서 **파일 탐색기** 창을 열어야 합니다.
 
@@ -1064,7 +1064,7 @@ Unity 편집기에서 응용 프로그램이 작동 하는지 확인 한 후에�
 ## <a name="chapter-12--improving-your-luis-service"></a>12 장-LUIS 서비스 개선
 
 >[!IMPORTANT] 
-> 이 장은 매우 중요 하며, LUIS 서비스의 정확도를 향상 시키는 데 도움이 될 수 있으므로이를 완료 해야 합니다.
+> 이 장은 매우 중요 하며, LUIS 서비스의 정확도를 향상 시키는 데 도움이 되므로 몇 번 반복 해야 할 수 있습니다 .이 작업을 완료 해야 합니다.
 
 LUIS에서 제공 하는 이해 수준을 개선 하려면 새로운 길이 발언을 캡처하고 LUIS 앱을 다시 학습 하는 데 사용 해야 합니다.
 
@@ -1088,8 +1088,8 @@ LUIS에서 제공 하는 이해 수준을 개선 하려면 새로운 길이 발�
 
 위의 예에서는 "스피어" 라는 단어가 대상으로 강조 표시 된 것을 발견 했으므로 실수를 수정 해야 합니다 .이 작업은 단어를 마우스로 가리키고 **레이블 제거**를 클릭 하 여 수행 됩니다.
 
-![](images/AzureLabs-Lab3-49.png)
-길이발언![제거 레이블 이미지를 선택 합니다.](images/AzureLabs-Lab3-50.png)
+![확인 길이 발언](images/AzureLabs-Lab3-49.png)
+![레이블 이미지 제거](images/AzureLabs-Lab3-50.png)
  
 5.  완전히 잘못 된 길이 발언를 찾으면 화면 오른쪽에 있는 **삭제** 단추를 사용 하 여 삭제할 수 있습니다.
 

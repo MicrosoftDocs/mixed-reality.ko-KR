@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: 공유 환경, 혼합 현실, 홀로그램, 공간 앵커, 다중 사용자, 다중
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437463"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926924"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>혼합 현실에서 공유 환경
 
@@ -166,7 +166,7 @@ PC 또는 TV와 같이 지원 되는 Miracast 수신기가 있는 경우 로컬 
 
 ## <a name="presenter-spectator-applications-and-demos"></a>발표자-Spectator 응용 프로그램 및 데모
 
-[MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) 를 활용 하 여 [specator 보기 기능](spectator-view.md) 을 앱으로 가져옵니다.  다른 장치 (HL, Android, iOS, 비디오 카메라)를 사용 하도록 설정 하 여 동일한 위치의 다른 관점에서 HoloLens가 볼 수 있는 내용을 확인 하 고 holograms와 상호 작용 하는 호스트 HoloLens 사용자의 상호 작용에 대 한 업데이트를 수신 합니다.  동일한 앱의 spectator 도우미를 사용 하 여 사용자 고유의 공간 관점에서 응용 프로그램의 holograms로 호스트에서 수행 하는 작업을 시청 하 고 사진을 찍은 후 비디오를 기록 하세요.
+[MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) 를 활용 하 여 [spectator 보기 기능](spectator-view.md) 을 앱으로 가져옵니다.  다른 장치 (HL, Android, iOS, 비디오 카메라)를 사용 하도록 설정 하 여 동일한 위치의 다른 관점에서 HoloLens가 볼 수 있는 내용을 확인 하 고 holograms와 상호 작용 하는 호스트 HoloLens 사용자의 상호 작용에 대 한 업데이트를 수신 합니다.  동일한 앱의 spectator 도우미를 사용 하 여 사용자 고유의 공간 관점에서 응용 프로그램의 holograms로 호스트에서 수행 하는 작업을 시청 하 고 사진을 찍은 후 비디오를 기록 하세요.
 
 **참고:** 사진은 iOS/Android 장치에서 스크린샷을 통해 가져옵니다.
 

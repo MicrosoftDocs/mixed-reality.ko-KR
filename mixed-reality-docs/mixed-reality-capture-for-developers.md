@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc, 사진, 비디오, 캡처, 카메라
-ms.openlocfilehash: 740b02dd1714679028541a888d721ae74e8e1f32
-ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
+ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68937071"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926795"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>개발자를 위한 혼합 현실 캡처
 
@@ -97,7 +97,7 @@ HolographicCamera에는 카메라가 속한 구성을 식별 하는 데 도움�
 #### <a name="2d-app"></a>2D 앱
 
 혼합 현실 캡처가를 실행 하는 경우 2D 앱은 시각적 콘텐츠를 가립니다 선택할 수 있습니다.
-* [DXGI_PRESENT_RESTRICT_TO_OUTPUT](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present) 플래그로 표시
+* [DXGI_PRESENT_RESTRICT_TO_OUTPUT](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present) 플래그로 제공
 * [DXGI_SWAP_CHAIN_FLAG_HW_PROTECTED](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 사용 하 여 앱의 스왑 체인 만들기
 * Windows 10 5 월 2019 업데이트를 사용 하 여 ApplicationView의 [IsScreenCaptureEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.isscreencaptureenabled) 을 설정 합니다.
 
@@ -128,7 +128,7 @@ MRC는 개발자의 추가 작업 없이도 작동 하지만 앱의 최상의 �
 
 앱이 투명 검정을 지우지 않는 경우 MRC에 표시 될 수 있는 아티팩트는 다음과 같습니다.
 
-**예제 실패**: 콘텐츠 주위의 검정색 가장자리 (투명 검정으로 지우지 못함)
+**예제 실패**: 콘텐츠 주위의 검은색 가장자리 (투명 검정으로 지우지 못함)
 
 <table>
 <tr>
@@ -145,7 +145,7 @@ MRC는 개발자의 추가 작업 없이도 작동 하지만 앱의 최상의 �
 
 ![배경 알파 값을 1로 설정 하면 검은색 배경이 발생 합니다.](images/clearopaqueblack-300px.png)
 
-**예상 결과**: Holograms가 실제와 제대로 혼합 되어 표시 됩니다 (투명 검정으로 지우는 경우 예상 결과).
+**예상 결과**: Holograms는 실제와 제대로 혼합 되어 표시 됩니다 (투명 검정으로 지우는 경우 예상 결과).
 
 ![투명 검정으로 지우는 경우 예상 결과](images/cleartransparentblack-300px.png)
 
@@ -184,30 +184,30 @@ MRC는 개발자의 추가 작업 없이도 작동 하지만 앱의 최상의 �
 
 ![HoloStudio는 MRC 효과를 사용 하 여 사용자 지정 MRC 카메라를 추가 합니다.](images/cameraiconholostudio-300px.jpg)
 
-Unity 응용 프로그램은 holograms를 사용 하도록 설정 하는 속성에 대 한 [Locatable_camera_in_Unity](locatable-camera-in-unity.md) 을 참조 해야 합니다.
+Unity 응용 프로그램은 holograms를 사용 하도록 설정 하는 속성에 대 한 [Locatable_camera_in_Unity](locatable-camera-in-unity.md) 를 확인 해야 합니다.
 
 다른 응용 프로그램은 [Windows 미디어 캡처 api](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 를 사용 하 여 카메라를 제어 하 고, 스틸 및 비디오에 가상 holograms 및 응용 프로그램 오디오를 포함 하는 Mrc 비디오 및 오디오 효과를 추가 하 여이 작업을 수행할 수 있습니다.
 
 응용 프로그램에는 효과를 추가 하는 두 가지 옵션이 있습니다.
 * 이전 API: [MediaCapture. AddEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* 새 Microsoft 권장 API (개체를 반환 하므로 동적 속성을 조작할 수 있음): [Windows.Media.Capture.MediaCapture.AddVideoEffectAsync()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows.Media.Capture.MediaCapture.AddAudioEffectAsync()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync)만들도록 요구 하는 [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) and [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). 샘플 사용에 대해서는 MRC 효과 샘플을 참조 하세요.
+* 새 Microsoft 권장 API (개체를 반환 하 여 동적 속성을 조작할 수 있음): [MediaCapture () / AddVideoEffectAsync (](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) ): [MediaCapture ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) : 응용 프로그램이 [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) 및 [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)의 고유한 구현을 만들도록 요구 합니다. 샘플 사용에 대해서는 MRC 효과 샘플을 참조 하세요.
 
 >[!NOTE]
 > MixedRealityCapture 네임 스페이스는 Visual Studio에서 인식 되지 않지만 문자열은 여전히 유효 합니다.
 
 MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  속성 이름  |  type  |  Default Value  |  설명 | 
+|  속성 이름  |  작업 표시줄의 검색 상자에  |  기본값  |  설명 | 
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([Mediastreamtype](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  이 효과가 사용 되는 캡처 스트림을 설명 합니다. 오디오를 사용할 수 없습니다. | 
-|  HologramCompositionEnabled  |  boolean  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  HologramCompositionEnabled  |  부울  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  RecordingIndicatorEnabled  |  부울  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  VideoStabilizationEnabled  |  부울  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  비디오 안정화에 사용 되는 기록 프레임의 수를 설정 합니다. 0은 전력 및 성능 측면에서 0-대기 시간 및 거의 "무료"입니다. 15는 대기 시간 및 메모리의 15 프레임에 대 한 비용으로 최고 품질을 위해 권장 됩니다. | 
-|  GlobalOpacityCoefficient  |  FLOAT  |  0.9 (HoloLens) 1.0 (모던 헤드셋)  |  홀로그램의 전역 불투명도 계수를 0.0 (완전히 투명)에서 1.0 (완전히 불투명)로 설정 합니다. | 
-|  BlankOnProtectedContent  |  boolean  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
-|  ShowHiddenMesh  |  boolean  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
-| OutputSize | Size | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
+|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (모던 헤드셋)  |  홀로그램의 전역 불투명도 계수를 0.0 (완전히 투명)에서 1.0 (완전히 불투명)로 설정 합니다. | 
+|  BlankOnProtectedContent  |  부울  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
+|  ShowHiddenMesh  |  부울  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
+| OutputSize | 사이즈 | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
 | PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)을 설정 하면 앱에 사진/비디오 카메라에서 렌더링 하 라는 메시지가 표시 되지 않습니다. |
 
 MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
@@ -215,8 +215,8 @@ MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 <table>
 <tr>
 <th>속성 이름</th>
-<th>type</th>
-<th>Default Value</th>
+<th>작업 표시줄의 검색 상자에</th>
+<th>기본값</th>
 <th>설명</th>
 </tr>
 <tr>
@@ -225,9 +225,9 @@ MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 <td>2</td>
 <td>
 <ul>
-<li>0 Mic 오디오 전용</li>
-<li>1(sp1) 시스템 오디오만</li>
-<li>sr-2 Mic 및 시스템 오디오</li>
+<li>0: Mic 오디오만</li>
+<li>1: 시스템 오디오만</li>
+<li>2: Mic 및 시스템 오디오</li>
 </ul>
 </td>
 </tr>
@@ -241,7 +241,7 @@ MRC에 동시에 액세스 하는 여러 앱에 대 한 특정 제한 사항이 
 
 Photo/video 카메라는 동시에 액세스할 수 있는 프로세스의 수로 제한 됩니다. 프로세스가 비디오를 기록 하거나 사진을 촬영 하는 동안 다른 프로세스에서 사진/비디오 카메라를 획득 하는 데 실패 합니다. (혼합 현실 캡처와 표준 사진/비디오 캡처 모두에 적용 됨)
 
-HoloLens 2를 사용 하면 앱에서 MediaCaptureInitializationSettings의 [SharingMode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) 속성을 사용 하 여 photo/video 카메라를 독점적으로 제어할 필요가 없는 경우 sharedreadonly를 실행 하도록 지정할 수 있습니다. 이렇게 하면 캡처의 해상도와 프레임 속도가 카메라에서 제공 하도록 구성 된 다른 앱으로 제한 됩니다.
+HoloLens 2를 사용 하는 경우 앱은 MediaCaptureInitializationSettings ' [SharingMode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) 속성을 사용 하 여 photo/video 카메라를 독점적으로 제어할 필요가 없는 경우 sharedreadonly를 실행 하도록 지정할 수 있습니다. 이렇게 하면 캡처의 해상도와 프레임 속도가 카메라에서 제공 하도록 구성 된 다른 앱으로 제한 됩니다.
 
 ##### <a name="built-in-mrc-photovideo-camera-access"></a>기본 제공 MRC 사진/비디오 카메라 액세스
 
@@ -254,9 +254,9 @@ Windows 10에 기본 제공 되는 MRC 기능 (Cortana, 시작 메뉴, 하드웨
 
 이 공유 모드 기능에는 다음과 같은 제한 사항이 있습니다.
 * Cortana, 하드웨어 바로 가기 또는 시작 메뉴를 통한 사진: Windows 10 4 월 2018 업데이트 (이상)가 필요 합니다.
-* Cortana, 하드웨어 바로 가기 또는 시작 메뉴를 통한 비디오: Windows 10 4 월 2018 업데이트 (이상)가 필요 합니다.
+* Cortana, 하드웨어 바로 가기 또는 시작 메뉴를 통한 비디오: Windows 10 4 월 2018 업데이트 (이상) 필요
 * Miracast를 통한 MRC 스트리밍: Windows 10 10 월 2018 업데이트 (이상)가 필요 합니다.
-* Windows 장치 포털을 통해 또는 HoloLens 도우미 앱을 통해 MRC 스트리밍: HoloLens 필요 2
+* Windows 장치 포털을 통해 또는 HoloLens 도우미 앱을 통해 MRC 스트리밍: HoloLens 2 필요
 
 >[!NOTE]
 > 다른 앱에서 photo/video 카메라를 사용 하는 경우 기본 제공 MRC 카메라 UI의 해상도와 프레임 속도가 일반 값에서 감소할 수 있습니다.
@@ -267,6 +267,6 @@ Windows 10 4 월 2018 업데이트를 사용 하면 MRC 스트림에 액세스 �
 
 Windows 10 4 월 2018 업데이트 이전에는 앱의 사용자 지정 MRC 레코더를 시스템 MRC와 함께 사용할 수 없습니다 (사진 캡처, 비디오 캡처 또는 Windows 장치 포털에서 스트리밍).
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [혼합 현실 캡처](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)

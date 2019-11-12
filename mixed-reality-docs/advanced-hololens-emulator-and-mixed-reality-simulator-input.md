@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 시뮬레이션, Windows Mixed 현실
-ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c5601ae2caf235cb22248ce7c6bf7e29225ade2c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437067"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926600"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>고급 HoloLens 에뮬레이터 및 혼합 현실 시뮬레이터 입력
 
@@ -34,7 +34,7 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 * **작업**: 엄지 단추에 엄지와 집게 손가락를 누르거나 컨트롤러에서 작업 단추를 끌어오는 작업을 시뮬레이션 합니다. 예를 들어 작업 입력을 사용 하 여 공기 탭 제스처를 시뮬레이션 하 고, 콘텐츠를 스크롤하고, 길게 누르기를 수행할 수 있습니다.
 * **[블 룸](system-gesture.md#bloom)/시스템 제스처 또는 홈**: HoloLens 블 룸/시스템 제스처 또는 컨트롤러의 홈 단추를 사용 하 여 셸에 반환 하 고 시스템 작업을 수행 합니다.
 
-Reprresentation에는 HoloLens 2가 풍부 하 게 포함 되어 있습니다.  이제는 추적/추적 하지 않고 제스처를 구동 하는 데 사용할 수 있을 뿐 아니라, 이제는이에 맞는 스 켈 레 톤 모델을 만들어 개발자에 게 노출 합니다.  이렇게 하면 각각 26 개의 추적 된 지점이 도입 됩니다.  
+손에는 HoloLens 2를 다양 하 게 표현할 수 있습니다.  이제는 추적/추적 하지 않고 제스처를 구동 하는 데 사용할 수 있을 뿐 아니라, 이제는이에 맞는 스 켈 레 톤 모델을 만들어 개발자에 게 노출 합니다.  이렇게 하면 각각 26 개의 추적 된 지점이 도입 됩니다.  
 * **조인트**: 지정 된 추적 된 손으로는 20 개의 추적 된 위치 중 하나입니다. 그러면 점이 3d 공간에 연결 됩니다.
 * **포즈**: 추적 된 손으로 된 모든 조인트의 완전 한 컬렉션입니다. 이때이는 26 개 조인트의 컬렉션입니다. 
 
@@ -76,11 +76,11 @@ Reprresentation에는 HoloLens 2가 풍부 하 게 포함 되어 있습니다.  
 |  추적 |  T 또는 F3 |  |  X 버튼 | 
 
 
-참고: 컨트롤러 단추는 손 대상 한정자를 사용 하 여 대상 수 있습니다.
+참고: 컨트롤러 단추는 손 대상 한정자를 사용 하 여 하나의 손/컨트롤러 또는 다른 대상으로 지정할 수 있습니다.
 
 ## <a name="targeting"></a>대상 지정 
 
-위의 입력 개념 중 일부는 고유 합니다.  Action, 블 룸/System, Reset 및 Tracking은 전체 개념 이며, 필요 하지 않으며, 대상 지정을 위한 추가 한정자의 영향을 받지 않습니다.  그러나 나머지 개념은 여러 대상 중 하나에 적용 될 수 있습니다. 명령을 적용 해야 하는 대상을 지정 하는 방법을 소개 했습니다.  모든 경우에 UI를 통해 또는 targtet 개체를 키보드 누름을 통해 지정할 수 있습니다.  경우에 따라 xbox 컨트롤러를 직접 지정 하는 것도 가능 합니다. 
+위의 입력 개념 중 일부는 고유 합니다.  Action, 블 룸/System, Reset 및 Tracking은 전체 개념 이며, 필요 하지 않으며, 대상 지정을 위한 추가 한정자의 영향을 받지 않습니다.  그러나 나머지 개념은 여러 대상 중 하나에 적용 될 수 있습니다. 명령을 적용 해야 하는 대상을 지정 하는 방법을 소개 했습니다.  모든 경우에 UI를 통해 또는 대상 개체를 키보드 누름을 통해 지정할 수 있습니다.  경우에 따라 xbox 컨트롤러를 직접 지정 하는 것도 가능 합니다. 
 
 다음 표에서는를 대상으로 하는 옵션과 각 항목을 활성화 하는 방법을 설명 합니다.
 

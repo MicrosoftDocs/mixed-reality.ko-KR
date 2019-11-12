@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, holographic, ar, vr, mr, xr, 확대 현실, 가상 현실, 설명
-ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437893"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926780"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?
 
@@ -71,7 +71,7 @@ ms.locfileid: "73437893"
 <br>
 
 혼합 현실 스펙트럼을 ![](images/MixedRealitySpectrum.jpg)<br>
-*혼합 현실 specturm*
+*혼합 현실 스펙트럼*
 
 <br>
 
@@ -120,5 +120,5 @@ Windows Mixed Reality 환경을 제공 하는 두 가지 주요 유형의 장치
 * [홀로그램이란?](hologram.md)
 * [혼합 현실의 기본 사항 이해](index.md#understand-the-basics)
 * [만들기 및 프로토타입 만들기 시작](design.md)
-* [도구 및 아키텍처 배우기](development.md)
+* [도구 및 아키텍처 알아보기](development.md)
 

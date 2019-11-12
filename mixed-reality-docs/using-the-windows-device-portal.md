@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438218"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926750"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -45,7 +45,7 @@ HoloLens 용 Windows 장치 포털을 사용 하면 Wi-fi 또는 USB를 통해 �
 1. [HoloLens를 wi-fi에 연결](connecting-to-wi-fi-on-hololens.md)합니다.
 2. 장치의 IP 주소를 조회 합니다.
    * **설정 > 네트워크 & 인터넷 > wi-fi > 고급 옵션**에서 장치에 대 한 IP 주소를 찾습니다.
-3. PC의 웹 브라우저에서 https://< YOUR_HOLOLENS_IP_ADDRESS로 이동 >
+3. PC의 웹 브라우저에서 https://< YOUR_HOLOLENS_IP_ADDRESS으로 이동 >
    * 브라우저에 "이 웹 사이트의 보안 인증서에 문제가 있습니다." 라는 메시지가 표시 됩니다. 이 오류는 디바이스 포털에 발행된 인증서가 테스트 인증서이기 때문에 발생합니다. 지금은 이 인증서 오류를 무시하고 계속 진행할 수 있습니다.
 
 ## <a name="connecting-over-usb"></a>USB를 통해 연결
@@ -160,7 +160,7 @@ Microsoft HoloLens의 Windows 장치 포털에서 혼합 현실 캡처 페이지
 > [!NOTE]
 > [동시 MRC에](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations)는 다음과 같은 제한 사항이 있습니다.
 > * Windows 장치 포털이 비디오를 기록 하는 동안 앱에서 사진/비디오 카메라에 액세스 하려고 하면 비디오 녹화가 중지 됩니다.
->   * 앱이 SharedReadOnly 모드를 사용 하 여 photo/video 카메라를 acesses 경우 HoloLens 2는 비디오 녹화를 중지 하지 않습니다.
+>   * 앱이 SharedReadOnly 모드를 사용 하 여 photo/video 카메라에 액세스 하는 경우 HoloLens 2는 비디오 녹화를 중지 하지 않습니다.
 > * 앱에서 현재 photo/video 카메라를 사용 하는 경우 Windows 장치 포털에서 사진을 촬영 하거나 비디오를 녹음할 수 있습니다.
 > * 라이브 스트리밍:
 >   * HoloLens (첫 번째 gen)는 Windows 장치 포털에서 라이브 스트리밍 중에 앱이 사진/비디오 카메라에 액세스 하지 못하도록 합니다.

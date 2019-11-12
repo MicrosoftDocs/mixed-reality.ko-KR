@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438292"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926912"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
@@ -23,7 +23,7 @@ SceneUnderstanding SDK는 NuGet을 통해 다운로드할 수 있습니다.
 
 [SceneUnderstanding SDK](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-**참고:** 최신 릴리스는 preview pacakges에 따라 달라 지 며 시험판 패키지를 사용 하도록 설정 하 여 해당 릴리스를 확인 해야 합니다.
+**참고:** 최신 릴리스는 미리 보기 패키지에 의존 하므로 시험판 패키지를 사용 하도록 설정 하 여 해당 릴리스를 확인 해야 합니다.
 
 버전 0.5.2022에서, 장면 이해는 언어 프로젝션을 지원 하 C# 고 C++ 응용 프로그램에서 Win32 또는 UWP 플랫폼용 응용 프로그램을 개발할 수 있도록 합니다. 이 버전부터 SceneUnderstanding는 HoloLens2와의 통신에만 사용 되는 SceneObserver를 제한 하는 unity의 unity 지원 기능을 지원 합니다. 
 
@@ -35,7 +35,7 @@ Unity 프로젝트에서 SDK를 사용 하는 경우 [unity 용 NuGet](https://g
 
 ### <a name="the-scene"></a>장면
 
-혼합 현실 장치는 환경에서 표시 되는 내용에 대 한 정보를 지속적으로 통합 하 고 있습니다. 장면 이해는 이러한 모든 데이터 원본을 funnels 하나의 단일 단일 추상화를 생성 합니다. 장면 이해는 단일 사물 (예: 벽/천장/층)의 인스턴스를 나타내는 [SceneObjects](scene-understanding-SDK.md#sceneobjects) 의 컴퍼지션 인 장면을 생성 합니다. 장면 개체 자체는이 SceneObject을 구성 하는 더 세분화 된 부분을 나타내는 [SceneComponents](scene-understanding-SDK.md#scenecomponents) 의 컴퍼지션입니다. 구성 요소의 예는 quads 및 메시 이지만 나중에 경계 상자, 충돌 mehses, 메타 데이터 등을 나타낼 수 있습니다.
+혼합 현실 장치는 환경에서 표시 되는 내용에 대 한 정보를 지속적으로 통합 하 고 있습니다. 장면 이해는 이러한 모든 데이터 원본을 funnels 하나의 단일 단일 추상화를 생성 합니다. 장면 이해는 단일 사물 (예: 벽/천장/층)의 인스턴스를 나타내는 [SceneObjects](scene-understanding-SDK.md#sceneobjects) 의 컴퍼지션 인 장면을 생성 합니다. 장면 개체 자체는이 SceneObject을 구성 하는 더 세분화 된 부분을 나타내는 [SceneComponents](scene-understanding-SDK.md#scenecomponents) 의 컴퍼지션입니다. 구성 요소의 예는 quads 및 메시 이지만 나중에 경계 상자, 충돌 망, 메타 데이터 등을 나타낼 수 있습니다.
 
 원시 센서 데이터를 장면으로 변환 하는 프로세스는 매우 큰 공간 (~ 50x50m)에 대해 보통 공간 (~ 10x10m)에서 분까지 몇 초 정도 걸릴 수 있으며, 따라서 응용 프로그램 요청. 대신, 요청 시 응용 프로그램에서 장면 생성이 트리거됩니다. SceneObserver 클래스에는 장면을 계산 하거나 Deserialize 할 수 있는 정적 메서드가 있습니다. 그러면이를 열거/상호 작용할 수 있습니다. "Compute" 작업은 요청 시 실행 되며 CPU에서 실행 되지만 별도의 프로세스 (혼합 현실 드라이버)에서 실행 됩니다. 그러나 다른 프로세스에서 계산을 수행 하는 동안 결과 장면 데이터는 응용 프로그램에서 장면 개체에 저장 되 고 유지 관리 됩니다. 
 
@@ -43,7 +43,7 @@ Unity 프로젝트에서 SDK를 사용 하는 경우 [unity 용 NuGet](https://g
 
 ![프로세스 다이어그램](images/SU-ProcessFlow.png)
 
-왼쪽에는 항상 자체 프로세스에서 실행 되 고 실행 되는 혼합 현실 런타임의 다이어그램이 있습니다. 이 런타임은 장치 추적, 공간 매핑 및 전 세계의 이해를 위해 장면에서 이해 하는 기타 작업을 수행 하는 작업을 담당 합니다. 다이어그램의 오른쪽에는 장면 이해를 활용 하는 두 개의 이론적인 응용 프로그램이 표시 됩니다. 첫 번째 응용 프로그램은 내부적으로 장면 이해 SDK를 사용 하는 MRTK를 사용 하 고, 두 번째 앱은 두 개의 sepereate 장면 인스턴스를 계산 하 여 사용 합니다. 이 다이어그램의 3 개 장면이 모두 백그라운드의 개별 인스턴스를 생성 하 고, 한 장면의 응용 프로그램과 장면 개체 간에 공유 되는 전역 상태를 추적 하지 않습니다. 장면 이해는 시간에 따라 추적 하는 메커니즘을 제공 하지만이 작업은 SDK 및 코드를 사용 하 여 수행 됩니다 .이 추적을 수행 하는 코드는 앱 프로세스의 SDK에서 실행 됩니다.
+왼쪽에는 항상 자체 프로세스에서 실행 되 고 실행 되는 혼합 현실 런타임의 다이어그램이 있습니다. 이 런타임은 장치 추적, 공간 매핑 및 전 세계의 이해를 위해 장면에서 이해 하는 기타 작업을 수행 하는 작업을 담당 합니다. 다이어그램의 오른쪽에는 장면 이해를 활용 하는 두 개의 이론적인 응용 프로그램이 표시 됩니다. 첫 번째 응용 프로그램은 내부적으로 장면 이해 SDK를 사용 하는 MRTK를 사용 하 여 두 번째 앱은 별도의 두 장면 인스턴스를 계산 하 고 사용 합니다. 이 다이어그램의 3 개 장면이 모두 백그라운드의 개별 인스턴스를 생성 하 고, 한 장면의 응용 프로그램과 장면 개체 간에 공유 되는 전역 상태를 추적 하지 않습니다. 장면 이해는 시간에 따라 추적 하는 메커니즘을 제공 하지만이 작업은 SDK를 사용 하 여 수행 되며,이 추적을 수행 하는 코드가 앱 프로세스의 SDK에서 실행 됩니다.
 
 각 장면은 응용 프로그램의 메모리 공간에 해당 데이터를 저장 하기 때문에 장면 개체의 모든 기능 또는 내부 데이터가 항상 응용 프로그램의 프로세스에서 실행 된다고 가정할 수 있습니다.
 
@@ -95,7 +95,7 @@ Unity 프로젝트에서 SDK를 사용 하는 경우 [unity 용 NuGet](https://g
 </tr>
 </table>
 
-이 그림에서는 장면의 물리적 레이아웃과 논리적 레이아웃 간의 차이점을 보여 줍니다. 오른쪽에는 장면을 열거할 때 응용 프로그램에 표시 되는 데이터의 계층적 레이아웃이 표시 됩니다. 왼쪽에는 장면이 실제로는 필요한 경우 개별적으로 액세스할 수 있는 12 개의 고유 구성 요소로 구성 되어 있습니다. 새 장면을 처리할 때 응용 프로그램이이 계층 구조를 논리적으로 탐색 하는 것이 좋지만, 장면 업데이트를 추적할 때 일부 응용 프로그램은 두 장면 간에 공유 되는 특정 구성 요소를 대상으로 하는 경우에만 관심이 있을 수 있습니다.
+이 그림에서는 장면의 물리적 레이아웃과 논리적 레이아웃 간의 차이점을 보여 줍니다. 왼쪽에는 장면을 열거할 때 응용 프로그램에 표시 되는 데이터의 계층적 레이아웃이 표시 됩니다. 오른쪽에는 장면이 필요한 경우 개별적으로 액세스할 수 있는 12 개의 고유 구성 요소로 구성 되어 있습니다. 새 장면을 처리할 때 응용 프로그램이이 계층 구조를 논리적으로 탐색 하는 것이 좋지만, 장면 업데이트를 추적할 때 일부 응용 프로그램은 두 장면 간에 공유 되는 특정 구성 요소를 대상으로 하는 경우에만 관심이 있을 수 있습니다.
 
 ## <a name="api-overview"></a>API 개요
 
@@ -223,7 +223,7 @@ firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
 
 if (firstFloor != null)
 {
-    // We found it again, we can now update the transforms of all objects we attatched to this floor transform
+    // We found it again, we can now update the transforms of all objects we attached to this floor transform
 }
 ```
 
@@ -249,7 +249,7 @@ foreach (var mesh in firstFloor.Meshes)
 }
 ```
 
-이는 장면 원점에 상대적인 변환을 포함 하는 SceneObject입니다. 이는 SceneObject가 "사물"의 인스턴스를 나타내므로 공간에 과정이 quads와 망상은 부모를 기준으로 변환 되는 기 하 도형을 나타냅니다. 별도의 SceneObjects가 동일한 SceneMesh/SceneQuad SceneComponewnts를 참조할 수 있으며 SceneObject에 두 개 이상의 SceneMesh/SceneQuad가 있을 수 있습니다.
+이는 장면 원점에 상대적인 변환을 포함 하는 SceneObject입니다. 이는 SceneObject가 "사물"의 인스턴스를 나타내므로 공간에 과정이 quads와 망상은 부모를 기준으로 변환 되는 기 하 도형을 나타냅니다. 별도의 SceneObjects가 동일한 SceneMesh/SceneQuad SceneComponents를 참조할 수 있으며 SceneObject에 두 개 이상의 SceneMesh/SceneQuad가 있을 수 있습니다.
 
 ### <a name="dealing-with-transforms"></a>변형 처리
 
@@ -285,7 +285,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-각 `SceneObject`에는 포함 하는 `Scene`의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 `Position` 및 `Orientation` 속성이 있습니다. 예를 들어, 오는 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 된 `SceneObject`에 맞게 로컬 위치와 회전을 할당 합니다.
+각 `SceneObject`에는 포함 하는 `Scene`의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 `Position` 및 `Orientation` 속성이 있습니다. 예를 들어 다음 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 된 `SceneObject`에 맞게 로컬 위치와 회전을 할당 합니다.
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -324,14 +324,14 @@ foreach (var sceneObject in myScene.SceneObjects)
                 // Step 1: Create a new game object for the quad itself as a child of the scene root
                 // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
                 // Step 3: Create your hologram and set it as a child of the quad's game object
-                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
+                // Step 4: Set the hologram's local transform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-1-4 단계는 특정 프레임 워크/구현에 따라 달라 지지만 테마는 유사 해야 합니다. 4는 단지 공간에서 지역화 된 경계가 있는 2D 평면을 나타냅니다. 엔진/프레임 워크에서 쿼드가 있는 위치를 확인 하 고 쿼드을 기준으로 개체를 루 팅 하는 방법으로 holograms는 실제 세계에 repect 하 여 제대로 배치 됩니다. 자세한 내용은 특정 구현을 표시 하는 quads의 샘플을 참조 하세요.
+1-4 단계는 특정 프레임 워크/구현에 따라 달라 지지만 테마는 유사 해야 합니다. 4는 단지 공간에서 지역화 된 경계가 있는 2D 평면을 나타냅니다. 엔진/프레임 워크에서 쿼드이 무엇 인지 확인 하 고 쿼드을 기준으로 개체를 루 팅 하면 holograms는 실제 세계와 관련 하 여 정확 하 게 배치 됩니다. 자세한 내용은 특정 구현을 표시 하는 quads의 샘플을 참조 하세요.
 
 ### <a name="mesh"></a>그물
 

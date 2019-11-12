@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, edge, iot edge, 자습서, api, 알림, 기능, 테이블, hololens, 몰입 형, vr, iot, virtual machine, ubuntu, python
-ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: bfb1518869892ed4899019d7b9c504a960e7db3f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437969"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926841"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -947,7 +947,7 @@ Microsoft HoloLens를 비롯 하 여 혼합 현실에서 개발 하기 위한 �
 
     - 이름: **PartitionKey**, 값: **PK_IoTMessages** 
 
-    - 이름: **Rowkey**, Value: **RK_1_IoTMessages** 
+    - 이름: **Rowkey**, 값: **RK_1_IoTMessages** 
 
 9. 그런 다음 *엔터티 추가* 창의 왼쪽 아래에 있는 **속성 추가** 를 클릭 하 고 다음 속성을 추가 합니다.
 
@@ -1241,7 +1241,7 @@ IOT 장치에서 데이터를 시각화 하려면 **Power BI** (데스크톱 버
     ![Power BI](images/AzureLabs-Lab313-86.png)
 
 > [!WARNING]
-> 다음 장은 HoloLens 전용입니다. Power BI 현재 모던 응용 프로그램으로 사용할 수 데스크톱 앱을 통해 Windows Mixed Reality 포털 (즉, 절벽 하우스)에서 데스크톱 버전을 실행할 수 있습니다.
+> 다음 장은 HoloLens 전용입니다. Power BI 현재 모던 응용 프로그램으로 사용할 수 없지만 데스크톱 앱을 통해 Windows Mixed Reality 포털 (즉, 절벽 집)에서 데스크톱 버전을 실행할 수 있습니다.
 
 ## <a name="chapter-16---display-power-bi-data-on-hololens"></a>16 장-HoloLens에 Power BI 데이터 표시
 

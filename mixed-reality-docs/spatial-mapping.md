@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 공간 매핑, HoloLens, 혼합 현실, 표면 재구성, 메시
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437460"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926740"
 ---
 # <a name="spatial-mapping"></a>공간 매핑
 
@@ -64,13 +64,13 @@ Holograms를 배치 하거나 이동할 때 화면을 시각화 합니다 (단�
 
 HoloLens가 환경에 대 한 새 데이터를 수집 하 고 환경에 대 한 변경 사항이 발생 하면 공간 서피스가 표시 되 고 사라지고 변경 됩니다.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>공간 매핑과 장면 Undesranding WorldMesh
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>공간 매핑과 장면 이해 WorldMesh
 HoloLens 2의 경우 [장면 이해 SDK](scene-understanding-SDK.md) (EnableWorldMesh 설정)를 사용 하 여 공간 매핑 데이터의 정적 버전을 쿼리할 수 있습니다. 공간 매핑 데이터에 액세스 하는 두 가지 방법의 차이점은 다음과 같습니다.
 * 공간 매핑 API:
    * 제한 된 범위: 응용 프로그램에서 사용 가능한 공간 매핑 데이터는 제한 된 크기의 응용 프로그램에서 사용자 주위에 ' 거품형 '으로 캐시 됩니다.
    * SurfacesChanged 이벤트를 통해 변경 된 메시 영역에 대 한 짧은 대기 시간 업데이트를 제공 합니다.
    * 큐빅 미터 매개 변수만 삼각형에 의해 제어 되는 세부 정보의 변수 수준입니다.
-* 일시 중단 되지 않은 SDK 장면:
+* 장면 이해 SDK:
    * 무제한 범위-쿼리 반경 내에서 검색 된 모든 공간 매핑 데이터를 제공 합니다.
    * 공간 매핑 데이터의 정적 스냅숏을 제공 합니다. 업데이트 된 공간 매핑 데이터를 가져오려면 전체 메시에 대해 새 쿼리를 실행 해야 합니다.
    * RequestedMeshLevelOfDetail 설정에 의해 제어 되는 일관 된 세부 수준입니다.
@@ -366,7 +366,7 @@ Surface 관찰자가 제공 하는 coarsest 삼각형 밀도가 여전히 불충
 * 실제로 수행 하는 것과 동일한 방식으로 HoloLens 또는 응용 프로그램을 사용 하지 않을 수 있기 때문에 실제 (coached) 사용자를 사용 하 여 테스트를 수행 하는 것이 좋습니다. 사실, 사용자의 행동, 지식 및 가정이 어떻게 달라질 수 있습니다.
 
 ## <a name="troubleshooting"></a>문제 해결
-* 표면 메시를 올바르게 지향 하려면 각 GameObject가 활성 상태 여야 메시를 생성 하기 위해 SurfaceObeserver에 전송 해야 합니다. 그렇지 않으면 메시는 공간에 표시 되지만 이상한 각도로 회전 됩니다.
+* 표면 메시를 올바르게 지향 하려면 각 GameObject가 활성 상태 여야 메시를 생성 하기 위해 SurfaceObserver에 전송 해야 합니다. 그렇지 않으면 메시는 공간에 표시 되지만 이상한 각도로 회전 됩니다.
 * SurfaceObserver와 통신 하는 스크립트를 실행 하는 GameObject를 원본으로 설정 해야 합니다. 그렇지 않으면 사용자가 만들고 SurfaceObserver에 전송 하 여 메시를 생성 하는 모든 Gameobject 부모 게임 개체의 오프셋과 동일한 오프셋을 갖게 됩니다. 이렇게 하면 메시를 몇 미터 크게 표시 하 여 진행 상황을 디버그 하기가 매우 어려울 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목

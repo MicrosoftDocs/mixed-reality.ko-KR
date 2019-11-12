@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, media services, 스트리밍 비디오, 360, 몰입 형, vr
-ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0350d69eed9b922e174bc521107beac7d11b1bc
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438569"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926824"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
@@ -619,7 +619,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 ## <a name="chapter-6---create-the-gaze-class"></a>6 장-응시 클래스 만들기
 
-이 클래스는 사용자가 보고 있는 개체를 검색 하기 위해 **기본 카메라**에서 전달 되는 **raycast** 를 만드는 역할을 합니다. 이 경우에는 사용자가 장면의 **GazeButton** 개체를 보고 동작을 트리거할 수 있는지 여부를 확인 **해야 합니다.**
+이 클래스는 사용자가 보고 있는 개체를 검색 하기 위해 **기본 카메라**에서 앞으로 프로젝션 될 **raycast** 를 만드는 역할을 합니다. 이 경우에는 사용자가 장면의 **GazeButton** 개체를 보고 동작을 트리거할 수 있는지 여부를 확인 **해야 합니다.**
 
 이 클래스를 만들려면:
 
@@ -828,7 +828,7 @@ Azure 미디어 서비스를 사용 하려면 응용 프로그램에서 사용�
 
 3.  **파일 > 빌드 설정**으로 이동 하 고 **빌드**를 클릭 합니다.
 
-4.  솔루션을 buildthe 폴더를 선택 하 라는 메시지가 표시 됩니다.
+4.  솔루션을 빌드하는 데 사용할 폴더를 선택 하 라는 메시지가 표시 됩니다.
 
 5.  **빌드** 폴더를 만들고 해당 폴더 내에서 원하는 적절 한 이름을 사용 하 여 다른 폴더를 만듭니다.
 

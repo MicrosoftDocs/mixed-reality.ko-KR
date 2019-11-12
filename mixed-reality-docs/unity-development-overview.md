@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트, 포팅, 기능, 카메라, 시뮬레이션, 에뮬레이션, 설명서
-ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437378"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926700"
 ---
 # <a name="unity-development-overview"></a>Unity 개발 개요
 
@@ -37,7 +37,7 @@ Mixed Reality Toolkit를 가져오지 않고 새 Unity 프로젝트를 만들려
 
 [공간 단계](coordinate-systems.md#spatial-coordinate-systems), [제스처, 동작 컨트롤러](gestures-and-motion-controllers-in-unity.md) 또는 [음성 입력과](voice-input-in-unity.md) 같은 Windows 혼합 현실 기능에 대 한 지원을 추가 하면 Unity에 직접 빌드된 api를 사용 하 여 구현 됩니다. 
 
-먼저, 해당 환경에서 대상으로 할 수 있는 [환경 규모](coordinate-systems.md) 를 검토 합니다.
+먼저 응용 프로그램에서 대상으로 지정할 수 있는 [환경 규모](coordinate-systems.md) 를 검토 합니다.
 * **방향** 또는 **대규모 환경을**구축 하려는 경우 Unity의 추적 공간 형식을 [고정](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)으로 설정 해야 합니다.
 * **대규모 또는** **공간 규모의 환경을**구축 하려는 경우 Unity의 추적 공간 유형이 [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)로 설정 되었는지 확인 해야 합니다.
 * 사용자가 5 미터를 초과 하 여 로밍할 수 있도록 HoloLens에서 **세계 규모** 의 경험을 구축 하려는 경우 [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) 구성 요소를 사용 해야 합니다.
