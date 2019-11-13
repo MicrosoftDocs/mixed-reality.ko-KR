@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 시선 추적, 혼합 현실, 입력, 시선 응시, 시선 겨냥, HoloLens 2, 시선 기반 선택, 유지(dwell)
-ms.openlocfilehash: 5130fd3c1ecd551788f61f8abb8d02cdedeb4181
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437809"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926603"
 ---
 # <a name="eye-gaze-and-dwell"></a>시선 응시 및 유지(dwell)
 
@@ -28,7 +28,7 @@ _"시선 응시 및 유지"_ 상호 작용 모델은 [시선 응시 및 커밋](
 
 ## <a name="challenges-of-the-eye-gaze-and-dwell-interaction-model"></a>"시선 응시 및 유지" 상호 작용 모델의 과제
 일반적으로 유지(dwell) 기반 활성화는 음성 입력이나 손 입력을 모두 사용할 수 없는 경우에만 마지막 대체 수단으로 사용하는 것이 좋습니다. 그 이유는 유지(dwell) 시간 선택이 까다로울 수 있기 때문입니다. 초보 사용자의 경우 유지(dwell) 시간이 길어도 괜찮지만 숙련된 사용자는 자신의 환경을 빠르고 효율적으로 탐색하려고 합니다. 따라서 유지(dwell) 시간을 사용자의 특정 요구에 맞게 조정하는 방법이 어려운 과제입니다.
-유지(dwell) 시간이 너무 짧으면: 홀로그램이 시선 응시에 항상 반응하기 때문에 사용자가 불편해 할 수 있습니다. 유지(dwell) 시간이 너무 길면: 사용자가 대상을 오랫동안 계속보고 있어야 해서 환경이 너무 느리고 방해가 될 수 있습니다.
+유지(dwell) 시간이 너무 짧으면: 홀로그램이 항상 사용자의 시선 응시에 비쳐져 사용자가 압도감을 느낄 수 있습니다. 유지(dwell) 시간이 너무 길면: 사용자가 대상을 오랫동안 계속보고 있어야 해서 환경이 너무 느리고 방해가 될 수 있습니다.
 
 ## <a name="design-recommendations"></a>디자인 권장 사항
 유지(dwell) 피드백에 두 가지 상태 접근 방식을 사용하는 것이 좋습니다.

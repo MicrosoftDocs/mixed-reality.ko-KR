@@ -3,16 +3,16 @@ title: HoloLens 2를 위한 기존 앱 준비
 description: HoloLens(1세대) 및/또는 이전 MRTK에 기존 앱이 있고 MRTK 버전 2 및 HoloLens 2로 이식하려는 개발자를 위해 설계되었습니다.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/19
+ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: e1256cfaf9253a31161a836f75a90c64d17cf093
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438361"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926208"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 앱 준비
 
