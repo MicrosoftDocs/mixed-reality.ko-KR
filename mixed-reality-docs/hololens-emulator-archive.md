@@ -3,15 +3,15 @@ title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 9/11/2019
+ms.date: 11/11/2019
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: c2d0c8d9e81bae906c786a32f08d0e701638535e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9ce72febfd07b7dc743b9ee202e8c4353f1de96
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434208"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064231"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 에뮬레이터 보관
 
@@ -19,6 +19,7 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 |  빌드 |  출시 날짜 |  참고 | 
 |----------|----------|----------|
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1039](https://go.microsoft.com/fwlink/?linkid=2110553) | 2019 년 11 월 11 일 | 11 월 2019 HoloLens 2 빌드 |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1034](https://go.microsoft.com/fwlink/?linkid=2106649) | 2019 년 10 월 8 일 | 2019 년 10 월 2 일 빌드  사용 가능한 최신 버전 보다 오래 된 버전을 실행 하는 경우 에뮬레이터가 새 버전으로 업데이트 하 라는 메시지를 표시 합니다.  Windows 10에서 에뮬레이터를 사용 하는 경우 Windows 10에서 업데이트 이상 2019을 사용 하는 경우 개발자는 새 NAT 구성 탭에서 개별 장치에서 실행 되는 응용 프로그램의 포트를 열어 에뮬레이터에 연결 하 고 업데이트 탭에서 사용 가능한 에뮬레이터 버전을 볼 수 있습니다.  자세한 내용은 [HoloLens 에뮬레이터 설명서](using-the-hololens-emulator.md) 를 참조 하세요. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1031](https://go.microsoft.com/fwlink/?linkid=2103724) | 2019 년 9 월 11 일 | 2019 년 9 월 2 일 빌드.  Windows 10에서 에뮬레이터를 실행할 때 네트워크 탭이 에뮬레이터 도구 창에 표시 됩니다. 2019 5 월 업데이트 또는 최신 버전. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1028](https://go.microsoft.com/fwlink/?linkid=2101019) | 2019 년 8 월 14 일 | 2019 년 8 월 2 일 빌드.  Holographic 앱 템플릿은 더 이상 포함 되지 않지만 Visual Studio Marketplace에서 사용할 수 있습니다.  이제 Sdk가 사용자 지정 위치에 설치 되 면 에뮬레이터가 작동 합니다. |

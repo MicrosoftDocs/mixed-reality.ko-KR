@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, 제스처, 상호 작용, 디자인
-ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926724"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064236"
 ---
 # <a name="system-gesture"></a>시스템 제스처
 
@@ -98,7 +98,7 @@ HoloLens 2에서 블 룸 제스처는 추가 교육을 필요로 하지 않는 �
     :::column-end:::
     :::column:::
         ![손목 단추를 손가락으로](images/wrist-button-pinch.png)<br>
-        **단계: 단추를 누른 후 손가락으로 이동**<br>
+        **2 단계: 단추를 누른 후 손가락으로 이동**<br>
     :::column-end:::
 :::row-end:::
 

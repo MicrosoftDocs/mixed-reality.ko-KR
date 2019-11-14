@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913563"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064260"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 solvers 사용
 
@@ -72,7 +72,7 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 
     ![mrlearning-base-ch3-3-step2b](images/mrlearning-base-ch3-3-step2b.png)
 
-3. 방사형 보기의 최대 및 최소 거리를 0으로 설정 하 여 큐브에이와 사용자의 손목 사이에 거리가 없도록 합니다. 일단 설정하면 큐브는 손목에 완벽하게 맞춰집니다. 참조 방향을 추적 된 개체의 방향으로 설정 하 여 개체를 사용자의 손목로 회전할 수 있도록 하려는 경우와 같이 큐브 지향 방법의 동작을 조정 하는 참조 방향 필드를 조정할 수도 있습니다.
+3. 방사형 보기의 최대 및 최소 거리를 0으로 설정 하 여 큐브에이와 사용자의 손목 사이에 거리가 없도록 합니다. 일단 설정하면 큐브는 손목에 완벽하게 맞춰집니다. 참조 방향을 개체 지향으로 설정 하 여 개체를 사용자의 손목로 회전할 수 있도록 하려는 경우와 같이 큐브 지향 방법의 동작을 조정 하도록 참조 방향 필드를 조정할 수도 있습니다.
 
     ![mrlearning-base-ch3-3-step3](images/mrlearning-base-ch3-3-step3.png)
 

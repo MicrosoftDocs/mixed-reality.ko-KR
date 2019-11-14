@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 5599fe48f62a35d1dc02ce30fb7858fd74e87685
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926542"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064312"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
 
@@ -110,7 +110,7 @@ ms.locfileid: "73926542"
 
 ### <a name="the-pan-gesture"></a>이동 제스처
 
-이 섹션에서는 이동 제스처를 사용 하는 방법을 배웁니다. 이 기능은 손가락 또는 손 모양으로 스크롤 하 여 콘텐츠를 스크롤 하는 데 유용 합니다. 이동 제스처를 사용 하 여 개체를 회전 하거나, 3D 개체의 컬렉션을 순환 하거나, 2D UI를 스크롤할 수도 있습니다. <!--TMP You will also learn how to use the pan gesture to warp a texture, and how to move a collection of 3D objects.-->
+이 섹션에서는 이동 제스처를 사용 하는 방법을 배웁니다. 이 기능은 손가락 또는 손 모양으로 스크롤 하 여 콘텐츠를 스크롤 하는 데 유용 합니다. 이동 제스처를 사용 하 여 개체를 회전 하거나, 3D 개체의 컬렉션을 순환 하거나, 2D UI를 스크롤할 수도 있습니다.
 
 1. 쿼드를 만듭니다. BaseScene 계층 구조에서를 마우스 오른쪽 단추로 클릭 하 고 "3D 개체"를 선택한 다음 4를 선택 합니다.
 
@@ -128,10 +128,7 @@ ms.locfileid: "73926542"
 4. 프로젝트 패널에서 검색 상자에 "이동 콘텐츠"를 입력 합니다. 해당 자료를 장면에서 쿼드로 끌어 놓습니다.
 
     >[!NOTE]
-    >팬 콘텐츠 자료는 MRTK에 포함 되지 않지만이 모듈의 자산 패키지에는 이전 단원에서 가져온 자산입니다.
-
-    >[!NOTE]
-    >이동 콘텐츠를 추가하는 경우 늘어난 것처럼 보일 수 있습니다. 만족스러운 모양이 될 때까지 쿼드 크기의 x, y 및 z 값을 조정하여 이 문제를 해결할 수 있습니다.
+    >이 판 콘텐츠 자료는 MRTK의 일부가 아니지만 이전 단원에서 가져온 BaseModuleAssets 자산에 포함 되어 있습니다.
 
     이동 제스처를 사용하려면 개체에 충돌체(collider)가 필요합니다. 쿼드에 이미 메시 충돌체(collider)가 있는 것을 확인할 수 있습니다. 그러나 메시 충돌체(collider)는 너무 얇아서 선택하기 어려우므로 적합하지 않습니다. 메시 충돌체(collider)를 상자 충돌체(collider)와 바꾸는 것이 좋습니다.
 
@@ -157,26 +154,45 @@ ms.locfileid: "73926542"
 
     그리고이를 사용 하는 경우에는 팬 사용 쿼드를 사용 합니다.
 
-    여기에서 볼 수 있듯이 수동 상호 작용 팬 확대/축소 구성 요소에는 다양 한 설정이 포함 되어 있습니다 (선택 사항).
+    여기에서 볼 수 있듯이 수동 상호 작용 이동 확대/축소 스크립트 구성 요소에는 다양 한 설정이 포함 되어 있습니다 (선택 사항).
 
     ![mrlearning-base-ch5-2-step8b](images/mrlearning-base-ch5-2-step8b.png)
 
-<!--TMP
-   Next, we will learn how to pan 3D objects. 
+9. 다음으로, 3D 개체를 이동하는 방법을 알아보겠습니다.
 
-10. Right-click the quad object, select 3D object and click Cube. Scale the cube so that it’s roughly x = 0.1, y = 0.1 and z = 0.1. Copy that cube three times by right-clicking the cube and pressing duplicate, or by pressing control/command D. Space them out evenly. Your scene should look similar to the image below.
+    계층에서 4 개의 개체를 마우스 오른쪽 단추로 클릭 하 여 상황별 팝업 메뉴를 열고 **3D 개체** > **큐브** 를 선택 하 여 장면에 큐브를 추가 합니다.
 
-![Lesson5 Chapter2 Step10im](images/Lesson5_chapter2_step10im.PNG)
+    큐브의 **위치가** _0, 0, 0_ 으로 설정 되어 있는지 확인 합니다 .이는 쿼드에서 깔끔하게 배치 됩니다. 큐브를 _0.1, 0.1, 0.1_의 **배율로** 축소 합니다.
 
-11. Select the quad again and under the hand interaction pan script, set the pan actions to each of the cubes. Under Pan Event Receivers, we want to specify the number of objects receiving the event. Since there are four cubes, type “4” and press Enter. Four empty fields should appear.
+    ![mrlearning-base-ch5-2-step9](images/mrlearning-base-ch5-2-step9.png)
 
-![Lesson5 Chapter2 Step11im](images/Lesson5_chapter2_step11im.PNG)
+    큐브를 마우스 오른쪽 단추로 클릭 하 여 큐브를 세 번 복제 하 고, 상황별 팝업 메뉴를 열고, **복제**를 선택 합니다.
 
-12. Drag each of the cubes into each of the empty element slots.
-     ![Lesson5 Chapter2 Step12im](images/Lesson5_chapter2_step12im.PNG)
-    
-13. Add the Move with Pan script to all of the cubes by pressing and holding control/command and select each object. From the Inspector panel, click Add Component and search for “move with pan.” Click the script and it is added to each cube. Now the 3D objects will move with your pan gesture. If you remove the mesh render on your quad, you should now have an invisible quad where you can pan through a list of 3D objects.
--->
+    큐브를 균등 하 게 분할 합니다. 장면이 아래 이미지와 유사 하 게 표시 됩니다.
+
+10. CTRL 키를 누른 채 계층 패널에서 각 **큐브** 개체를 선택 하 여 모든 큐브에 MoveWithPan 스크립트를 추가 합니다. 검사기 패널에서 구성 요소 추가를 클릭 하 고, 이동 하 여 **이동** 스크립트를 검색 하 고 선택 하 여 모든 큐브에 추가 합니다.
+
+    ![mrlearning-base-ch5-2-step10a](images/mrlearning-base-ch5-2-step10a.png)
+
+    >[!NOTE]
+    >MoveWithPan 스크립트는 MRTK의 일부가 아니지만 이전 단원에서 가져온 BaseModuleAssets 자산에 포함 되어 있습니다.
+
+    큐브를 선택한 상태에서 계층 패널의 **네** 번째 개체를 이동 **하 여 이동** 스크립트 구성 요소의 이동 **입력 원본** 필드로 끕니다.
+
+    ![mrlearning-base-ch5-2-step10b](images/mrlearning-base-ch5-2-step10b.png)
+
+    이제 큐브는 이동 제스처로 이동 합니다.
+
+    >[!TIP]
+    >각 큐브의 MoveWithPan 인스턴스는 각 큐브의 이동 입력 원본 필드에 추가 되 고 해당 큐브 개체의 위치를 적절 하 게 업데이트 하는 쿼드 개체의 HandInteractionPanZoom 인스턴스에서 보낸가 중 업데이트 된 이벤트를 수신 합니다.
+
+    큐브를 선택한 상태에서 z 축을 따라 앞으로 이동 하면 **z** 값을 _0.7_로 변경 하 여 각 큐브의 메쉬가 **4** **상자 Collider** 안에 있습니다.
+
+    ![mrlearning-base-ch5-2-step10c](images/mrlearning-base-ch5-2-step10c.png)
+
+    이제 검사기 패널에서 검사를 취소 하 여 **쿼드**의 **메시 렌더러** 구성 요소를 사용 하지 않도록 설정 하면 3d 개체 목록을 통해 이동할 수 있는 보이지 않는 쿼드이 표시 됩니다.
+
+    ![mrlearning-base-ch5-2-step10d](images/mrlearning-base-ch5-2-step10d.png)
 
 ### <a name="eye-tracking"></a>시선 추적
 
@@ -197,13 +213,16 @@ ms.locfileid: "73926542"
 2. 대상 개체에 시선 추적 대상 구성 요소를 추가합니다. 개체가 눈동자 응시 이벤트에 응답할 수 있도록 하려면 눈에 EyeTrackingTarget 구성 요소를 사용 하 여 상호 작용 하려는 각 개체에 대 한 작업을 수행 해야 합니다. 그리드 컬렉션에 속하는 9개의 3D 개체 각각에 이 구성 요소를 추가합니다.
 
     >[!TIP]
-    >Shift 및/또는 ctrl 키를 사용 하 여 장면 계층에서 여러 항목을 선택한 다음 EyeTrackingTarget 구성 요소를 대량으로 추가할 수 있습니다.
+    >Shift 및/또는 CTRL 키를 사용 하 여 계층에서 여러 항목을 선택한 다음 EyeTrackingTarget 구성 요소를 대량 추가할 수 있습니다.
 
     ![Lesson5 Chapter3 2 단계](images/Lesson5Chapter3Step2.JPG)
 
-3. 다음에는 몇 가지 흥미로운 상호 작용을 위해 EyeTrackingTutorialDemo 스크립트를 추가 합니다. EyeTrackingTutorialDemo 스크립트는이 자습서 시리즈 리포지토리의 일부로 포함 됩니다. 혼합 현실 도구 키트에는 기본적으로 포함 되어 있지 않습니다. 그리드 컬렉션의 각 3D 개체에 대해 구성 요소 추가 메뉴에서 구성 요소를 검색 하 여 EyeTrackingTutorialDemo 스크립트를 추가 합니다.
+3. 다음에는 몇 가지 흥미로운 상호 작용을 위해 EyeTrackingTutorialDemo 스크립트를 추가 합니다. 그리드 컬렉션의 각 3D 개체에 대해 구성 요소 추가 메뉴에서 구성 요소를 검색 하 여 EyeTrackingTutorialDemo 스크립트를 추가 합니다.
 
-   ![Lesson5 Chapter3 3 단계](images/Lesson5Chapter3Step3.JPG)
+    ![Lesson5 Chapter3 3 단계](images/Lesson5Chapter3Step3.JPG)
+
+    >[!NOTE]
+    >EyeTrackingTutorialDemo 스크립트 자료는 MRTK의 일부가 아니지만 이전 단원에서 가져온 BaseModuleAssets 자산에 포함 되어 있습니다.
 
 4. 대상를 보고 있는 동안 개체가 회전합니다. 3D 개체를 확인 하는 동안 회전 하도록 구성 하려고 합니다. 이렇게 하려면 아래 이미지에 표시 된 것 처럼 EyeTrackingTarget 구성 요소의 Target ()을 찾는 중 () 섹션에 새 필드를 삽입 합니다.
 
