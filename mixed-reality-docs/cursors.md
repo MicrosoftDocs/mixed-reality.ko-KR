@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (첫 번째 gen), HoloLens 2, 혼합 현실, 커서, 대상 지정, 응시, 제스처
-ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435774"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105738"
 ---
 # <a name="cursors"></a>커서
+
+![커서](images/UX/UX_Hero_Cursor.jpg)
 
 현재 대상 벡터의 커서 또는 표시기는 헤드셋에서 현재 포커스가 있는 위치를 파악할 수 있도록 사용자에 게 지속적인 피드백을 제공 합니다. 사용자는 커서를 사용 하 여 현재 대상 지정 지점을 이해 하 고 사용자가 입력에 응답 하는 영역, 홀로그램 또는 점을 나타내는 피드백 역할을 할 수 있습니다. 장치에서 사용자의 주의가 인식 되는 위치를 디지털로 표현한 것입니다. 단,이는 의도에 대 한 모든 사항을 결정 하는 것과 다를 수 있습니다.
 
@@ -154,6 +156,15 @@ ms.locfileid: "73435774"
 
 ---
 
+## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 커서
+기본적으로 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 는 셸 시스템 커서와 동일한 시각적 상태를 가진 커서 Prefab ([defaultcursor. prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors))를 제공 합니다. 이는 MRTK의 입력 프로필에 있는 포인터 아래에 할당 됩니다. 사용자 환경에 맞게이 커서를 바꾸거나 사용자 지정할 수 있습니다. 아이 추적 입력 환경에서 MRTK는 혼란을 최소화 하기 위해 미묘한 시각적 개체를 포함 하는 EyeGazeCursor 제공 합니다.
+
+* [MRTK-포인터 프로필](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK-입력 시스템](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK-포인터](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
+---
 
 ## <a name="see-also"></a>참고 항목
 * [제스처](gaze-and-commit.md#composite-gestures)

@@ -6,16 +6,16 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: 손, 메뉴, 단추, 빠른 액세스, 레이아웃
-ms.openlocfilehash: ee958806ac462535b33164bb4faa4bf1aa29e709
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b4ea7411be22633e82a88d1c91b6b2b1edbea735
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439254"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105636"
 ---
 # <a name="hand-menu"></a>손 모양 메뉴
 
-![Ulnar 사이드 위치](images/MRTK_UX_HandMenu.png)
+![Ulnar 사이드 위치](images/UX/UX_Hero_HandMenu.jpg)
 
 사용자는 직접 메뉴를 사용 하 여 자주 사용 하는 함수에 대 한 직접 연결 된 UI를 빠르게 가져올 수 있습니다. 
 
@@ -127,9 +127,33 @@ ms.locfileid: "73439254"
 
 ---
 
+## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 손 모양 메뉴
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 는 손 메뉴에 대 한 스크립트와 예제 장면을 제공 합니다. HandConstraintPalmUp 해 찾기 스크립트를 사용 하면 다양 한 구성 가능한 옵션을 사용 하 여 개체를 쉽게 연결할 수 있습니다.
+
+* [MRTK-수동 제약 조건 및 HandConstraintPalmUp를 사용 하는 메뉴](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
+
+
+<br>
+
+---
+
 
 ## <a name="see-also"></a>참고 항목
 
+* [커서](cursors.md)
+* [손 모양](point-and-commit.md)
+* [Button](button.md)
 * [상호 작용 가능한 개체](interactable-object.md)
-* [수동으로 직접 조작](direct-manipulation.md)
-* [실습 및 모션 컨트롤러](hands-and-tools.md)
+* [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
+* [조작은](direct-manipulation.md)
+* [손 메뉴](hand-menu.md)
+* [메뉴 근처](near-menu.md)
+* [개체 컬렉션](object-collection.md)
+* [음성 명령](voice-input.md)
+* [키보드](keyboard.md)
+* [놓으면](tooltip.md)
+* [찬](slate.md)
+* [슬라이더](slider.md)
+* [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
+* [진행률 표시](progress.md)
+* [표면 자기](surface-magnetism.md)

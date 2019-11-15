@@ -6,16 +6,16 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: 36ca1feeba0e3bf028c64fe7b559d263a8088b96
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5305af97e9811134212fc6c730727962bb9e8353
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438678"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105807"
 ---
 # <a name="interactable-object"></a>Interactable 개체
 
-![Interactible 개체](images/InteractableExamples.png)
+![Interactible 개체](images/UX/UX_Hero_Interactable.jpg)
 
 단추는 긴 2D 추상 세계에서 이벤트를 트리거하는 데 사용 되는 비유입니다. 3 차원 혼합 현실 세계에서는 이러한 추상화의 목표로 더 이상 국한 되지 않습니다. 모든 항목은 이벤트를 트리거하는 **interactable 개체** 일 수 있습니다. Interactable 개체는 테이블의 커피에서 공기의 풍선 부동으로 표시할 수 있습니다. 대화 상자 UI에서와 같은 특정 상황에서는 여전히 기존 단추를 사용 합니다. 단추의 시각적 표시는 컨텍스트에 따라 달라 집니다.
 
@@ -261,9 +261,9 @@ HoloLens 2는 개체와 상호 작용할 수 있도록 하는 트레일러 추�
 ---
 
 
-## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>혼합 현실 도구 키트를 사용 하 여 interactable 개체 만들기 (MRTK)
+## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>단위에 대 한 MRTK (Mixed Reality Toolkit)의 Interactable 개체
 
-**[혼합 현실 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 에서 interactable 개체를 만드는 데 도움이 되는 일련의 Unity 스크립트 및 prefabs를 찾을 수 있습니다. 이러한 개체를 사용 하 여 다양 한 유형의 입력 상호 작용 상태에 대해 개체에 응답할 수 있습니다.
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 에서는 [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 스크립트를 사용 하 여 개체를 다양 한 유형의 입력 상호 작용 상태에 응답할 수 있습니다. 색, 크기, 재질, 셰이더 등의 개체 속성을 제어 하 여 시각적 상태를 정의할 수 있도록 하는 다양 한 형식의 테마를 지원 합니다.
 
 * [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
@@ -277,9 +277,23 @@ MixedRealityToolkit의 표준 셰이더는 시각적 및 오디오 큐를 만드
 
 ---
 
+
 ## <a name="see-also"></a>참고 항목
 
-* [경계 상자](app-bar-and-bounding-box.md)
+* [커서](cursors.md)
+* [손 모양](point-and-commit.md)
+* [Button](button.md)
+* [상호 작용 가능한 개체](interactable-object.md)
+* [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
+* [조작은](direct-manipulation.md)
+* [손 메뉴](hand-menu.md)
+* [메뉴 근처](near-menu.md)
 * [개체 컬렉션](object-collection.md)
+* [음성 명령](voice-input.md)
+* [키보드](keyboard.md)
+* [놓으면](tooltip.md)
+* [찬](slate.md)
+* [슬라이더](slider.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
-* [음성 입력 ](voice-input.md)
+* [진행률 표시](progress.md)
+* [표면 자기](surface-magnetism.md)

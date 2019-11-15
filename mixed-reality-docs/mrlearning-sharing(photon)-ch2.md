@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 91935cb5b465e51d3948f68b818f93ba52b215f1
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 750161ff4c52a7ab71869b3cb0f97197d4ad09f2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914414"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106057"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. Unity를 개발할 준비 하는 중 
 
@@ -52,7 +52,7 @@ ms.locfileid: "73914414"
 
 6. 완료 되 면 프로필을 사용자 지정할 수 있는 새 구성 파일이 표시 됩니다. 
 
-![Module2Chapter1step4im](images/Module2Chapter1step4im.PNG)
+![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
 
 7. 계층에서 혼합-현실 도구 키트 (MRTK)를 선택 합니다. 검사기 패널에서 Mixed Reality Toolkit 스크립트를 찾아 아래 그림에 표시 된 것 처럼 "& 사용자 지정 복사" 단추를 누릅니다.  이 작업 뒤에 pop가 나타나고 팝업 메뉴에서 복제 옵션을 선택 합니다.
 
@@ -76,7 +76,14 @@ ms.locfileid: "73914414"
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. 여기에서 다운로드할 수 있는 SharingAssetCollection 이라는 사용자 지정 패키지를 가져옵니다 [.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. 표시 된 사용자 지정 패키지를 가져옵니다.
+
+    a. [HoloLens2을 시작 했습니다. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    b. [HoloLens2.2.1.0.0. unitypackage (영문)](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.0/Unity.HoloLens2.MultiUserCapabilities.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    >[!TIP]
+    >[시작 자습서](mrlearning-base-ch1.md)를 완료 한 경우에도 HoloLens2 이라는 unity 패키지를 컴퓨터에 저장 했을 수 있습니다. _2.1.0.0. unitypackage_ 는 컴퓨터에 저장 되어 있습니다. 그렇다면 위의 단계에 나열 된 자산 다운로드를 건너뛸 수 있습니다.
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 

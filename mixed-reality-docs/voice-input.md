@@ -6,16 +6,18 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
-ms.openlocfilehash: 1b0a57ad680b7f779201e99dea24bfe746820c44
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437157"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105776"
 ---
 # <a name="voice-input"></a>음성 입력
 
-음성은 HoloLens에서 입력의 핵심 형태 중 하나입니다. 직접 [제스처](gaze-and-commit.md#composite-gestures)를 사용 하지 않고도 홀로그램을 직접 명령을 수행할 수 있습니다. 음성 입력은 의도를 전달 하는 자연 스러운 방법이 될 수 있습니다. 음성은 복잡 한 인터페이스를 트래버스하는 데 특히 유용 합니다 .이를 통해 사용자는 단일 명령을 사용 하 여 중첩 된 메뉴를 잘라낼 수 있습니다.
+![음성 입력](images/UX/UX_Hero_VoiceCommand.jpg)
+
+음성은 HoloLens의 주요 입력 형태 중 하나입니다. 직접 [제스처](gaze-and-commit.md#composite-gestures)를 사용 하지 않고도 홀로그램을 직접 명령을 수행할 수 있습니다. 음성 입력은 의도를 전달하는 자연스러운 방법일 수 있습니다. 음성은 복잡 한 인터페이스를 트래버스하는 데 특히 유용 합니다 .이를 통해 사용자는 단일 명령을 사용 하 여 중첩 된 메뉴를 잘라낼 수 있습니다.
 
 음성 입력은 다른 모든 _유니버설 Windows 앱_의 음성을 지 원하는 [동일한 엔진](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) 에 의해 구동 됩니다. HoloLens에서 음성 인식은 항상 설정에 구성 된 Windows 표시 언어로 작동 합니다. 
 
@@ -289,6 +291,18 @@ HoloLens 2는 추가 언어도 지원 합니다. 음성 명령은 여러 키보�
 "Select" 및 "안녕하세요 Cortana"를 사용 하는 데 문제가 있는 경우 더 조용한 공간으로 이동 하거나, 소음의 원본에서 떨어진 곳으로 이동 하거나, 더 크게 말해 보세요. 지금은 HoloLens의 모든 음성 인식이 특별히 미국 영어의 기본 스피커로 조정 되 고 최적화 됩니다.
 
 Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연결 후 PC 데스크톱에 로그 아웃 했다가 다시 로그인 한 후 오디오 끝점 관리 논리가 정상적으로 작동 합니다 (계속). WMR OOBE를 통과 한 후 첫 번째 로그 아웃 이벤트 이전에는 사용자가 HMD를 처음으로 연결 하기 전에 설정 된 방법에 따라 오디오 없음에서 오디오 전환 없이 다양 한 오디오 기능 문제가 발생할 수 있습니다.
+
+<br>
+
+---
+
+## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 음성 입력
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 를 사용 하면 개체에 음성 명령을 쉽게 할당할 수 있습니다. MRTK의 **음성 입력 프로필** 을 사용 하 여 키워드를 정의 합니다. **SpeechInputHandler** 스크립트를 할당 하 여 음성 입력 프로필에 정의 된 키워드에 대 한 모든 개체 응답을 만들 수 있습니다. 또한 SpeechInputHandler는 사용자의 신뢰도를 높이기 위해 음성 확인 레이블을 제공 합니다.
+
+* [MRTK-음성 명령](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+
+
+---
 
 ## <a name="see-also"></a>참고 항목
 * [응시 및 커밋](gaze-and-commit.md)

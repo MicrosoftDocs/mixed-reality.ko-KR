@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: da485f167ef3902dd75adf8da8181504fbc6c6df
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: cf51505cab2db765325c2e7b78a52e4b790845c9
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913159"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105948"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Speech SDK 학습 모듈-음성 명령을 사용 하 여 로켓 시작 관리자 제어
 
@@ -24,7 +24,7 @@ ms.locfileid: "73913159"
 
 ## <a name="instructions"></a>지침
 
-1. 이 자습서에서는 "BaseModule" 자산을 사용 하 여 로켓 시작 관리자를 음성 명령과 통합 합니다. 이를 위해 프로젝트에 자산을 가져와야 합니다. 이 [링크](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage)를 사용 하 여 "로켓 시작 관리자" 자산을 다운로드할 수 있습니다.
+1. 이 자습서에서는 "BaseModule" 자산을 사용 하 여 로켓 시작 관리자를 음성 명령과 통합 합니다. 이를 위해 프로젝트에 자산을 가져와야 합니다. 이 [링크](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)를 사용 하 여 "로켓 시작 관리자" 자산을 다운로드할 수 있습니다.
 
 2. 자산을 가져오려면 자산-> 가져오기 패키지-> 사용자 지정 패키지-> 다운로드 한 파일로 이동 하 여 가져오기를 클릭 합니다.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 07bcce2ab9ab3bda035f7f2b39a90753cf45358d
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913775"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105976"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5.3D 개체와 상호 작용
 
@@ -38,7 +38,7 @@ ms.locfileid: "73913775"
 
     ![mrlearning-base-ch4-1-step1](images/mrlearning-base-ch4-1-step1.png)
 
-2. Unity [패키지를 다운로드 하 고](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage) , 동일한 지침을 사용 하 여 [1 단원](mrlearning-base-ch1.md)에 설명 된 사용자 지정 패키지를 가져옵니다. 이 패키지는이 자습서 전체에서 사용 되는 3D 모델 및 기타 유용한 자산을 포함 합니다.
+2. Unity 패키지 [HoloLens2](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) 를 다운로드 하 고 동일한 지침을 사용 하 여 [1 단원](mrlearning-base-ch1.md)에 설명 된 사용자 지정 패키지를 가져옵니다. 이 패키지는이 자습서 전체에서 사용 되는 3D 모델 및 기타 유용한 자산을 포함 합니다.
 
 3. 프로젝트 패널에서 asset > BasemodulPrefabs Sets > 기본 모듈 Prefabs로 이동 하 고 "불완전"을 검색 하 여 이러한 중 일부를 사용 합니다.
 

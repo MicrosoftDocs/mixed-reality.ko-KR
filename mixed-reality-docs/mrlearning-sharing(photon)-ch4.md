@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 34b8165888c13b0c94be8951d5a4fdc07fab5308
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438370"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106008"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 개체 이동 공유
 
@@ -62,11 +62,13 @@ ms.locfileid: "73438370"
 >참고: 기본 카메라와 SharedPlayground 위치가 모두 0, 0, 0으로 설정 되어 있는지 확인 합니다.
 >
 
-9. 새 개체를 만들기 위해 SharedPlayground 부모 개체에 대 한 자식 개체로 설정 된 새 게임 개체를 만듭니다. 부모 개체를 마우스 오른쪽 단추로 클릭 하 고 빈 만들기를 선택 합니다. 
+9. "SharedPlayground" 개체를 선택 하 고 마우스 오른쪽 단추를 클릭 하 여 "빈 게임 개체를" SharedPlayground "게임 개체의 자식으로 만듭니다.
+
+   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
 10. 계층에서 새 개체를 선택한 상태에서 개체의 이름을 Inspector 패널의 TableAnchor로 변경 합니다. 또한 구성 요소 추가를 클릭 하 고 TableAnchor 구성 요소를 검색 합니다. 이를 선택 하 고 개체에 추가 합니다. 
 
-![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
+![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
 11. Prefabs 폴더의 프로젝트 패널에서 prefab 테이블을 방금 만든 "TableAnchor" 자식 개체로 끌어 옵니다.
 
@@ -79,9 +81,9 @@ ms.locfileid: "73438370"
 ## <a name="congratulations"></a>축하합니다.
 
 
-이 작업이 완료 되 면 Unity 프로젝트에 참여 하는 모든 사용자가 음력 시작 관리자를 이동할 수 있습니다. 각 사용자가 다른 사람의 상호 작용을 볼 수 있도록 모든 이동이 동기화 됩니다. 이러한 개념은 모든 기능을 갖춘 공유 공동 작업 환경을 위한 기본 구성 요소로 제공 됩니다. 
+이 작업이 완료 되 면 주위의 방법으로 음력 모듈을 찾습니다. 그러면 Unity 프로젝트에 참여 하는 모든 사용자가 음력 시작 관리자를 이동할 수 있습니다.  각 사용자가 다른 사람의 상호 작용을 볼 수 있도록 모든 이동이 동기화 됩니다. 이러한 개념은 모든 기능을 갖춘 공유 공동 작업 환경을 위한 기본 구성 요소로 제공 됩니다. 
 
-모든 사용자가 공유 환경의 일부로 연결 되어 있고 개체의 상대 움직임을 볼 수 있지만, 로컬 사용자가 물리적 위치에서 같은 위치에 있는 개체와 개체를 볼 수 있도록 응용 프로그램은 아바타 및 개체를 정확 하 게 맞출 수 없습니다. world. 로컬 공유 환경을 고정 하기 위해 모든 장치에는 물리적 환경을 일반적으로 이해 해야 합니다. 이 모듈에서는 다음 단원에서 구현 될 [Azure 공간 앵커](<https://azure.microsoft.com//services/spatial-anchors/>) (global.asa)를 사용 하 여이를 달성할 수 있습니다.
+모든 사용자가 공유 환경의 일부로 연결 되어 있고 개체의 상대 움직임을 볼 수 있지만, 응용 프로그램은 로컬 사용자가 아바타 및 개체를 정확 하 게 맞출 수 없게 됩니다. 실제 세계. 로컬 공유 환경을 고정 하기 위해 모든 장치에는 물리적 환경을 일반적으로 이해 해야 합니다. 이 모듈에서는 다음 단원에서 구현 될 [Azure 공간 앵커](<https://azure.microsoft.com//services/spatial-anchors/>) (global.asa)를 사용 하 여이를 달성할 수 있습니다.
 
 다음 단원을 진행 하기 전에이를 공유 환경에 통합 하기 전에 필요한 다른 기본 빌딩 블록 뿐만 아니라, Azure 계정 및 리소스 만들기의 기본 사항에 대해 설명 하는 GLOBAL.ASA 학습 모듈을 완료 해야 합니다.
 

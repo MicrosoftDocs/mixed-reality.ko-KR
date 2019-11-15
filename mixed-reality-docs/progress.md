@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, ui, ux
-ms.openlocfilehash: 43b4802e7c821c98c847509ace950f381da12f95
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: aafcd8eebbabfc5b53d09348d513f62def909da6
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437534"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105985"
 ---
-# <a name="displaying-progress"></a>진행률 표시
+# <a name="progress-indicator"></a>진행률 표시기
 
 <br>
 
-<img src="images/HoloLens2_Loader.gif" alt="Progress ring example in HoloLens" width="940px">
+<img src="images/UX/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
@@ -88,9 +88,32 @@ ms.locfileid: "73437534"
 
 ---
 
+## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 진행률 표시기
+
+* [MRTK-진행률 표시기 prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
+* [MRTK-장면 전환 서비스](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
+
+
+<br>
+
+---
+
 ## <a name="see-also"></a>참고 항목
-* [Mixed Reality Toolkit의 Progress scripts and prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [경계 상자](app-bar-and-bounding-box.md)
+
+* [커서](cursors.md)
+* [손 모양](point-and-commit.md)
+* [Button](button.md)
 * [상호 작용 가능한 개체](interactable-object.md)
+* [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
+* [조작은](direct-manipulation.md)
+* [손 메뉴](hand-menu.md)
+* [메뉴 근처](near-menu.md)
 * [개체 컬렉션](object-collection.md)
+* [음성 명령](voice-input.md)
+* [키보드](keyboard.md)
+* [놓으면](tooltip.md)
+* [찬](slate.md)
+* [슬라이더](slider.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
+* [진행률 표시](progress.md)
+* [표면 자기](surface-magnetism.md)
