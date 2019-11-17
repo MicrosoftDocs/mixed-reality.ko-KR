@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: 91046dd5bbf7bdc692e4ff26c19bda59af31876e
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106192"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143224"
 ---
 # <a name="slider"></a>슬라이더
 
@@ -34,19 +34,20 @@ ms.locfileid: "74106192"
 ## <a name="see-also"></a>참고 항목
 
 * [커서](cursors.md)
-* [손 모양](point-and-commit.md)
+* [손 광선](point-and-commit.md)
 * [Button](button.md)
 * [상호 작용 가능한 개체](interactable-object.md)
 * [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
-* [조작은](direct-manipulation.md)
+* [조작](direct-manipulation.md)
 * [손 메뉴](hand-menu.md)
-* [메뉴 근처](near-menu.md)
+* [Near 메뉴](near-menu.md)
 * [개체 컬렉션](object-collection.md)
 * [음성 명령](voice-input.md)
 * [키보드](keyboard.md)
-* [놓으면](tooltip.md)
-* [찬](slate.md)
+* [Tooltip](tooltip.md)
+* [슬레이트](slate.md)
 * [슬라이더](slider.md)
+* [셰이더가](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
-* [표면 자기](surface-magnetism.md)
+* [표면 자성](surface-magnetism.md)

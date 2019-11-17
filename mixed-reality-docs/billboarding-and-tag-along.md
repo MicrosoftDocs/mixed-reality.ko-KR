@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, billboarding, 태그 동반
-ms.openlocfilehash: 06cd1c6f67f8aa2dd94173d4089adbdbd0765211
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: ff2b1ce20174b1b9aecbb90b1d1dc3e8896b3761
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105719"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143134"
 ---
 # <a name="billboarding-and-tag-along"></a>Billboarding 및 태그 동반
 
@@ -60,19 +60,20 @@ HoloLens 핀 패널 ![태그 동반 동작의 좋은 예](images/tagalong-1000px
 ## <a name="see-also"></a>참고 항목
 
 * [커서](cursors.md)
-* [손 모양](point-and-commit.md)
+* [손 광선](point-and-commit.md)
 * [Button](button.md)
 * [상호 작용 가능한 개체](interactable-object.md)
 * [경계 상자 및 앱 바](app-bar-and-bounding-box.md)
-* [조작은](direct-manipulation.md)
+* [조작](direct-manipulation.md)
 * [손 메뉴](hand-menu.md)
-* [메뉴 근처](near-menu.md)
+* [Near 메뉴](near-menu.md)
 * [개체 컬렉션](object-collection.md)
 * [음성 명령](voice-input.md)
 * [키보드](keyboard.md)
-* [놓으면](tooltip.md)
-* [찬](slate.md)
+* [Tooltip](tooltip.md)
+* [슬레이트](slate.md)
 * [슬라이더](slider.md)
+* [셰이더가](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
-* [표면 자기](surface-magnetism.md)
+* [표면 자성](surface-magnetism.md)
