@@ -84,6 +84,7 @@
 #### [Tooltip](tooltip.md)
 #### [슬레이트](slate.md)
 #### [슬라이더](slider.md)
+#### [셰이더](shader.md)
 #### [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 #### [진행률 표시](progress.md)
 #### [표면 자성](surface-magnetism.md)
