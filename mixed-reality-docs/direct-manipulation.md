@@ -7,14 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: ed3b25fe9a7dd404d07073b578b8da13e1984cab
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435984"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105946"
 ---
 # <a name="direct-manipulation-with-hands"></a>수동으로 직접 조작
+
+![Button](images/UX/UX_Hero_Manipulation.jpg)
+
 직접 조작은 홀로그램을 손으로 직접 터치하게 되는 입력 모델입니다. 이 개념의 기본 아이디어는 개체가 실제 세계에서처럼 작동하는 것입니다. 단추는 간단히 눌러서 활성화하고, 개체는 잡아서 선택할 수 있으며, 2D 콘텐츠는 가상의 터치 스크린처럼 동작합니다. 이렇게 하면 사용자가 직접 조작하면서 쉽고 재미있게 학습할 수 있습니다. 팔을 뻗어 닿을 수 있는 콘텐츠와 상호 작용하는 데 가장 적합하다는 점에서 “근거리” 입력 모델로 간주됩니다.
 
 직접 조작은 어포던스를 기준으로 합니다. 즉, 사용자 친화적입니다. 사용자를 교육하기 위한 기호화된 제스처는 없습니다. 모든 상호 작용은 사용자가 터치하거나 잡을 수 있는 시각적 요소를 중심으로 구축됩니다.
@@ -296,12 +299,6 @@ HoloLens(1세대)에서는 미리 정의된 몇 가지 제스처(예: 블룸 및
 
 AR의 손과 VR의 모션 컨트롤러 간에는 상호 작용 평행 이론이 작용한다는 것을 알 수 있습니다. 두 입력은 모두 해당 환경에서 직접 조작을 트리거하는 데 사용할 수 있습니다. HoloLens 2의 근거리에서 손으로 잡아 끄는 동작은 WMR 모션 컨트롤러에 있는 잡기 단추로 작동하는 것과 같습니다. 따라서 사용자는 두 플랫폼에서 유사하게 조작할 수 있기 때문에, 애플리케이션을 한 플랫폼에서 다른 플랫폼으로 이식하는 경우 유용할 수 있습니다.
 
-
-<br>
-
----
-
-
 <br>
 
 ---
@@ -324,6 +321,18 @@ AR의 손과 VR의 모션 컨트롤러 간에는 상호 작용 평행 이론이 
 * **대상 위치**: 빨리 던지기 제스처에서 사용자가 바라보는 대상에 대한 정보를 사용합니다. 홀로그램을 잡은 후 의도한 대상 쪽으로 대충 던집니다.  
 
     이러한 조작은 일반적으로 잘 작동하지만, 손 제스처를 빠르게 수행할 경우 대상이 부정확할 수 있습니다. 하지만 시선 추적은 제스처의 정확도를 향상시킬 수 있습니다.
+
+<br>
+
+---
+
+## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity용 MRTK(Mixed Reality Toolkit)의 조작
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 를 사용하면 **ManipulationHandler** 스크립트를 사용하여 일반적인 조작 동작을 쉽게 수행할 수 있습니다. ManipulationHandler를 사용하면 직접 손이나 손 광선으로 직접 개체를 잡아 이동할 수 있습니다. 또한 개체의 크기 조정 및 회전을 위해 양손 조작도 지원합니다.
+
+* [MRTK - 조작](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+
+
+---
 
 ## <a name="see-also"></a>참고 항목
 
