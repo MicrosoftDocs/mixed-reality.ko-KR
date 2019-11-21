@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: 손, 모션 컨트롤러, directx, 입력, holograms
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435201"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203337"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>DirectX의 손 및 동작 컨트롤러
 
@@ -99,7 +99,7 @@ GetDetectedSourcesAtTimestamp에 timestamp 매개 변수가 있습니다. 이를
 ## <a name="cross-device-input-properties"></a>장치 간 입력 속성
 SpatialInteractionSource API는 다양 한 기능을 갖춘 컨트롤러 및 핸드 추적 시스템을 지원 합니다. 이러한 기능 중 몇 가지는 장치 유형 간에 공통적으로 제공 됩니다. 예를 들어 직접 추적 및 동작 컨트롤러는 모두 ' select ' 작업과 3D 위치를 제공 합니다. 가능 하면 API는 이러한 일반적인 기능을 SpatialInteractionSource의 동일한 속성에 매핑합니다.  이를 통해 응용 프로그램은 다양 한 입력 형식을 보다 쉽게 지원할 수 있습니다. 다음 표에서는 지원 되는 속성과 이러한 속성이 입력 형식에서 비교 되는 방식을 설명 합니다.
 
-| 속성 | 설명 | HoloLens 제스처 | 동작 컨트롤러 | 트레일러 식|
+| 속성 | 설명 | HoloLens (첫 번째 gen) 제스처 | 동작 컨트롤러 | 트레일러 식|
 |--- |--- |--- |--- |--- |
 | [SpatialInteractionSource::**손**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | 오른쪽 또는 왼쪽/컨트롤러입니다. | 지원되지 않음 | 지원함 | 지원함 |
 | [SpatialInteractionSourceState::**Isselectpressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | 기본 단추의 현재 상태입니다. | 공기 탭 | 트리거 | 완화 공기 탭 (수직으로) |
