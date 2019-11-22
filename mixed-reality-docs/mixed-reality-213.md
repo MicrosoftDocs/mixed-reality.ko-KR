@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 동작 컨트롤러, 아카데미, 자습서
-ms.openlocfilehash: e2199c3afed21f9396ed84f71093a8b2fb3bb23b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 273d1bf384d588ab24bfe29e30f299b7a41fe541
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438551"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926813"
 ---
 >[!NOTE]
 >혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
@@ -277,7 +277,7 @@ private void AttachElementToController(MotionControllerInfo newController)
 }
 ```
 
-**AttachToController** 스크립트를 사용 하는 가장 간단한 방법은 **Color kerwheel** 의 경우와 마찬가지로이 스크립트에서 상속 하는 것입니다. **OnAttachToController** 및 **OnDetatchFromController** 함수를 재정의 하 여 컨트롤러를 검색/연결 해제 하는 경우 설정/분석을 수행 합니다.
+**AttachToController** 스크립트를 사용 하는 가장 간단한 방법은 **Color kerwheel** 의 경우와 마찬가지로이 스크립트에서 상속 하는 것입니다. **OnAttachToController** 및 **OnDetachFromController** 함수를 재정의 하 여 컨트롤러를 검색/연결 해제 하는 경우 설정/분석을 수행 합니다.
 
 **지침**
 
@@ -294,7 +294,7 @@ private void AttachElementToController(MotionControllerInfo newController)
 
 ![Color Kerwheel 스크립트](images/mr213-attachtocontroller-300px.jpg)
 
-**Colorpickerwheel** 은 **OnAttachToController** 및 **OnDetatchFromController** 를 재정의 하 여 입력 이벤트를 구독 합니다 .이 이벤트는 다음 챕터에서 터치 패드 입력을 사용 하 여 색을 선택 하는 데 사용 됩니다.
+**Colorpickerwheel** 은 **OnAttachToController** 및 **OnDetachFromController** 를 재정의 하 여 입력 이벤트를 구독 합니다 .이 이벤트는 다음 챕터에서 터치 패드 입력을 사용 하 여 색을 선택 하는 데 사용 됩니다.
 
 ```cs
 public class ColorPickerWheel : AttachToController, IPointerTarget
@@ -346,7 +346,7 @@ private IEnumerator Start() {
 ### <a name="instructions"></a>지침
 
 * **계층** 패널에서 **Colorpickerwheel** 을 클릭 합니다.
-* **검사기** 패널의 **Animatior**아래에서 **ColorPickerWheelController** 을 두 번 클릭 합니다.
+* **검사기** 패널의 **애니메이터**아래에서 **ColorPickerWheelController** 를 두 번 클릭 합니다.
 * **애니메이터** 탭이 열려 있는 것을 볼 수 있습니다.
 
 **Unity 애니메이션 컨트롤러를 사용 하 여 UI 표시/숨기기**
@@ -624,7 +624,7 @@ private void SpawnObject()
 {
     // Instantiate the spawned object
     GameObject newObject = Instantiate(displayObject.gameObject, spawnParent);
-    // Detatch the newly spawned object
+    // Detach the newly spawned object
     newObject.transform.parent = null;
     // Reset the scale transform to 1
     scaleParent.localScale = Vector3.one;
@@ -801,7 +801,7 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 
 ## <a name="advanced-design---teleportation-and-locomotion"></a>고급 디자인-Teleportation 및 locomotion
 
-사용자가 엄지 스틱을 사용 하 여 teleportation를 사용 하 여 장면 주위로 이동할 수 있도록 하려면 **MixedRealityCamera**대신 **MixedRealityCameraParent** 를 사용 합니다. **Inputmanager** 및 **DefaultCusor**도 추가 해야 합니다. **MixedRealityCameraParent** 에는 이미 **Motioncontrollers** 와 **경계가** 자식 구성 요소로 포함 되어 있으므로 기존 **motioncontrollers** 및 **Environment** prefab을 제거 해야 합니다.
+사용자가 엄지 스틱을 사용 하 여 teleportation를 사용 하 여 장면 주위로 이동할 수 있도록 하려면 **MixedRealityCamera**대신 **MixedRealityCameraParent** 를 사용 합니다. **Inputmanager** 및 **defaultcursor**도 추가 해야 합니다. **MixedRealityCameraParent** 에는 이미 **Motioncontrollers** 와 **경계가** 자식 구성 요소로 포함 되어 있으므로 기존 **motioncontrollers** 및 **Environment** prefab을 제거 해야 합니다.
 
 ### <a name="instructions"></a>지침
 
@@ -834,7 +834,7 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 ## <a name="completed-scenes"></a>완료 된 장면
 
 * Unity의 **프로젝트** 패널에서 **장면** 폴더를 클릭 합니다.
-* 두 Unity sceens **MixedReality213** 및 **MixedReality213Advanced**를 찾을 수 있습니다.
+* **MixedReality213** 및 **MixedReality213Advanced**의 두 Unity 장면을 찾을 수 있습니다.
     * **MixedReality213**: 단일 브러시를 사용 하 여 완료 된 장면
     * **MixedReality213Advanced**: 선택 단추의 보도 금액 예제를 사용 하는 여러 브러시가 있는 완료 된 장면
 
