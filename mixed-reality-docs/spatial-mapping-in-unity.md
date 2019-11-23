@@ -33,7 +33,7 @@ Unity에는 다음과 같은 방법으로 개발자에 게 노출 되는 공간 
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
+        <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -352,7 +352,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 ### <a name="object-placement-solver"></a>개체 배치 해 찾기
 
-개체 배치 해결 기를 사용 하 여 개체를 배치할 실제 방에 있는 이상적인 위치를 식별할 수 있습니다. 개체 규칙과 제약 조건이 지정 된 경우 가장 적합 한 위치를 찾을 수 있습니다. 또한 개체 쿼리는 "Solver_RemoveObject" 또는 "Solver_RemoveAllObjects" 호출을 사용 하 여 개체가 제거 될 때까지 지속 되어 제한 된 다중 개체 배치를 허용 합니다. 개체 배치 쿼리는 매개 변수가 있는 배치 유형, 규칙 목록 및 제약 조건 목록의 세 부분으로 구성 됩니다. 쿼리를 실행 하려면 다음 API를 사용 합니다.
+개체 배치 해결 기를 사용 하 여 개체를 배치할 실제 방에 있는 이상적인 위치를 식별할 수 있습니다. 개체 규칙과 제약 조건이 지정 된 경우 가장 적합 한 위치를 찾을 수 있습니다. 또한 개체 쿼리는 "Solver_RemoveObject" 또는 "Solver_RemoveAllObjects" 호출을 통해 개체가 제거 될 때까지 지속 되어 제한 된 다중 개체 배치를 허용 합니다. 개체 배치 쿼리는 매개 변수가 있는 배치 유형, 규칙 목록 및 제약 조건 목록의 세 부분으로 구성 됩니다. 쿼리를 실행 하려면 다음 API를 사용 합니다.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -382,7 +382,7 @@ public enum PlacementType
             };
 ```
 
-각 배치 형식에는 해당 형식에 고유한 매개 변수 집합이 있습니다. "ObjectPlacementDefinition" 구조체에는 이러한 정의를 만들기 위한 정적 도우미 함수 집합이 포함 되어 있습니다. 예를 들어 바닥에서 개체를 배치할 위치를 찾으려면 다음 함수를 사용할 수 있습니다. 공용 정적 ObjectCreate_OnFloor (Vector3 halfDims) 배치 유형 외에도 규칙 및 제약 조건 집합을 제공할 수 있습니다. 규칙을 위반할 수 없습니다. 그러면 형식 및 규칙을 충족 하는 가능한 배치 위치가 최적의 배치 위치를 선택 하기 위해 제약 조건 집합에 대해 최적화 됩니다. 제공 된 정적 생성 함수를 통해 각 규칙 및 제약 조건을 만들 수 있습니다. 아래에는 규칙 및 제약 조건 생성 함수 예제가 나와 있습니다.
+각 배치 형식에는 해당 형식에 고유한 매개 변수 집합이 있습니다. "ObjectPlacementDefinition" 구조체에는 이러한 정의를 만들기 위한 정적 도우미 함수 집합이 포함 되어 있습니다. 예를 들어 바닥에서 개체를 배치할 위치를 찾으려면 다음 함수를 사용할 수 있습니다. 공용 정적 ObjectPlacementDefinition Create_OnFloor (Vector3 halfDims) 배치 유형 외에도 규칙 및 제약 조건 집합을 제공할 수 있습니다. 규칙을 위반할 수 없습니다. 그러면 형식 및 규칙을 충족 하는 가능한 배치 위치가 최적의 배치 위치를 선택 하기 위해 제약 조건 집합에 대해 최적화 됩니다. 제공 된 정적 생성 함수를 통해 각 규칙 및 제약 조건을 만들 수 있습니다. 아래에는 규칙 및 제약 조건 생성 함수 예제가 나와 있습니다.
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(

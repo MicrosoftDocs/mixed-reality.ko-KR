@@ -27,7 +27,7 @@ ms.locfileid: "73439904"
 
 <table>
 <tr>
-<th style="width: 400px; text-align:left;">콘텐츠</th><th style="width: 125px; text-align:left;">전송</th><th style="width: 125px; text-align:left;">지금 라이브!</th>
+<th style="width: 400px; text-align:left;">콘텐츠</th><th style="width: 125px; text-align:left;">배달</th><th style="width: 125px; text-align:left;">지금 라이브!</th>
 </tr> 
 <tr>
 <td><b>포팅 가이드</b> <br>1. HTK(HoloToolKit)/MRTK(Mixed Reality Toolkit)를 MRTK Version 2로
@@ -47,7 +47,7 @@ ms.locfileid: "73439904"
 <td>HoloLens 2 디자인 및 개발 지침</td><td>10 월 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>혼합 현실 개요</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>디자인 및 프로토타입</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>개발자 도구 및 아키텍처</a></td>
 </tr>
 <tr>
-  <td>Unreal에 대 한 새 정보</td><td>10 월 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Unreal development 개요</a></td>
+  <td>Unreal에 대 한 새 정보</td><td>10 월 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Unreal 개발 개요</a></td>
 </tr>
 <tr>
   <td>Microsoft 흐름 설계</td><td>10 월 2019</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>혼합 현실 디자인 페이지</a></td>

@@ -17,11 +17,11 @@ ms.locfileid: "73926567"
 
 HoloLens의 [손으로](gaze-and-commit.md#composite-gestures) 는 [Unity](gaze-in-unity.md)에서 작업을 수행 하는 두 가지 주요 방법, 그리고 HOLOLENS 및 몰입 형 HMD의 [동작 컨트롤러](motion-controllers.md) 를 사용할 수 있습니다. Unity에서 동일한 Api를 통해 두 공간 입력 원본에 대 한 데이터에 액세스할 수 있습니다.
 
-Unity는 Windows Mixed Reality의 공간 입력 데이터에 액세스 하는 두 가지 기본 방법인 공통 *입력. GetButton/input. Getbutton* api는 여러 Unity XR sdk에서 작동 하 고, *InteractionManager/GestureRecognizer* api는와 관련이 있습니다. 사용 가능한 공간 입력 데이터의 전체 집합을 노출 하는 Windows 혼합 현실입니다.
+Unity는 Windows Mixed Reality의 공간 입력 데이터에 액세스 하는 두 가지 기본 방법인 common *input. GetButton/input. Getbutton* api를 여러 Unity XR sdk에서 작동 하는 두 가지 기본 방법 및 사용 가능한 공간 입력 데이터의 전체 집합을 노출 하는 Windows Mixed Reality 관련 *InteractionManager/GestureRecognizer* api를 제공 합니다.
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Unity 단추/축 매핑 테이블
 
-아래 표의 단추 및 축 Id는 *입력. GetButton/Getbutton* api를 통해 Unity의 Windows Mixed Reality 동작 컨트롤러에서 지원 됩니다. 반면 "Windows MR" 열은에서 사용할 수 있는 속성을 참조 합니다. *InteractionSourceState* 유형입니다. 이러한 각 Api에 대해서는 아래 섹션에서 자세히 설명 합니다.
+아래 표의 단추 및 축 Id는 *입력. GetButton/Getbutton* api를 통해 Unity의 Windows Mixed Reality 동작 컨트롤러에서 지원 되지만, "Windows MR" 열은 *InteractionSourceState* 형식에서 사용할 수 있는 속성을 참조 합니다. 이러한 각 Api에 대해서는 아래 섹션에서 자세히 설명 합니다.
 
 Windows Mixed Reality의 단추/축 ID 매핑은 일반적으로 Oculus 단추/축 Id와 일치 합니다.
 
@@ -131,7 +131,7 @@ Unity의 교차 공급 업체 입력 API (XR)를 통해 그립 포즈에 액세�
 이러한 동작 컨트롤러 추적 상태는 다음과 같이 정의 됩니다.
 * **높은 정확도:** 동작 컨트롤러는 헤드셋의 보기 필드 내에 있지만 일반적으로 시각적 추적에 따라 정확도가 높은 위치를 제공 합니다. 일시적으로 보기의 필드를 벗어나거나 헤드셋 센서에서 일시적으로 가려진 이동 컨트롤러 (예: 사용자)는 컨트롤러의 관성 추적을 기반으로 짧은 시간 동안 계속 해 서 정확도가 높은 포즈를 반환 합니다. 자체.
 * **높은 정확도 (손실 위험):** 사용자가 이동 컨트롤러를 헤드셋의 보기 필드 가장자리를 지나서 이동할 때 헤드셋은 곧 컨트롤러의 위치를 시각적으로 추적할 수 없습니다. 앱은 **SourceLossRisk** reach 1.0을 확인 하 여 컨트롤러가이 FOV 경계에 도달한 경우를 인식 합니다. 이 시점에서 앱은 매우 높은 품질의 동작을 안정적으로 스트리밍하는 데 필요한 컨트롤러 제스처를 일시 중지 하도록 선택할 수 있습니다.
-* **대략적인 정확도:** 컨트롤러에서 충분히 긴 시각적 추적을 분실 한 경우 컨트롤러의 위치는 대략적인 정확도 위치로 삭제 됩니다. 이 시점에서 시스템은 컨트롤러를 사용자에 게 본문 잠금을 설정 하 고, 이동 하는 동안 사용자의 위치를 추적 하 고, 내부 방향 센서를 사용 하 여 컨트롤러의 실제 방향을 계속 노출 합니다. 컨트롤러를 사용 하 여 UI 요소를 가리키고 활성화 하는 많은 앱이 정상적으로 작동 하 고, 사용자가 모르게 정확한 정확도를 사용할 수 있습니다. 입력 요구 사항이 많은 앱은 사용자에 게 오프 스크린 대상에 대 한 hitbox을 제공 하는 등의 방법으로 **positionaccuracy** 속성을 검사 하 여 정확도가 **높은** **정확도부터 정확도까지** 이러한 삭제를 합리적으로 선택할 수 있습니다. 이 시간 동안.
+* **대략적인 정확도:** 컨트롤러에서 충분히 긴 시각적 추적을 분실 한 경우 컨트롤러의 위치는 대략적인 정확도 위치로 삭제 됩니다. 이 시점에서 시스템은 컨트롤러를 사용자에 게 본문 잠금을 설정 하 고, 이동 하는 동안 사용자의 위치를 추적 하 고, 내부 방향 센서를 사용 하 여 컨트롤러의 실제 방향을 계속 노출 합니다. 컨트롤러를 사용 하 여 UI 요소를 가리키고 활성화 하는 많은 앱이 정상적으로 작동 하 고, 사용자가 모르게 정확한 정확도를 사용할 수 있습니다. 입력 요구 사항이 많은 앱은 사용자에 게이 시간 동안 오프 화면 대상에 대 한 hitbox을 제공 하는 등의 방법으로 **positionaccuracy** 속성을 검사 하 여 정확도가 **높은** **정확도부터 정확도까지** 이러한 삭제를 합리적으로 선택할 수 있습니다.
 * **위치 없음:** 컨트롤러는 오랜 시간 동안 정확한 정확도로 작동할 수 있지만 때때로 본문 잠금 위치가 중요 하지 않은 것을 시스템에서 인식 하는 경우도 있습니다. 예를 들어 방금 설정 된 컨트롤러가 시각적으로 관찰 되지 않았거나 사용자가 다른 사용자가 선택 하는 컨트롤러를 배치할 수 있습니다. 이러한 시간에 시스템은 앱에 어떤 위치도 제공 하지 않으며 *TryGetPosition* 는 false를 반환 합니다.
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>Common Unity Api (입력. GetButton/Getbutton)

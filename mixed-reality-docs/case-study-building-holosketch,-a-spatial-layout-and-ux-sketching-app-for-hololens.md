@@ -49,7 +49,7 @@ OneDrive를 통해 혼합 된 현실 공간으로 PNG/JPG 이미지 또는 3D FB
 
 HoloSketch는 Bluetooth 마우스/키보드, 제스처 및 음성 명령을 지원 합니다.
 
-## <a name="background"></a>백그라운드
+## <a name="background"></a>배경
 
 ### <a name="importance-of-experiencing-your-design-in-the-device"></a>장치에서 디자인이 발생 하는 중요성
 
@@ -77,7 +77,7 @@ HoloSketch](images/holosketch-image-04-1000px.png) ![간소화 된 프로세스<
 
 이 도구를 통해 디자이너는 진정한 3 차원 공간에서 솔루션을 탐색 하 고 2D로는 중단 하지 않을 수 있습니다. HoloLens의 경우 배경이 실제 세계 이기 때문에 UI에 대 한 3D 배경을 만드는 방법에 대해 생각해 서는 안 됩니다. HoloSketch은 디자이너에서 HoloLens의 3D 디자인을 쉽게 탐색 하는 방법을 엽니다.
 
-## <a name="get-started"></a>시작하기를
+## <a name="get-started"></a>시작
 
 ### <a name="how-to-import-2d-images-jpgpng-into-holosketch"></a>2D 이미지 (JPG/PNG)를 HoloSketch로 가져오는 방법
 
