@@ -47,8 +47,8 @@ ms.locfileid: "73641059"
 
 ### <a name="gesture-interactions"></a>제스처 상호 작용
 혼합 현실에서 사용자는 커서를 사용 하 여 단추와 상호 작용할 수 있습니다. 단추 동작은 사용자가 상호 작용을 취소할 수 있도록 단추를 눌렀다 놓은 경우를 제외 하 고 사용자가 단추를 눌렀다 놓으면 일반적으로 수행 됩니다. 이러한 단계를 보강 하려면 소리를 사용 합니다. 또한 사용자가 먼 단추를 대상으로 하는 것을 지원 하려면 커서 가리키기 소리를 사용 하는 것이 좋습니다.
-* 단추 누르기 소리를 tactile 클릭 해야 합니다. 예: [MRTK_ButtonPress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* 단추를 누르지 않는 소리는 비슷한 tactile 느낌을 가져야 합니다. 볼록 피치와 누르기 사운드가 있으면 완료 강화. 예: [MRTK_ButtonUnpress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* 단추 누르기 소리를 tactile 클릭 해야 합니다. 예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 단추를 누르지 않는 소리는 비슷한 tactile 느낌을 가져야 합니다. 볼록 피치와 누르기 사운드가 있으면 완료 강화. 예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * 가리키기 소리의 경우 낮은 빈도 thud 또는 범프와 같이 약한 및 비 위협 사운드를 사용 하는 것이 좋습니다.
 
 
@@ -56,12 +56,12 @@ ms.locfileid: "73641059"
 HoloLens 2에서는 두 개의 부분으로 된 손 모양 추적을 통해 사용자 인터페이스 요소를 직접 조작할 수 있습니다. 소리는 물리적 피드백이 없다는 중요 한 대체 항목입니다.
 
 사용자가 키 이동의 아래쪽에 도달 했을 때 물리적으로 표시 되지 않기 때문에 직접 조작에서 **단추 누르기** 소리가 중요 합니다. 주요 여행에 대 한 시각적 표시기는 작은, 미묘한 및 폐색 수 있습니다. 제스처 상호 작용의 경우와 마찬가지로 단추 누름은 클릭과 같은 짧은 tactile 소리를 가져야 하 고, unpresses는 볼록 피치를 사용 하 여 비슷한 클릭을 가져야 합니다.
-* 예: [MRTK_ButtonPress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* 예: [MRTK_ButtonUnpress](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* 예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
 
 직접 조작에서 **잡기** 나 **릴리스** 를 확인 하는 것은 시각적으로 통신 하기 어렵습니다. 사용자의 손을 시각적 효과를 발휘 하는 경우가 많으며, 하드 없는 개체는 실제 시각적으로 "잡기"를 하지 않습니다. 반면에 소리는 성공적인 잡기와 릴리스 상호 작용을 효과적으로 전달할 수 있습니다.
-* 잡기 작업에는 개체 주위에 손가락을 muffled 하는 것을 evokes 하는 짧고 약간의 tactile 사운드가 있어야 합니다. 경우에 따라 소리를 이동 하는 경우 소리의 영향을 whoosh 하는 "" 사운드가 수반 됩니다. 예: [MRTK_Move_Start](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* 릴리스 작업에는 유사 하 고 tactile 소리가 있어야 하 고, 일반적으로 광고에서 중단 되 고, 그 다음에는 영향을 주고 개체 정착를 전달 하는 "whoosh"가 발생 합니다. 예: [MRTK_Move_End](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* 잡기 작업에는 개체 주위에 손가락을 muffled 하는 것을 evokes 하는 짧고 약간의 tactile 사운드가 있어야 합니다. 경우에 따라 소리를 이동 하는 경우 소리의 영향을 whoosh 하는 "" 사운드가 수반 됩니다. 예: [MRTK_Move_Start .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* 릴리스 작업에는 유사 하 고 tactile 소리가 있어야 하 고, 일반적으로 광고에서 중단 되 고, 그 다음에는 영향을 주고 개체 정착를 전달 하는 "whoosh"가 발생 합니다. 예: [MRTK_Move_End .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 **그리기** 상호 작용은 사용자 손을 이동 하 여 볼륨을 제어 하는 반복, 영구 사운드를 사용 해야 하며, 사용자 손을 계속 사용 하는 경우, 사용자 손을 빠르게 이동할 때의 최대 볼륨에 해당 볼륨을 완전히 자동으로 유지 합니다.
 
