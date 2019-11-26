@@ -1,25 +1,25 @@
 ---
 title: 시선 추적
-description: HoloLens 2를 사용 하면 개발자에 게 사용자가 보고 있는 항목에 대 한 정보를 사용할 수 있는 기능을 제공 하 여 holographic 환경 내에서 새로운 수준의 컨텍스트 및 인간 이해를 허용할 수 있습니다.
+description: HoloLens 2 allows for a new level of context and human understanding within the holographic experience by providing developers with the ability to use information about what the user is looking at.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: 눈 추적, 혼합 현실, 입력, 눈에 응시, 보정
-ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+keywords: Eye tracking, mixed reality, input, eye-gaze, calibration
+ms.openlocfilehash: 1f3699330fb4879258693b6959724441bd838d98
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913225"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491146"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>HoloLens 2의 시선 추적
 
-![MRTK의 아이 추적 데모](images/mrtk_et_scenemenu.jpg)
+![Eye tracking demo in MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2를 사용 하면 개발자에 게 사용자가 보고 있는 항목에 대 한 정보를 사용할 수 있는 기능을 제공 하 여 holographic 환경 내에서 새로운 수준의 컨텍스트 및 인간 이해를 허용할 수 있습니다. 이 페이지는 다양 한 사용 사례에 대 한 눈 추적을 활용 하는 방법 및 눈에 잘 맞는 사용자 상호 작용을 디자인할 때 검색할 내용을 개발자에 게 알려줍니다. 
+HoloLens 2 allows for a new level of context and human understanding within the holographic experience by providing developers with the ability to use information about what the user is looking at. This page explains how developers can benefit from eye tracking for various use cases, as well as what to look for when designing eye-gaze-based user interactions. 
 
-아이 추적 API는 사용자의 개인 정보를 염두에 두면 서 식별 가능한 정보, 특히 생체 인식을 전달 하지 않도록 설계 되었습니다. 아이 추적 지원 응용 프로그램의 경우 사용자는 눈동자 추적 정보를 사용할 수 있는 권한을 앱에 부여 해야 합니다. 
+Eye tracking API has been designed with a user’s privacy in mind, avoiding passing any identifiable information, particularly any biometrics. For eye-tracking capable applications, the user needs to grant app permission to use eye tracking information. 
 
 
 ### <a name="device-support"></a>장치 지원
@@ -31,13 +31,13 @@ HoloLens 2를 사용 하면 개발자에 게 사용자가 보고 있는 항목�
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>기능과</strong></td>
+     <td><strong>Feature</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
 </tr>
 <tr>
-     <td>눈-응시</td>
+     <td>Eye-gaze</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -46,121 +46,121 @@ HoloLens 2를 사용 하면 개발자에 게 사용자가 보고 있는 항목�
 
 <br>
 
-## <a name="calibration"></a>보정 
-눈 추적을 정확 하 게 수행 하려면 각 사용자가 holographic 대상 집합을 확인 해야 하는 [눈 추적 사용자 보정](calibration.md) 을 통과 해야 합니다. 이를 통해 장치는 사용자에 게 더 편안 하 고 높은 품질의 시청 환경을 제공 하 고 동시에 정확한 시각 추적을 보장 합니다. 
+## <a name="calibration"></a>Calibration 
+For eye tracking to work accurately, each user is required to go through an [eye tracking user calibration](calibration.md) for which the user has to look at a set of holographic targets. This allows the device to adjust the system for a more comfortable and higher quality viewing experience for the user and to ensure accurate eye tracking at the same time. 
 
-시각 추적은 대부분의 사용자에 게 작동 하지만 사용자가 성공적으로 보정 하지 못할 수 있는 드문 경우도 있습니다. 보정은 다음을 비롯 한 다양 한 이유로 실패할 수 있습니다. 
-* 사용자가 이전에 보정 프로세스를 옵트아웃 했음
-* 사용자가 무시 하 고 보정 대상을 팔 로우 하지 않았습니다.
-* 사용자에 게 시스템에서 아직 지원 하지 않는 특정 유형의 연락처 lenses 및가 있습니다. 
-* 사용자에 게 시스템에서 아직 지원 하지 않는 특정 아이 physiology, 아이 조건 또는 아이 수술가 있습니다.  
-* 외부 요인 활용 하지 못해는 HoloLens 센터 또는 안경의 스머지, 눈 앞의 머리카락으로 인 한 강한 직접 햇빛 및 occlusions와 같은 안정적인 눈 추적
+Eye tracking should work for most users, but there are rare cases in which a user might not be able to calibrate successfully. Calibration might fail for various reasons, including but not limited to: 
+* The user previously opted out of the calibration process
+* The user got distracted and didn't follow the calibration targets
+* The user has certain types of contact lenses and glasses which the system doesn't yet support 
+* The user has certain eye physiology, eye conditions or had eye surgery which the system doesn't yet support  
+* External factors inhibiting reliable eye tracking such as smudges on the HoloLens visor or eyeglasses, intense direct sunlight and occlusions due to hair in front of the eyes
 
-개발자는 아이 추적 데이터를 사용할 수 없는 사용자를 적절 하 게 지원 해야 합니다 (성공적으로 보정할 수 없음). 이 페이지의 맨 아래에 있는 섹션에서 대체 솔루션에 대 한 권장 사항을 제공 했습니다. 
+Developers should make sure to provide adequate support for users for whom eye tracking data may not be available (who are not able to calibrate successfully). We have provided recommendations for fallback solutions in the section at the bottom of this page. 
 
-보정에 대 한 자세한 내용과 원활한 환경을 보장 하는 방법에 대 한 자세한 내용은 [눈동자 추적 사용자 보정](calibration.md) 페이지를 확인 하세요.
+To learn more about the calibration and about how to ensure a smooth experience, please check our [eye tracking user calibration](calibration.md) page.
 
 <br>
 
-## <a name="available-eye-tracking-data"></a>사용 가능한 눈 추적 데이터
-눈동자를 입력 하는 특정 사용 사례에 대 한 세부 정보를 살펴보기 전에 HoloLens 2 [눈동자 추적 API](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) 에서 제공 하는 기능을 간단히 확인 하고자 합니다. 개발자는 약 _30FPS (30 Hz)_ 의 단일 눈길 응시 광선 (응시 원본 및 방향)에 액세스할 수 있습니다.
-눈 추적 데이터에 액세스 하는 방법에 대 한 자세한 내용은 [DirectX에서 눈에 잘](gaze-in-directx.md) 드를 사용 하 고 [Unity에서 눈](https://aka.ms/mrtk-eyes)에 보기를 사용 하는 개발자 가이드를 참조 하세요.
+## <a name="available-eye-tracking-data"></a>Available eye tracking data
+Before going into detail about specific use cases for eye-gaze input, we want to briefly point out the capabilities that the HoloLens 2 [Eye Tracking API](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) provides. Developers get access to a single eye-gaze ray (gaze origin and direction) at approximately _30 FPS (30 Hz)_ .
+For more detailed information about how to access eye tracking data, please refer to our developer guides for using [eye-gaze in DirectX](gaze-in-directx.md) and [eye-gaze in Unity](https://aka.ms/mrtk-eyes).
 
-예측 된 눈은 실제 목표 중심의 시각적 각도에서 약 1.5도 이내입니다 (아래 그림 참조). 약간의 imprecision 예상 되는 것으로 개발자는이 하 한 값 (예: 2.0-3.0도의 경우 훨씬 더 편안 하 게 경험을 얻을 수 있음)에 대 한 몇 가지 여백을 계획 해야 합니다. 아래에서 작은 대상의 선택 사항을 해결 하는 방법을 설명 하겠습니다. 시선 추적이 정확히 작동하려면 각 사용자가 시선 추적 사용자 보정을 진행해야 합니다. 
+The predicted eye-gaze is approximately within 1.5 degrees in visual angle around the actual target (see the illustration below). As slight imprecisions are expected, developers should plan for some margin around this lower-bound value (e.g., 2.0-3.0 degrees may result in a much more comfortable experience). We will discuss how to address the selection of small targets in more detail below. 시선 추적이 정확히 작동하려면 각 사용자가 시선 추적 사용자 보정을 진행해야 합니다. 
 
 ![2m 거리에서 최적 대상 크기](images/gazetargeting-size-1000px.jpg)<br>
-*2 미터 거리의 최적 대상 크기*
+*Optimal target size at a 2-meter distance*
 
 <br>
 
 ## <a name="use-cases"></a>사용 사례
-시선 추적을 사용하여 애플리케이션에서는 사용자가 실시간으로 보는 곳을 추적할 수 있습니다. 다음 사용 사례에서는 혼합 현실에서 HoloLens 2에 대 한 눈 추적에서 가능한 몇 가지 상호 작용에 대해 설명 합니다.
-이러한 사용 사례는 아직 Holographic Shell 환경 (예: HoloLens 2를 시작할 때 표시 되는 인터페이스)의 일부가 아닙니다.
-이러한 기능 중 일부를 [혼합 현실 도구 키트](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) 에서 사용해 볼 수 있습니다 .이 도구 키트를 사용 하면 신속 하 고 간편 하 게 지원 되는 대상 선택 항목 뿐만 아니라 텍스트를 기반으로 하 여 자동으로 스크롤할 수 있는 눈에 띄는 사용자의 모습입니다. 
+시선 추적을 사용하여 애플리케이션에서는 사용자가 실시간으로 보는 곳을 추적할 수 있습니다. The following use cases describe some interactions that are possible with eye tracking on HoloLens 2 in mixed reality.
+Please note that these use cases are not yet part of the Holographic Shell experience (i.e., the interface that you see when you start up your HoloLens 2).
+You can try some of them in the [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html), which provides several interesting and powerful examples for using eye tracking, such as quick and effortless eye-supported target selections, as well as automatically scrolling through text based on what the user looks at. 
 
 ### <a name="user-intent"></a>사용자 의도    
-사용자에 게 표시 되는 위치와 위치에 대 한 정보는 음성, 손 및 컨트롤러와 같은 **다른 입력을 위한 강력한 컨텍스트**를 제공 합니다.
+Information about where and what a user looks at provides a powerful **context for other inputs**, such as voice, hands and controllers.
 이러한 컨텍스트를 다양한 작업에서 사용할 수 있습니다.
-예를 들어,이는 홀로그램을 확인 하 고 *"select"* ( [응시 및 커밋](gaze-and-commit.md))를 말하는 후 또는 *"이 ..."* 를 사용 하 여 사용자의 위치를 확인 하 여 장면 전체에서 빠르고 쉽게 **대상** 으로 지정할 수 있습니다. 홀로그램을 원하는 대로 *만들어 보겠습니다. "* . 이에 대한 예는 [Mixed Reality Toolkit - 시선 지원 대상 선택](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) 및 [Mixed Reality Toolkit - 시선 지원 대상 위치 지정](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html)에서 찾을 수 있습니다.
+For example, this can range from quickly and effortlessly **targeting** across the scene by simply looking at a hologram and saying *"select"* (also see [gaze and commit](gaze-and-commit.md)) or *"put this..."* , then looking over to where the user wants to place the hologram and say *"...there"* . 이에 대한 예는 [Mixed Reality Toolkit - 시선 지원 대상 선택](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) 및 [Mixed Reality Toolkit - 시선 지원 대상 위치 지정](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html)에서 찾을 수 있습니다.
 
-또한 사용자 의도에 대 한 예제에는 사용자가 합의서 등 가상 에이전트 및 대화형 holograms 참여를 개선 하기 위해 확인 하는 내용에 대 한 정보가 포함 될 수 있습니다. 예를 들어 가상 에이전트는 현재 표시 되는 내용에 따라 사용 가능한 옵션과 해당 동작을 조정할 수 있습니다. 
+Additionally, an example for user intent might include using information about what users look at to enhance engagement with embodied virtual agents and interactive holograms. For instance, virtual agents might adapt available options and their behavior, based on currently viewed content. 
 
 ### <a name="implicit-actions"></a>암시적 작업
 암시적 작업의 범주는 사용자 의도와 밀접하게 관련되어 있습니다.
-Holograms 또는 사용자 인터페이스 요소는 사용자가 시스템과 상호 작용 하는 것 처럼 보이지만 시스템 및 사용자가 동기화 되는 것 처럼 보일 수 있는 instinctual 방식으로 반응 합니다. 한 가지 예는 **눈에 잘 맞는 자동 스크롤** 입니다. 사용자가 텍스트 상자 아래쪽에 있으면 사용자가 자동으로 스크롤을 시작 하는 긴 텍스트를 읽을 수 있습니다.  
-이에 대 한 주요 측면은 스크롤 속도가 사용자의 읽기 속도에 적응 하는 것입니다.
-또 다른 예로, 사용자가 포커스가 있는 것과 정확히 일치 하는 것을 느낄 수 있는 **눈에 잘 맞춘 확대/축소 및 이동** 이 있습니다. 확대/축소 및 확대/축소 속도를 트리거하는 것은 음성 또는 직접 입력을 통해 제어할 수 있습니다 .이는 사용자에 게 불필요 한 제어를 제공 하는 데 중요 합니다. 이러한 디자인 고려 사항은 아래에 자세히 설명 하겠습니다. 확대 한 후 사용자는 눈에 잘 맞는 작업을 사용 하 여 자신의 환경을 탐색 하는 등의 작업을 원활 하 게 수행할 수 있습니다.
+The idea is that holograms or user interface elements react in an instinctual way that may not even feel like the user is interacting with the system at all, but rather that the system and the user are in sync. One example is **eye-gaze-based auto scroll** where the user can read a long text which automatically starts scrolling once the user gets to the bottom of the textbox to keep the user in the flow of reading, without lifting a finger.  
+A key aspect of this is that the scrolling speed adapts to the reading speed of the user.
+Another example is **eye-supported zoom and pan** where the user can feel like diving exactly toward what he or she is focused on. Triggering and controlling zoom speed can be controlled by voice or hand input, which is important for providing the user with the feeling of control while avoiding being overwhelmed. We will talk about these design considerations in more detail below. Once zoomed in, the user can smoothly follow, for example, the course of a street to explore his or her neighborhood by simply using their eye-gaze.
 이러한 유형의 상호 작용을 나타내는 데모 예제는 [Mixed Reality Toolkit - 시선 지원 탐색](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) 샘플에서 찾을 수 있습니다.
 
 _암시적 작업_의 추가 사용 사례로는 다음이 포함될 수 있습니다.
-- **스마트 알림:** 원하는 위치에서 바로 팝 하 여 알림을 표정이? 사용자가 수행 하는 작업을 고려 하 여 사용자가 현재 gazing 되는 위치에서 알림을 오프셋 하 여이 환경을 개선할 수 있습니다. 그러면 사용자가 읽기를 완료 한 후에는 혼란을 자동으로 해제 하 고 자동으로 해제 합니다. 
-- **Attentive holograms:** Gazed 될 때 약간의 반응을 Holograms 합니다. 이는 약간 빛나는 UI 요소부터 사용자를 다시 검색 하 고 해당 tail을 wagging 하는 blooming 꽃에 대 한 느린 응답을 만들 수 있습니다. 이러한 상호 작용은 응용 프로그램에 대 한 흥미로운 연결 및 만족도를 제공할 수 있습니다.
+- **Smart notifications:** Ever get annoyed by notifications popping up right where you are looking? Taking into account what a user is paying attention to, you can make this experience better by offsetting notifications from where the user is currently gazing. This limits distractions and automatically dismisses them once the user is finished reading. 
+- **Attentive holograms:** Holograms that subtly react when being gazed upon. This can range from slightly glowing UI elements, a slowly blooming flower to a virtual dog starting to look back at the user and wagging its tail. This interaction might provide an interesting sense of connectivity and satisfaction in your application.
 
 ### <a name="attention-tracking"></a>주의 추적   
-사용자가 어떻게 볼 수 있는지에 대 한 정보는 매우 강력한 도구 일 수 있습니다 .이를 통해 디자인의 유용성을 평가 하 고 워크플로의 문제를 식별 하 여 효율성을 높일 수 있습니다.
-눈 추적 시각화 및 분석은 다양 한 응용 프로그램 영역에서 일반적인 방법입니다. HoloLens 2를 사용 하면 3D holograms를 실제 컨텍스트에서 배치 하 고 그에 따라 평가할 수 있으므로 이러한 이해에 새로운 차원이 제공 됩니다. [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) 은 눈 추적 데이터를 기록 하 고 로드 하는 기본 예제와 이러한 데이터를 시각화 하는 방법을 제공 합니다.
-Microsoft는 사용자에 게 눈 추적 정보를 사용 하는 방법에 대 한 정보와 투명 한 경험을 제공 하면서 혁신을 용이 하 게 해 줍니다.  Microsoft는 개발자와 UX 팀과 협력 하 여 사용자를 중심으로 경험을 보장 하는 제 3 자에 대 한 지침을 제공 합니다.  
+Information on where or what users look at can be an immensely powerful tool. It can help assess usability of designs and identify problems in workflows to make them more efficient.
+Eye tracking visualization and analytics are a common practice in various application areas. With HoloLens 2, we provide a new dimension to this understanding as 3D holograms can be placed in real-world contexts and assessed accordingly. The [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) provides basic examples for logging and loading eye tracking data and how to visualize them.
+Microsoft is dedicated to facilitating innovation while ensuring that users have an informed and transparent experience with how their eye tracking information is used.  We will work with our developers and UX teams to provide guidance for third parties to ensure that experiences are centered around the user.  
 
 
 이 영역의 다른 응용 분야로 다음이 포함될 수 있습니다. 
--   **원격 눈-응시 시각화:** 원격 눈-응시 시각화: 즉각적인 피드백을 제공 하 고 보다 정확한 정보 처리를 용이 하 게 하는 원격 협력자를 시각화 합니다.
--   **사용자 연구 연구:** 주의 추적을 사용 하면 사용자가 방해 하지 않고 자연 스러운 환경에서 자연 스러운 환경으로 instinctual 상호 작용을 설계 하는 방법에 대 한 정보를 파악 하는 데 도움이 될 수 있습니다. 눈 추적은 연구에서 참가자가 직접 연락 하지 않는 정보를 제공할 수 있으며, 그렇지 않은 경우에는 연구원에 의해 쉽게 누락 될 수 있습니다. 
--   **교육 및 성능 모니터링:** 실행 흐름에서 병목 상태를 보다 효과적으로 식별 하 여 작업 실행을 연습 하 고 최적화 합니다. 아이 추적은 작업 공간에서 교육, 생산성 및 보안을 개선 하는 데 도움이 되는 자연 스러운 실시간 및 목표 정보를 제공할 수 있습니다. 
--   **디자인 평가, 마케팅 및 소비자 연구:** 아이 추적을 통해 상용 회사는 실제 환경에서 마케팅 및 소비자 연구를 수행 하거나 제품 또는 공간 디자인을 개선 하기 위해 사용자의 주의가 필요한 사항을 분석할 수 있습니다. 
+-   **Remote eye-gaze visualization:** Remote eye-gaze visualizations: Visualize what remote collaborators are looking at, to be able to provide immediate feedback and facilitate more accurate information processing.
+-   **User research studies:** Attention tracking can help researchers get more insights into how users perceive and engage with the natural environment, without interfering, to design more instinctual human-computer-interactions. Eye tracking can provide information that is not directly articulated by participants in the study, which otherwise might be easily missed by the researcher. 
+-   **Training and performance monitoring:** Practice and optimize the execution of tasks by identifying bottlenecks more effectively in the execution flow. Eye tracking can provide natural, real-time and objective information to help improve training, productivity, and safety in the workplace. 
+-   **Design evaluations, marketing and consumer research:** Eye tracking enables commercial companies to perform marketing and consumer studies in real-world environments or analyze what captures a user’s attention to improve product or space design. 
 
 ### <a name="additional-use-cases"></a>추가 사용 사례
-- **게임:** 슈퍼 능력을 원하는 가요? 여기서 그 기회를 얻을 수 있습니다. Holograms에서 바랄 levitate 수 있습니다. 눈에서 레이저 빔를 체험해 보세요. [RoboRaid에서 HoloLens 2에 대해](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)사용해 보세요.
-적을 돌로 설정 하거나 고정 합니다. X-광선을 사용해서 건물을 투시하세요. 상상하는 만큼 이루어집니다.
-사용자를 과도 하 게 확인 하는 것이 좋습니다. 자세한 내용은 눈에 잘 맞는 [입력 디자인 지침](eye-gaze-interaction.md)을 참조 하세요.
+- **Gaming:** Ever wanted to have superpowers? 여기서 그 기회를 얻을 수 있습니다. You can levitate holograms by staring at them. Shoot laser beams from your eyes - try it out in [RoboRaid for HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
+Turn enemies into stone or freeze them. X-광선을 사용해서 건물을 투시하세요. 상상하는 만큼 이루어집니다.
+Beware of not overwhelming the user though - to find out more, check out our [eye-gaze-based input design guidelines](eye-gaze-interaction.md).
 
-- **표현 아바타:** 눈 추적은 라이브 눈 추적 데이터를 사용 하 여 사용자가 보고 있는 항목을 나타내는 아바타의 눈에 애니메이션 효과를 주는 3D 아바타 더 많은 표현을 지원 합니다. 
+- **Expressive avatars:** Eye tracking aids in more expressive 3D avatars by using live eye tracking data to animate the avatar's eyes that indicate what the user is looking at. 
 
-- **텍스트 입력:** 눈에 잘 드는 텍스트 입력에 대 한 대체 방법으로 눈 추적을 사용할 수 있습니다. 특히 음성 또는 손을 사용 하기 불편 한 경우입니다. 
+- **Text entry:** Eye tracking can be used as an alternative for low-effort text entry, especially when speech or hands are inconvenient to use. 
 
 <br>
 
-## <a name="using-eye-gaze-for-interaction"></a>상호 작용을 위해 눈동자 사용-응시
-빠른 이동 대상 지정을 활용 하는 상호 작용을 빌드하는 것은 어려울 수 있습니다.
-한편, 눈은 눈에 눈길을 사용 하는 방법에 주의 해야 합니다. 그렇지 않으면 사용자가 경험을 과도 하 게 경험해 볼 수 있기 때문입니다. 반면 사용자를 흥미 하는 진정한 마법 환경을 만들 수도 있습니다. 이를 돕기 위해 주요 이점, 문제 및 디자인에 대 한 권장 사항에 대 한 개요를 확인 하 여 [상호 작용](eye-gaze-interaction.md)합니다. 
+## <a name="using-eye-gaze-for-interaction"></a>Using eye-gaze for interaction
+Building an interaction that takes advantage of fast-moving eye targeting can be challenging.
+On the one hand, the eyes move so fast that you need to be careful on how to use eye-gaze input, because otherwise users may find the experience overwhelming or distracting. On the other hand, you can also create truly magical experiences that will excite your users! To help you, check out our overview of key advantages, challenges and design recommendations for [eye-gaze for interaction](eye-gaze-interaction.md). 
  
-## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>눈 추적을 사용할 수 없는 경우의 대체 솔루션
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Fallback solutions when eye tracking is not available
 
-드문 경우 지만 눈 추적 데이터를 사용 하지 못할 수도 있습니다.
-이는 다음과 같은 다양 한 이유로 인해 발생할 수 있습니다.
-* 시스템이 [사용자를 보정](calibration.md)하지 못했습니다.
-* 사용자가 [보정](calibration.md)을 건너뛰었습니다.   
-* 사용자가 보정 되었지만 앱에서 눈 추적 데이터를 사용할 수 있는 권한을 부여 하지 않기로 결정 했습니다.    
-* 사용자에 게 시스템에서 아직 지원 하지 않는 고유한 안경 또는 아이 조건이 있습니다.    
-* 외부 요소는 활용 하지 못해, 안경, 강한 얼굴, occlusions 등의 얼룩과 같은 신뢰할 수 있는 눈 추적을 지원 합니다.   
+In rare cases, eye tracking data might not be available.
+This can be due to different reasons from which the most common are listed below:
+* The system failed to [calibrate the user](calibration.md).
+* The user skipped the [calibration](calibration.md).   
+* The user is calibrated, but decided to not give permission to your app to use their eye tracking data.    
+* The user has unique eyeglasses or some eye condition that the system does not yet support.    
+* External factors inhibiting reliable eye tracking such as smudges on the HoloLens visor or eyeglasses, intense direct sunlight and occlusions due to hair in front of the eyes.   
 
-따라서 개발자는 이러한 사용자에 대 한 적절 한 대체 지원이 있는지 확인 해야 합니다. [DirectX의 눈 추적](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) 페이지에서 눈 추적 데이터를 사용할 수 있는지 여부를 검색 하는 데 필요한 api를 설명 합니다. 
+Hence, developers should ensure that there is appropriate fallback support for these users. On the [Eye Tracking in DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) page, we explain the APIs required to detect whether eye tracking data is available. 
 
-일부 사용자는 눈 추적 데이터에 대 한 액세스를 취소 하기로 결정 했을 수 있지만, 눈 추적 데이터에 대 한 액세스를 제공 하지 않는 경우의 개인 정보 보호에 대 한 사용자 환경의 절충은 consciously 수 있습니다.  
-따라서 앱에서 눈 추적을 사용 하는 경우이는 환경에서 중요 한 부분 이므로 사용자에 게이를 명확 하 게 전달 하는 것이 좋습니다.     
-응용 프로그램에 대 한 눈 추적이 중요 한 이유 (일부 향상 된 기능을 나열 하는 경우)가 응용 프로그램의 전체 잠재력을 경험 하 여 사용자가 얼마나 많은 기능을 더 잘 이해할 수 있도록 하는 이유를 알려 주세요.    
-사용자가 시각 추적을 작동 하지 않는 이유 (위의 검사에 따라)를 식별 하 고 잠재적인 문제를 신속 하 게 해결 하기 위한 몇 가지 제안을 제공 합니다.  
-예를 들어 시스템에서 눈 추적을 지원함을 감지할 수 있는 경우 사용자는 보정 되 고 사용자에 게는 사용자의 권한을 부여 하는 경우에도 눈 추적 데이터가 수신 되지 않지만 얼룩 또는 폐색 같은 일부 다른 문제를 가리킬 수 있습니다.    
-자주 발생 하지 않는 사용자에 게는 드문 경우도 있습니다.    
-따라서 앱에서 눈 추적을 사용 하도록 설정 하는 경우 미리 알림을 해제 하거나 사용 하지 않도록 설정 하 여 respectful 합니다.
+While some users may have consciously decided to revoke access to their eye tracking data and are ok with the trade-off of an inferior user experience to the privacy of not providing access to their eye tracking data, in some cases this may be unintentional.  
+Hence, if your app uses eye tracking, and this is an important part of the experience, we recommend clearly communicating this to the user.     
+Kindly informing the user why eye tracking is critical for your application (maybe even listing some enhanced features) to experience the full potential of your application, can help the user to better understand what they are giving up.   
+Help the user identify why eye tracking may not be working (based on the above checks) and offer some suggestions to quickly troubleshoot potential issues.     
+For example, if you can detect that the system supports eye tracking, the user is calibrated and has even given their permission, yet no eye tracking data is received, then this may point to some other issues such as smudges or the eyes being occluded.    
+Please note that there are rare cases of users for whom eye tracking may simply not work.   
+Hence, please be respectful of that by allowing to dismiss or even disable reminders for enabling eye tracking in your app.
 
-### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>기본 입력 포인터로 눈동자-응시를 사용 하는 앱에 대 한 대체
-앱에서 포인터 입력으로 눈에 holograms를 사용 하 여 장면에서의 작업을 빠르게 선택 하 고, 아이 추적 데이터를 사용할 수 없는 경우 헤드-응시로 대체 하 여 헤드-응시 커서를 표시 하기 시작 하는 것이 좋습니다. 시간 제한 (예: 500 – 1500 밀리초)을 사용 하 여 전환할 것인지 여부를 결정 하는 것이 좋습니다. 이는 빠른 눈 동작 또는 윙크로 인해 시스템이 일시적으로 추적을 잃을 수 있는 시간 마다 커서를 팝 하지 않도록 하기 위한 것입니다. Unity 개발자 인 경우 head-응시에 대 한 자동 대체는 혼합 현실 도구 키트에서 이미 처리 되었습니다. DirectX 개발자 인 경우이 스위치를 직접 처리 해야 합니다.
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Fallback for apps using eye-gaze as a primary input pointer
+If your app uses eye-gaze as a pointer input to quickly select holograms across the scene, yet eye tracking data is unavailable, we recommend falling back to head-gaze and start showing the head-gaze cursor. We recommend using a timeout (e.g., 500–1500 ms) to determine whether to switch or not. This action prevents cursors from appearing every time the system may briefly lose tracking due to fast eye motions or winks and blinks. If you are a Unity developer, the automatic fallback to head-gaze is already handled in the Mixed Reality Toolkit. If you are a DirectX developer, you need to handle this switch yourself.
 
-### <a name="fallback-for-other-eye-tracking-specific-applications"></a>다른 눈 추적 관련 응용 프로그램에 대 한 대체
-앱은 눈에 맞게 특별히 조정 된 고유한 방식으로 눈에 띄게 사용 될 수 있습니다. 예를 들어 아바타의 눈에 애니메이션을 적용 하거나 눈에 띄게 관심을 열 지도 시각적 주의 사항에 대 한 정확한 정보를 사용할 수 있습니다. 이 경우에는 명확한 대체 (fallback)가 없습니다. 눈 추적을 사용할 수 없는 경우 이러한 기능을 사용 하지 않도록 설정 해야 할 수 있습니다.
-기능이 작동 하지 않는 것을 모를 수 있는 사용자에 게이를 명확 하 게 전달 하는 것이 좋습니다.
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Fallback for other eye-tracking-specific applications
+Your app may use eye-gaze in a unique way that is tailored specifically to the eyes. For example, animating an avatar’s eyes or for eye-based attention heatmaps relying on precise information about visual attention. In this case, there is no clear fallback. If eye tracking is not available, these capabilities may simply need to be disabled.
+Again, we recommend to clearly communicate this to the user who may be unaware that the capability is not working.
 
 <br>
 
-이 페이지에서는 HoloLens 2에 대 한 눈에 보기 및 눈에 잘 맞는 입력의 역할을 이해 하기 시작 하는 데 도움이 되는 유용한 개요를 제공 합니다. 개발을 시작 하려면 [holograms와의 상호 작용을 위해 눈길](eye-gaze-interaction.md)을 [내](https://aka.ms/mrtk-eyes) 는 역할에 대 한 정보를 확인 [하세요.](gaze-in-directx.md)
+This page has hopefully provided you with a good overview to get you started understanding the role of eye tracking and eye-gaze input for HoloLens 2. To get started developing, check out our information on the role of [eye-gaze for interacting with holograms](eye-gaze-interaction.md), [eye-gaze in Unity](https://aka.ms/mrtk-eyes) and [eye-gaze in DirectX](gaze-in-directx.md).
 
 
 ## <a name="see-also"></a>참고 항목
 * [조정](calibration.md)
 * [편안함](comfort.md)
 * [시선 응시 기반 상호 작용](eye-gaze-interaction.md)
-* [눈-DirectX에서 응시](gaze-in-directx.md)
-* [눈동자-Unity에서 응시 (혼합 현실 도구 키트)](https://aka.ms/mrtk-eyes)
+* [Eye-gaze in DirectX](gaze-in-directx.md)
+* [Eye-gaze in Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
 * [응시 및 커밋](gaze-and-commit.md)
 * [음성 입력 ](voice-design.md)
 
