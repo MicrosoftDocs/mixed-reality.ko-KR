@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, 모델링, 모델링 지침, 자산 요구 사항, 제작 지침, 시작 관리자, 3D 시작 관리자, 질감, 재질, 복잡도, 삼각형, 메시, 다각형, polycount, 제한
-ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692288"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926576"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>홈에서 사용할 3D 모델 만들기
 
@@ -58,7 +58,7 @@ Windows Mixed Reality 홈에서는 1만 삼각형이 넘는 모델을 지원 하
 |  LOD 2 |  2500  |  1만 | 
 
 ### <a name="node-counts-and-submesh-limits"></a>노드 개수 및 하위 메시에 대해 제한
-Windows Mixed Reality 홈에서는 64 개 이상의 노드가 있는 모델이 나 LOD 당 32 submeshes을 지원 하지 않습니다. 노드는 장면에서 개체를 [정의 하는](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) 개념입니다. Submeshes는 개체에서 망상의 [기본 형식](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) 배열에 정의 되어 있습니다. 
+Windows Mixed Reality 홈에서는 64 개 이상의 노드가 있는 모델이 나 LOD 당 32 submeshes을 지원 하지 않습니다. 노드는 장면에서 개체를 [정의 하는 개념입니다.](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) Submeshes는 개체에서 망상의 [기본 형식](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) 배열에 정의 되어 있습니다. 
 
 |  기능 |  설명  |  최대 지원 | 설명서 |
 |------|------|------|------|
@@ -67,7 +67,7 @@ Windows Mixed Reality 홈에서는 64 개 이상의 노드가 있는 모델이 �
 
 ## <a name="material-guidelines"></a>재질 지침
 
-이 경우에는 .PBR 금속 황삭 워크플로를 사용 하 여 질감을 준비 해야 합니다. 먼저 Albedo, Normal, 폐색, 금속 및 황삭를 비롯 한 전체 질감 집합을 만듭니다. Windows Mixed Reality는 해상도가 4096x4096 인 질감을 지원 하지만 512x512에서 작성 하는 것이 좋습니다. 또한 아래에 설명 된 내보내기 단계에서 질감에 적용 되는 압축 형식에 대 한 요구 사항은 4의 배수로 해상도에 따라 질감이 작성 되어야 합니다. 마지막으로 gerating 밉 맵 또는 질감이 가장 낮은 경우에는 가장 낮은 밉가 최대 4x4 이어야 합니다.
+이 경우에는 .PBR 금속 황삭 워크플로를 사용 하 여 질감을 준비 해야 합니다. 먼저 Albedo, Normal, 폐색, 금속 및 황삭를 비롯 한 전체 질감 집합을 만듭니다. Windows Mixed Reality는 해상도가 4096x4096 인 질감을 지원 하지만 512x512에서 작성 하는 것이 좋습니다. 또한 아래에 설명 된 내보내기 단계에서 질감에 적용 되는 압축 형식에 대 한 요구 사항은 4의 배수로 해상도에 따라 질감이 작성 되어야 합니다. 마지막으로, 밉 맵 또는 질감을 생성할 때 가장 낮은 밉는 최대 4x4 여야 합니다.
 <br>
 
 |  권장 텍스처 크기  |  최대 질감 크기 | 가장 낮은 밉
@@ -94,9 +94,9 @@ Windows Mixed Reality 홈에서는 64 개 이상의 노드가 있는 모델이 �
 
 항목이 금속 인지 여부를 셰이더에 알립니다. Raw 메탈 = 1.0 흰색 미 설치 = 0.0 black. 먼지와 같이 raw 금속을 덮고 있는 항목을 나타내는 회색 값을 변환할 수 있지만 일반적으로이 맵은 검정과 흰색 이어야 합니다.
 
-## <a name="optimizations"></a>최적화
+## <a name="optimizations"></a>강력한
 
-Windows Mixed Reality 홈은 사용자 지정 확장 프로그램을 사용 하 여 정의 된 핵심 글 트 Tf 사양 위에 일련의 최적화를 제공 합니다. 이러한 최적화는 Windows 버전 < = 1709에 필요 하며 최신 버전의 Windows에서 권장 됩니다. [GitHub에서 제공 되는 Windows Mixed Reality 자산 변환기](https://github.com/Microsoft/glTF-Toolkit/releases)를 사용 하 여 모든 글 2.0 모델을 쉽게 최적화할 수 있습니다. 이 도구는 아래 지정 된 대로 올바른 질감 압축 및 최적화를 수행 합니다. 일반적인 사용을 위해 WindowsMRAssetConverter를 사용 하는 것이 좋지만, 환경을 보다 세부적으로 제어 해야 하 고 사용자 고유의 최적화 파이프라인을 빌드 하려는 경우 아래 상세 사양을 참조할 수 있습니다.  
+Windows Mixed Reality 홈은 사용자 지정 확장 프로그램을 사용 하 여 정의 된 핵심 글 트 Tf 사양 위에 일련의 최적화를 제공 합니다. 이러한 최적화는 Windows 버전 < = 1709에 필요 하며 최신 버전의 Windows에서 권장 됩니다. [GitHub에서 제공 되는 Windows Mixed Reality 자산 변환기](https://github.com/Microsoft/glTF-Toolkit/releases)를 사용 하 여 모든 글 2.0 모델을 쉽게 최적화할 수 있습니다. 이 도구는 아래 지정 된 대로 올바른 질감 압축 및 최적화를 수행 합니다. 일반적인 사용을 위해 WindowsMRAssetConverter를 사용 하는 것이 좋습니다. 그러나 환경을 보다 세부적으로 제어 해야 하 고 사용자 고유의 최적화 파이프라인을 빌드 하려는 경우 아래 상세 사양을 참조할 수 있습니다.  
 
 ### <a name="materials"></a>자재
 
@@ -174,7 +174,7 @@ LODs를 사용 하는 경우 항상 3 LOD 수준을 지정 합니다. LOD 시스
 
 ### <a name="screen-coverage"></a>화면 검사
 
-LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에 따라 Windows Mixed Reality에 표시 됩니다. 현재 화면 공간을 더 많이 사용 하는 개체는 더 높은 LOD 수준에 표시 됩니다. 화면 검사는 핵심 글 글 2.0 사양의 일부가 아니므로 [MSFT_lod 확장](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod)의 "스페셜" 섹션에서 MSFT_ScreenCoverage를 사용 하 여 지정 해야 합니다.
+LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에 따라 Windows Mixed Reality에 표시 됩니다. 현재 화면 공간을 더 많이 사용 하는 개체는 더 높은 LOD 수준에 표시 됩니다. 화면 검사는 핵심 글 글 2.0 사양의 일부가 아니므로 [MSFT_lod 확장](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod)의 "스페셜" 섹션에서 MSFT_ScreenCoverage을 사용 하 여 지정 해야 합니다.
 <br>
 
 |  LOD 수준  |  권장 범위  |  기본 범위 | 
@@ -191,19 +191,19 @@ LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에
 
 혼합 현실 홈은 HoloLens 및 몰입 형 (VR) 헤드셋에서 애니메이션 된 인 글 하는 개체를 지원 합니다. 모델에 대 한 애니메이션을 트리거하려면 애니메이션 맵 확장을 지 원하는 Tf 형식으로 사용 해야 합니다. 이 확장을 사용 하면 전 세계 사용자를 기준으로 하 여 인 사이트에서 애니메이션을 트리거할 수 있습니다. 예를 들어, 사용자가 개체에 가까이 있거나 보는 동안 애니메이션을 트리거할 수 있습니다. Tf 개체에 애니메이션이 있지만 트리거를 정의 하지 않으면 애니메이션이 재생 되지 않습니다. 다음 섹션에서는 이러한 트리거를 애니메이션 된 모든 개체에 추가 하는 한 가지 워크플로를 설명 합니다.
 
-### <a name="tools"></a>Tools
+### <a name="tools"></a>도구
 먼저, 다음 도구가 아직 없는 경우 다운로드 합니다. 이러한 도구를 사용 하면 쉽게 모든 프로그램을 열고, 미리 보고, 변경 하 고,
 1. [Visual Studio Code](https://code.visualstudio.com/)
 2. [Visual Studio Code에 대 한 글 서 용 Tf 도구](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
 
 
 ### <a name="opening-and-previewing-the-model"></a>모델 열기 및 미리 보기
-먼저 파일을 편집기 창으로 끌어 VSCode에서 글 글 Tf 모델을 엽니다. .Bf 파일 대신 .sbb 파일이 있는 경우 다운로드 한 해당 도구 추가 기능을 사용 하 여 VSCode로 가져올 수 있습니다. "보기-> 명령 팔레트"로 이동 하 여 명령 팔레트에 "글 제 Tf"를 입력 하 고 "글 제 Tf"를 선택 합니다. 을 (를) 사용 하 여을 가져올 수 있는 파일 선택기를 표시 하는 &에서 가져옵니다. 
+먼저 파일을 편집기 창으로 끌어 VSCode에서 글 글 Tf 모델을 엽니다. .. A t f a t a. a. a. a. a. a. a. "보기-> 명령 팔레트"로 이동 하 여 명령 팔레트에 "글 하는 Tf"를 입력 하 고 "& #에서 가져오기"를 선택 합니다. 그러면에 대 한 파일 선택기를 표시 하 여. 
 
-인 글 어 어 모델을 열면 편집기 창에 JSON이 표시 됩니다. 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 Tf:를 선택 하 여 라이브 3D 뷰어에서 모델을 미리 볼 수도 있습니다. 3D 모델 미리 보기 "명령 바로 가기 메뉴를 마우스 오른쪽 단추로 클릭 합니다. 
+인 글 어 어 모델을 열면 편집기 창에 JSON이 표시 됩니다. 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 오른쪽 클릭 메뉴에서 "영향을 주는 3D 모델 미리 보기" 명령 바로 가기를 선택 하 여 라이브 3D 뷰어에서 모델을 미리 볼 수도 있습니다. 
 
 ### <a name="adding-the-triggers"></a>트리거 추가
-애니메이션 트리거는 애니메이션 맵 확장을 사용 하 여 글 지 Tf 모델 JSON에 추가 됩니다. 애니메이션 맵 확장은 [GitHub에서](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 공개적으로 설명 됩니다 (참고: 이는 초안 확장입니다. 모델에 확장을 추가 하려면 편집기에서 인 글 Tf 파일의 끝으로 스크롤하고 "extensionsUsed" 및 "extensions" 블록을 파일에 추가 합니다 (아직 없는 경우). "ExtensionsUsed" 섹션에서 "EXT_animation_map" 확장에 대 한 참조를 추가 하 고 "extensions" 블록에 모델의 애니메이션에 대 한 매핑을 추가 합니다.
+애니메이션 트리거는 애니메이션 맵 확장을 사용 하 여 글 지 Tf 모델 JSON에 추가 됩니다. 애니메이션 맵 확장은 [GitHub에서](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 공개적으로 설명 됩니다 (참고: 초안 확장). 모델에 확장을 추가 하려면 편집기에서 인 글 Tf 파일의 끝으로 스크롤하고 "extensionsUsed" 및 "extensions" 블록을 파일에 추가 합니다 (아직 없는 경우). "ExtensionsUsed" 섹션에서 "EXT_animation_map" 확장에 대 한 참조를 추가 하 고 "extensions" 블록에 모델의 애니메이션에 대 한 매핑을 추가 합니다.
 
 [사양에 설명 된](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 것 처럼 애니메이션 인덱스의 배열인 "애니메이션" 목록에서 "의미 체계" 문자열을 사용 하 여 애니메이션을 트리거하는 항목을 정의 합니다. 아래 예제에서는 사용자가 개체에서 gazing 때 애니메이션을 재생 하도록 지정 했습니다.
 
@@ -223,17 +223,17 @@ LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에
   }
 ```
 다음 애니메이션 트리거 의미 체계는 Windows Mixed Reality 홈에서 지원 됩니다.  
-* "항상": 애니메이션을 지속적으로 반복
-* "보관": 전체 기간 동안 반복 되는 개체는 grabbed입니다.
-* "응시": 개체를 조회 하는 동안 루프가 반복 됩니다.
+* "ALWAYS": 애니메이션을 지속적으로 반복 합니다.
+* "보유": 전체 기간 동안 반복 되는 개체는 grabbed입니다.
+* "응시": 개체를 조회 하는 동안 반복 됩니다.
 * "근접": 뷰어가 개체 근처에 있는 동안 반복 됩니다.
 * "가리키기": 사용자가 개체를 가리키는 동안 반복 됩니다.
 
 ### <a name="saving-and-exporting"></a>저장 및 내보내기
-글 어 어 모델을 변경한 후에는 해당 모델을 직접 나 편집기에서 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 어:를 선택할 수 있습니다. 대신 글 b (이진 파일)로 내보내. 
+글 어 어 모델을 변경한 후에는 해당 모델을 직접가 나 편집기에서 파일의 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 어: 글 2로 내보내기 (이진 파일)"를 선택 하 여 대신. a. b a b를 내보낼 수 있습니다. 
 
-### <a name="restrictions"></a>Restrictions
-애니메이션은 20 분 보다 길면 안 되며 36000 개 보다 많은 키 프레임을 포함할 수 없습니다 (20 분 (30FPS)). 또한 모핑 대상 기반 애니메이션을 사용 하는 경우 8192 모핑 대상 꼭 짓 점을 초과 하지 않습니다. 이러한 횟수를 초과 하면 Windows Mixed Reality 홈에서 애니메이션 자산이 지원 되지 않는 것으로 간주 됩니다. 
+### <a name="restrictions"></a>제한 사항
+애니메이션은 20 분 보다 길면 안 되며 36000 개 보다 많은 키 프레임을 포함할 수 없습니다 (20 분 (30FPS)). 또한 모핑 대상 기반 애니메이션을 사용 하는 경우 8192 모핑 대상 꼭 짓 점을 초과 하지 않습니다. 이러한 횟수를 초과 하면 Windows Mixed Reality 홈에서 애니메이션 자산이 지원 되지 않습니다. 
 
 |기능|최대값|
 |-----|-----|
@@ -251,24 +251,24 @@ Windows MR에서 렌더링 되는 장면 특성을 사용 하 여 글 글 Tf 자
 
 다음 재질 속성은 core로 된 Tf 2.0 사양에서 사용 되지만 반드시 필요한 것은 아닙니다.
 * baseColorFactor, metallicFactor, roughnessFactor
-* baseColorTexture: Dds에 저장 된 질감을 가리켜야 합니다.
-* emissiveTexture: Dds에 저장 된 질감을 가리켜야 합니다.
+* baseColorTexture: dds에 저장 된 질감을 가리켜야 합니다.
+* emissiveTexture: dds에 저장 된 질감을 가리켜야 합니다.
 * emissiveFactor
 * alphaMode
 
 다음 재질 속성은 코어 사양에서 무시 됩니다.
 * 모든 다중 UVs
-* metalRoughnessTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
+* metalRoughnessTexture: 아래에 정의 된 Microsoft 최적화 된 텍스처 압축을 대신 사용 해야 합니다.
 * normalTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
 * normalScale
-* occlusionTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
+* occlusionTexture: 아래에 정의 된 Microsoft 최적화 된 텍스처 압축을 대신 사용 해야 합니다.
 * occlusionStrength
 
 Windows MR은 기본 모드 선 및 요소를 지원 하지 않습니다. 
 
 단일 UV vertex 특성만 지원 됩니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 * [글 내보내기 및 변환기](https://github.com/KhronosGroup/glTF#converters-and-exporters)
 * [글 Tf Toolkit](https://github.com/Microsoft/glTF-Toolkit)
 * [글 Tf 2.0 사양](https://github.com/KhronosGroup/glTF/blob/master/README.md)
@@ -277,7 +277,7 @@ Windows MR은 기본 모드 선 및 요소를 지원 하지 않습니다.
 * [HoloLens 혼합 현실 질감 압축 확장 사양](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Microsoft DDS 질감 및 Tf 확장 사양](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [3D 앱 시작 관리자(UWP 앱) 구현](implementing-3d-app-launchers.md)
 * [3D 앱 시작 관리자(Win32 앱) 구현](implementing-3d-app-launchers-win32.md)
