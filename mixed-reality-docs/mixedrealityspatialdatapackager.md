@@ -2,16 +2,16 @@
 title: 혼합 현실 공간 데이터 포장기 설명서
 description: 혼합 현실 공간 데이터 포장기 사용에 대 한 설명서
 author: alfred-msft
-ms.author: alreynol
+ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
 keywords: lbe, MixedRealitySpatialDataPackager, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 331fa6dc752c64eeaa5bc2e9d1dd6b2c15049a27
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926756"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539685"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>혼합 현실 공간 데이터 포장기 설명서
 
@@ -95,7 +95,6 @@ Microsoft는 map 패키지 작성 도구를 실행 하는 MRSpatialPackagerHelpe
 -LockMap <Int32>
     0 to unlock map
     1 to lock map
-    This functionality requires an updated driver from Insider Preview Builds with the Map Locking feature
 
 -BinPath <String>
     Path to MixedRealitySpatialDataPackager.exe, default value is current directory

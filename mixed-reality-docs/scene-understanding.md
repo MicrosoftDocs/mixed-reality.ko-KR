@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926914"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539700"
 ---
 # <a name="scene-understanding"></a>장면 이해
 
@@ -19,7 +19,29 @@ ms.locfileid: "73926914"
 
 ![공간 매핑 메시, 레이블이 지정 된 평면 표면, watertight 메시](images/SUScenarios.png)
 
-이 문서는 시나리오 개요를 제공 하 고 장면 이해 및 공간 매핑 공유의 관계를 명확 하 게 설명 하기 위한 것입니다. 장면 이해의 작동 방식 및이에 대해 개발 하는 방법에 대 한 자세한 내용은 [SDK 이해 SDK 개요](scene-understanding-SDK.md) 설명서를 참조 하세요.
+이 문서는 시나리오 개요를 제공 하 고 장면 이해 및 공간 매핑 공유의 관계를 명확 하 게 설명 하기 위한 것입니다.
+
+## <a name="developing-with-scene-understanding"></a>장면 이해로 개발
+
+이 문서에서는 런타임 및 개념을 이해 하는 데만 사용 됩니다. 장면 이해를 통해 개발 하는 방법에 대 한 설명서를 찾으려는 경우 다음에 관심이 있을 수 있습니다.
+
+[장면 이해 SDK 개요](scene-understanding-SDK.md)
+
+샘플 GitHub 사이트에서 장면 이해 샘플 앱을 다운로드할 수 있습니다.
+
+[장면 이해 샘플](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+장치를 사용 하지 않고 장면 이해를 시도 하기 위해 샘플 장면에 액세스 하려는 경우 샘플 자산 폴더에는 장면이 있습니다.
+
+[장면 이해 샘플 장면](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>SDK
+
+장면 Understandiing를 개발 하는 방법에 대 한 자세한 내용은 장면 이해의 작동 방식 및이에 대해 개발 하는 방법에 대 한 세부 정보를 보려면 [장면 이해 SDK 개요](scene-understanding-SDK.md) 설명서를 참조 하세요.
+
+
+### <a name="sample"></a>샘플
+
 
 ## <a name="device-support"></a>장치 지원
 

@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, holographic, ar, vr, mr, xr, 확대 현실, 가상 현실, 설명
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926780"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539549"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?
+
+![HoloLens로 가리키기 및 커밋 2](images/02_MixedRealitySlashMixedReality.png)
 
 혼합 현실은 실제 세계와 디지털 세계를 혼합한 결과입니다. 혼합 현실은 사용자, 컴퓨터 및 환경 상호 작용의 차세대 진화이며, 지금까지의 상상력으로 제한되었던 가능성을 열어줍니다. 컴퓨터 비전, 그래픽 처리 기능, 표시 기술 및 입력 시스템의 고급 기능을 통해 가능 합니다. *혼합 현실* 이라는 용어는 원래 Paul Milgram 및 Fumio Kishino "[혼합 현실 시각적 표시의 분류](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)"에 의해 1994 용지에 도입 되었습니다. 이 문서에서는 *virtuality continuum*의 개념을 소개 하 고에 적용 되는 분류의 분류가 표시 되는 방식에 중점을 두었습니다. 그 이후에는 혼합 현실의 응용 프로그램이 표시를 초과 합니다. 또한 환경 입력, 공간 음향 및 위치도 포함 됩니다.
 

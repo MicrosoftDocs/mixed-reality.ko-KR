@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: f38145c4124a9f162e58188c6179dc29c22e864e
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
-ms.translationtype: HT
+ms.openlocfilehash: f365b0444576e03acd8dba194d7f8f24175e7bee
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491125"
+ms.locfileid: "74539520"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
@@ -119,13 +119,13 @@ SceneObjects에는 다음 중 하나를 사용할 수 있습니다.
 <tr>
 <th>SceneObjectKind</th> <th>설명</th>
 </tr>
-<tr><td>배경</td><td>SceneObject는 인식 되는 다른 종류의 장면 개체 중 하나가 <b>아닌</b> 것으로 알려져 있습니다. 이 클래스는 배경을 벽/층/천장 등이 아닌 것으로 알려진 경우 알 수 없는와 혼동 해서는 안 됩니다. unknown은 아직 분류 되지 않았습니다.</b></td></tr>
+<tr><td>백그라운드</td><td>SceneObject는 인식 되는 다른 종류의 장면 개체 중 하나가 <b>아닌</b> 것으로 알려져 있습니다. 이 클래스는 배경을 벽/층/천장 등이 아닌 것으로 알려진 경우 알 수 없는와 혼동 해서는 안 됩니다. unknown은 아직 분류 되지 않았습니다.</b></td></tr>
 <tr><td>벽</td><td>실제 벽입니다. 벽은 불균형 환경 구조로 간주 됩니다.</td></tr>
 <tr><td>평면</td><td>바닥은 한 번에 진행할 수 있는 모든 표면입니다. 참고: 계단은 층이 아닙니다. 또한이 층은 walkable 표면을 가정 하므로 단일 층을 명시적으로 가정 하지 않습니다. 다중 수준 구조, 경사 등 ... 모두 바닥으로 분류 되어야 합니다.</td></tr>
 <tr><td>Ceiling</td><td>방의 위쪽 표면입니다.</td></tr>
 <tr><td>플랫폼</td><td>Holograms를 놓을 수 있는 커다란 플랫 표면입니다. 이는 테이블, 싱크대 및 기타 넓은 가로 표면을 나타내는 경향이 있습니다.</td></tr>
 <tr><td>World</td><td>레이블 지정과 무관 한 기하학적 데이터의 예약 된 레이블입니다. EnableWorldMesh 업데이트 플래그를 설정 하 여 생성 된 메시는 세계로 분류 됩니다.</td></tr>
-<tr><td>알 수 없음</td><td>이 장면 개체는 아직 분류 되어 있으며 종류를 할당 해야 합니다. 이 개체는 아무것도 될 수 있으므로 배경과 혼동 해서는 안 됩니다. 시스템은 아직 충분히 강력한 분류로 제공 되지 않습니다.</td></tr>
+<tr><td>Unknown</td><td>이 장면 개체는 아직 분류 되어 있으며 종류를 할당 해야 합니다. 이 개체는 아무것도 될 수 있으므로 배경과 혼동 해서는 안 됩니다. 시스템은 아직 충분히 강력한 분류로 제공 되지 않습니다.</td></tr>
 </tr>
 </table>
 
@@ -265,7 +265,7 @@ foreach (var mesh in firstFloor.Meshes)
 
 장면 이해는 변환을 처리할 때 일반적인 3D 장면 표현과 맞추는 시도를 만들었습니다. 따라서 각 장면은 가장 일반적인 3D 환경 표현과 마찬가지로 단일 좌표계로 한정 됩니다. SceneObjects는 각 위치를 해당 좌표계 내의 위치와 방향으로 제공 합니다. 응용 프로그램이 단일 원본에서 제공 하는 작업의 제한을 스트레치 하는 장면을 처리 하는 경우 SceneObjects에 SpatialAnchors에 앵커를 적용 하거나 여러 개의 장면을 생성 하 고 함께 병합할 수 있습니다. OriginSpatialGraphNodeId에 정의 된 하나의 NodeId 지역화 된 원본입니다.
 
-예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 `System.Numerics.Matrix4x4`와 `UnityEngine.Matrix4x4`간 변환을 위한 `.ToUnity()` 확장 메서드는 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) and [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요.
+예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 대 한 자세한 내용은 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 및 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 에서 Windows 인식 api 및 [혼합 현실 네이티브 개체](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 에 대 한 자세한 내용을 참조 하세요. `System.Numerics.Matrix4x4`와 `UnityEngine.Matrix4x4`를 변환 하기 위한 `.ToUnity()` 확장 메서드입니다.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -368,7 +368,20 @@ mesh.GetVertexPositions(positions);
 
 이 시점에서 런타임 및 SDK의 핵심 구성 요소를 이해 해야 합니다. 강력 하 고 복잡 한 점은 액세스 패턴, 3D 프레임 워크와의 상호 작용, 공간 계획, 방 분석, 탐색, 물리 등과 같은 고급 작업을 수행 하기 위해 이러한 Api 위에 작성할 수 있는 도구입니다. 시나리오를 표현할 수 있도록 적절 한 방향으로 안내 하는 샘플에서이를 캡처해야 합니다. 주소를 지정 하지 않는 샘플/시나리오가 있는 경우 microsoft에서 알려 주시기 바랍니다. 필요한 내용을 문서화/프로토타입으로 시도 합니다.
 
-## <a name="see-also"></a>참고자료
+### <a name="where-can-i-get-sample-code"></a>샘플 코드는 어디에서 얻을 수 있나요?
+
+Unity 샘플 코드에 대 한 장면 이해는 [Unity 샘플 페이지](https://github.com/sceneunderstanding-microsoft/unitysample) 페이지에서 찾을 수 있습니다. 이 응용 프로그램을 사용 하면 장치와 통신 하 여 다양 한 장면 개체를 렌더링 하거나, PC에서 serialize 된 장면을 로드 하 고, 장치 없이 장면 이해를 경험할 수 있습니다.
+
+### <a name="where-can-i-get-sample-scenes"></a>샘플 장면을 어디에서 얻을 수 있나요?
+
+HoloLens2 있는 경우 ComputeSerializedAsync의 출력을 파일에 저장 하 고 사용자의 편의를 위해 역직렬화 하 여 캡처한 장면을 저장할 수 있습니다. 
+
+HoloLens2 장치가 없지만 장면 이해를 재생 하려는 경우에는 미리 캡처한 장면을 다운로드 해야 합니다. 장면 이해 샘플은 현재 사용자의 편의를 위해 다운로드 하 여 사용할 수 있는 직렬화 된 장면과 함께 제공 됩니다. 여기에서 찾을 수 있습니다.
+
+[장면 이해 샘플 장면](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+## <a name="see-also"></a>참고 항목
 
 * [공간 매핑](spatial-mapping.md)
 * [장면 이해](scene-understanding.md)
+* [Unity 샘플](https://github.com/sceneunderstanding-microsoft/unitysample)
