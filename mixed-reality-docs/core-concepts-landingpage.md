@@ -7,14 +7,17 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, 디자인, 앱 패턴, 컨트롤, 스타일, HoloLens, 상호 작용, UX 요소, 동작, 빌딩 블록
-ms.openlocfilehash: 5f5f97d3f4a34e0d88c781df494a4afc2ee0b992
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d8f904183e51943246613e99a805bee1518523c8
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439434"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539534"
 ---
 # <a name="core-concepts-overview"></a>핵심 개념 개요
+
+![수동으로 직접 조작](images/05_CoreConcepts.png)
+
 
 환경 디자인을 살펴보기 전에 몇 가지 핵심 개념을 이해 하는 것이 좋습니다. 아래 각 항목은 사용자를 위해 만드는 혼합 현실 환경의 품질에 근본적으로 영향을 주는 기본 요소입니다. 
 

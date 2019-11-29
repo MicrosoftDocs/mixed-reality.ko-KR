@@ -83,7 +83,7 @@ for (auto& sourceState : sourceStates)
 }
 ```
 
-각 SpatialInteractionSource에는 새 원본을 식별 하 고 기존 소스와 프레임 간에 상관 관계를 지정 하는 데 사용할 수 있는 ID가 있습니다.  시계를 떠날 때마다 새 ID가 할당 되 고, 컨트롤러 Id는 세션 기간 동안 정적 상태로 유지 됩니다.  [Sourcedetected](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcedetected)와 [SourceLost](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcelost)같은 SpatialInteractionManager의 이벤트를 사용 하 여 장치 보기를 시작 하거나 떠날 때 또는 동작 컨트롤러를 설정/해제 하거나 페어링된 경우에 반응할 수 있습니다.
+각 SpatialInteractionSource에는 새 원본을 식별 하 고 기존 소스와 프레임 간에 상관 관계를 지정 하는 데 사용할 수 있는 ID가 있습니다.  시계를 떠날 때마다 새 ID가 할당 되 고, 컨트롤러 Id는 세션 기간 동안 정적 상태로 유지 됩니다.  [Sourcedetected](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcedetected) 와 같은 SpatialInteractionManager의 이벤트를 사용 하 여 장치 [](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcelost)보기를 시작 하거나 떠날 때 또는 동작 컨트롤러를 설정/해제 하거나 페어링된 경우에 반응할 수 있습니다.
 
 ### <a name="predicted-vs-historical-poses"></a>예측 및 기록 포즈
 GetDetectedSourcesAtTimestamp에 timestamp 매개 변수가 있습니다. 이를 통해 예측 또는 기록 되는 상태 및 포즈 데이터를 요청 하 여 다른 입력 소스와 공간 상호 작용의 상관 관계를 지정할 수 있습니다. 예를 들어 현재 프레임에서 손으로의 위치를 렌더링할 때 [HolographicFrame](https://docs.microsoft.com//uwp/api/windows.graphics.holographic.holographicframe)에서 제공 하는 예측 타임 스탬프를 전달할 수 있습니다. 이를 통해 시스템은 렌더링 된 프레임 출력과 긴밀 하 게 일치 하는 손 위치를 전달 하 여 인식 대기 시간을 최소화 합니다.
@@ -101,14 +101,14 @@ SpatialInteractionSource API는 다양 한 기능을 갖춘 컨트롤러 및 핸
 
 | 속성 | 설명 | HoloLens (첫 번째 gen) 제스처 | 동작 컨트롤러 | 트레일러 식|
 |--- |--- |--- |--- |--- |
-| [SpatialInteractionSource::**손**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | 오른쪽 또는 왼쪽/컨트롤러입니다. | 지원되지 않음 | 지원함 | 지원함 |
+| [SpatialInteractionSource::**손**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | 오른쪽 또는 왼쪽/컨트롤러입니다. | 지원되지 않음 | 지원됨 | 지원됨 |
 | [SpatialInteractionSourceState::**Isselectpressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | 기본 단추의 현재 상태입니다. | 공기 탭 | 트리거 | 완화 공기 탭 (수직으로) |
 | [SpatialInteractionSourceState::**IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | 잡기 단추의 현재 상태입니다. | 지원되지 않음 | 잡기 단추 | 손가락으로 나 폐쇄 |
 | [SpatialInteractionSourceState::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | 메뉴 단추의 현재 상태입니다.    | 지원되지 않음 | 메뉴 단추 | 지원되지 않음 |
 | [SpatialInteractionSourceLocation::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | 컨트롤러에서 손 모양 또는 그립 위치의 XYZ 위치입니다. | 팜 위치 | 그립 포즈 위치 | 팜 위치 |
 | [SpatialInteractionSourceLocation::**Orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | 컨트롤러에서 손 방향 또는 그립 포즈를 나타내는 4 원수입니다. | 지원되지 않음 | 그립 포즈 방향 | 팜 방향 |
-| [SpatialPointerInteractionSourcePose::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | 포인팅 광선의 원점입니다. | 지원되지 않음 | 지원함 | 지원함 |
-| [SpatialPointerInteractionSourcePose::**Forwarddirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | 포인팅 광선의 방향입니다. | 지원되지 않음 | 지원함 | 지원함 |
+| [SpatialPointerInteractionSourcePose::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | 포인팅 광선의 원점입니다. | 지원되지 않음 | 지원됨 | 지원됨 |
+| [SpatialPointerInteractionSourcePose::**Forwarddirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | 포인팅 광선의 방향입니다. | 지원되지 않음 | 지원됨 | 지원됨 |
 
 일부 속성은 일부 장치에서 사용할 수 없으며 API는이에 대 한 테스트 수단을 제공 합니다. 예를 들어 [SpatialInteractionSource:: Isgrsupported](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) 속성을 검사 하 여 원본에서 판단 동작을 제공 하는지 여부를 확인할 수 있습니다.
 
@@ -228,7 +228,7 @@ SpatialGestureRecognizer를 사용 하려면 SpatialInteractionManager의 [Inter
 
 HoloLens (첫 번째 gen)에서 상호 작용 및 제스처는 일반적으로 직접 위치에서 직접 렌더링 하거나 상호 작용 하는 대신 사용자의 헤드 응시에서 대상으로 지정 해야 합니다. 상호 작용이 시작 된 후 조작 또는 탐색 제스처와 같이 손의 상대 동작을 사용 하 여 제스처를 제어할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 * [DirectX의 헤드 및 눈 응시](gaze-in-directx.md)
 * [직접 조작 입력 모델](direct-manipulation.md)
 * [지점 및 커밋 입력 모델](point-and-commit.md)
