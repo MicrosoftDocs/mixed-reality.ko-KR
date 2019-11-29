@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: 1a5e4fcbb7704db6df59db9d01bb72a5b153b576
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438043"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539628"
 ---
 # <a name="get-started-with-mixed-reality"></a>Mixed Reality 시작
 
@@ -55,7 +55,7 @@ ms.locfileid: "73438043"
 혼합 현실을 처음 접하는 분들을 위해 혼합 현실이란 무엇이며 어떤 기능이 있는지 알아봅니다.
 
 
-![혼합 현실 스펙트럼](images/RWtpZ1.jpeg)
+![사람 손에 앉은 가상 벌새](images/01_MixedReality.png)
 
 ## <a name="what-is-mixed-reality"></a>혼합 현실이란?
 

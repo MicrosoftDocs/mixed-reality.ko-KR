@@ -7,16 +7,18 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, 디자인, 앱 패턴, 컨트롤, 스타일, HoloLens, 상호 작용, UX 요소, 동작, 빌딩 블록
-ms.openlocfilehash: c454190cf376f39974efec1ea416afbdb9db1a10
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143187"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539659"
 ---
 # <a name="ux-elements-overview"></a>UX 요소 개요
 
-## <a name="style"></a>스타일
+![Holographic 단추와 상호 작용 하는 HoloLens 2 사용자](images/06_AppPatterns.png)
+
+## <a name="style"></a>스타일을
 
 :::row:::
     :::column:::
