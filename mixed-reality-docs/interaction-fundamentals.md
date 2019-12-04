@@ -7,14 +7,16 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 응시, 응시 타기팅, 상호 작용, 디자인, HoloLens, MMR, 멀티모달
-ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437978"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539730"
 ---
 # <a name="introducing-instinctual-interactions"></a>직관적인 상호 작용 소개
+
+![수동으로 원거리 조작](images/04_InteractionFundamentals.png)
 
 간단하고 직관적인 상호 작용이라는 철학은 MR(혼합 현실) 플랫폼 전반에 얽혀 있습니다. 애플리케이션 디자이너와 개발자가 고객에게 쉽고 직관적인 상호 작용을 제공할 수 있도록 하는 3단계를 살펴보았습니다. 
 
