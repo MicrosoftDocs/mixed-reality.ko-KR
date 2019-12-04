@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트, 핵심 개념, 상호 작용
-ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435710"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539590"
 ---
 # <a name="start-designing-and-prototyping"></a>디자인 및 프로토타입 생성 시작
 
 
-![핵심 개념](images/text_in_unity_viewingangle.jpg)
+![3D 메시 아트](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -98,6 +98,10 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 ### <a name="clear-and-readable-typographytypographymd"></a>[명확하고 읽기 가능한 입력 체계](typography.md)
 2D 화면의 입력 체계처럼 목표는 명확하고 읽기 쉬운 것입니다. 혼합 현실의 3차원 측면에서는 텍스트와 사용자 환경 전체에 훨씬 더 큰 영향을 줄 수 있는 기회가 있습니다.
 
+<br>
+
+### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[혼합 현실용 UX 요소](app-patterns-landingpage.md)
+혼합 현실에서 공간 상호 작용 및 UI의 기본 구성 요소에 대해 알아봅니다.
 <br>
 
 

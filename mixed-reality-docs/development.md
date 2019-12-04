@@ -8,17 +8,16 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: b37a9261f56b19edb3dde11cbeedc40a6e503e35
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435688"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539584"
 ---
 # <a name="learn-the-tools-and-architecture"></a>도구 및 아키텍처 알아보기
 
-
-![Mixed Reality Academy에서 자료를 사용하는 팀](images/Development_Hero.png)
+![추상 3D 구체](images/07_Development.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 
