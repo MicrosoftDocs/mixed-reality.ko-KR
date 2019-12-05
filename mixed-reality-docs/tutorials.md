@@ -8,14 +8,16 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
-ms.openlocfilehash: 6041df2bbd5d55d8c72dfd07e40dca34e40fdac9
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491190"
+ms.locfileid: "74539637"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
+
+![HoloLens 2 사용자](images/08_Tutorials.png)
 
 현재 모든 자습서와 샘플 앱은 Unity를 기반으로 합니다.  다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
 
