@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: fb7074849c5a07a95b370b5bfa75228fac36ba5b
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: b615f1135f5d2947f8f718e080ef45a3c1fcc576
+ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105962"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830843"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
 
@@ -40,7 +40,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
-2. "ASALearningmodule" 장면을 두 번 클릭 하 여 미리 정의 된 항목이 새 장면과 함께 표시 되는지 확인 합니다. 
+2. "ASALearningmodule" 장면을 두 번 클릭 하 여 미리 정의 된 항목이 새 장면에 표시 되는지 확인 합니다. 
 3. 혼합 현실 개발을 위한 장면을 구성 합니다. 
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
@@ -54,9 +54,9 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 ![module2chapter1step4im](images/module2chapter1step4im.PNG)
 
-이제는 혼합 현실에 대해 장면이 구성 됩니다. 장면을 저장 해야 합니다 (ctrl/command + S를 사용 하 여이 작업을 수행 하거나 파일을 클릭 한 다음 저장을 클릭). 
+이제는 혼합 현실에 대해 장면이 구성 됩니다. 장면을 저장 해야 합니다 .이 작업은 제어/명령 + S를 사용 하거나 파일을 클릭 한 다음 저장을 클릭 합니다. 
 
-5. 1 단계에서 다운로드 한 [Azure 공간 앵커 v 1.1.0](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v1.1.0/AzureSpatialAnchors.unitypackage) unity 패키지를 가져옵니다. 이 경우 자산을 클릭 하 고 패키지 가져오기로 이동 합니다. 그런 다음 사용자 지정 패키지 ...를 클릭 합니다. 컴퓨터 파일이 열립니다. 이렇게 하면 Azure 공간 앵커 패키지를 저장 한 위치를 찾아서 선택 합니다. 그런 다음 열기를 클릭 합니다.
+5. 1 단계에서 다운로드 한 [Azure 공간 앵커 v 1.1.0](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v1.1.0/AzureSpatialAnchors.unitypackage) unity 패키지를 가져옵니다. 이렇게 하려면 자산을 클릭 하 고, 패키지 가져오기로 이동한 다음, 사용자 지정 패키지 ...를 클릭 합니다. 컴퓨터 파일이 열립니다. 이렇게 하면 Azure 공간 앵커 패키지를 저장 한 위치를 찾아서 선택 합니다. 그런 다음 열기를 클릭 합니다.
 
 ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 
@@ -72,7 +72,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 > 참고:이 모듈의 뒷부분에 더 많은 자산이 필요할 수 있습니다. 이 시점에서 언급 된 자산을 가져오려면 다음 단계를 수행 합니다. 
 
-7. 다른 이전 패키지를 가져오는 것과 동일한 단계를 사용 하 여 [global.asa 모듈 팩 1.3.1](https://github.com/Developer-OI/MixedRealityLearning/releases/download/ASA_1.3/ASAModuleAssets_1.3.1.unitypackage) 를 가져옵니다.
+7. 이전 패키지를 가져오는 것과 동일한 단계를 사용 하 여 [global.asa 모듈 팩 1.3.1](https://github.com/Developer-OI/MixedRealityLearning/releases/download/ASA_1.3/ASAModuleAssets_1.3.1.unitypackage)를 가져옵니다.
 
 ### <a name="configuring-your-scene"></a>장면 구성
 
@@ -88,30 +88,30 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 참고: ButtonParent를 장면에 추가 하면 TMP 자산을 가져올지 묻는 팝업이 표시 됩니다. "TMP Essentials"를 가져옵니다. 그러면 장면에 많은 글꼴 텍스트가 표시 되 면 ButtonParent 개체를 삭제 하 고 ASAmoduleAssets 폴더에서 다시 추가 합니다.
 
-참고: HoloLens에서 디버그 로그를 확인 하려는 경우 DebugWindow prefab을 ASAModuleAssets 폴더에서 장면으로 끌어서 놓을 수 있습니다. DebugWindow inspector 패널에서 DebugWindowMessaging 스크립트를 연결 하 고 디버그 창 사용 옵션을 사용 하도록 설정 합니다. 그런 다음 DebugWindow prefab를 Debugwindow empty 필드로 끌어 놓습니다. 적절 한 경우에는 DebugWindow 위치를 조정할 수도 있습니다.
+참고: HoloLens에서 디버그 로그를 확인 하려는 경우 ASAModuleAssets 폴더에서 DebugWindow prefab를 장면으로 끌어서 놓을 수 있습니다. DebugWindow inspector 패널에서 DebugWindowMessaging 스크립트를 연결 하 고 디버그 창 사용 옵션을 사용 하도록 설정 합니다. 그런 다음 DebugWindow prefab를 Debugwindow empty 필드로 끌어 놓습니다. 적절 한 경우에는 DebugWindow 위치를 조정할 수도 있습니다.
 
-10. 장면을 확대 하려면 계층에서 부모 앵커를 두 번 클릭 하 고 보기를 조정 하 여 필요에 따라 전체 장면을 확인 합니다. 현재 ParentAnchor는 데모용 으로만 사용 되는 색이 지정 된 큐브입니다. 결국 큐브를 숨기고 콘텐츠를 ParentAnchor의 자식으로 저장 합니다. 
+10. 장면을 확대 하려면 계층의 부모 앵커를 두 번 클릭 하 고 보기를 조정 하 여 필요에 따라 전체 장면을 확인 합니다. 현재 ParentAnchor는 데모용 으로만 사용 되는 색이 지정 된 큐브입니다. 결국 큐브를 숨기고 콘텐츠를 ParentAnchor의 자식으로 저장 합니다. 
 
-11. 이제 장면 작동에 대 한 단추를 구성할 수 있습니다. 이 경우 ButtonParent prefab를 확장 하 고 레이블이 지정 된 여러 단추를 확인 합니다. 이러한 단추는 MRTK의 보도 Sablebutton prefabs에서 만들어집니다. [기본 모듈](mrlearning-base-ch2.md)에서 보도를 만드는 방법에 대해 자세히 알아보세요. 이러한 단추가 작동 하려면 사용자가 개별 단추를 누르거나 선택할 때 트리거되는 이벤트를 추가 해야 합니다. 
+11. 이제 장면을 작동 하기 위한 단추를 구성 하겠습니다. 이를 위해 ButtonParent prefab를 확장 하면 MRTK의 기능 prefabs에서 생성 되는 레이블이 지정 된 단추가 몇 개 표시 됩니다. [기본 모듈](mrlearning-base-ch2.md)에서 보도를 만드는 방법에 대해 자세히 알아보세요. 이러한 단추가 작동 하려면 사용자가 개별 단추를 누르거나 선택할 때 트리거되는 이벤트를 추가 해야 합니다. 
 
-- StartAzureSession 라는 단추에 대해 단추 누름 이벤트 트리거 뿐만 아니라 클릭 시 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 아래 스크린샷에 표시 된 것 처럼 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 StartAzureSession () 메서드를 할당 합니다.
+- StartAzureSession 라는 단추에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. 다음 스크린샷에 표시 된 것 처럼 ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 StartAzureSession () 메서드를 할당 합니다.
 - ![module2chapter1step10aim](images/module2chapter1step10aim.PNG)
 
 ![module2chapter1step10bim](images/module2chapter1step10bim.PNG)
 
 ![module2chapter1step10cim](images/module2chapter1step10fim.PNG)
 
-- 단추 이름 StopAzureSession에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 StopAzureSession () 메서드를 할당 합니다.
+- StopAzureSession 이라는 단추에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 StopAzureSession () 메서드를 할당 합니다.
 
-- CreateAnchor 라는 단추에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 CreateAzureAnchor () 메서드를 할당 합니다.  **이후에 ParentAnchor를 다시 다음 빈 "게임 개체" 필드로 끌어 옵니다.**
+- CreateAnchor 라는 단추에 대해 단추 누름 이벤트 트리거 뿐만 아니라 Click Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 CreateAzureAnchor () 메서드를 할당 합니다.  **이후에 ParentAnchor를 다시 다음 빈 "게임 개체" 필드로 끌어 옵니다.**
 
-- 이라는 단추의 경우 앵커 검색을 시작 하 고, Click Click 이벤트 트리거와 함께 단추 누르기에서 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 FindAzureAnchor () 메서드를 할당 합니다.
+- 앵커를 찾는 시작 단추에 대해 Click Click 이벤트 트리거와 함께 단추 누름 이라는 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 FindAzureAnchor () 메서드를 할당 합니다.
 
-- DeleteAzureAnchor 라는 단추에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 DeleteAzureAnchor () 메서드를 할당 합니다.  
+- DeleteAzureAnchor 라는 단추에 대해 단추 누름 이벤트 트리거 뿐만 아니라 Click Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 DeleteAzureAnchor () 메서드를 할당 합니다.  
 
-- 이라는 단추의 경우 로컬 앵커를 삭제 하 고 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 RemoveLocalAnchor () 메서드를 할당 합니다. **이후에 ParentAnchor 개체를 다시 다음 빈 "게임 개체" 필드로 끌어 옵니다.**
+- 로컬 앵커 삭제 단추에 대해 단추 누름 이벤트 트리거와 On Click 이벤트 트리거와 함께 새 이벤트를 만듭니다. ParentAnchor 개체를 빈 필드로 끌고 ParentAnchor 개체의 ASAmoduleScript 구성 요소에서 RemoveLocalAnchor () 메서드를 할당 합니다. **이후에 ParentAnchor 개체를 다시 다음 빈 "게임 개체" 필드로 끌어 옵니다.**
 
-12. Azure 공간 앵커를 설정 하려면 자산 폴더의 AzureSpatialAnchorsPlugin 폴더로 이동한 다음 예-> Resources-> AzureSpatialAnchorsDemoConfig file로 이동 합니다. 검사기 패널에서 이전에 만든 Azure 계정 ID 및 계정 키를 추가 합니다. 아직 만들지 않았거나 포함 하지 않은 경우 [필수 구성 요소](https://docs.microsoft.com//azure/spatial-anchors/quickstarts/get-started-unity-hololens)를 따르세요. 
+12. Azure 공간 앵커를 설정 하려면 자산 폴더의 AzureSpatialAnchorsPlugin 폴더로 이동 하 고 예제-> 리소스-> AzureSpatialAnchorsDemoConfig 파일로 이동 합니다. 검사기 패널에서 이전에 만든 Azure 계정 ID 및 계정 키를 추가 합니다. 만든 적이 없거나 아직 없는 경우 [필수 구성 요소](https://docs.microsoft.com//azure/spatial-anchors/quickstarts/get-started-unity-hololens)를 따르세요. 
 
   ![module2chapter1step13im](images/module2chapter1step13im.PNG)
 
@@ -131,41 +131,41 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
     ![mrlearning-ch1-3-step7](images/mrlearning-asa-ch1-3-step7.jpg)
 
-    > 참고: 빌드가 실패 하는 경우 다시 빌드를 시도 하거나 Unity를 다시 시작 하 고 다시 빌드합니다. "Error: CS0246 =" XX "형식 또는 네임 스페이스 이름을 찾을 수 없는 오류가 표시 되 면 using 지시문 또는 어셈블리 참조가 있는지 확인 하십시오. [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>) 를 설치 해야 할 수 있습니다. 
+    > 참고: 빌드가 실패 하는 경우 다시 빌드를 시도 하거나 Unity를 다시 시작 하 고 다시 빌드합니다. "Error: CS0246 =" XX "형식 또는 네임 스페이스 이름을 찾을 수 없습니다. (using 지시문 또는 어셈블리 참조가 있는지 여부)와 같은 오류가 표시 되는 경우 [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>) 를 설치 해야 할 수 있습니다. 
 
 
-8. 빌드에 성공한 후에도 아래와 같이 몇 가지 오류가 발생할 수 있지만 빌드가 성공한 경우 무시 하 고 다음 단계를 진행할 수 있습니다.
+8. 빌드가 성공적으로 수행 된 후에도 아래와 같이 몇 가지 오류가 발생할 수 있습니다. 그러나 빌드가 성공한 경우이를 무시 하 고 다음 단계를 진행할 수 있습니다.
 
     ![mrlearning-ch1-3-step7B](images/mrlearning-asa-ch1-3-step7B.png)
 
     
 
-9. 빌드가 완료된 후 새로 빌드한 애플리케이션 파일을 포함하는 새로 만든 폴더를 엽니다. "MixedRealityBase" 솔루션을 두 번 클릭 하거나 해당 하는 이름을 두 번 클릭 합니다. 프로젝트에 대체 이름을 사용 하 여 Visual Studio에서 솔루션 파일을 연 경우
+9. 빌드가 완료된 후 새로 빌드한 애플리케이션 파일을 포함하는 새로 만든 폴더를 엽니다. 프로젝트에 대 한 대체 이름을 사용 하 여 Visual Studio에서 솔루션 파일을 여는 경우 "MixedRealityBase" 솔루션이 나 해당 이름을 두 번 클릭 합니다.
 
-    > 참고: 빌드 폴더 내에 있는 .sln 파일과 혼동 하지 않도록 해당 폴더 외부에 비슷한 이름의 .sln 파일이 있기 때문에 새로 만든 폴더 (즉, 이전 단계의 명명 규칙에 따라 응용 프로그램 폴더)를 열어야 합니다.
+    > 참고: 앞의 단계에서 명명 규칙을 준수 하는 경우 새로 만든 폴더 (즉, 응용 프로그램 폴더)를 열어야 합니다 .이 폴더에는 빌드 폴더 내에 있는 .sln 파일과 혼동 하지 않는 유사한 이름의 .sln 파일이 있습니다.
 
     ![mrlearning-ch1-3-step8](images/mrlearning-asa-ch1-3-step8.jpg)
 
-    > 참고: Visual Studio에서 새 구성 요소를 설치 하도록 요청 하는 경우 잠시 시간을 내 서 모든 필수 구성 요소가 ["도구 설치" 페이지](install-the-tools.md) 에 특정 한 대로 설치 되었는지 확인 하세요.
+    > 참고: Visual Studio에서 새 구성 요소를 설치 하도록 요청 하는 경우 모든 필수 구성 요소를 ["도구 설치" 페이지](install-the-tools.md) 에 특정 한 대로 설치 해야 합니다.
 
 
 9. USB 케이블을 사용하여 PC에 HoloLens 2를 연결합니다. 이 단원 지침에서는 HoloLens 2 장치를 사용 하 여 테스트를 배포할 것으로 가정 하지만 [hololens 2 에뮬레이터](using-the-hololens-emulator.md) 에 배포 하거나 [테스트용 로드에 대 한 앱 패키지](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>) 를 만들도록 선택할 수도 있습니다.
 
-10. 디바이스로 빌드하기 전에 디바이스가 개발자 모드인지 확인합니다. 이번에 처음으로 HoloLens 2에 배포하는 경우리면 Visual Studio에서 pin 사용하여 HoloLens 2에 연결하도록 요구할 수 있습니다. 개발자 모드를 사용 하도록 설정 하거나 Visual Studio와 쌍을 설정 해야 하는 경우 [다음 지침](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) 을 따르세요.
+10. 장치를 빌드하기 전에 개발자 모드에 있는지 확인 합니다. HoloLens 2에 처음으로 배포 하는 경우 Visual Studio는 HoloLens 2를 PIN과 페어링 하도록 요청할 수 있습니다. 개발자 모드를 사용 하도록 설정 하거나 Visual Studio와 쌍을 설정 해야 하는 경우 [다음 지침](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) 을 따르세요.
 
 11. ARM 아키텍처 뿐만 아니라 릴리스 구성을 선택 하 여 HoloLens 2를 빌드하기 위해 Visual Studio를 구성 합니다.
 
     ![mrlearning-ch1-3-step11](images/mrlearning-asa-ch1-3-step11.jpg)
 
 
-12. 마지막 단계는 디버그 > 디버깅 하지 않고 시작을 선택 하 여 장치를 빌드하는 것입니다. 디버깅 하지 않고 시작을 선택 하면 Visual Studio에 디버깅 정보가 표시 되지 않고 빌드에 성공 했을 때 응용 프로그램이 장치에서 즉시 시작 됩니다. 따라서 HoloLens 2에서 애플리케이션이 실행되는 동안 USB 케이블 연결을 끊어도 애플리케이션이 중지되지 않습니다. 또한 응용 프로그램을 자동으로 시작 하지 않고도 빌드 > 솔루션 배포를 선택 하 여 장치에 배포할 수 있습니다.
+12. 마지막 단계는 디버그>디버깅하지 않고 시작을 선택하여 디바이스로 빌드하는 것입니다. 디버깅 하지 않고 시작을 선택 하면 Visual Studio에 디버깅 정보가 표시 되지 않고 빌드에 성공 했을 때 응용 프로그램이 장치에서 즉시 시작 됩니다. 따라서 HoloLens 2에서 애플리케이션이 실행되는 동안 USB 케이블 연결을 끊어도 애플리케이션이 중지되지 않습니다. 또한 응용 프로그램을 자동으로 시작 하지 않고도 빌드 > 솔루션 배포를 선택 하 여 장치에 배포할 수 있습니다.
 
     ![mrlearning-ch1-3-step12](images/mrlearning-asa-ch1-3-step12.jpg)
 
->참고: Azure 공간 앵커는 인터넷을 사용 하 여 앵커 데이터를 저장 하 고 로드 하므로, 사용자의 장치를 인터넷에 연결 하 여 사용자 앱을 테스트 하기 전에 장치를 인터넷에 연결 해야 합니다.
+>참고: Azure 공간 앵커는 인터넷을 사용 하 여 앵커 데이터를 저장 하 고 로드 하므로, 사용자의 컴퓨터를 테스트 하기 전에 장치가 인터넷에 연결 되어 있는지 확인 합니다.
 
 13. 지침을 따릅니다. 
-    응용 프로그램이 장치에서 실행 되는 경우 화면의 지시를 따릅니다. 아래 단계에 해당 하는 장면 단추를 누릅니다. 이전 단계에서 설명한 대로 디버그 창을 추가한 경우 개별 단추 누르기와 Azure 공간 앵커와 관련 된 개별 작업의 진행 상황에 대 한 피드백을 볼 수 있습니다.
+    응용 프로그램이 장치에서 실행 되는 경우 화면의 지시를 따릅니다. 아래 단계에 해당 하는 장면 단추를 누릅니다. 이전 단계에서 설명한 대로 디버그 창을 추가한 경우 개별 단추 누르기에 대 한 피드백 및 Azure 공간 앵커와 관련 된 개별 작업의 진행 상황을 볼 수 있습니다.
 
 ![module2chapter1step10eim](images/module2chapter1step10eim.PNG)
     
@@ -194,7 +194,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 
 이전 섹션에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 큐브를 사용 하 여 연결 된 앵커를 사용 하 여 부모 게임 개체를 나타내고 시각화 했습니다. 이 섹션에서는 ParentAnchor 개체의 자식으로 배치 하 여 전체 환경을 고정 하는 방법에 대해 알아봅니다. 이 예에서는 [기본 모듈 단원 6](mrlearning-base-ch6.md)에서 만든 음력 모듈 어셈블리 데모 응용 프로그램을 사용 합니다.
 
-1. 아래 이미지에 표시 된 것 처럼 "로켓 실행 프로그램 완료" prefab를 검색 하 여 계층 구조에 개체의 자식으로 끌어 놓습니다.
+1. "로켓 시작 관리자 완료" prefab을 검색 하 여 계층 구조에 개체의 자식으로 끌어 놓습니다 (아래 이미지 참조).
 
 ![module2chapter1step11](images/module2chapter1step11im.PNG)
 
@@ -205,7 +205,7 @@ HoloLens 2 자습서의 두 번째 모듈을 시작 합니다. 시작 하기 전
 > 참고: 환경을 둘러싸는 경계 상자를 설정/해제 하는 단추를 사용 하 고,이 단계에서 사용 되는 큐브와 같이 위치 조정 개체를 사용 하 고, 위치 및 회전을 사용 하는 등 환경에 대 한 다양 한 사용자 환경 흐름을 제공 합니다. gizmo 그리려면.
 
 ## <a name="congratulations"></a>축하합니다.
-이 자습서에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 이 단원에서는 Azure 세션을 시작 및 중지 하 고 단일 장치에서 azure 앵커를 만들고, 업로드 하 고, 다운로드 하는 데 필요한 다양 한 단계를 살펴볼 수 있는 몇 가지 단추를 제공 했습니다. 다음 단원에서는 응용 프로그램을 다시 시작한 후에도 검색을 위해 HoloLens 2에 Azure 앵커 Id를 저장 하는 방법에 대해 알아봅니다. 시리즈를 사용 하는 동안에는 여러 장치 간에 앵커 Id를 전송 하 여 공간 맞춤을 수행 하는 방법과 공유 자습서의 일부로 서 사용자가 사용할 수 있는 다중 사용자 공유 세션에 대해 알아봅니다.
+이 자습서에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 이 단원에서는 Azure 세션을 시작 및 중지 하 고 단일 장치에서 azure 앵커를 만들고 업로드 하 고 다운로드 하는 데 필요한 여러 단계를 살펴볼 수 있는 몇 가지 단추를 제공 했습니다. 다음 단원에서는 응용 프로그램을 다시 시작한 후에도 검색을 위해 HoloLens 2에 Azure 앵커 Id를 저장 하는 방법에 대해 알아봅니다. 시리즈를 사용 하는 동안 여러 장치 간에 앵커 Id를 전송 하 여 공간 맞춤을 수행 하 고, 공유 자습서의 일부로 서, 다중 사용자 공유 세션에 대해 알아보는 방법도 알아봅니다.
 
 [다음 단원: 2. Azure 공간 앵커 저장, 검색 및 공유](mrlearning-asa-ch2.md)
 
