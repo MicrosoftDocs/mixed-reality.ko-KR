@@ -5,17 +5,19 @@ author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, holograms, 렌더링, 3D 그래픽, HolographicFrame, 렌더링 루프, 업데이트 루프, 연습, 샘플 코드
-ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Windows Mixed Reality, holograms, 렌더링, 3D 그래픽, HolographicFrame, 렌더링 루프, 업데이트 루프, 연습, 샘플 코드, Direct3D
+ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629031"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940871"
 ---
 # <a name="rendering-in-directx"></a>DirectX에서 렌더링
 
 Windows Mixed Reality는 DirectX를 기반으로 하 여 사용자를 위한 풍부한 3D 그래픽 환경을 생성 합니다. 렌더링 추상화는 DirectX 바로 위에 있으며 시스템에서 예측 하는 것 처럼 holographic 장면에서 하나 이상의 관찰자의 위치와 방향에 대 한 앱 이유를 허용 합니다. 그러면 개발자는 각 카메라를 기준으로 holograms을 찾을 수 있습니다. 그러면 사용자가 이동할 때 다양 한 공간 좌표계에서 앱이 이러한 holograms를 렌더링할 수 있습니다.
+
+참고:이 연습에서는 Direct3D 11의 holographic 렌더링에 대해 설명 합니다. Direct3D 12 Windows Mixed Reality 앱 템플릿은 혼합 현실 앱 템플릿 확장과 함께 제공 됩니다.
 
 ## <a name="update-for-the-current-frame"></a>현재 프레임에 대 한 업데이트
 
@@ -457,7 +459,7 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-이 방법으로 스테레오 렌더링 대상 배열에 그리기를 수행 하는 기존 인스턴스 그리기 기술을 사용 하려는 경우에는 일반적으로 사용 하는 인스턴스 수를 두 배로 그려야 합니다. 셰이더에는 **입력. s i d id** 를 2로 나누고, 개체 당 데이터의 버퍼에 인덱싱할 수 있는 원본 인스턴스 id (예:)를 가져옵니다.`int actualIdx = input.instId / 2;`
+이 방법으로 스테레오 렌더링 대상 배열에 그리기를 수행 하는 기존 인스턴스 그리기 기술을 사용 하려는 경우에는 일반적으로 사용 하는 인스턴스 수를 두 배로 그려야 합니다. 셰이더의 경우 **입력.** 로 이동 id를 2로 나눕니다 .이 id는 (예: 개체별 데이터의 버퍼)로 인덱싱되는 원본 인스턴스 id를 가져옵니다 (예: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>HoloLens에서 스테레오 콘텐츠를 렌더링 하는 방법에 대 한 중요 정보
 
@@ -534,7 +536,7 @@ if (options.VPAndRTArrayIndexFromAnyShaderFeedingRasterizer)
 }
 ```
 
-이 선택적 기능 없이 렌더링을 지원 하려면 앱에서 geometry 셰이더를 사용 하 여 렌더링 대상 배열 인덱스를 설정 해야 합니다. 이 코드 조각은 **VSSetConstantBuffers** *뒤* 에 추가 *되 고,* 이전 섹션에 표시 된 코드 예제의 **pssetshader** 이전에는 HoloLens에서 스테레오를 렌더링 하는 방법을 설명 합니다.
+이 선택적 기능 없이 렌더링을 지원 하려면 앱에서 geometry 셰이더를 사용 하 여 렌더링 대상 배열 인덱스를 설정 해야 합니다. 이 코드 조각은 **VSSetConstantBuffers** *뒤* 에 추가 되 고, 이전 섹션에 표시 된 코드 예제의 **Pssetshader** *이전에* 는 HoloLens에서 스테레오를 렌더링 하는 방법을 설명 합니다.
 
 From **SpinningCubeRenderer:: Render**:
 
@@ -553,7 +555,7 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**HLSL 참고 사항**: 이 경우 TEXCOORD0와 같이 항상 허용 되는 셰이더 의미 체계를 사용 하 여 렌더링 대상 배열 인덱스를 기 하 도형 셰이더에 전달 하는 약간 수정 된 꼭 짓 점 셰이더도 로드 해야 합니다. 기 하 도형 셰이더는 작업을 수행할 필요가 없습니다. 템플릿 기 하 도형 셰이더는 SV_RenderTargetArrayIndex 의미 체계를 설정 하는 데 사용 되는 렌더링 대상 배열 인덱스를 제외 하 고 모든 데이터를 통과 합니다.
+**HLSL 참고**:이 경우 TEXCOORD0와 같은 항상 허용 되는 셰이더 의미 체계를 사용 하 여 렌더링 대상 배열 인덱스를 geometry 셰이더에 전달 하는 약간 수정 된 꼭 짓 점 셰이더도 로드 해야 합니다. 기 하 도형 셰이더는 작업을 수행할 필요가 없습니다. 템플릿 기 하 도형 셰이더는 SV_RenderTargetArrayIndex 의미 체계를 설정 하는 데 사용 되는 렌더링 대상 배열 인덱스를 제외 하 고 모든 데이터를 통과 합니다.
 
 Hlsl에 대 한 앱 템플릿 코드 **GeometryShader**:
 
@@ -591,7 +593,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 }
 ```
 
-## <a name="present"></a>있음
+## <a name="present"></a>표시
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>Holographic 프레임을 사용 하 여 스왑 체인을 표시 합니다.
 
@@ -706,7 +708,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 하이브리드 시스템에서 미디어 파운데이션를 사용 하면 비디오가 렌더링 되지 않거나 비디오 질감이 손상 되는 문제가 발생할 수 있습니다. 이는 미디어 파운데이션가 위에서 설명한 대로 시스템 동작을 기본값으로 수행 하기 때문에 발생할 수 있습니다. 일부 시나리오에서는 다중 스레딩을 지원 하기 위해 별도의 ID3D11Device를 만들어야 하며, 올바른 생성 플래그가 설정 됩니다.
 
-ID3D11Device를 초기화할 때는 D3D11_CREATE_DEVICE_VIDEO_SUPPORT 플래그를 D3D11_CREATE_DEVICE_FLAG의 일부로 정의 해야 합니다. 장치 및 컨텍스트를 만든 후에는 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">Setmultithreadprotected</a> 를 호출 하 여 다중 스레딩을 사용 하도록 설정 합니다. 장치를 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>에 연결 하려면 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: resetdevice</a> 함수를 사용 합니다.
+ID3D11Device를 초기화할 때 D3D11_CREATE_DEVICE_VIDEO_SUPPORT 플래그는 D3D11_CREATE_DEVICE_FLAG의 일부로 정의 해야 합니다. 장치 및 컨텍스트를 만든 후에는 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">Setmultithreadprotected</a> 를 호출 하 여 다중 스레딩을 사용 하도록 설정 합니다. 장치를 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>에 연결 하려면 <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: resetdevice</a> 함수를 사용 합니다.
 
 **ID3D11Device와 IMFDXGIDeviceManager를 연결 하는**코드:
 
@@ -741,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [DirectX의 좌표계](coordinate-systems-in-directx.md)
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
