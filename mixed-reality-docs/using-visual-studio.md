@@ -7,12 +7,12 @@ ms.date: 10/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, 디버그, 배포
-ms.openlocfilehash: fecd9db8777b6947c3ea19a02e428459c78c935b
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
+ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491187"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830837"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Visual Studio를 사용하여 배포 및 디버깅
 
