@@ -6,18 +6,18 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, cpu, gpu, 렌더링, 가비지 수집, hololens
-ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 6507667904cfa26dfad1ccf1402cc75f14386609
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926866"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003202"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대 한 성능 권장 사항
 
 이 문서는 [혼합 현실에 대 한 성능 권장 사항](understanding-performance-for-mixed-reality.md) 에 설명 된 토론을 기반으로 하지만 Unity 엔진 환경과 관련 된 학습에 중점을 집중 합니다.
 
-또한 개발자는 [Unity의 권장 환경 설정 문서](Recommended-settings-for-unity.md)를 검토 하는 것이 좋습니다. 이 문서에는 고성능 혼합 현실 앱을 빌드하는 것과 관련 하 여 가장 중요 한 장면 구성의 내용이 포함 되어 있습니다. 이러한 권장 설정 중 일부는 아래에도 강조 표시 됩니다.
+또한 개발자는 [Unity의 권장 환경 설정 문서](Recommended-settings-for-unity.md)를 검토 하는 것이 좋습니다. 이 문서에는 고성능 혼합 현실 앱을 빌드하기 위한 가장 중요 한 장면 구성의 일부 내용이 포함 되어 있습니다. 이러한 권장 설정 중 일부는 아래에도 표시 됩니다.
 
 ## <a name="how-to-profile-with-unity"></a>Unity를 사용 하 여 프로 파일링 하는 방법
 
@@ -38,7 +38,7 @@ Unity는 다음에 대 한 유용한 설명서를 제공 합니다.
 
 #### <a name="cache-references"></a>캐시 참조
 
-모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[Getcomponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 가장 많이 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag *는 실제로 저렴* 가 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 합니다.
+모든 관련 구성 요소에 대 한 참조와 초기화 시 Gameobject를 캐시 하는 것이 가장 좋습니다. 이는 *[Getcomponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* 와 같은 반복 함수 호출이 포인터를 저장 하는 메모리 비용에 비해 훨씬 더 비쌉니다. 이는 정기적으로 사용 되는 [카메라 주](https://docs.unity3d.com/ScriptReference/Camera-main.html)에도 적용 됩니다. FindGameObjectsWithTag는 실제로 *"maincamera"* 태그가 있는 카메라 개체에 대 한 장면 그래프를 검색 하는 저렴 *[()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* 를 사용 *합니다.*
 
 ```CS
 using UnityEngine;
@@ -117,7 +117,7 @@ public class ExampleClass : MonoBehaviour
 
     [Boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) 은 C# 언어 및 런타임의 핵심 개념입니다. Char, int, bool 등의 값 형식 변수를 참조 형식 변수로 래핑하는 프로세스입니다. 값으로 형식화 된 변수가 "boxed" 이면 관리 되는 힙에 저장 된 System.object의 내부에 래핑됩니다. 따라서 가비지 수집기에서 메모리를 할당 하 고 결국 삭제를 처리 해야 합니다. 이러한 할당과 할당 해제는 성능 비용을 초래 하 고 많은 시나리오에서 불필요 하거나 더 저렴 한 방법으로 쉽게 바꿀 수 있습니다.
 
-    개발에서 boxing의 가장 일반적인 형태 중 하나는 [nullable 값 형식을](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/)사용 하는 것입니다. 일반적으로 작업에서 값을 가져오려고 할 때 오류가 발생 하는 경우 함수에서 값 형식에 대해 null을 반환할 수 있기를 원합니다. 이 방법의 잠재적인 문제는 이제 힙에서 할당이 발생 하므로 나중에 가비지를 수집 해야 한다는 것입니다.
+    개발에서 boxing의 가장 일반적인 형태 중 하나는 [nullable 값 형식을](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/)사용 하는 것입니다. 일반적으로 함수에서 값 형식에 대해 null을 반환할 수 있기를 원합니다. 특히 작업에서 값을 가져오려고 하면 오류가 발생할 수 있습니다. 이 방법의 잠재적인 문제는 이제 힙에서 할당이 발생 하므로 나중에 가비지를 수집 해야 한다는 것입니다.
 
     **의 boxing 예C#**
 
@@ -129,7 +129,7 @@ public class ExampleClass : MonoBehaviour
 
     **Nullable 값 형식을 통한 문제 boxing의 예**
 
-    이 코드는 Unity 프로젝트에서 만들 수 있는 더미 파티클 클래스를 보여 줍니다. `TryGetSpeed()`를 호출 하면 힙에 대 한 개체 할당이 발생 하며,이는 나중에 가비지 수집 해야 합니다. 이 예제는 특히 현재 속도를 요청 하는 장면에 1000 개 이상의 파티클이 있을 수 있기 때문에 문제가 발생 합니다. 따라서 1000 개의 개체가 할당 되 고 결과적으로 성능이 크게 저하 되는 모든 프레임을 할당 취소 하 게 됩니다. 오류를 나타내기 위해-1과 같은 음수 값을 반환 하는 함수를 다시 작성 하면이 문제를 방지 하 고 스택에 메모리를 유지 합니다.
+    이 코드는 Unity 프로젝트에서 만들 수 있는 더미 파티클 클래스를 보여 줍니다. `TryGetSpeed()`를 호출 하면 힙에 대 한 개체 할당이 발생 하며,이는 나중에 가비지 수집 해야 합니다. 이 예제는 특히 현재 속도를 요청 하는 장면에 1000 개 이상의 파티클이 있을 수 있기 때문에 문제가 발생 합니다. 따라서 1000 개의 개체가 할당 되 고 그에 따라 모든 프레임에서 할당을 취소 하 여 성능이 크게 저하 됩니다. 오류를 나타내기 위해-1과 같은 음수 값을 반환 하는 함수를 다시 작성 하면이 문제를 방지 하 고 스택에 메모리를 유지 합니다.
 
     ```csharp
         public class MyParticle
@@ -148,7 +148,7 @@ public class ExampleClass : MonoBehaviour
 
 1) **빈 콜백 함수**
 
-    아래 코드는 응용 프로그램에 남겨 두는 것 처럼 보일 수 있지만, 특히 모든 Unity 스크립트는이 코드 블록을 사용 하 여 자동으로 초기화 되기 때문에 이러한 빈 콜백은 실제로 매우 많은 비용이 소요 될 수 있습니다. Unity는 UnityEngine 코드와 응용 프로그램 코드 간에 관리 되지 않는/관리 코드 경계를 앞뒤로 작동 합니다. 이 브리지를 통해 컨텍스트를 전환 하는 것은 실행할 작업이 없는 경우에도 매우 비용이 많이 듭니다. 이는 응용 프로그램에 비어 있는 반복 Unity 콜백이 있는 구성 요소가 있는 100 개의 Gameobject 있는 경우 특히 문제가 됩니다.
+    아래 코드는 응용 프로그램에 남겨 두는 것 처럼 보일 수 있지만, 특히 모든 Unity 스크립트는이 코드 블록을 사용 하 여 자동으로 초기화 되기 때문에 이러한 빈 콜백은 실제로 매우 많은 비용이 소요 될 수 있습니다. Unity는 UnityEngine 코드와 응용 프로그램 코드 간에 관리 되지 않는/관리 코드 경계를 앞뒤로 작동 합니다. 이 브리지를 통해 컨텍스트를 전환 하는 것은 실행 하는 작업이 없는 경우에도 매우 비용이 많이 듭니다. 이는 응용 프로그램에 비어 있는 반복 Unity 콜백이 있는 구성 요소가 있는 100 개의 Gameobject 있는 경우 특히 문제가 됩니다.
 
     ```CS
     void Update()
@@ -157,7 +157,7 @@ public class ExampleClass : MonoBehaviour
     ```
 
 >[!NOTE]
-> Update ()는이 성능 문제의 가장 일반적인 노력 이지만, 다음과 같은 다른 반복 Unity 콜백은 FixedUpdate (), Behaviour (), OnPostRender ", OnPreRender (), OnRenderImage () 등의 경우와 동일 합니다. 
+> Update ()는이 성능 문제를 가장 일반적으로 노력, 다음과 같은 기타 반복 Unity 콜백이 잘못 된 경우 (예: FixedUpdate (), Behaviour (), OnPostRender ", OnPreRender (), OnRenderImage () 등)와 동일 합니다. 
 
 2) **프레임당 한 번 실행 되도록 하는 작업**
 
@@ -184,7 +184,7 @@ public class ExampleClass : MonoBehaviour
 
 4) **값으로 구조체 전달 방지**
 
-    클래스와 달리 구조체는 값 형식이 며 함수로 직접 전달 될 때 해당 내용이 새로 만든 인스턴스에 복사 됩니다. 이 복사본은 CPU 비용 뿐만 아니라 스택에 추가 메모리를 추가 합니다. 작은 구조체의 경우 효과는 일반적으로 매우 미미 하므로 허용할 수 있습니다. 그러나 모든 프레임을 반복 해 서 호출 하는 함수 뿐만 아니라 대량 구조체를 가져오는 함수도 가능 하면 함수 정의를 참조로 전달 하도록 수정 합니다. [여기에서 자세히 알아보세요.](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
+    클래스와 달리 구조체는 값 형식이 며 함수로 직접 전달 될 때 해당 내용이 새로 만든 인스턴스에 복사 됩니다. 이 복사본은 CPU 비용 뿐만 아니라 스택에 추가 메모리를 추가 합니다. 작은 구조체의 경우 효과는 일반적으로 매우 미미 하므로 허용할 수 있습니다. 그러나 모든 프레임을 반복 해 서 호출 하는 함수 뿐만 아니라 대량 구조체를 가져오는 함수도 가능 하면 함수 정의를 참조로 전달 하도록 수정 합니다. [여기를 참조하세요](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method).
 
 #### <a name="miscellaneous"></a>기타
 
@@ -198,7 +198,7 @@ public class ExampleClass : MonoBehaviour
 
     자세한 내용은 [Unity 물리학 모범 사례](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices) 를 참조 하세요.
 
-2) **애니메이션이**
+2) **애니메이션**
 
     애니메이터 구성 요소를 사용 하지 않도록 설정 하 여 유휴 상태의 애니메이션을 사용 하지 않도록 설정 (게임 개체를 사용 하지 않도록 설정 해도 동일한 효과가 없음 값을 동일한 값으로 설정 하는 반복에서 애니메이터를 사용 하는 디자인 패턴을 피합니다. 응용 프로그램에 영향을 주지 않고이 기술에 대 한 상당한 오버 헤드가 발생 합니다. [자세한 내용은 여기를 참조 하세요.](https://docs.unity3d.com/Manual/MecanimPeformanceandOptimization.html)
 
@@ -238,13 +238,13 @@ Unity는 많은 정적 개체를 일괄 처리 하 여 GPU에 대 한 그리기 
 
 #### <a name="dynamic-batching"></a>동적 일괄 처리
 
-개체를 HoloLens 개발에 대 한 *정적* 으로 표시 하는 데 문제가 있기 때문에 동적 일괄 처리는 이러한 부족 한 기능을 보정 하는 데 유용한 도구 일 수 있습니다. 물론 모던 헤드셋 에서도 유용할 수 있습니다. Unity의 동적 일괄 처리 **는 gameobject가 동일한 자료를 공유** 하 고 **b) 다른 조건의 긴 목록을 충족**하기 때문에를 사용 하도록 설정 하는 것이 어려울 수 있습니다.
+개체를 HoloLens 개발에 대 한 *정적* 으로 표시 하는 데 문제가 있기 때문에 동적 일괄 처리는 이러한 부족 한 기능을 보정 하는 데 유용한 도구 일 수 있습니다. 물론 모던 헤드셋 에서도 유용할 수 있습니다. 그러나 Unity의 동적 일괄 처리 **는 gameobject가 동일한 자료를 공유** 하 고 **b) 다른 기준의 긴 목록을 충족**하기 때문에 사용 하기 어려울 수 있습니다.
 
-전체 목록에 대 한 [Unity의 그리기 호출 일괄](https://docs.unity3d.com/Manual/DrawCallBatching.html) 처리에서 *동적 일괄 처리* 를 읽습니다. 가장 일반적으로 Gameobject는 연결 된 메시 데이터가 300 꼭 짓 점이 될 수 있으므로 동적으로 일괄 처리할 수 없게 됩니다.
+전체 목록에 대 한 [Unity의 그리기 호출 일괄](https://docs.unity3d.com/Manual/DrawCallBatching.html) 처리에서 *동적 일괄 처리* 를 읽습니다. 가장 일반적으로 Gameobject는 연결 된 메시 데이터가 300 개의 꼭지점이 될 수 있으므로 동적으로 일괄 처리할 수 없게 됩니다.
 
 #### <a name="other-techniques"></a>기타 기술
 
-일괄 처리는 여러 Gameobject가 동일한 자료를 공유할 수 있는 경우에만 발생할 수 있습니다. 일반적으로이는 Gameobject가 해당 재질에 대해 고유한 질감을 가질 필요에 의해 차단 됩니다. [질감 Atlasing](https://en.wikipedia.org/wiki/Texture_atlas)하는 메서드를 하나의 큰 질감으로 결합 하는 것이 일반적입니다.
+일괄 처리는 여러 Gameobject가 동일한 자료를 공유할 수 있는 경우에만 발생할 수 있습니다. 일반적으로 Gameobject가 해당 재질에 고유한 질감을 가질 필요에 의해 차단 됩니다. [질감 Atlasing](https://en.wikipedia.org/wiki/Texture_atlas)하는 메서드를 하나의 큰 질감으로 결합 하는 것이 일반적입니다.
 
 또한 일반적으로 메시를 가능한 한 GameObject 결합 하는 것이 좋습니다. Unity의 각 렌더러는 연결 된 그리기 호출을 포함 하 고 하나의 렌더러에서 결합 된 메시를 제출 합니다.
 
@@ -265,7 +265,7 @@ Unity는 많은 정적 개체를 일괄 처리 하 여 GPU에 대 한 그리기 
 
 **사용 하지 않도록 설정 된 스텐실 버퍼**
 
-Unity에서 [16 비트 깊이의 렌더링 질감](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html)을 만드는 경우 스텐실 버퍼가 생성 되지 않습니다. Unity 설명서 당 24 비트 깊이 형식을 선택 하면 24 비트 z 버퍼 뿐만 아니라 [8 비트 스텐실 버퍼](https://docs.unity3d.com/Manual/SL-Stencil.html) (일반적으로 HoloLens와 같은 경우에 32 비트를 장치에 적용할 수 있는 경우)가 생성 됩니다.
+Unity에서 [16 비트 깊이의 렌더링 질감](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html)을 만드는 경우 스텐실 버퍼가 생성 되지 않습니다. Unity 설명서 당 24 비트 깊이 형식을 선택 하면 24 비트 z 버퍼와 [8 비트 스텐실 버퍼] (https://docs.unity3d.com/Manual/SL-Stencil.html) (일반적으로 HoloLens와 같은 경우 장치에 32 비트가 적용 되는 경우)가 생성 됩니다.
 
 ### <a name="avoid-full-screen-effects"></a>전체 화면 효과 방지
 
@@ -290,7 +290,7 @@ Unity의 [실시간 글로벌](https://docs.unity3d.com/Manual/GIIntro.html) 조
 
 성능과 셰이더를 비교 하는 것은 각 런타임에 실행 되는 평균 작업 수를 식별 하는 것입니다. Unity에서이 작업을 쉽게 수행할 수 있습니다.
 
-1) 셰이더 자산을 선택 하거나 재질을 선택 하 고 검사기 창의 오른쪽 위에 있는 기어 아이콘을 선택한 다음 **"셰이더 선택"** 을 선택 합니다.
+1) 셰이더 자산을 선택 하거나 재질을 선택 하 고, 검사기 창의 오른쪽 위 모퉁이에서 기어 아이콘, **"셰이더 선택"** 을 차례로 선택 합니다.
 
     ![Unity에서 셰이더 선택](images/Select-shader-unity.png)
 2) 셰이더 자산을 선택 하 고 검사기 창에서 **"코드 컴파일 및 표시"** 단추를 클릭 합니다.
@@ -303,7 +303,7 @@ Unity의 [실시간 글로벌](https://docs.unity3d.com/Manual/GIIntro.html) 조
 
 #### <a name="optimize-pixel-shaders"></a>픽셀 셰이더 최적화
 
-위의 메서드를 사용 하 여 컴파일된 통계 결과를 살펴보면 [조각 셰이더가](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) 일반적으로 평균에서 [꼭 짓 점 셰이더](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) 보다 많은 작업을 실행 합니다. 꼭 짓 점 셰이더 라고도 하는 조각 셰이더는 화면 출력에서 픽셀 단위로 실행 되는 반면 꼭 짓 점 셰이더는 화면에 그려지는 모든 망상의 꼭 짓 점 마다 실행 됩니다. 
+위의 메서드를 사용 하 여 컴파일된 통계 결과를 살펴보면 [조각 셰이더가](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) 평균에서 [꼭 짓 점 셰이더](https://en.wikipedia.org/wiki/Shader#Vertex_shaders)보다 더 많은 작업을 실행 합니다. 꼭 짓 점 셰이더 라고도 하는 조각 셰이더는 화면 출력에서 픽셀 단위로 실행 되는 반면 꼭 짓 점 셰이더는 화면에 그려지는 모든 망상의 꼭 짓 점 마다 실행 됩니다. 
 
 따라서 조각 셰이더는 모든 조명 계산으로 인해 꼭 짓 점 셰이더 보다 더 많은 명령을 포함할 뿐만 아니라 조각 셰이더는 거의 항상 큰 데이터 집합에서 실행 됩니다. 예를 들어 화면 출력이 2k 이미지 인 경우 조각 셰이더는 2000 * 2000 = 400만 번 실행 될 수 있습니다. 두 개의 눈동자를 렌더링 하는 경우 두 개의 화면이 있으므로이 수는 두 배가 됩니다. 혼합 현실 응용 프로그램에 여러 번의 통과, 전체 화면 처리 효과가 있는 경우 또는 여러 메시를 동일한 픽셀로 렌더링 하는 경우이 숫자가 크게 증가 합니다. 
 
@@ -311,7 +311,7 @@ Unity의 [실시간 글로벌](https://docs.unity3d.com/Manual/GIIntro.html) 조
 
 #### <a name="unity-standard-shader-alternatives"></a>Unity 표준 셰이더 대안
 
-실제 기반 렌더링 (.PBR) 또는 기타 고품질 셰이더를 사용 하는 대신 보다 성능이 뛰어나고 저렴 한 셰이더를 활용 하는 방법을 살펴보세요. [Mixed Reality 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity) 는 혼합 현실 프로젝트에 최적화 된 [mrtk 표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) 를 제공 합니다.
+실제 기반 렌더링 (.PBR) 또는 다른 고품질 셰이더를 사용 하는 대신 보다 성능이 뛰어나고 저렴 한 셰이더를 활용 하는 방법을 살펴보세요. [Mixed Reality 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity) 는 혼합 현실 프로젝트에 최적화 된 [mrtk 표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) 를 제공 합니다.
 
 Unity는 Unity 표준 셰이더에 비해 훨씬 빠르게 unlit, 꼭 짓 점, 확산 및 기타 단순화 된 셰이더 옵션을 제공 합니다. 자세한 내용은 [기본 제공 셰이더의 사용 및 성능](https://docs.unity3d.com/Manual/shader-Performance.html) 을 참조 하세요.
 
@@ -327,11 +327,11 @@ Unity에서 **장면 보기** 의 왼쪽 위 모퉁이에 있는 [**그리기 �
 
 ## <a name="memory-recommendations"></a>메모리 권장 사항
 
-과도 한 메모리 할당 & 할당 취소 작업은 holographic 응용 프로그램에 부정적인 영향을 줄 수 있으므로 성능, 고정 된 프레임 및 기타 부정적 동작이 일치 하지 않을 수 있습니다. 메모리 관리는 가비지 수집기에 의해 제어 되므로 Unity에서 개발할 때 메모리 고려 사항을 이해 하는 것이 특히 중요 합니다.
+과도 한 메모리 할당 & 할당 취소 작업은 holographic 응용 프로그램에 부정적인 영향을 줄 수 있으므로 일관성 없는 성능, 고정 된 프레임 및 기타 부정적 동작이 발생할 수 있습니다. 메모리 관리는 가비지 수집기에 의해 제어 되므로 Unity에서 개발할 때 메모리 고려 사항을 이해 하는 것이 특히 중요 합니다.
 
-#### <a name="garbage-collection"></a>가비지 수집
+#### <a name="garbage-collection"></a>가비지 컬렉션
 
-Holographic apps는 GC가 활성화 되어 실행 중에 더 이상 범위에 있지 않은 개체를 분석 하 여 다시 사용할 수 있도록 설정할 수 있도록 해당 메모리를 해제 해야 하는 경우 GC (가비지 수집기)에 대 한 계산 시간을 더 이상 처리 하지 않습니다. 상수 할당 및 할당 취소는 일반적으로 가비지 수집기가 더 자주 실행 하 여 성능 및 사용자 환경을 저하 해야 합니다.
+Holographic apps는 GC가 활성화 되어 실행 중에 더 이상 범위에 있지 않은 개체를 분석 하 고 해당 메모리를 해제 해야 하므로 다시 사용할 수 있도록 설정할 수 있습니다. 상수 할당 및 할당 취소를 사용 하려면 일반적으로 가비지 수집기가 더 자주 실행 되므로 성능 및 사용자 환경이 저하 됩니다.
 
 Unity는 메모리 관리와 관련 하 여 보다 효율적인 코드를 작성 하기 위한 팁과 가비지 수집기의 작동 방식에 대해 자세히 설명 하는 뛰어난 페이지를 제공 합니다.
 - [Unity 게임에서 가비지 수집 최적화](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
@@ -340,7 +340,7 @@ Unity는 메모리 관리와 관련 하 여 보다 효율적인 코드를 작성
 
 기타 빠른 팁:
 - [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) C# 클래스를 사용 하 여 런타임에 복잡 한 문자열을 동적으로 빌드합니다.
-- 응용 프로그램의 모든 빌드 버전에서 계속 실행 되므로 더 이상 필요 하지 않은 경우 Debug () 호출을 제거 합니다.
+- 응용 프로그램의 모든 빌드 버전에서 계속 실행 되므로 더 이상 필요 하지 않은 경우 Debug ()에 대 한 호출을 제거 합니다.
 - Holographic 앱이 일반적으로 많은 메모리를 요구 하는 경우 로드 또는 전환 화면을 발표할 때와 같은 단계를 로드 하는 동안 system.string [ _**()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) 을 호출 하는 것이 좋습니다.
 
 #### <a name="object-pooling"></a>개체 풀링
@@ -351,9 +351,9 @@ Unity는 메모리 관리와 관련 하 여 보다 효율적인 코드를 작성
 
 ## <a name="startup-performance"></a>시작 성능
 
-더 작은 장면으로 앱을 시작한 다음 *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* 를 사용 하 여 나머지 장면을 로드 하는 것이 좋습니다. 이렇게 하면 앱이 최대한 빠르게 대화형 상태가 될 수 있습니다. 새 장면을 활성화 하 고 렌더링 된 모든 콘텐츠를 끊길 하거나 hitch 수 있는 동안에는 상당한 CPU 스파이크가 있을 수 있습니다. 이 문제를 해결 하는 한 가지 방법은 로드 되는 장면에서 allowSceneActivation 속성을 false로 설정 하 고, 장면을 로드할 때까지 기다리거나, 화면을 검정으로 AsyncOperation, true로 다시 설정 하 여 장면 활성화를 완료 하는 것입니다.
+더 작은 장면으로 앱을 시작한 다음 *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* 를 사용 하 여 나머지 장면을 로드 하는 것이 좋습니다. 이렇게 하면 앱이 최대한 빠르게 대화형 상태가 될 수 있습니다. 새 장면을 활성화 하 고 렌더링 된 모든 콘텐츠를 끊길 하거나 hitch 수 있는 동안에는 상당한 CPU 스파이크가 있을 수 있습니다. 이 문제를 해결 하는 한 가지 방법은 로드 되는 장면에서 allowSceneActivation 속성을 "false"로 설정 하 고, 장면이 로드 될 때까지 기다린 후 화면을 검은색으로 AsyncOperation, "true"로 다시 설정 하 여 장면 활성화를 완료 하는 것입니다.
 
-시작 장면을 로드 하는 동안 holographic 시작 화면이 사용자에 게 표시 됩니다.
+시작 장면을 로드 하는 동안 사용자에 게 holographic 시작 화면이 표시 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 - [Unity 게임에서 그래픽 렌더링 최적화](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
