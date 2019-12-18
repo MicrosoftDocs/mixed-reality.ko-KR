@@ -6,25 +6,25 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 연습, 음성 명령, 구, 인식, 음성, directx, 플랫폼, cortana, windows mixed 현실
-ms.openlocfilehash: 0dcfaae13f763c9b8a06910f11558d2fd8e00276
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: c0a7ca85c24147e607603e733c9d191c64cbd927
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641081"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181823"
 ---
 # <a name="voice-input-in-directx"></a>DirectX의 음성 입력
 
-이 항목에서는 Windows Mixed Reality 용 DirectX 앱에서 [음성 명령과](voice-input.md)작은 구와 문장 인식을 구현 하는 방법에 대해 설명 합니다.
+이 문서에서는 Windows Mixed Reality 용 DirectX 앱에서 [음성 명령과](voice-input.md) 작은 문구 및 문장 인식 기능을 구현 하는 방법을 설명 합니다.
 
 >[!NOTE]
->이 문서의 코드 조각은 현재 [ C++ holographic 프로젝트 템플릿에](creating-a-holographic-directx-project.md)사용 되 C++는 것 처럼 C + 17-so-far working 규격 C++/winrt 대신/cx 사용을 보여 줍니다.  개념은 C++/winrt 프로젝트와 동일 하지만 코드를 변환 해야 합니다.
+>이 문서의 코드 조각에서는 C++ [ C++ holographic 프로젝트 템플릿에](creating-a-holographic-directx-project.md)사용 되는 C + 17-so-far working 규격 C++/winrt가 아닌/cx를 사용 합니다.  개념은 C++/winrt 프로젝트와 동일 하지만 코드를 변환 해야 합니다.
 
-## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>음성 명령을 연속 해 서 인식 하기 위해 SpeechRecognizer 사용
+## <a name="use-speechrecognizer-for-continuous-speech-recognition"></a>연속 음성 인식을 위해 SpeechRecognizer 사용
 
 이 섹션에서는 연속 음성 인식을 사용 하 여 앱에서 음성 명령을 사용 하도록 설정 하는 방법을 설명 합니다. 이 연습에서는 [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) 샘플의 코드를 사용 합니다. 샘플을 실행 하는 경우 등록 된 색 명령 중 하나의 이름을 말하기 회전 큐브의 색을 변경 합니다.
 
-먼저 새 **Windows:: Media:: SpeechRecognition:: SpeechRecognizer** 인스턴스를 만듭니다.
+먼저 새 *Windows:: Media:: SpeechRecognition:: SpeechRecognizer* 인스턴스를 만듭니다.
 
 From *HolographicVoiceInputSampleMain:: CreateSpeechConstraintsForCurrentState*:
 
@@ -32,7 +32,7 @@ From *HolographicVoiceInputSampleMain:: CreateSpeechConstraintsForCurrentState*:
 m_speechRecognizer = ref new SpeechRecognizer();
 ```
 
-인식기에서 수신 대기할 음성 명령 목록을 만들어야 합니다. 여기서는 홀로그램의 색을 변경 하는 명령 집합을 구성 합니다. 편의를 위해 나중에 명령에 사용할 데이터도 만들 수 있습니다.
+인식기에서 수신 대기할 음성 명령 목록을 만듭니다. 여기서는 홀로그램의 색을 변경 하는 명령 집합을 구성 합니다. 편의를 위해 나중에 명령에 사용할 데이터도 만듭니다.
 
 ```
 m_speechCommandList = ref new Platform::Collections::Vector<String^>();
@@ -57,14 +57,14 @@ m_speechCommandList = ref new Platform::Collections::Vector<String^>();
    m_speechCommandData.push_back(float4(1.f, 0.f, 1.f, 1.f));
 ```
 
-사전에 없을 수 있는 음성 단어를 사용 하 여 명령을 지정할 수 있습니다.
+사전에 없을 수 있는 윗주 단어를 사용 하 여 명령을 지정할 수 있습니다.
 
 ```
 m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
    m_speechCommandData.push_back(float4(0.5f, 0.1f, 1.f, 1.f));
 ```
 
-명령 목록이 음성 인식기에 대 한 제약 조건 목록에 로드 됩니다. [SpeechRecognitionListConstraint](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) 개체를 사용 하 여이 작업을 수행 합니다.
+음성 인식기에 대 한 제약 조건 목록에 명령 목록을 로드 하려면 [SpeechRecognitionListConstraint](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) 개체를 사용 합니다.
 
 ```
 SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListConstraint(m_speechCommandList);
@@ -92,7 +92,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-**Onresultgenerated** 이벤트 처리기는 [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) 인스턴스에서 이벤트 데이터를 수신 합니다. 신뢰가 정의한 임계값 보다 크면 앱에서 이벤트가 발생 한 것을 확인 해야 합니다. 후속 업데이트 루프에서 사용할 수 있도록 이벤트 데이터를 저장 합니다.
+*Onresultgenerated* 이벤트 처리기는 [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) 인스턴스에서 이벤트 데이터를 수신 합니다. 신뢰가 정의한 임계값 보다 크면 앱에서 이벤트가 발생 한 것을 확인 해야 합니다. 후속 업데이트 루프에서 사용할 수 있도록 이벤트 데이터를 저장 합니다.
 
 *HolographicVoiceInputSampleMain*에서:
 
@@ -107,7 +107,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
    }
 ```
 
-그러나 응용 프로그램 시나리오에 적용 되는 데이터를 활용 합니다. 예제 코드에서는 사용자의 명령에 따라 회전 하는 홀로그램 큐브의 색을 변경 합니다.
+예제 코드에서는 사용자의 명령에 따라 회전 하는 홀로그램 큐브의 색을 변경 합니다.
 
 *HolographicVoiceInputSampleMain:: Update*에서:
 
@@ -132,12 +132,12 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
    }
 ```
 
-## <a name="use-dictation-for-one-shot-recognition-of-speech-phrases-and-sentences"></a>음성 구와 문장의 원 샷 인식에 받아쓰기 사용
+## <a name="use-one-shot-recognition"></a>"원 샷" 인식 사용
 
-사용자가 말하는 문구 또는 문장을 수신 하도록 음성 인식기를 구성할 수 있습니다. 이 경우 음성 인식기에 게 필요한 입력 유형을 알려 주는 SpeechRecognitionTopicConstraint 적용 됩니다. 앱 워크플로는 다음과 같은 유형의 사용 사례에 대해 다음과 같습니다.
-1. 앱은 SpeechRecognizer을 만들고, UI 프롬프트를 제공 하 고, 즉시 음성으로 명령을 수신 하기 시작 합니다.
+사용자가 말하는 구 또는 문장을 수신 하도록 음성 인식기를 구성할 수 있습니다. 이 경우 음성 인식기에 게 필요한 입력 유형을 알려 주는 *SpeechRecognitionTopicConstraint* 적용 됩니다. 이 시나리오에 대 한 앱 워크플로는 다음과 같습니다.
+1. 앱은 SpeechRecognizer을 만들고, UI 프롬프트를 제공 하 고, 음성 명령 수신 대기를 시작 합니다.
 2. 사용자가 구 또는 문장을 말합니다.
-3. 사용자 음성이 인식 되 고 결과가 앱으로 반환 됩니다. 이 시점에서 앱은 인식이 발생 했음을 나타내는 UI 프롬프트를 제공 해야 합니다.
+3. 사용자의 음성이 인식 되 고 결과가 앱으로 반환 됩니다. 이 시점에서 앱은 인식이 발생 했음을 나타내는 UI 프롬프트를 제공 해야 합니다.
 4. 응답 하려는 신뢰 수준 및 음성 인식 결과의 신뢰 수준에 따라 앱에서 결과를 처리 하 고 적절 하 게 응답할 수 있습니다.
 
 이 섹션에서는 SpeechRecognizer를 만들고, 제약 조건을 컴파일하고, 음성 입력을 수신 하는 방법을 설명 합니다.
@@ -209,7 +209,7 @@ try
                    }
 ```
 
-음성 인식을 사용할 때마다 사용자가 시스템 개인 정보 설정에서 마이크를 해제 했음을 나타내는 예외를 감시 해야 합니다. 이는 초기화 중 또는 인식 중에 발생할 수 있습니다.
+음성 인식을 사용할 때마다 사용자가 시스템 개인 정보 설정에서 마이크를 해제 했음을 나타낼 수 있는 예외를 조사 합니다. 이는 초기화 또는 인식 중에 발생할 수 있습니다.
 
 ```
 catch (Exception^ exception)
@@ -252,39 +252,40 @@ catch (Exception^ exception)
    });
 ```
 
-**참고:** 음성 인식을 최적화 하는 데 사용할 수 있는 미리 정의 된 몇 가지 [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) 있습니다.
-* 받아쓰기를 최적화 하려면 받아쓰기 시나리오를 사용 합니다.
+> [!NOTE]
+> 음성 인식을 최적화 하는 데 사용할 수 있는 미리 정의 된 몇 가지 [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) 있습니다.
 
-```
-// Compile the dictation topic constraint, which optimizes for speech dictation.
+* 받아쓰기를 최적화 하려면 받아쓰기 시나리오를 사용 합니다.<br/>
+   ```
+   // Compile the dictation topic constraint, which optimizes for speech dictation.
    auto dictationConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::Dictation, "dictation");
    m_speechRecognizer->Constraints->Append(dictationConstraint);
-```
-* 음성을 사용 하 여 웹 검색을 수행 하는 경우 다음과 같이 웹 특정 시나리오 제약 조건을 사용할 수 있습니다.
+   ```
 
-```
-// Add a web search topic constraint to the recognizer.
+* 음성 웹 검색의 경우 다음과 같은 웹 관련 시나리오 제약 조건을 사용 합니다.
+
+   ```
+   // Add a web search topic constraint to the recognizer.
    auto webSearchConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::WebSearch, "webSearch");
    speechRecognizer->Constraints->Append(webSearchConstraint);
-```
-* 폼 제약 조건을 사용 하 여 양식을 작성 합니다. 이 경우 양식 작성을 위해 최적화 된 고유한 문법을 적용 하는 것이 가장 좋습니다.
+   ```
 
-```
-// Add a form constraint to the recognizer.
+* 폼 제약 조건을 사용 하 여 양식을 작성 합니다. 이 경우 폼을 채우도록 최적화 된 고유한 문법을 적용 하는 것이 가장 좋습니다.
+
+   ```
+   // Add a form constraint to the recognizer.
    auto formConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::FormFilling, "formFilling");
    speechRecognizer->Constraints->Append(formConstraint );
-```
-* SRGS 형식을 사용 하 여 고유한 문법을 제공할 수 있습니다.
+   ```
+* SRGS 형식으로 고유한 문법을 제공할 수 있습니다.
 
-## <a name="use-continuous-freeform-speech-dictation"></a>연속 자유 음성 받아쓰기 사용
+## <a name="use-continuous-recognition"></a>연속 인식 사용
 
-여기에서 연속 받아쓰기 시나리오에 대 한 Windows 10 UWP 음성 코드 샘플을 참조 하세요 [.](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)
+연속 받아쓰기 시나리오의 경우 [Windows 10 UWP 음성 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)을 참조 하세요.
 
-## <a name="handle-degradation-in-quality"></a>품질 저하 처리
+## <a name="handle-quality-degradation"></a>품질 저하 처리
 
-환경에서의 조건으로 인해 음성 인식이 작동 하지 않는 경우가 있습니다. 예를 들어 대화방에 잡음이 있거나 사용자가 너무 많은 볼륨을 말할 수도 있습니다. 음성 인식 API는 품질 저하를 일으킨 조건에 대해 가능한 한 정보를 제공 합니다.
-
-이 정보는 WinRT 이벤트를 사용 하 여 앱으로 푸시됩니다. 다음은이 이벤트를 구독 하는 방법의 예입니다.
+환경 조건은 음성 인식을 방해 하기도 합니다. 예를 들어 대화방에 잡음이 있거나 사용자가 너무 loudly 말할 수도 있습니다. 음성 인식 API는 가능한 경우 품질 저하를 일으킨 조건에 대 한 정보를 제공 합니다. 이 정보는 WinRT 이벤트를 통해 앱에 푸시됩니다. 다음 예제에서는이 이벤트를 구독 하는 방법을 보여 줍니다.
 
 ```
 m_speechRecognizer->RecognitionQualityDegrading +=
@@ -293,7 +294,7 @@ m_speechRecognizer->RecognitionQualityDegrading +=
            );
 ```
 
-코드 샘플에서는 디버그 콘솔에 조건 정보를 기록 하도록 선택 합니다. 앱은 UI, 음성 합성 등을 통해 사용자에 게 피드백을 제공 하거나, 일시적 품질 감소에 의해 음성이 중단 될 때 다르게 동작 해야 할 수 있습니다.
+이 코드 샘플에서는 조건 정보를 디버그 콘솔에 기록 합니다. 앱은 UI, 음성 합성 및 다른 방법을 통해 사용자에 게 피드백을 제공 하려고 할 수 있습니다. 또는 일시적인 품질 감소에 의해 음성이 중단 될 때 다르게 동작 해야 할 수도 있습니다.
 
 ```
 void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer^ recognizer, SpeechRecognitionQualityDegradingEventArgs^ args)
@@ -332,7 +333,7 @@ void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer
    }
 ```
 
-Ref 클래스를 사용 하 여 DirectX 앱을 만들지 않는 경우 음성 인식기를 해제 하거나 다시 만들기 전에 이벤트에서 구독을 취소 해야 합니다. HolographicSpeechPromptSample에는 인식을 중지 하 고 다음과 같은 이벤트를 구독 취소 하는 루틴이 있습니다.
+Ref 클래스를 사용 하 여 DirectX 앱을 만들지 않는 경우 음성 인식기를 해제 하거나 다시 만들기 전에 이벤트에서 구독을 취소 해야 합니다. HolographicSpeechPromptSample에는 인식을 중지 하 고 이벤트를 구독 취소 하는 루틴이 있습니다.
 
 ```
 Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizerIfExists()
@@ -359,11 +360,11 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
    }
 ```
 
-## <a name="use-speech-synthesis-to-provide-audible-voice-prompts"></a>음성 합성을 사용 하 여 가청 음성 프롬프트 제공
+## <a name="use-speech-synthesis-to-provide-audible-prompts"></a>음성 합성을 사용 하 여 가청 프롬프트 제공
 
-Holographic speech 샘플은 음성 합성을 사용 하 여 사용자에 게 가청 지침을 제공 합니다. 이 항목에서는 합성 된 음성 샘플을 만들고 HRTF 오디오 Api를 사용 하 여 다시 재생 하는 과정을 안내 합니다.
+Holographic speech 샘플은 음성 합성을 사용 하 여 사용자에 게 가청 지침을 제공 합니다. 이 섹션에서는 합성 된 음성 샘플을 만든 다음 HRTF 오디오 Api를 통해 다시 재생 하는 방법을 보여 줍니다.
 
-구 입력을 요청할 때 사용자 고유의 음성 프롬프트를 제공 해야 합니다. 이는 연속 인식 시나리오에 대해 음성 명령을 음성으로 지정할 수 있는 경우에도 유용할 수 있습니다. 음성 신시사이저를 사용 하 여이 작업을 수행 하는 방법의 예는 다음과 같습니다. 미리 녹음 된 음성 클립, 시각적 UI 또는 표시 되는 항목에 대 한 기타 표시기를 사용할 수도 있습니다. 예를 들어, 프롬프트가 동적이 지 않은 시나리오를 예로 들 수 있습니다.
+구 입력을 요청할 때 사용자 고유의 음성 프롬프트를 제공 해야 합니다. 또한 프롬프트는 연속 인식 시나리오에서 음성 명령을 음성으로 사용할 수 있는 경우를 표시 하는 데 도움이 될 수 있습니다. 다음 예제에서는 음성 신시사이저를 사용 하 여이 작업을 수행 하는 방법을 보여 줍니다. 미리 녹음 된 음성 클립, 시각적 UI 또는 표시 되는 항목에 대 한 다른 표시기를 사용할 수도 있습니다. 예를 들어, 프롬프트가 동적이 지 않은 시나리오를 예로 들 수 있습니다.
 
 먼저 SpeechSynthesizer 개체를 만듭니다.
 
@@ -371,14 +372,14 @@ Holographic speech 샘플은 음성 합성을 사용 하 여 사용자에 게 �
 auto speechSynthesizer = ref new Windows::Media::SpeechSynthesis::SpeechSynthesizer();
 ```
 
-또한 합성 될 텍스트를 포함 하는 문자열이 필요 합니다.
+또한 합성할 텍스트를 포함 하는 문자열이 필요 합니다.
 
 ```
 // Phrase recognition works best when requesting a phrase or sentence.
    StringReference voicePrompt = L"At the prompt: Say a phrase, asking me to change the cube to a specific color.";
 ```
 
-음성은 SynthesizeTextToStreamAsync를 사용 하 여 비동기적으로 합성 됩니다. 여기서는 비동기 작업을 시작 하 여 음성을 합성 합니다.
+음성은 SynthesizeTextToStreamAsync을 통해 비동기적으로 합성 됩니다. 여기서는 음성을 합성 하는 비동기 작업을 시작 합니다.
 
 ```
 create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_continuation_context::use_current())
@@ -388,7 +389,7 @@ create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_co
        {
 ```
 
-음성 합성은 바이트 스트림으로 전송 됩니다. 해당 바이트 스트림을 사용 하 여 XAudio2 음성을 초기화할 수 있습니다. holographic 코드 샘플의 경우 HRTF 오디오 효과로 다시 재생 합니다.
+음성 합성은 바이트 스트림으로 전송 됩니다. 해당 바이트 스트림을 사용 하 여 XAudio2 음성을 초기화할 수 있습니다. Holographic 코드 샘플의 경우 HRTF 오디오 효과로 다시 재생 합니다.
 
 ```
 Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStreamTask.get();
@@ -410,7 +411,7 @@ Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStream
        }
 ```
 
-음성 인식과 마찬가지로 음성 합성은 문제가 발생 하는 경우 예외를 throw 합니다.
+음성 인식과 마찬가지로 음성 합성은 문제가 발생 한 경우 예외를 throw 합니다.
 
 ```
 catch (Exception^ exception)

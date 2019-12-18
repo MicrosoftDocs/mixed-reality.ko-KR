@@ -6,17 +6,26 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926646"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181963"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
+
+## 버전 2.0.18.0 (2019 년 12 월 17 일)<a name="v2.0.18"></a>
+* HolographicViewConfiguration에 대 한 지원이 추가 됨: https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+* 충돌이 발생할 수 있는 다양 한 버그를 수정 했습니다.
+* HolographicCamera를 수락 하 고 HoloraphicFrame에 추가 된 카메라로 표시 하는 데 HolographicSpace. CameraAdded 콜백이 필요한 버그를 수정 했습니다.
+
+## 버전 2.0.16 (2019 년 11 월 11 일)<a name="2.0.16"></a>
+* QR 코드 추적의 교착 상태를 수정 했습니다.
+* 주 스레드에서 차단 대기로 인해 unhandeled 예외가 수정 되었습니다.
 
 ## 버전 2.0.14 (2019 년 10 월 26 일)<a name="v2.0.14"></a>
 * 새 PerceptionDevice Api에 대 한 지원 (Windows 10 11 월 2019 업데이트).
@@ -50,4 +59,4 @@ ms.locfileid: "73926646"
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)

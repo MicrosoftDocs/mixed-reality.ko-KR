@@ -3,15 +3,15 @@ title: Holographic 원격 문제 해결 및 제한 사항
 description: HoloLens 2의 Holographic Remoting에 대 한 문제 해결 단계입니다.
 author: FlorianBagarMicrosoft
 ms.author: flbagar
-ms.date: 10/28/2019
+ms.date: 12/17/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, holographic remoting, 원격 렌더링, 네트워크 렌더링, HoloLens, 원격 holograms, 문제 해결, 도움말
-ms.openlocfilehash: 7b438d9169c9306e0056655e561c04b62b1662cf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 05333c8911010945a543cf603b9925eb30c841db
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434240"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181973"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Holographic 원격 문제 해결
 
@@ -31,13 +31,23 @@ Holographic 원격을 사용 하 여 HoloLens 2를 사용 하는 경우 다음 A
 [Windows.Graphics.Holographic](https://docs.microsoft.com/uwp/api/windows.graphics.holographic)
 
 * [HolographicCamera 구성](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration)
+  - [2.0.18 이상을](holographic-remoting-version-history.md#v2.0.18) 버전부터 지원 됨
+  - 이전 버전에서는 항상 오류가 발생 합니다.
+* [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
+  - 는 실패 하지 않지만 렌더링 대상 크기는 변경 되지 않습니다.
 * [HolographicCameraPose.OverrideProjectionTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [HolographicCameraPose. OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - 는 실패 하지 않지만 심층 버퍼는 원격이 아닙니다.
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
+  - HolographicViewConfigurationKind. PhotoVideoCamera를 쿼리하면 항상 ```nullptr```반환 됩니다.
+  - [2.0.18 이상을](holographic-remoting-version-history.md#v2.0.18) 버전부터 지원 됨
+  - 이전 버전에서는 항상 오류가 발생 합니다.
 * [HolographicSpace.CreateFramePresentationMonitor](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createframepresentationmonitor)
+* [HolographicDisplay. GetDefault](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.getdefault#Windows_Graphics_Holographic_HolographicDisplay_GetDefault)
+  - 는 연결을 설정 하기 전에 호출 되는 경우 오류를 보고 합니다.
+
 
 [Windows.Perception.Spatial](https://docs.microsoft.com/uwp/api/windows.perception.spatial)
 
@@ -48,7 +58,7 @@ Holographic 원격을 사용 하 여 HoloLens 2를 사용 하는 경우 다음 A
 * [Spatiallocation이. AbsoluteLinearAcceleration](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearacceleration)
 * [Spatiallocation이. AbsoluteLinearVelocity](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearvelocity)
 * [SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)
-  - ```nullptr```항상를 반환 합니다.
+  - 항상 ```nullptr```를 반환합니다.
 * [SpatialStageFrameOfReference.RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)
 * [SpatialAnchor.RemovedByUser](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.removedbyuser)
 * [SpatialAnchorExporter. GetDefault](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.getdefault
@@ -83,4 +93,4 @@ Holographic 원격을 사용 하 여 HoloLens 2를 사용 하는 경우 다음 A
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)

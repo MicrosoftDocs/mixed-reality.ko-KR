@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 렌더링, 홀로그램
-ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926855"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182033"
 ---
 # <a name="rendering"></a>렌더링
 
@@ -27,7 +27,7 @@ Holographic 렌더링을 사용 하면 응용 프로그램이 실제 세계에 �
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
+        <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -83,17 +83,21 @@ Windows Mixed Reality에서는 **holographic 카메라**의 개념을 소개 합
 3D에서 의료 MRIs 또는 엔지니어링 볼륨을 렌더링 하는 경우 [볼륨 렌더링](volume-rendering.md) 기술이 종종 사용 됩니다. 이러한 기술은 혼합 현실에서 특히 유용할 수 있습니다. 사용자는 단순히 헤드를 이동 하 여 키 각도에서 이러한 볼륨을 자연스럽 게 볼 수 있습니다.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>HoloLens에서 지원 되는 해상도 (첫 번째 gen)
-> [!NOTE]
-> 더 많은 업데이트가 곧 출시 될 예정입니다. [업데이트 목록 보기](release-notes-april-2018.md)
 
-* 현재 및 지원 되는 최대 해상도는 [뷰 구성](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration)의 속성입니다. HoloLens는 기본적으로 최대 해상도 인 720p (1268x720)로 설정 됩니다.
-* 지원 되는 가장 낮은 뷰포트 크기는 360p (634x360) 인 720p의 50%입니다. HoloLens에서 0.5의 ViewportScaleFactor입니다.
-* 540p 보다 낮은 항목은 시각적 저하로 인해 **권장 되지** 않지만, necks를 픽셀 채우기 속도로 식별 하는 데 사용할 수 있습니다.
+* 최대 뷰포트 크기는 [HolographicDisplay](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay)의 속성입니다. HoloLens는 기본적으로 최대 뷰포트 크기 (720p (1268x720))로 설정 됩니다.
+* HolographicCamera의 ViewportScaleFactor를 설정 하 여 뷰포트 크기를 변경할 수 있습니다. 이 배율 인수는 0에서 1 사이입니다.
+* HoloLens에서 지원 되는 가장 낮은 뷰포트 크기 (첫 번째 gen)는 360p (634x360) 인 720p의 50%입니다. 0\.5의 ViewportScaleFactor입니다.
+* 540p 보다 낮은 항목은 시각적 저하로 인해 권장 되지 않지만 픽셀 채우기 속도로 병목 상태를 식별 하는 데 사용할 수 있습니다.
 
 ## <a name="supported-resolutions-on-hololens-2"></a>HoloLens 2에서 지원 되는 해상도
 
-> [!NOTE]
-> HoloLens 2에 대 한 추가 지침은 [곧](news.md)제공 될 예정입니다.
+* 현재 지원 되는 최대 렌더링 대상 크기는 [뷰 구성](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration)의 속성입니다. HoloLens 2는 기본적으로 최대 렌더링 대상 크기 (1440x936)로 설정 됩니다.
+* 앱은 RequestRenderTargetSize 메서드를 호출 하 여 새 렌더링 대상 크기를 요청 하 여 렌더링 대상 버퍼의 크기를 변경할 수 있습니다. 요청 된 렌더링 대상 크기를 충족 하거나 초과 하는 새 렌더링 대상 크기가 선택 됩니다. 이 API는 GPU에서 메모리를 다시 할당 해야 하는 렌더링 대상 버퍼의 크기를 변경 합니다. 이에 대 한 의미는 다음과 같습니다. GPU의 메모리 압력을 줄이기 위해 렌더링 대상 크기를 축소할 수 있으며이 메서드는 높은 빈도로 호출 되지 않아야 합니다.
+* 앱은 HoloLens 1에 대해 수행한 것과 동일한 방식으로 뷰포트 크기를 변경할 수 있습니다. 이로 인해 GPU에서 메모리가 다시 할당 되지 않으므로 빈도가 높은 빈도로 변경 될 수 있지만 GPU의 메모리 부족을 줄이는 데 사용할 수 없습니다.
+* HoloLens 2에서 지원 되는 가장 낮은 뷰포트 크기는 634x412입니다. 이는 기본 렌더링 대상 크기를 사용 하는 경우 약 0.44의 ViewportScaleFactor입니다.
+* 지원 되는 가장 낮은 뷰포트 크기 보다 작은 렌더링 대상 크기를 제공 하는 경우 뷰포트 배율 요소가 무시 됩니다.
+* 540p 보다 낮은 항목은 시각적 저하로 인해 권장 되지 않지만 픽셀 채우기 속도로 병목 상태를 식별 하는 데 사용할 수 있습니다.
+
 
 
 ## <a name="see-also"></a>참고 항목

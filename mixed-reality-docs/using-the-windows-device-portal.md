@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
-ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926750"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182023"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -30,8 +30,8 @@ HoloLens 용 Windows 장치 포털을 사용 하면 Wi-fi 또는 USB를 통해 �
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>Windows 장치 포털을 사용 하도록 HoloLens 설정
 
 1. HoloLens의 전원을 켜고 디바이스에 배치합니다.
-2. [블룸](system-gesture.md#bloom) 제스처를 수행하여 주 메뉴를 시작합니다.
-3. **설정** 타일을 응시 하 고 [공중 탭](gaze-and-commit.md#composite-gestures) 제스처를 수행 합니다. 두 번째 공중 탭을 수행 하 여 환경에 앱을 추가 합니다. 앱을 배치한 후 앱 설정이 시작됩니다.
+2. HoloLens2 또는 [블 룸](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom) on HoloLens (첫 번째 Gen)의 [시작 제스처](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) 를 수행 하 여 주 메뉴를 시작 합니다. 
+3. **설정** 타일을 응시 하 고 hololens (첫 번째 Gen)에서 [공기 탭](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap) 제스처를 수행 하거나 [손으로 터치 하거나 손으로를 사용 하](https://docs.microsoft.com/hololens/hololens2-basic-usage)여 hololens 2에서 선택 합니다. 
 4. **업데이트** 메뉴 항목을 선택합니다.
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
