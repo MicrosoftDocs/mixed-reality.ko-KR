@@ -64,10 +64,13 @@
 ## UX 요소
 ### [개요](app-patterns-landingpage.md)
 ### 스타일
-#### [색, 광원 및 재질](color,-light-and-materials.md)
+#### [색, 광원 및 재질](color-light-and-materials.md)
 #### [배율](scale.md)
-#### [공간 음향 디자인](spatial-sound-design.md)
 #### [입력 체계](typography.md)
+### 공간 음향
+#### [공간 음향 디자인](spatial-sound-design.md)
+#### [사례 연구: Holotour ](case-study-spatial-sound-design-for-holotour.md)
+#### [사례 연구: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### 컨트롤 및 동작
 #### [커서](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. 여러 사용자 연결](mrlearning-sharing(photon)-ch3.md)
 ###### [4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)
 ###### [5. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch5.md)
+##### 공간 오디오 자습서
+###### [1. 프로젝트에서 공간 오디오 추가](unity-spatial-audio-ch1.md)
+###### [2. 공간화 단추 상호 작용 소리](unity-spatial-audio-ch2.md)
+###### [3. 비디오에서 공간화 오디오](unity-spatial-audio-ch3.md)
+###### [4. 런타임 시 공간 오디오 사용 및 사용 안 함](unity-spatial-audio-ch4.md)
+###### [5. 반향 효과를 이용해 공간 오디오에 거리감 부여](unity-spatial-audio-ch5.md)
 #### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
 ##### [원소의 주기율표](periodic-table-of-the-elements.md)
 ##### [달착륙선](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [공간 매핑](spatial-mapping-in-directx.md)
 #### [장면 이해](scene-understanding-sdk.md)
 #### [공유 공간 앵커](shared-spatial-anchors-in-directx.md)
-#### [키보드, 마우스 및 컨트롤러 입력](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [키보드, 마우스 및 컨트롤러 입력](keyboard-mouse-and-controller-input-in-directx.md)
 #### [홀로그램 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)
 #### [QR 코드 추적](qr-code-tracking.md)
 ### [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
