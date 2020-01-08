@@ -1,23 +1,23 @@
 ---
 title: 셰이더가
-description: ''
+description: MRTK 표준 셰이더는 holograms와 함께 사용할 수 있는 다양 한 유형의 시각적 효과를 제공 합니다.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: 23371ae5d70e5e792415fd25c0d58def0a7cefbb
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 4d95e335b3f7020766beae916423d0588ee66572
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143273"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694167"
 ---
 # <a name="shader"></a>셰이더가
 
 ![셰이더가](images/UX/UX_Hero_StandardShader.jpg)
 
-Holographic 개체는 환경의 물리적 항목과 혼합 되므로 혼합 현실에서는 시각적 신호를 제공 하는 것이 중요 합니다. MRTK 표준 셰이더는 holograms와 함께 사용할 수 있는 다양 한 유형의 시각적 효과를 제공 합니다. MRTK 표준 음영 시스템은 Unity의 표준 셰이더와 유사한 시각적 개체를 구현 하 고, 흐름 설계 시스템 원칙을 구현 하 고, 혼합 현실 장치에 대 한 성능 상태를 유지할 수 있는 유연한 단일 셰이더를 활용 합니다.
+Holographic 개체는 환경의 물리적 개체와 혼합 되므로 혼합 현실에서 시각적 표시를 제공 하는 것이 중요 합니다. MRTK 표준 셰이더는 holograms와 함께 사용할 수 있는 다양 한 유형의 시각적 효과를 제공 합니다. MRTK 표준 음영 시스템은 Unity의 표준 셰이더와 유사한 시각적 개체를 구현 하 고, [흐름 설계 시스템 원칙](https://www.microsoft.com/design/fluent/#/)을 구현 하 고, 혼합 현실 장치에 대 한 성능 상태를 유지할 수 있는 유연한 단일 셰이더를 활용 합니다.
 <br>
 
 ## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>MRTK 표준 셰이더를 사용 하는 시각적 효과의 예 
@@ -32,9 +32,11 @@ Holographic 개체는 환경의 물리적 항목과 혼합 되므로 혼합 현�
     :::column-end:::
 :::row-end:::
 
+<br>
+
 ---
 
-## <a name="mrtk-standard-shader-in-mrtkmixed-reality-toolkit-for-unity"></a>MRTK의 MRTK 표준 셰이더 (혼합 현실 도구 키트) 및 Unity
+## <a name="mrtk-standard-shader-in-mrtk-mixed-reality-toolkit-for-unity"></a>MRTK의 MRTK 표준 셰이더 (혼합 현실 도구 키트) 및 Unity
 
 * [MRTK-표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)
 

@@ -5,13 +5,13 @@ author: rwinj
 ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
-keywords: none
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+keywords: 없음
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439554"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694017"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>제목 (가능한 한 구체적이 고 인간 사용 약관) 
 
@@ -31,14 +31,14 @@ ms.locfileid: "73439554"
     <col width="22%" />
 </colgroup>
 <tr>
-     <td><strong>기능과</strong></td>
+     <td><strong>기능</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
 </tr>
 <tr>
      <td>실무 또는 문서 제목</td>
-     <td>❌ 지원 되지 않음</td>
+     <td>❌ 지원 안 됨</td>
      <td>✔️ 권장</td>
      <td>✔️ 권장</td>
 </tr>
@@ -56,7 +56,7 @@ ms.locfileid: "73439554"
 *   고려 사항
 *   Thumb의 규칙 
 *   사용 방법 
-*   장점
+*   혜택
 *   Do 및 don't's
 
 편집 규칙:
@@ -92,7 +92,7 @@ ms.locfileid: "73439554"
 ---
 
 
-### <a name="3-columns"></a>3 개 열
+### <a name="3-columns"></a>3 columns
 
 Les는 photorealism 작업 그리기 색 필드 painting stuckism 국제 cloisonnism, remodernism socialist 현실감 기하학 추상화 개념 아트, secularism structuralism neo-minimalism scism.<br>
 
@@ -237,7 +237,4 @@ Iframe을 width = "99" height = "530"로 설정 합니다.
 
 * [관련 문서 1 이름](design.md)
 * [관련 문서 2 이름](design.md)
-* [관련 문서 3 이름](design.md)
-
-
-
+* [관련 문서 3 이름-특정 섹션에 대 한 링크](design.md#what-are-the-core-concepts-of-an-experience)

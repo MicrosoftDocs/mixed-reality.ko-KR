@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: aa91918e20b4276b7453bae1a05ad18df9d8ab0e
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: 8140b9d3a9e1f4d2d7a25b77a48b39cb765cf6d9
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491131"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694137"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -83,7 +83,7 @@ OpenXR UWP 앱 패키지를 빌드한 후에는 HoloLens 2 장치 또는 HoloLen
 
 아래 BasicXrApp의 [Openxrprogram .cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) 파일에서 모범 사례에 대 한 예제를 확인할 수 있습니다. 시작 부분에 있는 Run () 함수는 일반적인 OpenXR 앱 코드 흐름을 초기화에서 이벤트 및 렌더링 루프로 캡처합니다.
 
-### <a name="select-a-pixel-format"></a>픽셀 형식 선택
+### <a name="select-a-swapchain-format"></a>이 swapchain present 형식 선택
 
 항상 `xrEnumerateSwapchainFormats`를 사용 하 여 지원 되는 픽셀 형식을 열거 하 고 앱이 지 원하는 런타임의 첫 번째 색 및 깊이 픽셀 형식을 선택 합니다 .이는 런타임이 선호 합니다. HoloLens 2에서 `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 및 `DXGI_FORMAT_D16_UNORM`는 일반적으로 렌더링 성능을 향상 시키기 위한 첫 번째 선택입니다. 이 기본 설정은 데스크톱 PC에서 실행 되는 VR 헤드셋에서 다를 수 있습니다.  
   
@@ -148,9 +148,7 @@ HoloLens 2에서 선호 하는 `DXGI_FORMAT_D16_UNORM` 깊이 형식을 사용 �
 ### <a name="support-mixed-reality-capture"></a>혼합 현실 캡처 지원
 
 HoloLens 2의 기본 디스플레이는 추가 환경 혼합을 사용 하지만, 사용자가 [혼합 된 현실 캡처](mixed-reality-capture-for-developers.md)를 시작 하면 앱의 렌더링 콘텐츠가 환경 비디오 스트림과 알파 혼합 됩니다.
-혼합 현실에서 최적의 시각적 품질을 얻기 위해 비디오를 캡처하는 것은 프로젝션 계층의 `layerFlags`에서 `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT`를 설정 하는 것이 가장 좋습니다.  
-
-**성능 경고:** 단일 프로젝션 계층에서 `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT` 플래그를 생략 하면 런타임 사후 처리가 발생 하며,이로 인해 성능이 크게 저하 됩니다.
+혼합 현실에서 최적의 시각적 품질을 얻기 위해 비디오를 캡처하는 것은 프로젝션 계층의 `layerFlags`에서 `XR_COMPOSITION_LAYER_BLEND_TEXTURE_SOURCE_ALPHA_BIT`를 설정 하는 것이 가장 좋습니다.
 
 ### <a name="avoid-quad-layers"></a>쿼드 계층 방지
 
@@ -163,8 +161,7 @@ HoloLens 2의 기본 디스플레이는 추가 환경 혼합을 사용 하지만
 HoloLens 2에는 `xrEndFrame`를 통해 컴퍼지션 데이터를 제출 하는 다양 한 방법이 있습니다. 그러면 사후 처리가 발생 하 여 성능이 저하 될 수 있습니다.
 성능 penalities을 방지 하려면 다음 특징을 가진 [단일 `XrCompositionProjectionLayer`를 제출](#use-a-single-projection-layer) 합니다.
 * [텍스처 배열 사용이 swapchain present](#render-with-texture-array-and-vprt)
-* [기본 색이 swapchain present 형식 사용](#select-a-pixel-format)
-* [질감 원본-알파 혼합 플래그 설정](#support-mixed-reality-capture)
+* [기본 색이 swapchain present 형식 사용](#select-a-swapchain-format)
 * [권장 되는 보기 차원 사용](#render-with-recommended-rendering-parameters-and-frame-timing)
 * `XR_COMPOSITION_LAYER_UNPREMULTIPLIED_ALPHA_BIT` 플래그를 설정 하지 마십시오.
 * `XrCompositionLayerDepthInfoKHR` `minDepth`를 0.0 f로 설정 하 고 `maxDepth`를 1.0 f로 설정 합니다.
@@ -221,7 +218,7 @@ Windows 10 10 월 2018 업데이트 (1809) 이상을 실행 하 고 있어야 �
 
 Windows Mixed Reality OpenXR 런타임이 이미 설치 되어 있고 활성 상태인 경우에는 "OpenXR 설정" 메뉴 항목이 표시 되지 않습니다.  [Mixed Reality OpenXR 개발자 포털](#getting-the-mixed-reality-openxr-developer-portal) 을 설치 하 여 시스템에서 OpenXR 런타임의 현재 상태를 확인할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 * <a href="https://www.khronos.org/openxr/" target="_blank">OpenXR에 대 한 자세한 정보</a>
 * <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">OpenXR 1.0 사양</a>

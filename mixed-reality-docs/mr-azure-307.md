@@ -1,20 +1,20 @@
 ---
 title: MR 및 Azure 307-Machine learning
-description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Machine Learning Studio을 구현 하는 방법을 알아보세요.
+description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Machine Learning Studio (클래식)을 구현 하는 방법을 알아보세요.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: azure, mixed reality, 아카데미, unity, 자습서, api, 기계 학습, ml, 기계 학습 스튜디오, hololens, 몰입 형, vr
-ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: d1692faef825d0ee20be4cfc8d8333bcccd754e1
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926614"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75333823"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
+>Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다.  따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다.  이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_** .  대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. 향후에는 HoloLens 2를 개발 하는 방법을 보여 주는 새 자습서 시리즈를 게시할 예정입니다.  이 알림은 게시 될 때 해당 자습서에 대 한 링크를 사용 하 여 업데이트 됩니다.
 
 <br>
 
@@ -22,13 +22,13 @@ ms.locfileid: "73926614"
 
 ![최종 제품-시작](images/AzureLabs-Lab7-0.png)
 
-이 과정에서는 Azure Machine Learning Studio를 사용 하 여 혼합 현실 응용 프로그램에 Machine Learning (ML) 기능을 추가 하는 방법에 대해 설명 합니다.
+이 과정에서는 Azure Machine Learning Studio (클래식)를 사용 하 여 혼합 현실 응용 프로그램에 Machine Learning (ML) 기능을 추가 하는 방법에 대해 설명 합니다.
 
-*Azure Machine Learning Studio* 는 개발자에 게 데이터 입력, 출력, 준비 및 시각화에 도움이 될 수 있는 많은 수의 기계 학습 알고리즘을 제공 하는 Microsoft 서비스입니다. 이러한 구성 요소를 통해 예측 분석 실험을 개발 하 고,이를 반복 하 고, 모델을 학습 하는 데 사용할 수 있습니다. 다음 교육을 통해 Azure 클라우드에서 모델을 작동 하도록 설정 하 여 새 데이터의 점수를 매길 수 있습니다. 자세한 내용은 [Azure Machine Learning Studio 페이지](https://azure.microsoft.com/services/machine-learning-studio/)를 참조 하세요.
+*Azure Machine Learning Studio (클래식)* 은 개발자에 게 데이터 입력, 출력, 준비 및 시각화에 도움이 될 수 있는 많은 수의 기계 학습 알고리즘을 제공 하는 Microsoft 서비스입니다. 이러한 구성 요소를 통해 예측 분석 실험을 개발 하 고,이를 반복 하 고, 모델을 학습 하는 데 사용할 수 있습니다. 다음 교육을 통해 Azure 클라우드에서 모델을 작동 하도록 설정 하 여 새 데이터의 점수를 매길 수 있습니다. 자세한 내용은 [Azure Machine Learning Studio (클래식) 페이지](https://azure.microsoft.com/services/machine-learning-studio/)를 참조 하세요.
 
 이 과정을 완료 하면 혼합 현실의 헤드셋 응용 프로그램을 사용할 수 있으며 다음 작업을 수행 하는 방법이 학습 됩니다.
 
-1.  *Azure Machine Learning Studio* 포털에 판매 데이터 표를 제공 하 고 인기 있는 항목의 향후 판매를 예측 하는 알고리즘을 디자인 합니다.
+1.  *Azure Machine Learning Studio (클래식)* 포털에 판매 데이터 표를 제공 하 고 인기 있는 항목의 향후 판매를 예측 하는 알고리즘을 디자인 합니다.
 2.  ML 서비스에서 예측 데이터를 수신 하 고 해석할 수 있는 **Unity 프로젝트**를 만듭니다.
 3.  선반에서 가장 인기 있는 판매 항목을 제공 하 여 **Unity 프로젝트**내에서 폐색 데이터를 시각적으로 표시 합니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "73926614"
 > [!NOTE]
 > 이 과정에서 주로 Windows Mixed Reality (VR) 헤드셋에 초점을 맞춘 반면,이 과정에서 학습 하는 내용을 Microsoft HoloLens에도 적용할 수 있습니다. 과정을 진행할 때 HoloLens를 지원 하기 위해 사용 해야 하는 모든 변경 내용에 대 한 메모를 볼 수 있습니다. HoloLens를 사용 하는 경우 음성 캡처 중에 몇 가지 echo를 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 > [!NOTE]
 > 이 자습서는 Unity 및 C#에 대 한 기본 경험이 있는 개발자를 위해 작성 되었습니다. 또한이 문서에서 사전 요구 사항 및 작성 된 지침은 작성 시 테스트 되 고 확인 된 내용 (2018 일 수 있음)을 나타냅니다. [도구 설치 문서](install-the-tools.md)에 나와 있는 것 처럼 최신 소프트웨어를 무료로 사용할 수 있지만,이 과정의 정보가 아래 나열 된 것 보다 최신 소프트웨어에서 찾을 수 있는 것으로 간주 하면 안 됩니다.
@@ -92,10 +92,10 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
     1.  계정에 대 한 **이름을** 삽입 합니다 .이 필드에는 숫자 및 소문자만 허용 됩니다.
     2.  **배포 모델에서** **Resource manager**를 선택 합니다.
     3.  **계정 종류**에 대해 **저장소 (범용 v1)** 를 선택 합니다.
-    4.  **성능**으로 **표준**을 선택 합니다.
+    4.  **성능**은 **표준**을 선택합니다.
     5.  **복제** 의 경우 **읽기 액세스-지역 중복 저장소 (RA-GRS)** 를 선택 합니다.
     6.  **보안 전송을** **사용 하지 않도록 설정**해야 합니다.
-    7.  **구독**을 선택 합니다.
+    7.  **구독**을 선택합니다.
     4. 리소스 그룹을 선택 하거나 새 **리소스 그룹** 을 만듭니다. 리소스 그룹은 Azure 자산의 컬렉션에 대 한 청구를 모니터링 하 고, 액세스를 제어 하 고, 프로 비전 하 고, 관리 하는 방법을 제공 합니다. 단일 프로젝트와 연결 된 모든 Azure 서비스 (예: 이러한 랩)를 공용 리소스 그룹에 유지 하는 것이 좋습니다.
 
         > Azure 리소스 그룹에 대 한 자세한 내용을 보려면 [리소스 그룹 문서를 참조](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal)하세요.
@@ -112,13 +112,13 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     ![계정 설정 Azure Storage](images/AzureLabs-Lab7-4.png)
 
-## <a name="chapter-2---the-azure-machine-learning-studio"></a>2 장-Azure Machine Learning Studio
+## <a name="chapter-2---the-azure-machine-learning-studio--classic"></a>2 장-Azure Machine Learning Studio (클래식)
 
 *Azure Machine Learning*을 사용 하려면 응용 프로그램에서 사용할 수 있도록 Machine Learning 서비스의 인스턴스를 구성 해야 합니다.
 
 1.  Azure Portal의 왼쪽 위 모서리에서 **새로 만들기** 를 클릭 하 고 **Machine Learning Studio 작업 영역**을 검색 하 고 **enter**키를 누릅니다.
 
-    ![Azure Machine Learning Studio](images/AzureLabs-Lab7-5.png)
+    ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-5.png)
 
 2.  새 페이지에 **Machine Learning Studio 작업 영역** 서비스에 대 한 설명이 제공 됩니다. 이 프롬프트의 왼쪽 아래에서 **만들기** 단추를 클릭 하 여이 서비스와의 연결을 만듭니다.
 
@@ -126,7 +126,7 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     1.  이 서비스 인스턴스의 원하는 **작업 영역 이름을** 삽입 합니다.
 
-    2.  **구독**을 선택 합니다.
+    2.  **구독**을 선택합니다.
 
     3. 리소스 그룹을 선택 하거나 새 **리소스 그룹** 을 만듭니다. 리소스 그룹은 Azure 자산의 컬렉션에 대 한 청구를 모니터링 하 고, 액세스를 제어 하 고, 프로 비전 하 고, 관리 하는 방법을 제공 합니다. 단일 프로젝트와 연결 된 모든 Azure 서비스 (예: 이러한 랩)를 공용 리소스 그룹에 유지 하는 것이 좋습니다. 
 
@@ -146,30 +146,30 @@ Azure Translator API를 사용 하려면 응용 프로그램에서 사용할 수
 
     10. **만들기**를 클릭합니다.
 
-        ![Azure Machine Learning Studio](images/AzureLabs-Lab7-6.png)
+        ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-6.png)
 
 4.  **만들기**를 클릭 한 후에는 서비스를 만들 때까지 기다려야 합니다 .이 작업이 몇 분 정도 걸릴 수 있습니다.
 
 5.  서비스 인스턴스를 만든 후 알림이 포털에 표시 됩니다.
 
-    ![Azure Machine Learning Studio](images/AzureLabs-Lab7-7.png)
+    ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-7.png)
 
 6.  알림을 클릭 하 여 새 서비스 인스턴스를 탐색 합니다.
 
-    ![Azure Machine Learning Studio](images/AzureLabs-Lab7-8.png)
+    ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-8.png)
 
 7.  알림에서 **리소스로 이동** 단추를 클릭 하 여 새 서비스 인스턴스를 탐색 합니다.
 
 8.  표시 되는 페이지의 **추가 링크** 섹션에서 **시작 Machine Learning Studio**를 클릭 합니다. 그러면 브라우저를 **Machine Learning Studio** 포털로 안내 합니다.
 
-    ![Azure Machine Learning Studio](images/AzureLabs-Lab7-9.png)
+    ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-9.png)
 
-9.  오른쪽 위 또는 가운데에 있는 **로그인** 단추를 사용 하 여 Machine Learning Studio에 로그인 합니다.
+9.  오른쪽 위 또는 가운데에 있는 **로그인** 단추를 사용 하 여 Machine Learning Studio (클래식)에 로그인 합니다.
 
-    ![Azure Machine Learning Studio](images/AzureLabs-Lab7-10.png)
+    ![Azure Machine Learning Studio (클래식)](images/AzureLabs-Lab7-10.png)
 
 
-## <a name="chapter-3---the-machine-learning-studio-dataset-setup"></a>3 장-Machine Learning Studio: 데이터 집합 설치
+## <a name="chapter-3---the-machine-learning-studio-classic-dataset-setup"></a>3 장-Machine Learning Studio (클래식): 데이터 집합 설치
 
 Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를 분석 한 다음 기존 데이터 집합을 기반으로 향후 결과를 예측 하는 것입니다. 이는 일반적으로 기존 데이터를 더 많이 사용 하는 것을 의미 하므로 이후 결과를 예측 하는 알고리즘이 더 좋아집니다.
 
@@ -180,25 +180,25 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 이 샘플 데이터 집합에는 2017 년의 각 날짜의 매시간 가장 인기 있는 개체 레코드가 포함 되어 있습니다.
         
-![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-11.png)
+![Machine Learning Studio (클래식): 데이터 집합 설치](images/AzureLabs-Lab7-11.png)
 
 예를 들어 오후 1 시 (시간 13)에서 2017의 1 일에 가장 잘 팔리는 항목은 솔트 및 고추입니다.
 
 이 샘플 테이블에는 9998 개의 항목이 포함 되어 있습니다.
 
-1.  **Machine Learning Studio** 포털로 다시 이동 하 여이 테이블을 ML에 대 한 **데이터 집합** 으로 추가 합니다. 화면의 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 클릭 하 여이 작업을 수행 합니다.
+1.  **Machine Learning Studio (클래식)** 포털로 다시 이동 하 여이 테이블을 ML에 대 한 **데이터 집합** 으로 추가 합니다. 화면의 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 클릭 하 여이 작업을 수행 합니다.
 
-    ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-12.png)
+    ![Machine Learning Studio (클래식): 데이터 집합 설치](images/AzureLabs-Lab7-12.png)
 
 2.  섹션은 아래쪽에서 위쪽으로 제공 되며 왼쪽에는 탐색 패널이 있습니다. **로컬 파일에서**데이터 집합을 클릭 한 다음 오른쪽에 있는 **데이터 집합**을 클릭 합니다.
 
-    ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-13.png)
+    ![Machine Learning Studio (클래식): 데이터 집합 설치](images/AzureLabs-Lab7-13.png)
 
 3.  다음 단계를 수행 하 여 새 **데이터 집합** 을 업로드 합니다.
 
     1. 하드 드라이브에서 새 데이터 집합을 **찾아볼** 수 있는 업로드 창이 표시 됩니다.
 
-        ![Machine Learning Studio: 데이터 집합 설치](images/AzureLabs-Lab7-14.png)
+        ![Machine Learning Studio (클래식): 데이터 집합 설치](images/AzureLabs-Lab7-14.png)
 
     2.  을 선택 하 고 다시 업로드 창에서 읽으려고 확인란을 선택 취소 합니다.
 
@@ -208,7 +208,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
     5.  업로드 창의 오른쪽 아래에 있는 틱을 누르면 **데이터 집합이** 업로드 됩니다.
 
-## <a name="chapter-4---the-machine-learning-studio-the-experiment"></a>4 장-Machine Learning Studio: 실험
+## <a name="chapter-4---the-machine-learning-studio-classic-the-experiment"></a>4 장-Machine Learning Studio (클래식): 실험
 
 기계 학습 시스템을 구축 하려면 먼저 데이터에 대 한 이론적 유효성을 검사 하기 위해 실험을 빌드해야 합니다. 결과를 사용 하 여 더 많은 데이터가 필요한 지 또는 데이터와 가능한 결과 간의 상관 관계가 없는지를 알 수 있습니다.
 
@@ -216,39 +216,39 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 1.  페이지 왼쪽 아래에 있는 **+ 새로 만들기** 단추를 다시 클릭 한 다음 **실험** > **빈 실험**을 클릭 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-15.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-15.png)
 
 2.  새 페이지가 빈 실험으로 표시 됩니다.
 
 3.  왼쪽 패널에서 **내 데이터** 집합 > **저장 된 데이터 집합** 을 확장 하 고 **ProductsTableCSV** 를 **실험 캔버스로**끌어다 놓습니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-16.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-16.png)
 
 4.  왼쪽 패널에서 **데이터 변환** > **샘플 및 분할**을 확장 합니다. 그런 다음 **데이터 분할** 항목을 **실험 캔버스로**끌어다 놓습니다. 데이터 분할 항목은 데이터 집합을 두 부분으로 분할 합니다. 기계 학습 알고리즘을 학습 하는 데 사용 하는 한 부분입니다. 두 번째 부분은 생성 된 알고리즘의 정확도를 평가 하는 데 사용 됩니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-17.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-17.png)
 
 5.  캔버스의 데이터 분할 항목이 선택 된 상태에서 오른쪽 패널의 **첫 번째 출력 데이터 집합에 있는 행의 비율** 을 **0.7**로 편집 합니다. 이렇게 하면 데이터는 두 부분으로 분할 되 고 첫 번째 부분은 데이터의 70% 이며 두 번째 부분은 나머지 30%가 됩니다. 데이터가 무작위로 분할 되도록 하려면 **임의 분할** 확인란이 선택 되어 있는지 확인 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-18.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-18.png)
 
 6.  캔버스의 **ProductsTableCSV** 항목 밑에서 분할 된 데이터 항목의 위쪽으로 연결을 끕니다. 이렇게 하면 항목을 연결 하 고 **ProductsTableCSV** 데이터 집합 출력 (데이터)을 분할 데이터 입력으로 보냅니다.  
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-19.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-19.png)
 
 7.  왼쪽의 **실험** 패널에서 **Machine Learning** > **학습**을 확장 합니다. **모델 학습** 항목을 실험 캔버스로 끌어다 놓습니다. 캔버스는 아래와 동일 하 게 표시 되어야 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-20.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-20.png)
 
 8.  **데이터 분할** 항목의 ***왼쪽 아래*** 에서 **모델 학습** 항목의 **오른쪽 위에** 연결을 끌어 놓습니다. 데이터 집합에서 처음 70%의 분할은 학습 모델에서 알고리즘을 학습 하는 데 사용 됩니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-21.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-21.png)
 
 9.  캔버스에서 **모델 학습** 항목을 선택 하 고 브라우저 창의 오른쪽에 있는 **속성** 패널에서 **열 선택기 시작** 단추를 클릭 합니다.
 
 10. 텍스트 상자에 **product** 를 입력 하 고 **enter**키를 누릅니다. *제품* 은 예측 학습을 위한 열로 설정 됩니다. 이를 수행 하 고 오른쪽 아래 모서리에 있는 **틱** 을 클릭 하 여 선택 대화 상자를 닫습니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-22.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-22.png)
 
 11. **다중 클래스 로지스틱 회귀** 알고리즘을 학습 하 여 시간 및 날짜를 기준으로 가장 많이 판매 되는 **제품** 을 예측 하려고 합니다. Azure Machine Learning studio에서 제공 하는 다양 한 알고리즘에 대 한 세부 정보를 설명 하기 위해이 문서에서는 다루지 않지만 [Machine Learning Algorithm 참고 자료 시트](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet) 에서 더 많은 정보를 확인할 수 있습니다.
 
@@ -256,7 +256,7 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 13. **다중 클래스 로지스틱 회귀**의 아래쪽에 있는 출력을 **모델 학습** 항목의 왼쪽 위 입력에 연결 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-23.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-23.png)
 
 14. 왼쪽 패널의 실험 항목 목록에서 **Machine Learning** > **점수**를 확장 하 고 **모델 점수 매기기** 항목을 캔버스로 끕니다.
 
@@ -264,60 +264,60 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
 
 16. **데이터 분할**에서 오른쪽 아래 출력을 **모델 점수 매기기** 항목의 오른쪽 위 입력에 연결 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-24.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-24.png)
 
 17. 왼쪽 패널의 **실험** 항목 목록에서 **Machine Learning** > **평가**를 확장 하 고 **모델 평가** 항목을 캔버스로 끌어 놓습니다.
 
 18. **점수 모델** 의 출력을 **평가 모델**의 왼쪽 위 입력에 연결 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-25.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-25.png)
 
 19. 첫 번째 Machine Learning 실험을 빌드 했습니다. 이제 실험을 저장 하 고 실행할 수 있습니다. 페이지 아래쪽의 메뉴에서 **저장** 단추를 클릭 하 여 실험을 저장 한 다음 **실행** 을 클릭 하 여 실험을 시작 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-26.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-26.png)
 
 20. 캔버스의 오른쪽 위에서 실험의 **상태** 를 볼 수 있습니다. 몇 분 정도 기다린 후 실험을 완료할 수 있습니다.
 
     > 실제 데이터 집합이 큰 경우 실험을 실행 하는 데 몇 시간이 걸릴 수 있습니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-27.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-27.png)
 
 21. 캔버스에서 **모델 평가** 항목을 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 마우스를 클릭 하 여 **평가 결과**를 가리킨 다음 **시각화**를 선택 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-28.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-28.png)
 
 22. 평가 결과는 예상 결과와 실제 결과를 표시 하는 표시 됩니다. 이는 이전에 분할 된 원래 데이터 집합의 30%를 사용 하 여 모델을 평가 합니다. 결과가 적절 하지 않은 것을 볼 수 있습니다. 이상적으로는 각 행에 있는 가장 큰 숫자를 열에서 강조 표시 된 항목으로 지정할 수 있습니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-29.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-29.png)
 
 23. **결과**를 닫습니다.
 
 24. 새로 학습 된 Machine Learning 모델을 사용 하려면 **웹 서비스로**노출 해야 합니다. 이렇게 하려면 페이지 아래쪽의 메뉴에서 **웹 서비스 설정** 메뉴 항목을 클릭 하 고 **예측 웹 서비스**를 클릭 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-30.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-30.png)
 
 25. 새 탭이 만들어지고 학습 모델을 병합 하 여 새 웹 서비스를 만듭니다. 
 
 26. 페이지 아래쪽의 메뉴에서 **저장**을 클릭 한 다음 **실행**을 클릭 합니다. 실험 캔버스의 오른쪽 위 모서리에 상태가 업데이트 된 것을 볼 수 있습니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-31.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-31.png)
 
 27. 실행이 완료 되 면 **웹 서비스 배포** 단추가 페이지 아래쪽에 표시 됩니다. 웹 서비스를 배포할 준비가 되었습니다. 페이지 아래쪽의 메뉴에서 **웹 서비스 배포** (클래식)를 클릭 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-32.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-32.png)
 
     > 브라우저에서 **허용**해야 하는 팝업을 허용할지 여부를 묻는 메시지가 표시 될 수 있습니다. 단, 배포 페이지가 표시 되지 않는 경우에는 **웹 서비스 배포** 를 다시 눌러야 할 수 있습니다. 
 
 28. 실험을 만든 후에는 **API 키** 를 표시 하는 **대시보드** 페이지로 리디렉션됩니다. 잠시 동안 메모장에 복사 하 여 코드에서 곧 필요 합니다. API 키를 적어둔 후에는 키 아래의 **기본 끝점** 섹션에서 **요청/응답** 단추를 클릭 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-33.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
     > 이 페이지에서 테스트를 클릭 하는 경우 입력 데이터를 입력 하 고 출력을 볼 수 있습니다. **날짜** 와 **시간**을 입력 합니다. **제품** 항목을 비워 둡니다. 그런 다음 **확인** 단추를 클릭 합니다. 페이지 아래쪽의 출력에는 각 제품의 선택 가능성을 나타내는 JSON이 표시 됩니다.
 
-29. Machine Learning Studio에 필요한 요청 구조에 대 한 지침 및 몇 가지 예제가 표시 되는 새 웹 페이지가 열립니다. 이 페이지에 표시 된 **요청 URI** 를 메모장에 복사 합니다.
+29. 새 웹 페이지가 열리고 Machine Learning Studio (클래식)에서 요구 하는 요청 구조에 대 한 지침 및 몇 가지 예가 표시 됩니다. 이 페이지에 표시 된 **요청 URI** 를 메모장에 복사 합니다.
 
-    ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-34.png)
+    ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-34.png)
 
 이제 연간 시간 및 요일과 상관 관계가 지정 된 구매 데이터를 기반으로 판매 될 가능성이 가장 높은 제품을 제공 하는 기계 학습 시스템을 빌드 했습니다.
 
@@ -648,9 +648,9 @@ Machine Learning 알고리즘의 작동 방법 중 하나는 기존 데이터를
     > [!IMPORTANT]
     > Machine Learning 포털에서 여기에 있는 **기본 키** 와 **요청-응답 끝점**을 변수에 삽입 해야 합니다. 아래 이미지는에서 키와 끝점을 가져온 위치를 보여 줍니다. 
     >  
-    > ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-53-1.png)
+    > ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-53-1.png)
     >
-    > ![Machine Learning Studio: 실험](images/AzureLabs-Lab7-53-2.png)
+    > ![Machine Learning Studio (클래식): 실험](images/AzureLabs-Lab7-53-2.png)
 
 8.  **Start ()** 메서드 내에이 코드를 삽입 합니다. **Start ()** 메서드는 클래스가 초기화 될 때 호출 됩니다.
 
@@ -876,7 +876,7 @@ Mixed Reality 응용 프로그램을 실행 하는 경우 Unity 장면에 설정
 
 ![NuGet 패키지 추가](images/AzureLabs-Lab7-0.png)
 
-## <a name="exercise"></a>조사할
+## <a name="exercise"></a>연습
 
 **연습 1**
 

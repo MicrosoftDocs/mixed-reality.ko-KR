@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, Mixed Reality Toolkit, Windows Mixed Reality, 디자인, 샘플 앱, 컨트롤
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439654"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623503"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>MRTK 101: 기본 상호 작용을 위해 Mixed Reality Toolkit Unity를 사용 하는 방법 (HoloLens 2, HoloLens, Windows Mixed Reality, 오픈 VR)
 
@@ -55,7 +55,7 @@ ManipulationHandler.cs는 2 방향 배율/회전을 지원 합니다. 이는 Hol
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>정밀도를 사용 하 여 개체를 이동 하거나 회전 하는 방법
-개체의 크기를 조정 하 고 회전 하는 인터페이스인 경계 상자를 사용할 개체에 BoundingBox.cs를 할당 합니다. 기본적으로 HoloLens 1 스타일 파란색 핸들 및 와이어를 표시 합니다. HoloLens 2 스타일 근접 애니메이션 핸들을 사용 하려면 prefabs 및 자료를 할당 해야 합니다. 구성 세부 정보는 경계 상자 설명서 및 BoundingBoxExamples 장면을 참조 하세요.
+개체의 크기를 조정 하 고 회전 하는 인터페이스인 경계 상자를 사용할 개체에 BoundingBox.cs를 할당 합니다. 기본적으로 HoloLens 1 스타일 파란색 핸들 및 와이어를 표시 합니다. HoloLens 2 스타일 근접 애니메이션 핸들을 사용 하려면 prefabs 및 자료를 할당 해야 합니다. 구성 세부 정보는 [경계 상자 설명서](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) 및 BoundingBoxExamples 장면을 참조 하세요.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 
@@ -132,7 +132,7 @@ Billboard.cs 스크립트를 개체에 할당 합니다. 사용자의 위치에 
 
 혼합 현실에서 놀라운 환경을 만들 준비가 되셨습니까? 아래 페이지를 방문 하 여 MRTK 및 mixed reality에 대해 자세히 알아보세요.
 
-## <a name="about-the-author"></a>작성자 정보
+## <a name="about-the-author"></a>저자 소개
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
