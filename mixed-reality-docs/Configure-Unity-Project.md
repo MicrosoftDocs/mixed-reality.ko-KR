@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트
-ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 99c72f2d9d900c8a05fb7d8b9b8de10d657fdd13
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437118"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502654"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Windows Mixed Reality에 대 한 새 Unity 프로젝트 구성 
 
 (MRTK v 2를 Unity 프로젝트로 이미 가져온 경우에는 건너뜀)
 
-Mixed Reality 도구 키트를 가져오지 않고 새 Unity 프로젝트를 만들려는 경우에는 Windows Mixed Reality에 대해 수동으로 변경 해야 하는 몇 가지 Unity 설정, 즉 프로젝트별 및 장면의 두 가지 범주로 분류 됩니다.
+Mixed Reality 도구 키트를 가져오지 않고 새 Unity 프로젝트를 만들려는 경우에는 Windows Mixed Reality에 대해 수동으로 변경 하 여 프로젝트별 및 장면의 두 범주로 분할 하는 데 필요한 몇 가지 Unity 설정 집합이 있습니다.
 
 ## <a name="per-project-settings"></a>프로젝트별 설정
 
@@ -29,7 +29,7 @@ Windows Mixed Reality를 대상으로 하려면 먼저 유니버설 Windows 플�
 5. **빌드 유형을** **D3D** 로 설정
 6. **UWP SDK** 를 **최신 설치** 로 설정
 
-그런 다음 내보내려는 앱이 2D 보기 대신 [몰입 형 보기](app-views.md) 를 만들어야 한다고 Unity에 알려야 합니다. "가상 현실 지원"을 사용 하도록 설정 하 여이 작업을 수행 합니다.
+그런 다음 내보내려는 앱이 2D 보기 대신 [몰입 형 보기](app-views.md) 를 만들어야 한다고 Unity에 알려야 합니다. "가상 현실 지원 됨"을 사용 하도록 설정 하 여이 작업을 수행 합니다.
 1. **빌드 설정 ...** 창에서 **플레이어 설정 ...** 을 엽니다.
 2. 유니버설 Windows 플랫폼 탭 **에 대 한 설정** 선택
 3. **XR 설정** 그룹을 확장 합니다.
@@ -69,7 +69,7 @@ HoloLens에는 모바일 클래스 GPU가 있습니다. 앱이 HoloLens를 대�
 
 앱이 특별히 HoloLens를 대상으로 하는 경우 장치의 투명 디스플레이를 최적화 하기 위해 변경 해야 하는 몇 가지 설정이 있습니다. 따라서 앱은 실제 세계에 표시 됩니다.
 1. **계층**에서 **기본 카메라** 를 선택 합니다.
-2. **검사기** 패널에서 transform **위치** 를 **0, 0, 0** 으로 설정 하 여 사용자 헤드의 위치가 Unity 세계 원점에서 시작 되도록 합니다.
+2. **검사기** 패널에서 변환 **위치** 를 **0, 0, 0** 으로 설정 하 여 사용자의 헤드 위치가 Unity 세계 원점에서 시작 되도록 합니다.
 3. **Clear 플래그** 를 **Solid 색**으로 변경 합니다.
 4. **배경색** 을 **RGBA 0, 0**, 0, 0으로 변경 합니다. 검은색은 HoloLens에서 투명 하 게 렌더링 됩니다.
 5. **클립 평면** 을 [HoloLens 권장](camera-in-unity.md#clip-planes) 0.85 (미터) 근처로 변경 합니다.

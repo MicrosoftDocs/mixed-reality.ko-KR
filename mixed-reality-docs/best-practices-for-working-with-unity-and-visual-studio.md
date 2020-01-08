@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 배포, unity, visual studio, HoloLens, HoloLens 2, 모던 헤드셋
-ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926545"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502634"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Unity 및 Visual Studio 사용에 대 한 모범 사례
 
@@ -29,7 +29,7 @@ Unity의 .NET scripting 백 엔드 지원은 Unity 2018에서 더 이상 사용 
    - **제외 추가** 를 클릭 하 고 Unity 프로젝트 코드 및 빌드 출력을 포함 하는 폴더를 선택 합니다.
 3) 빌드에 SSD 활용
 
-자세한 정보는 [IL2CPP에 대 한 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) 를 참조 하세요. 또한 [IL2CPP Scripting 백 엔드에서 디버깅을](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html)읽어 보세요.
+자세한 정보는 [IL2CPP에 대 한 빌드 시간 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) 를 검토 하세요. 또한 [IL2CPP Scripting 백 엔드에서 디버깅](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html)을 검토 합니다.
 
 또한 [ *Unityscriptanalyzer* Visual Studio 확장](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)을 설치 하는 것이 좋습니다. 이 도구는 더 최적화 C# 된 방식으로 작성할 수 있는 코드에 대 한 Unity 스크립트를 분석 합니다.
 
@@ -45,7 +45,7 @@ Unity의 .NET scripting 백 엔드 지원은 Unity 2018에서 더 이상 사용 
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>손쉬운 C# 조정을 위해 클래스 변수 노출
 
-클래스 변수를 노출 하는 방법에는 두 가지가 있습니다. 이 작업을 수행 하는 권장 방법은 전용 변수에 [SerializeField] 특성을 추가 하는 것입니다. 이렇게 하면 편집기에서 액세스할 수 있지만 프로그래밍 방식으로 노출 되지는 않습니다.  다른 옵션은 클래스 변수를 C# public으로 설정 하 여 편집기 UI에서 노출 하는 것입니다. 
+클래스 변수를 노출 하는 방법에는 두 가지가 있습니다. [SerializeField] 특성을 전용 변수에 추가 하는 것이 좋습니다. 이렇게 하면 편집기에서 액세스할 수 있지만 프로그래밍 방식으로 노출 되지는 않습니다.  다른 옵션은 클래스 변수를 C# public으로 설정 하 여 편집기 UI에서 노출 하는 것입니다. 
 
 두 방법 모두 편집기에서 재생 하는 동안 변수를 쉽게 수정할 수 있습니다. 이 기능은 상호 작용 정비공 속성을 튜닝 하는 데 특히 유용 합니다.
 
