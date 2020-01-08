@@ -1,17 +1,17 @@
 ---
 title: 자습서-4를 시작 합니다. 동적 콘텐츠 배치 및 solvers 사용
-description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064260"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334366"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 solvers 사용
 
@@ -23,9 +23,7 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 * 해결기를 사용하여 단추 컬렉션이 사용자를 따르도록 하기
 * 해결기를 사용하여 게임 개체가 사용자의 추적된 손을 따르도록 하기
 
-## <a name="instructions"></a>지침
-
-### <a name="location-of-solvers-in-the-mrtk"></a>MRTK에서 해결기의 위치
+## <a name="location-of-solvers-in-the-mrtk"></a>MRTK에서 해결기의 위치
 
  프로젝트에서 사용 가능한 solvers를 찾으려면 MRTK SDK 폴더 (MixedRealityToolkit 폴더)를 확인 합니다. 유틸리티 폴더 아래 이미지에 표시 된 것 처럼 solvers 폴더가 표시 됩니다.
 
@@ -34,7 +32,7 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 >[!NOTE]
 >이 단원에서는 궤도 나 RadialView의 구현을 검토 합니다. MRTK에서 사용할 수 있는 solvers의 전체 범위에 대해 자세히 알아보려면 다음을 방문 하세요. [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
 
-### <a name="use-a-solver-to-follow-the-user"></a>해결기를 사용하여 사용자 따르기
+## <a name="use-a-solver-to-follow-the-user"></a>해결기를 사용하여 사용자 따르기
 
 이 장의 목표는 사용자의 응시 방향을 따라가는 이전에 만든 단추 컬렉션을 개선 하는 것입니다. 이전 버전의 MRTK 및 HoloToolkit에서는이를 tagalong 기능 이라고 했습니다.
 
@@ -50,13 +48,14 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
     >궤도 구성 요소를 추가 하면 시스템에서 필수 구성 요소인 SolverHandler 구성 요소도 추가 됩니다.
 
 3. 사용자를 따르도록 단추 컬렉션을 구성 하려면 다음 조정을 구현 해야 합니다 (아래 이미지 참조).
+
     * 궤도 스크립트에서 방향 유형 드롭다운 목록을 요 Only로 설정 합니다. 이렇게 하면 사용자를 따를 때 개체의 축 하나만 회전합니다.
     * 모든 축에서 Local Offset을 0으로 설정합니다. 전역 오프셋을 x = 0, y =-0.1 및 z = 0.6로 설정 합니다. 이렇게 하면 개체의 이동이 잠기므로 사용자가 높이를 변경 하는 경우 개체는 실제 환경에서 고정 높이로 유지 되 고 사용자가 환경에 대해 이동할 때 계속 사용자를 따르도록 허용 합니다. 다양한 범위의 동작을 달성하기 위해 이러한 값을 조정할 수 있습니다.
     * 사용자가 자신의 머리를 충분히 멀리 전환 하 고 나 서 단추를 클릭 한 후에도 사용자의 보기를 따라 이동 하는 동작을 위해 전 세계 오프셋에 각도 스테핑 사용 확인란을 선택할 수 있습니다 (참고: 아래 이미지에 나와 있는 것 처럼 일부 화면에서는이 제목이 잘릴 수 있음). 예를 들어 개체가 90도 마다 사용자를 따르도록 하려면 단계 수를 4로 설정 합니다 (아래 예제에서는 녹색 화살표로 표시 됨).
 
     ![Lesson3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)
 
-### <a name="enabling-objects-to-follow-tracked-hands"></a>추적 된 손을 따르도록 개체 활성화
+## <a name="enabling-objects-to-follow-tracked-hands"></a>추적 된 손을 따르도록 개체 활성화
 
 이 섹션에서는 RadialView 해를 사용 하 여 사용자의 추적 된 손을 따르도록 이전에 만든 Cube game 개체를 구성 합니다.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: b033e4f9a379fb1778da3d94da70262e073d141b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926515"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334369"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. 음력 모듈 샘플 응용 프로그램 만들기
 
@@ -25,9 +25,7 @@ ms.locfileid: "73926515"
 - 강체 물리학 및 힘 사용
 - 도구 설명 사용 살펴보기
 
-## <a name="instructions"></a>지침
-
-### <a name="configuring-the-lunar-module"></a>달탐사선 구성
+## <a name="configuring-the-lunar-module"></a>달탐사선 구성
 
 이 섹션에서는 샘플 환경을 만드는 데 필요한 다양 한 구성 요소를 소개 합니다.
 
@@ -38,7 +36,7 @@ ms.locfileid: "73926515"
 
     ![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
 
-    계층에서 로켓 Launcher_Tutorial 게임 개체를 확장 하 고 음력 Module 개체를 추가로 확장 하는 경우 "x-레이" 라는 재질을 포함 하는 여러 자식 개체를 찾을 수 있습니다. "X-y" 재질은 사용자에 대 한 배치 힌트로 사용 되는 약간 반투명 색을 허용 합니다. 
+    계층에서 로켓 Launcher_Tutorial 게임 개체를 확장 하 고 음력 Module 개체를 추가로 확장 하는 경우 "x-레이" 라는 재질을 포함 하는 여러 자식 개체를 찾을 수 있습니다. "X-y" 재질은 사용자에 대 한 배치 힌트로 사용 되는 약간 반투명 색을 허용 합니다.
 
     ![6 단원에서는 Chapter1.txt 참고 목표](images/Lesson6_Chapter1_noteaim.PNG)
 
@@ -81,7 +79,7 @@ ms.locfileid: "73926515"
 
     ![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>음력 모듈 부분 개요
+## <a name="lunar-module-parts-overview"></a>음력 모듈 부분 개요
 
 음력 모듈 파트 부모 개체는 사용자가 상호 작용 하는 개체의 컬렉션입니다. 괄호 안에 이름이 지정 된 장면이 있는 게임 개체 이름은 아래 목록에 제공 됩니다.
 
@@ -106,7 +104,7 @@ ms.locfileid: "73926515"
 
 오디오 소스가 자동으로 grabbed 됩니다.
 
-### <a name="configuring-the-placement-hints-button"></a>배치 힌트 단추 구성
+## <a name="configuring-the-placement-hints-button"></a>배치 힌트 단추 구성
 
 [2 단원](mrlearning-base-ch2.md)에서는 항목의 색을 변경 하거나 푸시 될 때 소리를 재생 하는 등의 작업을 수행 하는 단추를 설정 하 고 구성 하는 방법을 배웠습니다. 이제 이 원칙을 사용하여 배치 힌트를 설정/해제하는 단추를 구성해 보겠습니다.
 
@@ -120,7 +118,7 @@ ms.locfileid: "73926515"
 
     ![6 단원에서는 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>다시 설정 단추 구성
+## <a name="configuring-the-reset-button"></a>다시 설정 단추 구성
 
 사용자가 실수를 하는 경우가 있으며, 실수로 개체를 실수로 throw 하거나 환경을 다시 설정 하려고 합니다. 다시 설정 단추는 환경을 다시 시작 하는 기능을 추가 합니다.
 
@@ -137,7 +135,7 @@ ms.locfileid: "73926515"
     >[!NOTE]
     >기본적으로 GameObject BroadcastMessage는 배치를 ResetPlacement 합니다. 그러면 RocketLauncher_Tutorial의 모든 자식 개체에 대해 ResetPlacement 라는 메시지가 브로드캐스트합니다. ResetPlacement ()에 대 한 메서드가 있는 개체는 위치를 다시 설정 하 여 해당 메시지에 응답 합니다.
 
-### <a name="configuring-the-launch-button"></a>시작 단추 구성
+## <a name="configuring-the-launch-button"></a>시작 단추 구성
 
 이 섹션에서는 시작 단추를 구성 하는 방법에 대해 설명 합니다 .이 단추를 사용 하면 사용자가 단추를 누르고 음력 모듈을 공간으로 시작할 수 있습니다.
 
@@ -161,6 +159,6 @@ ms.locfileid: "73926515"
 
     ![6 단원에서는 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
 
-### <a name="congratulations"></a>축하합니다.
+## <a name="congratulations"></a>축하합니다.
 
 이 응용 프로그램을 완전히 구성 했습니다. 이제 play를 누르면 음력 모듈을 완전히 조합 하 고, 힌트를 전환 하 고, 음력 모듈을 시작 하 고 다시 시작 하도록 다시 설정할 수 있습니다.

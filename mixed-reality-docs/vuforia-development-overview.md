@@ -3,15 +3,15 @@ title: Unity에서 Vuforia 사용
 description: Vuforia를 활용 하 여 Unity에서 Windows Mixed Reality 응용 프로그램을 빌드합니다.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, 표식, 좌표, 참조 프레임, 추적
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003192"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334472"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Unity에서 Vuforia 엔진 사용
 
@@ -80,7 +80,7 @@ Vuforia 엔진은 카메라 추적 및 HoloLens의 공간 추적에서 포즈를
 프로세스는 자동으로 처리 되므로 개발자의 프로그래밍이 필요 하지 않습니다.
 
 
-**수행 되는 작업은 다음과 같습니다.**
+**다음은 프로세스에 대 한 개략적인 설명입니다.**
 1. Vuforia의 대상 추적기는 대상을 인식 합니다.
 2. 그러면 대상 추적이 초기화 됩니다.
 3. 대상의 위치 및 회전이 분석 되어 HoloLens에 대 한 강력한 포즈 예측을 제공 합니다.

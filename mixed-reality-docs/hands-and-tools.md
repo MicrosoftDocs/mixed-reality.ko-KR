@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
 keywords: 혼합 현실, 손, 움직임 컨트롤러, 상호 작용, 디자인
-ms.openlocfilehash: 395862fe987244e2af70bb6794caa91e243cd076
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 27d13316bbc4b3b40a1e617d73dd5487c05cb347
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435169"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334441"
 ---
 # <a name="hands-and-motion-controllers"></a>직접 및 동작 컨트롤러
 ## <a name="scenarios"></a>시나리오

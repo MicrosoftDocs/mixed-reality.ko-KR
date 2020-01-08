@@ -1,17 +1,17 @@
 ---
 title: 자습서를 시작 합니다. 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성
-description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539739"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334391"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성
 
@@ -23,13 +23,11 @@ ms.locfileid: "74539739"
 * UI 요소 및 단추를 사용 하 여 holograms와 상호 작용
 * 기본적인 손 추적 입력 및 상호 작용
 
-## <a name="instructions"></a>지침
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Mixed Reality Toolkit 프로필을 구성 하는 방법 (공간 인식 표시 옵션 변경)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Mixed Reality Toolkit 프로필을 구성 하는 방법 (공간 인식 표시 옵션 변경)
 
 이 섹션에서는 공간 인식 메시의 표시 옵션을 조정 하 여 기본 MRTK 프로필을 사용자 지정 하 고 구성 하는 방법을 알아봅니다. MRTK 프로필의 설정이나 값을 조정할 때도 이와 동일한 원칙을 따를 수 있습니다.
 
-1. BaseScene 계층 구조에서 MRTK (Mixed Reality Toolkit)를 선택 합니다. 검사기 패널에서 Mixed Reality Toolkit 스크립트를 찾고 아래 그림에 표시 된 것 처럼 활성 프로필을 선택 합니다. 두 번 클릭 하 여 엽니다.
+1. BaseScene 계층 구조에서 MRTK (Mixed Reality Toolkit)를 선택 합니다. 검사기 패널에서 Mixed Reality Toolkit 스크립트를 찾고 아래 그림에 표시 된 것 처럼 활성 프로필을 선택 합니다. 이 로그를 두 번 클릭하여 엽니다.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -73,7 +71,7 @@ ms.locfileid: "74539739"
 
 축하합니다. MRTK 프로필에서 설정을 수정하는 방법을 알아보았습니다. 여기서 알 수 있듯이, MRTK 설정을 조정하려면 기본 프로필의 복사본을 만들어야 편집할 수 있습니다. 새 설정을 사용 하 여 프로필을 만들거나 기본 프로필을 다시 참조할 수 있는 경우에만 다시 편집할 수 없는 기본 프로필이 항상 포함 됩니다. 조정할 수 있는 설정은 다양합니다. MRTK 프로필 설정에 대 한 전체 참조는 MRTK 설명서를 참조 하십시오. [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>손 추적 제스처 및 상호 작용 가능 단추
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>손 추적 제스처 및 상호 작용 가능 단추
 
 이 섹션에서는 수동 추적을 사용 하 여 pressable 단추를 누르는 방법을 배웁니다.
 
@@ -94,7 +92,7 @@ ms.locfileid: "74539739"
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    이제 디스플레이에 큐브가 표시됩니다. 매우 큰 것으로 표시 됩니다. 계층 영역에서 큐브를 선택 하는 동안 좌표를 조정 하 여 크기를 줄일 수 있습니다. 크기 조정 값을 x = 0.02, y = 0.02 및 z = 0.02로 설정 합니다. 해당 큐브를 단추 근처의 장면에 배치 하 고 겹치지 않도록 해야 합니다. 아래 이미지에서 큐브의 위치는 x = 0, y = 0.4 및 z = 0.2입니다.
+    이제 디스플레이에 큐브가 표시됩니다. 매우 큰 것으로 표시 됩니다. 계층 영역에서 큐브를 선택 하는 동안 좌표를 조정 하 여 크기를 줄일 수 있습니다. 크기 조정 값을 x = 0.02, y = 0.02 및 z = 0.02로 설정 합니다. 해당 큐브를 단추 근처의 장면에 배치 하 고 겹치지 않도록 해야 합니다. 아래 이미지에서 큐브의 위치는 x = 0, y = 0.04 및 z = 0.2입니다.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ ms.locfileid: "74539739"
 
     이제 단추를 누르면 새 색으로 변경 됩니다. 녹청. 단추를 놓으면 지정 된 기본 색 (예: 밝은 회색)으로 다시 변경 됩니다. 화면 위쪽의 재생 단추를 눌러 편집기에서 사용해 보거나 HoloLens 2에 배포 하 여 테스트 합니다. 수동 시뮬레이션을 포함 하 여 편집기 내 시뮬레이션에 대 한 자세한 내용은 [Mrtk의 시뮬레이션 설명서 페이지](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>)를 참조 하세요.
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>MRTK의 Grid Object Collection을 사용하여 버튼 패널 만들기
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>MRTK의 Grid Object Collection을 사용하여 버튼 패널 만들기
 
 이 섹션에서는 MRTK의 GridObjectCollection 도구를 사용 하 여 자동으로 여러 단추를 깔끔한 사용자 인터페이스로 정렬 하는 방법을 설명 합니다.
 
@@ -162,7 +160,7 @@ ms.locfileid: "74539739"
     >[!NOTE]
     >자식 개체나 부모 개체의 방향에 따라, 향후 프로젝트에서는 방향 설정을 다르게 조정해야 할 수도 있습니다. 컬렉션에 있는 개체의 크기에 따라 Cell Width(셀 너비)와 Cell Height(셀 높이) 필드도 다르게 정의해야 할 수 있습니다.
 
-### <a name="adding-text-into-your-scene"></a>장면에 텍스트 추가
+## <a name="adding-text-into-your-scene"></a>장면에 텍스트 추가
 
 이 섹션에서는 혼합 현실 환경에 텍스트를 추가하고 편집하는 방법을 알아봅니다. 아직 수행 하지 않은 경우 [여기](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation)에 설명 된 지침에 따라 Unity에서 TextMeshPro을 사용 하도록 설정 했는지 확인 합니다.
 

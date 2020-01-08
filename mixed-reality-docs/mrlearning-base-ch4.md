@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105976"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334381"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5.3D 개체와 상호 작용
 
@@ -30,9 +30,7 @@ ms.locfileid: "74105976"
 * 근거리 및 원거리 조작 살펴보기
 * 잡기, 터치 등의 추가 수동 추적 제스처에 대해 알아보기
 
-## <a name="instructions"></a>지침
-
-### <a name="organizing-3d-objects-in-a-collection"></a>컬렉션에서 3D 개체 구성
+## <a name="organizing-3d-objects-in-a-collection"></a>컬렉션에서 3D 개체 구성
 
 1. 계층 구조를 마우스 오른쪽 단추로 클릭 하 고 비어 있음 만들기를 선택 하 여 빈 게임 개체를 만들고 3DObjectCollection로 이름을 바꾼 다음 x = 0, y = 0 및 z = 0에 배치 되어 있는지 확인 합니다.
 
@@ -70,7 +68,7 @@ ms.locfileid: "74105976"
     >[!NOTE]
     >위의 이미지에 있는 개체와 같이 일부 개체는 외부에서 분리 된 것을 알 수 있습니다. 이는 프리팹 또는 개체에 정렬되지 않은 자식 개체가 있기 때문입니다. 자유롭게 개체 위치 또는 자식 개체 위치를 조정하여 잘 정렬된 그리드를 만들 수 있습니다.
 
-### <a name="manipulating-3d-objects"></a>3D 개체 조작
+## <a name="manipulating-3d-objects"></a>3D 개체 조작
 
 1. 큐브를 조작하는 기능을 추가합니다. 3D 개체를 조작 하는 기능을 추가 하려면 다음을 수행 합니다.
     * 계층 구조에서 조작할 3D 개체 (즉, 큐브 중 하나)를 선택 합니다.
@@ -132,7 +130,7 @@ ms.locfileid: "74105976"
     >[!NOTE]
     >이 설정은 throw 할 수 있는 공을 만드는 등의 시나리오에 유용 합니다. 적절 한 속도 및 각도의 속도를 유지 하 여 해골을 릴리스한 후에는 릴리스되는 속도로 계속 이동 합니다. 물리적 공이 동작 하는 방식과 유사 합니다.
 
-### <a name="adding-bounding-boxes"></a>경계 상자 추가
+## <a name="adding-bounding-boxes"></a>경계 상자 추가
 
 경계 상자를 사용 하면 직접 조작 (근거리 상호 작용)과 광선 기반 조작 (먼 상호 작용)에 대해 한 손으로 개체를 보다 쉽고 직관적으로 조작할 수 있습니다. 경계 상자는 특정 축을 따라 개체의 크기를 조정 하 고 회전 하는 데 grabbed 수 있는 핸들을 제공 합니다.
 
@@ -180,7 +178,7 @@ ms.locfileid: "74105976"
     >[!NOTE]
     >경계 상자 시각화는 재생 모드에 있을 때만 나타납니다.
 
-### <a name="adding-touch-effects"></a>터치 효과 추가
+## <a name="adding-touch-effects"></a>터치 효과 추가
 
 이 예제에서는 손으로 개체를 터치할 때 사운드 효과를 재생합니다.
 

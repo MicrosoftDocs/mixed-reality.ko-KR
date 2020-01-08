@@ -1,17 +1,17 @@
 ---
 title: 자습서 시작-6. 고급 입력 옵션 탐색
-description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064312"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334357"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
 
@@ -23,9 +23,7 @@ ms.locfileid: "74064312"
 - 추적 된 손을 사용 하 여 추적 된 손으로 텍스처 및 3D 개체를 이동 합니다.
 - HoloLens 2 눈동자 추적 기능을 활용 하 여 개체 선택
 
-## <a name="instructions"></a>지침
-
-### <a name="enabling-voice-commands"></a>음성 명령 사용
+## <a name="enabling-voice-commands"></a>음성 명령 사용
 
 이 섹션에는 두 개의 음성 명령이 구현 되어 있습니다. 먼저 "진단 설정/해제"를 말하여 프레임 주기 진단 패널을 전환 하는 기능이 도입 되었습니다. 둘째, 음성 명령으로 소리를 재생 하는 기능을 탐색 합니다. 음성 명령 구성을 담당 하는 MRTK 프로필 및 설정이 먼저 검토 됩니다.
 
@@ -108,7 +106,7 @@ ms.locfileid: "74064312"
 
     ![Lesson5 Chapter1.txt Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>이동 제스처
+## <a name="the-pan-gesture"></a>이동 제스처
 
 이 섹션에서는 이동 제스처를 사용 하는 방법을 배웁니다. 이 기능은 손가락 또는 손 모양으로 스크롤 하 여 콘텐츠를 스크롤 하는 데 유용 합니다. 이동 제스처를 사용 하 여 개체를 회전 하거나, 3D 개체의 컬렉션을 순환 하거나, 2D UI를 스크롤할 수도 있습니다.
 
@@ -194,7 +192,7 @@ ms.locfileid: "74064312"
 
     ![mrlearning-base-ch5-2-step10d](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>시선 추적
+## <a name="eye-tracking"></a>시선 추적
 
 이 섹션에서는 데모에서 눈 추적을 사용 하도록 설정 하는 방법에 대해 설명 합니다. 눈에 gazed 때 3D 메뉴 항목을 천천히 회전 하 게 됩니다. 또한 응시된 항목을 선택하면 재미있는 효과가 트리거됩니다.
 

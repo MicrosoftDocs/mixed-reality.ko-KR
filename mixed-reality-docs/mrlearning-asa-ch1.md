@@ -1,17 +1,17 @@
 ---
 title: Azure 공간 앵커 자습서-1. Azure 공간 앵커 시작
-description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
+description: 혼합 현실 애플리케이션에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 861c42f9449fcb3cf038258af91088fc927941e5
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: e62d3626ec6f2dbf8b66378212afab7db2f56422
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940981"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334455"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
 
@@ -30,11 +30,19 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작 합니다. 이 세 부분
 * HoloLens 2 용 Azure 공간 앵커를 사용 하 여 개발 하는 기본 사항 알아보기
 * 공간 앵커 만들기, 업로드 및 다운로드
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
-* [빠른 시작: Azure 공간 앵커를 사용 하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [전제 조건](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#prerequisites) 섹션에 나열 된 요구 사항을 충족 합니다.
+>[!TIP]
+>초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
+
+* 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
+* Windows 10 SDK 10.0.18362.0 이상
+* 몇 가지 C# 기본 프로그래밍 기능
+* [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode) HoloLens 2 장치
 * [빠른 시작: Azure 공간 앵커를 사용 하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [공간 앵커 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료 합니다.
-* 초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
+
+>[!IMPORTANT]
+>이 자습서 시리즈에는 <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019.1</a> 이 필요 하며 권장 버전은 unity 2019.1.14입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
 
 ## <a name="creating-the-unity-project"></a>Unity 프로젝트 만들기
 
