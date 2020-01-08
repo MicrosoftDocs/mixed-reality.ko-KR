@@ -6,16 +6,16 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: 카메라, hololens, 컬러 카메라, 전면, hololens 2, cv, 컴퓨터 비전, fiducial, 표식, qr 코드, qr, 사진, 비디오
-ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f4c62a1c2ad7cf4de569e815ffc405fbcb06744a
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438507"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597626"
 ---
 # <a name="locatable-camera"></a>과정이 카메라
 
-HoloLens에는 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록 장치 앞에 탑재 된 전 세계 카메라가 포함 되어 있습니다. 개발자는 스마트폰, 노트북 또는 데스크톱에서 색 카메라를 사용할 때와 마찬가지로 카메라에 액세스 하 고 해당 카메라를 제어할 수 있습니다. 모바일 및 데스크톱에서 작동 하는 동일한 유니버설 windows [미디어 캡처](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.mediacapture.aspx) 및 windows Media foundation Api는 HoloLens에서 작업 합니다. 또한 Unity는 일반적인 사진과 비디오 (holograms 유무에 관계 없이)를 사용 하 고 카메라의 위치와 장면의 원근감을 찾는 등의 작업을 위해 HoloLens에서 카메라의 간단한 사용을 추상화 하도록 [이러한 Windows api를 래핑 했습니다](locatable-camera-in-unity.md) .
+HoloLens는 장치 전면에 탑재 된 세계 카메라를 포함 하 여 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록 합니다. 개발자는 스마트폰, 노트북 또는 데스크톱에서 색 카메라를 사용할 때와 마찬가지로 카메라에 액세스 하 고 해당 카메라를 제어할 수 있습니다. 모바일 및 데스크톱에서 작동 하는 동일한 유니버설 windows [미디어 캡처](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.mediacapture.aspx) 및 windows Media foundation Api는 HoloLens에서 작업 합니다. 또한 Unity는 일반적인 사진과 비디오 (holograms 유무에 관계 없이)를 사용 하 고 카메라의 위치와 장면의 원근감을 찾는 등의 작업을 위해 HoloLens에서 카메라의 간단한 사용을 추상화 하도록 [이러한 Windows api를 래핑 했습니다](locatable-camera-in-unity.md) .
 
 ## <a name="device-camera-information"></a>장치 카메라 정보
 
@@ -49,7 +49,7 @@ HoloLens에는 앱이 사용자에 게 표시 되는 내용을 볼 수 있도록
   | BalancedVideoAndPhoto, 120                       | 1504x846  | 1504x846  |           | 15, 30       | 64.69                            | 긴 기간 시나리오                     |
   | 비디오 회의, 100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15, 30, 60    | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100                           | 1504x846  | 1504x846  |           | 5, 15, 30, 60  | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
-  | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1920 x 1080 | 1920 x 1080 | 1920 x 1080 | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
+  | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
   | 비디오 회의, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15, 30       | 64.69                            | 비디오 회의, 긴 기간 시나리오 |
@@ -69,11 +69,11 @@ HoloLens에서 사진과 비디오를 사용 하는 경우 캡처된 프레임�
 
 HoloLens 설명서의 다른 곳에서 "카메라"는 "가상 게임 카메라" (앱에서 렌더링 하는 것과 같은)를 참조할 수 있습니다. 달리 지정 되지 않은 경우이 페이지의 "카메라"는 실제 RGB 색 카메라를 참조 합니다.
 
-이 페이지에 대 한 세부 정보는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) 클래스를 사용 하지만 [미디어 파운데이션 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx)을 사용 하 여 카메라 내장 함수 및 위치를 끌어오는 api도 있습니다. 자세한 내용은 [Holographic face 추적 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) 을 참조 하세요.
+이 페이지에 대 한 세부 정보는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) 클래스를 사용 합니다. 그러나 [미디어 파운데이션 특성](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx)을 사용 하 여 카메라 내장 함수 및 위치를 끌어오는 api도 있습니다. 자세한 내용은 [Holographic face 추적 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) 을 참조 하세요.
 
 ### <a name="images-with-coordinate-systems"></a>좌표계가 있는 이미지
 
-각 이미지 프레임 (사진 또는 비디오)에는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)의 [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) 속성을 사용 하 여 액세스할 수 있는 캡처 시점에 카메라에서 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 를 포함 합니다. 또한 각 프레임에는 [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 속성에서 찾을 수 있는 카메라 렌즈 모델에 대 한 설명이 포함 되어 있습니다. 이러한 변환은 함께 각 픽셀에 대해 픽셀을 생성 한 photons에서 가져온 경로를 나타내는 3D 공간의 광선을 정의 합니다. 이러한 광선은 프레임의 좌표계에서 다른 좌표계 (예: [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference))로 변환을 가져와서 앱의 다른 콘텐츠와 관련 될 수 있습니다. 요약 하자면, 각 이미지 프레임은 다음을 제공 합니다.
+각 이미지 프레임 (사진 또는 비디오)에는 캡처 시점에 카메라를 기반으로 하는 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 이 포함 되어 있으며,이는 [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)의 [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) 속성을 사용 하 여 액세스할 수 있습니다. 또한 각 프레임에는 [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 속성에서 찾을 수 있는 카메라 렌즈 모델에 대 한 설명이 포함 되어 있습니다. 이러한 변환은 함께 각 픽셀에 대해 픽셀을 생성 한 photons에서 가져온 경로를 나타내는 3D 공간의 광선을 정의 합니다. 이러한 광선은 프레임의 좌표계에서 다른 좌표계 (예: [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference))로 변환을 가져와서 앱의 다른 콘텐츠와 관련 될 수 있습니다. 요약 하자면, 각 이미지 프레임은 다음을 제공 합니다.
 * 픽셀 데이터 (RGB/NV12/JPEG/등 형식)
 * 캡처 위치의 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem)
 * 카메라의 렌즈 모드가 포함 된 [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) 클래스입니다.
@@ -90,7 +90,7 @@ HoloLens 설명서의 다른 곳에서 "카메라"는 "가상 게임 카메라" 
 
 HoloLens에서 비디오와 스틸 이미지 스트림은 응용 프로그램에서 프레임을 사용할 수 있게 되기 전에 시스템의 이미지 처리 파이프라인에서 undistorted 됩니다 (미리 보기 스트림은 원래 왜곡 된 프레임을 포함 함). CameraIntrinsics만 사용할 수 있으므로 응용 프로그램은 이미지 프레임이 완벽 한 pinhole 카메라를 나타낸다고 가정 해야 합니다.
 
-HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레임 메타 데이터에서 CameraIntrinsics을 사용 하는 경우에도 최대 10 픽셀의 오류를 남길 수 있습니다. 많은 사용 사례에서이 오류는 중요 하지 않지만, 예를 들어 실제 세계의 포스터/표식에 holograms를 맞추는 경우 10px 오프셋 (holograms에 약 11mm이 배치 됨)이 발생 하는 것을 < 알 수 있습니다. 
+HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레임 메타 데이터에서 CameraIntrinsics를 사용 하는 경우에도 최대 10 픽셀의 오류를 남길 수 있습니다. 많은 사용 사례에서이 오류가 발생 하지는 않지만, 예를 들어 실제 세계 포스터/표식에 holograms를 맞추는 경우 10px 오프셋 (holograms의 경우 약 11mm이)을 < 확인할 수 있습니다 .이 왜곡 오류가 원인일 수 있습니다. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>과정이 카메라 사용 시나리오
 
@@ -105,7 +105,7 @@ HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레
 시각적 패턴을 인식 한 다음이 개체를 응용 프로그램의 세계 공간에 놓으려면 다음과 같은 몇 가지 작업을 수행 해야 합니다.
 1. QR 코드, AR 태그, 얼굴 찾기, 원 추적기, OCR 등의 이미지 패턴 인식 도구 키트입니다.
 2. 런타임에 이미지 프레임을 수집 하 여 인식 계층으로 전달 합니다.
-3. 이미지 위치를 세계 위치 또는 세계 광선으로 다시 프로젝션 합니다. 자세한 내용은
+3. 이미지 위치를 세계 위치 또는 세계 광선으로 다시 프로젝션 합니다. 
 4. 이러한 세계 위치에 가상 모델 배치
 
 몇 가지 중요 한 이미지 처리 링크:
@@ -122,7 +122,7 @@ HoloLens (처음 생성)에서 이미지 프로세서의 왜곡 함수는 프레
 5. 주 스레드: 찾은 키 지점과 일치 하도록 가상 모델을 이동 합니다.
 6. 주 스레드: 2 단계에서 반복
 
-일부 이미지 표식 시스템은 단일 픽셀 위치만 제공 합니다 .이 경우 다른 항목은이 섹션이 필요 하지 않은 전체 변환을 제공 하며,이는 가능한 위치의 광선과 동일 합니다. 단일 3d 위치로 이동 하려면 여러 광선을 활용 하 여 대략적인 교차를 기준으로 최종 결과를 찾을 수 있습니다. 이렇게 하려면 다음을 수행 해야 합니다.
+일부 이미지 표식 시스템은 단일 픽셀 위치만 제공 합니다 .이 경우 다른 항목은이 섹션이 필요 하지 않은 전체 변환을 제공 하며,이는 가능한 위치의 광선과 동일 합니다. 단일 3d 위치로 이동 하려면 여러 광선을 활용 하 여 대략적인 교차를 기준으로 최종 결과를 찾을 수 있습니다. 이 작업을 수행하려면 다음 작업이 필요합니다.
 1. 여러 카메라 이미지를 수집 하는 루프 가져오기
 2. 연결 된 기능 지점과 해당 세계 광선 찾기
 3. 여러 가지 세계 광선을 포함 하는 기능 사전이 있는 경우 다음 코드를 사용 하 여 이러한 광선의 교차를 해결할 수 있습니다.
@@ -145,7 +145,7 @@ public static Vector3 ClosestPointBetweenRays(
  }
 ```
 
-두 개 이상의 추적 된 태그 위치가 지정 된 경우 사용자의 현재 시나리오에 맞게 모델링할 장면을 배치할 수 있습니다. 중력을 가정할 수 없는 경우 세 가지 태그 위치가 필요 합니다. 대부분의 경우 흰색은 실시간 추적 된 태그 위치를 나타내고 파란색 구는 모델링할 태그 위치를 나타내는 간단한 색 구성표를 사용 합니다 .이를 통해 사용자는 맞춤 품질을 시각적으로 평가할 수 있습니다. 모든 응용 프로그램에서 다음 설정을 가정 합니다.
+두 개 이상의 추적 된 태그 위치가 지정 된 경우 사용자의 현재 시나리오에 맞게 모델링할 장면을 배치할 수 있습니다. 중력을 가정할 수 없는 경우 세 가지 태그 위치가 필요 합니다. 대부분의 경우 흰색 구는 실시간 추적 된 태그 위치를 나타내고 파란색 구는 모델링할 태그 위치를 나타내는 간단한 색 구성표를 사용 합니다. 이를 통해 사용자는 맞춤 품질을 시각적으로 측정할 수 있습니다. 모든 응용 프로그램에서 다음 설정을 가정 합니다.
 * 모델링할 태그 위치 둘 이상
 * 장면에 있는 하나의 ' 보정 공간 '은 태그의 부모입니다.
 * 카메라 기능 식별자
@@ -166,7 +166,7 @@ public static Vector3 ClosestPointBetweenRays(
 
 ### <a name="track-or-identify-tagged-stationary-or-moving-real-world-objectsfaces-using-leds-or-other-recognizer-libraries"></a>Led 또는 다른 인식기 라이브러리를 사용 하 여 태그가 지정 된 고정 또는 실제 개체/얼굴 이동 추적 또는 식별
 
-예제:
+예:
 * Led가 있는 산업 로봇 (또는 느린 개체 이동에 대 한 QR 코드)
 * 대화방의 개체 식별 및 인식
 * 대화방에서 사람 식별 및 인식 (예: 얼굴에 holographic 연락처 카드 넣기)

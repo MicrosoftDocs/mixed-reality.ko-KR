@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, 안정화, 사례 연구
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436438"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597656"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>사례 연구-안정화 평면을 사용 하 여 holographic turbulence 줄이기
 
@@ -63,9 +63,9 @@ Asobo Studio에서 작성 된 C++, 조각 및 젊은 Conker는 안정화 평면�
 
 조각 및 젊은 Conker 이전에 재생 공간으로 검색 된 항목을 벗어나 이동 하는 경우 앱을 일시 중지 하 여 holograms에서 너무 멀리 straying 합니다. 따라서 가장 안정적인 환경을 제공 하기 위해 찾은 경계 내에 유지 됩니다.
 
-## <a name="do-it-yourself"></a>직접
+## <a name="do-it-yourself"></a>직접 수행
 
-HoloLens가 있는 경우 설명 된 개념을 사용 하 여 재생 하려는 경우 테스트 장면을 다운로드 하 고 아래 연습을 수행해 볼 수 있습니다. Unity의 기본 제공 gizmo API를 사용 하며 평면이 설정 되는 위치를 시각화 하는 데 도움이 됩니다. 이 코드는이 사례 연구에서 스크린샷 캡처에도 사용 되었습니다.
+HoloLens가 있고이 문서 내의 개념을 연습 하려는 경우 테스트 장면을 다운로드 하 고 아래 연습을 수행해 볼 수 있습니다. Unity의 기본 제공 gizmo API를 사용 하며 평면이 설정 되는 위치를 시각화 하는 데 도움이 됩니다. 이 코드는이 사례 연구에서 스크린샷 캡처에도 사용 되었습니다.
 1. 최신 버전의 [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)를 동기화 합니다.
 2. [HoloToolkit-Examples/유틸리티/장면/StabilizationPlaneSetting](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) 장면을 엽니다.
 3. 생성 된 프로젝트를 빌드하고 구성 합니다.
@@ -73,11 +73,11 @@ HoloLens가 있는 경우 설명 된 개념을 사용 하 여 재생 하려는 �
 
 ### <a name="exercise-1"></a>연습 1
 
-서로 다른 방향으로 여러 흰색 점이 표시 됩니다. 그 앞에는 서로 다른 깊이에 세 점이 표시 됩니다. 비행기를 탭 하 여 평면이 설정 된 점을 변경 합니다. 이 연습에서 다른 두 개의 경우에는 점에서 gazing 하는 동안 공간 주위의 이동 합니다. 왼쪽, 오른쪽, 위쪽 및 아래쪽으로 설정 합니다. 점에서 및 아버지 가까이로 이동 합니다. 안정화 평면이 다른 대상으로 설정 된 경우 어떻게 반응 하는지 확인 합니다.
+서로 다른 방향으로 여러 흰색 점이 표시 됩니다. 그 앞에는 서로 다른 깊이에 세 점이 표시 됩니다. 비행기를 탭 하 여 평면이 설정 된 점을 변경 합니다. 이 연습에서 다른 두 개의 경우에는 점에서 gazing 하는 동안 공간 주위의 이동 합니다. 왼쪽, 오른쪽, 위쪽 및 아래쪽으로 설정 합니다. 점에 가깝게 이동 합니다. 안정화 평면이 다른 대상으로 설정 된 경우 어떻게 반응 하는지 확인 합니다.
 
 ### <a name="exercise-2"></a>연습 2
 
-이제 두 개의 이동 점이 표시 될 때까지 오른쪽으로 이동 합니다. 하나는 수평 패스에서, 하나는 수직 패스에서 하나는 진동입니다. 다시 한 번 탭 하 여 평면이 설정 된 점을 변경 합니다. 평면에 연결 된 점에 색 분리가 어떻게 있으므로 안전성이 떨어질 표시 되는지 확인 합니다. 평면 설정 함수에서 도트의 속도를 사용 하려면 다시 탭 합니다. 이 매개 변수는 개체의 의도 된 동작에 대해 HoloLens에 대 한 힌트를 제공 합니다. 이를 사용 하는 시기를 알고 있어야 합니다. 즉, 한 점에서 속도가 사용 되는 경우 다른 이동 점으로는 더 큰 색 구분이 표시 됩니다. 응용 프로그램을 디자인할 때이 점을 염두에 두어야 합니다. 개체의 동작에 대해 긴밀 한 흐름을 유지 하면 아티팩트가 나타나지 않도록 방지할 수 있습니다.
+이제 두 개의 이동 점이 표시 될 때까지 오른쪽으로 이동 합니다. 하나는 수평 패스에서, 하나는 수직 패스에서 하나는 진동입니다. 다시 한 번 탭 하 여 평면이 설정 된 점을 변경 합니다. 색 분리가 있으므로 안전성이 떨어질 평면에 연결 된 점에 표시 되는 것을 확인 합니다. 평면 설정 함수에서 도트의 속도를 사용 하려면 다시 탭 합니다. 이 매개 변수는 개체의 의도 된 동작에 대해 HoloLens에 대 한 힌트를 제공 합니다. 이를 사용 하는 시기를 알고 있어야 합니다. 즉, 한 점에서 속도가 사용 되는 경우 다른 이동 점으로는 더 큰 색 구분이 표시 됩니다. 응용 프로그램을 디자인할 때이 점을 염두에 두어야 합니다. 개체의 동작에 대해 긴밀 한 흐름을 유지 하면 아티팩트가 나타나지 않도록 방지할 수 있습니다.
 
 ### <a name="exercise-3"></a>연습 3
 
@@ -88,7 +88,7 @@ HoloLens가 있는 경우 설명 된 개념을 사용 하 여 재생 하려는 �
 * 가능 하면 항상 대상 간 평면을 원활 하 게 이동 합니다. 멀리 떨어져 있는 대상을 즉시 전환 하면 장면이 시각적으로 중단 될 수 있습니다.
 * 특정 대상에 잠금을 설정 하려면 평면 설정 논리에 옵션을 지정 하는 것이 좋습니다. 이렇게 하면 필요한 경우 로고 또는 제목 화면과 같은 개체에 평면을 잠글 수 있습니다.
 
-## <a name="about-the-author"></a>작성자 정보
+## <a name="about-the-author"></a>저자 소개
 
 <table style="border-collapse:collapse">
 <tr>

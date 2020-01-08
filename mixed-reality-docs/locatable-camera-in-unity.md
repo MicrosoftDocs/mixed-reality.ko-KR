@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 사진, 비디오, hololens, 카메라, unity, 과정이
-ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b4a1a7e11a7606dab76b954c8d58a335d6bae0ab
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515443"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597616"
 ---
 # <a name="locatable-camera-in-unity"></a>Unity의 과정이 카메라
 
@@ -26,8 +26,8 @@ ms.locfileid: "63515443"
 
 ## <a name="photo-capture"></a>사진 캡처
 
-**공간** *UnityEngine. XR*<br>
-**입력할** *사진 캡처*
+**네임 스페이스:** *unityengine. XR*<br>
+**형식:** *사진 캡처*
 
 사진 *캡처* 유형을 사용 하면 사진 비디오 카메라와 사진을 계속 사용할 수 있습니다. 사진 *캡처* 를 사용 하 여 사진을 촬영 하는 일반적인 패턴은 다음과 같습니다.
 1. *사진 캡처* 개체 만들기
@@ -39,9 +39,9 @@ ms.locfileid: "63515443"
 
 ### <a name="common-set-up-for-photocapture"></a>사진 캡처에 대 한 일반적인 설정
 
-세 가지 용도 모두에서 위의 동일한 첫 3 단계부터 시작 합니다.
+세 가지 용도 모두에서 위의 동일한 첫 3 단계를 시작 합니다.
 
-먼저 *사진 캡처* 개체를 만듭니다.
+*사진 캡처* 개체를 만들어 시작
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-다음으로 개체를 저장 하 고, 매개 변수를 설정 하 고, 사진 모드를 시작 합니다.
+그런 다음 개체를 저장 하 고, 매개 변수를 설정 하 고, 사진 모드를 시작 합니다.
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -86,7 +86,7 @@ void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
 
 가장 간단한 작업은 파일에 직접 사진을 캡처하는 것입니다. 사진은 JPG 또는 PNG로 저장할 수 있습니다.
 
-사진 모드를 성공적으로 시작 하는 경우 이제 사진을 사용 하 고 디스크에 저장 합니다.
+사진 모드를 성공적으로 시작 하는 경우 사진을 촬영 하 고 디스크에 저장 합니다.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -128,7 +128,7 @@ Texture2D으로 데이터를 캡처할 때 프로세스는 디스크에 캡처�
 
 위의 설정 프로세스를 따릅니다.
 
-*Onsale Modestarted*에서 메모리에 프레임을 캡처합니다.
+*Onsale Modestarted*에서 프레임을 메모리로 캡처합니다.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-그런 다음 결과를 질감에 적용 하 고 위의 일반적인 정리 코드를 사용 합니다.
+그런 다음 결과를 질감에 적용 하 고 위의 정리 코드를 사용 합니다.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -165,9 +165,9 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>사진 캡처 및 원시 바이트 조작
 
-메모리 프레임에 있는 원시 바이트와 상호 작용 하려면 Texture2D에 대 한 사진 캡처 *에서와 같이* 위와 동일한 설정 단계를 수행 합니다. 차이점은 원시 바이트를 가져와 상호 작용할 수 있는 *OnCapturedPhotoToMemory* 입니다.
+메모리 프레임에 있는 원시 바이트와 상호 작용 하려면 Texture2D 사진 캡처에서와 같이 위와 동일한 설정 *단계를 수행* 합니다. 원시 바이트를 가져와 상호 작용할 수 있는 *OnCapturedPhotoToMemory* 에서 차이가 있습니다.
 
-이 예제에서는 *setpixels ()* 을 통해 텍스처에 추가로 처리 하거나 적용할 수 있는 *목록을<Color>*  만듭니다.
+이 예제에서는 *Setpixels ()* 을 통해 텍스처에 추가로 처리 하거나 적용할 수 있는 *목록<Color>* 를 만듭니다.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -202,8 +202,8 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>비디오 캡처
 
-**공간** *UnityEngine. XR*<br>
-**입력할** *VideoCapture*
+**네임 스페이스:** *unityengine. XR*<br>
+**유형:** *VideoCapture*
 
 *VideoCapture* 은 *사진 캡처와*매우 유사 하 게 작동 합니다. 두 가지 차이점은 FPS (초당 프레임 수) 값을 지정 해야 하 고, mp4 파일로는 디스크에 직접 저장 하는 것입니다. *VideoCapture* 를 사용 하는 단계는 다음과 같습니다.
 1. *VideoCapture* 개체 만들기
@@ -213,7 +213,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 5. 비디오 녹화 중지
 6. 비디오 모드 중지 및 리소스 정리
 
-먼저 *VideoCapture* 개체 *VideoCapture m_VideoCapture = null* 을 만듭니다.
+*VideoCapture* 개체 *VideoCapture m_VideoCapture = null* 을 만들어 시작 합니다.
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-그런 다음 기록 하 고 시작 하는 데 사용할 매개 변수를 설정 합니다.
+다음으로 기록 하 고 시작 하는 데 사용할 매개 변수를 설정 합니다.
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-기록이 시작 된 후에는 중지할 수 있도록 UI 나 동작을 업데이트할 수 있습니다. 다음 로그만
+기록이 시작 된 후에는 중지할 수 있도록 UI 나 동작을 업데이트할 수 있습니다. 여기서는 로그만 합니다.
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-이후 시점에서 기록을 중지할 것입니다. 이는 예를 들어 타이머 또는 사용자 입력에서 발생할 수 있습니다.
+나중에 기록을 중지 하는 것이 좋습니다. 이는 예를 들어 타이머 또는 사용자 입력에서 발생할 수 있습니다.
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-기록이 중지 된 후에는 비디오 모드를 중지 하 고 리소스를 정리 합니다.
+기록이 중지 되 면 비디오 모드를 중지 하 고 리소스를 정리 합니다.
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -307,5 +307,5 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
 * 사용 가능한 해결 방법이 없습니다.
     * **웹캠** 기능이 프로젝트에 지정 되어 있는지 확인 합니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [위치를 찾을 수 있는 카메라](locatable-camera.md)
