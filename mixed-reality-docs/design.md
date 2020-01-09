@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트, 핵심 개념, 상호 작용
-ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539590"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334113"
 ---
 # <a name="start-designing-and-prototyping"></a>디자인 및 프로토타입 생성 시작
 
 
-![3D 메시 아트](images/03_Design.png)
+![혼합 현실 디자인 요약](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -111,22 +111,22 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 
 :::row:::   
     :::column:::    
-       [![Unity 배우기](images/unity_logo.png)](https://learn.unity.com/)<br>
+       [![Unity 배우기](images/Final_unity_logo.png)](https://learn.unity.com/)<br>
         **[Unity 배우기](https://learn.unity.com/)**<br>
         Unity를 사용하여 대화형 환경을 만드는 방법을 알아봅니다. 처음부터 끝까지 수행하여 알아봅니다.
     :::column-end:::    
     :::column:::    
-        [![Mixed Reality Toolkit(MRTK)](images/MRTK-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        [![Mixed Reality Toolkit(MRTK)](images/Final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
         **[Mixed Reality Toolkit(MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
         공간 상호 작용 및 UI의 기본 구성 요소와 함께 Unity를 사용하여 혼합 현실 디자인 및 개발을 바로 시작합니다.   
     :::column-end:::
     :::column:::    
-        [![혼합 현실 디자인 랩](images/MRDL_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        [![혼합 현실 디자인 랩](images/Final_mrdl_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
         **[혼합 현실 디자인 랩](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
         MRTK의 기본 구성 요소를 사용하여 아름다운 혼합 현실 환경을 만드는 방법을 보여주는 샘플 앱을 다운로드하세요.
     :::column-end:::        
     :::column:::    
-        [![Microsoft Maquette](images/Maquette_logo.png)](https://www.maquette.ms/)<br>
+        [![Microsoft Maquette](images/Final_maquette_logo.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  
         VR을 위한 디자인. Microsoft Maquette를 사용하면 공간 프로토타입을 쉽고 빠르며 몰입감 있게 제작할 수 있습니다. 
     :::column-end:::    
@@ -142,7 +142,7 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 
 :::row:::
     :::column:::
-       [![기본 사항 이해](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![기본 사항 이해](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[기본 사항 이해](index.md#understand-the-basics)**<br>
         혼합 현실을 정의하는 것이 무엇이며, 혼합 현실이 어떻게 사용되는지에 대해 더 잘 이해합니다.
     :::column-end:::

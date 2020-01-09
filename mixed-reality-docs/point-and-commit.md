@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 상호 작용, 디자인, HoloLens, 손, 원거리, 가리키기 및 커밋
-ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105993"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334067"
 ---
 # <a name="point-and-commit-with-hands"></a>손으로 가리키고 커밋
 
@@ -20,7 +20,7 @@ ms.locfileid: "74105993"
 
 손으로 가리키고 커밋은 멀리 떨어져 있는 2D 콘텐츠 및 3D 개체를 겨냥하고, 선택하고, 조작할 수 있는 입력 모델입니다. “원거리” 상호 작용 기술은 혼합 현실에만 해당되며, 인간이 실제 세상과 자연스럽게 상호 작용하는 방식은 아닙니다. 예를 들어, 슈퍼 영웅 영화인 *엑스맨*에서 등장 인물 [매그니토](https://en.wikipedia.org/wiki/Magneto_(comics))는 멀리 떨어져 있는 물체를 손으로 뻗어 조작할 수 있습니다. 이것은 사람들이 실제로 할 수 있는 일이 아닙니다. HoloLens(AR) 및 MR(혼합 현실)에서는 사용자에게 마법의 힘을 부여하여 실제 세계의 물리적 제약을 깨고 홀로그램 콘텐츠로 재미있는 경험을 해볼 수 있을 뿐만 아니라 사용자 상호 작용을 보다 효과적이고 효율적으로 만들 수 있습니다.
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
 <colgroup>

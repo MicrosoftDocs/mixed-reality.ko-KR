@@ -7,22 +7,22 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105946"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694177"
 ---
 # <a name="direct-manipulation-with-hands"></a>수동으로 직접 조작
 
-![Button](images/UX/UX_Hero_Manipulation.jpg)
+![단추](images/UX/UX_Hero_Manipulation.jpg)
 
 직접 조작은 홀로그램을 손으로 직접 터치하게 되는 입력 모델입니다. 이 개념의 기본 아이디어는 개체가 실제 세계에서처럼 작동하는 것입니다. 단추는 간단히 눌러서 활성화하고, 개체는 잡아서 선택할 수 있으며, 2D 콘텐츠는 가상의 터치 스크린처럼 동작합니다. 이렇게 하면 사용자가 직접 조작하면서 쉽고 재미있게 학습할 수 있습니다. 팔을 뻗어 닿을 수 있는 콘텐츠와 상호 작용하는 데 가장 적합하다는 점에서 “근거리” 입력 모델로 간주됩니다.
 
 직접 조작은 어포던스를 기준으로 합니다. 즉, 사용자 친화적입니다. 사용자를 교육하기 위한 기호화된 제스처는 없습니다. 모든 상호 작용은 사용자가 터치하거나 잡을 수 있는 시각적 요소를 중심으로 구축됩니다.
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
 <colgroup>
@@ -178,7 +178,7 @@ HoloLens 2에서 사용자의 실제 손은 왼손 및 오른손 골격 모델�
 
 ## <a name="2d-slate-interaction"></a>2D 슬레이트 상호 작용
 
-2D 슬레이트는 웹 브라우저와 같은 2D 앱 콘텐츠를 호스트하는 홀로그램 컨테이너입니다. 직접 조작을 통해 2D 슬레이트와 상호 작용하기 위한 디자인 개념은 실제 터치 스크린과 상호 작용하는 상상 모델을 활용하는 것입니다.
+2D [슬레이트](slate.md)는 웹 브라우저와 같은 2D 앱 콘텐츠를 호스트하는 데 사용되는 홀로그램 컨테이너입니다. 직접 조작을 통해 2D 슬레이트와 상호 작용하기 위한 디자인 개념은 실제 터치 스크린과 상호 작용하는 상상 모델을 활용하는 것입니다.
 
 ### <a name="to-interact-with-the-slate-contact"></a>슬레이트 접촉 부분과 상호 작용하려면
 
@@ -210,8 +210,8 @@ HoloLens 2에서 사용자의 실제 손은 왼손 및 오른손 골격 모델�
        손을 모서리와 가장자리 쪽으로 이동하여 가장 가까운 조작 어포던스를 드러냅니다. 2D 슬레이트의 맨 위에 있는 홀로바를 잡으면, 슬레이트 전체를 옮길 수 있습니다.
     :::column-end:::
     :::column:::
-       ![배율](images/manipulate-2d-slate-scale.jpg)<br>
-        **배율**<br>
+       ![크기 조정](images/manipulate-2d-slate-scale.jpg)<br>
+        **크기 조정**<br>
         조작 어포던스를 잡고, 모서리 어포던스를 통해 균일하게 크기를 조정합니다.
     :::column-end:::
     :::column:::
@@ -246,8 +246,8 @@ HoloLens 2에서는 사용자가 3D 개체마다 경계 상자를 적용하여 �
         사용자가 가장자리 어포던스를 잡아서 회전할 수 있습니다.
     :::column-end:::
     :::column:::
-       ![배율](images/3d-object-manipulation-scale.jpg)<br>
-       **배율**<br>
+       ![크기 조정](images/3d-object-manipulation-scale.jpg)<br>
+       **크기 조정**<br>
        사용자가 모서리 어포던스를 잡아서 균일하게 크기를 조정할 수 있습니다.
     :::column-end:::
 :::row-end:::
@@ -283,7 +283,7 @@ HoloLens(1세대)에서는 미리 정의된 몇 가지 제스처(예: 블룸 및
         **중형 개체**<br>
     :::column-end:::
     :::column:::
-       ![배율](images/instinctual-gestures-largeobject.jpg)<br>
+       ![크기 조정](images/instinctual-gestures-largeobject.jpg)<br>
        **대형 개체**<br>
     :::column-end:::
 :::row-end:::
