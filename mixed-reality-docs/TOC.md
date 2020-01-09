@@ -3,14 +3,10 @@
 ## [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
 ## [Azure 서비스 알아보기](azure-services.md)
 ## 프로그램 및 이벤트
-### [혼합 현실 개발자의 날](mr-dev-days.md)
-#### [혼합 현실 개발자의 날 세션](mr-dev-days-sessions.md)
-#### [혼합 현실 개발자의 날 FAQ](mr-dev-days-faq.md)
 ### [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
-### [CVPR 2018 HoloLens 연구 모드 세션](cvpr-2018.md)
-### [컴퓨터 비전 연구용 도구 ECCV 2018 HoloLens](eccv-2018.md)
 ### [CVPR 2019 Mixed Reality 워크샵](cvpr-2019.md)
 ## [현재 혼합 현실 릴리스 정보](release-notes-may-2019.md)
+## [커뮤니티 리소스](community.md)
 ## [이 문서에 기고](CONTRIBUTING.md)
 # 검색
 ## [혼합 현실 시작](index.md)
@@ -24,6 +20,7 @@
 ### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 ### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [위치 기반 엔터테인먼트](location-based-experiences.md)
+## [커뮤니티 리소스](community.md)
 # 디자인
 ## [디자인 및 프로토타입 생성 시작](design.md)
 ## [이 디자인 지침에 대한 정보](about-this-design-guidance.md)
@@ -65,7 +62,7 @@
 ### [개요](app-patterns-landingpage.md)
 ### 스타일
 #### [색, 광원 및 재질](color-light-and-materials.md)
-#### [배율](scale.md)
+#### [크기 조정](scale.md)
 #### [입력 체계](typography.md)
 ### 공간 음향
 #### [공간 음향 디자인](spatial-sound-design.md)
@@ -93,7 +90,7 @@
 #### [표면 자성](surface-magnetism.md)
 ## 리소스
 ### [Unity 배우기](https://learn.unity.com/)
-### [혼합 현실 도구 키트](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
 ### [혼합 현실 디자인 랩](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [자산 생성 프로세스](asset-creation-process.md)
@@ -249,7 +246,7 @@
 #### [Unity의 권장 성능](performance-recommendations-for-unity.md)
 #### [Visual Studio를 사용하여 앱 배포 및 디버깅](using-visual-studio.md)
 #### [HoloLens에서 앱 테스트](testing-your-app-on-hololens.md)
-#### [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
+#### [HoloLens 에뮬레이터 사용](using-the-hololens-emulator.md)
 #### [Windows Mixed Reality 시뮬레이션 사용](using-the-windows-mixed-reality-simulator.md)
 #### [고급 HoloLens 에뮬레이터 및 Mixed Reality 시뮬레이터 입력](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 #### [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md)

@@ -8,22 +8,22 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
-ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539637"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334466"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
 ![HoloLens 2 사용자](images/08_Tutorials.png)
 
-현재 모든 자습서와 샘플 앱은 Unity를 기반으로 합니다.  다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
+현재 모든 자습서와 샘플 앱은 Unity를 기반으로 합니다. 다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2 자습서
 
-HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다.  다음 자습서는 [MRTK(Mixed Reality Toolkit) 2.0](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
+HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다. 다음 자습서는 [MRTK(Mixed Reality Toolkit) 2.0](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
 
 * 시작 자습서(총 7부) - [1 개요 및 목표](mrlearning-base.md)
 * Azure Spatial Anchors 자습서(총 3부) - [1 Azure Spatial Anchors 시작](mrlearning-asa-ch1.md)
@@ -48,7 +48,7 @@ Mixed Reality 아카데미는 해당 프로젝트 파일을 사용하는 일단�
 * 올바른 [도구가 설치](install-the-tools.md)된 Windows 10 PC는 각 자습서를 완료하기 위한 일반적인 필수 구성 요소입니다.
 
 >[!NOTE]
->Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다.  따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다.  이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_** .  대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. HoloLens 2에 대한 [새로운 자습서 시리즈](mrlearning-base.md)가 게시되었습니다.
+>Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다. 따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다. 이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_** . 대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. HoloLens 2에 대한 [새로운 자습서 시리즈](mrlearning-base.md)가 게시되었습니다.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -265,7 +265,7 @@ Mixed Reality 아카데미는 해당 프로젝트 파일을 사용하는 일단�
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Mixed Reality 및 Azure Services 자습서
 
-다음 독립 실행형 자습서는 다양한 Azure 서비스를 Unity 프로젝트에 구현하는 방법을 익히는 데 유용합니다.  이러한 자습서는 모두 HoloLens(1세대) 또는 몰입형 헤드셋을 기반으로 하지만, 서비스 사용에 대한 단원은 대부분의 디바이스에 전송할 수 있습니다.
+다음 독립 실행형 자습서는 다양한 Azure 서비스를 Unity 프로젝트에 구현하는 방법을 익히는 데 유용합니다. 이러한 자습서는 모두 HoloLens(1세대) 또는 몰입형 헤드셋을 기반으로 하지만, 서비스 사용에 대한 단원은 대부분의 디바이스에 전송할 수 있습니다.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -279,7 +279,7 @@ Mixed Reality 아카데미는 해당 프로젝트 파일을 사용하는 일단�
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 및 Azure 301: 외국어 번역</h3>
+                                              <h3>MR 및 Azure 301: 언어 번역</h3>
                                               <p>Azure Translator Text API를 사용하면 혼합 현실 앱에서 음성을 다른 언어의 텍스트로 변환할 수 있습니다. 이 과정에서 방법을 알아보세요!</p>
                                           </div>
                                       </div>
@@ -413,7 +413,7 @@ Mixed Reality 아카데미는 해당 프로젝트 파일을 사용하는 일단�
                                           </div>
                                           <div class="cardText">
                                               <h3>MR 및 Azure 307: 기계 학습</h3>
-                                              <p>혼합 현실 앱 내에서 Azure Machine Learning Studio를 활용하여 많은 수의 ML(기계 학습) 알고리즘을 배포합니다.</p>
+                                              <p>혼합 현실 앱 내에서 Azure Machine Learning Studio(클래식)를 활용하여 많은 수의 ML(기계 학습) 알고리즘을 배포합니다.</p>
                                           </div>
                                       </div>
                                   </div>

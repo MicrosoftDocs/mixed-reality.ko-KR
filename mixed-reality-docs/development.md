@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 7b1a67f05941fc862ad3f36834efe071b0d1c57b
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539584"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334246"
 ---
 # <a name="learn-the-tools-and-architecture"></a>도구 및 아키텍처 알아보기
 
@@ -130,7 +130,7 @@ DirectX를 사용하여 혼합 현실 앱을 작성하는 데 필요한 모든 �
 
 :::row:::
     :::column:::
-       [![기본 사항 이해](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![기본 사항 이해](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[기본 사항 이해](index.md#understand-the-basics)**<br>
         혼합 현실을 정의하는 것이 무엇이며, 혼합 현실이 어떻게 사용되는지에 대해 더 잘 이해합니다.
     :::column-end:::
