@@ -2,6 +2,7 @@
 ## [최신 뉴스](news.md)
 ## [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
 ## [Azure 서비스 알아보기](azure-services.md)
+## [새 Microsoft Edge 준비](new-microsoft-edge.md)
 ## 프로그램 및 이벤트
 ### [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
 ### [CVPR 2019 Mixed Reality 워크샵](cvpr-2019.md)
