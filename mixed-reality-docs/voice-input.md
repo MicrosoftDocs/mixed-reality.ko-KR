@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
-ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105776"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723192"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -42,7 +42,7 @@ ms.locfileid: "74105776"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
+        <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -121,7 +121,7 @@ ms.locfileid: "74105776"
         *이미지: 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 앱의 위치를 조정할 수 있습니다.*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
         ![앱 창이 나 홀로그램을 볼 때 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 전 세계의 앱 위치를 조정할 수 있습니다](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -183,7 +183,7 @@ Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰�
 
 빌드하는 모든 환경에 음성 명령을 추가하는 것이 좋습니다. 음성은 강력하고 편리한 방식으로 시스템 및 앱을 제어할 수 있는 방법입니다. 사용자는 다양한 언어 및 악센트를 사용하기 때문에 음성 키워드를 적절히 선택하면 사용자의 명령이 명확하게 해석될 수 있습니다.
 
-### <a name="best-practices"></a>모범 사례
+### <a name="best-practices"></a>최선의 구현 방법
 
 다음은 매끄러운 음성 인식에 도움이 될 수 있는 몇 가지 사례입니다.
 * **간결한 명령 사용** - 가능한 경우 두 개 이상의 음절로 이루어진 키워드를 선택합니다. 1음절 단어는 악센트가 다른 사람이 말할 경우 다른 모음 소리를 사용할 수 있습니다. 예: "비디오 재생"은 "현재 선택한 비디오 재생" 보다 좋습니다.
@@ -296,7 +296,7 @@ Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연�
 
 ---
 
-## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 음성 입력
+## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 음성 입력
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 를 사용 하면 개체에 음성 명령을 쉽게 할당할 수 있습니다. MRTK의 **음성 입력 프로필** 을 사용 하 여 키워드를 정의 합니다. **SpeechInputHandler** 스크립트를 할당 하 여 음성 입력 프로필에 정의 된 키워드에 대 한 모든 개체 응답을 만들 수 있습니다. 또한 SpeechInputHandler는 사용자의 신뢰도를 높이기 위해 음성 확인 레이블을 제공 합니다.
 
 * [MRTK-음성 명령](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)

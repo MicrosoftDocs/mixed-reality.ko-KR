@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, ui, ux
-ms.openlocfilehash: 4befaa6f55bff6a820c976db969fdad7b64a2214
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: d028b8717dae0e04a9a1104a8a4b7803023334ef
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143252"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723212"
 ---
 # <a name="progress-indicator"></a>진행률 표시기
 
@@ -37,7 +37,7 @@ ms.locfileid: "74143252"
         *이미지: HoloLens의 진행률 표시줄 예*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        HoloLens의 ![진행률 표시줄 예제](images/640px-progressbar.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -54,7 +54,7 @@ ms.locfileid: "74143252"
         *이미지: HoloLens의 진행 링 예*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        HoloLens의 ![진행률 링 예제](images/640px-progressring.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -71,7 +71,7 @@ ms.locfileid: "74143252"
         *이미지: HoloLens의 사용자 지정 메시 예제를 사용 하 여 진행*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        HoloLens의 사용자 지정 메시 예제를 사용 하 여 진행 ![](images/640px-progresscustom.jpg)<br>
     :::column-end:::
 :::row-end:::
@@ -80,7 +80,7 @@ ms.locfileid: "74143252"
 
 ---
 
-## <a name="best-practices"></a>모범 사례
+## <a name="best-practices"></a>최선의 구현 방법
 * 사용자가 자신의 헤드를 빈 공간으로 쉽게 이동 하 고 컨텍스트를 손실할 수 있으므로 [billboarding 또는 태그](billboarding-and-tag-along.md) 를 진행률 표시와 긴밀 하 게 구분 합니다. 사용자가 아무것도 확인할 수 없는 경우 앱이 손상 된 것 처럼 보일 수 있습니다. Billboarding 및 태그 동반은 Progress prefab에 기본 제공 됩니다.
 * 항상 사용자에 게 발생 하는 상황에 대 한 상태 정보를 제공 하는 것이 좋습니다. 진행률 prefab 상태를 제공 하기 위한 Windows 표준 링 유형 진행률을 비롯 한 다양 한 비주얼 스타일을 제공 합니다. 응용 프로그램의 브랜드에 맞게 진행률 스타일을 조정 하려는 경우 애니메이션으로 사용자 지정 메시를 사용할 수도 있습니다.
 
@@ -88,7 +88,7 @@ ms.locfileid: "74143252"
 
 ---
 
-## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 진행률 표시기
+## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 진행률 표시기
 
 * [MRTK-진행률 표시기 prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
 * [MRTK-장면 전환 서비스](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
@@ -114,7 +114,7 @@ ms.locfileid: "74143252"
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)

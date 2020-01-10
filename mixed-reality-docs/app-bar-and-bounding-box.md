@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 앱 바, 경계 상자
-ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: dab41207c2558fe8bb3fe07fca666cb2668f4e45
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143167"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723202"
 ---
 # <a name="bounding-box-and-app-bar"></a>경계 상자 및 앱 바
 ![경계는 혼합 현실에서 개체 조작을 위한 표준 인터페이스입니다.](images/UX/UX_Hero_BoundingBox.jpg)<br>
@@ -29,7 +29,7 @@ ms.locfileid: "74143167"
         *비디오 루프: 경계 상자를 통해 개체 크기 조정*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        경계 상자를 통해 개체 크기를 조정 하는 ![HoloLens 관점](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ ms.locfileid: "74143167"
         *비디오 루프: 경계 상자를 통해 개체 회전*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        경계 상자를 통해 개체를 회전 하는 ![HoloLens 관점](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ ms.locfileid: "74143167"
         *비디오 루프: 경계 상자에 근접 한 시각적 피드백의 예*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        직접 근접 한 시각적 피드백을 ![](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ ms.locfileid: "74143167"
         *비디오 루프: 홀로그램 둘러보기, 앱 바는 다음과 같습니다.*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        홀로그램을 탐색 하는 ![. 앱 바는 다음과 같습니다.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -92,7 +92,7 @@ ms.locfileid: "74143167"
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 경계 상자
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 경계 상자
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 는 경계 상자와 앱 바에 대 한 스크립트 및 prefabs을 제공 합니다. BoundingBox.cs 스크립트를 개체에 할당 하기만 하면 경계 상자를 추가할 수 있습니다.
 
 * [MRTK-경계 상자](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
@@ -119,7 +119,7 @@ ms.locfileid: "74143167"
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)

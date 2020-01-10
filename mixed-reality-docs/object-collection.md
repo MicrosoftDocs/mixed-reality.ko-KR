@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 컨트롤, 디자인
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143149"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723222"
 ---
 # <a name="object-collection"></a>개체 컬렉션
 
@@ -48,7 +48,7 @@ ms.locfileid: "74143149"
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 개체 컬렉션
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 개체 컬렉션
 
 * [MRTK-개체 컬렉션](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
@@ -74,7 +74,7 @@ ms.locfileid: "74143149"
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)

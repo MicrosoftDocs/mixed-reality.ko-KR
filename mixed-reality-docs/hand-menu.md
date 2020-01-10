@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: 손, 메뉴, 단추, 빠른 액세스, 레이아웃
-ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143182"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723262"
 ---
 # <a name="hand-menu"></a>손 모양 메뉴
 
@@ -26,15 +26,15 @@ ms.locfileid: "74143182"
 ---
 
 ## <a name="behavior-best-practices"></a>동작 모범 사례
-**A. 단추 수를 작게 유지 합니다.** 즉, 손 잠금 메뉴와 눈동자 간의 거리가 가까이 있고, 언제 든 지 상대적으로 작은 시각적 영역에 초점을 맞춘 사용자의 추세 (비전의 attentional 원뿔 약 10도)를 사용 하는 것이 좋습니다. 단추 수를 작게 유지 합니다. 탐색을 기반으로 3 개의 단추가 있는 한 열은 사용자가 시계 중심으로 이동 하는 경우에도 뷰 (FOV)의 모든 콘텐츠를 유지 하 여 잘 작동 합니다. 
+**A. 단추 수를 작게 유지 합니다.** 즉, 손 잠금 메뉴와 눈동자 간의 거리가 가까이 있고, 언제 든 지 상대적으로 작은 시각적 영역에 초점을 맞춘 사용자의 추세 (비전의 attentional 원뿔 약 10도)로 인해 단추 수를 작게 유지 하는 것이 좋습니다. 탐색을 기반으로 3 개의 단추가 있는 한 열은 사용자가 시계 중심으로 이동 하는 경우에도 뷰 (FOV)의 모든 콘텐츠를 유지 하 여 잘 작동 합니다. 
 
 **B. 빠른 작업을 위한 수동 메뉴 활용:** arm을 올리고 위치를 유지 관리 하면 arm 피로을 쉽게 유발할 수 있습니다. 짧은 상호 작용을 필요로 하는 메뉴에 대해 직접 잠긴 메서드를 사용 합니다. 메뉴가 복잡 하 고 확장 된 상호 작용 시간이 필요한 경우에는 대신 세계 잠금 또는 본문 잠금을 사용 하는 것이 좋습니다. 
 
-**C. 단추/패널 각도:** 메뉴는 head의 반대 어깨와 중간 방향으로 빌보드를 수행 합니다 .이를 통해 자연 스런 이동이 반대 바늘을 사용 하 여 메뉴와 상호 작용 하 고, 터치 시 매우 불쾌 하거나 불편할 수 있습니다. 단추. 
+**C. 단추/패널 각도:** 메뉴는 head의 반대 어깨와 중간 방향으로 빌보드를 수행 합니다. 이렇게 하면 자연 스러운 이동이 반대 방향으로 메뉴와 상호 작용 하 고 단추를 터치 하는 경우에는 불쾌 하거나 불편 한 위치를 방지할 수 있습니다. 
 
 **D. 단방향 또는 실습 작업 지원 고려:** 사용자의 손을 항상 사용할 수 있다고 가정 하지 마세요. 하나 또는 둘 다를 사용할 수 없는 경우 광범위 한 컨텍스트를 고려 하 고 해당 상황에 대 한 설계 계정이 있는지 확인 합니다. 단방향 메뉴를 지원 하기 위해 손을 대칭 이동 하면 (팜 아래로 이동) 메뉴 배치를 왼쪽에서 잠김으로 전환 해 볼 수 있습니다. 직접 사용 하지 않는 시나리오의 경우 음성 명령을 사용 하 여 직접 메뉴 단추를 호출 하는 것이 좋습니다.
 
-**E. 2 단계 호출:** 손 메뉴를 트리거하는 이벤트로 palm을 사용 하는 경우 사용자가 의도적으로 둘 다 (통신 및 개체 조작을 위해)를 많이 이동 하기 때문에 필요 하지 않을 때 실수로 표시 될 수 있습니다 (가양성). 그리고 의도 하지 않은 경우 앱에서 가양성이 발생 하는 경우 팜 등록 이벤트 외에 추가 단계를 추가 하 여 완전히 열린 손가락 같은 손 메뉴를 호출 하는 것이 좋습니다.
+**E. 2 단계 호출:** 손 메뉴를 트리거하는 이벤트로 팜 처리를 사용 하는 경우 사용자가 의도적으로 (통신 및 개체 조작을 위해) 자신을 실수로 이동 하기 때문에 필요 하지 않은 경우 실수로 나타날 수 있습니다 (가양성). 앱에서 가양성이 발생 하는 경우 팜 등록 이벤트 외에 추가 단계를 추가 하 여 완전히 열린 손가락 같은 손 메뉴를 호출 하는 것이 좋습니다.
 
 **6. 손목 (시스템 홈 단추) 근처에 단추를 추가 하지 않습니다** . 손 메뉴 단추가 홈 단추에 너무 가까이 배치 된 경우에는 손 메뉴와 상호 작용 하는 동안 실수로 트리거될 수 있습니다.
 
@@ -127,7 +127,7 @@ ms.locfileid: "74143182"
 
 ---
 
-## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 손 모양 메뉴
+## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 손 모양 메뉴
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 는 손 메뉴에 대 한 스크립트와 예제 장면을 제공 합니다. HandConstraintPalmUp 해 찾기 스크립트를 사용 하면 다양 한 구성 가능한 옵션을 사용 하 여 개체를 쉽게 연결할 수 있습니다.
 
 * [MRTK-수동 제약 조건 및 HandConstraintPalmUp를 사용 하는 메뉴](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
@@ -154,7 +154,7 @@ ms.locfileid: "74143182"
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)

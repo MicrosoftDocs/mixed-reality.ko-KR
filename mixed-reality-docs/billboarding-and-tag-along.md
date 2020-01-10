@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, billboarding, 태그 동반
-ms.openlocfilehash: ff2b1ce20174b1b9aecbb90b1d1dc3e8896b3761
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 24c4ca8bdc3c6ea1081311102204d4a7f5a95425
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143134"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723182"
 ---
 # <a name="billboarding-and-tag-along"></a>Billboarding 및 태그 동반
 
@@ -46,7 +46,7 @@ HoloLens 핀 패널 ![태그 동반 동작의 좋은 예](images/tagalong-1000px
 
 ---
 
-## <a name="billboarding-and-tag-along-in-mrtkmixed-reality-toolkit-for-unity"></a>Billboarding 및 태그-Unity 용 MRTK (혼합 현실 도구 키트)
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Billboarding 및 태그-Unity 용 MRTK (혼합 현실 도구 키트)
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 는 Billboarding 및 태그 동반 동작에 대 한 스크립트를 제공 합니다. Billboard.cs 스크립트를 모든 개체에 할당 하 여 billboarding 동작을 추가 하 고 개체를 항상 사용자에 게 표시 합니다. 태그 동반 동작을 추가 하려면 RadialView.cs 스크립트를 사용 합니다. Lerping 시간, 거리, 학위 등의 다양 한 옵션을 조정할 수 있습니다.
 
 * [MRTK-방사형 보기 해 찾기](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#radialview)
@@ -73,7 +73,7 @@ HoloLens 핀 패널 ![태그 동반 동작의 좋은 예](images/tagalong-1000px
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)

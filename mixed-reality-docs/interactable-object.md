@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 87979d2d7b7de4a384b42b5059239e9b830a92e8
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143261"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723232"
 ---
 # <a name="interactable-object"></a>Interactable 개체
 
@@ -140,8 +140,8 @@ HoloLens 2는 개체와 상호 작용할 수 있도록 하는 트레일러 추�
 
 :::row:::
     :::column:::
-        ![기본](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
-        **기본**<br>
+        ![Default](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
+        **Default**<br>
     :::column-end:::
     :::column:::
         ![가리키기](images/640px-interactibleobject-pressablebutton-hover.jpg)<br>
@@ -157,8 +157,8 @@ HoloLens 2는 개체와 상호 작용할 수 있도록 하는 트레일러 추�
         Ripple 효과를 표시 합니다.
     :::column-end:::
     :::column:::
-        ](images/640px-interactibleobject-pressablebutton-press.jpg) ![누르기<br>
-        **누르면**<br>
+        ![작업 방법](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
+        **작업 방법**<br>
         프런트 판을 이동 합니다.
     :::column-end:::
 :::row-end:::
@@ -175,7 +175,7 @@ HoloLens 2는 개체와 상호 작용할 수 있도록 하는 트레일러 추�
         *비디오 루프: 경계 상자에 근접 한 시각적 피드백의 예*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        직접 근접 한 시각적 피드백을 ![](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -261,7 +261,7 @@ HoloLens 2는 개체와 상호 작용할 수 있도록 하는 트레일러 추�
 ---
 
 
-## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>단위에 대 한 MRTK (Mixed Reality Toolkit)의 Interactable 개체
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity 용 MRTK (Mixed Reality Toolkit)의 Interactable 개체
 
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 에서는 [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) 스크립트를 사용 하 여 개체를 다양 한 유형의 입력 상호 작용 상태에 응답할 수 있습니다. 색, 크기, 재질, 셰이더 등의 개체 속성을 제어 하 여 시각적 상태를 정의할 수 있도록 하는 다양 한 형식의 테마를 지원 합니다.
 
@@ -294,7 +294,7 @@ MixedRealityToolkit의 표준 셰이더는 시각적 및 오디오 큐를 만드
 * [Tooltip](tooltip.md)
 * [슬레이트](slate.md)
 * [슬라이더](slider.md)
-* [셰이더가](shader.md)
+* [셰이더](shader.md)
 * [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 * [진행률 표시](progress.md)
 * [표면 자성](surface-magnetism.md)
