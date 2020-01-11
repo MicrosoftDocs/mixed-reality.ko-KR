@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 57a23e34404e4bff653d74b7f6afc65adff8b19c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334335"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901480"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Photon Unity 네트워킹 설정
 
@@ -28,7 +28,7 @@ ms.locfileid: "75334335"
 ## <a name="prerequisites"></a>전제 조건
 
 >[!TIP]
->초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
+>[시작 자습서](mrlearning-base.md) 및 [Azure 공간 앵커로 시작 된 자습서](mrlearning-asa-ch1.md) 자습서 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
 
 * 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
 * Windows 10 SDK 10.0.18362.0 이상

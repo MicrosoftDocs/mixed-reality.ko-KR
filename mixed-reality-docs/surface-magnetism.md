@@ -1,23 +1,23 @@
 ---
 title: 표면 자기
-description: Surface 자기 기법을 사용 하 여 holographic 개체를 실제 실제 화면에 놓을 수 있습니다.
+description: Surface 자기 기법을 사용 하 여 실제 실제 표면에 holographic 개체를 놓을 수 있습니다.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694147"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901433"
 ---
 # <a name="surface-magnetism"></a>표면 자기
 
 ![표면 자기](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Surface 자기 기법을 사용 하 여 holographic 개체를 실제 실제 화면에 놓을 수 있습니다. 개체의 방향을 실제 화면에 맞춰 더 몰입 형 및 자연 스러운 환경을 만들 수 있습니다.
+Surface 자기 기법을 사용 하 여 실제 실제 표면에 holographic 개체를 놓을 수 있습니다. 개체의 방향을 실제 화면에 맞춰 더 몰입 형 및 자연 스러운 환경을 만들 수 있습니다.
 
 <br>
 
