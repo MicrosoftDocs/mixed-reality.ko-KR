@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, 디자인, 앱 패턴, 컨트롤, 스타일, HoloLens, 상호 작용, UX 요소, 동작, 빌딩 블록
-ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539659"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334172"
 ---
 # <a name="ux-elements-overview"></a>UX 요소 개요
 
@@ -22,23 +22,19 @@ ms.locfileid: "74539659"
 
 :::row:::
     :::column:::
-       [![색, 조명 및 재질](images/640px-fragments.jpg)](color,-light-and-materials.md)  **[색, 조명 및 재질](color,-light-and-materials.md)**
+       [![색, 조명 및 재질](images/640px-fragments.png)](color,-light-and-materials.md)  **[색, 조명 및 재질](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [크기 조정![](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md)  **[](scale.md)**
-    :::column-end:::
-    :::column:::
-       [![공간 음향](images/SpatialAudio.gif)](spatial-sound.md)  **[공간 사운드](spatial-sound.md)**
+       [크기 조정![](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [![입력](images/text_in_unity_viewingangle.jpg)](typography.md) 체계  **[입력 체계](typography.md)**
+       [![입력](images/text_in_unity_viewingangle.png)](typography.md) 체계  **[입력 체계](typography.md)**
     :::column-end:::
     :::column:::
-    :::column-end:::
-    :::column:::
+       [사운드![](images/spatialaudio.png)](spatial-sound.md)  **[](spatial-sound.md) 소리**
     :::column-end:::
 :::row-end:::
 
