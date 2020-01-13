@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 제스처, 동작 컨트롤러, unity, 응시, 입력
-ms.openlocfilehash: b83c4904031338fd6f3e8457238bb76f1c7e7eff
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: fc56436cbe71f958b91fec56c5f0f7d93926b2ac
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181953"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503891"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Unity에서의 트레일러 및 눈 추적
 
-HoloLens 2에는 새로운 흥미로운 기능이 도입 되었습니다.
+HoloLens 2에는 여러 가지 새롭고 흥미로운 기능 (예: 트레일러 식 및 눈 추적)이 도입 되었습니다.
 
 Unity에서 새로운 기능을 활용 하는 가장 쉬운 방법은 MRTK v 2를 통하는 것입니다. 또한 시작 하는 데 도움이 되는 몇 가지 예제 장면이 있습니다.
 
@@ -31,7 +31,7 @@ MRTK v2는 개발을 가속화 하는 데 도움이 되는 UI 컨트롤 및 구�
 | HoloLens2's를 포함 하는 다양 한 입력 메서드를 지 원하는 button 컨트롤입니다. | 3D 공간에서 개체 조작을 위한 표준 UI | 하나 또는 두 개의 손을 사용 하 여 개체를 조작 하는 스크립트 |
 |  [![슬레이트](images/MRTK_Slate_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) [슬레이트](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html) | [![시스템 키보드](images/MRTK_SystemKeyboard_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) [시스템 키보드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html) | [![Interactable](images/InteractableExamples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) |
 | 트레일러 식 입력으로 스크롤을 지 원하는 2D 스타일 평면 | Unity에서 시스템 키보드를 사용 하는 예제 스크립트  | 시각적 상태 및 테마 지원과 함께 개체를 interactable 하는 스크립트 |
-|  [해 찾기![](images/MRTK_Solver_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) [해 찾기](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) | [![개체 컬렉션](images/MRTK_ObjectCollection_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) [개체 컬렉션](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) | [![도구](images/MRTK_Tooltip_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) 설명 [도구 설명](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) |
+|  [해 찾기![](images/MRTK_Solver_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) [](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) | [![개체 컬렉션](images/MRTK_ObjectCollection_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) [개체 컬렉션](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) | [![도구](images/MRTK_Tooltip_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) 설명 [도구 설명](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Tooltip.html) |
 | 태그 동반, 본문 잠금, 상수 보기 크기 및 표면 자기와 같은 다양 한 개체 위치 지정 동작 | 3 차원 모양의 개체 배열을 레이아웃 하는 스크립트 | 동작 컨트롤러 및 개체에 레이블을 지정 하는 데 사용할 수 있는 유연한 앵커/피벗 시스템을 포함 하는 주석 UI입니다. |
 |  [![앱 바](images/MRTK_AppBar_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) [앱 바](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) | [![포인터](images/MRTK_Pointer_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) [포인터](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html) | [![Fingertip 시각화](images/MRTK_FingertipVisualization_Main.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) [Fingertip 시각화](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_FingertipVisualization.html) |
 | 경계 상자의 수동 활성화를 위한 UI | 다양 한 종류의 포인터에 대해 알아보기 | 직접 상호 작용에 대 한 신뢰도를 향상 시키는 fingertip의 시각적 affordance |
