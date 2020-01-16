@@ -3,15 +3,15 @@ title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: 3061c97e0e945bf9d829e2259533c7d32683d581
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 11fd763ec0832558a7a981dce34e0c6700d12a37
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940801"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036327"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 에뮬레이터 보관
 
@@ -19,6 +19,7 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 |  빌드 |  출시 날짜 |  참고 | 
 |----------|----------|----------|
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1044](https://go.microsoft.com/fwlink/?linkid=2114824) | 2020 년 1 월 13 일 | 1 월 2020 HoloLens 2 빌드  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1042](https://go.microsoft.com/fwlink/?linkid=2112589) | 2019 년 12 월 6 일 | 12 월 2019 HoloLens 2 빌드  에뮬레이터에서 실행 중인 Holographic 앱이 핀 패널을 표시할 때 예기치 않게 일시 중단 되는 문제를 해결 합니다.  인식 시뮬레이션 API 또는 인식 시뮬레이션 제어 앱을 사용 하는 경우 원격 에뮬레이터에 연결할 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1034](https://go.microsoft.com/fwlink/?linkid=2106649) | 2019년 10월 8일 | 2019 년 10 월 2 일 빌드  사용 가능한 최신 버전 보다 오래 된 버전을 실행 하는 경우 에뮬레이터가 새 버전으로 업데이트 하 라는 메시지를 표시 합니다.  Windows 10에서 에뮬레이터를 사용 하는 경우 Windows 10에서 업데이트 이상 2019을 사용 하는 경우 개발자는 새 NAT 구성 탭에서 개별 장치에서 실행 되는 응용 프로그램의 포트를 열어 에뮬레이터에 연결 하 고 업데이트 탭에서 사용 가능한 에뮬레이터 버전을 볼 수 있습니다.  자세한 내용은 [HoloLens 에뮬레이터 설명서](using-the-hololens-emulator.md) 를 참조 하세요. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1031](https://go.microsoft.com/fwlink/?linkid=2103724) | 2019년 9월 11일 | 2019 년 9 월 2 일 빌드.  Windows 10에서 에뮬레이터를 실행할 때 네트워크 탭이 에뮬레이터 도구 창에 표시 됩니다. 2019 5 월 업데이트 또는 최신 버전. |

@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901433"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036375"
 ---
 # <a name="surface-magnetism"></a>표면 자기
 
 ![표면 자기](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Surface 자기 기법을 사용 하 여 실제 실제 표면에 holographic 개체를 놓을 수 있습니다. 개체의 방향을 실제 화면에 맞춰 더 몰입 형 및 자연 스러운 환경을 만들 수 있습니다.
+Surface 자기 기법을 사용 하 여 실제 실제 표면에 holographic 개체를 놓을 수 있습니다. 개체의 방향을 실제 화면에 정렬 하 여 사용자에 게 더 몰입 형 및 자연 스러운 환경을 만들 수 있습니다.
 
 <br>
 

@@ -1,25 +1,30 @@
 ---
 title: Windows Mixed Reality 및 새 Microsoft Edge
-description: Windows Mixed Reality 설명서에 기여 하는 방법입니다.
+description: Windows Mixed Reality에서 새로운 Microsoft Edge를 준비 하세요. 에는 필요한 변경 사항, 검색할 업데이트 및 알려진 문제가 포함 됩니다.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/07/2020
+ms.date: 01/15/2020
 ms.topic: article
 keywords: edge, new, 몰입 형 웹, microsoft edge, browser, vr
-ms.openlocfilehash: cb0f96069ffaa8f7d40b64bae55ab2749f5f02c6
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
+ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727050"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76041002"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality 및 새 Microsoft Edge
 
-[새 Microsoft Edge가 곧 출시 될 예정입니다](https://blogs.windows.com/windowsexperience/2019/11/04/introducing-the-new-microsoft-edge-and-bing/). 2020 년 1 월 15 일을 대상으로 하는 일반 공급을 사용 하 여 Windows Mixed Reality VR 헤드셋 고객이 새 Microsoft Edge에서 발생 하는 상황을 인식 하 고 Windows Mixed에서 웹 검색 환경을 개선 하는 보류 중인 업데이트를 알려 드리겠습니다. 현실.
+[이제 새로운 Microsoft Edge를 다운로드할 수](https://blogs.windows.com/windowsexperience/?p=173496)있지만, 고객은 향후 몇 개월 동안 측정 된 롤아웃 방법에 따라 [Windows 10에 대 한 향후 업데이트에 설치 될 때까지 기다릴](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/)수도 있습니다. 
+
+이 뉴스를 사용 **하 여 Windows Mixed REALITY VR 헤드셋 고객이 새 Microsoft Edge에서 예측할 항목을 인식 하 고 Windows Mixed reality에서 웹 검색 환경을 개선 하는 보류 중인 업데이트를 알려 드리겠습니다**.
 
 ## <a name="introducing-the-new-microsoft-edge"></a>새 Microsoft Edge 소개
 
 새 Microsoft Edge는 [Chromium 오픈 소스 프로젝트](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) 를 데스크톱에 도입 하 여 고객에 게 더 나은 웹 호환성을 만들며 모든 웹 개발자가 웹의 조각화를 줄일 수 있습니다. 또한 WebVR 대신 VR 헤드셋에 대 한 몰입 형 웹 환경을 만드는 새로운 표준인 출시 시 WebXR 지원 합니다.
+
+>[!IMPORTANT]
+>최신 Windows 10 장치에 Microsoft Edge를 설치 하면 PC의 이전 (레거시) 버전이 교체 됩니다.
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>새 Microsoft Edge 준비
 
@@ -45,7 +50,7 @@ Mixed reality 홈에서 가장 가능한 Microsoft Edge 환경을 사용 하는 
 
 -   Windows Mixed Reality에서 열린 웹 사이트는 혼합 현실 포털이 닫히면 Microsoft Edge windows가 혼합 현실 홈에 배치 된 위치에 그대로 유지 되는 경우 손실 됩니다.
 -   Microsoft Edge 창의 오디오는 spatialized 되지 않습니다.
--   Windows Mixed Reality의 YouTube에서 360 비디오를 열면 비디오가 헤드셋에서 왜곡 될 수 있습니다. YouTube 비디오의 페이지를 새로 고치고 360 비디오를 실행 하면 문제가 해결 됩니다.
+-   Windows Mixed Reality의 YouTube에서 360 비디오를 열면 비디오가 헤드셋에서 왜곡 될 수 있습니다. YouTube 비디오의 페이지를 새로 고치고 360 비디오를 실행 하 여 문제를 해결할 *수* 있지만 문제가 지속 될 수 있다는 의견을 들었습니다.
 -   Windows Mixed Reality 세션 중에는 설정 > 시스템 > 디스플레이에서 일반 물리적 모니터로 가상 모니터가 표시 됩니다.
 
 
