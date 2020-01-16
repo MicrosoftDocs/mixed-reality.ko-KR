@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 상호 작용, 디자인, HoloLens, 손, 원거리, 가리키기 및 커밋
-ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334067"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901526"
 ---
 # <a name="point-and-commit-with-hands"></a>손으로 가리키고 커밋
 
@@ -201,8 +201,8 @@ HoloLens 2에서 사용자의 손바닥 중앙에서 나오는 손 레이를 만
 
 ---
 
-## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity용 MRTK(Mixed Reality Toolkit)의 손 광선
-기본적으로 MRTK는 셸의 시스템 손 광선과 동일한 시각적 상태의 손 광선 prefab([DefaultControllerPointer. prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers))를 제공합니다. MRTK의 입력 프로필의 포인터 아래에 할당됩니다. Windows Mixed Reality 몰입형 헤드셋에서 동일한 광선은 모션 컨트롤러에도 사용됩니다.
+## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity용 MRTK(Mixed Reality Toolkit)의 손 광선
+기본적으로 MRTK는 셸의 시스템 손 광선과 동일한 시각적 상태의 손 광선 prefab([DefaultControllerPointer. prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers))를 제공합니다. MRTK의 입력 프로필의 포인터 아래에 할당됩니다. 몰입형 헤드셋에서 동일한 광선이 모션 컨트롤러에 사용됩니다.
 
 * [MRTK - 포인터 프로필](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
 * [MRTK - 입력 시스템](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)

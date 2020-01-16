@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694177"
+ms.locfileid: "75723252"
 ---
 # <a name="direct-manipulation-with-hands"></a>수동으로 직접 조작
 
@@ -326,7 +326,7 @@ AR의 손과 VR의 모션 컨트롤러 간에는 상호 작용 평행 이론이 
 
 ---
 
-## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Unity용 MRTK(Mixed Reality Toolkit)의 조작
+## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Unity용 MRTK(Mixed Reality Toolkit)의 조작
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** 를 사용하면 **ManipulationHandler** 스크립트를 사용하여 일반적인 조작 동작을 쉽게 수행할 수 있습니다. ManipulationHandler를 사용하면 직접 손이나 손 광선으로 직접 개체를 잡아 이동할 수 있습니다. 또한 개체의 크기 조정 및 회전을 위해 양손 조작도 지원합니다.
 
 * [MRTK - 조작](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
