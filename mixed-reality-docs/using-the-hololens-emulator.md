@@ -3,16 +3,16 @@ title: HoloLens 에뮬레이터 사용
 description: HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 혼합 현실 앱을 테스트할 수 있습니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: 49b67530d46edda3c38efd74f03f730c2b2247bd
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940891"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036460"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -25,7 +25,7 @@ HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 홀로�
 HoloLens 에뮬레이터를 다운로드합니다.
 
 버전: 
-* [HoloLens 2 에뮬레이터(2019년 12월 업데이트)](https://go.microsoft.com/fwlink/?linkid=2112589).
+* [HoloLens 2 에뮬레이터(2020년 1월 업데이트)](https://go.microsoft.com/fwlink/?linkid=2114824).
 * [HoloLens 에뮬레이터(1세대) 및 홀로그램 프로젝트 템플릿](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 HoloLens 에뮬레이터의 릴리스 정보 및 이전 빌드는 [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md) 페이지에서 찾을 수 있습니다.
@@ -85,14 +85,14 @@ HoloLens(1세대)의 커서는 헤드 이동 및 회전을 따릅니다. HoloLen
 ### <a name="toolbar"></a>도구 모음
 
 기본 창의 오른쪽에는 에뮬레이터 도구 모음이 있습니다. 도구 모음에는 다음과 같은 단추가 포함됩니다.
-* ![Close icon](images/emulator-close.png) **닫기**: 에뮬레이터를 닫습니다.
-* ![Minimize icon](images/emulator-minimize.png) **최소화**: 에뮬레이터 창을 최소화합니다.
-* ![Simulation_icon](images/emulator-simulation-panel.png) **시뮬레이션 제어판**: [에뮬레이터에 대한 입력](#basic-emulator-input)을 구성하거나 제어하기 위해 [시뮬레이션 제어판](#simulation-control-panel)을 표시하거나 숨깁니다.
-* ![Fit to screen icon](images/emulator-fit.png) **화면에 맞춤**: 에뮬레이터를 화면에 맞춥니다.
-* ![Zoom icon](images/emulator-zoom.png) **확대/축소**: 에뮬레이터를 크거나 작게 합니다.
-* ![Help icon](images/emulator-help.png) **도움말**: 에뮬레이터 도움말을 엽니다.
-* ![Open device portal icon](images/emulator-deviceportal.png) **디바이스 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
-* ![Tools icon](images/emulator-tools.png) **도구**: **추가 도구** 창을 엽니다.
+* ![닫기 아이콘](images/emulator-close.png) **닫기**: 에뮬레이터를 닫습니다.
+* ![최소화 아이콘](images/emulator-minimize.png) **최소화**: 에뮬레이터 창을 최소화합니다.
+* ![시뮬레이션 아이콘](images/emulator-simulation-panel.png) **시뮬레이션 제어판**: [에뮬레이터에 대한 입력](#basic-emulator-input)을 구성하거나 제어하기 위해 [시뮬레이션 제어판](#simulation-control-panel)을 표시하거나 숨깁니다.
+* ![화면에 맞추기 아이콘](images/emulator-fit.png) **화면에 맞추기**: 에뮬레이터를 화면에 맞춥니다.
+* ![확대/축소 아이콘](images/emulator-zoom.png) **확대/축소**: 에뮬레이터를 크거나 작게 합니다.
+* ![도움말 아이콘](images/emulator-help.png) **도움말**: 에뮬레이터 도움말을 엽니다.
+* ![디바이스 포털 열기 아이콘](images/emulator-deviceportal.png) **디바이스 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
+* ![도구 아이콘](images/emulator-tools.png) **도구**: **추가 도구** 창을 엽니다.
 
 ### <a name="simulation-control-panel"></a>시뮬레이션 제어판
 
@@ -173,15 +173,15 @@ Windows 10 2019년 5월 업데이트 이상에서 에뮬레이터를 실행하�
 ### <a name="toolbar"></a>도구 모음
 
 기본 창의 오른쪽에는 에뮬레이터 도구 모음이 있습니다. 도구 모음에는 다음과 같은 단추가 포함됩니다.
-* ![Close icon](images/emulator-close.png) **닫기**: 에뮬레이터를 닫습니다.
-* ![Minimize icon](images/emulator-minimize.png) **최소화**: 에뮬레이터 창을 최소화합니다.
-* ![Human input icon](images/emulator-control.png) **휴먼 입력**: [에뮬레이터에 대한 휴먼 입력](#basic-emulator-input)을 시뮬레이션하는 데 마우스 및 키보드가 사용됩니다.
-* ![Keyboard and mouse input icon](images/emulator-input.png) **키보드 및 마우스 입력**: Bluetooth 키보드와 마우스를 연결했을 때와 동일하게 키보드 및 마우스 입력이 키보드 및 마우스 이벤트로 HoloLens OS에 직접 전달됩니다.
-* ![Fit to screen icon](images/emulator-fit.png) **화면에 맞춤**: 에뮬레이터를 화면에 맞춥니다.
-* ![Zoom icon](images/emulator-zoom.png) **확대/축소**: 에뮬레이터를 크거나 작게 합니다.
-* ![Help icon](images/emulator-help.png) **도움말**: 에뮬레이터 도움말을 엽니다.
-* ![Open device portal icon](images/emulator-deviceportal.png) **디바이스 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
-* ![Tools icon](images/emulator-tools.png) **도구**: **추가 도구** 창을 엽니다.
+* ![닫기 아이콘](images/emulator-close.png) **닫기**: 에뮬레이터를 닫습니다.
+* ![최소화 아이콘](images/emulator-minimize.png) **최소화**: 에뮬레이터 창을 최소화합니다.
+* ![휴먼 입력 아이콘](images/emulator-control.png) **휴먼 입력**: [에뮬레이터에 대한 휴먼 입력](#basic-emulator-input)을 시뮬레이션하는 데 마우스 및 키보드가 사용됩니다.
+* ![키보드 및 마우스 입력 아이콘](images/emulator-input.png) **키보드 및 마우스 입력**: Bluetooth 키보드와 마우스를 연결했을 때와 동일하게 키보드 및 마우스 입력이 키보드 및 마우스 이벤트로 HoloLens OS에 직접 전달됩니다.
+* ![화면에 맞추기 아이콘](images/emulator-fit.png) **화면에 맞추기**: 에뮬레이터를 화면에 맞춥니다.
+* ![확대/축소 아이콘](images/emulator-zoom.png) **확대/축소**: 에뮬레이터를 크거나 작게 합니다.
+* ![도움말 아이콘](images/emulator-help.png) **도움말**: 에뮬레이터 도움말을 엽니다.
+* ![디바이스 포털 열기 아이콘](images/emulator-deviceportal.png) **디바이스 포털 열기**: 에뮬레이터에서 HoloLens OS용 Windows 디바이스 포털을 엽니다.
+* ![도구 아이콘](images/emulator-tools.png) **도구**: **추가 도구** 창을 엽니다.
 
 ### <a name="simulation-tab"></a>시뮬레이션 탭
 
