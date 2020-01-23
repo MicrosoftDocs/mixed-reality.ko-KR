@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
-ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
+ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623317"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76521694"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -51,7 +51,7 @@ HoloLens 용 Windows 장치 포털을 사용 하면 Wi-fi 또는 USB를 통해 �
 ## <a name="connecting-over-usb"></a>USB를 통해 연결
 
 1. PC에 설치 된 Windows 10 개발자 도구를 사용 하 여 Visual Studio 업데이트 1이 설치 되어 있는지 확인 하 [는 도구를 설치](install-the-tools.md) 합니다. 이렇게 하면 USB 연결을 사용할 수 있습니다.
-2. HoloLens를 마이크로-USB 케이블로 PC에 연결합니다.
+2. Hololens 용 마이크로 USB 케이블 (첫 번째 Gen) 또는 HoloLens 2 용 USB-C를 사용 하 여 HoloLens를 PC에 연결 합니다.
 3. PC의 웹 브라우저에서 [https://127.0.0.1:10080](https://127.0.0.1:10080)로 이동 합니다.
 
 ## <a name="connecting-to-an-emulator"></a>에뮬레이터에 연결
