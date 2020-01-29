@@ -7,12 +7,12 @@ ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
-ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
+ms.openlocfilehash: 3d358cf72e8481d27ca41784bbc059c45e0da7ff
+ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036460"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76521684"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -220,7 +220,7 @@ Windows 10 2019년 5월 업데이트 이상에서 에뮬레이터를 실행하�
 
 에뮬레이터를 설치하는 동안 *“Visual Studio 2015 업데이트 1 및 UWP 도구 버전 1.2”* 가 필요하다고 알리는 오류 메시지가 표시될 수 있습니다. 이 오류의 가능한 세 가지 원인은 다음과 같습니다.
 * Visual Studio 버전이 최신이 아닙니다(Visual Studio 2019, Visual Studio 2017 또는 Visual Studio 2015 업데이트 1 이상). 이를 해결하려면 Visual Studio의 최신 릴리스를 설치합니다.
-* Visual Studio의 최신 버전이 있지만, UWP(유니버설 Windows 플랫폼) 도구가 설치되어 있지 않습니다. 이것은 Visual Studio에 대한 선택적 기능입니다.
+* Visual Studio의 최신 버전이 있지만, UWP(유니버설 Windows 플랫폼) 도구가 설치되어 있지 않습니다. 이것은 Visual Studio에 대한 선택적 기능입니다. HoloLens(1세대)의 경우 Visual Studio 2015 또는 Visual Studio 2017용 UWP 도구가 필요합니다.
 
 또한 Windows Pro/Enterprise/Education SKU 외에 에뮬레이터를 설치할 때 또는 Hyper-V 기능을 사용하도록 설정하지 않은 경우에도 오류가 나타날 수 있습니다.
 * 전체 요구 사항 세트에 대해 위에 나온 [시스템 요구 사항](#hololens-emulator-system-requirements) 섹션을 읽어보세요.
