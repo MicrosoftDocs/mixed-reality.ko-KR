@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901486"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885629"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. 여러 사용자와 개체 이동 공유
 
@@ -74,6 +74,12 @@ ms.locfileid: "75901486"
 11. Prefabs 폴더의 프로젝트 패널에서 prefab 테이블을 방금 만든 "TableAnchor" 자식 개체로 끌어 옵니다.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+   
+12. 자산-> 리소스-> Prefabs에서 "로켓 Launcher_Complete 변형" prefab을 엽니다.
+
+13. "LunarModule" GameObject를 선택 하 고 다음 두 구성 요소인 "Photon Transform View" 및 "Photon View"를 추가 합니다.
+
+14. "LunarModule" GameObject를 선택한 상태에서 "Photon Transform View" 구성 요소를 "Photon View" 구성 요소의 "관찰 된 구성 요소" 슬롯으로 끌어 옵니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
