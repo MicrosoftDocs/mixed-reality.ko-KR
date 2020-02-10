@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: 손, 메뉴, 단추, 빠른 액세스, 레이아웃
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723262"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092057"
 ---
 # <a name="hand-menu"></a>손 모양 메뉴
 
@@ -26,7 +26,7 @@ ms.locfileid: "75723262"
 ---
 
 ## <a name="behavior-best-practices"></a>동작 모범 사례
-**A. 단추 수를 작게 유지 합니다.** 즉, 손 잠금 메뉴와 눈동자 간의 거리가 가까이 있고, 언제 든 지 상대적으로 작은 시각적 영역에 초점을 맞춘 사용자의 추세 (비전의 attentional 원뿔 약 10도)로 인해 단추 수를 작게 유지 하는 것이 좋습니다. 탐색을 기반으로 3 개의 단추가 있는 한 열은 사용자가 시계 중심으로 이동 하는 경우에도 뷰 (FOV)의 모든 콘텐츠를 유지 하 여 잘 작동 합니다. 
+**A. 단추 수를 작게 유지 합니다.** 즉, 손 잠금 메뉴와 눈동자 간의 거리가 가까이 있고, 언제 든 지 상대적으로 작은 시각적 영역에 초점을 맞춘 사용자의 추세 (비전의 attentional 원뿔 약 10도)로 인해 단추 수를 작게 유지 하는 것이 좋습니다. 탐색을 기반으로 세 개의 단추가 있는 한 열은 사용자가 시계를 FOV의 중심으로 이동 하는 경우에도 뷰 (FOV)의 모든 콘텐츠를 유지 하 여 잘 작동 합니다. 
 
 **B. 빠른 작업을 위한 수동 메뉴 활용:** arm을 올리고 위치를 유지 관리 하면 arm 피로을 쉽게 유발할 수 있습니다. 짧은 상호 작용을 필요로 하는 메뉴에 대해 직접 잠긴 메서드를 사용 합니다. 메뉴가 복잡 하 고 확장 된 상호 작용 시간이 필요한 경우에는 대신 세계 잠금 또는 본문 잠금을 사용 하는 것이 좋습니다. 
 
@@ -88,7 +88,7 @@ ms.locfileid: "75723262"
     :::column:::
         손가락을 ![](images/AboveFingers.gif)<br>
         **손가락 위**<br>
-        피로 오랜 시간 동안 보유 하 고 있으므로 손을<br>
+        피로 오랫동안 보유 하기 때문에 1 손을.<br>
         2-인덱스 및 가운데 손가락에 대 한 추적 문제
     :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ ms.locfileid: "75723262"
     :::column:::
         ![Top Fingertip](images/TopFingerTip.gif) **top Fingertip**<br>
         1 손을 추적 하는 문제<br>
-        2\. 정상 상태를 유지 하는 손을 피로<br>
+        2 손을 피로 정상 상태를 유지 하 고 있습니다.<br>
         3-손가락 사이의 제한 된 공간으로 인해 실수로 다른 손가락으로 단추를 누르는 문제
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ ms.locfileid: "75723262"
         Arm](images/BackOfTheArm.gif)의 ![돌아갑니다.<br>
         **Arm의 후면**<br>
         1-실수로 홈 단추를 트리거할 수 있습니다.<br>
-        2-사용자에 게 친숙 하거나 친숙 하지 않은 위치
+        2-자연 또는 편안한 위치가 아닙니다.
     :::column-end:::
     :::column:::
     :::column-end:::
