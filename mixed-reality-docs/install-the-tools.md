@@ -7,12 +7,12 @@ ms.date: 2/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit
-ms.openlocfilehash: beed8b79ec5f157b7dfa7d55a5965daae8a83f03
-ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
+ms.openlocfilehash: d2b9a3718845e755a5cd8d9866ec9716ee0c0609
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036386"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092047"
 ---
 # <a name="install-the-tools"></a>도구 설치
 
@@ -45,7 +45,8 @@ Microsoft HoloLens 및 Windows Mixed Reality 몰입형(VR) 헤드셋을 위한 �
     :::column:::
        [![Unity](images/unity_logo.png)](https://unity3d.com/unity/qa/lts-releases?version=2018.4)<br>
         **[Unity](https://unity3d.com/unity/qa/lts-releases?version=2018.4)**<br>
-        일반적으로 Unity LTS(장기 지원) 스트림을 새 프로젝트를 시작할 최선의 버전으로 사용한 후, 최신 수정 버전으로 업데이트하여 안정적인 최신 수정 프로그램을 선택하는 것이 좋습니다.<br> <br>현재 권장 사항은 아래의 MRTK v2에 필요한 LTS 빌드인 **Unity 2018.4.x**를 사용하는 것입니다.<br> <br>일부 개발자는 특정 이유로 다른 버전의 Unity를 사용하려고 합니다. 이러한 경우 Unity는 다른 버전을 병렬로 설치하도록 지원합니다.<br><br>[![MRTK](images/MRTKIcon.jpg)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)<br>**[Mixed Reality Toolkit(MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)**<br>Unity용 MRTK(Mixed Reality Toolkit) v2는 혼합 현실 애플리케이션을 위한 오픈 소스 플랫폼 간 개발 키트입니다.<br><br> MRTK v2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션 개발을 가속화하기 위해 고안되었습니다. 이 프로젝트는 혼합 현실 애플리케이션을 만들기 위한 진입 장벽을 낮추고 커뮤니티에 다시 기여하는 것을 목표로 합니다.
+        일반적으로 Unity LTS(장기 지원) 스트림을 새 프로젝트를 시작할 최선의 버전으로 사용한 후, 최신 수정 버전으로 업데이트하여 안정적인 최신 수정 프로그램을 선택하는 것이 좋습니다.<br> <br>현재 권장 사항은 아래의 MRTK v2에 필요한 LTS 빌드인 **Unity 2018.4.x**를 사용하는 것입니다.<br> <br>일부 개발자는 특정 이유로 다른 버전의 Unity를 사용하려고 합니다. 이러한 경우 Unity는 다른 버전을 병렬로 설치하도록 지원합니다.<br><br>
+        [![MRTK](images/final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)<br>**[Mixed Reality Toolkit(MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)**<br>Unity용 MRTK(Mixed Reality Toolkit) v2는 혼합 현실 애플리케이션을 위한 오픈 소스 플랫폼 간 개발 키트입니다.<br><br> MRTK v2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션 개발을 가속화하기 위해 고안되었습니다. 이 프로젝트는 혼합 현실 애플리케이션을 만들기 위한 진입 장벽을 낮추고 커뮤니티에 다시 기여하는 것을 목표로 합니다.
     :::column-end:::
     :::column:::
         [![Unreal](images/Unreal_logo.png)](https://docs.unrealengine.com//GettingStarted/Installation/index.html)<br>
@@ -53,7 +54,7 @@ Microsoft HoloLens 및 Windows Mixed Reality 몰입형(VR) 헤드셋을 위한 �
         Unreal Engine 4는 C++ 및 Blueprint 모두에서 혼합 현실을 완벽하게 지원하는 강력한 오픈 소스 생성 엔진입니다.<br> <br>Unreal Engine 4.23에 대한 HoloLens 지원은 현재 베타 버전입니다.
     :::column-end:::
     :::column:::
-        [![DirectX 앱 템플릿](images/DirectX_logo.png)](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)<br>
+        [![DirectX 앱 템플릿](images/visualstudio-small_logo.png)](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)<br>
         **[DirectX](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)**<br>
         Windows Mixed Reality 앱 템플릿은 기본 API와 함께 DirectX를 사용하여 혼합 현실 앱을 작성하는 데 필요한 모든 기본 정보를 제공합니다. 렌더링 루프(또는 "게임 루프"), Direct3D 디바이스 및 컨텍스트를 관리하는 DeviceResources 도우미 클래스 및 간단한 예제 홀로그램 렌더러가 포함됩니다. Direct3D 11 및 Direct3D 12에서 사용 가능합니다.
     :::column-end:::
