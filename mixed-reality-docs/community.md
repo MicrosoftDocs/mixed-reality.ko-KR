@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: 혼합 현실, 커뮤니티, mvp, 모임
-ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
-ms.translationtype: MT
+ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
+ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092075"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125206"
 ---
 # <a name="mixed-reality-community"></a>혼합 현실 커뮤니티
 
@@ -34,8 +34,8 @@ Microsoft에서 강력한 커뮤니티에 대 한 액세스 권한은 개발자,
 |커뮤니티 이름|Country|구/군/시|링크|
 |---------|---------|---------|---------|
 |**시카고 AWE Nite**|인도네시아|시카고|[링크나](https://www.meetup.com/AWENiteChicago/)|
-<!-- 
-|Row2     |         |         |         |
+|**VR 필리핀**|Philoppines|N/A|[링크나](https://www.facebook.com/vrphilippines/)|
+<!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
 |Row5     |         |         |         |
@@ -90,6 +90,7 @@ Microsoft에서 가장 중요 한 전문가 또는 Mvp는 커뮤니티와의 지
 |---------|---------|---------|
 |![Aleksandr Kudishov](images/BiographyImages/aleksandr_kudishov_270_270.png)</br>**Aleksandr Kudishov**</br>*러시아*|Windows 개발, VR/AR/MR & 게임 개발에 초점을 맞춘 MVP입니다. 게임 생산자, Tech 전도사, Holographic 개발자, MSP의 게임 개발 리드|[메일 주소](mailto:draconifore@gmail.com)|
 |![Alexander Meijers](images/BiographyImages/AlexanderMeijers_270x270.png)</br>**Alexander Meijers**</br>*네덜란드, Rijswijk*|Inspires, motivates 및 교육할 비즈니스를 담당 하는 전문가는 가상, 확대 및 혼합 현실를 사용 하 여 새로운 기술을 활용 하는 방법에 대 한 전문 지식을 활용 하 고 있습니다. 그는 SharePoint, Office 365 및 Microsoft Azure에 대 한 강력한 배경 이며 기계 학습, 인공 지능 및 인식 서비스를 사용 하 고 있습니다.</br></br>주로 제조, 건설, 산업, 물류 및 maritime/해외에 중점을 두었습니다. 이러한 목표는 비즈니스에서 서비스, 앱 및 장치 (예: HoloLens, Azure 용 Kinect)를 사용 하 여 비즈니스 프로세스를 만들고, 개선 하 고, smartening 하 고, 줄이는 데 도움을 주는 것입니다.|[메일 주소](mailto:alexander@appzinside.com)|
+|![Bronwen Zande](images/BiographyImages/BronwenZande_270x270.png)</br>**Bronwen Zande**</br>*브리즈번, 오스트레일리아*|Bronwen Zande는 개발자로 서의 생명을 더 많이 소비 하는 영혼 솔루션의 감독입니다.</br></br>그녀는 장기적인 Microsoft MVP (가장 귀중 한 전문가)에 게 Windows 개발, 새로운 환경, Kinect, Bing Maps 및 Live Services에 대 한 MVP 상태를 부여 받았습니다.</br></br>Bronwen는 심사에 대 한 참여를 위한 경력으로 홍보 하는 데 참여 하는 활성 커뮤니티 구성원이 며,이를 통해, 젊은 ICT 탐색기와 기술을 어디서 나 사용할 수 있습니다. Bronwen는 브리즈번 Geek of Dinners, organiser of Developer, developer, developer 브리즈번 (현재 DDD 브리즈번)의 창립 멤버와 SheEO의 경우 multi-factor 오스트레일리아 활성기입니다.</br></br>그녀는 avid traveller이 고, 카메라의 렌즈를 사용 하지 않을 경우 이동 하는 동안 로컬 모임 또는 사용자 그룹에 프레젠테이션 하는 경우가 종종 있습니다.|[메일 주소](mailto:bronwen@soulsolutions.com.au)
 |![Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*브라질*|혁신 관리자는 XR 확대 현실, 혼합 및 가상 현실 플랫폼에 대 한 전문 지식이 있는 디지털 페이지 혁신 프로젝트의 관리 및 아키텍처에서 작업 합니다. Microsoft MVP의 혼합 현실 2020-2021 혼합 현실에서는 Microsoft HoloLens에 초점을 맞춘 혼합 현실 솔루션 개발 및 계획에서 전문가로 근무 합니다. 게임 및 응용 프로그램 개발에 대 한 경험을 비롯 하 여 자산 작성과 멀티미디어 콘텐츠가 제공 됩니다.|[메일 주소](mailto:brunof.anjos@outlook.com)|
 |![Clemente Giorio](images/BiographyImages/ClementeGiorio_270x270.png)</br>**Clemente Giorio**</br>*Torino, Italia*|"해커, geek of, 작성자, 연구원, 분야, 강사, 개발자 ...</br>은 (는) 과학 및 기술에 대 한 작업 외의 열정을 만들었습니다.</br>는 대부분의 커뮤니티를 따르며 특히 체육관, DotNetPodcast, FabLabNapoli, DotNetCampania 및 HoloLens 개발자를 코딩 하 여 특히 스피커 및 이벤트 구성 도우미로 적극적으로 참여 하 고 있습니다.</br>Stove의 서명 요리는 인공 지능, Computer Vision, 사물 인터넷, 자연 사용자 인터페이스 및 혼합 현실입니다.</br>Microsoft MVP와 Intel Software 분야는 Deltatre에 대 한 선임 연구 & 개발 엔지니어와 함께 소프트웨어 프로토타입을 개발 합니다.|[메일 주소](mailto:tinuxnet@hotmail.com)|
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, 네덜란드*|Dave Smits는 2014 이후 Microsoft MVP 이며 첫 번째 버전이 시작 된 이후 HoloLens를 사용 합니다. 는 고객이 holograms에서 사용할 동작 추적 센서를 포함 하는 응용 프로그램에 대 한 간단한 모델로 시작 하는 몇 가지 프로젝트를 수행 했습니다.|[메일 주소](mailto:dave@familie-smits.com)|
@@ -106,3 +107,5 @@ Microsoft에서 가장 중요 한 전문가 또는 Mvp는 커뮤니티와의 지
 |![Takahiro Miyaura 라](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Takahiro Miyaura 라**</br>*Nara, 일본*|IT 업계에서 소프트웨어 엔지니어 및 개발자로 작업 하 고 있습니다. 특히 XR (VR/AR/MR 등) 연구를 수행 했습니다. )를 활용 하는 기술 및 다양 한 기술 (AI, IoT 등)을 XR 수 있습니다.|[메일 주소](mailto:cafe.kobe@gmail.com)|
 |![Tamás Deme](images/BiographyImages/tamasdeme_270.png)</br>**Tamás Deme**</br>*부다페스트, 헝가리*|Tamás는 애틀랜타 기반 VIM에서 작업 하는 혼합 현실 엔지니어가 서버에서 holograms를 표시 하는 헤드셋에 이르는 다양 한 장치에 대 한 솔루션을 개발 하는 것입니다. Microsoft MVP는 오픈 소스 프로젝트, 교육 및 멘토링에 관심이 있는 Windows 개발의 Microsoft MVP입니다. [https://tomzorz.me](https://tomzorz.me) 또는 twitter의 [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_)에서 온라인으로 찾을 수 있습니다.|[메일 주소](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, 일본*|Afrika을 포함 한 5 개 국가의 물리학 교육자|[메일 주소](mailto:tatsuro.ueda@feel-physics.jp)|
+|![빈센트 gt Igui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**빈센트 Igigui**</br>*파리, 프랑스*|OCTO 기술로 혁신적인 상호 작용을 담당 하는 고객은 고객과 디지털 세계 간의 새로운 상호 작용을 개발 하는 데 도움이 됩니다.</br></br>필자는 혁신적인 환경 (VR/AR/MR), 봇 (대화형 인터페이스) 및 사용자 인터페이스의 잠재적 미래를 이야기 하는 혁신 및 자연 스러운 사용자 인터페이스 토픽에 대해 lecturer.</br></br>2013부터 Microsoft는 Kinect, 자연 스러운 사용자 인터페이스 및 HoloLens (가장 귀중 한 전문 수상)의 유럽 최고의 전문가 중 한 명으로 Microsoft에 게 왔습니다.|[메일 주소](mailto:vincent@guigui.fr)|
+
