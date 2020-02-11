@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926208"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092037"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 앱 준비
 
@@ -22,7 +22,7 @@ ms.locfileid: "73926208"
 
 | 1단계 | 2단계 | 3단계 | 4단계 |
 |----------|-------------------|-------------------|-------------------|
-| ![Visual Studio 로고](images/visualstudio_logo.png) | ![Unity 로고](images/unity_logo.png)| ![Unity 아이콘](images/hololens2_icon.jpg) | ![MRTK 로고](images/MRTKIcon.jpg) |
+| ![Visual Studio 로고](images/visualstudio_logo.png) | ![Unity 로고](images/final_unity_logo.png)| ![Unity 아이콘](images/hololens2_icon.jpg) | ![MRTK 로고](images/final_mrtk-small_logo.png) |
 | 최신 도구 다운로드 | Unity 프로젝트 업데이트 | ARM용 컴파일 | MRTK v2로 마이그레이션
 
 필수 구성 요소:
@@ -92,7 +92,7 @@ MRTK 버전 2를 사용하는 방법에 대한 자세한 내용은 다음을 참
 
 HTK/MRTK와 MRTK v2 간의 특정 API 차이점에 대한 자세한 내용은 [MRTK 버전 2 wiki](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)의 이식 가이드를 참조하세요.
 
-### <a name="best-practices"></a>모범 사례
+### <a name="best-practices"></a>최선의 구현 방법
 
 - 기본적으로 [MRTK 표준 셰이더](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)를 사용합니다.
 - 한 번에 한 가지 중요 변경 유형 처리(예: IFocusable에서 [IMixedRealityFocusHandler](https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html)로의 변경)
