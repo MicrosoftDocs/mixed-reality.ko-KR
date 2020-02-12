@@ -5,160 +5,212 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: b5b1bd0115822449bd6098f78cfc94d909169737
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334369"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129453"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. 음력 모듈 샘플 응용 프로그램 만들기
+<!-- TODO: Rename to 'Creating a Rocket Launcher sample application' -->
 
-이 자습서에서는 다양 한 개념을 이전 단원에서 결합 하 여 고유한 샘플 환경을 만듭니다. 사용자가 추적 된 손을 사용 하 여 음력 모듈 부분을 선택 하 고 음력 모듈을 조합 하 여 사용 해야 하는 음력 모듈 어셈블리 응용 프로그램을 만드는 방법에 대해 설명 합니다. Pressable 단추를 사용 하 여 배치 힌트를 전환 하 고, 경험을 다시 설정 하 고, 음력 모듈을 공간으로 시작 합니다. 이후 자습서에서는 공간 맞춤을 위해 Azure 공간 앵커를 활용 하는 강력한 다중 사용자 사용 사례를 포함 하 여이 환경을 계속 빌드할 예정입니다.
+이 자습서에서는 다양 한 개념을 이전 단원에서 결합 하 여 고유한 샘플 환경을 만듭니다. 사용자가 추적 된 손을 사용 하 여 파트를 선택 하 고 음력 모듈을 조합 하 여 구성 해야 하는 파트 어셈블리 응용 프로그램을 만드는 방법을 배웁니다. Pressable 단추를 사용 하 여 배치 힌트를 설정/해제 하 고, 환경을 다시 설정 하 고, 음력 모듈을 공간으로 시작 합니다.
+
+이후 자습서에서는 공간 맞춤을 위해 Azure 공간 앵커를 활용 하는 강력한 다중 사용자 사용 사례를 포함 하 여이 환경을 계속 빌드할 수 있습니다.
 
 ## <a name="objectives"></a>목표
 
-- 이전 단원의 여러 개념을 결합하여 고유한 환경 만들기
-- 개체를 설정/해제하는 방법 알아보기
-- 누를 수 있는 단추를 사용하여 복합 이벤트 트리거
-- 강체 물리학 및 힘 사용
-- 도구 설명 사용 살펴보기
+* 이전 단원의 여러 개념을 결합하여 고유한 환경 만들기
+* 개체를 설정/해제하는 방법 알아보기
+* 누를 수 있는 단추를 사용하여 복합 이벤트 트리거
+* 강체 물리학 및 힘 사용
+* 도구 설명 사용 살펴보기
+
+## <a name="lunar-module-parts-overview"></a>음력 모듈 부분 개요
+<!-- TODO: Rename to 'Implementing the part assembly functionality' -->
+
+이 섹션에서는 간단한 파트 어셈블리 챌린지를 만듭니다. 여기서 사용자의 목표는 테이블에 분산 된 5 개의 파트를 음력 모듈의 올바른 위치에 배치 하는 것입니다.
+
+이를 위해 수행 하는 주요 단계는 다음과 같습니다.
+
+1. 장면에 로켓 시작 관리자 prefab 추가
+2. 모든 파트에 대 한 개체 조작 사용
+3. 파트 어셈블리 데모 (스크립트) 구성 요소 추가 및 구성
+
+> [!NOTE]
+> 파트 어셈블리 데모 (스크립트) 구성 요소는 MRTK의 일부가 아닙니다. 이 자습서의 자산과 함께 제공 되었습니다.
+
+### <a name="1-add-the-rocket-launcher-prefab-to-the-scene"></a>1. prefab에 로켓 시작 관리자를 추가 합니다.
+
+프로젝트 창에서 **자산** > **mrtk로 이동 합니다. 자습서. Get > ** **Prefabs** 가 시작 > **RocketLauncher** 폴더에서 **RocketLauncher** prefab를 계층 창으로 끌어 장면에 추가 하 고 적절 한 위치에 배치 합니다. 예를 들면 다음과 같습니다.
+
+* X = 1.5, Y =-0.4, Z = 0 위치를 변환 합니다. 그러면 waist height에서 사용자의 오른쪽에 배치 됩니다.
+* 변환 회전 X = 0, Y = 180, Z = 0. 따라서 환경의 주요 기능은 사용자에 게 직면 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step1-1.png)
+
+### <a name="2-enable-object-manipulation-for-all-the-parts"></a>2. 모든 파트에 대 한 개체 조작 사용
+
+계층 구조 창에서 RocketLauncher > **LunarModuleParts** 개체를 찾고 모든 **자식 개체**를 선택한 다음 **조작 처리기 (스크립트)** 구성 요소 및 **Near 인터랙션 Grabbable (스크립트)** 구성 요소를 추가 하 고 조작 처리기 (스크립트)를 다음과 같이 구성 합니다.
+
+* 크기 조정 기능을 사용 하지 않도록 회전을 이동 하도록 **두 손 조작 유형을** 변경 합니다.
+* 거의 **조작** 가능 확인란의 선택을 취소 하 여 거의 상호 작용이 가능 하도록 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step1-2.png)
+
+> [!TIP]
+> 개체 조작을 구현 하는 방법에 대 한 단계별 지침이 포함 된 미리 알림은 [3D 개체 조작](mrlearning-base-ch4.md#manipulating-3d-objects) 지침을 참조할 수 있습니다.
+
+### <a name="3-add-and-configure-the-part-assembly-demo-script-component"></a>3. 파트 어셈블리 데모 (스크립트) 구성 요소 추가 및 구성
+
+LunarModuleParts 자식 개체가 모두 선택 된 상태에서 **오디오 원본** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
+
+* 오디오 **클립** 필드에 적합 한 오디오 클립을 할당 합니다 (예: MRKT_Scale_Start
+* **재생이 재생** 되 면 재생 확인란을 선택 취소 하 여 장면이 로드 될 때 오디오 클립을 자동으로 재생 하지 않습니다.
+* 공간 **Blend** 를 1로 변경 하 여 공간 오디오 사용
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-1.png)
+
+LunarModuleParts 자식 개체가 모두 선택 된 상태에서 **파트 어셈블리 데모 (스크립트)** 구성 요소를 추가 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-2.png)
+
+계층 창에서 **Roverenclosure** 개체를 선택 하 고 다음과 같이 **파트 어셈블리 데모 (스크립트)** 구성 요소를 구성 합니다.
+
+* 개체를 **놓을 개체** 에 대해 개체 자체 (이 경우 **roverenclosure** 개체)를 할당 합니다.
+* **배치 위치** 필드에 해당 PlacementHints 개체를 할당 합니다 .이 경우에는 **RoverEnclosure_PlacementHints** 개체입니다.
+* **도구 설명 개체** 필드에 해당 하는 ToolTipObject (이 경우에는 **RoverEnclosure_ToolTip** 개체)를 할당 합니다.
+* **오디오 원본** 필드에 개체 자체 (이 경우 **roverenclosure** 개체)를 할당 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-3.png)
+
+FuelTank, EnergyCell, DockingPortal 및 ExternalSensor와 같은 다른 LunarModuleParts 자식 개체 각각에 대해 **반복** 합니다.
+
+이제 게임 모드를 입력 하 고 ' 개체를 ' 위치 '에 가깝게 이동 하려면 다음을 확인 합니다.
+
+* 개체는 LunarModule 개체 아래에 위치 하 고 부모로 되어 있으므로 음력 모듈의 일부가 됩니다.
+* 개체의 오디오 소스가 개체의 위치에서 할당 된 오디오 클립을 재생 합니다.
+* 해당 하는 도구 설명 개체는 숨겨집니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-4.png)
+
+> [!TIP]
+> 편집기에서 입력 시뮬레이션을 사용 하는 방법에 대 한 미리 알림은 [Mrtk 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)에서 [편집기 내 입력 시뮬레이션을 사용](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) 하 여 장면 가이드를 테스트 하는 방법을 참조할 수 있습니다.
 
 ## <a name="configuring-the-lunar-module"></a>달탐사선 구성
 
-이 섹션에서는 샘플 환경을 만드는 데 필요한 다양 한 구성 요소를 소개 합니다.
+이 섹션에서는 사용자가 다음을 수행할 수 있도록 로켓 시작 관리자 응용 프로그램에 추가 기능을 추가 합니다.
 
-1. 기본 장면에 prefab 음력 모듈 어셈블리를 추가 합니다. 이 작업을 수행 하려면 프로젝트 탭에서 자산 > BasemodulPrefabs Sets > .로 이동 합니다. 두 개의 로켓 시작 관리자 prefabs이 표시 되 고, 로켓 Launcher_Tutorial prefab를 장면으로 끌고, 원하는 대로 배치 합니다.
+* 음력 모듈과 상호 작용
+* 공간으로 음력 모듈을 시작 하 고 시작 시 소리 재생
+* 음력 모듈과 모든 파트가 원래 위치에 다시 배치 되도록 응용 프로그램을 다시 설정 합니다.
+* 파트 어셈블리 챌린지를 더 어렵게 만들기 위해 배치 힌트를 숨깁니다.
 
-    >[!NOTE]
-    >로켓 Launcher_Complete prefab는 참조용으로 제공 되는 완성 된 시작 관리자입니다.
+이를 위해 수행 하는 주요 단계는 다음과 같습니다.
 
-    ![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
+1. 개체 조작 사용
+2. 물리 사용
+3. 오디오 원본 구성 요소 추가
+4. 시작 음력 모듈 (스크립트) 구성 요소 추가 및 구성
+5. 배치 힌트 (스크립트) 구성 요소 추가 및 구성
 
-    계층에서 로켓 Launcher_Tutorial 게임 개체를 확장 하 고 음력 Module 개체를 추가로 확장 하는 경우 "x-레이" 라는 재질을 포함 하는 여러 자식 개체를 찾을 수 있습니다. "X-y" 재질은 사용자에 대 한 배치 힌트로 사용 되는 약간 반투명 색을 허용 합니다.
+> [!NOTE]
+> 시작 음력 모듈 (스크립트) 구성 요소와 전환 배치 힌트 (스크립트) 구성 요소는 MRTK의 일부가 아닙니다. 이 자습서의 자산과 함께 제공 되었습니다.
 
-    ![6 단원에서는 Chapter1.txt 참고 목표](images/Lesson6_Chapter1_noteaim.PNG)
+### <a name="1-enable-object-manipulation"></a>1. 개체 조작 사용
 
-    아래 이미지에 표시 된 것 처럼 사용자가 상호 작용 하는 음력 모듈은 5 부분으로 구성 됩니다.
+계층 구조 창에서 RocketLauncher > **LunarModule** 개체를 선택 하 고 **조작 처리기 (스크립트)** 구성 요소 및 **Near 인터랙션 Grabbable (스크립트)** 구성 요소를 추가한 다음 조작 처리기 (스크립트)를 다음과 같이 구성 합니다.
 
-    1. 탐사선 인클로저
-    2. 연료 탱크
-    3. 에너지 셀
-    4. 도킹 포털
-    5. 외부 센서
+* 크기 조정 기능을 사용 하지 않도록 회전을 이동 하도록 **두 손 조작 유형을** 변경 합니다.
+* 거의 **조작** 가능 확인란의 선택을 취소 하 여 거의 상호 작용이 가능 하도록 합니다.
 
-    ![Lesson6 Chapter1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step1-1.png)
 
-    >[!NOTE]
-    >기본 장면에 표시되는 게임 개체 이름은 장면의 개체 이름과 일치하지 않습니다.
+### <a name="2-enable-physics"></a>2. 물리학 사용
 
-2. 오디오 원본을 LunarModule game 개체에 추가 합니다. 장면 계층 구조에서 LunarModule이 선택 되어 있는지 확인 하 고 구성 요소 추가를 클릭 합니다. 오디오 소스를 검색 하 고 게임 개체에 추가 합니다. 지금은 오디오 클립 필드를 비워 두거나, 특수 Blend 설정을 0에서 1로 변경 하 여 공간 오디오를 사용 하도록 설정 합니다. 이 오디오 소스는 나중에 시작 하는 소리를 재생 하는 데 사용 됩니다.
+RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 Rigidbody 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
 
-    ![6 단원에서는 Chapter1.txt Step2im](images/Lesson6_Chapter1_step2im.PNG)
+* 음력의 영향을 받지 않도록 **중력 사용** 확인란을 선택 취소 합니다.
+* 처음에는 음력 모듈이 physic의 영향을 받지 않도록 하려면 **기구학** 확인란을 선택 합니다.
 
-3. 스크립트를 추가 합니다. 배치 힌트를 설정/해제 합니다. 구성 요소 추가를 클릭 하 고 배치 힌트 설정/해제를 검색 합니다. 앞에서 설명한 것 처럼 반투명 힌트 (x-레이 재료를 사용 하는 개체)를 설정 및 해제할 수 있는 사용자 지정 스크립트입니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step2-1.png)
 
-    ![6 단원에서는 Chapter1.txt Step3im](images/Lesson6_Chapter1_step3im.PNG)
+### <a name="3-add-an-audio-source-component"></a>3. 오디오 원본 구성 요소 추가
 
-4. 5 개의 개체가 있으므로 게임 개체 배열 크기에 대해 "5"를 입력 합니다. 그러면 5 개의 새 요소가 표시 됩니다.
+RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 **오디오 원본** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
 
-    ![Lesson6 Chapter1 Step4bim](images/Lesson6_Chapter1_step4bim.PNG)
+* 공간 **Blend** 를 1로 변경 하 여 공간 오디오 사용
 
-    각 투명 개체를 모든 이름 (게임 개체) 상자로 끕니다. 위의 이미지에 표시 된 것 처럼 장면의 음력 모듈에서 개체 배열 필드로 다음 개체를 끌어 옵니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step3-1.png)
 
-    ![Lesson6 Chapter1 Step4aim](images/Lesson6_Chapter1_step4aim.PNG)
+### <a name="4-add-and-configure-the-launch-lunar-module-script-component"></a>4. Launch 음력 모듈 (스크립트) 구성 요소를 추가 하 고 구성 합니다.
 
-    이제 배치 힌트 설정/해제 스크립트가 구성 되어 힌트를 켜고 끌 수 있습니다.
+RocketLauncher > **LunarModule** 개체를 선택한 상태에서 **시작 음력 모듈 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
 
-5. 시작 음력 모듈 스크립트를 추가 합니다. 구성 요소 추가 단추를 클릭 하 고 "음력 모듈 시작"을 검색 하 여 선택 합니다. 이 스크립트는 음력 모듈을 시작 합니다. 구성 된 단추를 누르면 음력 모듈의 고정 본문 구성 요소에 상향 force가 추가 되 고 모듈이 위쪽으로 시작 됩니다. 실내에 있다면 달탐사선이 천장 메시에 충돌할 수 있습니다. 최대값이이 많거나 최대값이 없는 영역에 있는 경우 음력 모듈은 무기한으로 공간을 확보 하 게 됩니다.
+* **위한 것** 값을 변경 하 여 음력 모듈이 시작 될 때 정상적으로 실행 되도록 합니다 (예: 0.01).
 
-    ![Lesson6 Chapter1 Step5im](images/Lesson6_Chapter1_step5im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step4-1.png)
 
-6. 추진력을 조정하여 달탐사선이 정상적으로 비행할 수 있게 합니다. 값 0.01을 시도해 봅니다. "Rb" 필드는 비워 둡니다. Rb는 고정 본문을 나타내며 런타임 중에이 필드가 자동으로 채워집니다.
+### <a name="5-add-and-configure-the-toggle-placement-hints-script-component"></a>5. 배치 힌트 (스크립트) 구성 요소를 추가 하 고 구성 합니다.
 
-    ![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
+RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 **설정/해제 배치 힌트 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
 
-## <a name="lunar-module-parts-overview"></a>음력 모듈 부분 개요
+* Game 개체 배열 **크기** 속성을 5로 설정 합니다.
+* 각 **PlacementHints** 개체의 **자식 개체** 를 Game 개체 배열의 **요소** 필드에 할당 합니다.
 
-음력 모듈 파트 부모 개체는 사용자가 상호 작용 하는 개체의 컬렉션입니다. 괄호 안에 이름이 지정 된 장면이 있는 게임 개체 이름은 아래 목록에 제공 됩니다.
-
-- 백팩 (에너지 셀)
-- GasTank (연료 탱크)
-- TopLeftBody(탐사선 인클로저)
-- Nose(도킹 포트)
-- LeftTwirler(외부 센서)
-
-이러한 각 개체에는 4 단원에서 설명한 대로 조작 처리기가 있습니다. 이 기능을 사용 하면 사용자가 개체를 가져오고 조작할 수 있습니다. 또한 두 번의 이동 조작 유형인 설정은 이동 및 회전으로 설정 되어 있습니다. 이 옵션은 사용자가 개체를 이동 하 고 해당 크기를 변경 하지 않도록 허용 합니다 .이는 어셈블리 응용 프로그램에 대해 원하는 기능입니다.
-또한 모듈 파트의 직접 상호 작용에 대해서만 허용 하도록 Far 조작이 선택 취소 되어 있습니다.
-
-![Lesson6 Chapter2im](images/Lesson6_Chapter2im.PNG)
-
-파트 어셈블리 데모 스크립트 (위에 표시 됨)는 사용자가 음력 모듈에 저장 하는 개체를 관리 하는 스크립트입니다.
-
-필드를 놓을 개체는 위의 이미지에 표시 된 것 처럼 선택한 변환 이며, 연결 된 개체와 연결 된 백팩/연료 탱크입니다.
-
-근거리 거리 및 원거리 거리 설정에 따라 부품이 제자리에 스냅 되거나 출시 될 수 있는 근접성이 결정 됩니다. 예를 들어 백팩/연료 탱크는 한 곳에 맞추기 전에 음력 모듈에서 0.1 단위 여야 합니다. 먼 거리 설정은 개체가 음력 모듈에서 분리 될 수 있는 위치를 설정 합니다. 이 경우 사용자의 손이 백팩/연료 탱크를 쥐고 달탐사선에서 0.2단위 떨어지게 끌어 위치에서 분리해야 합니다.
-
-도구 설명 개체는 장면의 도구 설명 레이블입니다. 개체를 제자리에 물릴 때 레이블은 사용할 수 없습니다.
-
-오디오 소스가 자동으로 grabbed 됩니다.
-
-## <a name="configuring-the-placement-hints-button"></a>배치 힌트 단추 구성
-
-[2 단원](mrlearning-base-ch2.md)에서는 항목의 색을 변경 하거나 푸시 될 때 소리를 재생 하는 등의 작업을 수행 하는 단추를 설정 하 고 구성 하는 방법을 배웠습니다. 이제 이 원칙을 사용하여 배치 힌트를 설정/해제하는 단추를 구성해 보겠습니다.
-
-목표는 사용자가 배치 힌트 단추를 누를 때마다 투명 한 배치 힌트의 표시 유형을 전환 하도록 단추를 구성 하는 것입니다.
-
-1. 기본 장면 계층 구조에서 배치 힌트 개체가 선택 되어 있는 동안에는 inspector 패널의 빈 런타임 전용 슬롯으로 음력 모듈을 이동 합니다.
-
-    ![6 단원에서는 Chapter3 Step1im](images/Lesson6_Chapter3_step1im.PNG)
-
-2. 함수 없음 드롭다운 목록을 클릭 합니다. TogglePlacementHints로 이동 하 고 해당 메뉴 아래에서 ToggleGameObjects ()를 선택 합니다. ToggleGameObjects ()는 단추를 누를 때마다 표시 되거나 표시 되지 않도록 배치 힌트를 설정 및 해제 합니다.
-
-    ![6 단원에서는 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
-
-## <a name="configuring-the-reset-button"></a>다시 설정 단추 구성
-
-사용자가 실수를 하는 경우가 있으며, 실수로 개체를 실수로 throw 하거나 환경을 다시 설정 하려고 합니다. 다시 설정 단추는 환경을 다시 시작 하는 기능을 추가 합니다.
-
-1. 다시 설정 단추를 선택 합니다. 기본 장면에서는 이름이 ResetRoundButton입니다.
-
-2. 기본 장면 계층에서 음력 모듈을 검사기 패널의 단추 아래에 있는 빈 슬롯으로 끕니다.
-
-    ![6 단원에서는 Chapter4 Step2im](images/Lesson6_Chapter4_step2im.PNG)
-
-3. 함수 없음 드롭다운 메뉴를 선택 하 고 LaunchLunarModule를 마우스로 가리킨 다음 resetModule ()을 선택 합니다.
-
-    ![Lesson6 Chapter4 Step3im](images/Lesson6_Chapter4_step3im.PNG)
-
-    >[!NOTE]
-    >기본적으로 GameObject BroadcastMessage는 배치를 ResetPlacement 합니다. 그러면 RocketLauncher_Tutorial의 모든 자식 개체에 대해 ResetPlacement 라는 메시지가 브로드캐스트합니다. ResetPlacement ()에 대 한 메서드가 있는 개체는 위치를 다시 설정 하 여 해당 메시지에 응답 합니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step5-1.png)
 
 ## <a name="configuring-the-launch-button"></a>시작 단추 구성
 
-이 섹션에서는 시작 단추를 구성 하는 방법에 대해 설명 합니다 .이 단추를 사용 하면 사용자가 단추를 누르고 음력 모듈을 공간으로 시작할 수 있습니다.
+계층 창에서 RocketLauncher > 단추 > **launchbutton** 개체를 선택한 다음 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule** 를 정의 합니다.
 
-1. 시작 단추를 선택 합니다. 기본 장면에서는 LaunchRoundButton 라고 합니다. Inspector 패널의 Touch End 아래에 있는 빈 슬롯으로 음력 모듈을 끕니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-1.png)
 
-    ![6 단원에서는 Chapter5 Step1im](images/Lesson6_Chapter5_step1im.PNG)
+> [!TIP]
+> 이벤트를 구현 하는 방법에 대 한 미리 알림은 [손 추적 제스처 및 interactable 단추](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) 지침을 참조할 수 있습니다.
 
-2. 함수 없음 드롭다운 메뉴를 선택 하 고 LaunchLunarModule를 마우스로 가리킨 다음 StopThruster ()를 선택 합니다. 이는 사용자가 음력 모듈에 제공할 위한 것 크기를 제어 합니다.
+RocketLauncher > 단추 > **launchbutton** 개체를 선택 하 고 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **PlayOneShot** 을 정의 하 고, 오디오 **클립** 필드 (예: MRTK_Gem 오디오 클립)에 적절 한 오디오 클립을 할당 합니다.
 
-    ![6 단원에서는 Chapter5 Step2im](images/Lesson6_Chapter5_step2im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-2.png)
 
-3. 기본 장면 계층에서 음력 모듈을 검사기 패널의 단추 아래에 있는 빈 슬롯으로 끕니다.
+RocketLauncher > 단추 > **launchbutton** 개체를 선택한 상태에서 **Pressable 단추 (스크립트)** 구성 요소에서 새 **Touch 종료 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule** 를 정의 합니다.
 
-4. 함수 없음 드롭다운 메뉴를 클릭 한 다음 LaunchLunarModule에서 StartThruster ()를 선택 합니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-3.png)
 
-    ![6 단원에서는 Chapter5 Step4im](images/Lesson6_Chapter5_step4im.PNG)
+이제 게임 모드를 입력 하 고 시작 단추를 누르면 오디오 클립이 재생 되 고, 두 번째 이상에 대해 시작 단추를 누르고 있는 경우 음력 모듈이 다음 공간에 표시 됩니다.
 
-5. 로켓이 꺼진 경우 음악이 재생 되도록 음력 모듈에 음악을 추가 합니다. 이렇게 하려면 음력 모듈을 단추 누름 () 아래의 빈 슬롯으로 끕니다.
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-4.png)
 
-6. 함수 없음 드롭다운 메뉴를 선택 하 고 오디오 원본 위에 마우스를 놓고 PlayOneShot (오디오 클립)를 선택 합니다. MRTK에 포함된 여러 사운드를 원하는 대로 살펴봅니다. 이 예제에서는 "MRTK_Gem"을 사용 합니다.
+## <a name="configuring-the-reset-button"></a>다시 설정 단추 구성
 
-    ![6 단원에서는 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
+계층 창에서 RocketLauncher > 단추 > **resetbutton** 개체를 선택 하 고, **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule 모듈** 을 정의 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-1.png)
+
+RocketLauncher > 단추 > **resetbutton** 개체를 선택 하 고 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **RocketLauncher** 개체를 구성 하 고, 트리거할 작업으로 **GameObject** 를 정의 하 고, 메시지 필드에 **resetbutton** 를 입력 합니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-2.png)
+
+> [!TIP]
+> GameObject BroadcastMessage 작업은 RocketLauncher 개체에서 모든 자식 개체에 ResetPlacement 메시지를 보냅니다. 모든 LunarModuleParts 자식 개체에 추가한 파트 어셈블리 데모 (스크립트) 구성 요소에 정의 된 ResetPlacement 함수를 포함 하는 자식 개체는 자식 개체의 배치를 다시 설정 하는 ResetPlacement 함수를 호출 합니다.
+
+이제 게임 모드를 입력 하 고 다시 설정 단추를 누르면 재생 중인 오디오 클립이 표시 되 고 공간에 시작 되는 음력 모듈이 표시 됩니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-3.png)
+
+## <a name="configuring-the-placement-hints-button"></a>배치 힌트 단추 구성
+<!-- TODO: Rename to 'Configuring the Hints button'-->
+
+계층 창에서 RocketLauncher > 단추 > **Hintsbutton** 개체를 선택한 다음 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고 **LunarModule** 개체를 구성 하 여 이벤트를 수신 하 고, 트리거할 작업 **을 정의 합니다.**
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section5-step1-1.png)
+
+이제 게임 모드를 입력 하면 반투명 배치 힌트가 기본적으로 사용 하지 않도록 설정 되어 있지만 힌트 단추를 눌러 설정 및 해제할 수 있습니다.
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section5-step1-2.png)
 
 ## <a name="congratulations"></a>축하합니다.
 
-이 응용 프로그램을 완전히 구성 했습니다. 이제 play를 누르면 음력 모듈을 완전히 조합 하 고, 힌트를 전환 하 고, 음력 모듈을 시작 하 고 다시 시작 하도록 다시 설정할 수 있습니다.
+이 응용 프로그램을 완전히 구성 했습니다. 이제 응용 프로그램을 통해 사용자는 음력 모듈을 완전히 조합 하 고, 음력 모듈을 시작 하 고, 힌트를 설정/해제 하 고, 응용 프로그램을 다시 시작할 수 있습니다.

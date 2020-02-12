@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: 혼합 현실, 커뮤니티, mvp, 모임
-ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
-ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
-ms.translationtype: HT
+ms.openlocfilehash: 191c80c0429370f7864f5826c538296306e26e8d
+ms.sourcegitcommit: f5d6dd420aa347acf1de4798f4e3e0f6a11d19cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125206"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155510"
 ---
 # <a name="mixed-reality-community"></a>혼합 현실 커뮤니티
 
@@ -34,7 +34,7 @@ Microsoft에서 강력한 커뮤니티에 대 한 액세스 권한은 개발자,
 |커뮤니티 이름|Country|구/군/시|링크|
 |---------|---------|---------|---------|
 |**시카고 AWE Nite**|인도네시아|시카고|[링크나](https://www.meetup.com/AWENiteChicago/)|
-|**VR 필리핀**|Philoppines|N/A|[링크나](https://www.facebook.com/vrphilippines/)|
+|**VR 필리핀**|필리핀|N/A|[링크나](https://www.facebook.com/vrphilippines/)|
 <!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
@@ -107,5 +107,5 @@ Microsoft에서 가장 중요 한 전문가 또는 Mvp는 커뮤니티와의 지
 |![Takahiro Miyaura 라](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Takahiro Miyaura 라**</br>*Nara, 일본*|IT 업계에서 소프트웨어 엔지니어 및 개발자로 작업 하 고 있습니다. 특히 XR (VR/AR/MR 등) 연구를 수행 했습니다. )를 활용 하는 기술 및 다양 한 기술 (AI, IoT 등)을 XR 수 있습니다.|[메일 주소](mailto:cafe.kobe@gmail.com)|
 |![Tamás Deme](images/BiographyImages/tamasdeme_270.png)</br>**Tamás Deme**</br>*부다페스트, 헝가리*|Tamás는 애틀랜타 기반 VIM에서 작업 하는 혼합 현실 엔지니어가 서버에서 holograms를 표시 하는 헤드셋에 이르는 다양 한 장치에 대 한 솔루션을 개발 하는 것입니다. Microsoft MVP는 오픈 소스 프로젝트, 교육 및 멘토링에 관심이 있는 Windows 개발의 Microsoft MVP입니다. [https://tomzorz.me](https://tomzorz.me) 또는 twitter의 [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_)에서 온라인으로 찾을 수 있습니다.|[메일 주소](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, 일본*|Afrika을 포함 한 5 개 국가의 물리학 교육자|[메일 주소](mailto:tatsuro.ueda@feel-physics.jp)|
-|![빈센트 gt Igui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**빈센트 Igigui**</br>*파리, 프랑스*|OCTO 기술로 혁신적인 상호 작용을 담당 하는 고객은 고객과 디지털 세계 간의 새로운 상호 작용을 개발 하는 데 도움이 됩니다.</br></br>필자는 혁신적인 환경 (VR/AR/MR), 봇 (대화형 인터페이스) 및 사용자 인터페이스의 잠재적 미래를 이야기 하는 혁신 및 자연 스러운 사용자 인터페이스 토픽에 대해 lecturer.</br></br>2013부터 Microsoft는 Kinect, 자연 스러운 사용자 인터페이스 및 HoloLens (가장 귀중 한 전문 수상)의 유럽 최고의 전문가 중 한 명으로 Microsoft에 게 왔습니다.|[메일 주소](mailto:vincent@guigui.fr)|
+|![빈센트 gt Igui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**빈센트 Igigui**</br>*파리, 프랑스*|[Octo 기술로](https://www.octo.com)혁신적인 상호 작용을 담당 하는 고객은 고객과 디지털 세계 간의 새로운 상호 작용을 개발 하는 데 도움이 됩니다.</br></br>필자는 혁신적인 환경 (VR/AR/MR), 봇 (대화형 인터페이스) 및 사용자 인터페이스의 잠재적 미래를 이야기 하는 혁신 및 자연 스러운 사용자 인터페이스 토픽에 대해 lecturer.</br></br>2013부터 Microsoft는 Kinect, 자연 스러운 사용자 인터페이스 및 HoloLens (가장 귀중 한 전문 수상)의 유럽 최고의 전문가 중 한 명으로 Microsoft에 게 왔습니다.|[메일 주소](mailto:vincent@guigui.fr)|
 

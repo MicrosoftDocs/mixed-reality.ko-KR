@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 이벤트, 일정, 아카데미, 일정, sf, 샌프란시스코, 원자로
-ms.openlocfilehash: b7a410e40fa74cd76ed6c8dafd2519d6498d7af6
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 06abc916d6fc31d858aff2a32758ebf29c324466
+ms.sourcegitcommit: f5d6dd420aa347acf1de4798f4e3e0f6a11d19cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438090"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155500"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft Mixed Reality 이벤트
 
@@ -24,60 +24,228 @@ ms.locfileid: "73438090"
 <br>
 
 ---
+###  <a name="feb-24-2020"></a>2020 년 2 월 24 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
 
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San 샌프란시스코 Reactor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="october-21-2019"></a>2019 년 10 월 21 일
+---
+###  <a name="march-9-2020"></a>2020 년 3 월 9 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
 
-작업 그룹으로, 문제를 해결 하 고, 약 6:00을 표시 하 고, 중단 하 고, 잠시 작업을 수행 하려고 합니다. 다른 개발자의 의견을 얻거나, 이전에 시도 하는 사람 으로부터 도움을 받고, 작업 및 코드를 chill 수 있습니다. 따라서 랩톱을 전환 하 고, 프로젝트를 가져오고, 여는 것을 염두에 두어야 합니다. Microsoft Reactor는 roomy 된 장소 이며, 참석 하는 중이 아닌 경우에도 참석이 제한 됩니다. 여러분의 기대를 확인해 보세요!
+---
+### <a name="march-23-2020"></a>3 월 23 일, 2020
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
 
-[이 작업 그룹 이벤트에 등록](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+---
+### <a name="march-31-2020"></a>2020 년 3 월 31 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
 
+---
+###  <a name="april-2-3-2020"></a>2-3 년 4 월 2020
+## <a name="mixed-reality-accelerator"></a>혼합 현실 액셀러레이터 키
+MR Accelerator는 혼합 현실 응용 프로그램의 개발을 가속화 하 고 HoloLens gen 1에서 HoloLens 2 (중급/고급 수준)로 포팅 하는 것을 목표로 하는 해커 톤 스타일 워크숍입니다.
+<br>
+
+---
+###  <a name="april-27-2020"></a>2020 년 4 월 27 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="may-11-12-2020"></a>11-12 년 5 월, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+HoloLens 2 디자인 및 개발을 위한 실습 워크숍 초대만.
+<br>
+
+---
+###  <a name="may-26-2020"></a>2020 년 5 월 26 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="june-8-9-2020"></a>6 월 8-9, 2020
+## <a name="mixed-reality-accelerator"></a>혼합 현실 액셀러레이터 키
+MR Accelerator는 혼합 현실 응용 프로그램의 개발을 가속화 하 고 HoloLens gen 1에서 HoloLens 2 (중급/고급 수준)로 포팅 하는 것을 목표로 하는 해커 톤 스타일 워크숍입니다.
 <br>
 
 ---
 
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San 샌프란시스코 Reactor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="november-4-2019"></a>2019 년 11 월 4 일
-
-작업 그룹으로, 문제를 해결 하 고, 약 6:00을 표시 하 고, 중단 하 고, 잠시 작업을 수행 하려고 합니다. 다른 개발자의 의견을 얻거나, 이전에 시도 하는 사람 으로부터 도움을 받고, 작업 및 코드를 chill 수 있습니다. 따라서 랩톱을 전환 하 고, 프로젝트를 가져오고, 여는 것을 염두에 두어야 합니다. Microsoft Reactor는 roomy 된 장소 이며, 참석 하는 중이 아닌 경우에도 참석이 제한 됩니다. 여러분의 기대를 확인해 보세요!
-
-[이 작업 그룹 이벤트에 등록](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
+###  <a name="june-8-2020"></a>6 월 8 일, 2020
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
 <br>
 
 ---
-
-## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[HoloLens, 혼합 현실 설계 및 개발 모임](https://www.meetup.com/hololens-mr/)
-### <a name="november-18-2019"></a>2019 년 11 월 18 일
-
-추가 정보는 곧 제공 될 예정입니다.
-
-[이 모임에 등록](https://www.meetup.com/hololens-mr/)
-
+###  <a name="june-22-2020"></a>6 월 22 일, 2020
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
 <br>
 
 ---
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San 샌프란시스코 Reactor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="december-9-2019"></a>2019 년 12 월 9 일
-
-작업 그룹으로, 문제를 해결 하 고, 약 6:00을 표시 하 고, 중단 하 고, 잠시 작업을 수행 하려고 합니다. 다른 개발자의 의견을 얻거나, 이전에 시도 하는 사람 으로부터 도움을 받고, 작업 및 코드를 chill 수 있습니다. 따라서 랩톱을 전환 하 고, 프로젝트를 가져오고, 여는 것을 염두에 두어야 합니다. Microsoft Reactor는 roomy 된 장소 이며, 참석 하는 중이 아닌 경우에도 참석이 제한 됩니다. 여러분의 기대를 확인해 보세요!
-
-[이 작업 그룹 이벤트에 등록](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
+###  <a name="july-9-10-2020"></a>9-10 년 7 월, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+HoloLens 2 디자인 및 개발을 위한 실습 워크숍 초대만.
 <br>
 
 ---
-
-## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[HoloLens, 혼합 현실 설계 및 개발 모임](https://www.meetup.com/hololens-mr/)
-### <a name="december-16-2019"></a>2019 년 12 월 16 일
-
-추가 정보는 곧 제공 될 예정입니다.
-
-[이 모임에 등록](https://www.meetup.com/hololens-mr/)
-
+###  <a name="july-13-2020"></a>2020 년 7 월 13 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
 <br>
 
 ---
+###  <a name="july-21-2020"></a>2020 년 7 월 21 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
 
-## <a name="more-mixed-reality-events-coming-soon"></a>더 많은 혼합 현실 이벤트가 곧 제공 될 예정입니다.
+---
+###  <a name="july-27-2020"></a>2020 년 7 월 27 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="july-27-28-2020"></a>27-28 년 7 월, 2020
+## <a name="mixed-reality-accelerator"></a>혼합 현실 액셀러레이터 키
+MR Accelerator는 혼합 현실 응용 프로그램의 개발을 가속화 하 고 HoloLens gen 1에서 HoloLens 2 (중급/고급 수준)로 포팅 하는 것을 목표로 하는 해커 톤 스타일 워크숍입니다.
+<br>
+
+---
+###  <a name="august-3-2020"></a>2020 년 8 월 3 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="august-13-14-2020"></a>13-14 년 8 월, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+[여기에 등록] (HoloLens 2 디자인 및 개발을 위한 실습 워크숍. 초대만.
+<br>
+
+---
+###  <a name="august-17-2020"></a>2020 년 8 월 17 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="august-24-2020"></a>2020 년 8 월 24 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="august-27-28-2020"></a>27-28 년 8 월, 2020
+## <a name="mixed-reality-accelerator"></a>혼합 현실 액셀러레이터 키
+MR Accelerator는 혼합 현실 응용 프로그램의 개발을 가속화 하 고 HoloLens gen 1에서 HoloLens 2 (중급/고급 수준)로 포팅 하는 것을 목표로 하는 해커 톤 스타일 워크숍입니다.
+<br>
+
+---
+###  <a name="september-17-18-2020"></a>9 월 17-18, 2020
+## <a name="mixed-reality-accelerator"></a>혼합 현실 액셀러레이터 키
+MR Accelerator는 혼합 현실 응용 프로그램의 개발을 가속화 하 고 HoloLens gen 1에서 HoloLens 2 (중급/고급 수준)로 포팅 하는 것을 목표로 하는 해커 톤 스타일 워크숍입니다.
+<br>
+
+---
+###  <a name="september-21-2020"></a>2020 년 9 월 21 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="september-22-2020"></a>2020 년 9 월 22 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="october-5-6-2020"></a>10 월 5-6, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+HoloLens 2 디자인 및 개발을 위한 실습 워크숍 초대만.
+<br>
+
+---
+###  <a name="october-5-2020"></a>2020 년 10 월 5 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="october-19-2020"></a>2020 년 10 월 19 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="october-26-2020"></a>2020 년 10 월 26 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="october-26-27-2020"></a>10 월 26-27, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+HoloLens 2 디자인 및 개발을 위한 실습 워크숍 초대만.
+<br>
+
+---
+###  <a name="november-9-10-2020"></a>11 월 9-10, 2020
+## <a name="mixed-reality-mentor-days"></a>혼합 현실 전문가 일 수
+ HoloLens 2 디자인 및 개발을 위한 실습 워크숍 초대만.
+<br>
+
+---
+###  <a name="november-9-2020"></a>2020 년 11 월 9 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="november-16-2020"></a>2020 년 11 월 16 일
+## <a name="hololens--mixed-reality-meetup"></a>HoloLens & Mixed Reality 모임
+HoloLens와 혼합 현실에 대해 이야기 하 고 알아보세요. 개발자는 일상의 사람들에 게 도움이 되는 환경을 구축 하 여 수천 명의 기업 및 수백만 명의 고객에 게 도달할 수 있는 기회가 있습니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/)
+<br>
+
+---
+###  <a name="november-23-2020"></a>2020 년 11 월 23 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)
+<br>
+
+---
+###  <a name="december-7-2020"></a>2020 년 12 월 7 일
+## <a name="mixed-reality-workgroup"></a>Mixed Reality 작업 그룹
+Mixed Reality 작업 그룹은 MR 개발자가 아이디어를 공유 하 고 친숙 하 고 협력적인 환경에서 작업을 수행할 수 있는 기회입니다.
+[여기에서 등록 하세요.](https://www.meetup.com/hololens-mr/events/)

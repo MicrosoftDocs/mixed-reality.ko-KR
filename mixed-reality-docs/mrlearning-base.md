@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: dbae7545edb6515b5cf148fbbfb6652595d2fc0d
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334339"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129264"
 ---
 # <a name="1-overview-and-objectives"></a>1. 개요 및 목표
 
@@ -40,14 +40,15 @@ ms.locfileid: "75334339"
 
 ## <a name="before-you-start"></a>시작하기 전 확인 사항
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>필수 조건
 
 * 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
 * Windows 10 SDK 10.0.18362.0 이상
 * 몇 가지 C# 기본 프로그래밍 기능
 * [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode) HoloLens 2 장치
+* Unity 2019.2가 설치 되 고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가 된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity 허브</a>
 
->[!IMPORTANT]
->이 자습서 시리즈에는 <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019.1</a> 이 필요 하며 권장 버전은 unity 2019.1.14입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
+> [!IMPORTANT]
+> 이 자습서 시리즈의 권장 Unity 버전은 Unity 2019.2. X입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
 
 [다음 단원: 2. 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)
