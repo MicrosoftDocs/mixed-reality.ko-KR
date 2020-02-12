@@ -5,160 +5,212 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: b5b1bd0115822449bd6098f78cfc94d909169737
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334369"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129453"
 ---
-# <a name="7-creating-a-lunar-module-sample-application"></a><span data-ttu-id="f120b-105">7. 음력 모듈 샘플 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="f120b-105">7. Creating a Lunar Module sample application</span></span>
+# <a name="7-creating-a-lunar-module-sample-application"></a><span data-ttu-id="abb40-105">7. 음력 모듈 샘플 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="abb40-105">7. Creating a Lunar Module sample application</span></span>
+<!-- TODO: Rename to 'Creating a Rocket Launcher sample application' -->
 
-<span data-ttu-id="f120b-106">이 자습서에서는 다양 한 개념을 이전 단원에서 결합 하 여 고유한 샘플 환경을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-106">In this tutorial, multiple concepts are combined from previous lessons to create a unique sample experience.</span></span> <span data-ttu-id="f120b-107">사용자가 추적 된 손을 사용 하 여 음력 모듈 부분을 선택 하 고 음력 모듈을 조합 하 여 사용 해야 하는 음력 모듈 어셈블리 응용 프로그램을 만드는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-107">You will learn how to create a lunar module assembly application whereby a user needs to use tracked hands to pick up lunar module parts and attempt to assemble a lunar module.</span></span> <span data-ttu-id="f120b-108">Pressable 단추를 사용 하 여 배치 힌트를 전환 하 고, 경험을 다시 설정 하 고, 음력 모듈을 공간으로 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-108">We use pressable buttons to toggle placement hints, to reset our experience, and to launch our lunar module into space!</span></span> <span data-ttu-id="f120b-109">이후 자습서에서는 공간 맞춤을 위해 Azure 공간 앵커를 활용 하는 강력한 다중 사용자 사용 사례를 포함 하 여이 환경을 계속 빌드할 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-109">In future tutorials, we will continue to build upon this experience, which includes powerful multi-user use cases that leverage Azure Spatial Anchors for spatial alignment.</span></span>
+<span data-ttu-id="abb40-106">이 자습서에서는 다양 한 개념을 이전 단원에서 결합 하 여 고유한 샘플 환경을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-106">In this tutorial, multiple concepts are combined from previous lessons to create a unique sample experience.</span></span> <span data-ttu-id="abb40-107">사용자가 추적 된 손을 사용 하 여 파트를 선택 하 고 음력 모듈을 조합 하 여 구성 해야 하는 파트 어셈블리 응용 프로그램을 만드는 방법을 배웁니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-107">You will learn how to create a part assembly application whereby a user needs to use tracked hands to pick up parts and attempt to assemble a lunar module.</span></span> <span data-ttu-id="abb40-108">Pressable 단추를 사용 하 여 배치 힌트를 설정/해제 하 고, 환경을 다시 설정 하 고, 음력 모듈을 공간으로 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-108">You will use pressable buttons to toggle placement hints on and off, to reset the experience, and to launch the lunar module into space!</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="f120b-110">목표</span><span class="sxs-lookup"><span data-stu-id="f120b-110">Objectives</span></span>
+<span data-ttu-id="abb40-109">이후 자습서에서는 공간 맞춤을 위해 Azure 공간 앵커를 활용 하는 강력한 다중 사용자 사용 사례를 포함 하 여이 환경을 계속 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-109">In future tutorials, you will continue to build upon this experience, which includes powerful multi-user use cases that leverage Azure Spatial Anchors for spatial alignment.</span></span>
 
-- <span data-ttu-id="f120b-111">이전 단원의 여러 개념을 결합하여 고유한 환경 만들기</span><span class="sxs-lookup"><span data-stu-id="f120b-111">Combine multiple concepts from previous lessons to create a unique experience</span></span>
-- <span data-ttu-id="f120b-112">개체를 설정/해제하는 방법 알아보기</span><span class="sxs-lookup"><span data-stu-id="f120b-112">Learn how to toggle objects</span></span>
-- <span data-ttu-id="f120b-113">누를 수 있는 단추를 사용하여 복합 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="f120b-113">Trigger complex events using pressable buttons</span></span>
-- <span data-ttu-id="f120b-114">강체 물리학 및 힘 사용</span><span class="sxs-lookup"><span data-stu-id="f120b-114">Use rigidbody physics and forces</span></span>
-- <span data-ttu-id="f120b-115">도구 설명 사용 살펴보기</span><span class="sxs-lookup"><span data-stu-id="f120b-115">Explore the use of tool tips</span></span>
+## <a name="objectives"></a><span data-ttu-id="abb40-110">목표</span><span class="sxs-lookup"><span data-stu-id="abb40-110">Objectives</span></span>
 
-## <a name="configuring-the-lunar-module"></a><span data-ttu-id="f120b-116">달탐사선 구성</span><span class="sxs-lookup"><span data-stu-id="f120b-116">Configuring the Lunar Module</span></span>
+* <span data-ttu-id="abb40-111">이전 단원의 여러 개념을 결합하여 고유한 환경 만들기</span><span class="sxs-lookup"><span data-stu-id="abb40-111">Combine multiple concepts from previous lessons to create a unique experience</span></span>
+* <span data-ttu-id="abb40-112">개체를 설정/해제하는 방법 알아보기</span><span class="sxs-lookup"><span data-stu-id="abb40-112">Learn how to toggle objects</span></span>
+* <span data-ttu-id="abb40-113">누를 수 있는 단추를 사용하여 복합 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="abb40-113">Trigger complex events using pressable buttons</span></span>
+* <span data-ttu-id="abb40-114">강체 물리학 및 힘 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-114">Use rigidbody physics and forces</span></span>
+* <span data-ttu-id="abb40-115">도구 설명 사용 살펴보기</span><span class="sxs-lookup"><span data-stu-id="abb40-115">Explore the use of tool tips</span></span>
 
-<span data-ttu-id="f120b-117">이 섹션에서는 샘플 환경을 만드는 데 필요한 다양 한 구성 요소를 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-117">In this section, we introduce the various components needed to create our sample experience.</span></span>
+## <a name="lunar-module-parts-overview"></a><span data-ttu-id="abb40-116">음력 모듈 부분 개요</span><span class="sxs-lookup"><span data-stu-id="abb40-116">Lunar Module Parts overview</span></span>
+<!-- TODO: Rename to 'Implementing the part assembly functionality' -->
 
-1. <span data-ttu-id="f120b-118">기본 장면에 prefab 음력 모듈 어셈블리를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-118">Add the Lunar Module Assembly prefab to your base scene.</span></span> <span data-ttu-id="f120b-119">이 작업을 수행 하려면 프로젝트 탭에서 자산 > BasemodulPrefabs Sets > .로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-119">To do this, in the Project tab navigate to Assets > BaseModuleAssets > Prefabs.</span></span> <span data-ttu-id="f120b-120">두 개의 로켓 시작 관리자 prefabs이 표시 되 고, 로켓 Launcher_Tutorial prefab를 장면으로 끌고, 원하는 대로 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-120">You will see two rocket launcher prefabs, drag the Rocket Launcher_Tutorial prefab into your scene, and position as you wish.</span></span>
+<span data-ttu-id="abb40-117">이 섹션에서는 간단한 파트 어셈블리 챌린지를 만듭니다. 여기서 사용자의 목표는 테이블에 분산 된 5 개의 파트를 음력 모듈의 올바른 위치에 배치 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-117">In this section, you will create a simple part assembly challenge where the user's goal is to place five parts that are spread out on the table at the correct location on the Lunar Module.</span></span>
 
-    >[!NOTE]
-    ><span data-ttu-id="f120b-121">로켓 Launcher_Complete prefab는 참조용으로 제공 되는 완성 된 시작 관리자입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-121">The Rocket Launcher_Complete prefab is the completed launcher, provided for reference.</span></span>
+<span data-ttu-id="abb40-118">이를 위해 수행 하는 주요 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-118">The main steps you will take to achieve this are:</span></span>
 
-    ![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
+1. <span data-ttu-id="abb40-119">장면에 로켓 시작 관리자 prefab 추가</span><span class="sxs-lookup"><span data-stu-id="abb40-119">Add the Rocket Launcher prefab to the scene</span></span>
+2. <span data-ttu-id="abb40-120">모든 파트에 대 한 개체 조작 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-120">Enable object manipulation for all the parts</span></span>
+3. <span data-ttu-id="abb40-121">파트 어셈블리 데모 (스크립트) 구성 요소 추가 및 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-121">Add and configure the Part Assembly Demo (Script) component</span></span>
 
-    <span data-ttu-id="f120b-123">계층에서 로켓 Launcher_Tutorial 게임 개체를 확장 하 고 음력 Module 개체를 추가로 확장 하는 경우 "x-레이" 라는 재질을 포함 하는 여러 자식 개체를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-123">If you expand the Rocket Launcher_Tutorial game object in your hierarchy and further expand the Lunar Module object, you find several child objects that have a material called "x-ray."</span></span> <span data-ttu-id="f120b-124">"X-y" 재질은 사용자에 대 한 배치 힌트로 사용 되는 약간 반투명 색을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-124">The "x-ray" material allows for a slightly translucent color that will be used as placement hints for the user.</span></span>
+> [!NOTE]
+> <span data-ttu-id="abb40-122">파트 어셈블리 데모 (스크립트) 구성 요소는 MRTK의 일부가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-122">The Part Assembly Demo (Script) component is not part of MRTK.</span></span> <span data-ttu-id="abb40-123">이 자습서의 자산과 함께 제공 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-123">It was provided with this tutorial's assets.</span></span>
 
-    ![6 단원에서는 Chapter1.txt 참고 목표](images/Lesson6_Chapter1_noteaim.PNG)
+### <a name="1-add-the-rocket-launcher-prefab-to-the-scene"></a><span data-ttu-id="abb40-124">1. prefab에 로켓 시작 관리자를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-124">1. Add the Rocket Launcher prefab to the scene</span></span>
 
-    <span data-ttu-id="f120b-126">아래 이미지에 표시 된 것 처럼 사용자가 상호 작용 하는 음력 모듈은 5 부분으로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-126">There are five parts to the lunar module that the user will interact with, as shown in the image below:</span></span>
+<span data-ttu-id="abb40-125">프로젝트 창에서 **자산** > \*\*mrtk로 이동 합니다. 자습서. Get > \*\* **Prefabs** 가 시작 > **RocketLauncher** 폴더에서 **RocketLauncher** prefab를 계층 창으로 끌어 장면에 추가 하 고 적절 한 위치에 배치 합니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-125">In the Project window, navigate to the **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** > **RocketLauncher** folder, drag the **RocketLauncher** prefab into the Hierarchy window to add it to your scene, and then position it at a suitable location, for example:</span></span>
 
-    1. <span data-ttu-id="f120b-127">탐사선 인클로저</span><span class="sxs-lookup"><span data-stu-id="f120b-127">The Rover Enclosure</span></span>
-    2. <span data-ttu-id="f120b-128">연료 탱크</span><span class="sxs-lookup"><span data-stu-id="f120b-128">The Fuel Tank</span></span>
-    3. <span data-ttu-id="f120b-129">에너지 셀</span><span class="sxs-lookup"><span data-stu-id="f120b-129">The Energy Cell</span></span>
-    4. <span data-ttu-id="f120b-130">도킹 포털</span><span class="sxs-lookup"><span data-stu-id="f120b-130">The Docking Portal</span></span>
-    5. <span data-ttu-id="f120b-131">외부 센서</span><span class="sxs-lookup"><span data-stu-id="f120b-131">The External sensor</span></span>
+* <span data-ttu-id="abb40-126">X = 1.5, Y =-0.4, Z = 0 위치를 변환 합니다. 그러면 waist height에서 사용자의 오른쪽에 배치 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-126">Transform Position X = 1.5, Y = -0.4, Z = 0, so it is positioned to the right of the user at waist height</span></span>
+* <span data-ttu-id="abb40-127">변환 회전 X = 0, Y = 180, Z = 0. 따라서 환경의 주요 기능은 사용자에 게 직면 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-127">Transform Rotation X = 0, Y = 180, Z = 0, so the main features of the experience faces the user</span></span>
 
-    ![Lesson6 Chapter1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step1-1.png)
 
-    >[!NOTE]
-    ><span data-ttu-id="f120b-133">기본 장면에 표시되는 게임 개체 이름은 장면의 개체 이름과 일치하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-133">The game object names that you see in your base scene hierarchy do not correspond to the names of the objects in the scene.</span></span>
+### <a name="2-enable-object-manipulation-for-all-the-parts"></a><span data-ttu-id="abb40-129">2. 모든 파트에 대 한 개체 조작 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-129">2. Enable object manipulation for all the parts</span></span>
 
-2. <span data-ttu-id="f120b-134">오디오 원본을 LunarModule game 개체에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-134">Add an audio source to the LunarModule game object.</span></span> <span data-ttu-id="f120b-135">장면 계층 구조에서 LunarModule이 선택 되어 있는지 확인 하 고 구성 요소 추가를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-135">Make sure the LunarModule is selected in your scene hierarchy and click Add Component.</span></span> <span data-ttu-id="f120b-136">오디오 소스를 검색 하 고 게임 개체에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-136">Search for Audio Source and add it to the game object.</span></span> <span data-ttu-id="f120b-137">지금은 오디오 클립 필드를 비워 두거나, 특수 Blend 설정을 0에서 1로 변경 하 여 공간 오디오를 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-137">Leave the AudioClip field blank for now, but change the Special Blend setting from 0 to 1 so to enable spatial audio.</span></span> <span data-ttu-id="f120b-138">이 오디오 소스는 나중에 시작 하는 소리를 재생 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-138">You will use this audio source to play the launching sound later.</span></span>
+<span data-ttu-id="abb40-130">계층 구조 창에서 RocketLauncher > **LunarModuleParts** 개체를 찾고 모든 **자식 개체**를 선택한 다음 **조작 처리기 (스크립트)** 구성 요소 및 **Near 인터랙션 Grabbable (스크립트)** 구성 요소를 추가 하 고 조작 처리기 (스크립트)를 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-130">In the Hierarchy window, locate the RocketLauncher > **LunarModuleParts** object and select all the **child objects**, add the **Manipulation Handler (Script)** component and the **Near Interaction Grabbable (Script)** component, and then configure the Manipulation Handler (Script) as follows:</span></span>
 
-    ![6 단원에서는 Chapter1.txt Step2im](images/Lesson6_Chapter1_step2im.PNG)
+* <span data-ttu-id="abb40-131">크기 조정 기능을 사용 하지 않도록 회전을 이동 하도록 **두 손 조작 유형을** 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-131">Change **Two Handed Manipulation Type** to Move Rotate so scaling is disabled</span></span>
+* <span data-ttu-id="abb40-132">거의 **조작** 가능 확인란의 선택을 취소 하 여 거의 상호 작용이 가능 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-132">Un-check the **Allow Far Manipulation** checkbox to only allow near interaction</span></span>
 
-3. <span data-ttu-id="f120b-140">스크립트를 추가 합니다. 배치 힌트를 설정/해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-140">Add the script Toggle Placement Hints.</span></span> <span data-ttu-id="f120b-141">구성 요소 추가를 클릭 하 고 배치 힌트 설정/해제를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-141">Click Add Component and search for Toggle Placement Hints.</span></span> <span data-ttu-id="f120b-142">앞에서 설명한 것 처럼 반투명 힌트 (x-레이 재료를 사용 하는 개체)를 설정 및 해제할 수 있는 사용자 지정 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-142">This is a custom script that lets you turn on and off the translucent hints (objects with the x-ray material), as mentioned earlier.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step1-2.png)
 
-    ![6 단원에서는 Chapter1.txt Step3im](images/Lesson6_Chapter1_step3im.PNG)
+> [!TIP]
+> <span data-ttu-id="abb40-134">개체 조작을 구현 하는 방법에 대 한 단계별 지침이 포함 된 미리 알림은 [3D 개체 조작](mrlearning-base-ch4.md#manipulating-3d-objects) 지침을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-134">For a reminder, with step by step instructions, on how to implement object manipulation, you can refer to the [Manipulating 3D Objects](mrlearning-base-ch4.md#manipulating-3d-objects) instructions.</span></span>
 
-4. <span data-ttu-id="f120b-144">5 개의 개체가 있으므로 게임 개체 배열 크기에 대해 "5"를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-144">Since we have five objects, type "5" for the game object array size.</span></span> <span data-ttu-id="f120b-145">그러면 5 개의 새 요소가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-145">You will then see five new elements appear.</span></span>
+### <a name="3-add-and-configure-the-part-assembly-demo-script-component"></a><span data-ttu-id="abb40-135">3. 파트 어셈블리 데모 (스크립트) 구성 요소 추가 및 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-135">3. Add and configure the Part Assembly Demo (Script) component</span></span>
 
-    ![Lesson6 Chapter1 Step4bim](images/Lesson6_Chapter1_step4bim.PNG)
+<span data-ttu-id="abb40-136">LunarModuleParts 자식 개체가 모두 선택 된 상태에서 **오디오 원본** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-136">With all the LunarModuleParts child objects still selected, add an **Audio Source** component and then configure it as follows:</span></span>
 
-    <span data-ttu-id="f120b-147">각 투명 개체를 모든 이름 (게임 개체) 상자로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-147">Drag each of the translucent objects into all the Name (Game Object) boxes.</span></span> <span data-ttu-id="f120b-148">위의 이미지에 표시 된 것 처럼 장면의 음력 모듈에서 개체 배열 필드로 다음 개체를 끌어 옵니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-148">Drag the following objects from the lunar module in your scene into the object array fields as shown in the image above:</span></span>
+* <span data-ttu-id="abb40-137">오디오 **클립** 필드에 적합 한 오디오 클립을 할당 합니다 (예: MRKT_Scale_Start</span><span class="sxs-lookup"><span data-stu-id="abb40-137">Assign a suitable audio clip to the **AudioClip** field, for example, MRKT_Scale_Start</span></span>
+* <span data-ttu-id="abb40-138">**재생이 재생** 되 면 재생 확인란을 선택 취소 하 여 장면이 로드 될 때 오디오 클립을 자동으로 재생 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-138">Un-check the **Play On Awake** checkbox, so the audio clip does not automatically play when the scene loads</span></span>
+* <span data-ttu-id="abb40-139">공간 **Blend** 를 1로 변경 하 여 공간 오디오 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-139">Change **Spatial Blend** to 1, to enable spatial audio</span></span>
 
-    ![Lesson6 Chapter1 Step4aim](images/Lesson6_Chapter1_step4aim.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-1.png)
 
-    <span data-ttu-id="f120b-150">이제 배치 힌트 설정/해제 스크립트가 구성 되어 힌트를 켜고 끌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-150">The Toggle Placement Hints script is now configured, which allows us to turn hints on and off.</span></span>
+<span data-ttu-id="abb40-141">LunarModuleParts 자식 개체가 모두 선택 된 상태에서 **파트 어셈블리 데모 (스크립트)** 구성 요소를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-141">With all the LunarModuleParts child objects still selected, add the **Part Assembly Demo  (Script)** component:</span></span>
 
-5. <span data-ttu-id="f120b-151">시작 음력 모듈 스크립트를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-151">Add the Launch Lunar Module script.</span></span> <span data-ttu-id="f120b-152">구성 요소 추가 단추를 클릭 하 고 "음력 모듈 시작"을 검색 하 여 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-152">Click the Add Component button, search for "launch lunar module" and select it.</span></span> <span data-ttu-id="f120b-153">이 스크립트는 음력 모듈을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-153">This script launches the lunar module.</span></span> <span data-ttu-id="f120b-154">구성 된 단추를 누르면 음력 모듈의 고정 본문 구성 요소에 상향 force가 추가 되 고 모듈이 위쪽으로 시작 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-154">When we press a configured button, it adds an upward force to the lunar module's rigid body component and causes the module to launch upwards.</span></span> <span data-ttu-id="f120b-155">실내에 있다면 달탐사선이 천장 메시에 충돌할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-155">If you are indoors, the lunar module may crash against your ceiling mesh.</span></span> <span data-ttu-id="f120b-156">최대값이이 많거나 최대값이 없는 영역에 있는 경우 음력 모듈은 무기한으로 공간을 확보 하 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-156">If you are in an area with high ceilings or no ceilings, the lunar module will fly into space indefinitely.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-2.png)
 
-    ![Lesson6 Chapter1 Step5im](images/Lesson6_Chapter1_step5im.PNG)
+<span data-ttu-id="abb40-143">계층 창에서 **Roverenclosure** 개체를 선택 하 고 다음과 같이 **파트 어셈블리 데모 (스크립트)** 구성 요소를 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-143">In the Hierarchy window, select the **RoverEnclosure** object and configure its **Part Assembly Demo (Script)** component as follows:</span></span>
 
-6. <span data-ttu-id="f120b-158">추진력을 조정하여 달탐사선이 정상적으로 비행할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-158">Adjust the thrust so that the lunar module will fly up gracefully.</span></span> <span data-ttu-id="f120b-159">값 0.01을 시도해 봅니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-159">Try a value of 0.01.</span></span> <span data-ttu-id="f120b-160">"Rb" 필드는 비워 둡니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-160">Leave the "Rb" field blank.</span></span> <span data-ttu-id="f120b-161">Rb는 고정 본문을 나타내며 런타임 중에이 필드가 자동으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-161">Rb stands for Rigid body and this field will be automatically populated during runtime.</span></span>
+* <span data-ttu-id="abb40-144">개체를 **놓을 개체** 에 대해 개체 자체 (이 경우 **roverenclosure** 개체)를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-144">To the **Object To Place** field, assign the object itself, in this case, the **RoverEnclosure** object</span></span>
+* <span data-ttu-id="abb40-145">**배치 위치** 필드에 해당 PlacementHints 개체를 할당 합니다 .이 경우에는 **RoverEnclosure_PlacementHints** 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-145">To the **Location To Place** field, assign the corresponding PlacementHints object, in this case, the **RoverEnclosure_PlacementHints** object</span></span>
+* <span data-ttu-id="abb40-146">**도구 설명 개체** 필드에 해당 하는 ToolTipObject (이 경우에는 **RoverEnclosure_ToolTip** 개체)를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-146">To the **Tool Tip Object** field, assign the corresponding ToolTipObject, in this case, the **RoverEnclosure_ToolTip** object</span></span>
+* <span data-ttu-id="abb40-147">**오디오 원본** 필드에 개체 자체 (이 경우 **roverenclosure** 개체)를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-147">To the **Audio Source** field, assign the object itself, in this case, the **RoverEnclosure** object</span></span>
 
-    ![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-3.png)
 
-## <a name="lunar-module-parts-overview"></a><span data-ttu-id="f120b-163">음력 모듈 부분 개요</span><span class="sxs-lookup"><span data-stu-id="f120b-163">Lunar Module Parts overview</span></span>
+<span data-ttu-id="abb40-149">FuelTank, EnergyCell, DockingPortal 및 ExternalSensor와 같은 다른 LunarModuleParts 자식 개체 각각에 대해 **반복** 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-149">**Repeat** for each of the other LunarModuleParts child objects, i.e. FuelTank, EnergyCell, DockingPortal, and ExternalSensor.</span></span>
 
-<span data-ttu-id="f120b-164">음력 모듈 파트 부모 개체는 사용자가 상호 작용 하는 개체의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-164">The Lunar Module Parts parent object is the collection of the objects that the user interacts with.</span></span> <span data-ttu-id="f120b-165">괄호 안에 이름이 지정 된 장면이 있는 게임 개체 이름은 아래 목록에 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-165">The Game object names with scene labeled names in parentheses, are provided in the list below:</span></span>
+<span data-ttu-id="abb40-150">이제 게임 모드를 입력 하 고 ' 개체를 ' 위치 '에 가깝게 이동 하려면 다음을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-150">If you now enter Game mode and move an 'Object To Place' close to it's corresponding 'Location To Place' you will notice:</span></span>
 
-- <span data-ttu-id="f120b-166">백팩 (에너지 셀)</span><span class="sxs-lookup"><span data-stu-id="f120b-166">Backpack (Energy Cell)</span></span>
-- <span data-ttu-id="f120b-167">GasTank (연료 탱크)</span><span class="sxs-lookup"><span data-stu-id="f120b-167">GasTank (Fuel Tank)</span></span>
-- <span data-ttu-id="f120b-168">TopLeftBody(탐사선 인클로저)</span><span class="sxs-lookup"><span data-stu-id="f120b-168">TopLeftBody (Rover Enclosure)</span></span>
-- <span data-ttu-id="f120b-169">Nose(도킹 포트)</span><span class="sxs-lookup"><span data-stu-id="f120b-169">Nose (Docking Portal)</span></span>
-- <span data-ttu-id="f120b-170">LeftTwirler(외부 센서)</span><span class="sxs-lookup"><span data-stu-id="f120b-170">LeftTwirler (External Sensor)</span></span>
+* <span data-ttu-id="abb40-151">개체는 LunarModule 개체 아래에 위치 하 고 부모로 되어 있으므로 음력 모듈의 일부가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-151">The object will snap into place and be parented under the LunarModule object so it becomes part of the Lunar Module</span></span>
+* <span data-ttu-id="abb40-152">개체의 오디오 소스가 개체의 위치에서 할당 된 오디오 클립을 재생 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-152">The Audio Source on the object will play the assigned Audio Clip at the location of the object</span></span>
+* <span data-ttu-id="abb40-153">해당 하는 도구 설명 개체는 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-153">The corresponding Tool Tip object will be hidden</span></span>
 
-<span data-ttu-id="f120b-171">이러한 각 개체에는 4 단원에서 설명한 대로 조작 처리기가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-171">Notice that each of these objects has a manipulation handler, as explained in Lesson 4.</span></span> <span data-ttu-id="f120b-172">이 기능을 사용 하면 사용자가 개체를 가져오고 조작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-172">This feature enables users to grab and manipulate the object.</span></span> <span data-ttu-id="f120b-173">또한 두 번의 이동 조작 유형인 설정은 이동 및 회전으로 설정 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-173">Also note that the setting, Two Handed Manipulation Type, is set to Move and Rotate.</span></span> <span data-ttu-id="f120b-174">이 옵션은 사용자가 개체를 이동 하 고 해당 크기를 변경 하지 않도록 허용 합니다 .이는 어셈블리 응용 프로그램에 대해 원하는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-174">This option only permits the user to move the object and not change its size, which is the desired functionality for an assembly application.</span></span>
-<span data-ttu-id="f120b-175">또한 모듈 파트의 직접 상호 작용에 대해서만 허용 하도록 Far 조작이 선택 취소 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-175">In addition, Far Manipulation is unchecked to allow only for direct interaction of module parts.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section1-step2-4.png)
 
-![Lesson6 Chapter2im](images/Lesson6_Chapter2im.PNG)
+> [!TIP]
+> <span data-ttu-id="abb40-155">편집기에서 입력 시뮬레이션을 사용 하는 방법에 대 한 미리 알림은 [Mrtk 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)에서 [편집기 내 입력 시뮬레이션을 사용](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) 하 여 장면 가이드를 테스트 하는 방법을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-155">For a reminder on how to use the in-editor input simulation, you can refer to the [Using the In-Editor Hand Input Simulation to test a scene](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) guide in the [MRTK Documentation Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).</span></span>
 
-<span data-ttu-id="f120b-177">파트 어셈블리 데모 스크립트 (위에 표시 됨)는 사용자가 음력 모듈에 저장 하는 개체를 관리 하는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-177">The Part Assembly Demo script (shown above) is the script that manages the objects that the user places on the lunar module by the user.</span></span>
+## <a name="configuring-the-lunar-module"></a><span data-ttu-id="abb40-156">달탐사선 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-156">Configuring the Lunar Module</span></span>
 
-<span data-ttu-id="f120b-178">필드를 놓을 개체는 위의 이미지에 표시 된 것 처럼 선택한 변환 이며, 연결 된 개체와 연결 된 백팩/연료 탱크입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-178">The Object To Place field is the transform that is selected, as shown in the image above, the backpack/fuel tank associated with the object that it connects to.</span></span>
+<span data-ttu-id="abb40-157">이 섹션에서는 사용자가 다음을 수행할 수 있도록 로켓 시작 관리자 응용 프로그램에 추가 기능을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-157">In this section, you will add additional features to the Rocket Launcher application so the user can:</span></span>
 
-<span data-ttu-id="f120b-179">근거리 거리 및 원거리 거리 설정에 따라 부품이 제자리에 스냅 되거나 출시 될 수 있는 근접성이 결정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-179">The Near Distance and Far Distance settings determine the proximity to which parts snap in place or can be released.</span></span> <span data-ttu-id="f120b-180">예를 들어 백팩/연료 탱크는 한 곳에 맞추기 전에 음력 모듈에서 0.1 단위 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-180">For example, the backpack/fuel tank needs to be 0.1 units away from the lunar module before it will snap into place.</span></span> <span data-ttu-id="f120b-181">먼 거리 설정은 개체가 음력 모듈에서 분리 될 수 있는 위치를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-181">The Far Distance setting sets the location where the object can be before it can detach from the lunar module.</span></span> <span data-ttu-id="f120b-182">이 경우 사용자의 손이 백팩/연료 탱크를 쥐고 달탐사선에서 0.2단위 떨어지게 끌어 위치에서 분리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-182">In this case, the user’s hand must grab the backpack/fuel tank and pull it 0.2 units away from the lunar module to remove it from snapping back into place.</span></span>
+* <span data-ttu-id="abb40-158">음력 모듈과 상호 작용</span><span class="sxs-lookup"><span data-stu-id="abb40-158">Interact with the Lunar Module</span></span>
+* <span data-ttu-id="abb40-159">공간으로 음력 모듈을 시작 하 고 시작 시 소리 재생</span><span class="sxs-lookup"><span data-stu-id="abb40-159">Launch the Lunar Module into space and play a sound when it is launched</span></span>
+* <span data-ttu-id="abb40-160">음력 모듈과 모든 파트가 원래 위치에 다시 배치 되도록 응용 프로그램을 다시 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-160">Reset the application so the Lunar Module and all the part are placed back to their original position</span></span>
+* <span data-ttu-id="abb40-161">파트 어셈블리 챌린지를 더 어렵게 만들기 위해 배치 힌트를 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-161">Hide the placement hints to make the part assembly challenge more difficult.</span></span>
 
-<span data-ttu-id="f120b-183">도구 설명 개체는 장면의 도구 설명 레이블입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-183">The Tool Tip Object is the tool tip label in the scene.</span></span> <span data-ttu-id="f120b-184">개체를 제자리에 물릴 때 레이블은 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-184">When the objects are snapped in place, the label is disabled.</span></span>
+<span data-ttu-id="abb40-162">이를 위해 수행 하는 주요 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-162">The main steps you will take to achieve this are:</span></span>
 
-<span data-ttu-id="f120b-185">오디오 소스가 자동으로 grabbed 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-185">The Audio Source is automatically grabbed.</span></span>
+1. <span data-ttu-id="abb40-163">개체 조작 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-163">Enable object manipulation</span></span>
+2. <span data-ttu-id="abb40-164">물리 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-164">Enable physics</span></span>
+3. <span data-ttu-id="abb40-165">오디오 원본 구성 요소 추가</span><span class="sxs-lookup"><span data-stu-id="abb40-165">Add an Audio Source component</span></span>
+4. <span data-ttu-id="abb40-166">시작 음력 모듈 (스크립트) 구성 요소 추가 및 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-166">Add and configure the Launch Lunar Module (Script) component</span></span>
+5. <span data-ttu-id="abb40-167">배치 힌트 (스크립트) 구성 요소 추가 및 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-167">Add and configure the Toggle Placement Hints (Script) component</span></span>
 
-## <a name="configuring-the-placement-hints-button"></a><span data-ttu-id="f120b-186">배치 힌트 단추 구성</span><span class="sxs-lookup"><span data-stu-id="f120b-186">Configuring the Placement Hints button</span></span>
+> [!NOTE]
+> <span data-ttu-id="abb40-168">시작 음력 모듈 (스크립트) 구성 요소와 전환 배치 힌트 (스크립트) 구성 요소는 MRTK의 일부가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-168">The Launch Lunar Module (Script) component and the Toggle Placement Hints (Script) component are not part of MRTK.</span></span> <span data-ttu-id="abb40-169">이 자습서의 자산과 함께 제공 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-169">They were provided with this tutorial's assets.</span></span>
 
-<span data-ttu-id="f120b-187">[2 단원](mrlearning-base-ch2.md)에서는 항목의 색을 변경 하거나 푸시 될 때 소리를 재생 하는 등의 작업을 수행 하는 단추를 설정 하 고 구성 하는 방법을 배웠습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-187">In [Lesson 2](mrlearning-base-ch2.md), you learned how to place and configure buttons to do things like change the color of an item or make it play a sound when pushed.</span></span> <span data-ttu-id="f120b-188">이제 이 원칙을 사용하여 배치 힌트를 설정/해제하는 단추를 구성해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-188">We will continue to use those principles as we configure our buttons for toggling placement hints.</span></span>
+### <a name="1-enable-object-manipulation"></a><span data-ttu-id="abb40-170">1. 개체 조작 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-170">1. Enable object manipulation</span></span>
 
-<span data-ttu-id="f120b-189">목표는 사용자가 배치 힌트 단추를 누를 때마다 투명 한 배치 힌트의 표시 유형을 전환 하도록 단추를 구성 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-189">The goal is to configure our button so that every time the user presses the Placement hint button, it toggles the visibility of the translucent placement hints.</span></span>
+<span data-ttu-id="abb40-171">계층 구조 창에서 RocketLauncher > **LunarModule** 개체를 선택 하 고 **조작 처리기 (스크립트)** 구성 요소 및 **Near 인터랙션 Grabbable (스크립트)** 구성 요소를 추가한 다음 조작 처리기 (스크립트)를 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-171">In the Hierarchy window, select the RocketLauncher > **LunarModule** object, add the **Manipulation Handler (Script)** component and the **Near Interaction Grabbable (Script)** component, and then configure the Manipulation Handler (Script) as follows:</span></span>
 
-1. <span data-ttu-id="f120b-190">기본 장면 계층 구조에서 배치 힌트 개체가 선택 되어 있는 동안에는 inspector 패널의 빈 런타임 전용 슬롯으로 음력 모듈을 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-190">Move the lunar module to the empty Runtime Only slot in the inspector panel while the Placement Hints object is selected in your base scene hierarchy.</span></span>
+* <span data-ttu-id="abb40-172">크기 조정 기능을 사용 하지 않도록 회전을 이동 하도록 **두 손 조작 유형을** 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-172">Change **Two Handed Manipulation Type** to Move Rotate so scaling is disabled</span></span>
+* <span data-ttu-id="abb40-173">거의 **조작** 가능 확인란의 선택을 취소 하 여 거의 상호 작용이 가능 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-173">Un-check the **Allow Far Manipulation** checkbox to only allow near interaction</span></span>
 
-    ![6 단원에서는 Chapter3 Step1im](images/Lesson6_Chapter3_step1im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step1-1.png)
 
-2. <span data-ttu-id="f120b-192">함수 없음 드롭다운 목록을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-192">Click the No Function dropdown list.</span></span> <span data-ttu-id="f120b-193">TogglePlacementHints로 이동 하 고 해당 메뉴 아래에서 ToggleGameObjects ()를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-193">Go down to TogglePlacementHints and select ToggleGameObjects () under that menu.</span></span> <span data-ttu-id="f120b-194">ToggleGameObjects ()는 단추를 누를 때마다 표시 되거나 표시 되지 않도록 배치 힌트를 설정 및 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-194">ToggleGameObjects() toggles the placement hints on and off so that they are visible or invisible each time the button is pressed.</span></span>
+### <a name="2-enable-physics"></a><span data-ttu-id="abb40-175">2. 물리학 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-175">2. Enable physics</span></span>
 
-    ![6 단원에서는 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
+<span data-ttu-id="abb40-176">RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 Rigidbody 구성 요소를 추가 하 고 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-176">With the RocketLauncher > **LunarModule** object still selected, add a Rigidbody component and then configure it as follows:</span></span>
 
-## <a name="configuring-the-reset-button"></a><span data-ttu-id="f120b-196">다시 설정 단추 구성</span><span class="sxs-lookup"><span data-stu-id="f120b-196">Configuring the Reset button</span></span>
+* <span data-ttu-id="abb40-177">음력의 영향을 받지 않도록 **중력 사용** 확인란을 선택 취소 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-177">Un-check the **Use Gravity** checkbox so the Lunar Module is not affected by gravity</span></span>
+* <span data-ttu-id="abb40-178">처음에는 음력 모듈이 physic의 영향을 받지 않도록 하려면 **기구학** 확인란을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-178">Check the **Is Kinematic** checkbox so the Lunar Module initially isn't affected by physic forces</span></span>
 
-<span data-ttu-id="f120b-197">사용자가 실수를 하는 경우가 있으며, 실수로 개체를 실수로 throw 하거나 환경을 다시 설정 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-197">There will be situations where the user makes a mistake, accidentally throws the object away or just wants to reset the experience.</span></span> <span data-ttu-id="f120b-198">다시 설정 단추는 환경을 다시 시작 하는 기능을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-198">The Reset button adds the ability to restart the experience.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step2-1.png)
 
-1. <span data-ttu-id="f120b-199">다시 설정 단추를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-199">Select the Reset button.</span></span> <span data-ttu-id="f120b-200">기본 장면에서는 이름이 ResetRoundButton입니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-200">In the base scene, it’s named ResetRoundButton.</span></span>
+### <a name="3-add-an-audio-source-component"></a><span data-ttu-id="abb40-180">3. 오디오 원본 구성 요소 추가</span><span class="sxs-lookup"><span data-stu-id="abb40-180">3. Add an Audio Source component</span></span>
 
-2. <span data-ttu-id="f120b-201">기본 장면 계층에서 음력 모듈을 검사기 패널의 단추 아래에 있는 빈 슬롯으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-201">Drag the lunar module from the base scene hierarchy into the empty slot under Button Pressed on the inspector panel.</span></span>
+<span data-ttu-id="abb40-181">RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 **오디오 원본** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-181">With the RocketLauncher > **LunarModule** object still selected, add an **Audio Source** component and then configure it as follows:</span></span>
 
-    ![6 단원에서는 Chapter4 Step2im](images/Lesson6_Chapter4_step2im.PNG)
+* <span data-ttu-id="abb40-182">공간 **Blend** 를 1로 변경 하 여 공간 오디오 사용</span><span class="sxs-lookup"><span data-stu-id="abb40-182">Change **Spatial Blend** to 1 to enable spatial audio</span></span>
 
-3. <span data-ttu-id="f120b-203">함수 없음 드롭다운 메뉴를 선택 하 고 LaunchLunarModule를 마우스로 가리킨 다음 resetModule ()을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-203">Select the No Function dropdown menu and hover over LaunchLunarModule, then select resetModule ().</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step3-1.png)
 
-    ![Lesson6 Chapter4 Step3im](images/Lesson6_Chapter4_step3im.PNG)
+### <a name="4-add-and-configure-the-launch-lunar-module-script-component"></a><span data-ttu-id="abb40-184">4. Launch 음력 모듈 (스크립트) 구성 요소를 추가 하 고 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-184">4. Add and configure the Launch Lunar Module (Script) component</span></span>
 
-    >[!NOTE]
-    ><span data-ttu-id="f120b-205">기본적으로 GameObject BroadcastMessage는 배치를 ResetPlacement 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-205">Notice that by default, the GameObject.BroadcastMessage is configured to ResetPlacement.</span></span> <span data-ttu-id="f120b-206">그러면 RocketLauncher_Tutorial의 모든 자식 개체에 대해 ResetPlacement 라는 메시지가 브로드캐스트합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-206">This broadcasts a message named ResetPlacement for every child object of the RocketLauncher_Tutorial.</span></span> <span data-ttu-id="f120b-207">ResetPlacement ()에 대 한 메서드가 있는 개체는 위치를 다시 설정 하 여 해당 메시지에 응답 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-207">Any object that has a method for ResetPlacement() responds to that message by resetting it's position.</span></span>
+<span data-ttu-id="abb40-185">RocketLauncher > **LunarModule** 개체를 선택한 상태에서 **시작 음력 모듈 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-185">With the RocketLauncher > **LunarModule** object still selected, add the **Launch Lunar Module (Script)** component and then configure it as follows:</span></span>
 
-## <a name="configuring-the-launch-button"></a><span data-ttu-id="f120b-208">시작 단추 구성</span><span class="sxs-lookup"><span data-stu-id="f120b-208">Configuring the Launch button</span></span>
+* <span data-ttu-id="abb40-186">**위한 것** 값을 변경 하 여 음력 모듈이 시작 될 때 정상적으로 실행 되도록 합니다 (예: 0.01).</span><span class="sxs-lookup"><span data-stu-id="abb40-186">Change **Thrust** value so the Lunar Module will fly up gracefully when launched, for example, to 0.01</span></span>
 
-<span data-ttu-id="f120b-209">이 섹션에서는 시작 단추를 구성 하는 방법에 대해 설명 합니다 .이 단추를 사용 하면 사용자가 단추를 누르고 음력 모듈을 공간으로 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-209">This section explains how to configure the Launch button, which permits the user to press the button and launch the lunar module into space.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step4-1.png)
 
-1. <span data-ttu-id="f120b-210">시작 단추를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-210">Select the Launch button.</span></span> <span data-ttu-id="f120b-211">기본 장면에서는 LaunchRoundButton 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-211">In the base scene, it’s called LaunchRoundButton.</span></span> <span data-ttu-id="f120b-212">Inspector 패널의 Touch End 아래에 있는 빈 슬롯으로 음력 모듈을 끕니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-212">Drag the lunar module to the empty slot under Touch End in the Inspector panel.</span></span>
+### <a name="5-add-and-configure-the-toggle-placement-hints-script-component"></a><span data-ttu-id="abb40-188">5. 배치 힌트 (스크립트) 구성 요소를 추가 하 고 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-188">5. Add and configure the Toggle Placement Hints (Script) component</span></span>
 
-    ![6 단원에서는 Chapter5 Step1im](images/Lesson6_Chapter5_step1im.PNG)
+<span data-ttu-id="abb40-189">RocketLauncher > **LunarModule** 개체가 선택 된 상태에서 **설정/해제 배치 힌트 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-189">With the RocketLauncher > **LunarModule** object still selected, add the **Toggle Placement Hints (Script)** component and then configure it as follows:</span></span>
 
-2. <span data-ttu-id="f120b-214">함수 없음 드롭다운 메뉴를 선택 하 고 LaunchLunarModule를 마우스로 가리킨 다음 StopThruster ()를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-214">Select the No Function dropdown menu and hover over LaunchLunarModule, and select StopThruster ().</span></span> <span data-ttu-id="f120b-215">이는 사용자가 음력 모듈에 제공할 위한 것 크기를 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-215">This controls how much thrust the user wants to give to the lunar module.</span></span>
+* <span data-ttu-id="abb40-190">Game 개체 배열 **크기** 속성을 5로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-190">Set the Game Object Array **Size** property to 5</span></span>
+* <span data-ttu-id="abb40-191">각 **PlacementHints** 개체의 **자식 개체** 를 Game 개체 배열의 **요소** 필드에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-191">Assign each of the **PlacementHints** object's **child objects** to the an **Element** field in the Game Object Array:</span></span>
 
-    ![6 단원에서는 Chapter5 Step2im](images/Lesson6_Chapter5_step2im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section2-step5-1.png)
 
-3. <span data-ttu-id="f120b-217">기본 장면 계층에서 음력 모듈을 검사기 패널의 단추 아래에 있는 빈 슬롯으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-217">Drag the lunar module from the base scene hierarchy into the empty slot under Button Pressed in the inspector panel.</span></span>
+## <a name="configuring-the-launch-button"></a><span data-ttu-id="abb40-193">시작 단추 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-193">Configuring the Launch button</span></span>
 
-4. <span data-ttu-id="f120b-218">함수 없음 드롭다운 메뉴를 클릭 한 다음 LaunchLunarModule에서 StartThruster ()를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-218">Click the No function dropdown menu and then on LaunchLunarModule and select StartThruster ().</span></span>
+<span data-ttu-id="abb40-194">계층 창에서 RocketLauncher > 단추 > **launchbutton** 개체를 선택한 다음 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule** 를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-194">In the Hierarchy window, select the RocketLauncher > Buttons > **LaunchButton** object, then on the **Pressable Button (Script)** component, create a new **Button Pressed ()** event, configure the **LunarModule** object to receive the event, and define **LaunchLunarModule.StartThruster** as the action to be triggered:</span></span>
 
-    ![6 단원에서는 Chapter5 Step4im](images/Lesson6_Chapter5_step4im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-1.png)
 
-5. <span data-ttu-id="f120b-220">로켓이 꺼진 경우 음악이 재생 되도록 음력 모듈에 음악을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-220">Add music to the lunar module so that music plays when the rocket takes off.</span></span> <span data-ttu-id="f120b-221">이렇게 하려면 음력 모듈을 단추 누름 () 아래의 빈 슬롯으로 끕니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-221">To do this, drag the lunar module to the next empty slot under Button Pressed().</span></span>
+> [!TIP]
+> <span data-ttu-id="abb40-196">이벤트를 구현 하는 방법에 대 한 미리 알림은 [손 추적 제스처 및 interactable 단추](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) 지침을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-196">For a reminder on how to implement events, you can refer to the [Hand tracking gestures and interactable buttons](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) instructions.</span></span>
 
-6. <span data-ttu-id="f120b-222">함수 없음 드롭다운 메뉴를 선택 하 고 오디오 원본 위에 마우스를 놓고 PlayOneShot (오디오 클립)를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-222">Select the No Function dropdown menu, hover over AudioSource and select PlayOneShot (AudioClip).</span></span> <span data-ttu-id="f120b-223">MRTK에 포함된 여러 사운드를 원하는 대로 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-223">Feel free to explore the variety of sounds included with the MRTK.</span></span> <span data-ttu-id="f120b-224">이 예제에서는 "MRTK_Gem"을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-224">In this example, we'll use "MRTK_Gem."</span></span>
+<span data-ttu-id="abb40-197">RocketLauncher > 단추 > **launchbutton** 개체를 선택 하 고 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **PlayOneShot** 을 정의 하 고, 오디오 **클립** 필드 (예: MRTK_Gem 오디오 클립)에 적절 한 오디오 클립을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-197">With the RocketLauncher > Buttons > **LaunchButton** object still selected, on the **Pressable Button (Script)** component, create a new **Button Pressed ()** event, configure the **LunarModule** object to receive the event, define **AudioSource.PlayOneShot** as the action to be triggered, and assign a suitable audio clip to the **Audio Clip** field, for example, the MRTK_Gem audio clip:</span></span>
 
-    ![6 단원에서는 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-2.png)
 
-## <a name="congratulations"></a><span data-ttu-id="f120b-226">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-226">Congratulations</span></span>
+<span data-ttu-id="abb40-199">RocketLauncher > 단추 > **launchbutton** 개체를 선택한 상태에서 **Pressable 단추 (스크립트)** 구성 요소에서 새 **Touch 종료 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule** 를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-199">With the RocketLauncher > Buttons > **LaunchButton** object still selected, on the **Pressable Button (Script)** component, create a new **Touch Ended ()** event, configure the **LunarModule** object to receive the event, and define **LaunchLunarModule.StopThruster** as the action to be triggered:</span></span>
 
-<span data-ttu-id="f120b-227">이 응용 프로그램을 완전히 구성 했습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-227">You have fully configured this application.</span></span> <span data-ttu-id="f120b-228">이제 play를 누르면 음력 모듈을 완전히 조합 하 고, 힌트를 전환 하 고, 음력 모듈을 시작 하 고 다시 시작 하도록 다시 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f120b-228">Now, when you press play, you can fully assemble the lunar module, toggle hints, launch the lunar module and reset it to start again.</span></span>
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-3.png)
+
+<span data-ttu-id="abb40-201">이제 게임 모드를 입력 하 고 시작 단추를 누르면 오디오 클립이 재생 되 고, 두 번째 이상에 대해 시작 단추를 누르고 있는 경우 음력 모듈이 다음 공간에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-201">If you now enter Game mode and press the Launch button, you will hear the audio clip play, and if you hold the Launch button down for about a second or longer, you will see the Lunar Module launch into space:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section3-step1-4.png)
+
+## <a name="configuring-the-reset-button"></a><span data-ttu-id="abb40-203">다시 설정 단추 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-203">Configuring the Reset button</span></span>
+
+<span data-ttu-id="abb40-204">계층 창에서 RocketLauncher > 단추 > **resetbutton** 개체를 선택 하 고, **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **LunarModule** 개체를 구성 하 고, 트리거할 작업으로 **LaunchLunarModule 모듈** 을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-204">In the Hierarchy window, select the RocketLauncher > Buttons > **ResetButton** object, then on the **Pressable Button (Script)** component, create a new **Button Pressed ()** event, configure the **LunarModule** object to receive the event, and define **LaunchLunarModule.ResetModule** as the action to be triggered:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-1.png)
+
+<span data-ttu-id="abb40-206">RocketLauncher > 단추 > **resetbutton** 개체를 선택 하 고 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고, 이벤트를 받도록 **RocketLauncher** 개체를 구성 하 고, 트리거할 작업으로 **GameObject** 를 정의 하 고, 메시지 필드에 **resetbutton** 를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-206">With the RocketLauncher > Buttons > **ResetButton** object still selected, on the **Pressable Button (Script)** component, create a new **Button Pressed ()** event, configure the **RocketLauncher** object to receive the event, define **GameObject.BroadcastMessage** as the action to be triggered, and enter **ResetPlacement** in message field:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-2.png)
+
+> [!TIP]
+> <span data-ttu-id="abb40-208">GameObject BroadcastMessage 작업은 RocketLauncher 개체에서 모든 자식 개체에 ResetPlacement 메시지를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-208">The GameObject.BroadcastMessage action sends the ResetPlacement message from the RocketLauncher object to all its child object.</span></span> <span data-ttu-id="abb40-209">모든 LunarModuleParts 자식 개체에 추가한 파트 어셈블리 데모 (스크립트) 구성 요소에 정의 된 ResetPlacement 함수를 포함 하는 자식 개체는 자식 개체의 배치를 다시 설정 하는 ResetPlacement 함수를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-209">Any child object that has the ResetPlacement function, which is defined in the Part Assembly Demo (Script) component you added to all the LunarModuleParts child object, will invoke the ResetPlacement function which resets that child object's placement.</span></span>
+
+<span data-ttu-id="abb40-210">이제 게임 모드를 입력 하 고 다시 설정 단추를 누르면 재생 중인 오디오 클립이 표시 되 고 공간에 시작 되는 음력 모듈이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-210">If you now enter Game mode and press the Reset button you will hear the audio clip being played and see the Lunar Module being launched into space:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section4-step1-3.png)
+
+## <a name="configuring-the-placement-hints-button"></a><span data-ttu-id="abb40-212">배치 힌트 단추 구성</span><span class="sxs-lookup"><span data-stu-id="abb40-212">Configuring the Placement Hints button</span></span>
+<!-- TODO: Rename to 'Configuring the Hints button'-->
+
+<span data-ttu-id="abb40-213">계층 창에서 RocketLauncher > 단추 > **Hintsbutton** 개체를 선택한 다음 **Pressable 단추 (스크립트)** 구성 요소에서 새 **단추 누름 ()** 이벤트를 만들고 **LunarModule** 개체를 구성 하 여 이벤트를 수신 하 고, 트리거할 작업 **을 정의 합니다.**</span><span class="sxs-lookup"><span data-stu-id="abb40-213">In the Hierarchy window, select the RocketLauncher > Buttons > **HintsButton** object, then on the **Pressable Button (Script)** component, create a new **Button Pressed ()** event, configure the **LunarModule** object to receive the event, and define **TogglePlacementHints.ToggleGameObjects** the action to be triggered:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section5-step1-1.png)
+
+<span data-ttu-id="abb40-215">이제 게임 모드를 입력 하면 반투명 배치 힌트가 기본적으로 사용 하지 않도록 설정 되어 있지만 힌트 단추를 눌러 설정 및 해제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-215">If you now enter Game mode you will notice that the translucent placement hints are disabled by default, but that you can toggle them on and off by pressing the Hints button:</span></span>
+
+![mrlearning-기본](images/mrlearning-base/tutorial6-section5-step1-2.png)
+
+## <a name="congratulations"></a><span data-ttu-id="abb40-217">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-217">Congratulations</span></span>
+
+<span data-ttu-id="abb40-218">이 응용 프로그램을 완전히 구성 했습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-218">You have fully configured this application.</span></span> <span data-ttu-id="abb40-219">이제 응용 프로그램을 통해 사용자는 음력 모듈을 완전히 조합 하 고, 음력 모듈을 시작 하 고, 힌트를 설정/해제 하 고, 응용 프로그램을 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb40-219">Now, your application allows users to fully assemble the Lunar Module, launch the Lunar Module, toggle hints, and reset the application to start again.</span></span>
