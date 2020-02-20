@@ -7,157 +7,253 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: d0c166f760884efab9719ecba1ff83285872e2ef
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: d3392df9bfad5938d71d3a01999be51834a98a5d
+ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334409"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77373450"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화
 
 ## <a name="overview"></a>개요
 
-이 첫 번째 단원에서는 <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">MRTK(Mixed Reality Toolkit)</a>에서 제공해야 하는 기능 중 일부에 대해 알아보고, HoloLens 2용 첫 번째 애플리케이션을 시작하고, 이를 디바이스에 배포합니다.
+<!-- TODO: Consider expanding to include summary of each tutorial in this tutorial series -->
+이 첫 번째 자습서에서는 <a href="https://github.com/microsoft/MixedRealityToolkit-Unity" target="_blank">MRTK(Mixed Reality Toolkit)</a>에서 제공해야 하는 기능 중 일부에 대해 알아보고, HoloLens 2용 첫 번째 애플리케이션을 시작하고 이를 디바이스에 배포합니다.
 
 ## <a name="objectives"></a>목표
 
-* HoloLens 개발을 위해 Unity를 구성합니다.
-* 자산을 가져오고 장면을 설정합니다.
-* 공간 매핑 메시, 손 메시 및 프레임 속도 카운터를 시각화합니다.
+* HoloLens 개발을 위한 Unity 구성
+* 자산 가져오기 및 장면 설정
+* 공간 매핑 메시, 손 메시 및 프레임 속도 카운터 시각화
+
+## <a name="prerequisites"></a>필수 구성 요소
+
+* 올바른 [도구가 설치](install-the-tools.md)된 상태로 구성된 Windows 10 PC
+* Windows 10 SDK 10.0.18362.0 이상
+* 몇 가지 기본 C# 프로그래밍 기능
+* [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
+* Unity 2019.2.X가 설치되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
+
+> [!IMPORTANT]
+> 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
 
 ## <a name="create-new-unity-project"></a>새 Unity 프로젝트 만들기
 
-1. Unity를 시작합니다.
+**Unity Hub**를 시작하고, **Projects(프로젝트)** 탭을 선택한 다음, **New(새로 만들기)** 단추 옆의 **아래쪽 화살표**를 클릭합니다.
 
-2. **New**를 선택합니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-1.png)
 
-    ![단원 1 섹션 1 단계 2](images/mrlearning-base-ch1-1-step2.JPG)
+위의 [필수 구성 요소](#prerequisites) 섹션에 지정된 Unity 버전을 선택합니다.
 
-3. 프로젝트 이름(예: "MixedRealityBase")을 입력합니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-2.png)
 
-    ![단원 1 섹션 1 단계 3](images/mrlearning-base-ch1-1-step3.JPG)
+Create a new project(새 프로젝트 만들기) 창에서 다음을 수행합니다.
 
-4. 프로젝트를 저장할 위치를 입력합니다.
+* **Templates(템플릿)** 가 **3D**로 설정되어 있는지 확인합니다.
+* 적합한 **Project Name(프로젝트 이름)** 을 입력합니다(예: _MRTK 자습서_).
+* 프로젝트를 저장할 적합한 **Location(위치)** 을 선택합니다(예: _D:\MixedRealityLearning_).
+* **Create(만들기)** 단추를 클릭하여 새 Unity 프로젝트를 만들고 시작합니다.
 
-    ![단원 1 섹션 1 단계 4](images/mrlearning-base-ch1-1-step4.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-3.png)
 
-5. 프로젝트가 **3D**로 설정되어 있는지 확인합니다.
+> [!CAUTION]
+> Windows에서 작업하는 경우 MAX_PATH 제한은 255자입니다. Unity는 이러한 제한의 영향을 받으며, 파일 경로가 255자를 초과하면 컴파일이 실패할 수 있습니다. 따라서 Unity 프로젝트를 드라이브의 루트에 최대한 가깝게 저장하는 것이 좋습니다.
 
-    ![단원 1 섹션 1 단계 5](images/mrlearning-base-ch1-1-step5.JPG)
+Unity에서 프로젝트가 만들어질 때까지 기다립니다.
 
-6. **Create Project**를 클릭합니다.
-
-    ![단원 1 섹션 1 단계 6](images/mrlearning-base-ch1-1-step6.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section1-step1-4.png)
 
 ## <a name="configure-the-unity-project-for-windows-mixed-reality"></a>Windows Mixed Reality를 위한 Unity 프로젝트 구성
 
-1. **파일** > **빌드 설정**으로 차례로 이동하여 *빌드 설정* 창을 엽니다.
+<!-- TODO: Consider adding info about configuring Unity for WMR vs MRTK, or removing WMR section -->
 
-    ![단원 1 섹션 2 단계 1](images/mrlearning-base-ch1-2-step1.JPG)
+이 섹션에서는 빌드 플랫폼을 전환하고, 가상 현실과 공간 인식을 사용하도록 설정합니다.
 
-2. *유니버설 Windows 플랫폼*을 선택하고, **플랫폼 전환** 단추를 클릭하여 플랫폼을 전환합니다. HoloLens 2에서 실행되는 애플리케이션은 UWP(유니버설 Windows 플랫폼)와 호환되어야 합니다.
+### <a name="1-switch-build-platform"></a>1. 빌드 플랫폼 전환
 
-    ![단원 1 섹션 2 단계 2](images/mrlearning-base-ch1-2-step2.JPG)
+Unity 메뉴에서 **File(파일)**  > **Build Settings(빌드 설정)...** 를 차례로 선택하여 Build Settings 창을 엽니다.
 
-3. [빌드] 창에서 **플레이어 설정** 단추를 클릭하여 가상 현실을 사용하도록 설정하고, 아래 이미지와 같이 검사기 패널의 [XR 설정] 아래에서 *가상 현실 지원* 확인란을 사용하도록 설정합니다. 검사기 패널을 표시하기 위해 *빌드 설정* 창을 다른 위치로 끌어야 할 수도 있습니다. 또한 *가상 현실 지원* 확인란은 입체 시각(stereoscopic vision, 각 눈에 대해 서로 다른 이미지 렌더링)을 사용하도록 설정한다는 것을 나타내므로 Mixed Reality(혼합 현실) 및 Augmented Reality(확대된 현실) 헤드셋에도 적용됩니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-1.png)
 
-    ![단원 1 섹션 2 단계 3](images/mrlearning-base-ch1-2-step3.JPG)
+Build Settings 창에서 **Universal Windows Platform(유니버설 Windows 플랫폼)** 을 선택하고, **Switch Platform(플랫폼 전환)** 단추를 클릭합니다.
 
-4. [XR 설정] 아래에서 *스테레오 렌더링 모드*를 *단일 패스 인스턴스화됨*으로 변경합니다. 이 [렌더링 파이프라인 스타일](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)은 일반적으로 HoloLens 2에 가장 적합합니다. Unity 환경의 다른 성능 구성에 관심이 있는 경우 [이 지침](recommended-settings-for-unity.md)을 따르세요.
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-2.png)
 
-    ![단원 1 섹션 2 단계 4](images/mrlearning-base-ch1-2-step4.jpg)
+Unity에서 플랫폼 전환이 완료될 때까지 기다립니다.
 
-5. 동일한 검사기 패널에 있는 *게시 설정* 아래의 [기능] 섹션에서 *Spatial Perception* 확인란을 사용하도록 설정되어 있는지 확인합니다. Spatial Perception(공간 인식)을 사용하면 HoloLens 2와 같은 혼합 현실 디바이스에서 공간 매핑 메시를 시각화할 수 있습니다. [게시 설정]은 검사기 패널에서 [XR 설정] 위와 [기타 설정] 아래에 있습니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-3.png)
 
-    ![단원 1 섹션 2 단계 5](images/mrlearning-base-ch1-2-step5.JPG)
+Unity에서 플랫폼 전환이 완료되면 빨간색 **x** 아이콘을 클릭하여 Build Settings 창을 닫습니다.
 
-    >[!NOTE]
-    >이 섹션에서 사용되지는 않지만, 사용하도록 설정할 수 있는 몇 가지 다른 일반적인 기능으로 *Microphone*(음성 명령용) 및 *InternetClient*(네트워크 연결이 필요한 서비스 연결용)가 있습니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step1-4.png)
+
+### <a name="2-enable-virtual-reality"></a>2. 가상 현실 사용
+
+> [!NOTE]
+> 양안식 비전, 즉 각 눈에 대해 다른 이미지 렌더링을 사용하도록 설정하므로 가상 현실을 사용하도록 설정하는 것은 혼합 현실 및 확대된 현실 헤드셋에도 적용됩니다.
+
+Unity 메뉴에서 **Edit(편집)**  > **Project Settings(프로젝트 설정)...** 를 차례로 선택하여 Project Settings 창을 엽니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-1.png)
+
+Project Settings 창에서 **Player(플레이어)**  > **XR Settings(XR 설정)** 를 차례로 선택하여 XR Settings를 펼칩니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-2.png)
+
+XR Settings에서 **Virtual Reality Supported(가상 현실 지원됨)** 확인란을 선택하여 가상 현실을 사용하도록 설정한 다음, **+** 아이콘을 클릭하고 **Windows Mixed Reality**를 선택하여 Windows Mixed Reality SDK를 추가합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-3.png)
+
+Unity에서 SDK 추가가 완료될 때까지 기다립니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-4.png)
+
+Unity에서 SDK 추가가 완료되면 다음과 같이 XR Settings를 최적화합니다.
+
+* Windows Mixed Reality **Depth Format(깊이 형식)** 을 **16-bit depth(16비트 깊이)** 로 설정합니다.
+* Windows Mixed Reality **Enable Depth Sharing(깊이 공유 사용)** 확인란을 선택합니다.
+* 스테레오 **Rendering Mode(렌더링 모드)\*** 를 **Single Pass Instanced**로 설정합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step2-5.png)
+
+> [!TIP]
+> Windows Mixed Reality용 Unity를 최적화하는 방법에 대해 자세히 알아보려면 [Unity 추천 설정](recommended-settings-for-unity.md) 설명서를 참조할 수 있습니다.
+
+### <a name="3-enable-spatial-perception"></a>3. 공간 인식 사용
+
+> [!NOTE]
+> 공간 인식을 사용하면 Windows Mixed Reality 디바이스에서 공간 매핑 메시를 시각화할 수 있습니다.
+
+Project Settings(프로젝트 설정) 창에서 **Player(플레이어)**  > **Publishing Settings(게시 설정)** 를 차례로 선택하여 Publishing Settings를 펼칩니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step3-1.png)
+
+Publishing Settings에서 **Capabilities(기능)** 섹션까지 아래로 스크롤하고 **SpatialPerception** 확인란을 선택합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section2-step3-2.png)
+
+<!-- TODO: Consider adding info about audio spatializer plugin setting -->
+
+Publishing Settings 창을 닫습니다.
+
+## <a name="import-textmesh-pro-essential-resources"></a>TextMesh Pro 필수 리소스 가져오기
+
+> [!NOTE]
+> Mixed Reality Toolkit의 UI 요소에 필요하므로 이 패키지를 가져옵니다.
+
+Unity 메뉴에서 **Window(창)**  > **TextMeshPro** > **Import TMP Essential Resources(TMP 필수 리소스 가져오기)** 를 차례로 선택합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section3-step1-1.png)
+
+Import Unity Package(Unity 패키지 가져오기) 창에서 **All(모두)** 단추를 클릭하여 모든 자산이 선택되었는지 확인한 다음, **Import(가져오기)** 단추를 클릭하여 자산을 가져옵니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section3-step1-2.png)
 
 ## <a name="import-the-mixed-reality-toolkit"></a>Mixed Reality Toolkit 가져오기
 
-1. [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [기초 패키지 버전 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage)을 다운로드하여 PC의 폴더에 저장합니다.
+다음 Unity 사용자 지정 패키지를 다운로드합니다.
 
-2. 이전 단계에서 다운로드한 *Mixed Reality Toolkit* 패키지를 가져옵니다. 먼저 **자산** > **가져오기** > **사용자 지정 패키지**를 클릭하고, *Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage*를 선택하고, 이를 열어 가져오기 프로세스를 시작합니다. 가져오기 프로세스가 완료될 때까지 몇 분 정도 기다리세요.
+* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.2.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage)
 
-    ![단원 1 섹션 3 단계 2a](images/mrlearning-base-ch1-3-step2a.JPG)
+Unity 메뉴에서 **Assets(자산)**  > **Import Package(패키지 가져오기)**  > **Custom Package(사용자 지정 패키지)...** 를 차례로 선택하여 Import package(패키지 가져오기)... 창을 엽니다.
 
-    ![단원 1 섹션 3 단계 2b](images/mrlearning-base-ch1-3-step2b.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-1.png)
 
-3. 다음 팝업 창에서 **가져오기**를 클릭하여 선택한 패키지를 Unity 프로젝트로 가져오기 시작합니다. 이미지와 같이 모든 항목이 선택되어 있는지 확인합니다.
+Import package... 창에서 다운로드한 **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage**를 선택하고 **Open(열기)** 단추를 클릭합니다.
 
-    ![단원 1 섹션 3 단계 3](images/mrlearning-base-ch1-3-step3.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-2.png)
 
-    > [!NOTE]
-    > Mixed Reality Toolkit 기본 설정을 적용하도록 요청하는 팝업 대화 상자가 표시되면 **적용**을 클릭합니다. MRTK는 자동화된 설정을 위해 가져올 때 누락된 추천 설정이 있는지 프로젝트를 분석합니다. 설정에 따라 팝업이 아래 이미지와 다르게 보일 수 있습니다.
+Import Unity Package(Unity 패키지 가져오기) 창에서 **All(모두)** 단추를 클릭하여 모든 자산이 선택되었는지 확인한 다음, **Import(가져오기)** 단추를 클릭하여 자산을 가져옵니다.
 
-    ![단원 1 섹션 3 단계 4 참고 1](images/mrlearning-base-ch1-3-step4-note1.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-3.png)
+
+## <a name="configure-the-unity-project-for-the-mixed-reality-toolkit"></a>Mixed Reality Toolkit용 Unity 프로젝트 구성
+
+<!-- TODO: Consider adding info about configuring Unity for WMR vs MRTK, or removing WMR section -->
+
+패키지를 가져오면 MRTK Project Configurator(MRTK 프로젝트 구성기) 창이 표시됩니다. 그렇지 않으면 Unity 메뉴에서 **Mixed Reality Toolkit** > **Utilities(유틸리티)**  > **Configure Unity Project(Unity 프로젝트 구성)** 를 차례로 선택하여 엽니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section5-step1-1.png)
+
+MRTK Project Configurator 창에서 **Modify Configurations(구성 수정)** 섹션을 펼치고, **Enable MSBuild for Unity(Unity용 MSBuild 사용)** 확인란을 <u>선택 취소</u>하고, 다른 모든 옵션이 선택되었는지 확인한 다음, **Apply(적용)** 단추를 클릭하여 해당 설정을 적용합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section5-step1-2.png)
+
+> [!CAUTION]
+> Unity용 MSBuild는 사용할 SDK 중 일부만 지원할 수 있으며, 사용하도록 설정된 후에 이를 사용하지 않도록 설정하는 것이 어려울 수 있습니다. 따라서 Unity용 MSBuild를 사용하지 않는 것이 좋습니다.
 
 ## <a name="configure-the-mixed-reality-toolkit"></a>Mixed Reality Toolkit 구성
+<!-- TODO: Consider renaming to 'Add the Mixed Reality Toolkit to the Unity scene' -->
 
-1. 메뉴 모음에서**Mixed Reality Toolkit** > **장면에 추가 및 구성..** 을 차례로 선택하여 *Mixed Reality Toolkit*를 현재 장면에 추가합니다. Mixed Reality Toolkit을 가져온 후에 이 메뉴 항목이 보이지 않으면 Unity를 다시 시작합니다.
+Unity 메뉴에서 **Mixed Reality Toolkit** > **Add to Scene and Configure(장면에 추가 및 구성)...** 를 차례로 선택하여 Mixed Reality Toolkit를 현재 장면에 추가합니다.
 
-    ![단원 1 섹션 4 단계 1](images/mrlearning-base-ch1-4-step1.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-1.png)
 
-    > [!NOTE]
-    > [Mixed Reality Toolkit용 프로필](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Profiles/Profiles.html)을 선택하기 위한 팝업 대화 상자가 표시될 수 있습니다. *DefaultHoloLens2ConfigurationProfile*이라는 프로필을 두 번 클릭하여 선택합니다.
+Hierarchy(계층 구조) 창에서 MixedRealityToolkit 개체를 선택한 상태로 검사기 창에서 Mixed Reality Toolkit 구성 프로필을 **DefaultHoloLens2ConfigurationProfile**로 변경합니다.
 
-2. 장면에는 몇 가지 새로운 항목과 수정이 있습니다. **파일** > **다른 이름으로 저장...** 을 클릭하여 장면을 다른 이름으로 저장하고, 해당 장면에 *BaseScene*과 같은 이름을 지정합니다. 프로젝트의 *Assets* 폴더에 있는 *Scenes* 폴더에 저장하여 장면을 정리합니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-2.png)
 
-    ![단원 1 섹션 4 단계 2a](images/mrlearning-base-ch1-4-step2a.JPG)
+Unity 메뉴에서 **File(파일)**  > **Save As(다른 이름으로 저장)...** 를 차례로 선택하여 Save Scene(장면 저장) 창을 엽니다.
 
-    ![단원 1 섹션 4 단계 2b](images/mrlearning-base-ch1-4-step2b.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-3.png)
+
+Save Scene 창에서 프로젝트의 **Scenes(장면)** 폴더로 이동하여 장면에 적합한 이름(예: _시작_)을 지정하고, **Save(저장)** 단추를 클릭하여 장면을 저장합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-4.png)
 
 ## <a name="build-your-application-to-your-device"></a>디바이스로 애플리케이션 빌드
 
-1. 이전 섹션에서 *빌드 설정* 창을 닫은 경우 **파일** > **빌드 설정**으로 차례로 이동하여 *빌드 설정* 창을 다시 엽니다.
+### <a name="1-build-the-unity-project"></a>1. Unity 프로젝트 빌드
 
-    ![단원 1 섹션 5 단계 1](images/mrlearning-base-ch1-5-step1.JPG)
+Unity 메뉴에서 **File(파일)**  > **Build Settings(빌드 설정)...** 를 차례로 선택하여 Build Settings 창을 엽니다.
 
-2. 장면이 Unity에서 열려 있는 상태에서 **열린 장면 추가** 단추를 클릭하여 방금 만든 장면이 *빌드 중 장면* 목록에 있는지 확인합니다.
+Build Settings 창에서 **Add Open Scenes(열려 있는 장면 추가)** 단추를 클릭하여 현재 장면을 **Scenes In Build(빌드 중인 장면)** 목록에 추가한 다음, **Build(빌드)** 단추를 클릭하여 Build Universal Windows Platform(유니버설 Windows 플랫폼 빌드) 창을 엽니다.
 
-3. **빌드** 단추를 눌러 빌드 프로세스를 시작합니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-1.png)
 
-    ![단원 1 섹션 5 단계 3](images/mrlearning-base-ch1-5-step3.JPG)
+Build Universal Windows Platform 창에서 빌드를 저장할 적합한 위치(예: _D:\MixedRealityLearning\Builds_)를 선택하고, 새 폴더를 만들어 적합한 이름(예: _GettingStarted_)을 지정한 다음, **Select Folder(폴더 선택)** 단추를 클릭하여 빌드 프로세스를 시작합니다.
 
-4. 애플리케이션의 새 폴더를 만들고 이름을 지정합니다. 아래 이미지에서는 애플리케이션을 포함할 App이라는 폴더가 만들어졌습니다. **폴더 선택**을 클릭하여 빌드를 새로 만든 폴더에 시작합니다. 빌드가 완료되면에 Unity에서 *빌드 설정* 창을 닫을 수 있습니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-2.png)
 
-    ![단원 1 섹션 5 단계 4](images/mrlearning-base-ch1-5-step4.JPG)
+Unity에서 빌드 프로세스가 완료될 때까지 기다립니다.
 
-    >[!IMPORTANT]
-    >빌드가 실패하는 경우 다시 빌드하거나 Unity를 다시 시작한 후 다시 빌드합니다. 오류: CS0246 = "XX" 유형 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 누락되었습니까?와 같은 오류가 표시되는 경우 [Windows 10 SDK(10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk)를 설치해야 할 수 있습니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step1-3.png)
 
-5. 빌드가 완료된 후 새로 빌드한 애플리케이션 파일을 포함하는 새로 만든 폴더를 엽니다. *MixedRealityBase.sln* 솔루션 또는 해당 이름(프로젝트에 대한 대체 이름을 사용한 경우)을 두 번 클릭하여 Visual Studio에서 솔루션 파일을 엽니다.
+### <a name="2-build-and-deploy-the-application"></a>2. 애플리케이션 빌드 및 배포
 
-    >[!NOTE]
-    >새로 만든 폴더(즉, 이전 단계의 명명 규칙을 따르는 경우 *App* 폴더)를 열어야 합니다. 이 폴더 외부에 비슷한 이름의 .sln 파일이 있으므로 빌드 폴더 내의 .sln 파일과 혼동하지 않도록 주의합니다. 폴더 구조는 아래 이미지와 비슷하게 표시됩니다.
-    >
-    >Visual Studio에서 새로운 구성 요소를 설치하라는 메시지를 표시하면 ["도구 설치" 페이지](install-the-tools.md)에 지정된 모든 필수 구성 요소가 설치되어 있는지 확인합니다.
+빌드 프로세스가 완료되면 Unity에서 빌드를 저장한 위치를 열라는 메시지를 Windows 파일 탐색기에 표시합니다. 폴더 내부를 탐색하고 솔루션 파일을 두 번 클릭하여 Visual Studio에서 엽니다.
 
-    ![단원 1 섹션 5 단계 5](images/mrlearning-base-ch1-5-step5.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-1.png)
 
-6. HoloLens 2를 PC에 연결합니다. 이러한 지침에서는 HoloLens 2 디바이스에 배포한다고 가정하지만, [HoloLens 2 에뮬레이터](using-the-hololens-emulator.md)에 배포하거나 [테스트용으로 로드할 앱 패키지](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>)를 만들도록 선택할 수도 있습니다.
+> [!NOTE]
+> Visual Studio에서 새 구성 요소를 설치하라는 메시지가 표시되면 [도구 설치](install-the-tools.md) 설명서에서 지정한 대로 모든 필수 구성 요소가 설치되어 있는지 확인합니다.
 
-    >[!IMPORTANT]
-    >디바이스에 빌드하기 전에 디바이스가 *개발자 모드*에 있고 개발 머신과 페어링되어야 합니다. 이 두 단계는 모두 [이 지침](using-visual-studio.md)에 따라 완료할 수 있습니다.
+Visual Studio에서 **마스터** 또는 **릴리스** 구성, **ARM** 아키텍처 및 **디바이스**를 대상으로 선택하여 HoloLens 2를 구성합니다.
 
-7. *릴리스* 또는 *마스터* 구성, *ARM* 아키텍처 및 대상으로 *디바이스*를 선택하여 HoloLens 2에 빌드하도록 Visual Studio를 구성합니다.
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
-    ![단원 1 섹션 5 단계 8](images/mrlearning-base-ch1-5-step7.JPG)
+HoloLens 2를 컴퓨터에 연결합니다.
 
-8. 마지막 단계는 **디버그** > **디버깅하지 않고 시작**을 차례로 선택하여 빌드하고 디바이스에 배포하는 것입니다. *디버깅하지 않고 시작*을 선택하면 빌드 성공 시 애플리케이션이 디바이스에서 즉시 시작되지만, 디버거가 연결되지 않고 정보가 Visual Studio에 표시되지 않습니다. 따라서 HoloLens 2에서 애플리케이션이 실행되는 동안 USB 케이블 연결을 끊어도 애플리케이션이 중지되지 않습니다.
+> [!IMPORTANT]
+> 디바이스에 빌드하기 전에 디바이스가 [개발자 모드]에 있고 개발 머신과 페어링되어야 합니다. 이 두 단계는 모두 [이러한 지침](using-visual-studio.md)에 따라 완료할 수 있습니다.
 
-    > [!NOTE]
-    > 애플리케이션을 자동으로 시작하지 않고 **빌드** > **솔루션 배포**를 차례로 선택하여 디바이스에 배포할 수도 있습니다.
+마지막 단계는 **디버그** > **디버깅하지 않고 시작**을 차례로 선택하여 빌드하고 디바이스에 배포하는 것입니다.
 
-    ![단원 1 섹션 5 단계 9](images/mrlearning-base-ch1-5-step8.JPG)
+![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-3.png)
+
+이러한 지침에서는 HoloLens 2 디바이스에 배포한다고 가정하지만, [HoloLens 2 에뮬레이터](using-the-hololens-emulator.md)에 배포하거나 [사이드로드용 앱 패키지](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>)를 만들 수도 있습니다.
+
+[디버깅하지 않고 시작]을 선택하면 빌드 성공 시 애플리케이션이 디바이스에서 즉시 시작되지만, 디버거가 연결되지 않고 정보가 Visual Studio에 표시되지 않습니다. 따라서 HoloLens 2에서 애플리케이션이 실행되는 동안 USB 케이블 연결을 끊어도 애플리케이션이 중지되지 않습니다.
+
+애플리케이션을 자동으로 시작하지 않고 디바이스에 배포하려면 빌드 > 솔루션 배포를 차례로 선택합니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
-이제 첫 번째 HoloLens 2 애플리케이션을 배포했습니다. 연습을 진행하면서 HoloLens 2에서 인식한 모든 표면이 포함된 공간 매핑 메시가 표시됩니다. 또한 손을 추적하기 위한 손 및 손가락의 표시기와 애플리케이션 성능을 감시하기 위한 프레임 속도 카운터가 표시됩니다. 이러한 기능은 Mixed Reality Toolkit과 함께 기본적으로 포함되어 있는 기본적인 기능 중 일부에 불과합니다. 다음 단원에서는 더 많은 콘텐츠와 대화형 작업을 장면에 추가하여 HoloLens 2 및 Mixed Reality Toolkit의 기능을 전체적으로 살펴볼 수 있습니다.
+<!-- TODO: Consider cleanup and adding in app screenshots -->
+이제 첫 번째 HoloLens 2 애플리케이션을 배포했습니다. 연습을 진행하면서 HoloLens 2에서 인식한 모든 표면이 포함된 공간 매핑 메시가 표시됩니다. 또한 손을 추적하기 위한 손 및 손가락의 표시기와 애플리케이션 성능을 감시하기 위한 프레임 속도 카운터가 표시됩니다. 이러한 기능은 Mixed Reality Toolkit과 함께 기본적으로 포함되어 있는 기본적인 기능 중 일부에 불과합니다. 다음 자습서에서는 더 많은 콘텐츠와 대화형 작업을 장면에 추가하여 HoloLens 2 및 Mixed Reality Toolkit의 기능을 완벽하게 살펴볼 수 있습니다.
 
 > [!NOTE]
-> 앱에서 시각적 프로파일러를 확인할 수 있습니다. [5단원](mrlearning-base-ch5.md)의 음성 명령을 사용하여 프레임 속도 카운터를 설정/해제하는 방법을 설명합니다. 일반적으로 코드 변경이 성능에 영향을 줄 수 있는 경우를 이해하기 위해 개발 중에 항상 시각적 프로파일러를 표시하는 것이 좋습니다. HoloLens 2 애플리케이션은 [60FPS에서 지속적으로 실행](understanding-performance-for-mixed-reality.md)되어야 합니다.
+> 앱에서 진단 프로파일러를 확인할 수 있습니다. **Toogle Diagnostics** 음성 명령을 사용하여 표시 유형을 전환할 수 있습니다. 그러나 일반적으로 개발 중에 프로파일러를 항상 표시하여 앱의 변경이 성능에 영향을 줄 수 있는 시기를 파악하는 것이 좋습니다. 예를 들어 HoloLens 2 애플리케이션은 [60FPS로 계속 실행](understanding-performance-for-mixed-reality.md)해야 합니다.
 
-[다음 단원: 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 도구 키트 구성](mrlearning-base-ch2.md)
+[다음 자습서: 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 도구 키트 구성](mrlearning-base-ch2.md)
