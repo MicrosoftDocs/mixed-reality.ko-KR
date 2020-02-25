@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: d3392df9bfad5938d71d3a01999be51834a98a5d
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373450"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554403"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화
 
@@ -154,13 +154,13 @@ Import Unity Package(Unity 패키지 가져오기) 창에서 **All(모두)** 단
 
 다음 Unity 사용자 지정 패키지를 다운로드합니다.
 
-* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.2.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage)
+* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage)
 
 Unity 메뉴에서 **Assets(자산)**  > **Import Package(패키지 가져오기)**  > **Custom Package(사용자 지정 패키지)...** 를 차례로 선택하여 Import package(패키지 가져오기)... 창을 엽니다.
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-1.png)
 
-Import package... 창에서 다운로드한 **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage**를 선택하고 **Open(열기)** 단추를 클릭합니다.
+Import package... 창에서 다운로드한 **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage**를 선택하고 **Open(열기)** 단추를 클릭합니다.
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-2.png)
 
@@ -190,9 +190,12 @@ Unity 메뉴에서 **Mixed Reality Toolkit** > **Add to Scene and Configure(장�
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-1.png)
 
-Hierarchy(계층 구조) 창에서 MixedRealityToolkit 개체를 선택한 상태로 검사기 창에서 Mixed Reality Toolkit 구성 프로필을 **DefaultHoloLens2ConfigurationProfile**로 변경합니다.
+Hierarchy(계층 구조) 창에서 MixedRealityToolkit 개체를 선택한 상태로 검사기 창에서 Mixed Reality Toolkit 구성 프로필이 **DefaultMixedRealityToolkitConfigurationProfile**로 설정되어 있는지 확인합니다.
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-2.png)
+
+> [!IMPORTANT]
+> 일반적으로는 HoloLens 2용으로 개발할 때 DefaultHoloLens2ConfigurationProfile을 사용합니다. 그러나 여기에서는 이 자습서의 목적상 DefaultMixedRealityToolkitConfigurationProfile를 사용하고, 다음 자습서인 [사용자 인터페이스 만들기 및 Mixed Reality Toolkit 구성](mrlearning-base-ch2.md)에서 DefaultHoloLens2ConfigurationProfile을 사용합니다.
 
 Unity 메뉴에서 **File(파일)**  > **Save As(다른 이름으로 저장)...** 를 차례로 선택하여 Save Scene(장면 저장) 창을 엽니다.
 
