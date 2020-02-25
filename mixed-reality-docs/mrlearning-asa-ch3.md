@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250706"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553949"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Azure 공간 고정 피드백 표시
 
@@ -26,7 +26,7 @@ ms.locfileid: "77250706"
 
 계층 창에서 **textcontent** 개체 > **지침** 을 마우스 오른쪽 단추로 클릭 하 고 **3d 개체** ** > 선택 하 여 TextMeshPro** Text 개체를 명령 > Textcontent 개체의 자식으로 만들고 **사용자 의견**등의 적절 한 이름을 지정 합니다.
 
-![mrlearning-기본](images/mrlearning-asa/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
 > 장면에서 작업을 더 쉽게 수행 하려면 개체 왼쪽의 눈 모양 아이콘을 클릭 하 여 ParentAnchor 개체의 <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">장면 표시 여부</a> 를 꺼짐으로 설정 합니다. 이렇게 하면 게임 내 표시를 변경 하지 않고 장면 창에서 개체를 숨깁니다.
@@ -43,15 +43,15 @@ ms.locfileid: "77250706"
 * 텍스트 메시 Pro (스크립트) **글꼴 크기** 를 0.17으로 변경 합니다.
 * 텍스트 메시 Pro (스크립트) **맞춤** 을 가운데 및 중간으로 변경 합니다.
 
-![mrlearning-기본](images/mrlearning-asa/tutorial3-section1-step1-2.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
 **사용자 의견** 개체를 선택한 상태에서 검사기 창에서 **구성 요소 추가** 단추를 사용 하 여 피드백 개체에 **앵커 피드백 스크립트 (스크립트)** 구성 요소를 추가 합니다.
 
-![mrlearning-기본](images/mrlearning-asa/tutorial3-section1-step1-3.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-**사용자** 의견 개체를 **앵커 피드백 스크립트 (스크립트)** 구성 요소의 **피드백 텍스트** 필드에 할당 합니다.
+**피드백** 개체 자체를 **앵커 피드백 스크립트 (스크립트)** 구성 요소의 **피드백 텍스트** 필드에 할당 합니다.
 
-![mrlearning-기본](images/mrlearning-asa/tutorial3-section1-step1-4.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>축하합니다.
 

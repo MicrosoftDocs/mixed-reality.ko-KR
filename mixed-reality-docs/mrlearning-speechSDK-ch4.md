@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003212"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554005"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. 의도 및 자연어 이해 설정
 
@@ -33,7 +33,7 @@ ms.locfileid: "75003212"
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. [Azure Portal](https://portal.azure.com/)에 로그인합니다. 로그인 하면 리소스 만들기를 클릭 하 고 "Language Understanding"를 검색 한 다음 Enter 키를 누릅니다.
+2. [Azure Portal](https://portal.azure.com/)에 로그인 합니다. 로그인 하면 리소스 만들기를 클릭 하 고 "Language Understanding"를 검색 한 다음 Enter 키를 누릅니다.
 
     ![mrlearning-speech-ch4-1-step2](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -147,14 +147,22 @@ ms.locfileid: "75003212"
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. 검사기 패널에서 "LunarcomIntentRecognizer"의 Luis 끝점 필드에 22 단계에서 저장 한 끝점 URL을 입력 합니다.
+23. 검사기 패널에서 "LunarcomIntentRecognizer"의 Luis 끝점 필드에 21 단계에서 저장 한 끝점 URL을 입력 합니다.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >검사기 패널의 "LunarcomOfflineRecognizer" 구성 요소에서 "SimulateOfflineMode"에 대해 "사용 안 함"이 선택 되어 있는지 확인 합니다. 그렇지 않으면 프로그램 테스트가 작동 하지 않습니다.
 
-24. Unity 편집기에서 재생 단추를 누르고 로켓 단추를 클릭 하 여 의도 인식을 시작 합니다. "로켓 시작 단추를 선택 하십시오." 라는 구를 Utter.
+24. 프로젝트 창에서 자산 > MRTK로 이동 합니다. 자습서. GetPrefabs가 시작 > > RocketLauncher 폴더에서 RocketLauncher_Complete prefab을 계층 창으로 끌어 Lunarcom_Base 개체 앞에 배치 합니다.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. 계층 창에서 Lunarcom_Base 개체를 선택 하 고 Lunarcom 의도 인식기 (스크립트) 구성 요소를 찾은 다음 RocketLauncher_Complete > Button 개체를 확장 하 고 각 단추 개체를 해당 하는 음력 시작 관리자 단추에 할당 합니다. 필드가.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Unity 편집기에서 재생 단추를 누르고 로켓 단추를 클릭 하 여 의도 인식을 시작 합니다. "로켓 시작 단추를 선택 하십시오." 라는 구를 Utter.
 
     >[!NOTE]
     >앱에서 원하는 함수를 인식 하 고 로켓 단추를 활성화 했습니다.

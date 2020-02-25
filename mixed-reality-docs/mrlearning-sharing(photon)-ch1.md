@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901480"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553821"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Photon Unity 네트워킹 설정
 
@@ -25,18 +25,18 @@ ms.locfileid: "75901480"
 * Photon Unity 네트워킹을 찾고 가져오는 방법 알아보기
 * 로컬 Photon 서버 설정
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 >[!TIP]
 >[시작 자습서](mrlearning-base.md) 및 [Azure 공간 앵커로 시작 된 자습서](mrlearning-asa-ch1.md) 자습서 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
 
-* 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
+* 올바른 [도구가 설치](install-the-tools.md)된 상태로 구성된 Windows 10 PC
 * Windows 10 SDK 10.0.18362.0 이상
-* 몇 가지 C# 기본 프로그래밍 기능
-* [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode) HoloLens 2 장치
+* 몇 가지 기본 C# 프로그래밍 기능
+* [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 
 >[!IMPORTANT]
->이 자습서 시리즈에는 <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019.1</a> 이 필요 하며 권장 버전은 unity 2019.1.14입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
+> 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
 
 ## <a name="setting-up-photon"></a>Photon 설정
 

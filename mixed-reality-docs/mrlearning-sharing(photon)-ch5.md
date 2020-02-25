@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: a3b136023b0beea7cf6eecd52a9a21447576d482
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: c1b64b9d32409d61284f21ca216417ece4767d1b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901464"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553811"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Azure 공간 앵커를 공유 환경에 통합
 
@@ -42,11 +42,17 @@ ms.locfileid: "75901464"
 
     ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. 공유 모듈을 테스트 하려면 azure 공간 앵커 세션을 시작 하는 "Azure 만들기 세션 시작" 단추를 클릭 한 다음 "Azure 앵커 만들기" 단추를 클릭 하 여 azure 앵커를 만듭니다. Azure 앵커가 생성 될 때까지 기다립니다. Azure 앵커를 만든 후 "Azure 앵커 공유" 단추를 클릭 하 여 HoloLens에서 만든 azure 앵커를 공유 합니다.
+6. 4 단계를 반복 하 여 StartAzureSession () 함수를 StartAzureSessionButton에 연결 합니다.
 
-7. 다른 HoloLens에서 공유 azure 앵커를 수신 하려면 "Azure GLOBAL.ASA 세션 시작"을 클릭 하 여 현재 GLOBAL.ASA 세션을 시작 하 고 가져옵니다.
+7. 4 단계를 반복 하 여 CreateAzureAnchor () 함수를 CreateAzureAnchorButton에 연결 하 고 TableAnchor 개체가 함수의 매개 변수 ' 게임 개체 ' 필드에 할당 되었는지 확인 합니다.
 
-8. "Azure 앵커 가져오기" 단추를 클릭 하 여 다른 HoloLens에서 공유 azure 앵커를 가져옵니다.
+8. Azure [리소스에 장면 연결](mrlearning-asa-ch1.md#4-connect-the-scene-to-the-azure-resource) 지침에 따라 Azure 공간 앵커 서비스 자격 증명을 추가 합니다.
+
+9. 공유 모듈을 테스트 하려면 azure 공간 앵커 세션을 시작 하는 "Azure 만들기 세션 시작" 단추를 클릭 한 다음 "Azure 앵커 만들기" 단추를 클릭 하 여 azure 앵커를 만듭니다. Azure 앵커가 생성 될 때까지 기다립니다. Azure 앵커를 만든 후 "Azure 앵커 공유" 단추를 클릭 하 여 HoloLens에서 만든 azure 앵커를 공유 합니다.
+
+10. 다른 HoloLens에서 공유 azure 앵커를 수신 하려면 "Azure GLOBAL.ASA 세션 시작"을 클릭 하 여 현재 GLOBAL.ASA 세션을 시작 하 고 가져옵니다.
+
+11. "Azure 앵커 가져오기" 단추를 클릭 하 여 다른 HoloLens에서 공유 azure 앵커를 가져옵니다.
 
 ## <a name="congratulations"></a>축하합니다.
 

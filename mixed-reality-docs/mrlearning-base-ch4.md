@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: a1b26d56b4693ef23f2d77ba53e0961693489a3a
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 7eb38e205237257e400550299fdeebb73ba746f1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130284"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555498"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5.3D 개체와 상호 작용
 
@@ -29,20 +29,20 @@ ms.locfileid: "77130284"
 
 Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
-* [MRTK. HoloLens2.2.2.0.0. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.0.unitypackage)
+* [MRTK. HoloLens2.2.3.0.2. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
 
 자습서 자산을 가져온 후 프로젝트 창이 다음과 같이 표시 됩니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section1-step1-1.png)
 
 > [!TIP]
 > Unity 사용자 지정 패키지를 가져오는 방법에 대 한 미리 알림은 [혼합 현실 도구 키트 가져오기](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) 명령을 참조 하세요.
 
 ## <a name="decluttering-the-scene-view"></a>장면 보기 Decluttering
 
-장면에서 작업을 더 쉽게 수행 하려면 개체 왼쪽의 **눈 모양** 아이콘을 클릭 하 여 큐브 및 buttoncollection 개체에 대 한 **장면 표시 유형을** off로 설정 합니다. 이렇게 하면 게임에서 표시 되지 않는 표시를 변경 하지 않고 장면 창에서 개체를 숨깁니다.
+장면에서 작업을 더 쉽게 수행 하려면 개체 왼쪽의 **눈 모양** 아이콘을 클릭 하 여 **큐브** 및 **buttoncollection** 개체에 대 한 **장면 표시 유형을** off로 설정 합니다. 이렇게 하면 게임에서 표시 되지 않는 표시를 변경 하지 않고 장면 창에서 개체를 숨깁니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section2-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section2-step1-1.png)
 
 > [!TIP]
 > 장면 표시 유형 컨트롤 및 장면 보기와 워크플로를 최적화 하는 데 사용할 수 있는 방법에 대 한 자세한 내용은 Unity의 <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">장면 표시 유형</a> 설명서를 참조 하세요.
@@ -69,19 +69,18 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 * Platonic
 * TheModule
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section3-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-1.png)
 
 계층 창에서 **3 개의 큐브** 를 **3DObjectCollection** 의 자식 개체로 만들고 해당 변환 **배율을** X = 0.15, Y = 0.15, Z = 0.15로 설정 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section3-step1-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-2.png)
 
-<!-- TODO: Finish -->
 > [!TIP]
 > 위에 나열 된 단계를 수행 하는 방법에 대 한 미리 알림은 [사용자 인터페이스 만들기 및 혼합 현실 도구 키트 구성](mrlearning-base-ch2.md) 자습서를 참조할 수 있습니다.
 
 각 큐브를 볼 수 있도록 큐브 위치를 변경 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section3-step1-3.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-3.png)
 
 프로젝트 창에서 **자산** > **MixedRealityToolkit** > **standardassets** > **자료** 로 이동 하 여 mrtk와 함께 제공 되는 자료를 확인 합니다.
 
@@ -89,19 +88,19 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 * MRTK_Standard_GlowingCyan
 * MRTK_Standard_GlowingOrange
-* MRTK_Standard_Green:
+* MRTK_Standard_Green
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section3-step1-4.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-4.png)
 
 ### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. 그리드 개체 컬렉션 (스크립트) 구성 요소 추가 및 구성
 
-3DObjectCollection 개체에 **그리드 개체 컬렉션 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
+**3DObjectCollection** 개체에 **그리드 개체 컬렉션 (스크립트)** 구성 요소를 추가 하 고 다음과 같이 구성 합니다.
 
-* **정렬 유형** 을 자식 순서로 변경 하 여 자식 개체가 부모 개체 아래에 배치 된 순서 대로 정렬 되도록 합니다.
+* **정렬 유형** 을 **자식 순서로** 변경 하 여 자식 개체가 부모 개체 아래에 배치 된 순서 대로 정렬 되도록 합니다.
 
 그런 다음 **컬렉션 업데이트** 단추를 클릭 하 여 새 구성을 적용 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section3-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step2-1.png)
 
 ## <a name="manipulating-3d-objects"></a>3D 개체 조작
 
@@ -127,9 +126,9 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 ### <a name="1-add-the-manipulation-handler-script-component-to-all-the-objects"></a>1. 모든 개체에 조작 처리기 (스크립트) 구성 요소를 추가 합니다.
 
-계층 창에서 **치즈** 개체를 선택 하 고 **shift** 키를 누른 채 **Cube ()** 개체를 선택 하 고 모든 개체에 **조작 처리기 (스크립트)** 구성 요소를 추가 합니다.
+계층 창에서 **치즈** 개체를 선택 하 고 **shift** 키를 누른 채 **Cube () 2** 개체를 선택 하 고 모든 개체에 **조작 처리기 (스크립트)** 구성 요소를 추가 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step1-1.png)
 
 > [!NOTE]
 > 이 자습서에서는 colliders가 이미 prefabs에 추가 되었습니다. 큐브 개체와 같은 Unity 기본 형식의 경우 개체를 만들 때 Collider 구성 요소가 자동으로 추가 됩니다. 위의 이미지에서 colliders는 녹색 윤곽선으로 표시 됩니다. Colliders에 대 한 자세한 내용은 Unity의 <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">Collider</a> 설명서를 참조 하세요.
@@ -138,7 +137,7 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 계층 창에서 **치즈** 개체를 선택 하 고 **shift** 키를 누른 상태에서 **TheModule** 개체를 선택 하 고 모든 개체에 **Near 인터랙션 Grabbable (스크립트)** 구성 요소를 추가 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step2-1.png)
 
 ### <a name="3-configure-the-manipulation-handler-script-component"></a>3. 조작 처리기 (스크립트) 구성 요소 구성
 
@@ -146,46 +145,50 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 **큐브** 개체의 경우 기본 조작 동작을 수행 하려면 모든 속성을 기본적으로 그대로 둡니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-1.png)
 
 > [!TIP]
 > 구성 요소를 기본값으로 다시 설정 하려면 구성 요소의 설정 아이콘을 선택 하 고 다시 설정을 선택 하면 됩니다.
 
 #### <a name="restrict-manipulation-to-scale-only"></a>조작을 확장 전용으로 제한
 
-**Cube (1)** 개체의 경우 사용자가 개체의 크기를 변경할 수 있도록 **두 개의 전달 조작 유형을** Scale으로 변경 합니다.
+**Cube (1)** 개체의 경우 사용자가 개체의 크기를 변경할 수 있도록 **두 개의 전달 조작 유형을** **Scale** 으로 변경 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-2.png)
 
 #### <a name="constrain-the-movement-to-a-fixed-distance-from-the-user"></a>사용자 로부터 고정 거리가 이동 하도록 제한
 
-**Cube (2)** 개체의 경우 이동 **시** 의 거리를 변경 하 여 Head에서의 거리를 수정 합니다. 그러면 개체가 이동 될 때 사용자와 동일한 거리가 유지 됩니다.
+**Cube (2)** 개체의 경우 이동 **시** 의 거리를 변경 하 여 **Head에서의 거리를 수정** 합니다. 그러면 개체가 이동 될 때 사용자와 동일한 거리가 유지 됩니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-3.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-3.png)
 
 #### <a name="default-grabbable-manipulation"></a>기본 grabbable 조작
 
 **치즈**, **CoffeCup**및 **EarthCore** 개체의 경우 기본 grabbable 조작 동작을 수행 하려면 모든 속성을 기본적으로 그대로 둡니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-4.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-4.png)
 
 #### <a name="remove-the-ability-of-far-manipulation"></a>Far 조작 기능 제거
 
-**Octa** 개체의 경우에는 사용자가 추적 된 손을 사용 하 여 직접 개체와 상호 작용할 수 있도록 [ **Far 조작 허용** ] 확인란의 선택을 취소 합니다.
+**Octa** 개체의 경우, 사용자가 추적 된 손을 사용 하 여 직접 개체와 상호 작용할 수 있도록이 작업을 수행 하는 데 **오래 된 조작 허용** 확인란을 선택 취소 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-5.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-5.png)
 
 #### <a name="make-an-object-rotate-around-its-center"></a>개체의 중심을 기준으로 개체를 회전 하도록 설정
 
-**Platonic** 개체의 경우에는 한 번 회전 **모드** 를 변경 하 여 개체 중심을 **회전할 수 있습니다** . 그러면 사용자가 개체를 한 손으로 회전할 때 개체의 중심을 기준으로 회전 하 게 됩니다.
+**Platonic** 개체의 경우에는 한 번 회전 **모드** 를 변경 하 여 **개체 중심을 회전할** 수 있습니다. 그러면 사용자가 개체를 한 손으로 회전할 때 개체의 중심을 기준으로 회전 하 게 됩니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-6.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-6.png)
 
-#### <a name="prevent-movement-after-object-is-released"></a>개체를 릴리스한 후의 이동 방지
+#### <a name="keep-movement-after-object-is-released"></a>개체를 릴리스한 후 이동 유지
 
-**TheModule** 개체의 경우 사용자의 손으로 개체가 해제 되 면 계속 이동 하지 않도록 **릴리스 동작** 을 Nothing으로 변경 합니다.
+**TheModule** 개체의 경우에는 **Rigidbody** 구성 요소를 추가 하 여 물리학을 사용 하도록 설정 하 고 **중력 사용** 확인란을 선택 취소 하 여 개체가 중력의 영향을 받지 않도록 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section4-step3-7.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-7.png)
+
+조작 처리기 (스크립트) 구성 요소로 돌아가서, **릴리스 동작이** **속도 유지** 및 **각도 속도 유지** 로 설정 되어 있는지 확인 합니다. 그러면 개체가 사용자의 손을 해제 된 후 계속 이동 합니다.
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-8.png)
 
 조작 처리기 구성 요소 및 관련 속성에 대해 자세히 알아보려면 [Mrtk 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)의 [조작 처리기](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) 가이드를 참조 하세요.
 
@@ -205,7 +208,7 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 검사기 창에서 **EarthCore** 개체를 선택 하 고 EarthCore 개체에 **경계 상자 (스크립트)** 구성 요소를 추가 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section5-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step1-1.png)
 
 > [!NOTE]
 > 경계 상자 시각화는 런타임에 생성 되므로 게임 모드를 시작 하기 전에 표시 되지 않습니다.
@@ -214,7 +217,7 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 게임 모드를 시작 하려면 재생 단추를 누릅니다. 그런 다음 스페이스바를 누르고 마우스를 사용 하 여 경계 상자와 상호 작용 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section5-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step2-1.png)
 
 경계 상자 구성 요소 및 관련 속성에 대 한 자세한 내용은 [Mrtk 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)에서 [경계 상자](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) 가이드를 참조 하세요.
 
@@ -244,29 +247,29 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 계층 창에서 **Octa** 개체를 선택 하 고 **오디오 원본** 구성 요소를 Octa 개체에 추가한 다음 공간 **Blend** 를 1로 변경 하 여 공간 오디오를 사용 하도록 설정 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step1-1.png)
 
 ### <a name="2-add-the-near-interaction-touchable-script-component-to-the-object"></a>2. Near 인터랙션 Touchable (스크립트) 구성 요소를 개체에 추가 합니다.
 
 **Octa** 개체를 선택한 상태에서 **near 인터랙션 Touchable (스크립트)** 구성 요소를 Octa 개체에 추가한 다음, **범위 수정** 및 **수정 센터** 단추를 클릭 하 여와 일치 하는 근접 한 상호 작용 Touchable (스크립트)의 로컬 센터 및 범위 속성을 업데이트 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step2-1.png)
 
 ### <a name="3-add-the-hand-interaction-touch-script-component-to-the-object"></a>3. 개체에 손 모양 상호 작용 터치 (스크립트) 구성 요소를 추가 합니다.
 
 **Octa** 개체를 선택한 상태에서 Octa 개체에 **손 모양 상호 작용 터치 (스크립트)** 구성 요소를 추가 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step3-1.png)
 
 ### <a name="4-implement-the-on-touch-started-event"></a>4. 터치 시작 시 이벤트 구현
 
-핸드 상호 작용 터치 (스크립트) 구성 요소에서 small **+** 아이콘을 클릭 하 여 새 **터치 시작 ()** 이벤트를 만듭니다. 그런 다음 이벤트를 수신 하도록 **Octa** 개체를 구성 하 고 트리거할 동작으로 **PlayOneShot** 를 정의 합니다.
+**핸드 상호 작용 터치 (스크립트)** 구성 요소에서 small **+** 아이콘을 클릭 하 여 새 **터치 시작 ()** 이벤트를 만듭니다. 그런 다음 이벤트를 수신 하도록 **Octa** 개체를 구성 하 고 트리거할 동작으로 **PlayOneShot** 를 정의 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step4-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
 **자산** > **MixedRealityToolkit** > **standardassets** > 자료로 이동 하 여 mrtk와 함께 제공 되는 오디오 클립을 확인 하 고 **오디오 클립** 필드 (예: MRTK_Gem 오디오 클립)에 적절 한 오디오 클립을 할당 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step4-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
 
 > [!TIP]
 > 이벤트를 구현 하는 방법에 대 한 미리 알림은 [손 추적 제스처 및 interactable 단추](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) 지침을 참조할 수 있습니다.
@@ -275,7 +278,7 @@ Unity 사용자 지정 패키지를 다운로드 하 고 가져옵니다.
 
 게임 모드를 시작 하려면 재생 단추를 누릅니다. 그런 다음 스페이스바를 누르고 마우스를 사용 하 여 Octa 개체를 터치 하 고 소리 효과를 트리거합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial4-section6-step5-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step5-1.png)
 
 > [!NOTE]
 > 터치 상호 작용을 테스트할 때와 위의 이미지에 표시 된 것 처럼 Octa 개체 색은 작업을 수행 하는 동안 pulsated. 이 효과는 직접 상호 작용 터치 (스크립트) 구성 요소에 하드 코딩 되며 위 단계에서 완료 한 이벤트 구성의 결과가 아닙니다.

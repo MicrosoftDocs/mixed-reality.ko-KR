@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, 공간 음향, HRTF, 방 크기
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181993"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553701"
 ---
 # <a name="spatial-sound-in-unity"></a>Unity의 공간 소리
 
@@ -30,10 +30,11 @@ ms.locfileid: "75181993"
 
 ## <a name="enable-spatialization"></a>Spatialization 사용
 
-[Unity 용 NuGet](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) 을 사용 하 여 _SpatialAudio. Spatializer_ 을 설치 하 고 프로젝트의 오디오 설정에서 **microsoft Spatializer** 를 선택 합니다. 그런 다음 다음이 필요합니다.
+[Unity 용 NuGet](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) 을 사용 하 여 _SpatialAudio. Spatializer_ 을 설치 하 고 프로젝트의 오디오 설정에서 **microsoft Spatializer** 를 선택 합니다. 그리고 나서 다음을 수행합니다.
 * 계층의 개체에 **오디오 소스** 연결
 * **Spatialization 사용** 확인란을 선택 합니다.
 * **공간 Blend** 슬라이더를 ' 1 '로 이동
+* 개발자 워크스테이션에서 공간 오디오를 사용 하도록 설정 했는지 확인 합니다. 작업 표시줄에서 볼륨 아이콘을 마우스 오른쪽 단추로 클릭 하 고 공간 사운드가 "꺼짐" 이외의 항목으로 설정 되었는지 확인 하 여 사용 하도록 설정 합니다. HoloLens 2에 대 한 최고의 정보를 얻으려면 **헤드폰 용 Windows Sonic**을 선택 합니다.
 
 자세한 내용은 다음 항목을 참조하세요.
 * [Microsoft spatializer GitHub 리포지토리](https://github.com/microsoft/spatialaudio-unity)

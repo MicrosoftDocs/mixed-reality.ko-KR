@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 05728cf090b2e998e92980816943a2c3bef18dfb
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334293"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553978"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. 음성 인식 및 기록을 통합 하 고 사용
 
@@ -25,18 +25,18 @@ ms.locfileid: "75334293"
 * 음성 명령을 사용 하는 방법 알아보기
 * 음성 텍스트 기능 사용 방법 알아보기
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 >[!TIP]
 >초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
 
-* 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
+* 올바른 [도구가 설치](install-the-tools.md)된 상태로 구성된 Windows 10 PC
 * Windows 10 SDK 10.0.18362.0 이상
-* 몇 가지 C# 기본 프로그래밍 기능
-* [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode) HoloLens 2 장치
+* 몇 가지 기본 C# 프로그래밍 기능
+* [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 
 >[!IMPORTANT]
->이 자습서 시리즈에는 <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019.1</a> 이 필요 하며 권장 버전은 unity 2019.1.14입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
+> 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
 
 ## <a name="getting-started"></a>시작
 
@@ -47,7 +47,7 @@ ms.locfileid: "75334293"
     >[!NOTE]
     >위의 이미지에 표시 된 것 처럼 템플릿이 3D로 설정 되었는지 확인 합니다.
 
-2. [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [기초 패키지 버전 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage)을 다운로드하여 PC의 폴더에 저장합니다. 패키지를 Unity 프로젝트로 가져옵니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 초보자를 위한 [자습서-2 단원을 참조 하세요. 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)
+2. [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [foundation 패키지 버전 2.3.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) 를 다운로드 하 여 PC의 폴더에 저장 합니다. 패키지를 Unity 프로젝트로 가져옵니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 초보자를 위한 [자습서-2 단원을 참조 하세요. 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)
 
 3. Unity 자산 패키지용 Azure [SPEECH SDK](https://aka.ms/csspeech/unitypackage) 를 다운로드 하 여 가져옵니다. 자산을 클릭 하 고 패키지 가져오기를 선택한 다음 사용자 지정 패키지를 선택 하 여 음성 SDK 패키지를 가져옵니다. 이전에 다운로드 한 음성 SDK 패키지를 찾아서 열어서 가져오기 프로세스를 시작 합니다.
 
@@ -59,9 +59,13 @@ ms.locfileid: "75334293"
 
     ![mrlearning-speech-ch1-1-step4](images/mrlearning-speech-ch1-1-step4.png)
 
-5. [이 링크](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2)를 클릭 하 여 Lunarcom 패키지 라고도 하는 Speech SDK 모듈 자산 팩을 다운로드 합니다. Lunarcom asset 패키지는 Azure의 Speech SDK의 실용적인 사용을 보여 주기 위해이 단원 시리즈를 위해 개발 된 자산 및 스크립트 모음입니다. 궁극적으로 시작 자습서에서 개발한 음력 모듈 어셈블리 환경과 관련 된 음성 명령 터미널입니다 [-단원 7. 음력 모듈 샘플 응용 프로그램을 만듭니다](mrlearning-base-ch6.md).
+5. 자습서 자산을 다운로드 합니다.
+    * [MRTK. HoloLens2.2.3.0.2. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [SpeechSDKAssets. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (버전 1.2)
 
-6. Mixed Reality Toolkit 및 Speech SDK를 가져오는 것과 비슷한 단계를 수행 하 여 Lunarcom asset 패키지를 Unity 프로젝트로 가져옵니다.
+    SpeechSDKAssets asset 패키지는이 자습서 시리즈를 위해 개발 된 자산 및 스크립트 모음으로, Azure의 음성 SDK를 효과적으로 사용 하 고 있습니다. 이는 궁극적으로 시작 자습서에서 개발한 로켓 시작 관리자 어셈블리 환경을 궁극적으로 인터페이스 하는 음성 명령 터미널입니다 [. 음력 모듈 샘플 응용 프로그램을 만듭니다](mrlearning-base-ch6.md).
+
+6. Mixed Reality Toolkit 및 Speech SDK를 가져오는 것과 비슷한 단계를 수행 하 여 두 자습서 자산 패키지를 Unity 프로젝트로 가져옵니다.
 
 7. MRTK (Mixed Reality Toolkit)를 구성 합니다.
 
@@ -69,7 +73,7 @@ ms.locfileid: "75334293"
 
     ![mrlearning-speech-ch1-1-step7a](images/mrlearning-speech-ch1-1-step7a.png)
 
-    표시 되는 팝업에서 DefaultHoloLens2ConfigurationProfile을 선택 하 여 Mixed Reality Toolkit의 활성 프로필로 설정 합니다.
+    장면 계층에서 선택한 MixedRealityToolkit 개체를 사용 하 여 검사기 창에서 DefaultHoloLens2ConfigurationProfile를 선택 하 여 Mixed Reality Toolkit의 활성 프로필로 만듭니다.
 
     ![mrlearning-speech-ch1-1-step7b](images/mrlearning-speech-ch1-1-step7b.png)
 
@@ -189,6 +193,6 @@ ms.locfileid: "75334293"
 
 ## <a name="congratulations"></a>축하합니다.
 
-Azure에서 제공 하는 응용 프로그램에서 음성 인식을 설정 했습니다. 응용 프로그램을 실행 하 여 모든 기능과 기능이 제대로 작동 하는지 확인 합니다. 22 단계에서 입력 한 절전 모드 해제 단어를 말한 후 터미널을 활성화 합니다. 마이크 단추를 선택 하 여 음성 인식을 시작 합니다. 말하기를 시작 합니다. 말할 때 터미널에 transcribed 단어가 표시 됩니다. 음성 인식을 중지 하려면 마이크 단추를 두 번 누릅니다. 터미널을 해제 하 여 Lunarcom 터미널을 숨깁니다. 다음 단원에서는 장치 지원 음성 인식을 사용 하도록 동적으로 전환 하는 방법에 대해 설명 합니다 .이는 HoloLens 2가 오프 라인 상태 이기 때문에 Azure의 speech SDK를 사용할 수 없는 경우입니다.
+Azure에서 제공 하는 응용 프로그램에서 음성 인식을 설정 했습니다. 응용 프로그램을 실행 하 여 모든 기능과 기능이 제대로 작동 하는지 확인 합니다. 25 단계에서 입력 한 절전 모드 해제 단어를 말한 후 터미널을 활성화 합니다. 마이크 단추를 선택 하 여 음성 인식을 시작 합니다. 말하기를 시작 합니다. 말할 때 터미널에 transcribed 단어가 표시 됩니다. 음성 인식을 중지 하려면 마이크 단추를 두 번 누릅니다. 터미널을 해제 하 여 Lunarcom 터미널을 숨깁니다. 다음 단원에서는 장치 지원 음성 인식을 사용 하도록 동적으로 전환 하는 방법에 대해 설명 합니다 .이는 HoloLens 2가 오프 라인 상태 이기 때문에 Azure의 speech SDK를 사용할 수 없는 경우입니다.
 
 [다음 자습서: 2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가](mrlearning-speechSDK-ch2.md)

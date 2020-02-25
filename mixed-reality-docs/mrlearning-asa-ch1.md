@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 21883e95e92f8808bcf270e6d8091f31933ab6fa
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 0163b61bfbf8bd583532092581d94f63e1c2a624
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250868"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554682"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
 
@@ -30,25 +30,27 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작 합니다. 이 세 부분
 * HoloLens 2 용 Azure 공간 앵커를 사용 하 여 개발 하는 기본 사항 알아보기
 * 공간 앵커 만들기, 업로드 및 다운로드
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 >[!TIP]
 >초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
 
-* 올바른 [도구로](install-the-tools.md) 구성 된 WINDOWS 10 PC
+* 올바른 [도구가 설치](install-the-tools.md)된 상태로 구성된 Windows 10 PC
 * Windows 10 SDK 10.0.18362.0 이상
-* 몇 가지 C# 기본 프로그래밍 기능
-* [개발용으로 구성 된](using-visual-studio.md#enabling-developer-mode) HoloLens 2 장치
-* Unity 2019.2가 설치 되 고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가 된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity 허브</a>
+* 몇 가지 기본 C# 프로그래밍 기능
+* [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
+* Unity 2019.2.X가 설치되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
 * [빠른 시작: Azure 공간 앵커를 사용 하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [공간 앵커 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료 합니다.
 
 > [!IMPORTANT]
-> 이 자습서 시리즈의 권장 Unity 버전은 Unity 2019.2. X입니다. 이렇게 하면 위에 연결 된 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항이 나 권장 사항이 대체 됩니다.
+> 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
 
 ## <a name="creating-the-unity-project"></a>Unity 프로젝트 만들기
 <!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
 
-이 섹션에서는 새 Unity 프로젝트를 만들고 MRTK 개발을 위한 준비를 합니다. 이를 위해 다음 단계를 포함 하 여 [장치에 응용 프로그램 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침을 제외 하 [고 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)를 따르세요.
+이 섹션에서는 새 Unity 프로젝트를 만들고 MRTK 개발을 위한 준비를 합니다.
+
+이를 위해 먼저 다음 단계를 포함 하 여 [장치에 응용 프로그램 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침을 제외 하 [고 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)를 수행 합니다.
 
 1. [새 Unity 프로젝트를 만들고](mrlearning-base-ch1.md#create-new-unity-project) 적절 한 이름 (예: *Mrtk 자습서*)을 지정 합니다.
 
@@ -62,8 +64,10 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작 합니다. 이 세 부분
 
 6. [혼합 현실 도구 키트를 Unity 장면에 추가](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) 하 고 *AzureSpatialAnchors* 와 같은 적절 한 이름을 장면에 제공 합니다.
 
+그런 다음 [혼합 현실 도구 키트 프로필을 구성 하는 방법 (공간 인식 표시 옵션 변경)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) 지침에 따라 장면의 MRTK 구성 프로필을 **DefaultHoloLens2ConfigurationProfile** 변경 하 고 공간 인식 메시의 표시 옵션을 **폐색**로 변경 합니다.
+
 > [!CAUTION]
-> 위에서 설명한 [Mixed Reality 도구 키트에 대 한 unity 프로젝트 구성 도구](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) 설명에 설명 된 것 처럼 Unity 용 MSBuild는 사용할 모든 sdk를 지원 하지 않을 수 있으며 사용 하도록 설정 된 후에 사용 하지 않도록 설정 하는 것이 어려울 수 있습니다. 따라서 Unity에 대해 MSBuild를 사용 하지 않는 것이 좋습니다.
+> 위에서 설명한 [Mixed Reality 도구 키트에 대 한 unity 프로젝트 구성 도구](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) 설명에 설명 된 것 처럼 unity에 대해 MSBuild를 사용 하지 않는 것이 좋습니다.
 
 ## <a name="adding-inbuilt-unity-packages"></a>기본 제공 Unity 패키지 추가
 <!-- TODO: Consider renaming to 'Installing AR Foundation' -->
@@ -86,8 +90,8 @@ Unity 메뉴에서 **창** > **패키지 관리자**를 선택 합니다.
 다음 Unity 사용자 지정 패키지를 다운로드 하 여 **나열 된 순서**대로 **가져옵니다** .
 
 * [AzureSpatialAnchors. unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (버전 2.1.1)
-* [MRTK. HoloLens2.2.2.0.1. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.1/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.1.unitypackage)
-* [MRTK. HoloLens2 AzureSpatialAnchors. 2.2.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.2.0.0.unitypackage)
+* [MRTK. HoloLens2.2.3.0.2. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK. HoloLens2 AzureSpatialAnchors. 2.3.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
 
 > [!TIP]
 > Unity 사용자 지정 패키지를 가져오는 방법에 대 한 미리 알림은 [혼합 현실 도구 키트 가져오기](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) 명령을 참조 하세요.
@@ -216,7 +220,7 @@ RocketLauncher_Complete prefab가 선택 된 상태에서 계층 창의 **Parent
 
 다음과 같이 **Parentanchor** 개체가 계속 노출 되도록 하는 동시에 **RocketLauncher_Complete** 개체를 적절 한 배율 및 방향으로 배치 하 고 회전 하 고 크기를 조정 합니다.
 
-* 변환 **위치** X = 1, Y = 0, Z = 3.75
+* 변환 **위치** X = 0, Y = 0, Z = 3.75
 * 변환 **회전** X = 0, Y = 90, Z = 0
 * 변환 **배율** X = 10, Y = 10, Z = 10
 

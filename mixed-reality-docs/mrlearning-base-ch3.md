@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129339"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553896"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 Solvers 사용
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -28,7 +28,7 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 
  MRTK의 Solvers는 MRTK SDK 폴더에 있습니다. 프로젝트에서 사용 가능한 Solvers를 보려면 프로젝트 창에서 **자산** > **MixedRealityToolkit** > **기능** > **유틸리티** > **Solvers**로 이동 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
 이 자습서에서는 궤도 해 찾기 및 방사형 보기 해 찾기의 구현을 검토 합니다. MRTK에서 사용할 수 있는 Solvers의 전체 범위에 대해 자세히 알아보려면 [Mrtk 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)에서 [Solvers](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) 가이드를 참조 하세요.
 
@@ -58,11 +58,11 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 
 **궤도 (스크립트)** 구성 요소를 구성 합니다.
 
-* 추적 된 개체를 **따르도록** **방향 유형** 변경
+* **방향 유형** 이 **추적 된 개체 따르기** 로 설정 되었는지 확인 합니다.
 * **로컬 오프셋** 을 X = 0, Y = 0, Z = 0으로 다시 설정 합니다.
 * **전역 오프셋** 을 X = 0, Y =-0.4, Z = 0.3로 변경 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial3-section2-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
 
 ### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. 편집기 내 시뮬레이션을 사용 하 여 궤도 해 찾기 테스트
 
@@ -71,7 +71,7 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 * 이제 ButtonCollection의 변환 위치는 해 찾기 설정에 따라 결정 됩니다.
 * 해 찾기의 영향을 받지 않는 큐브는 동일한 위치에 유지 됩니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial3-section2-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
 
 > [!TIP]
 > 장면 창에 카메라 광선이 표시 되지 않으면 Gizmo 그리려면 메뉴가 활성화 되어 있는지 확인 합니다. Gizmo 그리려면 메뉴와이 메뉴를 사용 하 여 장면 보기를 최적화 하는 방법에 대 한 자세한 내용은 Unity의 <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">gizmo 그리려면 메뉴</a> 설명서를 참조 하세요.
@@ -104,13 +104,13 @@ Holograms은 사용자가 직관적이 고 원활 하 게 상호 작용 하는 �
 * **참조 방향을** **개체 지향**으로 변경한 다음 방향 **참조 방향** 확인란을 선택 합니다.
 * **최소 거리** 및 **최대 거리** 를 0으로 변경
 
-![mrlearning-기본](images/mrlearning-base/tutorial3-section3-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
 ### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. 편집기 내 시뮬레이션을 사용 하 여 방사형 보기 해 찾기를 테스트 합니다.
 
 게임 모드로 전환 하려면 재생 단추를 누르고 스페이스바를 누르고 있으면 됩니다. 마우스 커서를 이동 하 여 손 모양으로 이동 하 고 마우스 왼쪽 단추를 클릭 하 여 손을 회전 합니다.
 
-![mrlearning-기본](images/mrlearning-base/tutorial3-section3-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
 
 ## <a name="congratulations"></a>축하합니다.
 
