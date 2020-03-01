@@ -1,21 +1,21 @@
 ---
-title: MRTK 손 coach 디자인 지침
+title: 손 coach
 description: 3D 바늘은 시스템에서 사용자가 도움을 받을 수 있도록 사용자의 손을 감지 하지 못하는 경우에 트리거됩니다.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 손 coach, 몰입 형 헤드셋, MRTK, 실습, 실습 지원
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373524"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202741"
 ---
-# <a name="hand-coach-design-guidance"></a>핸드 coach 디자인 지침
+# <a name="hand-coach"></a>손 coach
 
-핸드 Coach는 시스템에서 사용자의 손을 감지 하지 못하는 경우 트리거되는 3D 모델링 된 손을 갖습니다. 이 구성 요소는 제스처를 학습 하지 않았을 때 사용자에 게 안내 하는 데 도움이 되는 "교육" 구성 요소로 구현 됩니다. 사용자가 지정 된 기간 동안 지정 된 제스처를 수행 하지 않은 경우에는 손으로 지연 됩니다. 손 coach는 단추를 누르거나 홀로그램을 선택 하는 데 사용할 수 있습니다.  
+핸드 coach는 시스템에서 사용자의 손을 감지 하지 못하는 경우 트리거되는 3D 모델링 된 손을 갖습니다. 이 구성 요소는 제스처를 학습 하지 않았을 때 사용자에 게 안내 하는 데 도움이 되는 "교육" 구성 요소로 구현 됩니다. 사용자가 지정 된 기간 동안 지정 된 제스처를 수행 하지 않은 경우에는 손으로 지연 됩니다. 손 coach는 단추를 누르거나 홀로그램을 선택 하는 데 사용할 수 있습니다.  
 
 
 ![예제: 손 coach](images/HandCoach/MRTK_handCoach.jpg)<br>
@@ -65,7 +65,7 @@ ms.locfileid: "77373524"
 
 ## <a name="design-concepts"></a>디자인 개념
 
-Hololens2의 경우 instinctual 및 자연 핸드 제스처를 기반으로 하는 손으로의 상호 작용을 설계 했습니다. 이러한 경우가 대부분의 사용자에 게 직관적 이라고 생각 하므로 전용 제스처 학습 순간을 만들지 않습니다. 대신, holograms와 상호 작용 하는 데 익숙하지 않은 사용자에 게 이러한 제스처에 대해 알아보기 위해 손을 coach를 만들었습니다. 학습 시점이 없으면 사용자에 게 작업을 수행 하는 방법을 보여 주는 것이 가장 좋은 옵션입니다. 이 연구에서는 사용자가 제스처를 파악할 수 있었지만 약간의 지침을 필요로 했습니다. 사용자가 특정 기간 동안 개체와 상호 작용 하지 않는 것을 감지 하면 올바른 손 모양 및 손가락 배치를 시연 하는 손 모양 Coach 트리거됩니다. 
+Hololens2의 경우 instinctual 및 자연 핸드 제스처를 기반으로 하는 손으로의 상호 작용을 설계 했습니다. 이러한 경우가 대부분의 사용자에 게 직관적 이라고 생각 하므로 전용 제스처 학습 순간을 만들지 않습니다. 대신, holograms와 상호 작용 하는 데 익숙하지 않은 사용자에 게 이러한 제스처에 대해 알아보기 위해 손을 coach를 만들었습니다. 학습 시점이 없으면 사용자에 게 작업을 수행 하는 방법을 보여 주는 것이 가장 좋은 옵션입니다. 이 연구에서는 사용자가 제스처를 파악할 수 있었지만 약간의 지침을 필요로 했습니다. 사용자가 특정 기간 동안 개체와 상호 작용 하지 않는 것을 감지 하면 올바른 손 모양 및 손가락 배치를 시연 하는 손 모양 coach 트리거됩니다. 
 
 ### <a name="intuitive"></a>간단
 
@@ -73,7 +73,7 @@ Hololens2의 경우 instinctual 및 자연 핸드 제스처를 기반으로 하�
 
 예를 들어 사용자가 단추를 누르기를 원하는 경우 단추를 누르는 손을 트리거합니다.
 
-![예: 손 모양 Coach 가까운 탭](images/HandCoach/NearSelect_unity.gif)<br>
+![예: 손 모양 coach 가까운 탭](images/HandCoach/NearSelect_unity.gif)<br>
 *보석 가까이 누르기를 보여 주는 손 Coach*  
 
 ### <a name="hand-scale"></a>수동 크기 조정
@@ -82,7 +82,7 @@ UI 메뉴를 사용 하 여 다양 한 손 크기를 테스트 하 고 실제로
 
 **음성 전달 및 손**
 
-사용자가 음성을 통해 일련의 지침을 수신 하 고 직접 Coach를 통해 다양 한 지침을 볼 수 있다고 생각 하지 마세요. 토대로 오버 로드를 줄이기 위해 사용자에 게 집중 하 고 경합에 집중 하는 데 도움이 되는 지침을 시퀀싱 합니다.
+사용자가 음성을 통해 일련의 지침을 수신 하 고 직접 coach를 통해 다양 한 지침을 볼 수 있다고 생각 하지 마세요. 토대로 오버 로드를 줄이기 위해 사용자에 게 집중 하 고 경합에 집중 하는 데 도움이 되는 지침을 시퀀싱 합니다.
 
 
 ## <a name="can-i-create-my-own"></a>직접 만들 수 있나요?
@@ -100,7 +100,7 @@ Maya에서 애니메이션 효과를 ![예제](images/HandCoach/MayaSelect_Gif.g
 
 제공 된 다운로드 가능 maya 손으로 제공 된 파일을 사용 하는 경우 unity의 손을 0.6으로 축소 하는 것이 좋습니다.
 
-![예: Maya의 손 Coach rig](images/HandCoach/MayaExample.png)<br>
+![예: Maya의 손 coach rig](images/HandCoach/MayaExample.png)<br>
 *Rigged 손*
 
 ### <a name="technical-specs"></a>기술 사양
@@ -172,7 +172,7 @@ Maya에서 애니메이션 효과를 ![예제](images/HandCoach/MayaSelect_Gif.g
 * 손을 한 번만 지정 해야 합니다. 교육을 통해 혼란을 야기 하 고 messiness 수 있습니다.
 *   Unity로 가져오면 최신 MRTK를 다운로드 하세요. https://github.com/microsoft/MixedRealityToolkit-Unity
     *   재질: Teaching_Hand2
-    *   스크립트: <a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">mrtk 손 Coach</a> 에 대 한 mrtk 지침 참조
+    *   스크립트: <a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">mrtk 손 coach</a> 에 대 한 mrtk 지침 참조
     *   프로젝트별 설정
         *   UWP로 설정 된 장면: Windows Mixed Reality의 [Unity 구성 프로젝트](Configure-Unity-Project.md) 에서 지침을 찾을 수 있습니다.
 

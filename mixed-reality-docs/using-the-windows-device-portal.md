@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521694"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202723"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -81,6 +81,8 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 1. **보안 네트워크 (USB 또는 신뢰할 수 있는 Wi-fi 네트워크)에 있는지 확인 합니다.**
 2. 장치 포털의 "보안" 페이지에서이 장치의 인증서를 다운로드 합니다.
    * 이동: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * 시스템 > 기본 설정에 대 한 노드를 엽니다. 
+   * 장치 보안으로 스크롤하고 "이 장치의 인증서 다운로드" 단추를 클릭 합니다.
 3. PC의 "신뢰할 수 있는 루트 인증 기관" 저장소에 인증서를 설치 합니다.
    * Windows 메뉴에서 컴퓨터 인증서 관리 및 애플릿 시작을 입력 합니다.
    * **신뢰할 수 있는 루트 인증 기관** 폴더를 확장 합니다.
@@ -89,9 +91,13 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
    * 디바이스 포털에서 다운로드한 인증서 파일을 사용하여 인증서 가져오기 마법사를 완료합니다.
 4. 브라우저를 다시 시작합니다.
 
+>[!NOTE]
+> 이 인증서는 장치에 대해서만 신뢰할 수 있으며, 장치가 플래시 되 면 사용자가 프로세스를 다시 진행 해야 합니다.
+
+
 ## <a name="device-portal-pages"></a>디바이스 포털 페이지
 
-### <a name="home"></a>Home
+### <a name="home"></a>홈
 
 Microsoft HoloLens의 Windows 장치 포털 홈 페이지를 ![](images/windows-device-portal-home-page-1000px.png)<br>
 *Microsoft HoloLens의 Windows 장치 포털 홈 페이지*
@@ -181,7 +187,7 @@ HoloLens에서 WPR ( [Windows 성능 레코더](https://msdn.microsoft.com/libra
 
 캡처된 ETL 파일은 [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx)에서 분석을 위해 열 수 있습니다.
 
-### <a name="processes"></a>Processes
+### <a name="processes"></a>프로세스
 
 Microsoft HoloLens의 Windows 장치 포털에서 ![프로세스 페이지](images/windows-device-portal-running-processes-page-1000px.png)<br>
 *Microsoft HoloLens의 Windows 장치 포털에 있는 프로세스 페이지*
@@ -205,7 +211,7 @@ Microsoft HoloLens의 Windows 장치 포털에서 ![시스템 성능 페이지](
 * **네트워크**: 수신 및 전송
 * **메모리**: 총, 사용 중, 커밋된, 페이징 및 비페이징
 
-### <a name="apps"></a>앱을 선택하고
+### <a name="apps"></a>앱
 
 Microsoft HoloLens의 Windows 장치 포털에서 ![Apps 페이지](images/windows-device-portal-apps-page-1000px.png)<br>
 *Microsoft HoloLens의 Windows 장치 포털에 있는 앱 페이지*
@@ -238,7 +244,7 @@ Microsoft HoloLens의 Windows 장치 포털에서 파일 탐색기 페이지 ![]
 
 Windows 장치 포털을 통해 키오스크 모드를 사용 하도록 설정 하는 방법에 대 한 최신 지침은 Windows IT 전문가 센터의 [키오스크 모드에서 HoloLens 설정](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) 문서를 참조 하세요.
 
-### <a name="logging"></a>Logging(로깅)
+### <a name="logging"></a>로깅
 
 Microsoft HoloLens의 Windows 장치 포털 ![로깅 페이지](images/windows-device-portal-logging-page-1000px.png)<br>
 *Microsoft HoloLens의 Windows 장치 포털에 있는 로깅 페이지*
