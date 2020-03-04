@@ -7,25 +7,25 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, 디자인, 앱 패턴, 컨트롤, 스타일, HoloLens, 상호 작용, UX 요소, 동작, 빌딩 블록
-ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 9e2173e55a8c37ae4333d459ffe37fc01389b143
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334172"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202753"
 ---
 # <a name="ux-elements-overview"></a>UX 요소 개요
 
 ![Holographic 단추와 상호 작용 하는 HoloLens 2 사용자](images/06_AppPatterns.png)
 
-## <a name="style"></a>스타일을
+## <a name="style"></a>스타일
 
 :::row:::
     :::column:::
        [![색, 조명 및 재질](images/640px-fragments.png)](color,-light-and-materials.md)  **[색, 조명 및 재질](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [크기 조정![](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md)**
+       [![크기 조정](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md) **[크기 조정](scale.md)**
     :::column-end:::
 :::row-end:::
 
@@ -34,7 +34,7 @@ ms.locfileid: "75334172"
        [![입력](images/text_in_unity_viewingangle.png)](typography.md) 체계  **[입력 체계](typography.md)**
     :::column-end:::
     :::column:::
-       [사운드![](images/spatialaudio.png)](spatial-sound.md)  **[](spatial-sound.md) 소리**
+       [![사운드](images/spatialaudio.png)](spatial-sound.md) **[소리](spatial-sound.md)**
     :::column-end:::
 :::row-end:::
 
@@ -71,7 +71,7 @@ ms.locfileid: "75334172"
        [![손 메뉴](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md)  **[손](hand-menu.md) 메뉴**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md)  **[메뉴 근처](near-menu.md) 메뉴 근처![**
+       [![메뉴 근처](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md) **[메뉴 근처](near-menu.md)**
     :::column-end:::
     :::column:::
        [![개체 컬렉션](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md)  **[개체 컬렉션](object-collection.md)**
@@ -114,6 +114,15 @@ ms.locfileid: "75334172"
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column:::
+       [![손 Coach](images/HandCoach/MRTK_handCoach.jpg)](hand-coach.md)  **[손 Coach](hand-coach.md)**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 <br>
 
