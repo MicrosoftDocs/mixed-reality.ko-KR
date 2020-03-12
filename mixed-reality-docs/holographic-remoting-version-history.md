@@ -1,25 +1,32 @@
 ---
 title: Holographic 원격 버전 기록
 description: HoloLens 2의 Holographic Remoting에 대 한 버전 기록입니다.
-author: NPohl-MSFT
-ms.author: nopohl
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181963"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092314"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
 
-## 버전 2.0.18.0 (2019 년 12 월 17 일)<a name="v2.0.18"></a>
-* HolographicViewConfiguration에 대 한 지원이 추가 됨: https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+## 버전 2.1.0 (2020 년 3 월 11 일)<a name="v2.1.0"></a>
+* UDP를 통해 [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) 를 사용 하도록 네트워크 전송을 전환 했습니다. 보안 연결에는 [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) 가 사용 됩니다. [Holographic Remoting Player](holographic-remoting-player.md) 는 이전의 모든 Release Holographic 원격 버전과 여전히 호환 됩니다. 새 네트워크 전송을 활용 하려면 Holographic Remoting 플레이어와 해당 원격 앱이 버전 2.1.0을 사용 해야 합니다.
+* CommitDirect3D11DepthBuffer에 대 한 지원이 추가 되었습니다. [HolographicCameraRenderingParameters.](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) 
+
+## 버전 2.0.20 이상을 (2 월 2 일, 2020)<a name="v2.0.20"></a>
+* 충돌이 발생할 수 있는 다양 한 버그를 수정 했습니다.
+
+## 버전 2.0.18 이상을 (2019 년 12 월 17 일)<a name="v2.0.18"></a>
+* [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration) 에 대 한 지원이 추가 됨
 * 충돌이 발생할 수 있는 다양 한 버그를 수정 했습니다.
 * HolographicCamera를 수락 하 고 HoloraphicFrame에 추가 된 카메라로 표시 하는 데 HolographicSpace. CameraAdded 콜백이 필요한 버그를 수정 했습니다.
 
@@ -54,9 +61,9 @@ ms.locfileid: "75181963"
 
 * HoloLens 2에 대 한 Holographic 원격 작업의 첫 번째 공개 릴리스입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)

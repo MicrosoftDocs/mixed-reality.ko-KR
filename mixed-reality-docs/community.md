@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: 혼합 현실, 커뮤니티, mvp, 모임
-ms.openlocfilehash: 08cb0142a2e26d3c855b742ab3b8d0054f698efb
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.openlocfilehash: 7814db195e105c2fdf9ba894dc1877e2cbdc4675
+ms.sourcegitcommit: fcd4ca74d59bd4cf469b71f07169defd0887ac21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202779"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084588"
 ---
 # <a name="mixed-reality-community"></a>혼합 현실 커뮤니티
 
@@ -36,8 +36,8 @@ Microsoft에서 강력한 커뮤니티에 대 한 액세스 권한은 개발자,
 |**시카고 AWE Nite**|인도네시아|시카고|[링크나](https://www.meetup.com/AWENiteChicago/)|
 |**Mixed Reality 사용자 그룹-네덜란드**|네덜란드|Rijswijk|[링크나](https://www.mixug.com)|
 |**VR 필리핀**|필리핀|N/A|[링크나](https://www.facebook.com/vrphilippines/)|
+|**XRLA**|인도네시아|Los Angeles|[링크나](https://www.meetup.com/XRLA_Meetup/)|
 <!--
-|Row3     |         |         |         |
 |Row4     |         |         |         |
 |Row5     |         |         |         |
 |Row6     |         |         |         |
@@ -98,7 +98,7 @@ Microsoft에서 가장 중요 한 전문가 또는 Mvp는 커뮤니티와의 지
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, 네덜란드*|Dave Smits는 2014 이후 Microsoft MVP 이며 첫 번째 버전이 시작 된 이후 HoloLens를 사용 합니다. 는 고객이 holograms에서 사용할 동작 추적 센서를 포함 하는 응용 프로그램에 대 한 간단한 모델로 시작 하는 몇 가지 프로젝트를 수행 했습니다.|[메일 주소](mailto:dave@familie-smits.com)|
 |![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*몬트리올, QC, 캐나다*|Eric는 CAE의 선임 혼합 현실 프레임 워크 및 UX 개발자로, 첫 번째 Microsoft Mixed Reality 파트너 중 하나인 wave 1 HoloLens 도입자입니다. 자신의 주 역할은 새 의료 및 기존 의료 시뮬레이션 및 학습 응용 프로그램을 개발 하 고 유지 관리 하는 것 뿐만 아니라 MRTK와 매우 유사한 내부 플랫폼 간 개발 프레임 워크의 아키텍처 및 개발을 선도 하는 것입니다. 주로 WebGL + iOS/Android (+ iOS/Android)를 비롯 하 여, VR (Oculus Quest), AR (HoloLens 1 & 2) 및 화면 기반으로 응용 프로그램을 빌드합니다.|[메일 주소](mailto:erproven@gmail.com)|
 |![Fabrice 바 Bin](images/BiographyImages/FabriceBarbin_270x270.jpg)</br>**Fabrice 바 Bin**</br>*프랑스*|기업가, 혁신 및 기술 열성적인 년, Fabrice는 [SYNERGIZ](http://www.synergiz.com), Microsoft Mixed Reality 파트너, 프랑스의 HoloLens 사용 사례 개척자에서 CEO입니다. Fabrice, Kinect4Azure, IoT, Surface Hub, 잉크, 터치, IA, Machine Learning, Cognitive Services, Azure와 같이 Microsoft 기술을 발표자로 적극적으로 홍보 하 고, 12 년 동안의 보상 MVP를 활용 합니다.|[메일 주소](mailto:fbarbin@synergiz.com)|
-|![Francesco Clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco Clasadonte**</br>*Milan, 이탈리아*|Fanciful에는 passioned에 대 한 모든 것 들이 참여 합니다. 3 년간 Politecnico di Milano에서 연구원 들로 작업 하 고 있습니다. disabilites를 사용 하 여 자녀의 대화형 기술에 대 한 조사를 수행 하 여 IOT 시스템 개발, 스마트 개체, 로봇 상호 작용, 조명 디자인 등의 경험을 얻을 수 있습니다. multisensory 환경 및 자연 사용자 인터페이스는 국가 및 국제 프로젝트 모두에서 사용 됩니다.</br></br>현재는 IOT, 웹 솔루션, 시스템 통합의 필드에서 freelance 컨설턴트로 일하고 있으며, 혼합 현실 및 인공 지능과 같은 혁신적인 기술에 집중 하 고 있습니다.|[메일 주소](mailto:klasaf@outlook.com)|
+|![Francesco Clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco Clasadonte**</br>*Milan, 이탈리아*|Fanciful에는 passioned에 대 한 모든 것 들이 참여 합니다. 3 년간 Politecnico di Milano에서 연구원 들로 작업 하 고 있습니다. disabilites를 사용 하 여 자녀의 대화형 기술에 대 한 조사를 수행 하 여 IOT 시스템 개발, 스마트 개체, 로봇 상호 작용, 조명 디자인 등의 경험을 얻을 수 있습니다. multisensory 환경 및 자연 사용자 인터페이스는 국가 및 국제 프로젝트 모두에서 사용 됩니다.</br></br>현재는 [FifthIngenium](https://fifthingenium.com) 에서 선임 창작 개발자, IOT의 필드, 웹 솔루션, 시스템 통합, 혼합 현실 및 인공 지능 같은 혁신적인 기술에 집중 하 여 작업 하 고 있습니다.|[메일 주소](mailto:klasaf@outlook.com)|
 |![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*이탈리아*|Gianni는 2011 이후의 Microsoft MVP 이며, 새로운 기술, AI 및 가상/보강/Mixed 2013 Reality에 중점을 둘 수 있습니다. 현재, Deltatre의 혁신 랩에서는 R & D 선임 소프트웨어 엔지니어 이며, 스포츠 관련 환경 및 서비스에 대 한 차세대 솔루션을 디자인 하 고 프로토타입화 합니다. 즉, VR/MR 앱에서 종단 간 Azure 아키텍처와 비디오 워크플로까지 Cognitive Services, AI 등으로 전달 합니다. 그 외에도 로컬 커뮤니티의 TTG (Torino 기술 그룹), 체육관 Torino 월별 모임을 코딩에 대 한 월별 Pluralsight, online 강좌 작성자, 블로그 및 국가의 강연자 국제 기술 회의 및 이벤트.|[메일 주소](mailto:giannishub@hotmail.com)|
 |![Jessica Engstrom](images/BiographyImages/JessicaEngstrom_270x270.jpg)</br>**Jessica Engstrom**</br>*스톡홀름, 스웨덴*|Microsoft MVP-Windows 플랫폼 개발, 공용 스피커, UX, 봇 및 혼합 현실. 작업 포드캐스트 작업을 코딩 합니다. 사용자 그룹 및 회의 구성 도우미|[메일 주소](mailto:jessica@catoholic.se)|
 |![Jimmy Engstrom](images/BiographyImages/JimmyEngstrom_270x270.jpg)</br>**Jimmy Engstrom**</br>*스톡홀름, 스웨덴*|Microsoft MVP-Windows 플랫폼 개발, 스피커, Blazor, 혼합 현실, HoloLens 및 Windows developer. 작업 포드캐스트 작업을 코딩 합니다. 사용자 그룹 및 회의 구성 도우미|[메일 주소](mailto:jimmy@engstromjimmy.se)|
