@@ -1,5 +1,4 @@
 # 새로운 기능은 무엇입니까? 
-## [최신 뉴스](news.md)
 ## [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
 ## [Azure 서비스 알아보기](azure-services.md)
 ## [새 Microsoft Edge 준비](new-microsoft-edge.md)
