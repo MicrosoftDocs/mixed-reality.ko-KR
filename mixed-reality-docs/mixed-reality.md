@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, holographic, ar, vr, mr, xr, 확대 현실, 가상 현실, 설명
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334018"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376040"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?
 
@@ -89,7 +89,7 @@ Windows Mixed Reality 환경을 제공 하는 두 가지 주요 유형의 장치
 </tr><tr>
 <td><strong>장치 예</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>표시</strong></td><td> 참조-표시 사용자가 헤드셋을 입고 있는 동안 물리적 환경을 볼 수 있습니다.</td><td> 불투명 표시. 헤드셋을 입고 있는 동안 물리적 환경을 차단 합니다.</td>
+<td><strong>표시가</strong></td><td> 참조-표시 사용자가 헤드셋을 입고 있는 동안 물리적 환경을 볼 수 있습니다.</td><td> 불투명 표시. 헤드셋을 입고 있는 동안 물리적 환경을 차단 합니다.</td>
 </tr><tr>
 <td><strong>방식</strong></td><td> 회전 및 변환과 같이 완전 한 6 도씩 자유롭게 이동 합니다.</td><td> 회전 및 변환과 같이 완전 한 6 도씩 자유롭게 이동 합니다.</td>
 </tr>

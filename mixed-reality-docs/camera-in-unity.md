@@ -7,15 +7,15 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit, holographic 렌더링, holographic, 몰입 형, 포커스 지점, 깊이 버퍼, 방향 전용, 위치, 불투명, 투명, 클립
 ms.openlocfilehash: 1a2e66d5c028109a58ea8682668521f50158add9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436953"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375590"
 ---
 # <a name="camera-in-unity"></a>Unity의 카메라
 
-혼합 현실 헤드셋을 착용 하면 holographic 세계의 중심이 됩니다. Unity [카메라](https://docs.unity3d.com/Manual/class-Camera.html) 구성 요소는 stereoscopic 렌더링을 자동으로 처리 하며, 프로젝트에 "Windows Mixed reality"가 "Windows Mixed reality"로 선택 된 "가상 현실 지원"이 있는 경우에는 다른 설정 Windows 스토어 플레이어 설정의 섹션 이전 버전의 Unity에서 "Windows Holographic"로 표시 될 수 있습니다.
+혼합 현실 헤드셋을 착용 하면 holographic 세계의 중심이 됩니다. Unity [카메라](https://docs.unity3d.com/Manual/class-Camera.html) 구성 요소는 stereoscopic 렌더링을 자동으로 처리 하 고, 프로젝트에 "Windows Mixed reality"가 "Windows Mixed reality"로 선택 된 "가상 현실을 지원 됩니다. 이전 버전의 Unity에서 "Windows Holographic"로 표시 될 수 있습니다.
 
 그러나 시각적 품질 및 [홀로그램 안정성](hologram-stability.md)을 완벽 하 게 최적화 하려면 아래에서 설명 하는 카메라 설정을 설정 해야 합니다.
 
@@ -76,7 +76,7 @@ HoloLens 및 몰입 형 헤드셋은 모두 앱이 렌더링 하는 각 프레�
 * **모던 헤드셋** 은 위치를 다시 프로젝션 하 고, 앱에서 지정 된 프레임에 대 한 깊이 버퍼를 제공 하는 경우 위치 및 방향 모두에서 misprediction에 대 한 holograms을 조정 합니다.  깊이 버퍼를 제공 하지 않으면 시스템은 방향 으로만 mispredictions을 수정 합니다.
 * **Holographic 헤드셋** 과 같은 헤드셋은 앱이 깊이 버퍼를 제공 하는지 여부에 관계 없이 위치를 다시 프로젝션 합니다.  렌더링은 실제 세계에서 제공 하는 안정적인 배경을 사용 하는 스파스 인 경우가 많기 때문에 HoloLens의 깊이 버퍼 없이 위치 다시 프로젝션이 가능 합니다.
 
-엄격 본문 잠긴 콘텐츠 (예: 360도 비디오 콘텐츠)를 사용 하 여 [방향 전용 환경을](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) 빌드하는 경우에는를 설정 [하 여 reprojection 모드를 방향 으로만 설정 하면 됩니다. HolographicSettings ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) HolographicReprojectionMode. [OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+엄격 본문에서 잠긴 콘텐츠 (예: 360도 비디오 콘텐츠)를 사용 하 여 [방향 전용 환경을](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) 빌드하는 경우 [ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) 를 [HolographicReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html)로 설정 하 여 reprojection 모드를 방향 으로만 되도록 명시적으로 설정할 수 있습니다.
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Windows와 깊이 버퍼 공유
 

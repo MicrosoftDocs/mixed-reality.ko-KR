@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, 렌더링, 3D 그래픽, HolographicFrame, 렌더링 루프, 업데이트 루프, 연습, 샘플 코드, Direct3D
 ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940871"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375980"
 ---
 # <a name="rendering-in-directx"></a>DirectX에서 렌더링
 
@@ -593,7 +593,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 }
 ```
 
-## <a name="present"></a>표시
+## <a name="present"></a>있음
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>Holographic 프레임을 사용 하 여 스왑 체인을 표시 합니다.
 

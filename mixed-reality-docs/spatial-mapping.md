@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 공간 매핑, HoloLens, 혼합 현실, 표면 재구성, 메시
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926740"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375830"
 ---
 # <a name="spatial-mapping"></a>공간 매핑
 
@@ -245,7 +245,7 @@ Surface 관찰자가 제공 하는 coarsest 삼각형 밀도가 여전히 불충
 
 공간 표면에 대해 raycasts를 수행 하는 경우 이러한 표면은 일반적으로 복잡 하 고 복잡 한 모양이 책상 처럼 복잡 한 세부 정보를 차지 합니다. 즉, 단일 raycast가 화면 모양에 대 한 충분 한 정보와 근처의 빈 공간 셰이프를 제공 하기에 충분 하지 않은 경우가 많습니다. 따라서 일반적으로 작은 영역 내에서 많은 raycasts를 수행 하 고 집계 결과를 사용 하 여 화면에 대 한 보다 안정적인 이해를 유도 하는 것이 좋습니다. 예를 들어, 화면에서 홀로그램 배치를 안내 하는 평균 10 개의 raycasts를 사용 하면 단일 raycasts를 사용 하는 훨씬 더 부드럽고 ' 떨림 ' 결과를 얻을 수 있습니다.
 
-그러나 각 raycast에는 높은 계산 비용이 있을 수 있습니다. 따라서 사용 시나리오에 따라 공간 표면의 구멍을 매끄럽게 및 제거 하기 위해 [메시 처리](spatial-mapping.md#mesh-processing) 의 계산 비용에 대 한 추가 raycasts (모든 프레임 수행)의 계산 비용을 절충 해야 합니다 (공간을 사용 하는 경우 수행). 메시를 업데이트 합니다.
+그러나 각 raycast에는 높은 계산 비용이 있을 수 있습니다. 따라서 사용 시나리오에 따라 공간 메시를 업데이트할 때 수행 되는 공간 표면의 구멍을 매끄럽게 및 제거 하기 위해 [메시 처리](spatial-mapping.md#mesh-processing) 의 계산 비용에 대 한 추가 raycasts (모든 프레임 수행)의 계산 비용을 절충 해야 합니다.
 
 ## <a name="the-environment-scanning-experience"></a>환경 검사 환경
 

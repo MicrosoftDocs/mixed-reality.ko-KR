@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 셸, os, 플랫폼, 절벽 집, 집, 홈, 환경, 시작, 시작 메뉴, 홈 메뉴, pin, 앱, 앱 시작, 앱 배치, 텔레포트, 이동, 탐색
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438154"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375900"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Windows Mixed Reality 홈 탐색
 
@@ -85,7 +85,7 @@ Windows PC 환경이 바탕 화면에서 시작 하는 것 처럼 Windows Mixed 
 
 [Windows Mixed reality 몰입 형 헤드셋](immersive-headset-hardware-details.md) 은 Windows mixed reality 홈을 탐색 하기 위한 여러 입력 형식을 지원 합니다. HoloLens는 실제로 안내 하 고 환경을 확인 하기 때문에 탐색을 위한 액세서리 입력을 지원 하지 않습니다. 그러나 HoloLens는 앱과 상호 작용 하기 위한 [입력을 지원](hardware-accessories.md) 합니다.
 
-### <a name="motion-controllers"></a>동작 컨트롤러
+### <a name="motion-controllers"></a>모션 컨트롤러
 
 Windows mixed reality 환경에는 헤드셋의 센서만 사용 하 여 6 자유도를 지 원하는 Windows Mixed Reality [동작 컨트롤러가](motion-controllers.md) 있습니다. 여기에는 외부 카메라 또는 마커가 필요 하지 않습니다.
 

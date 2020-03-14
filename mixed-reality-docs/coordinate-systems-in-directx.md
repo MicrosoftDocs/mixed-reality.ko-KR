@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: 혼합 현실, 공간 로케이터, 공간 참조 프레임, 공간 좌표 시스템, 공간 스테이지, 샘플 코드, 이미지 안정화, 공간 앵커, 공간 앵커 저장소, 추적 손실, 연습
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375620"
 ---
 # <a name="coordinate-systems-in-directx"></a>DirectX에서 시스템 좌표계
 
@@ -574,7 +574,7 @@ SpatialAnchors의 고유한 메모리 내 데이터베이스가 필요 합니다
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>장치에 연결 된 참조 프레임을 사용 하 여 holograms 만들기
 
-장치 위치에 연결 된 상태를 [유지](coordinate-systems.md#attached-frame-of-reference) 하는 홀로그램을 렌더링 하려는 경우가 있습니다. 예를 들어, 장치에서 해당 방향을 결정 하 고 해당 위치를 확인할 수 없을 때 정보 메시지를 표시 합니다. 공간. 이를 위해 참조의 연결 된 프레임을 사용 합니다.
+장치 위치에 연결 된 상태를 [유지](coordinate-systems.md#attached-frame-of-reference) 하는 홀로그램을 렌더링 하려는 경우가 있습니다. 예를 들어, 장치에서 해당 방향을 확인 하 고 공간에서 위치를 확인할 수 없을 때 정보 메시지를 표시 합니다. 이를 위해 참조의 연결 된 프레임을 사용 합니다.
 
 SpatialLocatorAttachedFrameOfReference 클래스는 실제 기반이 아니라 장치에 상대적인 좌표계를 정의 합니다. 이 프레임에는 참조 프레임을 만들 때 사용자가 연결 된 방향을 가리키는 사용자의 주변을 기준으로 하는 고정 머리글이 있습니다. 이 참조 프레임의 모든 방향은 사용자가 장치를 회전 하는 경우에도 해당 고정 된 제목을 기준으로 합니다.
 
@@ -730,7 +730,7 @@ From **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-이제 되었습니다. 그러면 홀로그램은 사용자의 응시 방향 앞에서 2 미터의 위치를 "추적" 합니다.
+간단하죠. 그러면 홀로그램은 사용자의 응시 방향 앞에서 2 미터의 위치를 "추적" 합니다.
 
 >[!NOTE]
 >이 예제에서는 추가 콘텐츠도 로드 합니다. StationaryQuadRenderer를 참조 하세요.

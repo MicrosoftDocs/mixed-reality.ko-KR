@@ -7,14 +7,14 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, Windows Mixed Reality, HoloLens, 몰입 형, vr, mr, 시작, 홀로그램, 아카데미, 자습서
 ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926636"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375600"
 ---
 >[!NOTE]
->혼합 현실 아카데미 자습서는 HoloLens (첫 번째 gen) 및 혼합 현실 모던 헤드셋을 염두에 두면 설계 되었습니다.  따라서 이러한 장치에 대 한 개발에 대 한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요 합니다.  이러한 자습서는 HoloLens 2에 사용 되는 최신 도구 집합 또는 상호 작용으로 업데이트 **_되지_** 않습니다.  지원 되는 장치에서 작업을 계속 하기 위해 유지 관리 됩니다. HoloLens 2에 대 한 [새로운 일련의 자습서](mrlearning-base.md) 가 게시 되었습니다.
+>Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다.  따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다.  이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_** .  대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. HoloLens 2에 대한 [새로운 자습서 시리즈](mrlearning-base.md)가 게시되었습니다.
 
 <br>
 
@@ -32,7 +32,7 @@ ms.locfileid: "73926636"
 </tr>
 </table>
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 
@@ -194,7 +194,7 @@ Unity 프로젝트에서 큐브를 만드는 것은 Unity에서 다른 개체를
 6.  **UWP 빌드 형식은** **D3D**이어야 합니다.
 7.  **UWP SDK** 는 **설치 된 최신 버전**으로 유지할 수 있습니다.
 8.  디버깅 **중인 C# Unity 프로젝트** 를 확인 합니다.
-9.  **빌드**를 클릭합니다.
+9.  **빌드**를 클릭한 다음
 10. 파일 탐색기에서 **새 폴더** 를 클릭 하 고 폴더 이름을 **"App"** 으로 선택 합니다.
 11. **앱** 폴더가 선택 된 상태에서 **폴더 선택** 단추를 클릭 합니다.
 12. Unity가 빌드를 완료 하면 Windows 파일 탐색기 창이 표시 됩니다.

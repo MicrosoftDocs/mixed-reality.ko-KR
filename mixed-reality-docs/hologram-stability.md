@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: holograms, 안정성, hololens
 ms.openlocfilehash: ad48d057ee55d4d0d9ae3080d8030a481aef130f
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623306"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375780"
 ---
 # <a name="hologram-stability"></a>홀로그램 안정성
 
@@ -91,8 +91,8 @@ HoloLens는 reprojection 이라고 하는 정교한 하드웨어 지원 holograp
 
 안정화 유형 |    모던 헤드셋 |    HoloLens 생성 1 | HoloLens 2
 --- | --- | --- | ---
-깊이 예측 |    권장 사항 |   해당 없음 |   권장 사항<br/><br/>Unity 응용 프로그램은 Unity 2018.4.12 이상 또는 Unity 2019.3 이상을 사용 해야 합니다. 그렇지 않으면 자동 평면 다시 프로젝션을 사용 합니다.
-자동 평면 다시 프로젝션 | 해당 없음 |   권장 기본값 |   깊이 다시 프로젝션이 최상의 결과를 제공 하지 않는 경우 권장<br/><br/>Unity 응용 프로그램은 Unity 2018.4.12 이상 또는 Unity 2019.3 이상을 사용 하는 것이 좋습니다.  이전 Unity 버전은 약간 저하 된 다시 프로젝션 결과와 함께 작동 합니다.
+깊이 예측 |    권장 |   N/A |   권장<br/><br/>Unity 응용 프로그램은 Unity 2018.4.12 이상 또는 Unity 2019.3 이상을 사용 해야 합니다. 그렇지 않으면 자동 평면 다시 프로젝션을 사용 합니다.
+자동 평면 다시 프로젝션 | N/A |   권장 기본값 |   깊이 다시 프로젝션이 최상의 결과를 제공 하지 않는 경우 권장<br/><br/>Unity 응용 프로그램은 Unity 2018.4.12 이상 또는 Unity 2019.3 이상을 사용 하는 것이 좋습니다.  이전 Unity 버전은 약간 저하 된 다시 프로젝션 결과와 함께 작동 합니다.
 평면 재 프로젝션 |   권장 하지 않음 |   자동 평면에서 최상의 결과를 제공 하지 않는 경우 권장 |    깊이 옵션이 원하는 결과를 제공 하지 않는 경우 사용    
 
 ### <a name="verifying-depth-is-set-correctly"></a>깊이가 올바르게 설정 되었는지 확인 하는 중
@@ -137,7 +137,7 @@ renderingParameters.SetFocusPoint(
 
 모범 **사례** 안정화 평면을 설정 하는 방법은 없지만 앱 마다 다릅니다. 따라서 시나리오에 가장 적합 한 것을 실험 하 고 확인 하는 것이 좋습니다. 그러나이 평면의 모든 콘텐츠가 완벽 하 게 안정화 되기 때문에 최대한 많은 콘텐츠로 안정화 평면을 정렬 하려고 합니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예를 들면 다음과 같습니다.
 * 평면 콘텐츠 (앱 읽기, 비디오 재생 앱)만 있는 경우 콘텐츠를 포함 하는 평면과 안정화 평면을 맞춥니다.
 * 세계에서 잠긴 3 개의 작은 분기가 있는 경우 현재 사용자의 보기에 있는 모든 구 중심으로 안정화 평면을 "잘라내기"로 만듭니다.
 * 장면에 상당히 다른 깊이 있는 콘텐츠가 있는 경우에는 더 많은 개체를 선호 합니다.

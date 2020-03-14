@@ -10,8 +10,8 @@ ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
 ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092314"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375660"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
@@ -61,7 +61,7 @@ ms.locfileid: "79092314"
 
 * HoloLens 2에 대 한 Holographic 원격 작업의 첫 번째 공개 릴리스입니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)

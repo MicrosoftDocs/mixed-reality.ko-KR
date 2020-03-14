@@ -1,21 +1,21 @@
 ---
 title: 사례 연구-더 많은 개인 컴퓨팅
-description: 오늘 제품을 빌드하여 내일의 기회를 파악 합니다. 이러한 제품에서 제공 하는 솔루션은 미래를 위해 필요한 사항을 표시 합니다.
+description: 오늘 제품을 구축하여 내일의 기회를 파악합니다. 이러한 제품에서 제공하는 솔루션은 미래를 향상시키는 데 필요한 사항을 보여 줍니다.
 author: danielescudero
 ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 사례 연구, 비전, 시나리오
 ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896519"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375610"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>사례 연구-더 많은 개인 컴퓨팅
 
-오늘 제품을 빌드하여 내일의 기회를 파악 합니다. 이러한 제품에서 제공 하는 솔루션은 미래를 위해 필요한 사항을 표시 합니다. 혼합 현실에서는 특히 그렇습니다. 의미 있는 정보 활용은 실제 장치, 실제 고객, 실제 문제 등 실제 작업을 수행 하는 과정에서 제공 됩니다.
+오늘 제품을 구축하여 내일의 기회를 파악합니다. 이러한 제품에서 제공하는 솔루션은 미래를 향상시키는 데 필요한 사항을 보여 줍니다. 혼합 현실를 사용 하는 경우 특히 그렇습니다. 실제 작업을 수행 하는 실제 장치, 실제 고객, 실제 문제 등의 유용한 정보를 얻을 수 있습니다.
 
 Microsoft에서는 Windows Mixed Reality를 사용 하 여 비즈니스에 대 한 엔터프라이즈 파트너 빌드 환경을 돕는 설계 팀의 일부입니다. 지난 해에 팀은 HoloLens에 초점을 맞추고 Microsoft의 주력 holographic 장치에서 현재 고객에 게 가치를 제공할 수 있는 방법을 이해 하 고 있습니다. 이러한 회사의 디자이너 및 개발자와 긴밀 하 게 작업 하는 팀은 발견할 솔루션에 중점을 두 며,이는 기술적으로 작업, 재정적 실용적이 지 않거나, 사용 하지 못할 수도 있습니다.
 
@@ -39,7 +39,7 @@ Microsoft에서는 Windows Mixed Reality를 사용 하 여 비즈니스에 대 �
 
 혼합 현실의 스펙트럼은 개발자가 집중 교육의 기회를 탐색 하기 시작 했을 때 폭발 했습니다. 모던 (가상 현실) 환경을 통해 사용자를 디지털 환경으로 전환 하 고 holographic (보강 된 현실) 환경에서 디지털 개체를 만듭니다. 하지만 실제 세계를 디지털 세계에 매핑할 경우의 이점은 무엇 인가요? 컴퓨터가 눈에 볼 수 있게 되 면 어떻게 되나요?
 
-Holograms에 대 한 기본 카메라 비전 기술은 사용자의 환경을 볼 수 있도록 컴퓨터에 대 한 눈 쌍 처럼 작동 합니다. 전 세계의 개체는 발생 하는 대로 변경 됩니다. 실제 세계의 컨텍스트에 대 한 디지털 이해 이로 인해 방대한 정보를 얻을 수 있습니다 .이는 이해를 돕기 위한 것입니다.
+Holograms의 기본 카메라 비전 기술은 사용자의 환경을 볼 수 있도록 컴퓨터에 대 한 눈동자와 같은 역할을 합니다. 전 세계의 개체는 발생 하는 대로 변경 됩니다. 실제 세계의 컨텍스트에 대 한 디지털 이해 이로 인해 방대한 정보를 얻을 수 있습니다 .이는 이해를 돕기 위한 것입니다.
 
 ### <a name="culminating-core-technologies"></a>Culminating 핵심 기술
 
@@ -53,7 +53,7 @@ Holograms에 대 한 기본 카메라 비전 기술은 사용자의 환경을 �
 
 ### <a name="less-interface-in-your-face"></a>면에서 더 작은 인터페이스
 
-실제 세계를 디지털 세계에 연결 하는 culminating 장치를 사용 하면 복잡 한 추상화 없이 보다 자연스럽 게 맞는 환경을 디자인할 수 있습니다. 만든 환경을 고려 합니다. 추상화 장벽이 제거 되 면 얼마나 많은 인터페이스가 남아 있나요? 사용자와 해당 컨텍스트를 알고 있으면 앱 흐름의 어떤 부분이 변경 되나요? 얼마나 많은 메뉴와 단추가 남아 있나요?
+실제 세계를 디지털 세계에 연결 하는 culminating 장치를 사용 하면 복잡 한 추상화 없이 보다 자연스럽 게 맞는 환경을 디자인할 수 있습니다. 사용자가 만든 환경을 고려 합니다. 추상화 장벽을 제거 하는 경우에는 얼마나 많은 인터페이스가 남아 있나요? 사용자와 해당 컨텍스트를 알고 있으면 앱 흐름의 어떤 부분이 변경 되나요? 얼마나 많은 메뉴와 단추가 남아 있나요?
 
 예를 들어 과학자에 대해 작성 된 OnSight tool NASA의 Jet Jpl 연구소와 같이 혼합 현실에서 공유 환경을 생각해 보겠습니다. 데이터를 화면 또는 표시로 추상화 하는 Martian 데이터를 확인 하는 시스템을 구축 하는 대신, 데이터 내에서 과학자를 가져와 협력 처럼 Mars의 표면에 효과적으로 배치 합니다.
 
@@ -76,7 +76,7 @@ Windows Mixed Reality는 개발자가 가능한 최대 대상에 대해 몰입, 
 
 ## <a name="designing-for-tomorrows-experiences-today"></a>오늘 미래의 환경을 위한 디자인
 
-![오늘 미래의 환경을 위한 디자인](images/designing-for-tomorrows-experiences-today-450px.jpg) 
+오늘 미래의 경험에 대 한 디자인을 ![](images/designing-for-tomorrows-experiences-today-450px.jpg) 
 <br>
 이 새로운 경험 클래스의 핵심 기술 중 하나는 디자이너와 개발자가 현재 뛰어난 경험과 경험을 만들 수 있도록 하는 것입니다. 추상화를 줄임으로써 디지털 세계와 직접 상호 작용 하 여 인간 기능을 보강 하 고 강화 하는 방식으로 디자인할 수 있습니다. 음성 기술 (예: 봇 및 디지털 길잡이를 통해 Cortana)은 사용자가 점점 복잡 한 대화 및 시나리오를 수행할 수 있도록 하는 반면 AI 기술 (예: Microsoft Cognitive Services)을 통해 기업은 사용자가 는 소셜 미디어에서 공급망 관리에 이르는 모든 것과 상호 작용 합니다.
 
@@ -86,7 +86,7 @@ Windows Mixed Reality는 개발자가 가능한 최대 대상에 대해 몰입, 
 
 개발자 파트너 관계의 작년에는 고객과 울려 퍼지기 하 고 성공적인 엔터프라이즈 솔루션을 생성 하는 기회 영역이 나와 있습니다. 과학자 및 기술자부터 디자이너와 클라이언트까지 Microsoft 파트너가 혼합 현실에서 가치를 찾고 있는 5 개의 기회를 창출 했습니다. 이러한 영역은 이미 Windows Mixed Reality와 같은 플랫폼의 향후 요구 사항에 대 한 통찰력을 제공 하 고 있으며, 이러한 새로운 환경이 학습, 공동 작업, 통신 및 만들기 방식에 어떻게 영향을 주는지 이해 하는 데 도움이 될 수 있습니다.
 
-### <a name="1-creation-and-design"></a>1. 만들기 및 디자인
+### <a name="1-creation-and-design"></a>1. 만들고 디자인
 
 혼합 현실의 가장 큰 기회 중 하나는 실제 설정에서 실제 크기와 배율로 3D 디자인을 실시간으로 보고 조작 하는 기능입니다. 디자인 및 프로토타입 도구는 화면 범위를 이스케이프 하 여 일반적으로 clay와 같은 실제 자료를 위해 예약 된 디자인 영역으로 돌아갑니다.
 
@@ -148,14 +148,14 @@ Volvo는 최신 자동차 모델 (서로 다른 색 및 구성의 사용자)을 
 
 ## <a name="start-building-today"></a>지금 빌드 시작
 
-혼합 현실의 미래를 소비자에 게 표시 하는 것은 어려운 일입니다. 하지만 고유한 문제에 집중 하 고 실제 하드웨어를 사용 하 여 실습 하는 **것 은 매우 중요**합니다. Microsoft는 혼합 현실로 시작 하지만 현재 비즈니스에서 실현 된 성공에서 학습할 경우 내일의 경험을 만드는 데 도움이 됩니다.
+혼합 현실의 미래를 소비자에 게 표시 하는 것은 어려운 일입니다. 하지만 고유한 문제에 집중 하 고 실제 하드웨어를 사용 하 여 실습 하는 **것 *today* 은 매우 중요**합니다. Microsoft는 혼합 현실로 시작 하지만 현재 비즈니스에서 실현 된 성공에서 학습할 경우 내일의 경험을 만드는 데 도움이 됩니다.
 
 ## <a name="about-the-author"></a>작성자 정보
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>표시 Vitazko</b><br>UX 디자이너@Microsoft</td>
+<td style="border-style: none"><b>표시 Vitazko</b><br>UX 디자이너 @Microsoft</td>
 </tr>
 </table>
  

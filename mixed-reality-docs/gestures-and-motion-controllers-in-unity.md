@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 제스처, 동작 컨트롤러, unity, 응시, 입력
 ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926567"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375650"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Unity의 제스처 및 동작 컨트롤러
 

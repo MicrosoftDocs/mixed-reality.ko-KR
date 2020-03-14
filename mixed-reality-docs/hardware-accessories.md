@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 방법, 액세서리, bluetooth, bt, 컨트롤러, 게임 패드, clicker, xbox
 ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435150"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375700"
 ---
 # <a name="hardware-accessories"></a>하드웨어 액세서리
 
@@ -31,7 +31,7 @@ Microsoft HoloLens와 Bluetooth 주변 장치를 페어링 하는 것은 Windows
 5. 장치 이름이 Bluetooth 장치 목록에 표시 될 때까지 기다립니다. 장치를 선택 하는 경우 장치를 선택 하 고 **쌍** 단추를 선택 합니다. 근처에 많은 Bluetooth 장치가 있는 경우 연결 하려는 장치를 보려면 Bluetooth 장치 목록의 맨 아래로 스크롤해야 할 수도 있습니다.
 6. 입력 기능 (예: Bluetooth 키보드)과 Bluetooth 주변 장치를 페어링 하는 경우 6 자리 또는 8 자리 pin이 표시 될 수 있습니다. 주변 장치에 pin을 입력 하 고 enter 키를 눌러 Microsoft HoloLens와 페어링 합니다.
 
-## <a name="motion-controllers"></a>동작 컨트롤러
+## <a name="motion-controllers"></a>모션 컨트롤러
 
 Windows Mixed Reality [동작 컨트롤러](motion-controllers.md) 는 몰입 형 헤드셋에서 지원 되지만 HoloLens는 지원 되지 않습니다. 이러한 컨트롤러는 몰입 형 헤드셋의 센서를 사용 하 여 뷰 필드의 이동에 대 한 정확 하 고 응답성이 뛰어난 추적을 제공 합니다. 즉, 공간의 벽에 하드웨어를 설치할 필요가 없습니다. 각 컨트롤러에는 몇 가지 입력 방법이 있습니다.
 

@@ -7,15 +7,15 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: 좌표계, 공간 좌표계, 방향 전용, 고정 크기 조정, 대규모, 공간 규모, 전 세계 규모, 360 학위, 고가, 실내, 실내, 세계, 눈금, 위치, 방향, 고정, 연결 된, 스테이지, 앵커, 공간 앵커, 세계에서 잠김, 세계 잠금, 본문 잠금, 본문 잠금, 경계, 지 속성, 공유, 손실 추적, 클라우드 공간 앵커
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436149"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375640"
 ---
 # <a name="coordinate-systems"></a>좌표계
 
-혼합 현실 앱은 해당 코어에서 실제 개체와 같은 모양과 소리를 [holograms](hologram.md) 합니다. 이를 위해서는 전 세계의 실제 방에 있든, 사용자가 만든 가상 영역 인지 여부에 관계 없이 전 세계에 있는 holograms의 위치를 정확 하 게 지정 하 고 방향이 지정 됩니다. Holograms의 위치와 방향 또는 [응시](gaze-and-commit.md) 광선 또는 [손으로](hands-and-tools.md)와 같은 다른 기 하 도형에 대 한 정보를 파악 **하는 경우 Windows는 해당 기 하 도형을 표현할 수 있는 다양 한 실제 좌표계를 제공 합니다. 공간 좌표계**.
+혼합 현실 앱은 해당 코어에서 실제 개체와 같은 모양과 소리를 [holograms](hologram.md) 합니다. 이를 위해서는 전 세계의 실제 방에 있든, 사용자가 만든 가상 영역 인지 여부에 관계 없이 전 세계에 있는 holograms의 위치를 정확 하 게 지정 하 고 방향이 지정 됩니다. Holograms의 위치와 방향 또는 [응시](gaze-and-commit.md) 광선 또는 [손으로](hands-and-tools.md)와 같은 다른 기 하 도형에 대 한 이해를 위해 Windows에서는 **공간 좌표계**라고 하는 기 하 도형을 표현할 수 있는 다양 한 실제 좌표계를 제공 합니다.
 
 <br>
 

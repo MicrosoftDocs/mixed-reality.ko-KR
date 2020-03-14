@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 앱, uwp, 제출, 제출, 필터, 메타 데이터, 시스템 요구 사항, 키워드, wack, 인증, 패키지, appx, 머천다이징
 ms.openlocfilehash: f2eb4093a2bea51d8c39b94d23777e426810981e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539616"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375810"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Microsoft Store에 앱 제출
 
@@ -27,9 +27,9 @@ ms.locfileid: "74539616"
 
 | 필수 자산 | 권장 크기 조정 | 이미지 형식 | 표시 되는 위치 | 
 |----------|----------|----------|------------------|
-| 71x71 정사각형 로고 | 임의 |  PNG | 해당 없음 | 
+| 71x71 정사각형 로고 | Any |  PNG | N/A | 
 | 150x150 정사각형 로고 | 150x150 (100% scale) 또는 225x225 (150% scale) | PNG | Pin 및 모든 앱 시작 (310x310이 제공 되지 않은 경우), 스토어 검색 제안, 스토어 목록 페이지, 스토어 찾아보기, 스토어 검색 | 
-|  310x150 너비가 긴 로고 |  임의  |  PNG  |  해당 없음 | 
+|  310x150 너비가 긴 로고 |  Any  |  PNG  |  N/A | 
 |  스토어 로고 |  75x75 (150% scale)  |  PNG  |  파트너 센터, 보고서 앱, 리뷰 작성, 내 라이브러리 | 
 |  시작 화면 |  930x450 (150% scale)  |  PNG  |  2D 앱 시작 관리자 (슬레이트) | 
 
@@ -58,7 +58,7 @@ Visual Studio에서 최소 및 대상 플랫폼 버전 설정
 
 ### <a name="specifying-target-device-families"></a>대상 장치 패밀리 지정
 
-Windows Mixed Reality 응용 프로그램 ( [HoloLens](hololens-hardware-details.md) 및 [몰입 형 헤드셋](immersive-headset-hardware-details.md)모두)은 유니버설 Windows 플랫폼의 일부 이므로 [대상 장치 패밀리가](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) "Windows. 유니버설" 인 모든 앱 패키지는 HoloLens에서 실행할 수 있습니다. 모던 헤드셋을 사용 하는 Windows 10 Pc 즉, 앱 매니페스트에서 대상 장치 제품군을 지정 하지 않은 경우 의도 하지 않은 Windows 10 장치까지 앱을 실수로 열 수 있습니다. 아래 단계에 따라 원하는 Windows 10 장치 제품군을 지정한 다음, [저장소에 제출할 파트너 센터에서 앱 패키지를 업로드할 때 올바른 장치 패밀리가 선택 되었는지 다시 확인 합니다.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+Windows Mixed Reality 응용 프로그램 ( [HoloLens](hololens-hardware-details.md) 및 [몰입 형 헤드셋](immersive-headset-hardware-details.md)모두)은 유니버설 Windows 플랫폼의 일부 이므로 [대상 장치 패밀리가](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) "windows. 유니버설" 인 모든 앱 패키지는 HoloLens 또는 모던 헤드셋을 사용 하는 Windows 10 pc에서 실행할 수 있습니다. 즉, 앱 매니페스트에서 대상 장치 제품군을 지정 하지 않은 경우 의도 하지 않은 Windows 10 장치까지 앱을 실수로 열 수 있습니다. 아래 단계에 따라 원하는 Windows 10 장치 제품군을 지정한 다음, [저장소에 제출할 파트너 센터에서 앱 패키지를 업로드할 때 올바른 장치 패밀리가 선택 되었는지 다시 확인 합니다.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 Visual Studio에서이 필드를 설정 하려면 appxmanifest.xml를 마우스 오른쪽 단추로 클릭 하 고 "코드 보기"를 선택한 후 TargetDeviceFamily 이름 필드를 찾습니다. 기본적으로 다음과 같이 표시 될 수 있습니다.
 
@@ -84,7 +84,7 @@ Visual Studio에서이 필드를 설정 하려면 appxmanifest.xml를 마우스 
 </Dependencies>
 ```
 
-**Windows Mixed reality 몰입 형 헤드셋**에 대해 앱을 만든 경우 대상 장치 패밀리를 지정 하 여 windows 10 컴퓨터 (Windows mixed reality에 필요) 업데이트를 사용 하는 Windows 10 pc에만 설치 되도록 할 수 있습니다. "10.0.16299.0" 및 MinVersion
+**Windows Mixed reality 모던 헤드셋**에 대해 앱을 만든 경우 "10.0.16299.0"의 대상 장치 패밀리를 지정 하 여 windows 10 컴퓨터 (Windows 혼합 현실에 필요) 업데이트를 사용 하는 Windows 10 pc에만 설치 되도록 할 수 있습니다.
 
 ```
 <Dependencies>
@@ -92,7 +92,7 @@ Visual Studio에서이 필드를 설정 하려면 appxmanifest.xml를 마우스 
 </Dependencies>
 ```
 
-마지막으로, 앱이 **HoloLens 및 Windows Mixed Reality**에서 실행 되도록 설계 된 경우 해당 두 장치 제품군에만 앱을 사용할 수 있도록 하 고, 각 대상에 대해 올바른 최소 Windows 버전을 각 대상 장치 제품군에 대 한 줄을 각각의 MinVersion과 함께 포함 합니다.
+마지막으로, 앱이 **HoloLens 및 Windows Mixed Reality**에서 실행 되도록 설정 된 경우 해당 하는 두 장치 제품군에만 앱을 사용할 수 있도록 설정 하 고 각 대상 장치 제품군에 대 한 줄을 각 대상 장치 제품군에 대 한 줄을 포함 하 여 각각 올바른 최소 Windows 버전을 대상으로 지정할 수 있습니다.
 
 ```
 <Dependencies>
@@ -105,14 +105,14 @@ Visual Studio에서이 필드를 설정 하려면 appxmanifest.xml를 마우스 
 
 ### <a name="associate-app-with-the-store"></a>앱을 스토어에 연결
 
-Visual Studio 솔루션의 프로젝트 메뉴에서 "스토어 > 앱을 스토어와 연결"을 선택 합니다. 이 작업을 수행 하는 경우 앱에서 구매 및 알림 시나리오를 테스트할 수 있습니다. 앱을 스토어에 연결 하는 경우 이러한 값은 로컬 컴퓨터의 현재 프로젝트에 대 한 응용 프로그램 매니페스트 파일에 다운로드 됩니다.
+Visual Studio 솔루션의 프로젝트 메뉴에서 "스토어 > 앱을 스토어와 연결"을 선택 합니다. 이 작업을 수행하는 경우 앱에서 구매 및 알림 시나리오를 테스트할 수 있습니다. 앱을 스토어에 연결 하는 경우 이러한 값은 로컬 컴퓨터의 현재 프로젝트에 대 한 응용 프로그램 매니페스트 파일에 다운로드 됩니다.
 * 패키지 표시 이름
 * 패키지 이름
 * 게시자 ID
 * 게시자 표시 이름
 * 버전
 
-매니페스트에 대 한 사용자 지정 .xml 파일을 만들어 기본 appxmanifest.xml 파일을 재정의 하는 경우 앱을 스토어에 연결할 수 없습니다. 사용자 지정 매니페스트 파일을 스토어에 연결 하려고 하면 오류 메시지가 표시 됩니다.
+매니페스트의 사용자 지정 .xml 파일을 만들어 기본 package.appxmanifest 파일을 재정의하는 경우 앱을 스토어에 연결할 수 없습니다. 사용자 지정 매니페스트 파일을 스토어에 연결하려고 하면 오류 메시지가 나타납니다.
 
 ### <a name="creating-an-upload-package"></a>업로드 패키지 만들기
 
@@ -120,11 +120,11 @@ Visual Studio 솔루션의 프로젝트 메뉴에서 "스토어 > 앱을 스토�
 
 업로드 패키지를 만드는 마지막 단계는 [Windows 앱 인증 키트](#windows-app-certification-kit)를 사용 하 여 패키지의 유효성을 검사 하는 것입니다.
 
-다른 Windows 10 장치 제품군에서 사용할 수 있는 기존 제품에 HoloLens 용으로 특별히 패키지를 추가 하는 경우 [특정 고객에 게 제공 되는 패키지](https://msdn.microsoft.com/library/windows/apps/mt188602.aspx)에 대 한 버전 번호의 영향을 확인할 수도 있습니다. [패키지를 다른 운영 체제에 배포 하는 방법](https://msdn.microsoft.com/library/windows/apps/mt188601.aspx)
+다른 Windows 10 장치 제품군에서 사용할 수 있는 기존 제품에 대해 특별히 HoloLens 용 패키지를 추가 하는 경우 [특정 고객에 게 제공 되는 패키지](https://msdn.microsoft.com/library/windows/apps/mt188602.aspx)에 대 한 버전 번호의 영향 및 [패키지가 다른 운영 체제에 배포](https://msdn.microsoft.com/library/windows/apps/mt188601.aspx)되는 방법에 대해서도 알아볼 수 있습니다.
 
 일반적인 지침은 장치에 적용 가능한 가장 높은 버전 번호 패키지가 저장소에 의해 배포 되는 것입니다.
 
-Windows 범용 패키지와 Holographic 패키지 및 Windows 범용 패키지의 버전 번호가 높은 경우 HoloLens 사용자는 Windows. Holographic 대신 더 높은 버전 번호의 Windows를 다운로드 합니다. 패키지. 이 문제에 대 한 몇 가지 해결 방법이 있습니다.
+Windows 범용 패키지와 Holographic 패키지 및 Windows 범용 패키지의 버전 번호가 높은 경우 HoloLens 사용자는 Windows. Holographic 대신 더 높은 버전 번호의 Windows를 다운로드 합니다. 패키지. 이 문제에 대 한 솔루션 몇 가지가 있습니다.
 1. Holographic와 같은 플랫폼별 패키지의 버전이 Windows와 같은 플랫폼을 알 수 없는 패키지 보다 항상 높은 지 확인 합니다.
 2. 플랫폼별 패키지를 사용 하는 경우에는 앱을 Windows로 패키지 하지 마십시오. 대신, 사용 하려는 특정 플랫폼에 대 한 Windows 범용 패키지를 패키지 합니다.
 
@@ -195,9 +195,9 @@ Unity 프로젝트를 기반으로 하는 혼합 현실 앱을 제출 하는 경
 
 "최소 하드웨어" 또는 입력 형식에 대 한 "권장 하드웨어" 확인란을 선택 하는 방법에 대해 설명 합니다. 
 
-예를 들어 다음과 같은 가치를 제공해야 합니다. 
+예를 들면 다음과 같습니다. 
 * 게임에 동작 컨트롤러가 필요 하지만 마이크를 통해 음성 입력을 허용 하는 경우 "Windows Mixed Reality 동작 컨트롤러" 옆에 있는 "최소 하드웨어" 확인란을 선택 하 고 "마이크" 옆에 있는 "권장 하드웨어" 확인란을 선택 합니다. 
-* Xbox 컨트롤러/게임 패드 또는 동작 컨트롤러 중 하나를 사용 하 여 게임을 재생할 수 있는 경우 "Xbox 컨트롤러 또는 게임 패드" 옆에 있는 "최소 하드웨어" 확인란을 선택 하 고 "Windows Mixed Reality 동작" 옆의 "권장 하드웨어" 확인란을 선택 합니다. 컨트롤러의 경우 "동작 컨트롤러는 게임 패드의 단계별 경험을 제공할 가능성이 높습니다.
+* Xbox 컨트롤러/게임 패드 또는 동작 컨트롤러 중 하나를 사용 하 여 게임을 재생할 수 있는 경우 "Xbox 컨트롤러 또는 게임 패드" 옆에 있는 "최소 하드웨어" 확인란을 선택 하 고, 동작 컨트롤러가 게임 패드의 단계별 경험을 제공할 가능성이 있으므로 "Windows Mixed Reality 동작 컨트롤러" 옆에 있는 "권장 하드웨어" 확인란을 선택할 수 있습니다.
 
 **Windows Mixed Reality 모던 헤드셋:**
 
@@ -211,13 +211,13 @@ Unity 프로젝트를 기반으로 하는 혼합 현실 앱을 제출 하는 경
 
 앱이 최대한 많은 Windows Mixed Reality 모던 헤드셋 사용자에 게 도달 하 게 하려면 [통합 그래픽이 포함 된 Windows Mixed reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)PC의 PC 사양을 [대상](understanding-performance-for-mixed-reality.md) 으로 지정 해야 합니다.
 
-혼합 현실 앱이 최소 Windows Mixed Reality PC 요구 사항을 대상으로 하는지 또는 특정 PC 구성 (예: [Windows Mixed Reality 울트라 pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)의 전용 GPU)이 필요한 지 여부에 대 한 자세한 내용은 "최소 하드웨어" 열입니다.
+혼합 현실 앱이 최소 Windows Mixed Reality PC 요구 사항을 대상으로 하는지 또는 특정 PC 구성 (예: [Windows Mixed Reality 울트라 pc](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)의 전용 GPU)이 필요한 지 여부는 "최소 하드웨어" 열에 관련 PC 사양을 사용 하 여 표시 해야 합니다.
 
 혼합 현실 앱이 더 잘 수행 되도록 설계 되었거나 더 높은 해상도의 그래픽을 제공 하는 경우 특정 PC 구성 또는 그래픽 카드에서 관련 PC 사양이 "권장 하드웨어" 열에 표시 되어야 합니다.
 
 혼합 현실 앱에서 PC에 연결 된 몰입 형 헤드셋을 사용 하는 경우에만 적용 됩니다. 혼합 현실 앱이 HoloLens 에서만 실행 되는 경우 HoloLens에 하드웨어 구성이 하나만 있으므로 PC 사양을 나타낼 필요가 없습니다.
 
-### <a name="device-family-availability"></a>장치 패밀리 가용성
+### <a name="device-family-availability"></a>디바이스 패밀리 가용성
 
 Visual Studio에서 [앱을 올바르게 패키지](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements) 한 경우 앱 제출 프로세스의 패키지 페이지에서 앱을 업로드 하면 앱을 사용할 수 있는 장치 패밀리를 식별 하는 테이블이 생성 됩니다.
 
@@ -237,7 +237,7 @@ Visual Studio의 Microsoft Store에 앱 연결
 앱 제출 프로세스의 [스토어 목록](https://docs.microsoft.com/windows/uwp/publish/create-app-store-listings) 페이지에는 혼합 현실 앱에 대 한 유용한 정보를 추가할 수 있는 여러 위치가 있습니다.
 
 >[!IMPORTANT]
->앱이 스토어에 의해 올바르게 분류 되 고 Windows Mixed Reality 고객이 검색할 수 있도록 하려면 앱에 대 한 "검색 용어" 중 하나로 **"Windows Mixed reality"** 를 추가 해야 합니다. "공유 필드"를 확장 하 여 검색 단어를 찾을 수 있습니다. 섹션).
+>앱이 스토어에 의해 올바르게 분류 되 고 Windows Mixed Reality 고객이 검색할 수 있도록 하려면 앱에 대 한 "검색 용어" 중 하나로 **"Windows Mixed reality"** 를 추가 해야 합니다. "공유 필드" 섹션을 확장 하 여 검색 단어를 찾을 수 있습니다.
 
 검색 단어에 Windows Mixed Reality를 추가 ![](images/search-terms-800px.png)<br>
 용어 검색에 "Windows Mixed Reality" 추가

@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc, 사진, 비디오, 캡처, 카메라
 ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926795"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375970"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>개발자를 위한 혼합 현실 캡처
 
@@ -197,17 +197,17 @@ Unity 응용 프로그램은 holograms를 사용 하도록 설정 하는 속성�
 
 MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  속성 이름  |  작업 표시줄의 검색 상자에  |  기본값  |  설명 | 
+|  속성 이름  |  형식  |  기본값  |  설명 | 
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([Mediastreamtype](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  이 효과가 사용 되는 캡처 스트림을 설명 합니다. 오디오를 사용할 수 없습니다. | 
-|  HologramCompositionEnabled  |  부울  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  RecordingIndicatorEnabled  |  부울  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  VideoStabilizationEnabled  |  부울  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
+|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  비디오 안정화에 사용 되는 기록 프레임의 수를 설정 합니다. 0은 전력 및 성능 측면에서 0-대기 시간 및 거의 "무료"입니다. 15는 대기 시간 및 메모리의 15 프레임에 대 한 비용으로 최고 품질을 위해 권장 됩니다. | 
 |  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (모던 헤드셋)  |  홀로그램의 전역 불투명도 계수를 0.0 (완전히 투명)에서 1.0 (완전히 불투명)로 설정 합니다. | 
-|  BlankOnProtectedContent  |  부울  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
-|  ShowHiddenMesh  |  부울  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
-| OutputSize | 사이즈 | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
+|  BlankOnProtectedContent  |  boolean  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
+|  ShowHiddenMesh  |  boolean  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
+| OutputSize | 크기 | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
 | PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)을 설정 하면 앱에 사진/비디오 카메라에서 렌더링 하 라는 메시지가 표시 되지 않습니다. |
 
 MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
@@ -215,7 +215,7 @@ MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 <table>
 <tr>
 <th>속성 이름</th>
-<th>작업 표시줄의 검색 상자에</th>
+<th>형식</th>
 <th>기본값</th>
 <th>설명</th>
 </tr>

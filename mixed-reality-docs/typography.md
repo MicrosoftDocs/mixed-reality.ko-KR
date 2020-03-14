@@ -7,11 +7,11 @@ ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 스타일, 글꼴, 입력 체계, ui, ux
 ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437408"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375800"
 ---
 # <a name="typography"></a>입력 체계
 
@@ -45,7 +45,7 @@ HoloLens에서 덧셈 색 시스템을 기반으로 하는 holograms를 사용 �
 
 얇은 수직선을 진동 하 고 가독성을 저하 시킬 수 있으므로 42pt에서 형식 크기에 대 한 밝거나 글꼴 가중치를 사용 하지 마십시오. 스트로크 두께가 충분 한 최신 글꼴이 제대로 작동 합니다. 예를 들어, Helvetica 및 Arial은 일반 또는 굵게 가중치를 사용 하 여 HoloLens에서 매우 쉽게 읽을 수 있습니다.
 
-### <a name="color"></a>색상
+### <a name="color"></a>색
 
 HoloLens에서 holograms은 가감 시스템을 사용 하 여 생성 되므로 흰색 텍스트는 매우 읽기 쉽게 합니다. 시작 메뉴와 앱 바에서 흰색 텍스트의 예제를 찾을 수 있습니다. HoloLens의 백 플레이트 없이 흰색 텍스트가 제대로 작동 하는 경우에도 복잡 한 물리적 배경으로 인해 형식을 읽기가 어려울 수 있습니다. 사용자의 포커스를 개선 하 고 실제 백그라운드에서 혼란 스 러를 최소화 하려면 진한 또는 컬러 뒷면에서 흰색 텍스트를 사용 하는 것이 좋습니다.
 
@@ -111,9 +111,9 @@ HoloLens에서 holograms은 가감 시스템을 사용 하 여 생성 되므로 
 
 :::row:::
     :::column:::
-    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Segoe 글꼴](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    ### <a name="segoe-fontsbr"></a>[Segoe 글꼴](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
     (Zip 파일)<br>
-    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[HoloLens 글꼴](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    ### <a name="hololens-fontbr"></a>[HoloLens 글꼴](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
     (Zip 파일)<br>
     <br>
     *이미지: HoloLens 글꼴은 Windows Mixed Reality에서 사용 되는 기호 문자 모양을 제공 합니다.*

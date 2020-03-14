@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 동기화, 공간 앵커, 전송, 여럿이, 보기, 시나리오, 연습, 샘플 코드, 전송, 로컬 앵커 전송, 앵커 내보내기, 앵커 가져오기
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437961"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376030"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX의 로컬 앵커 전송
 
@@ -284,7 +284,7 @@ Blob에는 SpatialAnchor 주변 환경의 표현이 포함 되어 있으므로 S
 
 ### <a name="export-of-multiple-spatialanchors"></a>여러 SpatialAnchors 내보내기
 
-단일 SpatialAnchor 내보내기와 마찬가지로 blob에는 지정 된 모든 SpatialAnchors 주변 환경의 표현이 포함 되어 있습니다. 또한 blob에는 포함 된 SpatialAnchors 간의 연결에 대 한 정보 (동일한 실제 공간에 있는 경우)가 포함 됩니다. 즉, 인접 한 두 개의 SpatialAnchors를 가져오는 경우 *두 번째* SpatialAnchor에 연결 된 홀로그램은 다음에 대 한 충분 한 데이터를 포함 하 여 *첫 번째* SpatialAnchor 주변 환경을 인식 하는 경우에도 과정이 됩니다. 두 SpatialAnchors 간의 계산 변환이 blob에 포함 되었습니다. 두 개의 SpatialAnchors (TryExportSpatialAnchors에 대 한 두 개의 개별 호출)를 개별적으로 내보낸 경우 첫 번째 SpatialAnchor에 연결 된 holograms에 대 한 blob에 포함 된 데이터가 충분 하지 않을 수 있습니다.
+단일 SpatialAnchor 내보내기와 마찬가지로 blob에는 지정 된 모든 SpatialAnchors 주변 환경의 표현이 포함 되어 있습니다. 또한 blob에는 포함 된 SpatialAnchors 간의 연결에 대 한 정보 (동일한 실제 공간에 있는 경우)가 포함 됩니다. 즉, 인접 한 두 개의 SpatialAnchors를 가져온 경우 두 SpatialAnchors 간의 변환 계산에 충분 한 데이터가 blob에 포함 되어 있기 때문에 *두 번째* *SpatialAnchor에 연결* 된 홀로그램은 과정이 됩니다. 두 개의 SpatialAnchors (TryExportSpatialAnchors에 대 한 두 개의 개별 호출)를 개별적으로 내보낸 경우 첫 번째 SpatialAnchor에 연결 된 holograms에 대 한 blob에 포함 된 데이터가 충분 하지 않을 수 있습니다.
 
 ![단일 TryExportAnchorsAsync 호출을 사용 하 여 내보낸 여러 앵커](images/multipleanchors.png) ![각 앵커에 대해 별도의 TryExportAnchorsAsync 호출을 사용 하 여 내보낸 여러 앵커](images/separateanchors.png)
 
@@ -672,7 +672,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-이제 되었습니다. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
+간단하죠. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 * [PPL (병렬 패턴 라이브러리)](https://msdn.microsoft.com/library/dd492418.aspx)

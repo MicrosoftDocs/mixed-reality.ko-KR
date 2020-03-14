@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows mixed reality, 공간 매핑, 환경, 상호 작용, directx, winrt, api, 샘플 코드, UWP, SDK, 연습
 ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437448"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375820"
 ---
 # <a name="spatial-mapping-in-directx"></a>DirectX의 공간 매핑
 
@@ -216,7 +216,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-Surface 매핑 데이터를 사용할 수 없을 때 앱에서 다른 작업을 수행 해야 하는 경우 [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) 이 **허용** 되지 않는 경우에 응답 하는 코드를 작성할 수 있습니다. 예를 들어 몰입 형 pc에서는 허용 되지 않습니다. 장치에는 공간 매핑에 대 한 하드웨어가 없기 때문에 장치가 연결 되었습니다. 이러한 장치의 경우 대신 사용자 환경 및 장치 구성에 대 한 정보를 위해 공간 단계를 사용 해야 합니다.
+표면 매핑 데이터를 사용할 수 없을 때 앱에서 다른 작업을 수행 해야 하는 경우 [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) **허용** 되지 않는 경우에 응답 하는 코드를 작성할 수 있습니다. 예를 들어, 이러한 장치에 공간 매핑에 대 한 하드웨어가 없기 때문에 장치를 연결 하는 pc에서는 허용 되지 않습니다. 이러한 장치의 경우 대신 사용자 환경 및 장치 구성에 대 한 정보를 위해 공간 단계를 사용 해야 합니다.
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>표면 메시 컬렉션 초기화 및 업데이트
 

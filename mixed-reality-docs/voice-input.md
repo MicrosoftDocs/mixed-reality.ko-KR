@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723192"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375990"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -42,7 +42,7 @@ ms.locfileid: "75723192"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -121,7 +121,7 @@ ms.locfileid: "75723192"
         *이미지: 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 앱의 위치를 조정할 수 있습니다.*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        ![공간](images/spacer-20x582.png)<br>
         ![앱 창이 나 홀로그램을 볼 때 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 전 세계의 앱 위치를 조정할 수 있습니다](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -183,7 +183,7 @@ Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰�
 
 빌드하는 모든 환경에 음성 명령을 추가하는 것이 좋습니다. 음성은 강력하고 편리한 방식으로 시스템 및 앱을 제어할 수 있는 방법입니다. 사용자는 다양한 언어 및 악센트를 사용하기 때문에 음성 키워드를 적절히 선택하면 사용자의 명령이 명확하게 해석될 수 있습니다.
 
-### <a name="best-practices"></a>최선의 구현 방법
+### <a name="best-practices"></a>모범 사례
 
 다음은 매끄러운 음성 인식에 도움이 될 수 있는 몇 가지 사례입니다.
 * **간결한 명령 사용** - 가능한 경우 두 개 이상의 음절로 이루어진 키워드를 선택합니다. 1음절 단어는 악센트가 다른 사람이 말할 경우 다른 모음 소리를 사용할 수 있습니다. 예: "비디오 재생"은 "현재 선택한 비디오 재생" 보다 좋습니다.
@@ -195,7 +195,7 @@ Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰�
 * **음성 명령 일관성 유지** - "Go back"이라고 말할 경우 이전 페이지로 이동되면 애플리케이션에서 이 동작을 유지합니다.
 * **시스템 명령 사용 방지** - 다음 음성 명령은 시스템용으로 예약되어 있습니다. 따라서 애플리케이션에서 사용하지 않아야 합니다.
    * "Hey Cortana"
-   * "Select"
+   * [선택]
    * "시작으로 이동"
 
 ### <a name="advantages-of-voice-input"></a>음성 입력의 장점

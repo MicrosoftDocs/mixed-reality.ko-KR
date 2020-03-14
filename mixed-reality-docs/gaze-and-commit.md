@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: 혼합 현실, 응시, 응시 대상 지정, 상호 작용, 디자인, 눈 추적, head 추적
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441122"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375850"
 ---
 # <a name="gaze-and-commit"></a>응시 및 커밋
 
@@ -114,7 +114,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
 
 ---
 
-### <a name="cursor"></a>커서
+### <a name="cursor"></a>Cursor
 
 :::row:::
     :::column:::
@@ -291,12 +291,12 @@ HoloLens의 제스처의 경우이 손을 제스처 프레임 내에 있어야 �
 
 
 ## <a name="see-also"></a>참고 항목
-* [눈에 잘 맞는 상호 작용](eye-gaze-interaction.md)
-* [HoloLens의 눈동자 추적 2](eye-tracking.md)
+* [시선 기반 상호 작용](eye-gaze-interaction.md)
+* [HoloLens 2의 시선 추적](eye-tracking.md)
 * [응시 및 유지](gaze-and-dwell.md)
-* [직접 조작](direct-manipulation.md)
-* [손 제스처](gaze-and-commit.md#composite-gestures)
-* [손 지점 및 커밋](point-and-commit.md)
+* [손 - 직접 조작](direct-manipulation.md)
+* [손 - 제스처](gaze-and-commit.md#composite-gestures)
+* [손 - 가리키기 및 커밋](point-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [음성 입력 ](voice-input.md)
 

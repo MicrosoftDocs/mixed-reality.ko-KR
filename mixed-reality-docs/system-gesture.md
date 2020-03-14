@@ -7,11 +7,11 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, 제스처, 상호 작용, 디자인
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182003"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375910"
 ---
 # <a name="system-gesture"></a>시스템 제스처
 
@@ -27,13 +27,13 @@ ms.locfileid: "75182003"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능</strong></td>
+        <td><strong>기능과</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
      <tr>
-        <td>Bloom</td>
+        <td>블 룸</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ ms.locfileid: "75182003"
     </tr>
 </table>
 
-## <a name="bloom"></a>Bloom
+## <a name="bloom"></a>블 룸
 HoloLens (첫 번째 gen)에서 시작 메뉴를 표시 하기 위해 꽃 벚꽃를 모방 기호화 된 제스처로 "블 룸"를 디자인 했습니다. 상호 작용 하 고, 쉽게 수행 하 고, 신속 하 게 회수할 수 있는 특수 한 방법입니다. HoloLens (첫 번째 gen)에서 블 룸 제스처를 수행 하려면 야자나무를 함께 사용 하 여 손을 놓고 손가락을 확산 시켜 손을 여세요.
 
 :::row:::
