@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, 디버그, 배포
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830837"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376110"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Visual Studio를 사용하여 배포 및 디버깅
 
@@ -138,6 +138,6 @@ Visual Studio를 사용하여 Visual Studio 프로젝트에서 배포하지 않�
 
 ## <a name="see-also"></a>참고 항목
 * [도구 설치](install-the-tools.md)
-* [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
+* [HoloLens 에뮬레이터 사용](using-the-hololens-emulator.md)
 * [UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
 * [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)

@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 디자인, 편안함, HoloLens 2, HoloLens(1세대)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491149"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376070"
 ---
 # <a name="comfort"></a>편안함
 
