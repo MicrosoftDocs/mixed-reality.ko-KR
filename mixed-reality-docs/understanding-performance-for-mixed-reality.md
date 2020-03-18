@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 혼합 현실, 가상 현실, VR, MR, 성능, 최적화, CPU, GPU
-ms.openlocfilehash: 7d8a0c95d59ec7e42e11bc1e1b6b40c702e01529
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
+ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438238"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79479576"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>혼합 현실 성능 이해
 
@@ -21,9 +21,9 @@ ms.locfileid: "73438238"
 
 | 플랫폼 | 대상 프레임 율 |
 |----------|-------------------|
-| [HoloLens](hololens-hardware-details.md) | 60 FPS |
+| [HoloLens](hololens-hardware-details.md) | 60FPS |
 | [Windows Mixed Reality 울트라 Pc](immersive-headset-hardware-details.md) | 90 FPS |
-| [Windows Mixed Reality Pc](immersive-headset-hardware-details.md) | 60 FPS |
+| [Windows Mixed Reality Pc](immersive-headset-hardware-details.md) | 60FPS |
 
 아래 프레임 워크는 대상 프레임 속도 적중에 대 한 모범 사례를 간략하게 설명 합니다. Unity에서 개발 하는 경우 unity 환경에서 프레임 속도를 측정 하 고 개선 하는 방법에 대 한 팁은 [unity의 성능 권장 사항 문서](performance-recommendations-for-unity.md) 를 참조 하세요.
 
@@ -98,7 +98,8 @@ GPU에서 프레임을 렌더링 하는 경우 응용 프로그램은 일반적�
 4) 렌더링할 픽셀 수 (해상도 표시)
 
 #### <a name="reduce-polygon-count"></a>다각형 수 줄이기
-다각형 수가 높을수록 GPU에 대 한 작업이 더 많이 발생 합니다. 장면의 다각형 수를 줄이면 렌더링 시간이 줄어듭니다. 비용이 많이 들 수 있는 기 하 도형에 음영을 지정 하는 다른 요인이 있지만 polygon 수는 장면을 렌더링 하는 데 소요 되는 비용을 결정 하는 가장 간단한 메트릭입니다.
+
+다각형 수가 높을수록 GPU에 대 한 작업이 더 많이 발생 합니다. 장면의 [다각형 수를 줄이면](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) 렌더링 시간이 줄어듭니다. 비용이 많이 들 수 있는 기 하 도형에 음영을 지정 하는 다른 요인이 있지만 polygon 수는 장면을 렌더링 하는 데 소요 되는 비용을 결정 하는 가장 간단한 메트릭입니다.
 
 #### <a name="limit-overdraw"></a>과도 한 그리기 제한
 
@@ -123,9 +124,11 @@ Occluding 개체에 의해 숨겨질 때 여러 개체가 렌더링 되지만 �
     - 일반적으로 꼭 짓 점 수는 픽셀 수 (720p는 921600 픽셀, 1080p는 2073600 픽셀 등) 보다 훨씬 작습니다.
 
 #### <a name="remove-gpu-stages"></a>GPU 단계 제거
+
 사후 처리 효과는 비용이 많이 들고 응용 프로그램의 채우기 비율이 높아질 수 있습니다. 여기에는 MSAA와 같은 앤티앨리어싱 기술이 포함 됩니다. HoloLens에서는 이러한 기술을 완전히 피하는 것이 좋으며 geometry, 선체 및 compute 셰이더와 같은 추가 셰이더 단계를 사용 하는 것이 좋습니다.
 
 ## <a name="memory-recommendations"></a>메모리 권장 사항
+
 과도 한 메모리 할당 및 할당 취소 작업을 수행 하면 일관 되지 않은 성능, 고정 된 프레임 및 기타 나쁜 동작이 발생할 수 있습니다. 메모리 관리는 가비지 수집기에 의해 제어 되므로 Unity에서 개발할 때 메모리 고려 사항을 이해 하는 것이 특히 중요 합니다.
 
 #### <a name="object-pooling"></a>개체 풀링
@@ -135,3 +138,6 @@ Occluding 개체에 의해 숨겨질 때 여러 개체가 렌더링 되지만 �
 ## <a name="see-also"></a>참고 항목
 - [Unity의 권장 성능](performance-recommendations-for-unity.md)
 - [Unity 권장 설정](recommended-settings-for-unity.md)
+- [3D 모델 최적화](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [실시간 3D 모델 변환 및 최적화를 위한 모범 사례](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+
