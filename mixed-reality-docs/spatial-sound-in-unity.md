@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, 공간 음향, HRTF, 방 크기
-ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: af3f1486c3e931ad93d7b8960d822653ec740c12
+ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553701"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082037"
 ---
 # <a name="spatial-sound-in-unity"></a>Unity의 공간 소리
 
@@ -35,6 +35,9 @@ ms.locfileid: "77553701"
 * **Spatialization 사용** 확인란을 선택 합니다.
 * **공간 Blend** 슬라이더를 ' 1 '로 이동
 * 개발자 워크스테이션에서 공간 오디오를 사용 하도록 설정 했는지 확인 합니다. 작업 표시줄에서 볼륨 아이콘을 마우스 오른쪽 단추로 클릭 하 고 공간 사운드가 "꺼짐" 이외의 항목으로 설정 되었는지 확인 하 여 사용 하도록 설정 합니다. HoloLens 2에 대 한 최고의 정보를 얻으려면 **헤드폰 용 Windows Sonic**을 선택 합니다.
+
+>[!NOTE]
+>종속성 중 하나가 누락 되어 SpatialAudio에서 플러그 인 Spatializer를 로드 하지 못하는 경우 Unity에 오류가 발생 하는 경우 최신 버전의 [Microsoft Visual C++ 재배포 가능 패키지가](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) PC에 설치 되어 있는지 확인 합니다.
 
 자세한 내용은 다음 항목을 참조하세요.
 * [Microsoft spatializer GitHub 리포지토리](https://github.com/microsoft/spatialaudio-unity)
