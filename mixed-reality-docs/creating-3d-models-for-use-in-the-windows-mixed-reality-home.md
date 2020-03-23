@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, 모델링, 모델링 지침, 자산 요구 사항, 제작 지침, 시작 관리자, 3D 시작 관리자, 질감, 재질, 복잡도, 삼각형, 메시, 다각형, polycount, 제한
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926576"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375630"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>홈에서 사용할 3D 모델 만들기
 
@@ -78,7 +78,7 @@ Windows Mixed Reality 홈에서는 64 개 이상의 노드가 있는 모델이 �
 
 조명 정보가 없는 Raw 색입니다. 또한이 지도에는 금속 (금속 지도에 흰색) 및 insulator (금속성 지도의 검정)에 대 한 reflectance 및 확산 정보가 각각 포함 되어 있습니다.
 
-### <a name="normal"></a>보통
+### <a name="normal"></a>일반
 
 탄젠트 공간 법선 지도
 
@@ -170,7 +170,7 @@ Windows MR은 geometry 노드 LODs를 사용 하 여 화면 검사에 따라 다
 |  LOD 1 |  5000  |  1만 | 
 |  LOD 2 |  2500  |  1만 | 
 
-LODs를 사용 하는 경우 항상 3 LOD 수준을 지정 합니다. LOD 시스템이 누락 된 LOD 수준으로 전환 될 때 LODs가 누락 되 면 모델이 예기치 않게 렌더링 되지 않습니다. 글 Tf 2.0은 현재 핵심 사양의 일부로 LODs를 지원 하지 않습니다. 따라서 [MSFT_LOD 확장](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod)을 사용 하 여 lods를 정의 해야 합니다.
+LODs를 사용 하는 경우 항상 3 LOD 수준을 지정 합니다. LOD 시스템이 누락 된 LOD 수준으로 전환 될 때 LODs가 누락 되 면 모델이 예기치 않게 렌더링 되지 않습니다. 글 Tf 2.0은 현재 핵심 사양의 일부로 LODs를 지원 하지 않습니다. 따라서 LODs는 [MSFT_LOD 확장](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod)을 사용 하 여 정의 해야 합니다.
 
 ### <a name="screen-coverage"></a>화면 검사
 
@@ -198,12 +198,12 @@ LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에
 
 
 ### <a name="opening-and-previewing-the-model"></a>모델 열기 및 미리 보기
-먼저 파일을 편집기 창으로 끌어 VSCode에서 글 글 Tf 모델을 엽니다. .. A t f a t a. a. a. a. a. a. a. "보기-> 명령 팔레트"로 이동 하 여 명령 팔레트에 "글 하는 Tf"를 입력 하 고 "& #에서 가져오기"를 선택 합니다. 그러면에 대 한 파일 선택기를 표시 하 여. 
+먼저 파일을 편집기 창으로 끌어 VSCode에서 글 글 Tf 모델을 엽니다. .glTF 파일 대신 .glb가 있는 경우 다운로드한 glTF 도구 추가기능을 사용하여 VSCode로 가져올 수 있습니다. "보기-> 명령 팔레트"로 이동 하 여 명령 팔레트에 "글 제 Tf"를 입력 하 고 "글 제 Tf"를 선택 합니다. 을 (를) 사용 하 여을 가져올 수 있는 파일 선택기를 표시 하는 &에서 가져옵니다. 
 
-인 글 어 어 모델을 열면 편집기 창에 JSON이 표시 됩니다. 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 오른쪽 클릭 메뉴에서 "영향을 주는 3D 모델 미리 보기" 명령 바로 가기를 선택 하 여 라이브 3D 뷰어에서 모델을 미리 볼 수도 있습니다. 
+인 글 어 어 모델을 열면 편집기 창에 JSON이 표시 됩니다. 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 Tf:를 선택 하 여 라이브 3D 뷰어에서 모델을 미리 볼 수도 있습니다. 3D 모델 미리 보기 "명령 바로 가기 메뉴를 마우스 오른쪽 단추로 클릭 합니다. 
 
 ### <a name="adding-the-triggers"></a>트리거 추가
-애니메이션 트리거는 애니메이션 맵 확장을 사용 하 여 글 지 Tf 모델 JSON에 추가 됩니다. 애니메이션 맵 확장은 [GitHub에서](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 공개적으로 설명 됩니다 (참고: 초안 확장). 모델에 확장을 추가 하려면 편집기에서 인 글 Tf 파일의 끝으로 스크롤하고 "extensionsUsed" 및 "extensions" 블록을 파일에 추가 합니다 (아직 없는 경우). "ExtensionsUsed" 섹션에서 "EXT_animation_map" 확장에 대 한 참조를 추가 하 고 "extensions" 블록에 모델의 애니메이션에 대 한 매핑을 추가 합니다.
+애니메이션 트리거는 애니메이션 맵 확장을 사용 하 여 글 지 Tf 모델 JSON에 추가 됩니다. 애니메이션 맵 확장은 [GitHub에서](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 공개적으로 설명 됩니다 (참고: 이는 초안 확장입니다. 모델에 확장을 추가 하려면 편집기에서 인 글 Tf 파일의 끝으로 스크롤하고 "extensionsUsed" 및 "extensions" 블록을 파일에 추가 합니다 (아직 없는 경우). "ExtensionsUsed" 섹션에서 "EXT_animation_map" 확장에 대 한 참조를 추가 하 고 "extensions" 블록에 모델의 애니메이션에 대 한 매핑을 추가 합니다.
 
 [사양에 설명 된](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) 것 처럼 애니메이션 인덱스의 배열인 "애니메이션" 목록에서 "의미 체계" 문자열을 사용 하 여 애니메이션을 트리거하는 항목을 정의 합니다. 아래 예제에서는 사용자가 개체에서 gazing 때 애니메이션을 재생 하도록 지정 했습니다.
 
@@ -223,16 +223,16 @@ LODs는 각 LOD에 설정 된 화면 범위 값으로 구동 되는 시스템에
   }
 ```
 다음 애니메이션 트리거 의미 체계는 Windows Mixed Reality 홈에서 지원 됩니다.  
-* "ALWAYS": 애니메이션을 지속적으로 반복 합니다.
-* "보유": 전체 기간 동안 반복 되는 개체는 grabbed입니다.
-* "응시": 개체를 조회 하는 동안 반복 됩니다.
+* "항상": 애니메이션을 지속적으로 반복
+* "보관": 전체 기간 동안 반복 되는 개체는 grabbed입니다.
+* "응시": 개체를 조회 하는 동안 루프가 반복 됩니다.
 * "근접": 뷰어가 개체 근처에 있는 동안 반복 됩니다.
 * "가리키기": 사용자가 개체를 가리키는 동안 반복 됩니다.
 
 ### <a name="saving-and-exporting"></a>저장 및 내보내기
-글 어 어 모델을 변경한 후에는 해당 모델을 직접가 나 편집기에서 파일의 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 어: 글 2로 내보내기 (이진 파일)"를 선택 하 여 대신. a. b a b를 내보낼 수 있습니다. 
+글 어 어 모델을 변경한 후에는 해당 모델을 직접 나 편집기에서 파일 이름을 마우스 오른쪽 단추로 클릭 하 고 "글 어:를 선택할 수 있습니다. 대신 글 b (이진 파일)로 내보내. 
 
-### <a name="restrictions"></a>제한 사항
+### <a name="restrictions"></a>Restrictions
 애니메이션은 20 분 보다 길면 안 되며 36000 개 보다 많은 키 프레임을 포함할 수 없습니다 (20 분 (30FPS)). 또한 모핑 대상 기반 애니메이션을 사용 하는 경우 8192 모핑 대상 꼭 짓 점을 초과 하지 않습니다. 이러한 횟수를 초과 하면 Windows Mixed Reality 홈에서 애니메이션 자산이 지원 되지 않습니다. 
 
 |기능|최대값|
@@ -251,24 +251,24 @@ Windows MR에서 렌더링 되는 장면 특성을 사용 하 여 글 글 Tf 자
 
 다음 재질 속성은 core로 된 Tf 2.0 사양에서 사용 되지만 반드시 필요한 것은 아닙니다.
 * baseColorFactor, metallicFactor, roughnessFactor
-* baseColorTexture: dds에 저장 된 질감을 가리켜야 합니다.
-* emissiveTexture: dds에 저장 된 질감을 가리켜야 합니다.
+* baseColorTexture: Dds에 저장 된 질감을 가리켜야 합니다.
+* emissiveTexture: Dds에 저장 된 질감을 가리켜야 합니다.
 * emissiveFactor
 * alphaMode
 
 다음 재질 속성은 코어 사양에서 무시 됩니다.
 * 모든 다중 UVs
-* metalRoughnessTexture: 아래에 정의 된 Microsoft 최적화 된 텍스처 압축을 대신 사용 해야 합니다.
+* metalRoughnessTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
 * normalTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
 * normalScale
-* occlusionTexture: 아래에 정의 된 Microsoft 최적화 된 텍스처 압축을 대신 사용 해야 합니다.
+* occlusionTexture: 아래에 정의 된 Microsoft 최적화 된 질감 압축을 대신 사용 해야 합니다.
 * occlusionStrength
 
 Windows MR은 기본 모드 선 및 요소를 지원 하지 않습니다. 
 
 단일 UV vertex 특성만 지원 됩니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 * [글 내보내기 및 변환기](https://github.com/KhronosGroup/glTF#converters-and-exporters)
 * [글 Tf Toolkit](https://github.com/Microsoft/glTF-Toolkit)
 * [글 Tf 2.0 사양](https://github.com/KhronosGroup/glTF/blob/master/README.md)
