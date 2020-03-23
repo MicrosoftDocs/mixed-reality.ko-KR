@@ -1,47 +1,47 @@
 ---
-title: Azure Speech Services 자습서-3. Azure Cognitive Services speech translation 구성 요소 추가
-description: 이 과정에서는 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법에 대해 설명 합니다.
+title: Azure Speech Services 자습서 - 3. Azure Cognitive Services 음성 번역 구성 요소 추가
+description: 이 과정에서는 혼합 현실 애플리케이션 내에서 Azure Speech SDK를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: dc5300b51ccb151a2e38f9d15b84a4a9031e2bb4
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
-ms.translationtype: MT
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.localizationpriority: high
+ms.openlocfilehash: d8e73e24f0522ff71b95ea1886d59893216b0597
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143231"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79028333"
 ---
-# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Azure Cognitive Services speech translation 구성 요소 추가
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Azure Cognitive Services 음성 번역 구성 요소 추가
 
-이 자습서에서는 프로젝트의 Azure Cognitive Services Speech Translation 구성 요소와 세 가지 언어로 번역 하는 방법에 대해 알아봅니다.
+이 자습서에서는 음성 번역을 프로젝트에 추가하여 음성을 세 가지 언어로 번역하고 전사할 수 있습니다.
+
+## <a name="objectives"></a>목표
+
+* Azure 음성 번역을 통합하는 방법 알아보기
 
 ## <a name="instructions"></a>지침
 
-1. 계층에서 Lunarcom_Base 개체를 선택 하 고 검사기 패널에서 구성 요소 추가를 클릭 합니다. Lunarcom 변환 인식기를 검색 하 고 선택 합니다.
+[계층 구조] 창에서 **Lunarcom** 개체를 선택한 다음, [검사기] 창에서 **구성 요소 추가** 단추를 사용하여 **Lunarcom 번역 인식기(스크립트)** 구성 요소를 Lunarcom 개체에 추가하고 다음과 같이 구성합니다.
 
-    ![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
+* **대상 언어**를 선택한 언어(예: _독일어_)로 변경합니다.
 
-    오프 라인 모드 시뮬레이터를 사용 하지 않도록 설정 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-1.png)
 
-    ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+> [!NOTE]
+> Lunarcom 번역 인식기(스크립트) 구성 요소는 MRTK의 일부가 아닙니다. 이 자습서의 자산과 함께 제공되었습니다.
 
-    >[!IMPORTANT]
-    >이동 하기 전에 음성 SDK 변환기를 테스트 하기 전에 오프 라인 모드 시뮬레이터가 사용 되지 않도록 설정 되어 있는지 확인 합니다 (위의 이미지에 표시 된 것 처럼). 변환 하려면 인터넷에 연결 되어 있어야 합니다.
+이제 게임 모드로 들어가면 먼저 위성 단추를 눌러 음성 번역을 테스트할 수 있습니다. 그런 다음, 마이크가 컴퓨터에 있다고 가정하여 사용자가 무언가를 말하면 음성이 선택한 언어로 번역되어 터미널 패널에 전사됩니다.
 
-2. Lunarcom 변환 인식기에서 드롭다운을 클릭 하 고 번역 하려는 언어를 선택 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-2.png)
 
-    ![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
-
-3. 응용 프로그램을 실행 하 고 위성 단추를 클릭 하 여 변환기를 테스트 하 고 말하기를 시작 합니다. 인식을 중지 하려면 위성 단추를 다시 누릅니다. 다음은 장면이 표시 되는 모양의 예입니다. "대상 언어" 드롭다운 (위의 이미지 참조)에서 언어를 자유롭게 변경 하 여 다른 언어로 번역을 탐색할 수 있습니다.
-
-    다음은 장면이 표시 되는 모양의 예입니다.
-
-    ![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
+> [!CAUTION]
+> 애플리케이션에서 Azure에 연결해야 하므로 컴퓨터/디바이스가 인터넷에 연결되어 있는지 확인합니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
-이제 프로젝트는 말하는 단어를 여러 다른 언어로 성공적으로 번역할 수 있습니다. 자유롭게 언어를 사용 하 고 번역의 정확도를 테스트할 수 있습니다.
+이제 프로젝트에서 사용자가 말하는 단어를 여러 다른 언어로 성공적으로 번역할 수 있습니다. 디바이스에서 애플리케이션을 실행하여 기능이 제대로 작동하는지 확인합니다.
 
 [다음 자습서: 4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)

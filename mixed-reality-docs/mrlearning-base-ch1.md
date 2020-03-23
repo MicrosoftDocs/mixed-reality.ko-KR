@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554403"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376210"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화
 
@@ -236,6 +236,9 @@ Visual Studio에서 **마스터** 또는 **릴리스** 구성, **ARM** 아키텍
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> 디바이스가 옵션으로 표시되지 않는 경우 기본 시작 프로젝트를 IC2Lpp 프로젝트에서 UWP 프로젝트로 변경해야 할 수 있습니다. **솔루션 탐색기**에서 **yourprojectname(유니버설 Windows)** 을 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다. 
+
 HoloLens 2를 컴퓨터에 연결합니다.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ HoloLens 2를 컴퓨터에 연결합니다.
 이제 첫 번째 HoloLens 2 애플리케이션을 배포했습니다. 연습을 진행하면서 HoloLens 2에서 인식한 모든 표면이 포함된 공간 매핑 메시가 표시됩니다. 또한 손을 추적하기 위한 손 및 손가락의 표시기와 애플리케이션 성능을 감시하기 위한 프레임 속도 카운터가 표시됩니다. 이러한 기능은 Mixed Reality Toolkit과 함께 기본적으로 포함되어 있는 기본적인 기능 중 일부에 불과합니다. 다음 자습서에서는 더 많은 콘텐츠와 대화형 작업을 장면에 추가하여 HoloLens 2 및 Mixed Reality Toolkit의 기능을 완벽하게 살펴볼 수 있습니다.
 
 > [!NOTE]
-> 앱에서 진단 프로파일러를 확인할 수 있습니다. **Toogle Diagnostics** 음성 명령을 사용하여 표시 유형을 전환할 수 있습니다. 그러나 일반적으로 개발 중에 프로파일러를 항상 표시하여 앱의 변경이 성능에 영향을 줄 수 있는 시기를 파악하는 것이 좋습니다. 예를 들어 HoloLens 2 애플리케이션은 [60FPS로 계속 실행](understanding-performance-for-mixed-reality.md)해야 합니다.
+> 앱에서 진단 프로파일러를 확인할 수 있습니다. **Toggle Diagnostics** 음성 명령을 사용하여 표시 유형을 전환할 수 있습니다. 그러나 일반적으로 개발 중에 프로파일러를 항상 표시하여 앱의 변경이 성능에 영향을 줄 수 있는 시기를 파악하는 것이 좋습니다. 예를 들어 HoloLens 2 애플리케이션은 [60FPS로 계속 실행](understanding-performance-for-mixed-reality.md)해야 합니다.
 
 [다음 자습서: 3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 도구 키트 구성](mrlearning-base-ch2.md)

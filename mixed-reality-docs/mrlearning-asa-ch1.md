@@ -1,46 +1,47 @@
 ---
-title: Azure 공간 앵커 자습서-1. Azure 공간 앵커 시작
+title: Azure Spatial Anchors 자습서 - 1. Azure Spatial Anchors 시작
 description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 0163b61bfbf8bd583532092581d94f63e1c2a624
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554682"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376150"
 ---
-# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure 공간 앵커 시작
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure Spatial Anchors 시작
 
 ## <a name="overview"></a>개요
 
-HoloLens 2 자습서의 두 번째 시리즈를 시작 합니다. 이 세 부분으로 구성 된 자습서 시리즈에서는 Azure 공간 앵커의 기본 사항을 알아봅니다.
+HoloLens 2 자습서의 두 번째 시리즈를 시작합니다. 3부로 구성된 이 자습서 시리즈에서는 Azure Spatial Anchors의 기본 사항에 대해 알아봅니다.
 
-이 첫 번째 자습서에서는 azure [공간 앵커](mrlearning-asa-ch1.md)를 시작 하 고, azure 세션을 시작 및 중지 하 고, 단일 장치에서 azure 앵커를 만들고, 업로드 하 고, 다운로드 하는 데 필요한 여러 단계를 살펴봅니다.
+첫 번째 자습서인 이 [Azure Spatial Anchors 시작](mrlearning-asa-ch1.md)에서는 Azure 세션을 시작 및 중지하고 단일 디바이스에서 Azure 앵커를 생성, 업로드 및 다운로드하는 데 필요한 여러 단계를 살펴봅니다.
 
-두 번째 자습서 인 [Azure 공간 앵커 저장, 검색 및 공유](mrlearning-asa-ch2.md)에서 앵커 정보를 HoloLens 2의 저장소에 저장 하 고 다중 장치 앵커 맞춤을 위해이 앵커 정보를 다른 장치에 공유 하는 방법에 대해 알아봅니다.
+두 번째 자습서인 [Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)에서는 앵커 정보를 HoloLens 2의 스토리지에 저장하여 여러 앱 세션에서 Azure Spatial Anchors를 저장하는 방법 및 이 앵커 정보를 다른 디바이스와 공유하여 다중 디바이스 앵커 맞춤을 수행하는 방법을 알아봅니다.
 
-세 번째 자습서에서는 [Azure 공간 고정 피드백을 표시](mrlearning-asa-ch3.md)하는 방법에 대해 사용자에 게 Azure 공간 앵커를 사용할 때 앵커 이벤트 및 상태에 대 한 피드백을 제공 하는 방법을 알아봅니다.
+세 번째 자습서인 [Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)에서는 Azure Spatial Anchors를 사용할 때 앵커 이벤트 및 상태에 대한 피드백을 사용자에게 제공하는 방법을 알아봅니다.
 
 ## <a name="objectives"></a>목표
 
-* HoloLens 2 용 Azure 공간 앵커를 사용 하 여 개발 하는 기본 사항 알아보기
-* 공간 앵커 만들기, 업로드 및 다운로드
+* HoloLens 2용 Azure Spatial Anchors를 사용하여 개발하는 방법에 대한 기본 사항 알아보기
+* Spatial Anchors 만들기, 업로드 및 다운로드
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 >[!TIP]
->초보자를 위한 [자습서](mrlearning-base.md) 시리즈를 아직 완료 하지 않은 경우 해당 자습서를 먼저 완료 하는 것이 좋습니다.
+>[시작 자습서](mrlearning-base.md) 시리즈를 아직 완료하지 않은 경우 먼저 해당 자습서를 완료하는 것이 좋습니다.
 
 * 올바른 [도구가 설치](install-the-tools.md)된 상태로 구성된 Windows 10 PC
 * Windows 10 SDK 10.0.18362.0 이상
 * 몇 가지 기본 C# 프로그래밍 기능
 * [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 * Unity 2019.2.X가 설치되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
-* [빠른 시작: Azure 공간 앵커를 사용 하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [공간 앵커 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료 합니다.
+* [빠른 시작: Azure Spatial Anchors를 사용하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [Spatial Anchors 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료합니다.
 
 > [!IMPORTANT]
 > 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
@@ -48,193 +49,193 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작 합니다. 이 세 부분
 ## <a name="creating-the-unity-project"></a>Unity 프로젝트 만들기
 <!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
 
-이 섹션에서는 새 Unity 프로젝트를 만들고 MRTK 개발을 위한 준비를 합니다.
+이 섹션에서는 새 Unity 프로젝트를 만들고 MRTK 개발을 준비합니다.
 
-이를 위해 먼저 다음 단계를 포함 하 여 [장치에 응용 프로그램 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침을 제외 하 [고 프로젝트 및 첫 번째 응용 프로그램 초기화](mrlearning-base-ch1.md)를 수행 합니다.
+이를 위해 먼저 [프로젝트 및 첫 번째 애플리케이션 초기화](mrlearning-base-ch1.md)를 수행합니다. 단, [디바이스에 애플리케이션 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침은 제외합니다. 단계는 다음과 같습니다.
 
-1. [새 Unity 프로젝트를 만들고](mrlearning-base-ch1.md#create-new-unity-project) 적절 한 이름 (예: *Mrtk 자습서*)을 지정 합니다.
+1. [새 Unity 프로젝트 만들기](mrlearning-base-ch1.md#create-new-unity-project) 및 적절한 이름(예: *MRTK Tutorials*) 지정
 
-2. [Windows Mixed Reality의 Unity 프로젝트 구성](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
+2. [Windows Mixed Reality용 Unity 프로젝트 구성](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
-3. [가져오기 TextMesh Pro 필수 리소스](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
+3. [TextMesh Pro Essential Resources 가져오기](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
 
 4. [Mixed Reality Toolkit 가져오기](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
 
-5. [Mixed Reality Toolkit에 대 한 Unity 프로젝트 구성](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
+5. [Mixed Reality Toolkit용 Unity 프로젝트 구성](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
 
-6. [혼합 현실 도구 키트를 Unity 장면에 추가](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) 하 고 *AzureSpatialAnchors* 와 같은 적절 한 이름을 장면에 제공 합니다.
+6. [Unity 장면에 Mixed Reality Toolkit 추가](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) 및 장면에 적절한 이름(예: *AzureSpatialAnchors*) 지정
 
-그런 다음 [혼합 현실 도구 키트 프로필을 구성 하는 방법 (공간 인식 표시 옵션 변경)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) 지침에 따라 장면의 MRTK 구성 프로필을 **DefaultHoloLens2ConfigurationProfile** 변경 하 고 공간 인식 메시의 표시 옵션을 **폐색**로 변경 합니다.
+그런 다음, [Mixed Reality Toolkit 프로필을 구성하는 방법(공간 인식 표시 옵션 변경)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) 지침에 따라 장면의 MRTK 구성 프로필을 **DefaultHoloLens2ConfigurationProfile**로 변경하고, 공간 인식 메시의 표시 옵션을 **폐색**으로 변경합니다.
 
 > [!CAUTION]
-> 위에서 설명한 [Mixed Reality 도구 키트에 대 한 unity 프로젝트 구성 도구](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) 설명에 설명 된 것 처럼 unity에 대해 MSBuild를 사용 하지 않는 것이 좋습니다.
+> 위에 연결된 [Mixed Reality Toolkit용 Unity 프로젝트 구성](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) 지침에서 설명한 대로 Unity용 MSBuild를 사용하지 않도록 설정하는 것이 좋습니다.
 
 ## <a name="adding-inbuilt-unity-packages"></a>기본 제공 Unity 패키지 추가
 <!-- TODO: Consider renaming to 'Installing AR Foundation' -->
 
-이 섹션에서는 다음 섹션에서 가져올 Azure 공간 앵커 SDK에 필요 하므로 Unity의 기본 제공 AR 패키지를 설치 합니다.
+이 섹션에서는 다음 섹션에서 가져올 Azure Spatial Anchors SDK에 필요하므로 Unity의 기본 제공 AR Foundation 패키지를 설치합니다.
 
-Unity 메뉴에서 **창** > **패키지 관리자**를 선택 합니다.
+Unity 메뉴에서 **Window** > **패키지 관리자**를 차례로 선택합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section2-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section2-step1-1.png)
 
 > [!NOTE]
-> AR 패키지를 목록에 표시 하기 전에 몇 초 정도 걸릴 수 있습니다.
+> AR Foundation 패키지가 목록에 표시되는 데 몇 초 정도 걸릴 수 있습니다.
 
-패키지 관리자 창에서 **AR Foundation** 을 선택 하 고 **설치** 단추를 클릭 하 여 패키지를 설치 합니다.
+패키지 관리자 창에서 **AR Foundation**을 선택하고, **설치** 단추를 클릭하여 패키지를 설치합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section2-step1-2.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section2-step1-2.png)
 
 ## <a name="importing-the-tutorial-assets"></a>자습서 자산 가져오기
 
-다음 Unity 사용자 지정 패키지를 다운로드 하 여 **나열 된 순서**대로 **가져옵니다** .
+다음 Unity 사용자 지정 패키지를 **나열된 순서대로** 다운로드하여 **가져옵니다**.
 
-* [AzureSpatialAnchors. unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (버전 2.1.1)
-* [MRTK. HoloLens2.2.3.0.2. unitypackage를 시작 합니다.](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
-* [MRTK. HoloLens2 AzureSpatialAnchors. 2.3.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
+* [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage)(버전 2.1.1)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
 
 > [!TIP]
-> Unity 사용자 지정 패키지를 가져오는 방법에 대 한 미리 알림은 [혼합 현실 도구 키트 가져오기](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) 명령을 참조 하세요.
+> Unity 사용자 지정 패키지를 가져오는 방법을 미리 알아보려면 [Mixed Reality Toolkit 가져오기](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) 지침을 참조할 수 있습니다.
 
-자습서 자산을 가져온 후 프로젝트 창이 다음과 같이 표시 됩니다.
+자습서 자산을 가져오면 [프로젝트] 창이 다음과 같이 표시됩니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section3-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section3-step1-1.png)
 
 ## <a name="creating-and-preparing-the-scene"></a>장면 만들기 및 준비
 <!-- TODO: Consider renaming to 'Preparing the scene' -->
 
-이 섹션에서는 자습서 prefabs 중 일부를 추가 하 여 장면을 준비 합니다.
+이 섹션에서는 자습서 프리팹 중 일부를 추가하여 장면을 준비합니다.
 
-프로젝트 창에서 **자산** > **mrtk로 이동 합니다. AzureSpatialAnchors** > **Prefabs** 폴더입니다. CTRL 단추를 누른 상태에서 **Buttonparent**, **debugwindow**, **명령**및 **parentanchor** 를 클릭 하 여 4 개의 prefabs 선택 합니다.
+[프로젝트] 창에서 **Assets** > **MRTK.Tutorials.AzureSpatialAnchors** > **Prefabs** 폴더로 차례로 이동합니다. CTRL 단추를 누른 상태에서 **ButtonParent**, **DebugWindow**, **Instructions** 및 **ParentAnchor**를 클릭하여 4개의 프리팹을 선택합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section4-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-1.png)
 
-4 개의 prefabs가 선택 된 상태에서 계층 창으로 끌어 장면에 추가 합니다.
+4개의 프리팹을 선택한 상태에서 [계층 구조] 창으로 끌어서 장면에 추가합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section4-step1-2.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-2.png)
 
-장면의 개체에 초점을 맞추기 위해 ParentAnchor 개체를 두 번 클릭 한 다음 다시 축소할 수 있습니다.
+장면의 개체에 초점을 맞추기 위해 ParentAnchor 개체를 두 번 클릭한 다음, 약간씩 다시 축소할 수 있습니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section4-step1-3.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-3.png)
 
 > [!TIP]
-> 장면에서 많은 아이콘이 표시 되는 경우, 예를 들어, 크게 프레임을 벗어난 아이콘이 표시 되는 경우 Gizmo 그리려면을 off 위치로 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">전환</a> 하 여 숨길 수 있습니다.
+> 장면에서 큰 아이콘(예: 틀이 있는 매력적인 큰 'T' 아이콘)이 표시되는 경우 <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">Gizmos를 끄기 위치로 전환</a>하여 이러한 아이콘을 숨길 수 있습니다.
 
-## <a name="configuring-the-buttons-to-operate-the-scene"></a>장면을 작동 하도록 단추 구성
+## <a name="configuring-the-buttons-to-operate-the-scene"></a>장면을 작동하도록 단추 구성
 
-이 섹션에서는 스크립트를 장면에 추가 하 여 응용 프로그램에서 로컬 앵커와 Azure 공간 앵커가 동작 하는 방법의 기본 사항을 보여 주는 일련의 단추 이벤트를 만듭니다.
+이 섹션에서는 스크립트를 장면에 추가하여 로컬 앵커와 Azure Spatial Anchors가 애플리케이션에서 동작하는 방법에 대한 기본 사항을 보여 주는 일련의 단추 이벤트를 만듭니다.
 
-### <a name="1-configure-the-pressable-button-holo-lens-2-script-component"></a>1. Pressable Button Holo Lens 2 (스크립트) 구성 요소를 구성 합니다.
+### <a name="1-configure-the-pressable-button-holo-lens-2-script-component"></a>1. 누름 가능한 단추 HoloLens 2(스크립트) 구성 요소 구성
 
-계층 창에서 **Buttonparent** 개체를 확장 하 고 **StartAzureSession**라는 첫 번째 자식 개체를 선택 합니다.
+[계층 구조] 창에서 **ButtonParent** 개체를 펼치고, **StartAzureSession**이라는 첫 번째 자식 개체를 선택합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-1.png)
 
-검사기 창에서 **Pressable Button Holo Lens 2 (스크립트)** 구성 요소를 찾고 **+** 아이콘을 클릭 하 여 **단추 누름 ()** 이벤트에 새 이벤트 수신기를 추가 합니다.
+[검사기] 창에서 **누름 가능한 단추 HoloLens 2(스크립트)** 구성 요소를 찾고, **+** 아이콘을 클릭하여 새 이벤트 수신기를 **Button Pressed ()** 이벤트에 추가합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step1-2.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-2.png)
 
-계층 구조 창에서 StartAzureSession 개체를 선택한 상태에서 계층 창의 **Parentanchor** 개체를 클릭 하 고이 단추를 클릭 하 여 parentanchor 개체가 단추 누름 이벤트를 수신 대기 하도록 설정 합니다.
+[계층 구조] 창에서 StartAzureSession 개체를 선택한 상태에서 [계층 구조] 창의 **ParentAnchor** 개체를 클릭하여 방금 추가한 이벤트 수신기의 빈 **없음(개체)** 필드로 끌어서 ParentAnchor 개체에서 이 단추의 단추 누름 이벤트를 수신 대기하도록 설정합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step1-3.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-3.png)
 
-동일한 이벤트 수신기의 **함수 없음** 드롭다운을 클릭 한 다음 **AnchorModuleScript** > **StartAzureSession ()** 를 선택 하 여이 단추에서 단추 누름 이벤트가 발생 했을 때 트리거되는 작업으로 StartAzureSession () 함수를 설정 합니다.
+동일한 이벤트 수신기의 **함수 없음** 드롭다운을 클릭한 다음, **AnchorModuleScript** > **StartAzureSession ()** 을 차례로 선택하여 StartAzureSession () 함수를 이 단추의 단추 누름 이벤트가 실행될 때 트리거되는 작업으로 설정합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step1-4.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-4.png)
 
-### <a name="2-configure-the-interactable-script-component"></a>2. Interactable (스크립트) 구성 요소 구성
+### <a name="2-configure-the-interactable-script-component"></a>2. Interactable(스크립트) 구성 요소 구성
 
-StartAzureSession 개체가 계층 구조 창에서 선택 된 상태에서 검사기 창에서 **Interactable (스크립트)** 구성 요소를 찾아 **OnClick ()** 이벤트에 대해 위의 1 단계와 동일한 프로세스를 반복 합니다.
+[계층 구조] 창에서 StartAzureSession 개체를 선택한 채로 [검사기] 창에서 **Interactable(스크립트)** 구성 요소를 찾고, **OnClick ()** 이벤트에 대해 위의 1단계와 동일한 프로세스를 반복합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step2-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step2-1.png)
 
-### <a name="3-configure-the-remaining-buttons"></a>3. 나머지 단추를 구성 합니다.
+### <a name="3-configure-the-remaining-buttons"></a>3. 나머지 단추 구성
 
-나머지 각 단추에 대해 위의 1 단계와 2 단계에 설명 된 프로세스를 완료 하 여 **단추 누름 ()** 및 **OnClick ()** 이벤트에 함수를 할당 합니다.
+나머지 각 단추에 대해 위의 1단계 및 2단계에서 설명한 프로세스를 완료하여 함수를 **Button Pressed ()** 및 **OnClick ()** 이벤트 모두에 할당합니다.
 
-* **Stopazuresession** 개체의 경우 AnchorModuleScript > **stopazuresession ()** 함수를 할당 합니다.
-* **Createazureanchor** 개체의 경우 AnchorModuleScript > **createazureanchor ()** 함수를 할당 합니다.
-  * 그런 다음 **Parentanchor** 를 빈 **없음 (게임 개체)** 필드로 끕니다.
-* **Removelocalanchor** 개체의 경우 AnchorModuleScript > **removelocalanchor ()** 함수를 할당 합니다.
-  * 그런 다음 **Parentanchor** 를 빈 **없음 (게임 개체)** 필드로 끕니다.
-* **FindAzureAnchor** 개체의 경우 AnchorModuleScript > **FindAzureAnchor ()** 함수를 할당 합니다.
-* **Deleteazureanchor** 개체의 경우 AnchorModuleScript > **deleteazureanchor ()** 함수를 할당 합니다.
+* **StopAzureSession** 개체에 대해 AnchorModuleScript > **StopAzureSession ()** 함수를 할당합니다.
+* **CreateAzureAnchor** 개체에 대해 AnchorModuleScript > **CreateAzureAnchor ()** 함수를 할당합니다.
+  * 그런 다음, **ParentAnchor**를 빈 **없음(게임 개체)** 필드로 다시 끕니다.
+* **RemoveLocalAnchor** 개체에 대해 AnchorModuleScript > **RemoveLocalAnchor ()** 함수를 할당합니다.
+  * 그런 다음, **ParentAnchor**를 빈 **없음(게임 개체)** 필드로 다시 끕니다.
+* **FindAzureAnchor** 개체에 대해 AnchorModuleScript > **FindAzureAnchor ()** 함수를 할당합니다.
+* **DeleteAzureAnchor** 개체에 대해 AnchorModuleScript > **DeleteAzureAnchor ()** 함수를 할당합니다.
 
-### <a name="4-connect-the-scene-to-the-azure-resource"></a>4. 장면을 Azure 리소스에 연결
+### <a name="4-connect-the-scene-to-the-azure-resource"></a>4. Azure 리소스에 장면 연결
 
-계층 창에서 **Parentanchor** 개체를 선택 하 고 검사기 창에서 **공간 앵커 관리자 (스크립트)** 구성 요소로 스크롤합니다.
+[계층 구조] 창에서 **ParentAnchor** 개체를 선택하고, [검사기] 창에서 **공간 앵커 관리자(스크립트)** 구성 요소까지 아래로 스크롤합니다.
 
-그런 다음 **자격 증명** 섹션에서이 자습서의 [필수 구성](mrlearning-asa-ch1.md#prerequisites)요소로 만든 공간 앵커 계정 id 및 키를 해당 **공간 앵커 계정 Id** 및 **공간 앵커 계정 키** 필드에 붙여넣습니다.
+그런 다음, **자격 증명** 섹션에서 이 자습서에 있는 [필수 구성 요소](mrlearning-asa-ch1.md#prerequisites)의 일부로 만든 Spatial Anchors 계정 ID 및 키를 해당 **Spatial Anchors 계정 ID** 및 **Spatial Anchors 계정 키** 필드에 붙여넣습니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section5-step4-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step4-1.png)
 
-## <a name="trying-the-basic-behaviors-of-azure-spatial-anchors"></a>Azure 공간 앵커의 기본 동작 시도
+## <a name="trying-the-basic-behaviors-of-azure-spatial-anchors"></a>Azure Spatial Anchors의 기본 동작 사용해 보기
 
-이제 Azure 공간 앵커의 기본 사항을 보여 주기 위해 장면을 구성 했으므로 Azure 공간 앵커 어떠한 체험을 경험할 수 있도록 앱을 배포할 시간입니다.
+이제 장면에서 Azure Spatial Anchors의 기본 사항을 보여 주도록 구성되었으므로 Azure Spatial Anchors를 직접 경험할 수 있도록 앱을 배포할 시간입니다.
 
-### <a name="1-add-additional-required-capabilities"></a>1. 필요한 추가 기능을 추가 합니다.
+### <a name="1-add-additional-required-capabilities"></a>1. 필요한 추가 기능 추가
 
-Unity 메뉴에서 **편집** > **프로젝트 설정 ...** 을 선택 하 여 플레이어 설정 창을 엽니다.
+Unity 메뉴에서 **편집** > **프로젝트 설정...** 을 차례로 선택하여 [플레이어 설정] 창을 엽니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section6-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-1.png)
 
-플레이어 설정 창에서 **플레이어** , **게시 설정**을 차례로 선택 합니다.
+[플레이어 설정] 창에서 **플레이어**, **게시 설정**을 차례로 선택합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section6-step1-2.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-2.png)
 
-**게시 설정**에서 **기능** 섹션까지 아래로 스크롤하고 자습서의 시작 부분에서 프로젝트를 만들 때 사용 하도록 설정한 **Internetclient**, **마이크**및 **SpatialPerception** 기능이 사용 되도록 설정 되어 있는지 다시 확인 합니다. 그런 다음 **Internetclientserver**, **PrivateNetworkClientServer**, **removablestorage**및 **웹캠** 기능을 사용 하도록 설정 합니다.
+**게시 설정**에서 **기능** 섹션까지 아래로 스크롤하여 자습서의 시작 부분에서 프로젝트를 만들 때 사용하도록 설정한 **InternetClient**, **Microphone** 및 **SpatialPerception** 기능이 사용하도록 설정되어 있는지 다시 확인합니다. 그런 다음, **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage** 및 **Webcam** 기능을 사용하도록 설정합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section6-step1-3.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-3.png)
 
 ### <a name="2-deploy-the-app-to-your-hololens-2"></a>2. HoloLens 2에 앱 배포
 
-Azure 공간 앵커는 Unity에서 실행할 수 없으므로 Azure 공간 앵커 기능을 테스트 하려면 장치에 프로젝트를 배포 해야 합니다.
+Azure Spatial Anchors는 Unity에서 실행할 수 없으므로 Azure Spatial Anchors 기능을 테스트하려면 프로젝트를 디바이스에 배포해야 합니다.
 
 > [!TIP]
-> Unity 프로젝트를 빌드하고 HoloLens 2에 배포 하는 방법에 대 한 미리 알림은 [장치에 응용 프로그램 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침을 참조할 수 있습니다.
+> Unity 프로젝트를 빌드하고 HoloLens 2에 배포하는 방법을 미리 알아보려면 [디바이스에 애플리케이션 빌드](mrlearning-base-ch1.md#build-your-application-to-your-device) 지침을 참조할 수 있습니다.
 
-### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3. HoloLens 2에서 앱을 실행 하 고 앱 내 지침을 따릅니다.
+### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3. HoloLens 2에서 앱 실행 및 앱 내 지침 수행
 
 > [!CAUTION]
-> Azure 공간 앵커는 인터넷을 사용 하 여 고정 데이터를 저장 하 고 로드 하므로 장치가 인터넷에 연결 되어 있는지 확인 합니다.
+> Azure Spatial Anchors는 인터넷을 사용하여 앵커 데이터를 저장하고 로드하므로 디바이스가 인터넷에 연결되어 있는지 확인합니다.
 
-응용 프로그램이 장치에서 실행 되는 경우 Azure 공간 고정 자습서 명령 패널에 표시 된 화면에 표시 되는 지침을 따릅니다.
+애플리케이션이 디바이스에서 실행되는 경우 Azure Spatial Anchor 자습서 지침 패널에 표시되는 화면상의 지침을 따릅니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section6-step3-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step3-1.png)
 
 ## <a name="anchoring-an-experience"></a>환경 고정
 
-이전 섹션에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 큐브를 사용 하 여 연결 된 앵커를 사용 하 여 부모 게임 개체를 나타내고 시각화 했습니다. 이 섹션에서는 ParentAnchor 개체의 자식으로 배치 하 여 전체 환경을 고정 하는 방법에 대해 설명 합니다.
+이전 섹션에서는 Azure Spatial Anchors의 기본 사항을 알아보았습니다. 큐브를 사용하여 연결된 앵커가 있는 부모 게임 개체를 표현하고 시각화했습니다. 이 섹션에서는 전체 환경을 ParentAnchor 개체의 자식 항목으로 배치하여 이 환경을 고정시키는 방법에 대해 알아봅니다.
 
-### <a name="1-add-the-rocket-launcher-experience"></a>1. 로켓 시작 관리자 환경을 추가 합니다.
+### <a name="1-add-the-rocket-launcher-experience"></a>1. 로켓 발사대 환경 추가
 
-프로젝트 창에서 **자산** > **mrtk로 이동 합니다. 자습서. GetPrefabs** 가 시작 > **RocketLauncher** 폴더 > 하 고 **RocketLauncher_Complete** prefab를 선택 합니다.
+[프로젝트] 창에서 **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** > **RocketLauncher** 폴더로 차례로 이동하고, **RocketLauncher_Complete** 프리팹을 선택합니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section7-step1-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step1-1.png)
 
-RocketLauncher_Complete prefab가 선택 된 상태에서 계층 창의 **Parentanchor** 개체 위쪽으로 끌어 parentanchor 개체의 자식으로 만듭니다.
+RocketLauncher_Complete 프리팹을 선택한 채로 [계층 구조] 창의 **ParentAnchor** 개체 위로 끌어서 ParentAnchor 개체의 자식 항목으로 만듭니다.
 
-![mrlearning](images/mrlearning-asa/tutorial1-section7-step1-2.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step1-2.png)
 
-### <a name="2-reposition-the-rocket-launcher-experience"></a>2. 로켓 시작 관리자 환경의 위치를 변경 합니다.
+### <a name="2-reposition-the-rocket-launcher-experience"></a>2. 로켓 발사대 환경의 위치 변경
 
-다음과 같이 **Parentanchor** 개체가 계속 노출 되도록 하는 동시에 **RocketLauncher_Complete** 개체를 적절 한 배율 및 방향으로 배치 하 고 회전 하 고 크기를 조정 합니다.
+**RocketLauncher_Complete** 개체를 적절한 크기 조정 및 방향으로 위치 지정, 회전 및 크기 조정하고, **ParentAnchor** 개체가 계속 공개되도록 합니다. 예를 들어 다음과 같습니다.
 
 * 변환 **위치** X = 0, Y = 0, Z = 3.75
 * 변환 **회전** X = 0, Y = 90, Z = 0
-* 변환 **배율** X = 10, Y = 10, Z = 10
+* 변환 **크기 조정** X = 10, Y = 10, Z = 10
 
-![mrlearning](images/mrlearning-asa/tutorial1-section7-step2-1.png)
+![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step2-1.png)
 
-응용 프로그램에서 사용자는 이제 큐브를 이동 하 여 전체 로켓 시작 관리자 환경을 재배치할 수 있습니다.
+애플리케이션에서 사용자는 큐브를 이동하여 전체 로켓 발사대 환경의 위치를 변경할 수 있습니다.
 
 > [!TIP]
-> 위치 조정 개체 (예:이 자습서에서 사용 되는 큐브) 사용, 환경 주위에 있는 경계 상자를 전환 하는 단추 사용, 위치 및 회전 사용 등의 다양 한 사용자 환경 흐름이 있습니다. gizmo 그리려면.
+> 위치 변경 개체 사용, 환경 주위의 경계 상자를 해제/설정하는 단추 사용, 위치 및 회전 gizmos 사용 등을 포함하여 위치 변경 환경에 대한 다양한 사용자 환경 흐름이 있습니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
-이 자습서에서는 Azure 공간 앵커의 기본 사항을 배웠습니다. 이 자습서에서는 Azure 공간 앵커 세션을 시작 및 중지 하 고 단일 장치에서 Azure 공간 앵커를 만들고, 업로드 하 고, 다운로드 하는 데 필요한 여러 단계를 살펴볼 수 있는 몇 가지 단추를 제공 했습니다.
+이 자습서에서는 Azure Spatial Anchors의 기본 사항을 알아보았습니다. 여기서는 Azure Spatial Anchors 세션을 시작 및 중지하고 단일 디바이스에서 Azure Spatial Anchors를 생성, 업로드 및 다운로드하는 데 필요한 다양한 단계를 살펴볼 수 있는 몇 가지 단추를 제공했습니다.
 
-다음 단원에서는 응용 프로그램을 다시 시작한 후에도 검색을 위해 HoloLens 2에 Azure 앵커 Id를 저장 하는 방법과 여러 장치 간에 앵커 Id를 전송 하 여 공간 맞춤을 구현 하는 방법을 배웁니다.
+다음 단원에서는 애플리케이션이 다시 시작된 후에도 검색을 위해 Azure 앵커 ID를 HoloLens 2에 저장하는 방법 및 여러 디바이스 간에 앵커 ID를 전송하여 공간 맞춤을 구현하는 방법에 대해 알아봅니다.
 
-[다음 단원: 2. Azure 공간 앵커 저장, 검색 및 공유](mrlearning-asa-ch2.md)
+[다음 단원: 2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)

@@ -1,45 +1,57 @@
 ---
-title: Azure Speech Services 자습서-2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
-description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법을 알아보세요.
+title: Azure Speech Services 자습서 - 2. 로컬 음성-텍스트 변환을 위한 오프라인 모드 추가
+description: 이 과정을 완료하여 혼합 현실 애플리케이션 내에서 Azure Speech SDK를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, Hololens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+keywords: 혼합 현실, Unity, 자습서, HoloLens
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913214"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031616"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. 로컬 음성-텍스트 번역을 위한 오프 라인 모드 추가
+# <a name="2-using-speech-recognition-to-execute-commands"></a>2. 음성 인식을 사용하여 명령 실행
 
-이 자습서에서는 Azure 서비스에 연결할 수 없는 경우 로컬 음성-텍스트 변환을 수행할 수 있도록 하는 오프 라인 모드를 추가 합니다. 또한 연결 되지 않은 상태를 *시뮬레이션* 합니다.
+이 자습서에서는 Azure 음성 인식을 통해 사용자가 정의하는 단어 또는 구에 따라 작업을 수행할 수 있는 명령을 실행하는 기능을 추가합니다.
+
+## <a name="objectives"></a>목표
+
+* Azure 음성 인식을 사용하여 명령을 실행하는 방법 알아보기
 
 ## <a name="instructions"></a>지침
 
-1. 계층에서 Lunarcom_Base 개체를 선택 합니다.
+[계층 구조] 창에서 **Lunarcom** 개체를 선택한 다음, [검사기] 창에서 **구성 요소 추가** 단추를 사용하여 **Lunarcom 실행 단어 인식기(스크립트)** 구성 요소를 Lunarcom 개체에 추가하고 다음과 같이 구성합니다.
 
-2. 검사기 패널에서 구성 요소 추가를 클릭 합니다. Lunarcom 오프 라인 인식을 검색 하 고 선택 합니다.
+* **실행 단어** 필드에서 적절한 구를 입력합니다(예: _터미널 활성화_).
+* **해제 단어** 필드에서 적절한 구(예: _터미널 해제_)를 입력합니다.
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-3. LunarcomOfflineRecognizer의 드롭다운을 클릭 하 고 사용을 선택 합니다. 이 프로그램은 사용자가 연결 되지 않은 것 처럼 작동 하는 프로젝트를 프로그램 합니다.
+> [!NOTE]
+> Lunarcom 실행 단어 인식기(스크립트) 구성 요소는 MRTK의 일부가 아닙니다. 이 자습서의 자산과 함께 제공되었습니다.
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+이전 자습서에서와 같이 이제 게임 모드로 들어가면 터미널 패널을 기본적으로 사용하도록 설정되어 있지만, **터미널 해제**라는 해제 단어를 말하여 터미널 패널을 사용하지 않도록 설정할 수 있습니다.
 
-4. Unity 편집기에서 Play를 누르고 테스트 합니다. 장면의 왼쪽 아래 모서리에 있는 마이크를 누르고 말하기를 시작 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >오프 라인 상태 이기 때문에 절전 모드 해제 단어 기능이 사용 하지 않도록 설정 되었습니다. 오프 라인에서 음성이 인식 될 때마다 마이크를 물리적으로 클릭 해야 합니다.
+그리고 **터미널 활성화**라는 실행 단어를 말하여 터미널 패널을 다시 사용하도록 설정합니다.
 
-    다음은 장면이 표시 되는 모양의 예입니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+> [!CAUTION]
+> 애플리케이션에서 Azure에 연결해야 하므로 컴퓨터/디바이스가 인터넷에 연결되어 있는지 확인합니다.
+
+> [!TIP]
+> Azure에 자주 연결할 수 없는 것으로 예상되는 경우 [음성 명령 사용](mrlearning-base-ch5.md#enabling-voice-commands) 지침에 따라 MRTK를 사용하여 음성 명령을 구현할 수도 있습니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
-오프 라인 모드를 사용 하도록 설정 했습니다. 이제 오프 라인 상태인 경우에도 음성 SDK를 사용 하 여 프로젝트에 대 한 작업을 수행할 수 있습니다.
+Azure에서 구동하는 음성 명령을 구현했습니다. 디바이스에서 애플리케이션을 실행하여 기능이 제대로 작동하는지 확인합니다.
 
-[다음 자습서: 3. Azure Cognitive Services speech translation 구성 요소 추가](mrlearning-speechSDK-ch3.md)
+다음 자습서에서는 Azure 음성 번역을 사용하여 음성을 번역하는 방법에 대해 알아봅니다.
+
+[다음 자습서: 3. Azure Cognitive Services 음성 번역 구성 요소 추가](mrlearning-speechSDK-ch3.md)

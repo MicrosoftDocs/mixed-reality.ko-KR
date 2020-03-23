@@ -1,174 +1,321 @@
 ---
-title: Azure Speech Services 자습서-4. 의도 및 자연어 이해 설정
-description: 이 과정을 완료 하 여 혼합 현실 응용 프로그램 내에서 Azure Speech SDK를 구현 하는 방법을 알아보세요.
+title: Azure Speech Services 자습서 - 4. 의도 및 자연어 이해 설정
+description: 이 과정을 완료하여 혼합 현실 애플리케이션 내에서 Azure Speech SDK를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
-ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: b2342e7d0d502af2787ca311d18a44f8726acf2d
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554005"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79028552"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. 의도 및 자연어 이해 설정
 
-이 단원에서는 Azure Speech Service의 의도 기능을 살펴봅니다. 의도 기능을 사용 하면 사용자가 특수 한 음성 명령을 사용 하 고 시스템에서 해당 의도를 인식할 수 있는 AI 기반 음성 명령을 응용 프로그램에 적용할 수 있습니다. 이 단원에서는 Azure LUIS 포털을 설정 하 고, 의도/엔터티/길이 발언를 설정 하 고, 의도 리소스를 게시 하 고, Unity 앱을 의도 리소스에 연결 하 고, 첫 번째 의도 API 호출을 수행 합니다.
+이 자습서에서는 Azure Speech Service의 의도 인식에 대해 살펴봅니다. 의도 인식 기능을 사용하면 애플리케이션에서 AI 지원 음성 명령을 갖출 수 있습니다. 여기서는 사용자가 비특정 음성 명령을 말할 수 있으며, 시스템에서 해당 의도를 이해할 수 있습니다.
 
 ## <a name="objectives"></a>목표
 
-- 응용 프로그램에서 의도 및 자연어 이해를 설정 하는 방법을 알아봅니다.
-- Azure의 LUIS 포털을 설정 하는 방법 알아보기
-- Azure에서 의도, 엔터티 및 길이 발언를 설정 하는 방법을 알아봅니다.
+* LUIS 포털에서 의도, 엔터티 및 발화를 설정하는 방법 알아보기
+* 애플리케이션에서 의도와 자연어 이해를 구현하는 방법 알아보기
 
-## <a name="instructions"></a>지침
+## <a name="preparing-the-scene"></a>장면 준비
 
-1. 컴퓨터에서 받아쓰기를 사용 하도록 허용 합니다. 이렇게 하려면 Windows 설정으로 이동 하 여 "개인 정보"를 선택한 다음 "음성"을 선택 하 고 &, 음성 서비스를 켜고 제안 사항을 입력 합니다.
+[계층 구조] 창에서 **Lunarcom** 개체를 선택한 다음, [검사기] 창에서 **구성 요소 추가** 단추를 사용하여 **Lunarcom 의도 인식기(스크립트)** 구성 요소를 Lunarcom 개체에 추가합니다.
 
-    ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-1.png)
 
-    ![Module4Chapter4step1bim](images/module4chapter4step1bim.PNG)
+[프로젝트] 창에서 **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** > **RocketLauncher** 폴더로 차례로 이동하고, **RocketLauncher_Complete** 프리팹을 [계층 구조] 창으로 끌어 카메라 앞의 적절한 위치에 배치합니다. 예를 들어 다음과 같습니다.
 
-    ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
+* 변환 **위치** X = 0, Y = -0.4, Z = 1
+* 변환 **회전** X = 0, Y = 90, Z = 0
 
-2. [Azure Portal](https://portal.azure.com/)에 로그인 합니다. 로그인 하면 리소스 만들기를 클릭 하 고 "Language Understanding"를 검색 한 다음 Enter 키를 누릅니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-2.png)
 
-    ![mrlearning-speech-ch4-1-step2](images/mrlearning-speech-ch4-1-step2.png)
+[계층 구조] 창에서 **Lunarcom** 개체를 다시 선택한 다음, **RocketLauncher_Complete** > **Button** 개체를 차례로 펼치고, 각 **Buttons** 개체의 자식 개체를 해당 **Lunar 발사 시스템 단추** 필드에 할당합니다.
 
-3. **만들기** 단추를 클릭 하 여이 서비스의 인스턴스를 만듭니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-3.png)
 
-    ![mrlearning-speech-ch4-1-step3a](images/mrlearning-speech-ch4-1-step3a.png)
+## <a name="creating-the-azure-language-understanding-resource"></a>Azure Language Understanding 리소스 만들기
 
-    리소스에 **이름을**지정 합니다 (예: *Speech-SDK-학습-모듈*). **구독**의 경우 평가 계정이 있는 경우 *종 량* 제 또는 *무료 내역* 을 선택 합니다. 그런 다음 **새로 만들기** 링크를 클릭 하 여 새 **리소스 그룹** 을 만들고 이름을 입력 합니다 (예: *HoloLens-2-자습서-리소스 그룹*). **확인** 단추를 클릭 합니다.
+이 섹션에서는 다음 섹션에서 만들 LUIS(Language Understanding Intelligent Service) 앱에 대한 Azure 예측 리소스를 만듭니다.
 
-    ![mrlearning-speech-ch4-1-step3b](images/mrlearning-speech-ch4-1-step3b.png)
+<a href="https://portal.azure.com" target="_blank">Azure</a>에 로그인하고, **리소스 만들기**를 클릭합니다. 그런 다음, **Language Understanding**을 검색하여 선택합니다.
 
-4. **제작 위치** 및 **런타임 위치**를 선택 합니다. 이 자습서에서는 *(us) 미국 서 부*를 사용 하 고 **제작 가격 책정 계층** 및 **런타임 가격 책정 계층**에 대해 *F0 (매월 초당 5 개 호출, 매월 10k 호출)* 를 선택 합니다. 마지막으로, **만들기** 단추를 클릭 하 여 새 리소스 그룹 뿐만 아니라 리소스를 만듭니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-1.png)
 
-    ![mrlearning-speech-ch4-1-step4](images/mrlearning-speech-ch4-1-step4.png)
+**만들기** 단추를 클릭하여 이 서비스의 인스턴스를 만듭니다.
 
-    >[!NOTE]
-    >만들기 단추를 클릭 한 후에는 서비스를 만들 때까지 기다려야 합니다 .이 경우 몇 분 정도 걸릴 수 있습니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-2.png)
 
-5. 리소스 만들기 프로세스가 완료 되 면 **배포가 완료 되었습니다**. 메시지가 표시 됩니다.
+[만들기] 페이지에서 **예측** 옵션을 클릭하고 다음 값을 입력합니다.
 
-    ![mrlearning-speech-ch4-1-step5](images/mrlearning-speech-ch4-1-step5.png)
+* 평가판 구독을 사용하는 경우 **구독**에 대해 **평가판**을 선택하고, 그렇지 않으면 다른 구독을 선택합니다.
+* **리소스 그룹**에 대해 **새로 만들기** 링크를 클릭하고, 적절한 이름(예: *MRKT-Tutorials*)을 입력한 다음, **확인**을 클릭합니다.
 
-6. 동일한 사용자 계정을 사용 하 여 [Language Understanding Intelligent Service (LUIS)](https://www.luis.ai/) 포털에 로그인 하 고, 국가를 선택 하 고, 사용 약관에 동의 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-3.png)
 
-    >[!NOTE]
-    >Language Understanding 포털에 도달 하면 Azure Portal와 동일한 자격 증명을 사용 하 여 로그인 해야 할 수 있습니다. LUIS를 처음 사용 하는 경우 시작 페이지 아래쪽으로 스크롤하여 "LUIS 만들기" 앱 단추를 찾아 클릭 해야 합니다.
+> [!NOTE]
+> 이 문서를 작성하는 시점부터 다음 섹션에서 LUIS(Language Understanding Intelligent Service)를 만들 때 LUIS 내에서 작성 평가판 키가 자동으로 생성되므로 작성 리소스를 만들 필요가 없습니다.
 
-7. 로그인 한 후 내 앱 (현재 해당 섹션에 있지 않은 경우)을 클릭 합니다. 그런 다음 새 앱 만들기를 클릭할 수 있습니다. 새 앱의 이름을 "Speech SDK Learning Module"으로 합니다. 설명 필드에 "Speech SDK Learning Module"을 추가 합니다. 그런 다음 "완료"를 클릭 합니다.
+> [!TIP]
+> 다른 적합한 리소스 그룹이 Azure 계정에 이미 있는 경우(예: [Azure Spatial Anchors](mrlearning-asa-ch1.md) 자습서를 완료한 경우), 새 리소스 그룹을 만드는 대신 이 리소스 그룹을 사용할 수 있습니다.
 
-    ![Module4Chapter4step8aim](images/module4chapter4step8aim.PNG)
+[만들기] 페이지에 있는 상태에서 다음 값을 입력합니다.
 
-    ![Module4Chapter4step8bim](images/module4chapter4step8bim.PNG)
+* **이름**에 대해 서비스에 적절한 이름을 입력합니다(예: *MRTK-Tutorial-AzureSpeechServices*).
+* **예측 위치**에 대해 앱 사용자의 실제 위치와 가까운 위치(예: *(미국) 미국 서부*)를 선택합니다.
+* **예측 가격 책정 계층**에 대해 이 자습서에서는 **F0(초당 5개 호출, 월당 10,000개 호출)** 을 선택합니다.
 
-    >[!NOTE]
-    >앱이 영어와 다른 언어를 파악 해야 하는 경우 "Culture"를 적절 한 언어로 변경 해야 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-4.png)
 
-8. 오른쪽 위에 있는 "빌드"를 클릭 합니다.
+다음으로, **검토 + 만들기** 탭으로 이동하고, 세부 정보를 검토한 다음, 페이지 아래쪽에 있는 **만들기** 단추를 클릭하여 리소스 및 새 리소스 그룹(새로 만들도록 구성한 경우)을 만듭니다.
 
-9. 왼쪽의 앱 자산에서 "의도"를 선택한 다음 "새 의도 만들기"를 클릭 하 고 이름을 "보도 ..."로 설정 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-5.png)
 
-    ![Module4Chapter4step10im](images/module4chapter4step10im.PNG)
+> [!NOTE]
+> [만들기] 단추를 클릭하면 서비스가 만들어질 때까지 기다려야 하며, 이 경우 몇 분 정도 걸릴 수 있습니다.
 
-    >[!NOTE]
-    >Lunarcom 앱이 이름으로 참조 하기 때문에이 자습서에 사용 된 의도 및 엔터티 이름을 사용 하는 것이 중요 합니다.
+리소스 만들기 프로세스가 완료되면 **배포가 완료됨**이라는 메시지가 표시됩니다.
 
-    >[!NOTE]
-    >이제 "보도" 및 "없음"의 두 가지 의도를 가집니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-6.png)
 
-10. 왼쪽의 앱 자산에서 "엔터티"를 선택 하 고, "새 엔터티 만들기"를 클릭 하 고, "Action"으로 이름을 입력 하 고, 엔터티 형식을 "Simple"로 유지 합니다.
+## <a name="creating-the-language-understanding-intelligent-service-luis"></a>LUIS(Language Understanding Intelligent Service) 만들기
 
-    ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
+이 섹션에서는 LUIS 앱을 만들고, 예측 모델을 구성 및 학습시키고, 이전 단계에서 만든 Azure 예측 리소스에 연결합니다.
 
-11. "새 엔터티 만들기"를 다시 클릭 하 고 이름을 "대상"으로 합니다. 엔터티 형식을 "Simple"로도 유지 합니다.
+특히 사용자가 작업을 수행해야 한다고 말하면 앱에서 사용자가 참조하는 단추에 따라 장면의 빨간색 단추 세 개 중 하나에서 Interactable.OnClick() 이벤트를 트리거하는 의도를 만듭니다.
 
-    ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
+예를 들어 사용자가 **go ahead and launch the rocket(계속 진행하여 로켓 발사)** 이라고 말하면 앱에서 **go ahead**가 일부 **작업**을 수행해야 함을 의미하고 **대상**에 대한 Interactable.OnClick() 이벤트가 **launch** 단추에 있다고 예측합니다.
 
-12. 왼쪽의 앱 자산에서 "의도"를 선택 하 고 10 단계에서 만든 "보도" 의도를 클릭 합니다.
+이를 위해 수행할 주요 단계는 다음과 같습니다.
 
-    ![Module4Chapter4step13im](images/module4chapter4step13im.PNG)
+1. LUIS 앱 만들기
+2. 의도 만들기
+3. 발화 예제 만들기
+4. 엔터티 만들기
+5. 발화 예제에 엔터티 할당
+6. 앱 학습 테스트 및 게시
+7. 앱에 Azure 예측 리소스 할당
 
-13. 오른쪽에 있는 "보기 옵션" 드롭다운을 클릭 하 고 "엔터티 값 표시"를 선택 합니다.
+### <a name="1-create-a-luis-app"></a>1. LUIS 앱 만들기
 
-    ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
+이전 섹션에서 Azure 리소스를 만들 때 사용한 것과 동일한 사용자 계정을 사용하여 <a href="https://www.luis.ai" target="_blank">LUIS</a>에 로그인하고, 국가를 선택하고, 사용 약관에 동의합니다. 다음 단계에서 **Azure 계정을 연결**하라는 메시지가 표시되면 **평가판 키를 사용하여 계속**을 선택하여 Azure 작성 리소스를 대신 사용합니다.
 
-    "예제 입력 ..."을 클릭 합니다. 입력합니다. 그런 다음 길이 발언을 입력 합니다.
+> [!NOTE]
+> LUIS에 이미 가입되어 있고 작성 평가판 키가 만료된 경우 [Azure 리소스 작성 키로 마이그레이션](https://docs.microsoft.com/azure/cognitive-services/luis/luis-migration-authoring) 문서를 참조하여 LUIS 작성 리소스를 Azure로 전환할 수 있습니다.
 
-    ![Module4Chapter4step14bim](images/module4chapter4step14bim.PNG)
+로그인하면 **내 앱** 페이지로 이동한 다음, **새 앱 만들기**를 클릭하고, **새 앱 만들기** 팝업 창에서 다음 값을 입력합니다.
 
-14. 오른쪽에 있는 "보기 옵션" 드롭다운을 클릭 하 고 "엔터티 이름 표시"를 선택 합니다.
+* **이름**에 대해 적절한 이름을 입력합니다(예: *MRTK Tutorials - AzureSpeechServices*).
+* **문화권**에 대해 **영어**를 선택합니다.
+* **설명**에 대해 필요에 따라 적절한 설명을 입력합니다.
 
-    ![Module4Chapter4step15im](images/module4chapter4step15im.PNG)
+그런 다음, **완료** 단추를 클릭하여 새 앱을 만듭니다.
 
-15. 각각의 10 길이 발언는 다음 위치에 1이 있는 엔터티 레이블을 포함 해야 합니다. 자주 단어를 클릭 하 고 팝업에서 "레이블 제거" 및 2를 선택 합니다. 레이블을 지정 해야 하는 단어를 클릭 하 고 팝업에서 적절 한 레이블을 선택 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-1.png)
 
-    ![Module4Chapter4step16im](images/module4chapter4step16im.PNG)
+새 앱이 만들어지면 해당 앱의 **대시보드** 페이지로 이동합니다.
 
-16. 이제 모델을 게시 하려면 오른쪽 위에 있는 "학습"을 클릭 합니다. 그런 다음 처리가 완료 되 면 오른쪽 위에 있는 "테스트"를 클릭 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-2.png)
 
-    ![Module4Chapter4step17im](images/module4chapter4step17im.PNG)
+### <a name="2-create-intents"></a>2. 의도 만들기
 
-17. 텍스트 상자에 "시작 단추를 선택 하십시오."를 입력 합니다.
+[대시보드] 페이지에서 빌드 > 앱 자산 > **의도** 페이지로 차례로 이동한 다음, **새 의도 만들기**를 클릭하고, **새 의도 만들기** 팝업 창에서 다음 값을 입력합니다.
 
-    >[!NOTE]
-    >길이 발언 중 하나에서 작업으로 "선택"을 추가 하지 않았지만 "검사"를 클릭 하면 모델은 동작 엔터티로 "select"를 인식 합니다.
-    >
-    > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
+* **의도 이름**에 대해 **PressButton**을 입력합니다.
 
-18. 오른쪽 위에 있는 "게시"를 클릭 합니다. 드롭다운에 "Production"가 표시 되는지 확인 하 고 팝업 에서도 "게시"를 클릭 합니다.
+그런 다음, **완료** 단추를 클릭하여 새 의도를 만듭니다.
 
-    ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-1.png)
 
-19. 게시 된 후에는 페이지 맨 위에 녹색 막대가 표시 됩니다. 녹색 막대를 클릭 하 여 "관리" 페이지를 표시 합니다.
+> [!CAUTION]
+> 이 자습서에서는 Unity 프로젝트에서 이 의도를 'PressButton'이라는 이름으로 참조합니다. 따라서 의도 이름을 똑같이 지정해야 합니다.
 
-    ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
+새 의도가 만들어지면 해당 의도의 페이지로 이동합니다.
 
-20. 왼쪽에 있는 "응용 프로그램 설정"의 "키 및 끝점"을 클릭 합니다. 그런 다음 "게시"를 "프로덕션"으로 설정 합니다. 자신의 이름과 일치 하도록 표준 시간대를 설정 하 고 상자를 선택 하 여 예측 된 의도 점수를 모두 포함 합니다. 마지막으로 "리소스 할당"을 클릭 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-2.png)
 
-    ![Module4Chapter4step21im](images/module4chapter4step21im.PNG)
+### <a name="3-create-example-utterances"></a>3. 발화 예제 만들기
 
-21. 첫 번째 드롭다운에서 테 넌 트를 선택 하 고 구독 이름 드롭다운에서 "종 량 제"을 선택 합니다. LUIS 리소스 이름 아래에서 1-5 단계에서 앞서 만든 리소스를 선택 합니다. 그런 다음 "리소스 할당"을 클릭 합니다.
+다음 발화 예제를 **PressButton** 의도의 **발화 예제** 목록에 추가합니다.
 
-    ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
+* activate launch sequence
+* show me a placement hint
+* initiate the launch sequence
+* press placement hints button
+* give me a hint
+* push the launch button
+* i need a hint
+* press the reset button
+* time to reset the experience
+* go ahead and launch the rocket
 
-    >[!NOTE]
-    >방금 할당 한 리소스와 연결 된 끝점 URL을 복사 하 고 저장 하 여 다음 섹션에서 쉽게 액세스할 수 있도록 합니다.
+모든 발화 예제가 추가되면 PressButton의 의도 페이지가 다음과 같이 표시됩니다.
 
-    >[!NOTE]
-    >테 넌 트 이름에 대해이 응용 프로그램에 대해 만든 회사 또는 프로필을 배치 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step3-1.png)
 
-22. 이제 Unity에서 새 앱을 열고 계층에서 Lunarcom_Base 개체를 선택 합니다. 검사기 패널에서 "구성 요소 추가"를 클릭 하 고 "LunarcomIntentRecognizer"를 검색 하 여 선택 합니다.
+> [!CAUTION]
+> 이 자습서에서는 Unity 프로젝트에서 'hint', 'hints', 'reset', 'launch'라는 단어를 참조합니다. 따라서 이러한 단어의 철자를 똑같이 표시해야 합니다.
 
-    ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
+### <a name="4-create-entities"></a>4. 엔터티 만들기
 
-23. 검사기 패널에서 "LunarcomIntentRecognizer"의 Luis 끝점 필드에 21 단계에서 저장 한 끝점 URL을 입력 합니다.
+PressButton 의도 페이지에서 빌드 > 앱 자산 > **엔터티** 페이지로 차례로 이동한 다음, **새 엔터티 만들기**를 클릭하고, **새 엔터티 만들기** 팝업 창에서 다음 값을 입력합니다.
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
+* **엔터티 이름**에 대해 **Action**을 입력합니다.
+* **엔터티 형식**에 대해 **단순**을 선택합니다.
 
-    >[!NOTE]
-    >검사기 패널의 "LunarcomOfflineRecognizer" 구성 요소에서 "SimulateOfflineMode"에 대해 "사용 안 함"이 선택 되어 있는지 확인 합니다. 그렇지 않으면 프로그램 테스트가 작동 하지 않습니다.
+그런 다음, **완료** 단추를 클릭하여 새 엔터티를 만듭니다.
 
-24. 프로젝트 창에서 자산 > MRTK로 이동 합니다. 자습서. GetPrefabs가 시작 > > RocketLauncher 폴더에서 RocketLauncher_Complete prefab을 계층 창으로 끌어 Lunarcom_Base 개체 앞에 배치 합니다.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-1.png)
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+이전 단계를 **반복**하여 **Target**이라는 다른 엔터티를 만듭니다. 이제 Action 및 Target이라는 두 엔터티가 있습니다.
 
-25. 계층 창에서 Lunarcom_Base 개체를 선택 하 고 Lunarcom 의도 인식기 (스크립트) 구성 요소를 찾은 다음 RocketLauncher_Complete > Button 개체를 확장 하 고 각 단추 개체를 해당 하는 음력 시작 관리자 단추에 할당 합니다. 필드가.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-2.png)
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+> [!CAUTION]
+> 이 자습서에서는 Unity 프로젝트에서 이러한 엔터티를 'Action' 및 'Target'이라는 이름으로 참조합니다. 따라서 엔터티 이름을 똑같이 지정해야 합니다.
 
-26. Unity 편집기에서 재생 단추를 누르고 로켓 단추를 클릭 하 여 의도 인식을 시작 합니다. "로켓 시작 단추를 선택 하십시오." 라는 구를 Utter.
+### <a name="5-assign-entities-to-the-example-utterances"></a>5. 발화 예제에 엔터티 할당
 
-    >[!NOTE]
-    >앱에서 원하는 함수를 인식 하 고 로켓 단추를 활성화 했습니다.
-    >
-    >![Module4Chapter4step24im](images/module4chapter4note2im.PNG)
+[엔터티] 페이지에서 **PressButton** 의도 페이지로 다시 이동합니다.
+
+PressButton 의도 페이지로 돌아가면 **go**, **ahead** 단어를 차례로 클릭한 다음, 상황별 팝업 메뉴에서 **Action(단순)** 을 선택하여 **go ahead**에 대한 레이블을 **Action** 엔터티 값으로 지정합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-1.png)
+
+**go ahead** 구가 이제 **Action** 엔터티 값으로 정의됩니다. 마우스 커서로 Action 엔터티 이름 위를 가리키면 연결된 Action 엔터티 값이 표시됩니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-2.png)
+
+> [!NOTE]
+> 위의 이미지에서 레이블 아래에 표시된 빨간색 선은 엔터티 값이 예측되지 않았음을 나타냅니다. 이는 다음 섹션에서 모델을 학습시킬 때 해결됩니다.
+
+다음으로, **launch** 단어를 클릭한 다음, 상황별 팝업 메뉴에서 **Target(단순)** 을 선택하여 **launch**에 대한 레이블을 **Target** 엔터티 값으로 지정합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-3.png)
+
+이제 **launch** 단어가 **Target** 엔터티 값으로 정의됩니다. 마우스 커서로 Target 엔터티 이름 위를 가리키면 연결된 Target 엔터티 값이 표시됩니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-4.png)
+
+이제 PressButton 의도 발화 예제인 'go ahead and launch the rocket'은 다음과 같이 예측되도록 구성되었습니다.
+
+* 의도: PressButton
+* Action 엔터티: go ahead
+* Target 엔터티: launch
+
+이전 2단계 프로세스를 **반복**하여 Action 및 Target 엔터티 레이블을 각 발화 예제에 할당합니다. 다음 단어에 대한 레이블을 **Target** 엔터티로 지정해야 한다는 점에 유의하세요.
+
+* **hint**(Unity 프로젝트에서 HintsButton을 대상으로 함)
+* **hints**(Unity 프로젝트에서 HintsButton을 대상으로 함)
+* **reset**(Unity 프로젝트에서 ResetButton을 대상으로 함)
+* **launch**(Unity 프로젝트에서 LaunchButton을 대상으로 함)
+
+레이블이 모든 발화 예제에 지정되면 PressButton의 의도 페이지가 다음과 같이 표시됩니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-5.png)
+
+다른 방법으로 올바른 엔터티를 할당했는지 다시 확인하려면 **보기 옵션** 메뉴를 클릭하고 보기를 **엔터티 값 표시**로 전환합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-6.png)
+
+이제 보기가 엔터티 값을 표시하도록 설정된 상태에서 마우스 커서로 레이블이 지정된 단어와 구 위를 가리키면 할당된 엔터티 이름을 빠르게 확인할 수 있습니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-7.png)
+
+### <a name="6-train-test-and-publish-the-app"></a>6. 앱 학습 테스트 및 게시
+
+앱을 학습시키려면 **학습** 단추를 클릭하고 학습 프로세스가 완료될 때까지 기다립니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-1.png)
+
+> [!NOTE]
+> 위의 이미지에서 볼 수 있듯이 모든 레이블 아래의 빨간색 선이 제거되어 모든 엔터티 값이 예측되었음을 나타냅니다. 또한 [학습] 단추 왼쪽에 있는 상태 아이콘이 빨간색에서 녹색으로 변경되었습니다.
+
+학습 프로세스가 완료되면 **테스트** 단추를 클릭한 다음, **go ahead and launch the rocket**을 입력하고 Enter 키를 누릅니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-2.png)
+
+테스트 발화가 처리되면 **검사**를 클릭하여 테스트 결과를 확인합니다.
+
+* 의도: PressButton(98.5% 확신도)
+* Action 엔터티: go ahead
+* Target 엔터티: launch
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-3.png)
+
+앱을 게시하려면 오른쪽 위에서 **게시** 단추를 클릭한 다음, **게시 슬롯 및 설정 선택** 팝업 창에서 **프로덕션**을 선택하고 **게시** 단추를 클릭합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-4.png)
+
+게시 프로세스가 완료될 때까지 기다립니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-5.png)
+
+### <a name="7-assign-an-azure-prediction-resource-to-the-app"></a>7. 앱에 Azure 예측 리소스 할당
+
+관리 > 애플리케이션 설정 > **Azure 리소스** 페이지로 차례로 이동합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-1.png)
+
+[Azure 리소스] 페이지에서 **예측 리소스 추가** 단추를 클릭하고, **앱에 리소스 할당** 팝업 창에서 다음 값을 선택합니다.
+
+* **테넌트 이름**에 대해 사용자의 테넌트 이름을 선택합니다.
+* **구독 이름**에 대해 이전에 [Azure Language Understanding 리소스 만들기](mrlearning-speechSDK-ch4.md#creating-the-azure-language-understanding-resource)에서 사용한 것과 동일한 구독을 선택합니다.
+* **LUIS 리소스 이름**에 대해 이전에 [Azure Language Understanding 리소스 만들기](mrlearning-speechSDK-ch4.md#creating-the-azure-language-understanding-resource)에서 만든 예측 리소스를 선택합니다.
+
+그런 다음, **리소스 할당** 단추를 클릭하여 Azure 예측 리소스를 앱에 할당합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-2.png)
+
+리소스가 할당되면 [Azure 리소스] 페이지가 다음과 같이 표시됩니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-3.png)
+
+## <a name="connecting-the-unity-project-to-the-luis-app"></a>Unity 프로젝트를 LUIS 앱에 연결
+
+관리 > 애플리케이션 설정 > **Azure 리소스** 페이지에서 **복사** 아이콘을 클릭하여 **쿼리 예제**를 복사합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-1.png)
+
+Unity 프로젝트로 돌아가서 [계층 구조] 창에서 **Lunarcom** 개체를 선택한 다음, [검사기] 창에서 **Lunarcom 의도 인식기(스크립트)** 구성 요소를 찾아서 다음과 같이 구성합니다.
+
+* **LUIS 엔드포인트** 필드에서 이전 단계에서 복사한 **쿼리 예제**를 붙여넣습니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-2.png)
+
+## <a name="testing-and-improving-the-intent-recognition"></a>의도 인식 테스트 및 향상
+
+Unity 편집기에서 의도 인식을 직접 사용하려면 개발 컴퓨터에서 받아쓰기를 사용하도록 허용해야 합니다. 이 설정을 확인하려면 Windows **설정**을 연 다음, **개인 정보** > **음성**을 차례로 선택하고, **온라인 음성 인식**이 설정되어 있는지 확인합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-1.png)
+
+이제 게임 모드로 들어가면 먼저 로켓 단추를 눌러 의도 인식을 테스트할 수 있습니다. 그런 다음, 컴퓨터에 마이크가 있다고 가정하여 첫 번째 발화 예제인 **go ahead and launch the rocket**이라고 말하면 LunarModule이 우주로 발사되는 것을 볼 수 있습니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-2.png)
+
+모든 **발화 예제**를 시도한 다음, **발화 예제의 일부 변형**뿐만 아니라 몇 가지 **임의 발화**도 시도합니다.
+
+다음으로, <a href="https://www.luis.ai" target="_blank">LUIS</a>로 돌아가서 빌드 > 앱 성능 향상 >  **엔드포인트 발화 검토** 페이지로 차례로 이동하고, **토글** 단추를 사용하여 기본 엔터티 보기에서 **토큰 보기**로 전환한 다음, 발화를 검토합니다.
+
+* **발화** 열에서 필요에 따라 할당된 레이블을 변경하고 제거하여 의도에 맞게 조정합니다.
+* **맞춤 의도** 열에서 의도가 올바른지 확인합니다.
+* **추가/삭제** 열에서 녹색 확인 표시 단추를 클릭하여 발화를 추가하거나, 빨간색 x 단추를 클릭하여 삭제합니다.
+
+발화를 원하는 만큼 검토한 경우 **학습** 단추를 클릭하여 모델을 다시 학습시킨 다음, **게시** 단추를 클릭하여 업데이트된 앱을 다시 게시합니다.
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-3.png)
+
+> [!NOTE]
+> 엔드포인트 발화는 PressButton 의도에 맞추지 않지만, 해당 발화에 의도가 없음을 모델에 알리려면 맞춤 의도를 [없음]으로 변경할 수 있습니다.
+
+앱 모델을 향상시키려면 이 프로세스를 원하는 횟수만큼 **반복**합니다.
 
 ## <a name="congratulations"></a>축하합니다.
 
-이 단원에서는 AI 지원 음성 명령을 추가 하는 방법을 알아보았습니다. 이제 정확한 음성 명령을 utter 않는 경우에도 프로그램에서 사용자 의도를 인식할 수 있습니다.
+이제 프로젝트에는 AI 지원 음성 명령이 있으므로 애플리케이션에서 정확한 명령을 발화하지 않더라도 사용자의 의도를 인식할 수 있습니다. 디바이스에서 애플리케이션을 실행하여 기능이 제대로 작동하는지 확인합니다.
