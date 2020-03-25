@@ -201,11 +201,16 @@
 ### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## 기본
 ### [네이티브 개발 개요](directx-development-overview.md)
-### 시작
+### OpenXR
+#### [OpenXR 개요](openxr.md)
+#### [OpenXR 시작](openxr-getting-started.md)
+#### [OpenXR 모범 사례](openxr-best-practices.md)
+#### [OpenXR 성능](openxr-performance.md)
+#### [OpenXR 문제 해결](openxr-troubleshooting.md)
+### WinRT
 #### [네이티브 홀로그램 프로젝트 만들기](creating-a-holographic-directx-project.md)
 #### [HolographicSpace 받기](getting-a-holographicspace.md)
 #### [네이티브 렌더링](rendering-in-directx.md)
-### [OpenXR](openxr.md)
 ## 플랫폼 기능 및 API
 ### 핵심 구성 요소
 #### [좌표계](coordinate-systems-in-directx.md)
