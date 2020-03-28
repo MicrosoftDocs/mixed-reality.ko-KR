@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, windows Mixed Reality OpenXR Developer Portal, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어, 시작, 101, preview 확장
-ms.openlocfilehash: 7a210ce25d1e7c22710f1029aca2ca7f55a8b71c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: db45308834f920413420f080a35b378f6a55fa49
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163337"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362033"
 ---
 # <a name="getting-started-with-openxr"></a>OpenXR 시작 하기
 
@@ -50,7 +50,7 @@ Windows Mixed Reality OpenXR 런타임을 사용해 보려면 <a href="https://w
 
 OpenXR 개발에 필요한 도구를 아직 설치 하지 않은 경우 [설치](install-the-tools.md) 해야 합니다.
 
-<a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> 프로젝트는 두 개의 Visual Studio 프로젝트 파일을 포함 하는 간단한 OpenXR 샘플을 보여 줍니다 .이 샘플은 Win32 데스크톱 앱과 UWP HoloLens 2 앱 모두를 위한 것입니다.  솔루션에 HoloLens UWP 프로젝트가 포함 되어 있으므로 Visual Studio에 설치 된 [유니버설 Windows 플랫폼 개발 워크 로드](install-the-tools.md#installation-checklist) 를 통해 완전히 열어야 합니다.
+<a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> 프로젝트는 두 개의 Visual Studio 프로젝트 파일을 포함 하는 간단한 OpenXR 샘플을 보여 줍니다 .이 샘플은 Win32 데스크톱 앱과 UWP HoloLens 2 앱 모두를 위한 것입니다.  솔루션에 HoloLens UWP 프로젝트가 포함 되어 있으므로 Visual Studio에 설치 된 [유니버설 Windows 플랫폼 개발 워크 로드](install-the-tools.md#installation-checklist) 를 통해 완전히 열어야 합니다.
 
 패키지 및 배포의 차이로 인해 Win32 및 UWP 프로젝트 파일은 별개 이지만 각 프로젝트 내의 앱 코드는 100%가 동일 합니다.
 
@@ -77,7 +77,7 @@ Visual Studio C++ 솔루션에 OpenXR NuGet 패키지 참조를 추가 하려면
 1. 확인을 클릭 하 여 프로젝트에 대 한 변경 내용을 적용 합니다.
 1. OpenXR API 사용을 시작 하려면 소스 파일에 `#include <openxr/openxr.h>`를 추가 합니다.
 
-실행 중인 OpenXR API의 예제를 보려면 <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> 샘플 앱을 확인 하세요.
+실행 중인 OpenXR API의 예제를 보려면 <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> 샘플 앱을 확인 하세요.
 
 ### <a name="include-official-openxr-loader-source"></a>공식 OpenXR 로더 원본 포함
 
@@ -99,7 +99,7 @@ Visual Studio C++ 솔루션에 OpenXR NuGet 패키지 참조를 추가 하려면
      * 대상 장치가 몰입 형 헤드셋 주변 기기가 첨부 된 데스크톱 PC 인 경우 대상 데스크톱 PC에서 <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#set-up-device-portal-on-windows-desktop" target="_blank">다음 지침을 따릅니다</a> .
   1. 왼쪽 창에서 **OpenXR** 탭으로 이동 하 고 **최신 Preview OpenXR runtime 사용**을 설정 합니다.  이렇게 하면 미리 보기 확장이 활성화 된 장치에서 미리 보기 런타임을 사용할 수 있습니다.
 
-이러한 preview 확장의 설명서 및 사용 방법에 대 한 샘플은 <a href="https://github.com/Microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">Mixed Reality OpenXR 리포지토리</a> 를 참조 하세요.
+이러한 preview 확장의 설명서 및 사용 방법에 대 한 샘플은 <a href="https://github.com/microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">Mixed Reality OpenXR 리포지토리</a> 를 참조 하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 

@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어, 모범 사례, 성능, 품질, 안정성
-ms.openlocfilehash: 01ce2ac0a69ffdf5dd1f00b92f37f54964f4c30c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163357"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362018"
 ---
 # <a name="openxr-app-best-practices"></a>OpenXR 앱 모범 사례
 
-아래 BasicXrApp의 [Openxrprogram .cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) 파일에서 모범 사례에 대 한 예제를 확인할 수 있습니다. 시작 부분에 있는 Run () 함수는 일반적인 OpenXR 앱 코드 흐름을 초기화에서 이벤트 및 렌더링 루프로 캡처합니다.
+아래 <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a>의 OpenXRProgram .cpp 파일에서 모범 사례에 대 한 예제를 확인할 수 있습니다. 시작 부분에 있는 Run () 함수는 일반적인 OpenXR 앱 코드 흐름을 초기화에서 이벤트 및 렌더링 루프로 캡처합니다.
 
 ## <a name="best-practices-for-visual-quality-and-stability"></a>시각적 품질 및 안정성에 대 한 모범 사례
 
