@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 47063fbf9a1b9f3a43497a0742deba2c16b53d99
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376150"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362060"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure Spatial Anchors 시작
 
@@ -41,13 +41,13 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작합니다. 3부로 구성�
 * 몇 가지 기본 C# 프로그래밍 기능
 * [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 * Unity 2019.2.X가 설치되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
-* [빠른 시작: Azure Spatial Anchors를 사용하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서의 [Spatial Anchors 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료합니다.
+* [빠른 시작: Azure Spatial Anchors를 사용하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 자습서의 Spatial Anchors 리소스 만들기 섹션을 완료합니다.
 
 > [!IMPORTANT]
 > 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
 
 ## <a name="creating-the-unity-project"></a>Unity 프로젝트 만들기
-<!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
+<!-- TODO: Consider renaming to 'Creating and preparing the Unity project'-->
 
 이 섹션에서는 새 Unity 프로젝트를 만들고 MRTK 개발을 준비합니다.
 
