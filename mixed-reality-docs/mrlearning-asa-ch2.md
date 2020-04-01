@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4de40bb0b66ed299fa4a571490b33a0454f25817
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031701"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362012"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Azure Spatial Anchors 저장, 검색 및 공유
 
@@ -54,6 +54,9 @@ ms.locfileid: "79031701"
 7. Azure 세션을 시작합니다.
 8. Azure 앵커를 찾습니다(로켓 발사대 환경을 3단계의 위치에 배치함).
 
+> [!NOTE]
+> 애플리케이션을 완전히 다시 시작하려면 몰입형 앱 보기를 종료한 후, 혼합 현실 홈의 앱 창을 닫고 [시작] 메뉴에서 애플리케이션을 다시 시작합니다. 자세한 내용은 [HoloLens에서 앱 사용](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens) 설명서를 참조하세요.
+
 ## <a name="share-azure-anchors-between-multiple-devices"></a>여러 디바이스 간에 Azure 앵커 공유
 
 이 섹션에서는 여러 디바이스 간에 Azure 앵커 ID를 공유하는 방법에 대해 알아봅니다. 이렇게 하면 여러 디바이스에서 동일한 앵커 ID를 Azure에 쿼리하여 고정된 홀로그램을 공간적으로 맞출 수 있습니다. 공간 맞춤, 즉 여러 디바이스 간에 동일한 실제 위치에서 동일한 홀로그램을 보는 것은 HoloLens 2에서 로컬 공유 환경의 핵심입니다.
@@ -75,7 +78,7 @@ ms.locfileid: "79031701"
 2. HoloLens 디바이스 1: Azure 세션을 시작합니다.
 3. HoloLens 디바이스 1: Azure Anchor를 만듭니다(앵커를 로켓 발사대 환경의 위치에 만듦).
 4. HoloLens 디바이스 1: Azure 앵커 ID를 네트워크에 공유합니다.
-5. HoloLens 디바이스 2: 애플리케이션을 다시 시작합니다.
+5. HoloLens 디바이스 2: 애플리케이션을 시작합니다.
 6. HoloLens 디바이스 2: 네트워크에서 공유 앵커 ID를 가져옵니다(HoloLens 디바이스 1에서 방금 공유한 앵커 ID를 가져옴).
 7. HoloLens 디바이스 2: Azure 세션을 시작합니다.
 8. HoloLens 디바이스 2: Azure 앵커를 찾습니다(로켓 발사대 환경을 3단계의 위치에 배치함).

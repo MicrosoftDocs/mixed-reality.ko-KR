@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 419b381c1240b2cc10708eab03245ed3aabfa859
-ms.sourcegitcommit: 61291e83536c8cb2e8401a8e66060128ede35922
+ms.openlocfilehash: 65bcef6a7c10450816d7a928302b0b266b132f0f
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416135"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362067"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. 3D 개체와 상호 작용
 
@@ -268,7 +268,7 @@ ms.locfileid: "79416135"
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
-**자산** > **MixedRealityToolkit.SDK** > **StandardAssets** > 재질로 이동하여 MRTK와 함께 제공된 오디오 클립을 살펴본 다음, **오디오 클립** 필드에 적절한 오디오 클립(예: MRTK_Gem 오디오 클립)을 할당합니다.
+**자산** > **MixedRealityToolkit.SDK** > **StandardAssets** > **오디오**로 이동하여 MRTK와 함께 제공된 오디오 클립을 살펴본 다음, **오디오 클립** 필드에 적절한 오디오 클립(예: MRTK_Gem 오디오 클립)을 할당합니다.
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
 

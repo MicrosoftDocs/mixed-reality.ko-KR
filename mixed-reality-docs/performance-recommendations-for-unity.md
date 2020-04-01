@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, CPU, GPU, 렌더링, 가비지 컬렉션, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082074"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160019"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대한 성능 추천 사항
 
 이 문서에서는 [혼합 현실에 대한 성능 추천 사항](understanding-performance-for-mixed-reality.md)에 요약된 설명을 기반으로 하지만, Unity 엔진 환경과 관련된 학습에 집중하고 있습니다.
 
-또한 개발자가 [Unity에 추천되는 환경 설정 문서](Recommended-settings-for-unity.md)를 검토하는 것이 좋습니다. 이 문서에는 성능이 뛰어난 Mixed Reality 앱을 빌드하는 데 가장 중요한 장면 구성에 대한 일부 내용이 나와 있습니다. 아래에서는 이러한 추천 설정 중 일부를 강조하고 있습니다.
+## <a name="use-recommended-unity-project-settings"></a>권장 Unity 프로젝트 설정 사용
+
+Unity에서 혼합 현실 앱의 성능을 최적화할 때 가장 중요한 첫 번째 단계는 [Unity 권장 환경 설정](recommended-settings-for-unity.md)을 사용하는 것입니다. 해당 문서에는 성능이 뛰어난 Mixed Reality 앱을 빌드하는 데 가장 중요한 장면 구성에 대한 일부 내용이 나와 있습니다. 아래에서는 이러한 추천 설정 중 일부를 강조하고 있습니다.
 
 ## <a name="how-to-profile-with-unity"></a>Unity를 사용하여 프로파일링하는 방법
 

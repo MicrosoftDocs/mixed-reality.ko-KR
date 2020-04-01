@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031218"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362042"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 해결기 사용
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -39,7 +39,7 @@ HoloLens 2에서 홀로그램은 사용자를 직관적으로 따라다니며, �
 이 섹션에서는 단추가 사용자의 응시 방향을 따라다니도록 이전 자습서에서 만든 단추 컬렉션을 개선합니다. 또한 단추 컬렉션이 항상 다음과 같이 표시되도록 해결기를 구성합니다.
 
 * 자연스럽게 왼쪽에서 오른쪽으로 읽도록 사용자의 읽기 방향에 평행하게 회전
-* 이 자습서의 뒷부분에서 추가할 다른 개체를 가리지 않도록 사용자 수평 응시 방향보다 살짝 아래에 배치
+* 이 자습서의 뒷부분에서 추가할 다른 개체를 가리지 않도록 사용자 수평 응시 방향보다 아래에 배치
 * 단추를 쉽게 누를 수 있도록 사용자로부터 팔 절반 길이쯤 되는 위치에 배치
 
 이렇게 하기 위해, 개체를 참조 개체로부터 지정된 위치와 오프셋에 잠그는 **궤도 해결기**를 사용하겠습니다.
