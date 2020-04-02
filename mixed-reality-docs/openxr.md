@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: 8a3cfef506f47a7cc49bff2851b9fc14c8a830b4
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 04b2404889dc74f191543466beb7ae1e516d0d42
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160009"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549373"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -62,7 +62,7 @@ OpenXR 확장에는 세 가지 종류가 있습니다.
 | [손으로 상호 작용<br />(그립/aim 포즈, 공중 탭, 잡고)](hands-and-tools.md) | **사용 가능한 `MSFT_preview` 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_interaction_preview">XR_MSFT_hand_interaction_preview</a></code><p>**`MSFT` 릴리스**: 4 월 2020 *(계획 됨)*</p> |
 | [손 모양 articulation + 손 모양](hands-and-tools.md) | **사용 가능한 `MSFT_preview` 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_preview">XR_MSFT_hand_tracking_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_mesh_preview">XR_MSFT_hand_tracking_mesh_preview</a></code><p>**`MSFT` 릴리스**: 2020 년 5 월 *(계획 됨)*</p> |
 | 다른 HoloLens Sdk (예: [QR](qr-code-tracking.md))와의 상호 운용성 | **사용 가능한 `MSFT_preview` 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_spatial_graph_bridge_preview">XR_MSFT_spatial_graph_bridge_preview</a></code><p>**`MSFT` 릴리스**: 2020 년 5 월 *(계획 됨)*</p> |
-| [응시](eye-tracking.md) | <p>**`MSFT_preview`** : 4 월 2020 *(계획 됨)*</p><p>**`MSFT` 또는 `EXT` 릴리스**: 2020 년 5 월 *(계획 됨)*</p> |
+| [응시](eye-tracking.md) | <p>**`EXT` 확장 정의**: *(아직 지원 되지 않음)*<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_eye_gaze_interaction" target="_blank">XR_EXT_eye_gaze_interaction</a></code><p>**Preview 지원**: 4 월 2020 *(계획 됨)*</p><p>**전체 지원**: 2020 년 5 월 *(계획 됨)*</p> |
 | [혼합 현실 캡처<br />(PV 카메라의 세 번째 렌더링)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) | **사용 가능한 `MSFT_preview` 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_secondary_view_configuration_preview">XR_MSFT_secondary_view_configuration_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_first_person_observer_preview">XR_MSFT_first_person_observer_preview</a></code><br /><p>**`MSFT` 릴리스**: 6 월 2020 *(계획 됨)*</p> |
 | [동작 컨트롤러 렌더링 모델](motion-controllers.md#rendering-the-motion-controller-model) | <p>**`MSFT_preview`** : 4 월 2020 *(계획 됨)*</p><p>**`MSFT` 릴리스**: 7 월 2020 *(계획 됨)*</p> |
 | [장면 이해 (평면, 메시)](scene-understanding.md) | <p>**`MSFT_preview`** : 2020 년 5 월 *(계획 됨)*</p><p>**`MSFT` 릴리스**: 7 월 2020 *(계획 됨)*</p> |

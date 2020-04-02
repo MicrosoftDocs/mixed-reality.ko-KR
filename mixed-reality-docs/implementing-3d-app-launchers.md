@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, 로고, 아이콘, 모델링, 시작 관리자, 3D 시작 관리자, 타일, 라이브 큐브, 딥 링크, secondarytile, 보조 타일, UWP
-ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 0a2e2177ffa7e381c461a58f373c818c9c5e72c4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926764"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549386"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>3D 앱 응용 프로그램 구현 (UWP 앱)
 
@@ -42,12 +42,12 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 매니페스트 위쪽에서 uap5 스키마를 추가 하 고이를 무시할 수 있는 네임 스페이스로 포함 합니다.
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 다음으로 응용 프로그램의 기본 타일에서 "MixedRealityModel"를 지정 합니다.
@@ -85,13 +85,13 @@ MixedRealityModel 요소는 응용 프로그램 패키지에 저장 된 3D 자�
 경계 상자 특성에 대 한 지원은 Windows RS4 update와 함께 MixedRealityModel 요소에 대 한 속성으로 제공 됩니다. 응용 프로그램 매니페스트 맨 위에 있는 경계 상자를 먼저 정의 하려면 uap6 스키마를 추가 하 고이를 무시할 수 있는 네임 스페이스로 포함 합니다.
 
 ```xml
-<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 그런 다음 MixedRealityModel에서 SpatialBoundingBox 속성을 설정 하 여 경계 상자를 정의 합니다. 
 
@@ -118,7 +118,7 @@ Unity를 사용 하는 경우 응용 프로그램 매니페스트를 편집 하�
 >[!IMPORTANT]
 >3D 딥 링크 (secondaryTiles)는 2D UWP 앱 에서만 작동 합니다. 그러나 Windows Mixed Reality 홈에서 전용 앱을 시작 하는 [3d 앱 시작 관리자](implementing-3d-app-launchers.md) 를 만들 수 있습니다.
 
-응용 프로그램의 3D 모델을 windows [혼합](navigating-the-windows-mixed-reality-home.md) 현실에 추가 하는 기능을 추가 하는 기능을 추가 하 여 Windows 혼합 [현실에서 2d](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) 응용 프로그램을 향상 시킬 수 있습니다. 메뉴가. 예를 들어 360 ° photo viewer 앱에 직접 연결 되는 360 ° 인화지를 만들거나, 사용자가 저자에 대 한 세부 정보 페이지를 여는 자산 컬렉션에서 3D 콘텐츠를 넣을 수 있습니다. 3D 콘텐츠를 사용 하 여 2D 응용 프로그램의 기능을 확장 하는 몇 가지 방법입니다.
+Windows 시작 메뉴의 2d [보조 타일과](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) 마찬가지로, 응용 프로그램의 3d 모델을 [windows mixed reality 홈](navigating-the-windows-mixed-reality-home.md) 에 포함 하는 기능을 추가 하 여 windows mixed reality에 2d 응용 프로그램을 향상 시킬 수 있습니다. 예를 들어 360 ° photo viewer 앱에 직접 연결 되는 360 ° 인화지를 만들거나, 사용자가 저자에 대 한 세부 정보 페이지를 여는 자산 컬렉션에서 3D 콘텐츠를 넣을 수 있습니다. 3D 콘텐츠를 사용 하 여 2D 응용 프로그램의 기능을 확장 하는 몇 가지 방법입니다.
 
 ### <a name="creating-a-3d-secondarytile"></a>3D "secondaryTile" 만들기
 

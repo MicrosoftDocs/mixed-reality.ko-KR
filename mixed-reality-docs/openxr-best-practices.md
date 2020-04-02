@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어, 모범 사례, 성능, 품질, 안정성
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362018"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549366"
 ---
 # <a name="openxr-app-best-practices"></a>OpenXR 앱 모범 사례
 
@@ -25,8 +25,8 @@ HoloLens 2와 관련 된 추가 성능 권장 사항은 아래의 [hololens의 �
 
 ### <a name="gamma-correct-rendering"></a>감마-올바른 렌더링
 
-렌더링 파이프라인이 감마를 정확 하 게 유지 하도록 주의 해야 합니다. 이 swapchain present 렌더링할 때 렌더링 대상 뷰 형식은이 swapchain present 형식과 일치 해야 합니다 (예:이 swapchain present 형식 및 렌더링 대상 뷰의 DXGI_FORMAT_B8G8R8A8_UNORM_SRGB).
-응용 프로그램의 렌더링 파이프라인이 셰이더 코드에서 수동 sRGB 변환을 수행 하는 경우는 예외입니다 .이 경우 앱은 sRGB이 swapchain present 형식을 요청 하지만 렌더링 대상 뷰에 선형 형식을 사용 해야 합니다 (예: 요청 DXGI_FORMAT_B8G8R8A8_UNORM_SRGB 이 swapchain present 형식을 사용 하 되, 렌더링 대상 뷰로 DXGI_FORMAT_B8G8R8A8_UNORM를 사용 하 여 콘텐츠를 이중 감마로 수정 하지 않도록 합니다.
+렌더링 파이프라인이 감마를 정확 하 게 유지 하도록 주의 해야 합니다. 이 swapchain present 렌더링할 때 렌더링 대상 뷰 형식은이 swapchain present 형식과 일치 해야 합니다 (예:이 swapchain present 형식 및 렌더링 대상 뷰의 `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB`).
+응용 프로그램의 렌더링 파이프라인이 셰이더 코드에서 수동 sRGB 변환을 수행 하는 경우는 예외입니다 .이 경우 앱은 sRGB이 swapchain present 형식을 요청 하지만 렌더링 대상 보기에 선형 형식을 사용 해야 합니다. 예를 들어이 swapchain present 형식으로 `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` 요청 하지만 `DXGI_FORMAT_B8G8R8A8_UNORM`를 렌더링 대상 뷰로 사용 하 여 콘텐츠를 이중 감마로 수정 하지 않도록 합니다.
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>프로젝션 계층에 대 한 깊이 버퍼를 제출 합니다.
 
