@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 공간 소리, 디자인, 스타일
-ms.openlocfilehash: 34923e1ebfc8e46ea8e67a4444fe3c2691efd4db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 08844f6d837407d52ad2ab84b78440ce856151fc
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182013"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677988"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>혼합 현실 응용 프로그램에서 소리를 사용 하는 방법
 
@@ -46,20 +46,20 @@ ms.locfileid: "75182013"
 
 ### <a name="gesture-interactions"></a>제스처 상호 작용
 혼합 현실에서 사용자는 마우스를 사용 하 여 단추와 상호 작용할 수 있습니다. 단추 동작은 일반적으로 사용자가 상호 작용을 취소할 수 있도록 단추를 누르는 대신를 해제할 때 발생 합니다. 이러한 단계를 보강 하려면 소리를 사용 합니다. 멀리 떨어져 있는 단추를 대상으로 하는 사용자를 지원 하기 위해 포인터 가리키기 소리를 사용 하는 것도 고려 합니다.
-* 단추 누르기 소리는 짧게 tactile "클릭" 해야 합니다.<br/>예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* 단추-"unpress" 소리는 유사한 tactile 느낌을 가져야 합니다. 누르기 소리 보다 더 높은 피치는 완료 강화 의미입니다.<br/>예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* 단추 누르기 소리는 짧게 tactile "클릭" 해야 합니다.<br/>예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 단추-"unpress" 소리는 유사한 tactile 느낌을 가져야 합니다. 누르기 소리 보다 더 높은 피치는 완료 강화 의미입니다.<br/>예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * 가리키기 소리의 경우 낮은 빈도 thud 또는 범프와 같이 약한 및 비 위협 사운드를 사용 하는 것이 좋습니다.
 
 ### <a name="direct-manipulation"></a>직접 조작
 HoloLens 2에서는 두 부분으로 된 사용자 인터페이스 요소에 대 한 직접 조작을 지원 합니다. 다른 물리적 피드백이 없으면 소리가 중요 합니다.
 
 사용자가 키 스트로크의 아래쪽에 도달할 때 다른 표시를 받지 않기 때문에 직접 조작에서 *단추 누르기* 소리가 중요 합니다. 주요 여행에 대 한 소리 표시기는 작은, 미묘한 및 폐색 수 있습니다. 제스처 상호 작용을 사용 하는 것 처럼 단추 누름은 클릭 처럼 짧은 tactile 소리를 표시 합니다. 누름은 비슷한 클릭 소리를 포함 하지만 볼록 피치를 사용 해야 합니다.
-* 예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* 예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* 예: [MRTK_ButtonPress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* 예: [MRTK_ButtonUnpress .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 
 잡기 또는 릴리스 작업을 시각적으로 확인 하는 것은 어렵습니다. 사용자 손을 시각적 효과를 사용 하는 경우가 많으며, 하드 수준 있는 개체는 실제 시각적으로 "점령"를 사용 하지 않습니다. 소리는 성공적인 잡기와 릴리스 상호 작용을 효과적으로 전달할 수 있습니다.
-* 잡기 작업에는 개체 주위에 손가락을 muffled 하는 것을 evokes 하는 짧고 약간의 tactile 사운드가 있어야 합니다. 경우에 따라 손으로 이동 하는 소리를 전달 하는 "whoosh" 사운드도 있습니다.<br/>예: [MRTK_Move_Start .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* 릴리스 작업은 비슷하게 짧고 tactile 소리를 가져와야 합니다. 일반적으로는 영향을 받는 것이 고, 그 다음에는 개체의 정착를 전달 하는 "whoosh"를 사용 하 여 광고 소리와 역순으로 낮은 고주파음입니다.<br/>예: [MRTK_Move_End .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* 잡기 작업에는 개체 주위에 손가락을 muffled 하는 것을 evokes 하는 짧고 약간의 tactile 사운드가 있어야 합니다. 경우에 따라 손으로 이동 하는 소리를 전달 하는 "whoosh" 사운드도 있습니다.<br/>예: [MRTK_Move_Start .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* 릴리스 작업은 비슷하게 짧고 tactile 소리를 가져와야 합니다. 일반적으로는 영향을 받는 것이 고, 그 다음에는 개체의 정착를 전달 하는 "whoosh"를 사용 하 여 광고 소리와 역순으로 낮은 고주파음입니다.<br/>예: [MRTK_Move_End .wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 *그리기* 상호 작용은 사용자 손을 이동 하 여 볼륨을 결정 하는 지속적인 반복 소리를 가져와야 합니다. 사용자의 손을 loudest 하 고 손을 빠르게 이동 하는 경우에는 자동으로 진행 해야 합니다.
 
