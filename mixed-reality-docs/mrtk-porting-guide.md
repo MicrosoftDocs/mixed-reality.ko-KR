@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
+ms.openlocfilehash: ced33a082152822779ae23a854800072bc8dfb5f
+ms.sourcegitcommit: d451b2055593ba8d0e4e05132ce889d60c71ee81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092037"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80613988"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 앱 준비
 
@@ -77,7 +77,7 @@ HoloLens(1세대)는 x86 프로세서에서 애플리케이션을 실행하지�
 MRTK 버전 2를 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.
 - [MRTK 방문 페이지](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 - [MRTK 시작](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
-- [MRTK 손](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSystem/HandTracking.html)
+- [MRTK 손](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/HandTracking.html)
 - [MRTK 시선 추적](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)
 
 ### <a name="prepare-for-the-migration"></a>마이그레이션 준비
