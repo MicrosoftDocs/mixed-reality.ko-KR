@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: f365b0444576e03acd8dba194d7f8f24175e7bee
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539520"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003329"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
-장면 이해의 목표는 혼합 현실 장치에서 캡처하는 구조화 되지 않은 환경 센서 데이터를 변환 하 고 직관적이 고 쉽게 개발할 수 있는 강력 하 고 추상화 된 표현으로 변환 하는 것입니다. SDK는 응용 프로그램과 장면 이해 런타임의 통신 계층으로 작동 합니다. 3d 표현 및 2d 응용 프로그램의 2D 사각형/패널에 대 한 3d 장면 그래프와 같은 기존 표준 구문을 모방 하기 위한 것입니다. 구성 장면 이해를 모방 하는 것은 사용할 수 있는 구체적인 프레임 워크에 매핑됩니다. 일반적으로 SceneUnderstanding은 프레임 워크와 상호 작용 하는 다양 한 프레임 워크 간의 상호 운용성을 가능 하 게 합니다. 장면 이해는 SDK의 역할을 발전 시킬 때 새로운 표현과 기능이 통합 프레임 워크 내에서 계속 노출 되도록 합니다. 이 문서에서는 먼저 개발 환경/사용법을 파악 하는 데 도움이 되는 개략적인 개념을 소개 하 고 특정 클래스 및 구문에 대 한 자세한 설명서를 제공 합니다.
+장면 이해의 목표는 혼합 현실 장치에서 캡처하는 구조화 되지 않은 환경 센서 데이터를 변환 하 고 직관적이 고 쉽게 개발할 수 있는 강력 하 고 추상화 된 표현으로 변환 하는 것입니다. SDK는 응용 프로그램과 장면 이해 런타임의 통신 계층으로 작동 합니다. 3D 표현에 대 한 3D 장면 그래프와 2D 응용 프로그램의 2D 사각형 및 패널 등 기존 표준 구문을 모방 하는 것을 목표로 합니다. 구성 장면 이해를 모방 하는 것은 사용할 수 있는 구체적인 프레임 워크에 매핑됩니다. 일반적으로 SceneUnderstanding은 프레임 워크와 상호 작용 하는 다양 한 프레임 워크 간의 상호 운용성을 가능 하 게 합니다. 장면 이해는 SDK의 역할을 발전 시킬 때 새로운 표현과 기능이 통합 프레임 워크 내에서 계속 노출 되도록 합니다. 이 문서에서는 먼저 개발 환경/사용법을 파악 하는 데 도움이 되는 개략적인 개념을 소개 하 고 특정 클래스 및 구문에 대 한 자세한 설명서를 제공 합니다.
 
 ## <a name="where-do-i-get-the-sdk"></a>SDK는 어디에서 얻을 까 요?
 
@@ -37,7 +37,7 @@ Unity 프로젝트에서 SDK를 사용 하는 경우 [unity 용 NuGet](https://g
 
 혼합 현실 장치는 환경에서 표시 되는 내용에 대 한 정보를 지속적으로 통합 하 고 있습니다. 장면 이해는 이러한 모든 데이터 원본을 funnels 하나의 단일 단일 추상화를 생성 합니다. 장면 이해는 단일 사물 (예: 벽/천장/층)의 인스턴스를 나타내는 [SceneObjects](scene-understanding-SDK.md#sceneobjects) 의 컴퍼지션 인 장면을 생성 합니다. 장면 개체 자체는이 SceneObject을 구성 하는 더 세분화 된 부분을 나타내는 [SceneComponents](scene-understanding-SDK.md#scenecomponents) 의 컴퍼지션입니다. 구성 요소의 예는 quads 및 메시 이지만 나중에 경계 상자, 충돌 망, 메타 데이터 등을 나타낼 수 있습니다.
 
-원시 센서 데이터를 장면으로 변환 하는 프로세스는 매우 큰 공간 (~ 50x50m)에 대해 보통 공간 (~ 10x10m)에서 분까지 몇 초 정도 걸릴 수 있으며, 따라서 응용 프로그램 요청. 대신, 요청 시 응용 프로그램에서 장면 생성이 트리거됩니다. SceneObserver 클래스에는 장면을 계산 하거나 Deserialize 할 수 있는 정적 메서드가 있습니다. 그러면이를 열거/상호 작용할 수 있습니다. "Compute" 작업은 요청 시 실행 되며 CPU에서 실행 되지만 별도의 프로세스 (혼합 현실 드라이버)에서 실행 됩니다. 그러나 다른 프로세스에서 계산을 수행 하는 동안 결과 장면 데이터는 응용 프로그램에서 장면 개체에 저장 되 고 유지 관리 됩니다. 
+원시 센서 데이터를 장면으로 변환 하는 프로세스는 매우 큰 공간 (~ 50x50m)에 대해 보통 공간 (~ 10x10m)에서 분까지 몇 초 정도 걸릴 수 있으며, 따라서 응용 프로그램 요청 없이 장치에서 계산 되는 것이 아닙니다. 대신, 요청 시 응용 프로그램에서 장면 생성이 트리거됩니다. SceneObserver 클래스에는 장면을 계산 하거나 Deserialize 할 수 있는 정적 메서드가 있습니다. 그러면이를 열거/상호 작용할 수 있습니다. "Compute" 작업은 요청 시 실행 되며 CPU에서 실행 되지만 별도의 프로세스 (혼합 현실 드라이버)에서 실행 됩니다. 그러나 다른 프로세스에서 계산을 수행 하는 동안 결과 장면 데이터는 응용 프로그램에서 장면 개체에 저장 되 고 유지 관리 됩니다. 
 
 다음은이 프로세스 흐름을 보여 주고 장면 이해 런타임과 상호 작용 하는 두 개의 응용 프로그램 예제를 보여 주는 다이어그램입니다. 
 
@@ -58,7 +58,7 @@ Unity 프로젝트에서 SDK를 사용 하는 경우 [unity 용 NuGet](https://g
 <tr>
 <td>
 <ul>
-  장면의
+  장면
   <ul>
   <li>SceneObject_1
     <ul>
@@ -119,13 +119,13 @@ SceneObjects에는 다음 중 하나를 사용할 수 있습니다.
 <tr>
 <th>SceneObjectKind</th> <th>설명</th>
 </tr>
-<tr><td>백그라운드</td><td>SceneObject는 인식 되는 다른 종류의 장면 개체 중 하나가 <b>아닌</b> 것으로 알려져 있습니다. 이 클래스는 배경을 벽/층/천장 등이 아닌 것으로 알려진 경우 알 수 없는와 혼동 해서는 안 됩니다. unknown은 아직 분류 되지 않았습니다.</b></td></tr>
+<tr><td>배경</td><td>SceneObject는 인식 되는 다른 종류의 장면 개체 중 하나가 <b>아닌</b> 것으로 알려져 있습니다. 이 클래스는 배경을 벽/층/천장 등이 아닌 것으로 알려진 경우 알 수 없는와 혼동 해서는 안 됩니다. unknown은 아직 분류 되지 않았습니다.</b></td></tr>
 <tr><td>벽</td><td>실제 벽입니다. 벽은 불균형 환경 구조로 간주 됩니다.</td></tr>
 <tr><td>평면</td><td>바닥은 한 번에 진행할 수 있는 모든 표면입니다. 참고: 계단은 층이 아닙니다. 또한이 층은 walkable 표면을 가정 하므로 단일 층을 명시적으로 가정 하지 않습니다. 다중 수준 구조, 경사 등 ... 모두 바닥으로 분류 되어야 합니다.</td></tr>
-<tr><td>Ceiling</td><td>방의 위쪽 표면입니다.</td></tr>
+<tr><td>최대값</td><td>방의 위쪽 표면입니다.</td></tr>
 <tr><td>플랫폼</td><td>Holograms를 놓을 수 있는 커다란 플랫 표면입니다. 이는 테이블, 싱크대 및 기타 넓은 가로 표면을 나타내는 경향이 있습니다.</td></tr>
 <tr><td>World</td><td>레이블 지정과 무관 한 기하학적 데이터의 예약 된 레이블입니다. EnableWorldMesh 업데이트 플래그를 설정 하 여 생성 된 메시는 세계로 분류 됩니다.</td></tr>
-<tr><td>Unknown</td><td>이 장면 개체는 아직 분류 되어 있으며 종류를 할당 해야 합니다. 이 개체는 아무것도 될 수 있으므로 배경과 혼동 해서는 안 됩니다. 시스템은 아직 충분히 강력한 분류로 제공 되지 않습니다.</td></tr>
+<tr><td>알 수 없음</td><td>이 장면 개체는 아직 분류 되어 있으며 종류를 할당 해야 합니다. 이 개체는 아무것도 될 수 있으므로 배경과 혼동 해서는 안 됩니다. 시스템은 아직 충분히 강력한 분류로 제공 되지 않습니다.</td></tr>
 </tr>
 </table>
 
@@ -263,9 +263,9 @@ foreach (var mesh in firstFloor.Meshes)
 
 ### <a name="dealing-with-transforms"></a>변형 처리
 
-장면 이해는 변환을 처리할 때 일반적인 3D 장면 표현과 맞추는 시도를 만들었습니다. 따라서 각 장면은 가장 일반적인 3D 환경 표현과 마찬가지로 단일 좌표계로 한정 됩니다. SceneObjects는 각 위치를 해당 좌표계 내의 위치와 방향으로 제공 합니다. 응용 프로그램이 단일 원본에서 제공 하는 작업의 제한을 스트레치 하는 장면을 처리 하는 경우 SceneObjects에 SpatialAnchors에 앵커를 적용 하거나 여러 개의 장면을 생성 하 고 함께 병합할 수 있습니다. OriginSpatialGraphNodeId에 정의 된 하나의 NodeId 지역화 된 원본입니다.
+장면 이해는 변환을 처리할 때 일반적인 3D 장면 표현과 맞추는 시도를 만들었습니다. 따라서 각 장면은 가장 일반적인 3D 환경 표현과 마찬가지로 단일 좌표계로 한정 됩니다. SceneObjects는 각 위치를 해당 좌표계 내의 위치와 방향으로 제공 합니다. 응용 프로그램이 단일 원본에서 제공 하는 것의 제한을 스트레치 하는 장면을 처리 하는 경우 SpatialAnchors에 SceneObjects을 고정 하거나 여러 개의 장면을 생성 하 고 함께 병합할 수 있습니다. 하지만 간단 하 게 하기 위해에 의해 정의 된 하나의 NodeId로 지역화 된 자체 원본에 watertight 장면이 있다고 가정 합니다.
 
-예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 대 한 자세한 내용은 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 및 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 에서 Windows 인식 api 및 [혼합 현실 네이티브 개체](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 에 대 한 자세한 내용을 참조 하세요. `System.Numerics.Matrix4x4`와 `UnityEngine.Matrix4x4`를 변환 하기 위한 `.ToUnity()` 확장 메서드입니다.
+예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 `System.Numerics.Matrix4x4`와 `UnityEngine.Matrix4x4`간 변환을 위한 `.ToUnity()` 확장 메서드는 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) and [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요.
 
 ```cs
 public class SceneRootComponent : MonoBehavior

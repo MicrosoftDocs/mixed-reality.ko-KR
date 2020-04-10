@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 시뮬레이터, 테스트
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580698"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003299"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Windows Mixed Reality 시뮬레이터 사용
 
@@ -23,7 +23,7 @@ Windows Mixed reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰
 2. 바탕 화면에서 **혼합 현실 포털** 시작
 3. 포털을 처음 시작 하는 경우 설정 환경을 진행 해야 합니다.
    1. **시작** 을 클릭 합니다.
-   2. 동의 함 **을 클릭 하** 여 동의 합니다.
+   2. 동의 **함을 클릭 하** 여 동의 합니다.
    3. **시뮬레이션에 대 한 설정 (개발자의 경우)** 을 클릭 하 여 물리적 장치 없이 설치를 진행 합니다.
    4. **설정** 을 클릭 하 여 선택을 확인 합니다.
 4. Mixed Reality 포털의 왼쪽에 있는 **개발자 용** 단추를 클릭 합니다.
@@ -31,6 +31,8 @@ Windows Mixed reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰
    * 시뮬레이션을 사용 하도록 설정 하면 기본적으로 왼쪽 시뮬레이션 된 6-DOF controller가 설치 되 고 활성화 됩니다.  Windows 10에서 2019 업데이트를 설치 하기 전에 시뮬레이션 된 6 DOF 컨트롤러를 설치 하려면 관리자 권한이 필요 합니다.  사용자 계정 컨트롤 대화 상자가 나타나면 동의 해야 합니다.
 
 이제 시뮬레이션을 사용 하 여 실행 해야 합니다.
+
+설정에서 개발자 모드를 사용 하지 않도록 설정 하려면 혼합 현실 포털의 **개발자 용** 섹션에서 시뮬레이션 토글 스위치를 먼저 **해제** 해야 합니다.
 
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>혼합 현실 시뮬레이터에 앱 배포
 
@@ -51,14 +53,14 @@ Windows Mixed reality 시뮬레이터를 사용 하면 Windows Mixed Reality 몰
 
 혼합 현실 시뮬레이터는 최대 2 개의 직접 보관 된 동작 컨트롤러를 시뮬레이션할 수 있습니다. 혼합 현실 포털에서 토글 스위치를 사용 하 여 사용 하도록 설정 합니다. 시뮬레이트된 각 컨트롤러에는 다음이 포함 됩니다.
 * 공간에서의 위치 및 방향
-* 홈 버튼
+* 홈 단추
 * 메뉴 버튼
 * 그립 단추
 * 터치 패드
 * 사용해
 * 배터리 수준
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
 * [고급 혼합 현실 시뮬레이터 입력](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [Unity의 공간 매핑](spatial-mapping-in-unity.md)
