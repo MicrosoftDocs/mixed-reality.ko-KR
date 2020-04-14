@@ -1,17 +1,17 @@
 ---
 title: 장치 포털 API 참조
 description: HoloLens의 Windows 장치 포털에 대 한 API 참조
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows 장치 포털, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278241"
 ---
 # <a name="device-portal-api-reference"></a>장치 포털 API 참조
 
@@ -24,16 +24,16 @@ ms.locfileid: "67694427"
 앱을 제거 합니다.
 
 매개 변수
-* 패키지 제거할 패키지의 파일 이름입니다.
+* package: 제거할 패키지의 파일 이름입니다.
 
 **/api/app/packagemanager/package (POST)**
 
 앱을 설치 합니다.
 
 매개 변수
-* 패키지 설치할 패키지의 파일 이름입니다.
+* package: 설치할 패키지의 파일 이름입니다.
 
-페이로드와
+페이로드
 * 여러 부분으로 구성 되는 http 본문
 
 **/api/app/packagemanager/packages (GET)**
@@ -131,7 +131,7 @@ ms.locfileid: "67694427"
 IPD를 설정 합니다.
 
 매개 변수
-* ipd 밀리미터 단위로 설정할 새 IPD 값입니다.
+* ipd: 밀리미터로 지정할 New IPD 값입니다.
 
 **/api/holographic/os/webmanagement/settings/https (GET)**
 
@@ -191,7 +191,7 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 기록을 삭제 합니다.
 
 매개 변수
-* 기록할 삭제할 녹음의 이름입니다.
+* 녹음/녹화: 삭제할 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/file (POST)**
 
@@ -206,21 +206,21 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 기록의 현재 재생 상태를 가져옵니다.
 
 매개 변수
-* 기록할 기록 이름입니다.
+* 기록: 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/file (DELETE)**
 
 기록을 언로드합니다.
 
 매개 변수
-* 기록할 언로드할 기록의 이름입니다.
+* 녹음/녹화: 언로드할 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/file (POST)**
 
 기록을 로드 합니다.
 
 매개 변수
-* 기록할 로드할 기록의 이름입니다.
+* 기록: 로드할 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/files (GET)**
 
@@ -231,28 +231,28 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 기록을 일시 중지 합니다.
 
 매개 변수
-* 기록할 기록 이름입니다.
+* 기록: 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/play (POST)**
 
 기록을 재생 합니다.
 
 매개 변수
-* 기록할 기록 이름입니다.
+* 기록: 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/stop (POST)**
 
 기록을 중지 합니다.
 
 매개 변수
-* 기록할 기록 이름입니다.
+* 기록: 기록의 이름입니다.
 
 **/api/holographic/simulation/playback/session/types (GET)**
 
 로드 된 기록에서 데이터의 형식을 가져옵니다.
 
 매개 변수
-* 기록할 기록 이름입니다.
+* 기록: 기록의 이름입니다.
 
 ## <a name="perception-simulation-recording"></a>인식 시뮬레이션 기록
 
@@ -261,12 +261,12 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 기록을 시작 합니다. 한 번에 하나의 기록만 활성화 될 수 있습니다. 헤드, 손, spatialMapping 또는 환경 중 하나를 설정 해야 합니다.
 
 매개 변수
-* 사장 1로 설정 하 여 헤드 데이터를 기록 합니다.
-* 훈련 손으로 데이터를 기록 하려면 1로 설정 합니다.
-* spatialMapping : 을 1로 설정 하 여 공간 매핑을 기록 합니다.
-* 개발 환경 데이터를 기록 하려면 1로 설정 합니다.
-* 이름의 기록의 이름입니다.
-* singleSpatialMappingFrame : 단일 공간 매핑 프레임만 기록 하려면 1로 설정 합니다.
+* head: 1로 설정 하 여 헤드 데이터를 기록 합니다.
+* 실습: 1로 설정 하 여 손으로 데이터를 기록 합니다.
+* spatialMapping: 1로 설정 하 여 공간 매핑을 기록 합니다.
+* 환경: 환경 데이터를 기록 하려면 1로 설정 합니다.
+* 이름: 기록의 이름입니다.
+* singleSpatialMappingFrame: 단일 공간 매핑 프레임만 기록 하려면 1로 설정 합니다.
 
 **/api/holographic/simulation/recording/status (GET)**
 
@@ -283,7 +283,7 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 장치에서 혼합 된 현실 파일을 다운로드 합니다. 스트리밍을 위해 op = stream 쿼리 매개 변수를 사용 합니다.
 
 매개 변수
-* 이름도 가져올 비디오 파일의 이름 (hex64)입니다.
+* filename: hex64로 인코딩된 비디오 파일의 이름입니다.
 * op: stream
 
 **/api/holographic/mrc/file (DELETE)**
@@ -291,7 +291,7 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 장치에서 혼합 된 현실 기록을 삭제 합니다.
 
 매개 변수
-* 이름도 삭제할 파일의 이름 (hex64)입니다.
+* filename: 삭제할 파일의 이름 (hex64)입니다.
 
 **/api/holographic/mrc/files (GET)**
 
@@ -323,7 +323,7 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 지정 된 파일에 대 한 미리 보기 이미지를 가져옵니다.
 
 매개 변수
-* 이름도 미리 보기를 요청 하는 파일의 이름 (hex64)입니다.
+* 파일 이름: 미리 보기를 요청 하는 파일의 이름 (hex64)입니다.
 
 **/api/holographic/mrc/video/control/start (POST)**
 
@@ -335,7 +335,7 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 * mic: 마이크 캡처: true 또는 false (기본값은 false)
 * 루프백: 응용 프로그램 오디오 캡처: true 또는 false (기본값은 false)
 * RenderFromCamera: (HoloLens 2만 해당) 사진/비디오 카메라의 관점에서 렌더링: true 또는 false (기본값은 true)
-* vstab : (HoloLens 2만 해당) 비디오 안정화 사용: true 또는 false (기본값은 true)
+* vstab: (HoloLens 2만 해당) 비디오 안정화 사용: true 또는 false (기본값은 true)
 * vstabbuffer: (HoloLens 2만 해당) 비디오 안정화 버퍼 대기 시간: 0-30 프레임 (기본값은 15 프레임)
 
 **/api/holographic/mrc/video/control/stop (POST)**
@@ -364,15 +364,15 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 
 1280x720p 30fps 5Mbit 스트림입니다.
 
-**/api/holographic/stream/live_high.mp4 (GET)**
+**/api/holographic/stream/live_high. mp4 (GET)**
 
 1280x720p 30fps 5Mbit 스트림입니다.
 
-**/api/holographic/stream/live_med.mp4 (GET)**
+**/api/holographic/stream/live_med. mp4 (GET)**
 
 854x480p 30fps 2.5 Mbit 스트림입니다.
 
-**/api/holographic/stream/live_low.mp4 (GET)**
+**/api/holographic/stream/live_low. mp4 (GET)**
 
 428x240p 15fps 0.6 Mbit 스트림입니다.
 
@@ -397,7 +397,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 컴퓨터 이름을 설정 합니다.
 
 매개 변수
-* 이름의 새 컴퓨터 이름, hex64 인코딩,를로 설정
+* 이름: 새 컴퓨터 이름, hex64 인코딩,를로 설정
 
 ## <a name="performance-data"></a>성능 데이터
 
@@ -415,7 +415,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 데이터 반환
 * 시스템 정보를 포함 하는 JSON: CPU, GPU, 메모리, 네트워크, IO
 
-## <a name="power"></a>Power
+## <a name="power"></a>전원
 
 **/sh/svhhhhhs (GET)**
 
@@ -442,16 +442,16 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 최신 앱을 중지 합니다.
 
 매개 변수
-* 패키지 Hex64 인코드된 앱 패키지의 전체 이름입니다.
-* forcestop : 모든 프로세스를 강제로 중지 (= 예)
+* 패키지: 앱 패키지의 전체 이름, hex64 인코드
+* forcestop: 모든 프로세스를 강제로 중지 합니다 (= 예).
 
 **/sh/svaryer/ps (POST)**
 
 최신 앱을 시작 합니다.
 
 매개 변수
-* appid 시작 하는 앱의 PRAID, hex64 인코드
-* 패키지 Hex64 인코드된 앱 패키지의 전체 이름입니다.
+* appid: 시작 하는 앱의 PRAID, hex64 인코드
+* 패키지: 앱 패키지의 전체 이름, hex64 인코드
 
 ## <a name="wifi-management"></a>WiFi 관리
 
@@ -497,7 +497,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 
 WPR 프로필을 업로드 하 고 업로드 된 프로필을 사용 하 여 추적을 시작 합니다.
 
-페이로드와
+페이로드
 * 여러 부분으로 구성 되는 http 본문
 
 데이터 반환
@@ -522,11 +522,11 @@ WPR (성능) 추적 세션을 중지 합니다.
 WPR (성능) 추적 세션을 시작 합니다.
 
 매개 변수
-* profile 프로필 이름입니다. 사용 가능한 프로필은 perfprofiles/profile. json에 저장 됩니다.
+* 프로필: 프로필 이름입니다. 사용 가능한 프로필은 perfprofiles/profile. json에 저장 됩니다.
 
 데이터 반환
 * 시작 시 WPR 세션 상태를 반환 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 * [장치 포털 핵심 API 참조 (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

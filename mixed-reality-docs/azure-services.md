@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 08/21/2019
 ms.topic: overview
 keywords: 혼합 현실, 개발, 개발, HoloLens, Azure 서비스, 공간 앵커, 음성, 비전, 원격 렌더링
-ms.openlocfilehash: 692c99bfa21fab8e01d38bebb34f656114d9fee3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a79495fd9bc82622d0ded14b7b4048584aed1da3
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439504"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277751"
 ---
 # <a name="azure-mixed-reality-services"></a>Azure mixed reality 서비스
 Azure mixed reality 서비스를 사용 하 여 모든 사람이 전문가 인 3 차원, 실제 세계 3 차원에 해당 하는 항목의 잠금을 해제 합니다. 사용자가 회사와 세계의 컨텍스트 내에서 디지털 정보를 캡처 및 표현 하 여 보다 효율적으로 만들고, 학습 하 고, 공동 작업 하는 데 도움을 줍니다. 3D 장치, 헤드셋 및 기타 작업할 장치로 3D를 가져옵니다. Azure를 사용 하면 가장 중요 한 정보가 보호 되도록 도울 수 있습니다.
@@ -46,7 +46,7 @@ Azure 원격 렌더링 미리 보기를 사용 하 여 모든 세부 정보가 �
        [![음성](images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speechhttpsdocsmicrosoftcomazurecognitive-servicesspeech-service"></a>[음성](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[음성](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
         음성을 사용 하 여 음성 처리 기능을 앱 또는 서비스에 통합 하는 방법을 알아봅니다. 표준 또는 사용자 지정 가능한 음성 글꼴을 사용 하 여 음성 언어를 텍스트로 변환 하거나 텍스트에서 자연 스러운 음성을 생성 합니다. 서비스를 무료로 체험 하 고 다음과 같은 기능을 통해 음성 지원 앱과 서비스를 신속 하 게 빌드합니다.
     :::column-end:::
 :::row-end:::
@@ -58,12 +58,10 @@ Azure 원격 렌더링 미리 보기를 사용 하 여 모든 세부 정보가 �
        [![비전](images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="visionhttpsdocsmicrosoftcomazurecognitive-servicescomputer-vision"></a>[관점](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[관점](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
         사진, 비디오 및 디지털 잉크 콘텐츠를 인식, 식별, 캡션, 색인 및 보통 합니다. 앱과 서비스가 이미지, 비디오 및 디지털 잉크 내에서 콘텐츠를 정확 하 게 식별 하 고 분석할 수 있도록 하는 방법을 알아봅니다.
     :::column-end:::
 :::row-end:::
-
-
 
 
 ## <a name="see-also"></a>참고 항목

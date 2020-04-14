@@ -1,17 +1,17 @@
 ---
 title: DirectX의 로컬 앵커 전송
 description: 공간 앵커를 전송 하 여 두 HoloLens 장치를 동기화 하는 방법을 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, 동기화, 공간 앵커, 전송, 여럿이, 보기, 시나리오, 연습, 샘플 코드, 전송, 로컬 앵커 전송, 앵커 내보내기, 앵커 가져오기
-ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e709f107e280f9c88a4f1af590cb62de301633fe
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376030"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278071"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>DirectX의 로컬 앵커 전송
 
@@ -672,7 +672,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-간단하죠. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
+정말 간단하죠. 이제 네트워크를 통해 받은 앵커를 찾으려고 시도 하는 데 충분 한 정보가 있어야 합니다. 다시, 클라이언트는 앵커를 찾기 위해 공간에 대 한 충분 한 시각적 추적 데이터가 있어야 합니다. 바로 작동 하지 않는 경우 잠시 연습을 수행해 보세요. 그래도 작동 하지 않으면 서버에서 더 많은 앵커를 보내고 네트워크 통신을 사용 하 여 클라이언트에 적용 되는 것에 동의 합니다. HolographicSpatialAnchorTransferSample를 다운로드 하 고 클라이언트 및 서버 Ip를 구성 하 고 클라이언트 및 서버 HoloLens 장치에 배포 하 여이를 시험해 볼 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 * [PPL (병렬 패턴 라이브러리)](https://msdn.microsoft.com/library/dd492418.aspx)

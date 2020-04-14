@@ -1,17 +1,17 @@
 ---
 title: 이 디자인 지침 정보
 description: '이 설명서는 홀로그래픽 디바이스(예: HoloLens) 및 몰입형 디바이스(예: Acer 및 HP Windows Mixed Reality 헤드셋)로 작업하는 Microsoft 디자이너, 개발자, 프로그램 관리자 및 연구원이 작성한 것입니다.'
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 소개, 지침
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277521"
 ---
 # <a name="about-this-design-guidance"></a>이 디자인 지침 정보
 
@@ -25,7 +25,7 @@ ms.locfileid: "73437099"
 
 가능 하면 GitHub에서 관련 코드를 사용 하 여 조치 가능한 디자인 지침을 제공 합니다. 즉, 사용자의 도움을 받을 수 있기 때문에, 여기에서 실행 가능한 특정 지침을 항상 제공할 수 있는 것은 아닙니다. 공유 하는 내용 중 일부는 ' 배운 교훈 ' 및 ' 해당 경로를 중단 하지 않습니다 '의 영혼에 있습니다.
 
-그리고 많은 혁신은 더 큰 디자인 커뮤니티에서 생성 됩니다. 따라서 사용자의 의견을 파악 하 고 사용자의 의견을 파악 하 고 사용자와 긴밀 하 게 작업 합니다. Microsoft는이 과정에서 설계를 고려 하는 개발자와 디자이너의 설계, 모범 사례 및 관련 오픈 소스 제어, 패턴 및 사용 가능한 샘플 앱을 제공 하는 경우에도 microsoft에서 통찰력을 공유 하는 것이 가장 좋습니다. 직접 작업에서.
+그리고 많은 혁신은 더 큰 디자인 커뮤니티에서 생성 됩니다. 따라서 사용자의 의견을 파악 하 고 사용자의 의견을 파악 하 고 사용자와 긴밀 하 게 작업 합니다. Microsoft는 사용자가 직접 작업에서 직접 사용할 수 있는 관련 오픈 소스 제어, 패턴 및 샘플 앱과 디자인을 고려 하 여 개발자와 디자이너의 역량을 강화 하는 것이 좋습니다. 즉, 예비 작업 인 경우에도 microsoft에서 통찰력을 공유 하는 것이 좋습니다.
 
 ## <a name="overview"></a>개요
 
@@ -58,7 +58,7 @@ Microsoft는 사용자가 수행 하는 것과 동일한 문제를 wrestle 하 �
 
 ![작성자에 게 맞는](images/500px-creators.jpg) <br>
 
-많은 독자 들이 도움이 될 것입니다. 다른 기술 집합 (시작, 중간, 고급)이 있고 다른 도구 (Unity, DirectX, C++, C#, 기타)를 사용 하는 것은 다양 한 플랫폼 (Windows, iOS, Android)에 대해 잘 알고 있으며, 다른 배경 (모바일, 엔터프라이즈, 게임)에서 제공 됩니다. )를 사용 하 여 다른 크기의 팀 (솔로, small, medium, large)에서 작업 하 고 있습니다. 따라서 다양 한 관점 및 요구 사항으로이 지침을 볼 수 있습니다. 가능 하면 이러한 다양성을 염두에 두고 가능한 한 많은 사용자에 게 가능한 한 적절 한 지침을 제공 합니다. 또한 대부분의 사용자는 이미 GitHub에 있습니다. 따라서 사용자가 이미 있는 위치를 충족 하기 위해 GitHub 리포지토리 및 포럼에 직접 연결 됩니다. 
+많은 독자 들이 도움이 될 것입니다. 다른 기술 집합 (시작, 중간, 고급)이 있고 다른 도구 (Unity, DirectX, C++, C#, 기타)를 사용 하 고 다양 한 플랫폼 (Windows, iOS, Android)에 대해 잘 알고 있으며 다양 한 배경 (모바일, 엔터프라이즈, 게임)에서 제공 되며 다른 규모의 팀 (솔로, small, medium, large)에서 작업 하 고 있습니다. 따라서 다양 한 관점 및 요구 사항으로이 지침을 볼 수 있습니다. 가능 하면 이러한 다양성을 염두에 두고 가능한 한 많은 사용자에 게 가능한 한 적절 한 지침을 제공 합니다. 또한 대부분의 사용자는 이미 GitHub에 있습니다. 따라서 사용자가 이미 있는 위치를 충족 하기 위해 GitHub 리포지토리 및 포럼에 직접 연결 됩니다. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>실험적에서 명시적으로 최대한 많이 공유
 

@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-HoloTour에 대 한 공간 음향 디자인
 description: Microsoft HoloLens에 대해 진정한 모던 3D 가상 둘러보기를 만들려면 파노라마 비디오 및 holographic 장면만 수식의 일부입니다.
-author: JSyltebo
+author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, 공간 음향, 사례 연구
-ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 5c6331bd93447f53c1dd4c9941bfa13a5eadc1bd
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278141"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>사례 연구: HoloTour에 대 한 공간 음향 디자인
 

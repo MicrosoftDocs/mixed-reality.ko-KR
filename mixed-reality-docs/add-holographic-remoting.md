@@ -1,22 +1,22 @@
 ---
 title: Holographic 원격 추가
 description: Holographic 원격을 사용 하 여 네트워크를 통해 HoloLens에 holograms을 렌더링 하는 방법을 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, holographic remoting, 원격 렌더링, 네트워크 렌더링, HoloLens, 원격 holograms
-ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2f6ade5552c993f66281d0be8a7e62c8f076deac
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277711"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Holographic 원격 추가 (HoloLens (첫 번째 gen))
 
 >[!IMPORTANT]
->이 문서에서는 HoloLens 1 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. HoloLens 용 호스트 응용 프로그램 **(1 세대)** 은 NuGet 패키지 버전1.x를 사용 해야 합니다. 즉, HoloLens 1 용으로 작성 된 호스트 응용 프로그램은 HoloLens 2와 호환 되지 않으며 그 반대의 경우도 마찬가지입니다.
+>이 문서에서는 HoloLens 1 용 호스트 응용 프로그램을 만드는 방법을 설명 합니다. HoloLens 용 호스트 응용 프로그램 **(1 세대)** 은 NuGet **패키지 버전 1.x**를 사용 해야 합니다. 즉, HoloLens 1 용으로 작성 된 호스트 응용 프로그램은 HoloLens 2와 호환 되지 않으며 그 반대의 경우도 마찬가지입니다.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
@@ -30,7 +30,7 @@ Holographic 원격을 사용 하는 HoloLens 개발자는 HoloLens 2와 호환 �
 
 이 페이지에서는 데스크톱 또는 UWP 앱에 Holographic 원격 기능을 추가 하는 방법에 대해 설명 합니다.
 
-Holographic remoting을 사용 하면 앱에서 데스크톱 PC 또는 UWP 장치 (예: Xbox One)에서 호스트 되는 Holographic 콘텐츠를 사용 하 여 HoloLens를 대상으로 지정할 수 있으며, 더 많은 시스템 리소스에 대 한 액세스를 허용 하 고 원격 [몰입 view](app-views.md) 를에 통합할 수 있습니다. 기존 데스크톱 PC 소프트웨어. 원격 호스트 앱은 HoloLens에서 입력 데이터 스트림을 받고, 가상 몰입 형 보기에서 콘텐츠를 렌더링 하 고, 콘텐츠 프레임을 HoloLens로 다시 스트리밍합니다. 연결은 표준 Wi-fi를 사용 하 여 수행 됩니다. 원격 기능을 사용 하려면 NuGet 패키지를 사용 하 여 데스크톱 또는 UWP 앱에 holographic 원격을 추가 하 고, 연결을 처리 하 고 몰입 형 보기에서 렌더링 하는 코드를 작성 합니다. 도우미 라이브러리는 장치 연결을 처리 하는 작업을 간소화 하는 코드 샘플에 포함 되어 있습니다.
+Holographic remoting을 사용 하면 앱에서 데스크톱 PC 또는 UWP 장치 (예: Xbox One)에서 호스트 되는 Holographic 콘텐츠를 사용 하 여 HoloLens를 대상으로 지정할 수 있으며,이를 통해 더 많은 시스템 리소스에 액세스 하 고 기존 데스크톱 PC 소프트웨어에 원격 [몰입 형 보기](app-views.md) 를 통합할 수 있습니다. 원격 호스트 앱은 HoloLens에서 입력 데이터 스트림을 받고, 가상 몰입 형 보기에서 콘텐츠를 렌더링 하 고, 콘텐츠 프레임을 HoloLens로 다시 스트리밍합니다. 연결은 표준 Wi-fi를 사용 하 여 수행 됩니다. 원격 기능을 사용 하려면 NuGet 패키지를 사용 하 여 데스크톱 또는 UWP 앱에 holographic 원격을 추가 하 고, 연결을 처리 하 고 몰입 형 보기에서 렌더링 하는 코드를 작성 합니다. 도우미 라이브러리는 장치 연결을 처리 하는 작업을 간소화 하는 코드 샘플에 포함 되어 있습니다.
 
 일반적인 원격 연결의 경우 대기 시간은 50 밀리초로 낮습니다. 플레이어 앱은 실시간으로 대기 시간을 보고할 수 있습니다.
 

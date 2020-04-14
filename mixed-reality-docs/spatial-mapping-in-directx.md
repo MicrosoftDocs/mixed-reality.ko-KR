@@ -1,17 +1,17 @@
 ---
 title: DirectX의 공간 매핑
 description: DirectX 앱에서 공간 매핑을 구현 하는 방법을 설명 합니다. 여기에는 유니버설 Windows 플랫폼 SDK에 포함 된 공간 매핑 샘플 응용 프로그램에 대 한 자세한 설명이 포함 되어 있습니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows mixed reality, 공간 매핑, 환경, 상호 작용, directx, winrt, api, 샘플 코드, UWP, SDK, 연습
-ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b3ef74a7e11e0e73fce47e4c7193ace42ffe7c20
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277501"
 ---
 # <a name="spatial-mapping-in-directx"></a>DirectX의 공간 매핑
 

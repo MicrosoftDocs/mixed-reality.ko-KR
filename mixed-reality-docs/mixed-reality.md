@@ -1,18 +1,18 @@
 ---
 title: 혼합 현실이란?
 description: 이 문서에서는 혼합 현실을 정의하고, 간단한 AR 및 VR 디바이스뿐만 아니라 Microsoft HoloLens 및 Windows Mixed Reality 몰입형 헤드셋과 같은 Windows Mixed Reality 디바이스와 혼합 현실 스펙트럼을 함께 보여줍니다.
-author: BrandonBray
+author: brandonbray
 ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 혼합 현실, 홀로그램, ar, vr, mr, xr, 증강 현실, 가상 현실, 설명
 ms.localizationpriority: high
-ms.openlocfilehash: f170fe7a3353ac0cce1bd7532802eaff7a357494
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278051"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?
 

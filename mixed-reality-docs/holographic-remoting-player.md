@@ -1,17 +1,17 @@
 ---
 title: Holographic 원격 플레이어
 description: Holographic Remoting Player는 Holographic 원격 기능을 지 원하는 PC 앱 및 게임에 연결 하는 동반 앱입니다. Holographic 원격 스트림은 Wi-fi 연결을 사용 하 여 PC에서 실시간으로 Microsoft HoloLens로 콘텐츠를 Holographic 합니다.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 88a9aa0bb058776a32016e51fc22bcb73f08ab85
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278211"
 ---
 # <a name="holographic-remoting-player"></a>Holographic 원격 플레이어
 

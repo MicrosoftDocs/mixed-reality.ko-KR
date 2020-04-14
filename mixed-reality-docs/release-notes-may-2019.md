@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: 릴리스 정보, 버전, windows 10, 빌드, 19h1, os, 2019 년 5 월
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277631"
 ---
 # <a name="release-notes---may-2019"></a>릴리스 정보-2019 년 5 월
 
@@ -43,6 +43,10 @@ Windows Mixed Reality에서 Win32 응용 프로그램을 시작 하려면 컨트
 ## <a name="hololens-1st-gen-long-term-servicing"></a>HoloLens (첫 번째 gen) 장기 서비스
 
 HoloLens (첫 번째 gen)가 LTS (장기 서비스) 상태를 입력 합니다. 향후 업데이트는 [Windows 10 월 2018 릴리스](release-notes-october-2018.md) (RS5 라고도 함)로 기능 패리티를 유지 하면서 문제 및 보안 수정에 집중 합니다. 
+
+## <a name="known-issues"></a>알려진 문제
+
+모던 헤드셋이 제대로 작동 하기 위해 모니터가 PC에 연결 되어야 하는 문제를 추적 하 고 있습니다. 백팩 PC 사용자는 활성 디스플레이 어댑터 (또는 EDID 에뮬레이터)를 사용 하 여 PC 모니터가 사용 되 고 있지 않을 때 몰입 형 헤드셋이 계속 렌더링 되도록 할 수 있습니다. 
 
 ## <a name="provide-feedback-and-report-issues"></a>사용자 의견을 제공 하 고 문제를 보고 합니다.
 

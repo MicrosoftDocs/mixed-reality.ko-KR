@@ -1,17 +1,17 @@
 ---
 title: HoloLens 용 Unity를 사용 하는 WinRT Api
 description: HoloLens 용 Unity 프로젝트에서 WinRT Api (Windows 네임 스페이스)를 활용 하는 방법을 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, WinRT, windows mixed reality, API, 연습
-ms.openlocfilehash: 73764d191813f6dcae750e74ce3181af987c9e0e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 80f950d7571a936e93eb08490ad83dbb34a50b3a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437238"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277991"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>HoloLens 용 Unity를 사용 하는 WinRT Api
 

@@ -1,17 +1,17 @@
 ---
 title: Holographic DirectX 프로젝트 만들기
 description: Windows Mixed Reality 앱 템플릿을 기반으로 새 holographic 앱을 만드는 방법을 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holographic 앱, 새 앱, UWP 앱, 템플릿 앱, holograms, 새 프로젝트, 연습, 다운로드, 샘플 코드
-ms.openlocfilehash: d99478a0d98d0593b7b82f25080d20913789cb6c
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 30f2c630b2919fbc304dc96d13cab74e22ed4adc
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940855"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277921"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Holographic DirectX 프로젝트 만들기
 
@@ -25,7 +25,7 @@ DirectX 11 holographic UWP 앱 템플릿은 DirectX 11 UWP 앱 템플릿과 매�
 * [응시](gaze-and-commit.md) 하는 입력을 처리 하 고 간단한 [제스처](gaze-and-commit.md#composite-gestures)를 인식 합니다.
 * 전체 화면 스테레오 렌더링 모드로 전환 합니다.
 
-## <a name="how-do-i-get-started"></a>시작하려면 어떻게 하나요?
+## <a name="how-do-i-get-started"></a>시작 어떻게 할까요?
 
 먼저 Visual Studio 2019 및 Windows Mixed Reality 앱 템플릿 다운로드 지침에 따라 [도구를 설치](install-the-tools.md)합니다. 혼합 현실 앱 템플릿은 Visual studio marketplace에서 [웹 다운로드](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)로 사용 하거나 VISUAL studio UI를 통해 확장으로 설치 하 여 사용할 수 있습니다.
 
@@ -183,5 +183,5 @@ int APIENTRY wWinMain(
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [DirectX의 렌더링](rendering-in-directx.md)
 * [Visual Studio를 사용하여 앱 배포 및 디버깅](using-visual-studio.md)
-* [Using the HoloLens emulator(HoloLens 에뮬레이터 사용)](using-the-hololens-emulator.md)
+* [HoloLens 에뮬레이터 사용](using-the-hololens-emulator.md)
 * [홀로그램 DirectX 앱에서 XAML 사용](using-xaml-with-holographic-directx-apps.md)

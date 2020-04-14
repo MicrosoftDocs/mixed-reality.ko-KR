@@ -1,17 +1,17 @@
 ---
 title: HoloLens에서 앱 테스트
 description: HoloLens 앱 테스트에 대 한 지침 및 제안
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, 테스트
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277591"
 ---
 # <a name="testing-your-app-on-hololens"></a>HoloLens에서 앱 테스트
 
@@ -36,7 +36,7 @@ Holographic 앱은 다양 한 환경 집합에서 원활 하 게 실행 해야 �
 
 ![HoloLens 앱 개발용 환경 테스트 매트릭스](images/environment-matrix-600px.png)
 
-## <a name="comfort"></a>편안
+## <a name="comfort"></a>편안함
 1. **클립 평면.** [Holograms가 렌더링 되는](hologram-stability.md#hologram-render-distances)위치를 attentive 합니다.
 2. **가상 이동이 실제 헤드 이동과 일치 하지 않습니다.** 사용자의 실제 동작을 나타내지 않는 방식으로 카메라를 이동 하지 마십시오. 앱에서 장면을 통해 사용자를 이동 해야 하는 경우 동작을 예측 가능 하 게 만들고 가속을 최소화 하 고 사용자가 움직임을 제어할 수 있도록 합니다.
 3. **홀로그램 품질 지침을 따릅니다.** [홀로그램 품질 지침](hologram-stability.md) 을 구현 하는 성능의 앱은 사용자 discomfort 수 있습니다.

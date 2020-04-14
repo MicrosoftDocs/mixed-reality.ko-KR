@@ -1,17 +1,17 @@
 ---
 title: 포팅 가이드
 description: 기존 몰입 형 응용 프로그램을 Windows Mixed Reality로 이식 하는 방법을 설명 하는 단계별 연습.
-author: ChimeraScorn
+author: chimerascorn
 ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP
-ms.openlocfilehash: 5d3debc9a810873f21a9f55a32061565d4ce75ae
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539514"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278041"
 ---
 # <a name="porting-guides"></a>포팅 가이드
 

@@ -1,21 +1,20 @@
 ---
-title: Keyboard
-description: ''
+title: 키보드
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: 혼합 현실, 컨트롤, 상호 작용, ui, ux
-ms.openlocfilehash: a16d0a2a8dddf1d9a338cdaff3247e8955c47029
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 90f20d96fca9bebfcbce8283bedd3cb8422d9ea8
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278081"
 ---
-# <a name="keyboard"></a>Keyboard
+# <a name="keyboard"></a>키보드
 
-![Keyboard](images/UX/UX_Hero_Keyboard.jpg)
+![키보드](images/UX/UX_Hero_Keyboard.jpg)
 
 혼합 현실 응용 프로그램은 언제 든 지 시스템 키보드를 호출할 수 있습니다. 시스템 키보드는 대상 플랫폼의 기능에 따라 동작 합니다. 예를 들어, HoloLens 2의 키보드는 직접 상호 작용을 지원 하는 반면, HoloLens의 키보드 (첫 번째 gen)는 응시 및 공기 탭 제스처 입력을 지원 합니다.
 

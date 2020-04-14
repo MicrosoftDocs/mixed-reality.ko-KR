@@ -1,17 +1,17 @@
 ---
 title: Holographic 원격을 사용 하 여 보안 연결 설정
 description: 이 페이지에서는 Holographic Remoting을 사용할 때 암호화 된 보안 연결을 설정 하는 방법을 설명 합니다.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 4006a317ed2ecfd7a1e67336a80a4e536d45e554
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278231"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Holographic 원격을 사용 하 여 보안 연결 설정
 

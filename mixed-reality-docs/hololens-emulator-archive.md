@@ -1,17 +1,17 @@
 ---
 title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a50be8c83607882996e5981c4be502a0a617a797
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278161"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 에뮬레이터 보관
 
@@ -19,6 +19,7 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 |  빌드 |  출시 날짜 |  참고 | 
 |----------|----------|----------|
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1059](https://go.microsoft.com/fwlink/?linkid=2126826) | 2020 년 4 월 13 일 | 4 월 2020 (HoloLens 2 빌드)  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1056](https://go.microsoft.com/fwlink/?linkid=2121323) | 3 월 10 일, 2020 | 3 월 2020 HoloLens 2 빌드  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1053](https://go.microsoft.com/fwlink/?linkid=2118321) | 2020 년 2 월 11 일 | 2020 년 2 월 2 일 빌드.  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1044](https://go.microsoft.com/fwlink/?linkid=2114824) | 2020 년 1 월 13 일 | 1 월 2020 HoloLens 2 빌드  일반적인 HoloLens 2 릴리스 정보는를 참조 하세요 https://docs.microsoft.com/hololens/hololens-release-notes |

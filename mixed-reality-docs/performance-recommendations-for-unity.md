@@ -1,18 +1,18 @@
 ---
 title: Unity에 대한 성능 추천 사항
 description: 혼합 현실 앱을 사용하여 성능을 향상시킬 수 있는 Unity 관련 팁입니다.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, CPU, GPU, 렌더링, 가비지 컬렉션, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160019"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277571"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대한 성능 추천 사항
 

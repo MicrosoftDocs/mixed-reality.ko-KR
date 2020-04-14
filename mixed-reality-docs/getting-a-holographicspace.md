@@ -1,17 +1,17 @@
 ---
 title: HolographicSpace 가져오기
 description: Holographic 렌더링 및 공간 입력의 핵심 개념인 HolographicSpace API에 대해 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HolographicSpace, CoreWindow, 공간 입력, 렌더링, 스왑 체인, holographic 프레임, 업데이트 루프, 게임 루프, 참조 프레임, locatability, 샘플 코드, 연습
-ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 76211c8a5394e2e296748253df4eac063841746c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277831"
 ---
 # <a name="getting-a-holographicspace"></a>HolographicSpace 가져오기
 
@@ -27,7 +27,7 @@ Holographic space 개체를 만드는 첫 번째 단계는 Windows Mixed Reality
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-[ *Basichologram* win32 샘플에서 시작](creating-a-holographic-directx-project.md#creating-a-win32-project)하는 **win32 앱** 에 대 한 자세한 내용은 **app:: CreateWindowAndHolographicSpace를 참조 하세요.** 예를 들어, hwnd를 만든 다음 연결 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">된을 만들어 몰입 형 hwnd로 변환 합니다. HolographicSpace</a>:
+[ *Basichologram* win32 샘플에서 시작](creating-a-holographic-directx-project.md#creating-a-win32-project)하는 **win32 앱** 에 대 한 자세한 내용은 **app:: CreateWindowAndHolographicSpace** 를 참조 하세요. 예를 들어, HWND를 만든 다음 연결 된 <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>를 만들어 몰입 형 hwnd로 변환 합니다.
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -118,7 +118,7 @@ m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
     std::bind(&AppMain::OnCameraRemoved, this, _1, _2));
 ```
 
-Holographic 렌더링을 원활 하 게 진행 하기 위해 이벤트 처리기에서 일부 작업을 완료 하 여 앱이 모든 작업을 렌더링할 수 있도록 해야 합니다. 세부 정보에 대 한 코드 및 주석을 읽어 보세요. 주 클래스에서 **OnCameraAdded** 및 **OnCameraRemoved** 를 검색 하 여 **DeviceResources**에서 **m_cameraResources** map을 처리 하는 방법을 이해할 수 있습니다.
+Holographic 렌더링을 원활 하 게 진행 하기 위해 이벤트 처리기에서 일부 작업을 완료 하 여 앱이 모든 작업을 렌더링할 수 있도록 해야 합니다. 세부 정보에 대 한 코드 및 주석을 읽어 보세요. **OnCameraAdded** 및 **OnCameraRemoved** For main 클래스에서 **DeviceResources**에 의해 처리 되는 **m_cameraResources** 방법에 대해 알아볼 수 있습니다.
 
 지금은 앱이 holographic 카메라에 대해 알 수 있도록 하는 AppMain 및 설치 프로그램에 중점을 두었습니다. 이와 관련 하 여 다음 두 가지 요구 사항을 기억해 야 합니다.
 
@@ -172,6 +172,6 @@ m_locatabilityChangedToken = m_spatialLocator.LocatabilityChanged(
 
 그런 다음이 이벤트를 사용 하 여 holograms가 전 세계에 고정 될 수 없는 시기를 확인 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [DirectX의 렌더링](rendering-in-directx.md)
 * [DirectX의 좌표계](coordinate-systems-in-directx.md)

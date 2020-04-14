@@ -1,17 +1,17 @@
 ---
 title: DirectX의 키보드, 마우스 및 컨트롤러 입력
 description: 키보드, 마우스 및 게임 컨트롤러를 사용 하는 Windows Mixed Reality 용 응용 프로그램을 만드는 방법을 설명 합니다.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, 키보드, 마우스, 게임 컨트롤러, xbox 컨트롤러, HoloLens, 데스크톱, 연습, 샘플 코드
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278091"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>DirectX의 키보드, 마우스 및 컨트롤러 입력
 

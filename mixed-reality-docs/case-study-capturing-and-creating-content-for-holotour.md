@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-HoloTour
 description: HoloTour for Microsoft HoloLens는 전 세계의 아이콘 위치에 대 한 모던 3D 개인 둘러보기를 제공 합니다. 이 사례 연구에서는 HoloTour에 사용 되는 콘텐츠를 캡처하고 만드는 과정을 안내 합니다.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed 현실
-ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 59c3dffd48009aa792643ea27b59f8f6f85b64d7
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278191"
 ---
 # <a name="case-study---holotour"></a>사례 연구-HoloTour
 

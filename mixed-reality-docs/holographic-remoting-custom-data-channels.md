@@ -1,17 +1,17 @@
 ---
 title: 사용자 지정 Holographic 원격 데이터 채널
 description: 사용자 지정 데이터 채널은 이미 설정 된 Holographic 원격 연결을 통해 사용자 데이터를 전송 하는 데 사용할 수 있습니다.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 8bfa19b7af0f3429130aabf70d9d11083bc56a52
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 12fa47b6b3a46521a9e6029cab61fa1c628c06e9
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278101"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>사용자 지정 Holographic 원격 데이터 채널
 

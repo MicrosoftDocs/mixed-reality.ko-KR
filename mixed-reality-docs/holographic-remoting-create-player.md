@@ -1,17 +1,17 @@
 ---
 title: 사용자 지정 Holographic Remoting 플레이어 작성
 description: 사용자 지정 Holographic 원격 플레이어 앱을 만들면 원격 컴퓨터에 렌더링 된 콘텐츠를 HoloLens 2로 표시할 수 있는 사용자 지정 응용 프로그램을 만들 수 있습니다. 이 문서에서는이를 달성할 수 있는 방법에 대해 설명 합니다.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: eaa6549eb34d3a37c21b3decb348bf43594a110f
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b276558e43fc545be9e5c0be6feded229904ee97
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278221"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>사용자 지정 Holographic Remoting 플레이어 앱 작성
 
@@ -218,7 +218,7 @@ Holographic Remoting을 통해 깊이 다시 프로젝션을 사용할 때 발�
 - ```Remote``` 프로젝션 변환은 원격 앱에서 지정 된 근거리/원거리 평면 거리를 반영 합니다.
 - 원격 앱 및 사용자 지정 플레이어 앱에서의 ```Merged``` 근거리/Far 비행기 거리가 병합 됩니다. 기본적으로이 작업은 근거리 평면 거리의 최소 및 최대 평면 거리의 최대값을 차지 하 여 수행 됩니다. 원격 또는 로컬 쪽이 반전 된 경우 (근처 < 멀리 떨어져 있는 경우 멀리 떨어져 있는 근거리/원거리 비행기 거리가 대칭 이동 합니다.
 
-## 선택 사항: BlitRemoteFrameTimeout 설정<a name="BlitRemoteFrameTimeout"></a>
+## <a name="optional-set-blitremoteframetimeout"></a>선택 사항: BlitRemoteFrameTimeout 설정<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
 > ```PlayerContext::BlitRemoteFrameTimeout``` 버전 [2.0.9](holographic-remoting-version-history.md#v2.0.9)부터 지원 됩니다. 
 

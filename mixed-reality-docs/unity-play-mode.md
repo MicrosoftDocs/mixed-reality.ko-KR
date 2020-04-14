@@ -1,17 +1,17 @@
 ---
 title: Unity 재생 모드
 description: Unity 편집기에서 재생 모드를 사용 하 여 앱을 배포 하지 않고 장치에서 변경 내용을 미리 봅니다.
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, remoting, holographic remoting, holographic 원격 플레이어
-ms.openlocfilehash: 6164d7ae1bc2d9ac13135f17132aca089e63ecdf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: dca7ffba1270802fcabed8a88fe7428ef2981553
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277561"
 ---
 # <a name="unity-play-mode"></a>Unity 재생 모드
 
@@ -32,5 +32,5 @@ Holographic Remoting을 사용 하려면 고속 PC 및 Wi-fi 연결이 필요 �
 
 최상의 결과를 위해 앱이 [포커스 지점을](focus-point-in-unity.md)적절히 설정 하는지 확인 합니다. 이렇게 하면 Holographic는 무선 연결의 대기 시간에 맞게 장면을 최적으로 조정 하는 데 도움이 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 * [홀로그램 원격 플레이어](holographic-remoting-player.md)

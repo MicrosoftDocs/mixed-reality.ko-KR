@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-Lowe의 부엌 단원
 description: HoloLens 팀은 Lowe의 HoloLens 프로젝트에서 파생 된 몇 가지 모범 사례를 공유 하려고 합니다.
-author: BrandonBray
+author: brandonbray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Lowe의, HoloLens, 주방, 사례 연구
-ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6bd7a09f77fb71dc23dc640525ff250abac8f12
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522349"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278131"
 ---
 # <a name="case-study---lessons-from-the-lowes-kitchen"></a>사례 연구-Lowe의 부엌 단원
 

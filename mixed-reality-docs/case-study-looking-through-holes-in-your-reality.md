@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-현실에서의 구멍 검색
 description: 이 사례 연구에서는 HoloLens에 "자동 창" 효과를 구현 하 여 사용자가 실제 환경 내에서 옆면을 볼 수 있도록 하는 방법을 설명 합니다.
-author: EricRehmeyer
+author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, 마법 창, 시차
-ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c829656c98b7c87f8b969dbbd16115f6a0bbaf27
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436670"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278151"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>사례 연구-현실에서의 구멍 검색
 

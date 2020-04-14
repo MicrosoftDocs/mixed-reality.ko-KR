@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-HoloTour에 대해 불가능 한 큐브 뷰 만들기
 description: Microsoft HoloLens HoloTour의 경험을 unforgettable 하는 데 필요 합니다. 기존 tourist 중지 외에도 "불가능 한 큐브 뷰"를 계획 했습니다.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed 현실
-ms.openlocfilehash: be00df73543aa295e1e0dbe1462a888d6bb24954
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f3ca07dfab1e4477039481c268e418aac9034bc5
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278171"
 ---
 # <a name="case-study---creating-impossible-perspectives-for-holotour"></a>사례 연구-HoloTour에 대해 불가능 한 큐브 뷰 만들기
 
@@ -34,7 +34,7 @@ HoloTour 환경에는 다른 곳에 표시 되지 않는 고유한 보기를 제
 항공 뷰를 만들기 위해 Microsoft에서 다른 팀과 협력 하 여 항공 파노라마 이미지에 대 한 액세스 권한을 얻을 수 있습니다. 이러한 이미지의 품질은 매우 우수 했지만, 보기를 수정 하지 않고 내부적으로 사용 하는 경우 둘러보기의 다른 부분과 비교 하 여 동작 부족을 lifeless 느낄 것입니다. 
 
 
-![로마를 떠 떠 있는 핫 공기 풍선 바구니입니다.](images/hotairballoon1-300px.png)<br>
+로마를 떠 놓았을 때 핫 공기 풍선 바구니를 ![합니다.](images/hotairballoon1-300px.png)<br>
 *로마를 넘는 핫 공기 풍선 바구니입니다.*
 
 항공 위치가 다른 대상과 동일한 품질 막대를 충족 하는지 확인 하기 위해 정적 사진을 살아 있는 장면으로 변환 하기로 결정 했습니다. 첫 번째 단계는 이미지 및 복합 동작을 편집 하는 것입니다. 이를 지원 하기 위해 시각적 효과 음악가를 계약 했습니다. 편집은 클라우드 천천히 유동을 표시 하기 위해 수행 되었으며, skyline를 트래버스하는 간헐적으로 비행기 또는 헬리콥터를 표시 하기 위해 수행 되었습니다. 처음에는 거리를 구동 하기 위해 많은 자동차를 만들었습니다. HoloTour에서 로마를 둘러 보 었으 면이 움직임을 명시적으로 인식 하지 못할 가능성이 있습니다. 정말 유용 합니다. 미묘한 동작은 눈을 파악 하기 위한 것이 아니며, 이러한 작은 접촉 없이, 사람들은 장면에서 정적 이미지 였던 것을 즉시 알 수 있습니다.
@@ -49,7 +49,7 @@ HoloTour 환경에는 다른 곳에 표시 되지 않는 고유한 보기를 제
 
 물론, Colosseum의 비디오 푸티지 또는 정적 이미지는 빌드 시 표시 된 것 처럼 보이지 않으므로 직접 만들어야 합니다. 최대한 많은 연구를 수행 하 여 구조에 대해 자세히 알아보세요. 에서 만든 자료를 이해 하 고, 아키텍처 다이어그램을 검토 하 고, 기록 설명을 읽고 가상 재작성을 수행할 수 있는 충분 한 정보를 얻을 수 있습니다. 
 
-![고대의 로마를 보여 주는 것 처럼 Colosseum의 현대 유적는 아레나를 보여 주는 오버레이가 있습니다.](images/rome-colosseum-overlay-500px.png)<br>
+고대의 로마를 사용 하 여 아레나의 Colosseum을 보여 주는 오버레이를 사용 하 여 현대적인 일일 유적를 ![합니다.](images/rome-colosseum-overlay-500px.png)<br>
 *고대의 로마를 보여 주는 오버레이가 포함 된 Colosseum의 현대 유적입니다.*
 
 가장 먼저 할 일은 교육 오버레이의 기존 투어를 개선 하는 것 이었습니다. HoloTour는 현재 처럼 Colosseum의 유적를 방문할 때, 아레나는 정교한 지역 준비 영역을 포함 하 여 사용 중에 표시 되는 방법을 보여 주기 위해 변형 되었습니다. 이 정보에 대해서는 일반적인 둘러보기로 설명 했지만이 정보를 상상 하려고 할 수 있지만 HoloTour에서 실제로 볼 수 있습니다.
@@ -62,17 +62,17 @@ HoloTour 환경에는 다른 곳에 표시 되지 않는 고유한 보기를 제
 
 이 작업은 팀에서 단독으로 작업 하기에는 너무 크기 때문에, 미술 팀은 일반적으로 Hollywood 영화에 대 한 시각적 효과에서 작동 하는 외부 효과 회사인 Whiskytree로 작업 했습니다. Whiskytree를 통해 Colosseum를 원래 대로 다시 만들어 아레나에서 발생 하는 동안 구조에 대해 가르쳐 줄 고 황제의 상자에서의 글 히 싸 보기를 만들 수 있었습니다. 응원 crowds 및 대기가 없어 배너는 이미지 뿐만 아니라 실제 위치에 따라 결정 하는 데 필요한 미묘한 동작을 추가 합니다.
 
-![아레나에서 볼 때 생성 된 Colosseum입니다. HoloTour에서 볼 때 배너는 간단히 flutter 동작을 제공 합니다.](images/recreated-colosseum-holotour-500px.png)<br>
+아레나에서 볼 때 다시 만든 Colosseum을 ![합니다. HoloTour에서 볼 때 배너는 간단히 flutter 동작을 제공 합니다.](images/recreated-colosseum-holotour-500px.png)<br>
 *아레나에서 볼 때 생성 된 Colosseum입니다. HoloTour에서 볼 때 배너는 간단히 flutter 동작을 제공 합니다.*
 
 로마 둘러보기는 글 글 해를 위한 전투로 끝납니다. Whiskytree는 비디오로 렌더링 된 아레나 및 3D로 잘 된 시뮬레이션을 제공 했지만, 아레나의 글 글에 추가 해야 했습니다. 이 프로세스의 부분은 인큐베이션 game studio의 프로젝트 보다 Hollywood 비디오 프로덕션 처럼 보입니다. 팀의 구성원은 거친 전투 시퀀스를 매핑한 다음 choreographer으로 구체화 했습니다. Microsoft는이를 대상으로 하는 모의 전투 및 구매한 갑옷을 준비 하는 행위자를 고용 했습니다. 마지막으로 전체 장면을 녹색 화면에 filmed.
 
-![사이에 지침을 가져오는 글을 받습니다.](images/green-screen-gladiators-holotour-500px.jpg)<br>
+을 사용 하 여에 대 한 지침을 가져오는 것을 ![.](images/green-screen-gladiators-holotour-500px.jpg)<br>
 *Gladiatiors에 대 한 지침을 가져오는 데*
 
 이 장면에서는 모든 푸티지가 해당 관점에서 수행 되어야 하는 황제의 상자에 배치 됩니다. 아레나에서 인 글을 filmed 하는 경우, 나중에는 이동 시퀀스를 올바르게 합성할 수 없기 때문에 카메라 연산자를 매우 긴 복식 리프트에 배치 하 여 filming에 대 한 이동 순서를 살펴봅니다.
 
-![오른쪽의 원근감 가져오기: 복식 리프트에서 filming.](images/scissor-lift-holotour-500px.jpg)<br>
+오른쪽의 원근감을 가져오는 ![: 복식 리프트에서 filming.](images/scissor-lift-holotour-500px.jpg)<br>
 *오른쪽의 원근감 가져오기: 복식 리프트에서 filming*
 
 사후 프로덕션 환경에서 글 바꿈될은 아레나의 층에는 잘 만들어졌지만 큐브 뷰는 올바르지만 한 가지 문제가 있습니다. 녹색 화면에 있는 글 글의 그림자가 합성 프로세스의 일부로 제거 되었습니다. 그림자를 사용 하지 않으면 글이 항공에서 떠 있었던 것 처럼 보입니다. 다행히 Whiskytree는 이러한 종류의 문제를 해결 하는 데 유용 하며 약간의 기술 wizardry 사용 하 여 화면에 그림자를 다시 추가 합니다. 결과는 오늘 투어에서 볼 수 있습니다.
@@ -97,5 +97,5 @@ HoloTour 환경에는 다른 곳에 표시 되지 않는 고유한 보기를 제
 </table>
 
 
-## <a name="see-also"></a>참조
-* [동영상: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+## <a name="see-also"></a>참고 항목
+* [비디오: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

@@ -1,17 +1,17 @@
 ---
 title: 사례 연구-혼합 현실에서 galaxy 만들기
 description: Microsoft HoloLens를 제공 하기 전에 개발자 커뮤니티에서 새로운 장치에 대해 숙련 된 내부 팀 빌드를 확인 하려는 앱의 종류를 확인 했습니다. 5000 개 이상의 아이디어가 공유 되었으며 24 시간 Twitter 폴링 후에는 "Galaxy 탐색기" 라는 아이디어가 적용 되었습니다.
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy 탐색기, HoloLens, Windows Mixed Reality, 아이디어 공유, 사례 연구
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278181"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>사례 연구-혼합 현실에서 galaxy 만들기
 
@@ -23,7 +23,7 @@ Andy Zibits, 프로젝트의 아트 리드 및 Karim Luccin (팀의 그래픽 �
 
 [Microsoft의 팀](galaxy-explorer.md#meet-the-team) 은 3 명의 개발자, 4 개 음악가, 생산자 및 한 명의 테스터로 구성 되었으며, 모든 기능을 갖춘 앱을 빌드하는 데 6 주가 vastness,이는 사용자가 Milky 방식으로 Galaxy를 학습 하 고이를 탐색 하는 데 사용할 수 있습니다.
 
-Microsoft는 생생한 공간에서 3D 개체를 직접 렌더링 하는 데 HoloLens 기능을 최대한 활용 하고자 했습니다. 따라서 사람들이 가까운 곳에서 확대 하 고 개별의 개별 궤적을 볼 수 있는 현실적인 느낌의 galaxy를 만들려고 했습니다. .
+Microsoft는 생생한 공간에서 3D 개체를 직접 렌더링 하는 데 HoloLens 기능을 최대한 활용 하고자 했습니다. 따라서 사람들이 가까운 곳에서 확대 하 고 개별의 개별 궤적을 볼 수 있는 실제 관찰 galaxy를 만들려고 했습니다.
 
 개발의 첫 번째 주에는 Milky 방식의 표현에 대 한 몇 가지 목표가 있습니다 .이는 galaxy의 모양을 만드는 데 도움이 되는 깊이, 이동 및 느낌 대규모 필요 합니다.
 
@@ -41,7 +41,7 @@ Microsoft는 생생한 공간에서 3D 개체를 직접 렌더링 하는 데 Hol
 
 ### <a name="creating-the-position-of-the-stars"></a>별 위치 만들기
 
-팀 멤버 중 한 명에 게 처음 위치 C# 에서 별을 생성 하는 코드를 이미 썼습니다. 별은 타원에 있고 해당 위치는 (**curveOffset**, **ellipseSize**, **권한 상승**)로 설명할 수 있습니다. 여기서 **curveOffset** 는 타원을 따라 하는 별 각도이 고, **ellipseSize** 은 타원의 차원입니다. X 및 Z를 따라, galaxy 내에서 적절 한 별 권한 상승을 활용 합니다. 따라서 각 별모양 특성을 사용 하 여 초기화 되는 버퍼 ([Unity의](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)경우)를 만들어 나머지 환경에 사용할 수 있는 GPU에 보낼 수 있습니다. 이 버퍼를 그리려면, galaxy를 나타내는 실제 메시 없이 임의의 요소 집합에서 셰이더 (GPU에서 코드)를 실행할 수 있는 [Unity의 DrawProcedural](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) 을 사용 합니다.
+팀 멤버 중 한 명에 게 처음 위치 C# 에서 별을 생성 하는 코드를 이미 썼습니다. 별은 타원에 있고 해당 위치는 (**curveOffset**, **ellipseSize**, **권한 상승**)로 설명할 수 있습니다. 여기서 **curveOffset** 은 타원을 따라 하는 별의 각도이 고, **ellipseSize** 은 X와 Z를 따라 하는 타원의 차원이 며, galaxy 내에서 적절 한 별 상승 수준을 상승 합니다. 따라서 각 별모양 특성을 사용 하 여 초기화 되는 버퍼 ([Unity의](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)경우)를 만들어 나머지 환경에 사용할 수 있는 GPU에 보낼 수 있습니다. 이 버퍼를 그리려면, galaxy를 나타내는 실제 메시 없이 임의의 요소 집합에서 셰이더 (GPU에서 코드)를 실행할 수 있는 [Unity의 DrawProcedural](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) 을 사용 합니다.
 
 **CPU**
 
@@ -74,7 +74,7 @@ v2g vert (uint index : SV_VertexID)
 
 이와 같이 회전 된 다양 한 패턴 및 파티클 시스템을 시도 했습니다.
 
-우리 팀은 galaxies 함수에 대 한 몇 가지 연구를 수행 했으며 galaxy를 위해 특별히 사용자 지정 파티클 시스템을 만들었습니다 .이를 통해 galaxy의 theorizes는 "[밀도 wave 이론](https://en.wikipedia.org/wiki/Density_wave_theory)"을 기반으로 하는 타원에서 파티클을 이동할 수 있습니다. 더 높은 밀도 이지만 트래픽 걸림 같은 일관 된 flux. 이는 안정적이 고 solid로 표시 되지만, 해당 하는 타원을 따라 이동 하는 동안에는 실제로는 arm에서 이동 하 고 있습니다. 시스템에서 파티클은 CPU에 존재 하지 않습니다. 즉, 카드를 생성 하 고 GPU에 모두 정위 하므로 전체 시스템은 단순히 초기 상태 + 시간입니다. 다음과 같이 진행 됩니다.
+우리 팀은 galaxies 함수에 대 한 몇 가지 연구를 수행 했으며, galaxy의 arm이 더 높은 밀도 영역 이지만 트래픽 걸림 같은 일관 된 flux를 theorizes 하는 "[밀도 웨이브 이론](https://en.wikipedia.org/wiki/Density_wave_theory)"을 기반으로 하는 사용자 지정 파티클 시스템을 특별히 galaxy에 맞게 만들었습니다. 이는 안정적이 고 solid로 표시 되지만, 해당 하는 타원을 따라 이동 하는 동안에는 실제로는 arm에서 이동 하 고 있습니다. 시스템에서 파티클은 CPU에 존재 하지 않습니다. 즉, 카드를 생성 하 고 GPU에 모두 정위 하므로 전체 시스템은 단순히 초기 상태 + 시간입니다. 다음과 같이 진행 됩니다.
 
 ![GPU 렌더링을 사용 하는 파티클 시스템 진행](images/spiral-galaxy-arms-500px.jpg)
 
