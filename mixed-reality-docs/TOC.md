@@ -197,8 +197,10 @@
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 ## Unreal
 ### [Unreal 개발 개요](unreal-development-overview.md)
-## WebVR
-### [Windows Mixed Reality에서 Edge의 WebVR 사용](using-webvr-in-edge-with-windows-mixed-reality.md)
+## JavaScript
+### [JavaScript 개발 개요](javascript-development-overview.md)
+### [WebXR](webxr-overview.md)
+### [WebVR](webvr-overview.md)
 ## 기본
 ### [네이티브 개발 개요](directx-development-overview.md)
 ### OpenXR

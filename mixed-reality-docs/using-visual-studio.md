@@ -3,16 +3,16 @@ title: Visual Studio를 사용하여 배포 및 디버깅
 description: Visual Studio를 사용하여 HoloLens 및 Windows Mixed Reality용 앱을 빌드, 디버그 및 배포하는 방법을 알아봅니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 10/24/2019
+ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, 디버그, 배포
-ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278001"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Visual Studio를 사용하여 배포 및 디버깅
 
@@ -47,35 +47,49 @@ PC에 연결된 Windows Mixed Reality 헤드셋을 사용하는 경우 PC에서 
 4. **개발자 모드**를 사용하도록 설정하고, 선택한 설정에 대한 고지 사항을 읽은 다음, [예]를 클릭하여 변경 내용을 적용합니다.
 
 ## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Wi-Fi를 통해 앱 배포 - HoloLens(1세대)
-1. 앱에 대해 **x86** 빌드 구성을 선택합니다. ![Visual Studio의 x86 빌드 구성](images/x86setting.png)
-2. 배포 대상 드롭다운 메뉴에서 **원격 머신**을 선택합니다. ![Visual Studio의 원격 머신 배포 대상](images/remotemachinesetting.png)
+1. 앱에 대해 **x86** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 x86 빌드 구성](images/x86setting.png)</br>
+2. 배포 대상 드롭다운 메뉴에서 **원격 머신**을 선택합니다.</br>
+![Visual Studio의 원격 머신 배포 대상](images/remotemachinesetting.png)</br>
 3. C++ 및 JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 차례로 이동합니다. C# 프로젝트의 경우 연결을 구성하는 대화 상자가 자동으로 표시됩니다.
   a. **주소** 또는 **머신 이름** 필드에서 디바이스의 IP 주소를 입력합니다. **설정 > 네트워크 및 인터넷 > 고급 옵션** 아래에서 HoloLens의 IP 주소를 찾거나, Cortana에 "내 IP 주소가 무엇입니까?"라고 질문할 수 있습니다.
-  b. [인증 모드]를 **유니버설(암호화되지 않은 프로토콜)** 로 설정합니다. ![Visual Studio의 원격 연결 대화 상자](images/remotedeploy.png)
-4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+  b. 인증 모드를 **유니버설(암호화되지 않은 프로토콜)** 로 설정</br>
+  ![Visual Studio의 원격 연결 대화 상자](images/remotedeploy.png)</br>
+4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 5. PC에서 앱을 HoloLens에 처음 배포하는 경우 PIN을 입력하라는 메시지가 표시됩니다. 아래의 **디바이스 페어링** 지침을 따릅니다.
 
 ## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Wi-Fi를 통해 앱 배포 - HoloLens 2
-1. 앱에 대해 **ARM** 또는 **ARM64** 빌드 구성을 선택합니다. ![Visual Studio의 ARM64 빌드 구성](images/arm64setting.png)
-2. 배포 대상 드롭다운 메뉴에서 **원격 머신**을 선택합니다. ![Visual Studio의 원격 머신 배포 대상](images/remotemachinesetting_arm64.png)
+1. 앱에 대해 **ARM** 또는 **ARM64** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 ARM64 빌드 구성](images/arm64setting.png)</br>
+2. 배포 대상 드롭다운 메뉴에서 **원격 머신**을 선택합니다.</br>
+![Visual Studio의 원격 머신 배포 대상](images/remotemachinesetting_arm64.png)</br>
 3. C++ 및 JavaScript 프로젝트의 경우 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 차례로 이동합니다. C# 프로젝트의 경우 연결을 구성하는 대화 상자가 자동으로 표시됩니다.
   a. **주소** 또는 **머신 이름** 필드에서 디바이스의 IP 주소를 입력합니다. **설정 > 네트워크 및 인터넷 > 고급 옵션** 아래에서 HoloLens의 IP 주소를 찾거나, Cortana에 "내 IP 주소가 무엇입니까?"라고 질문할 수 있습니다.
-  b. [인증 모드]를 **유니버설(암호화되지 않은 프로토콜)** 로 설정합니다. ![Visual Studio의 원격 연결 대화 상자](images/remotedeploy.png)
-4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+  b. 인증 모드를 **유니버설(암호화되지 않은 프로토콜)** 로 설정</br>
+  ![Visual Studio의 원격 연결 대화 상자](images/remotedeploy.png)</br>
+4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 5. PC에서 앱을 HoloLens에 처음 배포하는 경우 PIN을 입력하라는 메시지가 표시됩니다. 아래의 **디바이스 페어링** 지침을 따릅니다.
 
 HoloLens IP 주소가 변경되면 **프로젝트 > 속성 > 구성 속성 > 디버깅**으로 차례로 이동하여 대상 머신의 IP 주소를 변경할 수 있습니다.
 
 ## <a name="deploying-an-app-over-usb---hololens-1st-gen"></a>USB를 통해 앱 배포 - HoloLens(1세대)
-1. 앱에 대해 **x86** 빌드 구성을 선택합니다. ![Visual Studio의 x86 빌드 구성](images/x86setting.png)
-2. 배포 대상 드롭 다운 메뉴에서 **디바이스**를 선택합니다. ![Visual Studio의 디바이스 배포](images/buildsettingsusbdeploy.png)
-3. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+1. 앱에 대해 **x86** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 x86 빌드 구성](images/x86setting.png)</br>
+2. 배포 대상 드롭다운 메뉴에서 **디바이스**를 선택합니다.</br>
+![Visual Studio에서 디바이스 배포](images/buildsettingsusbdeploy.png)</br>
+3. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 4. PC에서 앱을 HoloLens에 처음 배포하는 경우 PIN을 입력하라는 메시지가 표시됩니다. 아래의 **디바이스 페어링** 지침을 따릅니다.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>USB를 통해 앱 배포 - HoloLens 2
-1. 앱에 대해 **ARM** 또는 **ARM64** 빌드 구성을 선택합니다. ![Visual Studio의 ARM64 빌드 구성](images/arm64setting.png)
-2. 배포 대상 드롭 다운 메뉴에서 **디바이스**를 선택합니다. ![Visual Studio의 디바이스 배포](images/buildsettingsusbdeploy_arm64.png)
-3. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+1. 앱에 대해 **ARM** 또는 **ARM64** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 ARM64 빌드 구성](images/arm64setting.png)</br>
+2. 배포 대상 드롭다운 메뉴에서 **디바이스**를 선택합니다.</br>
+![Visual Studio에서 디바이스 배포](images/buildsettingsusbdeploy_arm64.png)</br>
+3. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 4. PC에서 앱을 HoloLens에 처음 배포하는 경우 PIN을 입력하라는 메시지가 표시됩니다. 아래의 **디바이스 페어링** 지침을 따릅니다.
 
 ## <a name="deploying-an-app-to-your-local-pc---immersive-headset"></a>로컬 PC에 앱 배포 - 몰입형 헤드셋
@@ -93,17 +107,21 @@ PC 또는 [Mixed Reality 시뮬레이터](using-the-windows-mixed-reality-simula
 
 ## <a name="deploying-an-app-to-the-hololens-1st-gen-emulator"></a>HoloLens(1세대) 에뮬레이터에 앱 배포
 1. **[HoloLens 에뮬레이터를 설치](install-the-tools.md)** 했는지 확인합니다.
-2. 앱에 대해 **x86** 빌드 구성을 선택합니다.
-![Visual Studio의 x86 빌드 구성](images/x86setting.png)
-3. 배포 대상 드롭다운 메뉴에서 **HoloLens 에뮬레이터**를 선택합니다. ![Visual Studio의 에뮬레이터 대상](images/deployemulator.png)
-4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+2. 앱에 대해 **x86** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 x86 빌드 구성](images/x86setting.png)</br>
+3. 배포 대상 드롭다운 메뉴에서 **HoloLens 에뮬레이터**를 선택합니다.</br>
+![Visual Studio의 에뮬레이터 대상](images/deployemulator.png)</br>
+4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 
 ## <a name="deploying-an-app-to-the-hololens-2-emulator"></a>HoloLens 2 에뮬레이터에 앱 배포
 1. **[HoloLens 에뮬레이터를 설치](install-the-tools.md)** 했는지 확인합니다.
-2. 앱에 대해 **x86** 또는 **x64** 빌드 구성을 선택합니다.
-![Visual Studio의 x86 빌드 구성](images/x86setting.png)
-3. 배포 대상 드롭 다운 메뉴에서 **HoloLens 2 에뮬레이터**를 선택합니다. ![Visual Studio의 에뮬레이터 대상](images/deployemulator2.png)
-4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다. ![Visual Studio의 디버깅하지 않고 시작](images/deploywithdebugging.png)
+2. 앱에 대해 **x86** 또는 **x64** 빌드 구성을 선택합니다.</br>
+![Visual Studio의 x86 빌드 구성](images/x86setting.png)</br>
+3. 배포 대상 드롭다운 메뉴에서 **HoloLens 2 에뮬레이터**를 선택합니다.</br>
+![Visual Studio의 에뮬레이터 대상](images/deployemulator2.png)</br>
+4. **디버그 > 디버깅 시작**을 차례로 선택하여 앱을 배포하고, 디버깅을 시작합니다.</br>
+![Visual Studio에서 디버깅 없이 시작](images/deploywithdebugging.png)</br>
 
 ## <a name="graphics-debugger-for-hololens-1st-gen"></a>HoloLens(1세대)용 그래픽 디버거
 
