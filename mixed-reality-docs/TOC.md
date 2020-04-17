@@ -235,7 +235,7 @@
 #### [작동 방법 - 혼합 현실 캡처 스튜디오](how-it-works-mixed-reality-capture-studios.md)
 ### 홀로그램 원격
 #### [홀로그램 원격 플레이어](holographic-remoting-player.md)
-#### [홀로그램 원격 호스트 앱 작성](holographic-remoting-create-host.md)
+#### [홀로그램 원격 원격 앱 작성](holographic-remoting-create-host.md)
 #### [사용자 지정 홀로그램 원격 플레이어 작성](holographic-remoting-create-player.md)
 #### [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
 #### [홀로그램 원격 접속을 통한 보안 연결](holographic-remoting-secure-connection.md)
