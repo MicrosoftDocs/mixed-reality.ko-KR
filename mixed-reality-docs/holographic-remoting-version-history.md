@@ -6,17 +6,25 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 5ba3aaa8874dea4418114b331d3d99fc977e982c
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
+ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278201"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484303"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
+
+## <a name="version-212-april-5-2020"></a>버전 2.1.2 (2020 4 월 5 일)<a name="v2.1.2"></a>
+* 2\.1.0 보다 작은 버전을 사용 하 여 최신 Holographic 원격 플레이어와 원격 앱 간에 오디오의 이전 버전과의 호환성 문제가 해결 되었습니다.
+* Holographic 원격 플레이어를 예기치 않게 닫은 공간 앵커 문제를 수정 했습니다. 이 문제는 사용자 지정 플레이어에도 영향을 줍니다.
+
+## <a name="version-211-march-20-2020"></a>버전 2.1.1 (3 월 20 일, 2020)<a name="v2.1.1"></a>
+* AMD Gpu를 사용 하는 경우 원격 앱에 대 한 비디오 인코딩 문제를 수정 했습니다.
+* Holographic 원격 플레이어의 성능 향상.
 
 ## <a name="version-210-march-11-2020"></a>버전 2.1.0 (2020 년 3 월 11 일)<a name="v2.1.0"></a>
 * UDP를 통해 [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) 를 사용 하도록 네트워크 전송을 전환 했습니다. 보안 연결에는 [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) 가 사용 됩니다. [Holographic Remoting Player](holographic-remoting-player.md) 는 이전의 모든 Release Holographic 원격 버전과 여전히 호환 됩니다. 새 네트워크 전송을 활용 하려면 Holographic Remoting 플레이어와 해당 원격 앱이 버전 2.1.0을 사용 해야 합니다.
@@ -28,7 +36,7 @@ ms.locfileid: "81278201"
 ## <a name="version-2018-december-17-2019"></a>버전 2.0.18 이상을 (2019 년 12 월 17 일)<a name="v2.0.18"></a>
 * [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration) 에 대 한 지원이 추가 됨
 * 충돌이 발생할 수 있는 다양 한 버그를 수정 했습니다.
-* HolographicCamera를 수락 하 고 HoloraphicFrame에 추가 된 카메라로 표시 하는 데 HolographicSpace. CameraAdded 콜백이 필요한 버그를 수정 했습니다.
+* HolographicCamera를 수락 하 고 HolographicFrame에 추가 된 카메라로 표시 하는 데 HolographicSpace. CameraAdded 콜백이 필요한 버그를 수정 했습니다.
 
 ## <a name="version-2016-november-11-2019"></a>버전 2.0.16 (2019 년 11 월 11 일)<a name="2.0.16"></a>
 * QR 코드 추적의 교착 상태를 수정 했습니다.
