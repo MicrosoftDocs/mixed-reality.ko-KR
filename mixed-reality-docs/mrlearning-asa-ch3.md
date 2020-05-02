@@ -8,10 +8,10 @@ ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
 ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79031262"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Azure Spatial Anchor 피드백 표시

@@ -7,18 +7,20 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, 혼합 현실, 개발, 시작, 새 프로젝트, 포팅, 기능, 카메라, 시뮬레이션, 에뮬레이션, 설명서
-ms.openlocfilehash: 23b3d9a3fe419911e774722a7d2db6809c2955cf
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: e0fe775f5fe891416145d91e52a5a801e049c568
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491103"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81433419"
 ---
 # <a name="unity-development-overview"></a>Unity 개발 개요
 
 [혼합 현실 앱](app-views.md)을 빌드하는 가장 빠른 경로는 [Unity](https://unity.com)를 사용하는 것입니다. 잠시 시간을 내어 [Unity 자습서](https://unity3d.com/learn/tutorials)를 살펴보는 것이 좋습니다. 자산이 필요한 경우 Unity에는 포괄적인 [Asset Store](https://www.assetstore.unity3d.com/)(자산 저장소)가 있습니다. Unity를 기본적으로 이해한 경우 [자습서](tutorials.md)를 참조하여 Unity에서 혼합 현실을 개발하는 방법에 대해 자세히 알아볼 수 있습니다. [Unity Mixed Reality 포럼](https://forum.unity3d.com/forums/hololens.102/)을 방문하여 Unity에서 혼합 현실 앱을 빌드하는 나머지 커뮤니티와 교류하고 발생할 수 있는 문제에 대한 해결 방법을 찾습니다.
 
 Unity를 사용하여 혼합 현실 앱 빌드를 시작하려면 먼저 [도구를 설치](install-the-tools.md)하세요. 
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Setting-up-your-HoloLens-2-development-environment/player?format=ny]
 
 ## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Mixed Reality Toolkit를 사용하는 새 Unity 프로젝트 
 

@@ -8,10 +8,10 @@ ms.topic: article
 keywords: 혼합 현실, 홀로그램, ar, vr, mr, xr, 증강 현실, 가상 현실, 설명
 ms.localizationpriority: high
 ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81278051"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?

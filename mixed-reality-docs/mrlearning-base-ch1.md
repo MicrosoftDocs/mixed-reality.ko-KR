@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376210"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화

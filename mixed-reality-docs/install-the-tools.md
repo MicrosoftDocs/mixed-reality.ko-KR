@@ -7,12 +7,12 @@ ms.date: 3/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit
-ms.openlocfilehash: 79f0e529f2c1c8331b14dcdbdd69d4fbfe11db79
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 131d2a91c882fbcd31c4deb76a5ab5c3f97d7d42
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278111"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137878"
 ---
 # <a name="install-the-tools"></a>도구 설치
 
@@ -43,8 +43,7 @@ Microsoft HoloLens 및 Windows Mixed Reality 몰입형(VR) 헤드셋을 위한 �
 
 :::row:::
     :::column:::
-        <a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">![Unity](images/unity_logo.png)<br>
-        **Unity**</a><br>
+        <a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">![Unity](images/unity_logo.png)<br>**Unity**</a><br>
         일반적으로 Unity LTS(장기 지원) 스트림을 새 프로젝트를 시작할 최선의 버전으로 사용한 후, 최신 수정 버전으로 업데이트하여 안정적인 최신 수정 프로그램을 선택하는 것이 좋습니다.<br>
         <br>
         현재 권장 사항은 아래의 MRTK v2에 필요한 LTS 빌드인 **Unity 2018.4.x**를 사용하는 것입니다.<br>
@@ -53,15 +52,13 @@ Microsoft HoloLens 및 Windows Mixed Reality 몰입형(VR) 헤드셋을 위한 �
         <br>
         HoloLens 2 또는 Windows Mixed Reality 몰입형 헤드셋용 Unity 앱 개발을 시작하려면 [Unity 개발 개요](unity-development-overview.md)를 참조하세요.<br>
         <br>
-        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">![MRTK](images/final_mrtk-small_logo.png)<br>
-        **MRTK(Mixed Reality Toolkit)** </a><br>
+        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">![MRTK](images/final_mrtk-small_logo.png)<br>**MRTK(Mixed Reality Toolkit)** </a><br>
         Unity용 MRTK(Mixed Reality Toolkit) v2는 혼합 현실 애플리케이션을 위한 오픈 소스 플랫폼 간 개발 키트입니다.<br>
         <br>
         MRTK v2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션 개발을 가속화하기 위해 고안되었습니다. 이 프로젝트는 혼합 현실 애플리케이션을 만들기 위한 진입 장벽을 낮추고 커뮤니티에 다시 기여하는 것을 목표로 합니다.
     :::column-end:::
     :::column:::
-        <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>
-        **Unreal**</a><br>
+        <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>**Unreal**</a><br>
         Unreal Engine 4는 C++ 및 Blueprint 모두에서 혼합 현실을 완벽하게 지원하는 강력한 오픈 소스 생성 엔진입니다.<br>
         <br>
         Unreal Engine 4.24에 대한 HoloLens 지원은 현재 베타 버전입니다.<br>

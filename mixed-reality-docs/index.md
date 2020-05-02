@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 title: Mixed Reality 시작
 description: 혼합 현실을 처음 접하는 분들이 혼합 현실이란 무엇이며 어떤 기능이 있는지 이해하는 데 도움이 됩니다.
 author: grbury
@@ -8,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 71777327d9eca488ceffdaa1ee4d7a78efe56713
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375570"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137888"
 ---
 # <a name="get-started-with-mixed-reality"></a>Mixed Reality 시작
 

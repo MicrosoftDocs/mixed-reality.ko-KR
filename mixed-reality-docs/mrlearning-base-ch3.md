@@ -8,10 +8,10 @@ ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
 ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80362042"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. 동적 콘텐츠 배치 및 해결기 사용

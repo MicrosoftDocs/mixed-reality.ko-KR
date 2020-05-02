@@ -8,10 +8,10 @@ ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
 ms.openlocfilehash: 7b432c5ba0ebee5199f5abb1c26715185fc0d70d
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79031554"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. 달착륙선 샘플 애플리케이션 만들기

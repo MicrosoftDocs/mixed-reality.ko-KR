@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
 ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81278021"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
