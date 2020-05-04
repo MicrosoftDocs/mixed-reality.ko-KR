@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze, Eye Targeting, HoloLens 2, Eye-based Selection
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437829"
 ---
 # <a name="eye-gaze-and-commit"></a>시선 응시 및 커밋
