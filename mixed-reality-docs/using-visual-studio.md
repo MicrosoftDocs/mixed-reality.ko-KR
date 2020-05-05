@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, 디버그, 배포
-ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8708ca39460fbd381bd41f5887e1276291f48b07
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278001"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81484323"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Visual Studio를 사용하여 배포 및 디버깅
 
@@ -31,8 +31,8 @@ DirectX 또는 Unity를 사용하여 혼합 현실 앱을 개발할지에 관계
 
 ### <a name="hololens"></a>HoloLens
 1. HoloLens를 켜고 디바이스에 배치합니다.
-2. [블룸](system-gesture.md#bloom) 제스처를 수행하여 주 메뉴를 시작합니다.
-3. **설정** 타일을 보고, [에어 탭](gaze-and-commit.md#composite-gestures) 제스처를 수행합니다. 두 번째 에어 탭을 수행하여 환경에 앱을 배치합니다. 앱을 배치한 후 앱 설정이 시작됩니다.
+2. [시작 제스처](system-gesture.md)를 수행하여 주 메뉴를 시작합니다.
+3. **설정** 타일을 선택하여 환경에서 앱을 시작합니다.
 4. **업데이트** 메뉴 항목을 선택합니다.
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다. 그러면 [Visual Studio에서 HoloLens로 앱을 배포](using-visual-studio.md)할 수 있습니다.
@@ -84,6 +84,9 @@ HoloLens IP 주소가 변경되면 **프로젝트 > 속성 > 구성 속성 > 디
 4. PC에서 앱을 HoloLens에 처음 배포하는 경우 PIN을 입력하라는 메시지가 표시됩니다. 아래의 **디바이스 페어링** 지침을 따릅니다.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>USB를 통해 앱 배포 - HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
+
 1. 앱에 대해 **ARM** 또는 **ARM64** 빌드 구성을 선택합니다.</br>
 ![Visual Studio의 ARM64 빌드 구성](images/arm64setting.png)</br>
 2. 배포 대상 드롭다운 메뉴에서 **디바이스**를 선택합니다.</br>

@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: 관람자 보기, iPhone, iOS, iPad, OpenCV, 카메라, ARKit, HoloLens, Mixed Reality, Mixed Reality Toolkit, 데모, 레코드
 ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491166"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>HoloLens 및 HoloLens 2의 관람자 보기
 
-![Marker](images/SpecViewPhoneHero.jpg)
+![표식](images/SpecViewPhoneHero.jpg)
 
 ## <a name="overview"></a>개요
 
@@ -56,7 +56,7 @@ HoloLens를 착용할 때 이를 착용하지 않은 사람이 놀라운 것을 
 | 이식 가능                             |            ✔            |                                             |
 | 무선                             |            ✔            |                                             |
 | 추가 필수 하드웨어         |     Android 휴대폰, iPhone    | HoloLens + 의장품 + 삼각대 + 비디오 카메라 + PC + Unity |
-| 하드웨어 투자                  |           낮음            |                     높은                    |
+| 하드웨어 투자                  |           낮음            |                     높음                    |
 | 플랫폼 간                       |           Android, iOS   |                                             |
 | 동기화된 콘텐츠                 |            ✔            |                      ✔                      |
 | 런타임 설치 기간               |         즉시          |                     느림                    |

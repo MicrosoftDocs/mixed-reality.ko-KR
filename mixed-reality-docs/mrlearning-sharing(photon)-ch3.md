@@ -1,5 +1,5 @@
 ---
-title: 다중 사용자 기능 자습서 - 3. 여러 사용자 연결
+title: 다중 사용자 기능 자습서 - 4. 여러 사용자와 개체 움직임 공유
 description: 이 과정을 완료하여 HoloLens 2 애플리케이션 내에서 다중 사용자 공유 환경을 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,70 +7,56 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: cbe0d8d2db6c34ba262fe9c946b68366ed3dbb93
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 41b62eb2d9f400d0af341c9fcce887c72af7a3aa
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031225"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610640"
 ---
-# <a name="3-connecting-multiple-users"></a>3. 여러 사용자 연결
+# <a name="3-sharing-object-movements-with-multiple-users"></a>3. 여러 사용자와 개체 움직임 공유
 
-이 단원에서는 라이브 공유 환경의 일부로 여러 사용자를 연결하는 방법에 대해 알아봅니다. 이 단원이 완료되면 여러 디바이스에서 애플리케이션을 열고, 조인하는 각 사람에 대한 구로 표현된 아바타를 볼 수 있습니다.
+이 자습서에서는 공유 환경의 모든 참가자가 협업하고 서로의 상호 작용을 볼 수 있도록 개체의 움직임을 공유하는 방법에 대해 알아봅니다.
 
 ## <a name="objectives"></a>목표
 
-* 애플리케이션 내에서 PUN 구성
-* 플레이어 구성
-* 공유 환경에서 여러 사용자를 연결하는 방법 알아보기
+* 개체의 움직임을 공유하도록 프로젝트 구성
+* 기본 다중 사용자 협업 애플리케이션을 빌드하는 방법 알아보기
 
-## <a name="instructions"></a>지침
+## <a name="preparing-the-scene"></a>장면 준비
 
-1. [프로젝트] 패널의 Assets->Resources->Prefabs 폴더에서 아래 이미지와 같이 NetworkLobby 프리팹을 계층 구조로 끌어서 놓습니다.
+이 섹션에서는 자습서 프리팹을 추가하여 장면을 준비합니다.
 
-    ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+Project 창에서 **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** 폴더로 이동하여 **TableAnchor** 프리팹을 Hierarchy 창의 **SharedPlayground** 개체 위로 끌어와서 SharedPlayground 개체의 자식으로 장면에 추가합니다.
 
-2. NetworkLobby를 펼치면 NetworkRoom이라는 자식 개체가 표시됩니다. NetworkRoom을 선택한 상태에서 [검사기] 패널로 이동하여 [구성 요소 추가]를 클릭합니다. PhotonView를 검색하고 구성 요소를 추가합니다.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section1-step1-1.png)
 
-    ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+## <a name="configuring-pun-to-instantiate-the-objects"></a>개체를 인스턴스화하도록 PUN 구성
 
-3. 새 빈 게임 개체를 계층 구조에 만듭니다. 마우스 오른쪽 단추로 계층 구조를 클릭하고, 컨텍스트 메뉴에서 [빈 개체]를 선택합니다. 위치 지정이 x =0, y=0, z=0으로 설정되어 있는지 확인하고 개체 이름을 PhotonUser로 지정합니다.
+이 섹션에서는 이전 섹션에서 만든 RocketLauncher_Complete_Variant 프리팹을 사용하고 인스턴스화할 위치를 정의하도록 프로젝트를 구성합니다.
 
-    ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+Project 창에서 **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** 폴더로 이동합니다.
 
-4. [구성 요소 추가]를 클릭하고, [일반 네트워크 동기화]를 입력합니다. [일반 네트워크 동기화] 클래스를 선택합니다. 클래스가 표시되면 [사용자] 확인란을 클릭하여 설정합니다.
+Hierarchy 창에서 **NetworkLobby** 개체를 펼쳐서 **NetworkRoom** 자식 개체를 선택한 다음, Inspector 창에서 **Photon Room (Script)** 구성 요소를 찾아서 다음과 같이 구성합니다.
 
-    ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+* **Photon User Prefab** 필드에 Resources 폴더의 **PhotonUser** 프리팹을 할당합니다.
 
-5. [구성 요소 추가]를 다시 클릭하고, [Photon 보기]를 입력합니다. 드롭다운 목록에 표시되는 [Photon 보기] 클래스를 선택합니다.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-1.png)
 
-    ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+**NetworkRoom** 자식 개체가 선택된 상태로 Hierarchy 창에서 **TableAnchor** 개체를 펼친 다음, Inspector 창에서 **Photon Room (Script)** 구성 요소를 찾아서 다음과 같이 구성합니다.
 
-6. [일반 네트워크 동기화] 클래스에 대한 [파일] 아이콘을 클릭합니다. [Photon 보기]의 [관찰된 구성 요소] 필드에 끌어서 놓습니다.
+* **Rocket Launcher Location**(로켓 발사대 위치) 필드에 Hierarchy 창에서 **Table** 자식 개체를 할당합니다.
 
-    ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-2.png)
 
-7. 다음으로, 공유 환경에 조인하는 각 사람을 나타내는 구를 만듭니다. 마우스 오른쪽 단추로 방금 만든 PhotonUser 개체를 클릭하고, "3D 개체"까지 아래로 스크롤한 다음, [구]를 클릭합니다. 그러면 구 게임 개체가 PhotonUser 개체의 자식 항목으로 만들어집니다.
+## <a name="trying-the-experience-with-shared-object-movement"></a>공유 개체 움직임 환경 체험
 
-    ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+Unity 프로젝트를 빌드하고 HoloLens에 배포했으면 Unity로 돌아가서 HoloLens에서 애플리케이션이 실행되는 동안 재생 단추를 눌러 게임 모드로 들어갑니다. HoloLens에서 개체를 움직이면 Unity에서 개체가 움직이는 것을 볼 수 있습니다.
 
-8. 구의 크기를 x=0.06, y=0.06 및 z=0.06으로 축소합니다.
-
-    ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
-
-9. PhotonUser 게임 개체를 [프로젝트] 패널의 Prefabs 폴더로 끌어서 놓은 다음, 장면에서 이 개체를 삭제합니다. 이제 공유 환경에서 새 플레이어를 생성하거나 인스턴스화할 때 사용할 수 있는 프리팹이 만들어졌습니다.
-
-    ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
-
-    >[!NOTE]
-    >먼저 게임 개체가 Prefabs 폴더에 성공적으로 복사되었는지 확인한 후에 계층 구조에서 해당 개체를 삭제하세요.
-
-10. 3단계의 지침에 따라 계층 구조에서 새 개체를 만들고, SharedPlayground라는 이름을 지정합니다. 그런 다음, [구성 요소 추가]를 클릭하고, 일반 네트워크 관리자를 검색합니다.  이 항목을 다시 클릭하여 [일반 네트워크 관리자] 구성 요소를 추가합니다. 개체의 위치를 x=0, y=0 및 z=0으로 변경합니다.
-
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section3-step1-1.gif)
 
 ## <a name="congratulations"></a>축하합니다.
 
-위의 모든 단계와 빌드 프로세스가 완료되면 [재생] 단추를 누르고 HoloLens 2를 연결합니다. 머리를 이동함에 따라 움직이는 구를 볼 수 있습니다. 이는 Unity 프로젝트에 조인하는 모든 사용자에게 표시됩니다!
+다른 사용자가 개체를 움직일 때 개체 움직임이 동기화되어 개체가 움직이는 것을 볼 수 있도록 프로젝트를 구성하는 데 성공했습니다. 다음 자습서에서는 공유 환경이 실제 환경에 맞춰져서 사용자들이 실제 위치에서 서로를 볼 수 있고 개체의 실제 위치와 회전이 모든 사용자에게 동일하게 나타나도록 하는 기능을 구현합니다.
 
-[다음 단원: 4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)
+[다음 자습서: 4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)
