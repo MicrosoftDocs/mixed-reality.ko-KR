@@ -1,5 +1,5 @@
 ---
-title: 다중 사용자 기능 자습서 - 3. 여러 사용자 연결
+title: 다중 사용자 기능 자습서 - 4. 여러 사용자와 개체 움직임 공유
 description: 이 과정을 완료하여 HoloLens 2 애플리케이션 내에서 다중 사용자 공유 환경을 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,70 +7,56 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: cbe0d8d2db6c34ba262fe9c946b68366ed3dbb93
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 41b62eb2d9f400d0af341c9fcce887c72af7a3aa
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031225"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610640"
 ---
-# <a name="3-connecting-multiple-users"></a><span data-ttu-id="6622e-105">3. 여러 사용자 연결</span><span class="sxs-lookup"><span data-stu-id="6622e-105">3. Connecting multiple users</span></span>
+# <a name="3-sharing-object-movements-with-multiple-users"></a><span data-ttu-id="6a6d2-105">3. 여러 사용자와 개체 움직임 공유</span><span class="sxs-lookup"><span data-stu-id="6a6d2-105">3. Sharing object movements with multiple users</span></span>
 
-<span data-ttu-id="6622e-106">이 단원에서는 라이브 공유 환경의 일부로 여러 사용자를 연결하는 방법에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-106">In this lesson, we learn how to connect multiple users as part of a live shared experience.</span></span> <span data-ttu-id="6622e-107">이 단원이 완료되면 여러 디바이스에서 애플리케이션을 열고, 조인하는 각 사람에 대한 구로 표현된 아바타를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-107">By the end of this lesson, you'll be able to open the application on multiple devices and see the avatar, represented by a sphere for each person that joins.</span></span>
+<span data-ttu-id="6a6d2-106">이 자습서에서는 공유 환경의 모든 참가자가 협업하고 서로의 상호 작용을 볼 수 있도록 개체의 움직임을 공유하는 방법에 대해 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-106">In this tutorial, you will learn how to share the movements of objects so that all participants of a shared experience can collaborate and view each others' interactions.</span></span>
 
-## <a name="objectives"></a><span data-ttu-id="6622e-108">목표</span><span class="sxs-lookup"><span data-stu-id="6622e-108">Objectives</span></span>
+## <a name="objectives"></a><span data-ttu-id="6a6d2-107">목표</span><span class="sxs-lookup"><span data-stu-id="6a6d2-107">Objectives</span></span>
 
-* <span data-ttu-id="6622e-109">애플리케이션 내에서 PUN 구성</span><span class="sxs-lookup"><span data-stu-id="6622e-109">Configure PUN within your application</span></span>
-* <span data-ttu-id="6622e-110">플레이어 구성</span><span class="sxs-lookup"><span data-stu-id="6622e-110">Configure players</span></span>
-* <span data-ttu-id="6622e-111">공유 환경에서 여러 사용자를 연결하는 방법 알아보기</span><span class="sxs-lookup"><span data-stu-id="6622e-111">Learn how to connect multiple users in a shared experience</span></span>
+* <span data-ttu-id="6a6d2-108">개체의 움직임을 공유하도록 프로젝트 구성</span><span class="sxs-lookup"><span data-stu-id="6a6d2-108">Configure your project to share the movements of objects</span></span>
+* <span data-ttu-id="6a6d2-109">기본 다중 사용자 협업 애플리케이션을 빌드하는 방법 알아보기</span><span class="sxs-lookup"><span data-stu-id="6a6d2-109">Learn how to build a basic multi-user collaborative application</span></span>
 
-## <a name="instructions"></a><span data-ttu-id="6622e-112">지침</span><span class="sxs-lookup"><span data-stu-id="6622e-112">Instructions</span></span>
+## <a name="preparing-the-scene"></a><span data-ttu-id="6a6d2-110">장면 준비</span><span class="sxs-lookup"><span data-stu-id="6a6d2-110">Preparing the scene</span></span>
 
-1. <span data-ttu-id="6622e-113">[프로젝트] 패널의 Assets->Resources->Prefabs 폴더에서 아래 이미지와 같이 NetworkLobby 프리팹을 계층 구조로 끌어서 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-113">In the Assets->Resources->Prefabs folder of the Project panel, drag and drop the NetworkLobby prefab into the hierarchy as shown in the image below.</span></span>
+<span data-ttu-id="6a6d2-111">이 섹션에서는 자습서 프리팹을 추가하여 장면을 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-111">In this section, you will prepare the scene by adding the tutorial prefab.</span></span>
 
-    ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+<span data-ttu-id="6a6d2-112">Project 창에서 **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** 폴더로 이동하여 **TableAnchor** 프리팹을 Hierarchy 창의 **SharedPlayground** 개체 위로 끌어와서 SharedPlayground 개체의 자식으로 장면에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-112">In the Project window, navigate to the **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** folder and drag the **TableAnchor** prefab on top of the **SharedPlayground** object in the Hierarchy window to add it to your scene as a child of the SharedPlayground object:</span></span>
 
-2. <span data-ttu-id="6622e-115">NetworkLobby를 펼치면 NetworkRoom이라는 자식 개체가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-115">When you expand NetworkLobby, you'll see a child object called NetworkRoom.</span></span> <span data-ttu-id="6622e-116">NetworkRoom을 선택한 상태에서 [검사기] 패널로 이동하여 [구성 요소 추가]를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-116">With NetworkRoom selected, go into the Inspector panel and click Add Component.</span></span> <span data-ttu-id="6622e-117">PhotonView를 검색하고 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-117">Search for PhotonView and add the component.</span></span>
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section1-step1-1.png)
 
-    ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+## <a name="configuring-pun-to-instantiate-the-objects"></a><span data-ttu-id="6a6d2-114">개체를 인스턴스화하도록 PUN 구성</span><span class="sxs-lookup"><span data-stu-id="6a6d2-114">Configuring PUN to instantiate the objects</span></span>
 
-3. <span data-ttu-id="6622e-119">새 빈 게임 개체를 계층 구조에 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-119">Create a new empty game object in the hierarchy.</span></span> <span data-ttu-id="6622e-120">마우스 오른쪽 단추로 계층 구조를 클릭하고, 컨텍스트 메뉴에서 [빈 개체]를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-120">Right-click in the hierarchy and select Empty from the Context menu.</span></span> <span data-ttu-id="6622e-121">위치 지정이 x =0, y=0, z=0으로 설정되어 있는지 확인하고 개체 이름을 PhotonUser로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-121">Ensure the positioning is set to x =0, y=0, z=0 and name the object, PhotonUser.</span></span>
+<span data-ttu-id="6a6d2-115">이 섹션에서는 이전 섹션에서 만든 RocketLauncher_Complete_Variant 프리팹을 사용하고 인스턴스화할 위치를 정의하도록 프로젝트를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-115">In this section, you will configure the project to use the RocketLauncher_Complete_Variant prefab you created in the previous section and define where it will be instantiated.</span></span>
 
-    ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+<span data-ttu-id="6a6d2-116">Project 창에서 **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** 폴더로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-116">In the Project window, navigate to the **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Resources** folder.</span></span>
 
-4. <span data-ttu-id="6622e-123">[구성 요소 추가]를 클릭하고, [일반 네트워크 동기화]를 입력합니다. [일반 네트워크 동기화] 클래스를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-123">Click Add Component and type Generic Net Sync. Select the Generic Net Sync class.</span></span> <span data-ttu-id="6622e-124">클래스가 표시되면 [사용자] 확인란을 클릭하여 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-124">When the class appears, click the User check box to turn it on.</span></span>
+<span data-ttu-id="6a6d2-117">Hierarchy 창에서 **NetworkLobby** 개체를 펼쳐서 **NetworkRoom** 자식 개체를 선택한 다음, Inspector 창에서 **Photon Room (Script)** 구성 요소를 찾아서 다음과 같이 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-117">In the Hierarchy window, expand the **NetworkLobby** object and select the **NetworkRoom** child object, then in the Inspector window, locate the **Photon Room (Script)** component and configure it as follows:</span></span>
 
-    ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+* <span data-ttu-id="6a6d2-118">**Photon User Prefab** 필드에 Resources 폴더의 **PhotonUser** 프리팹을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-118">To the **Photon User Prefab** field, assign the **PhotonUser** prefab from the Resources folder</span></span>
 
-5. <span data-ttu-id="6622e-126">[구성 요소 추가]를 다시 클릭하고, [Photon 보기]를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-126">Click Add Component again, and type Photon View.</span></span> <span data-ttu-id="6622e-127">드롭다운 목록에 표시되는 [Photon 보기] 클래스를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-127">Select the Photon View class that appears in the drop-down list.</span></span>
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-1.png)
 
-    ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+<span data-ttu-id="6a6d2-120">**NetworkRoom** 자식 개체가 선택된 상태로 Hierarchy 창에서 **TableAnchor** 개체를 펼친 다음, Inspector 창에서 **Photon Room (Script)** 구성 요소를 찾아서 다음과 같이 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-120">With the **NetworkRoom** child object still selected, in the Hierarchy window, expand the **TableAnchor** object, then in the Inspector window, locate the **Photon Room (Script)** component and configure it as follows:</span></span>
 
-6. <span data-ttu-id="6622e-129">[일반 네트워크 동기화] 클래스에 대한 [파일] 아이콘을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-129">Click the File icon for the Generic Net Sync class.</span></span> <span data-ttu-id="6622e-130">[Photon 보기]의 [관찰된 구성 요소] 필드에 끌어서 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-130">Drag and drop it in the Photon View's Observed Components field.</span></span>
+* <span data-ttu-id="6a6d2-121">**Rocket Launcher Location**(로켓 발사대 위치) 필드에 Hierarchy 창에서 **Table** 자식 개체를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-121">To the **Rocket Launcher Location** field, assign the **Table** child object from the Hierarchy window</span></span>
 
-    ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-2.png)
 
-7. <span data-ttu-id="6622e-132">다음으로, 공유 환경에 조인하는 각 사람을 나타내는 구를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-132">Next, we create spheres to represent each person that joins a shared experience.</span></span> <span data-ttu-id="6622e-133">마우스 오른쪽 단추로 방금 만든 PhotonUser 개체를 클릭하고, "3D 개체"까지 아래로 스크롤한 다음, [구]를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-133">Right-click the PhotonUser object you just created, scroll-down to "3D Object and click Sphere.</span></span> <span data-ttu-id="6622e-134">그러면 구 게임 개체가 PhotonUser 개체의 자식 항목으로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-134">This will create a sphere game object as a child of the PhotonUser object.</span></span>
+## <a name="trying-the-experience-with-shared-object-movement"></a><span data-ttu-id="6a6d2-123">공유 개체 움직임 환경 체험</span><span class="sxs-lookup"><span data-stu-id="6a6d2-123">Trying the experience with shared object movement</span></span>
 
-    ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+<span data-ttu-id="6a6d2-124">Unity 프로젝트를 빌드하고 HoloLens에 배포했으면 Unity로 돌아가서 HoloLens에서 애플리케이션이 실행되는 동안 재생 단추를 눌러 게임 모드로 들어갑니다. HoloLens에서 개체를 움직이면 Unity에서 개체가 움직이는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-124">If you now build and deploy the Unity project to your HoloLens, and then, back in Unity, press the Play button to enter Game mode while the application is running on your HoloLens, you will see the object move in Unity when you move the object in HoloLens:</span></span>
 
-8. <span data-ttu-id="6622e-136">구의 크기를 x=0.06, y=0.06 및 z=0.06으로 축소합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-136">Scale the sphere down to x=0.06, y=0.06, ad z=0.06.</span></span>
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section3-step1-1.gif)
 
-    ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
+## <a name="congratulations"></a><span data-ttu-id="6a6d2-126">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-126">Congratulations</span></span>
 
-9. <span data-ttu-id="6622e-138">PhotonUser 게임 개체를 [프로젝트] 패널의 Prefabs 폴더로 끌어서 놓은 다음, 장면에서 이 개체를 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-138">Drag the PhotonUser game object into the Prefabs folder in the Project panel and then delete it from the scene.</span></span> <span data-ttu-id="6622e-139">이제 공유 환경에서 새 플레이어를 생성하거나 인스턴스화할 때 사용할 수 있는 프리팹이 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-139">You have now created a prefab that can be used when spawning or instantiating new players in a shared experience.</span></span>
+<span data-ttu-id="6a6d2-127">다른 사용자가 개체를 움직일 때 개체 움직임이 동기화되어 개체가 움직이는 것을 볼 수 있도록 프로젝트를 구성하는 데 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-127">You have successfully configured your project so object movements are synchronized and users can see the objects move when other users move the objects.</span></span> <span data-ttu-id="6a6d2-128">다음 자습서에서는 공유 환경이 실제 환경에 맞춰져서 사용자들이 실제 위치에서 서로를 볼 수 있고 개체의 실제 위치와 회전이 모든 사용자에게 동일하게 나타나도록 하는 기능을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="6a6d2-128">In the next tutorial, you will implement functionality so the shared experience is aligned in the physical world and the users see each other in their actual physical location and so the objects appear in the same physical position and rotation for all users.</span></span>
 
-    ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
-
-    >[!NOTE]
-    ><span data-ttu-id="6622e-141">먼저 게임 개체가 Prefabs 폴더에 성공적으로 복사되었는지 확인한 후에 계층 구조에서 해당 개체를 삭제하세요.</span><span class="sxs-lookup"><span data-stu-id="6622e-141">Ensure that the game object has successfully copied into the Prefabs folder before deleting it from your hierarchy.</span></span>
-
-10. <span data-ttu-id="6622e-142">3단계의 지침에 따라 계층 구조에서 새 개체를 만들고, SharedPlayground라는 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-142">Create a new object in the hierarchy by following the instructions in Step 3 and name it SharedPlayground.</span></span> <span data-ttu-id="6622e-143">그런 다음, [구성 요소 추가]를 클릭하고, 일반 네트워크 관리자를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-143">Then, click Add Component and search for generic network manager.</span></span>  <span data-ttu-id="6622e-144">이 항목을 다시 클릭하여 [일반 네트워크 관리자] 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-144">Click it again to add the Generic Network Manager component.</span></span> <span data-ttu-id="6622e-145">개체의 위치를 x=0, y=0 및 z=0으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-145">Change the position of the object to x=0, y=0, and z =0.</span></span>
-
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
-
-## <a name="congratulations"></a><span data-ttu-id="6622e-147">축하합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-147">Congratulations</span></span>
-
-<span data-ttu-id="6622e-148">위의 모든 단계와 빌드 프로세스가 완료되면 [재생] 단추를 누르고 HoloLens 2를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-148">Once all the steps above are complete and the build process is also complete, press the Play button and connect your HoloLens 2.</span></span> <span data-ttu-id="6622e-149">머리를 이동함에 따라 움직이는 구를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6622e-149">You should see a sphere moving around as you move your head.</span></span> <span data-ttu-id="6622e-150">이는 Unity 프로젝트에 조인하는 모든 사용자에게 표시됩니다!</span><span class="sxs-lookup"><span data-stu-id="6622e-150">This will be shown for any user that joins your Unity project!</span></span>
-
-<span data-ttu-id="6622e-151">[다음 단원: 4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)</span><span class="sxs-lookup"><span data-stu-id="6622e-151">[Next Lesson: 4. Sharing object movements with multiple users](mrlearning-sharing(photon)-ch4.md)</span></span>
+<span data-ttu-id="6a6d2-129">[다음 자습서: 4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)</span><span class="sxs-lookup"><span data-stu-id="6a6d2-129">[Next tutorial: 4. Integrating Azure Spatial Anchors into a shared experience](mrlearning-sharing(photon)-ch4.md)</span></span>
