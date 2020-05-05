@@ -123,10 +123,9 @@
 ###### [4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
 ##### 다중 사용자 기능 자습서
 ###### [1. Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
-###### [2. Unity 개발 준비](mrlearning-sharing(photon)-ch2.md)
-###### [3. 여러 사용자 연결](mrlearning-sharing(photon)-ch3.md)
-###### [4. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch4.md)
-###### [5. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch5.md)
+###### [2. 여러 사용자 연결](mrlearning-sharing(photon)-ch2.md)
+###### [3. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch3.md)
+###### [4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)
 ##### 공간 오디오 자습서
 ###### [1. 프로젝트에서 공간 오디오 추가](unity-spatial-audio-ch1.md)
 ###### [2. 공간화 단추 상호 작용 소리](unity-spatial-audio-ch2.md)
