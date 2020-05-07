@@ -1,17 +1,17 @@
 ---
 title: MR 학습 기본 모듈 개요
-description: 이 과정을 완료하면 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 이해할 수 있습니다.
+description: 혼합 현실 애플리케이션 내에서 Azure 얼굴 인식을 구현하는 방법을 알아보려면 이 과정을 완료합니다.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 04/28/2019
 ms.topic: article
-keywords: 혼합 현실, Unity, 자습서, HoloLens
+keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
 ms.openlocfilehash: 01429d3952eb97d4f8aaab2d2ce442eb1e1fcdac
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79031710"
 ---
 # <a name="mr-learning-modules"></a>MR 학습 모듈

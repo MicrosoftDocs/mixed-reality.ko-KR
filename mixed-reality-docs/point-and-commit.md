@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: 혼합 현실, 상호 작용, 디자인, HoloLens, 손, 원거리, 가리키기 및 커밋
 ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75901526"
 ---
 # <a name="point-and-commit-with-hands"></a>손으로 가리키고 커밋
@@ -147,7 +147,7 @@ HoloLens 2에서 사용자의 손바닥 중앙에서 나오는 손 레이를 만
     :::column-end:::
     :::column:::
        ![3D 개체 조작 원거리 배율](images/3d-object-manipulation-far-scale.jpg)<br>
-       **배율**<br>
+       **크기 조정**<br>
     :::column-end:::
 :::row-end:::
 

@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 디자인, 편안함, HoloLens 2, HoloLens(1세대)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376070"
 ---
 # <a name="comfort"></a>편안함
@@ -98,7 +98,7 @@ Windows Mixed Reality 몰입형 HMD에는 IPD 또는 VO에 대한 자동 보정�
 
 ## <a name="self-motion-and-user-locomotion"></a>자체 모션 및 사용자 보행
 
-물리적 공간의 크기만 유일하게 제한됩니다. 사용자가 실제 실내에서보다 가상 환경에서 더 멀리 이동할 수 있도록 허용하려면 순수한 가상 모션의 형태를 구현해야 합니다. 그러나 사용자의 실제 신체적 모션과 일치하지 않는 지속적인 가상 모션은 종종 멀미를 발생시킬 수 있습니다. 이 결과는 *현실 세계*에서 들어오는 자체 모션에 대한 [전정 큐](https://en.wikipedia.org/wiki/Vestibular_system)와 충돌하는 *가상 세계*의 자체 모션에 대한 *시각적 큐* 때문입니다.
+물리적 공간의 크기만 유일하게 제한됩니다. 사용자가 실제 실내에서보다 가상 환경에서 더 멀리 이동할 수 있도록 허용하려면 순수한 가상 모션의 형태를 구현해야 합니다. 그러나 사용자의 실제 신체적 모션과 일치하지 않는 지속적인 가상 모션은 종종 멀미를 발생시킬 수 있습니다. 이 결과는 *현실 세계*에서 들어오는 자체 모션에 대한 *전정 큐*와 충돌하는 [가상 세계](https://en.wikipedia.org/wiki/Vestibular_system)의 자체 모션에 대한 *시각적 큐* 때문입니다.
 
 다행히도, 다음과 같이 문제를 방지하는 데 도움이 되는 사용자 보행을 구현하기 위한 팁이 있습니다.
 * 사용자는 항상 자신의 움직임을 제어해야 합니다. 예기치 않은 자체 모션이 특히 문제가 될 수 있습니다.

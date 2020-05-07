@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003329"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604954"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
@@ -25,7 +25,7 @@ SceneUnderstanding SDK는 NuGet을 통해 다운로드할 수 있습니다.
 
 **참고:** 최신 릴리스는 미리 보기 패키지에 의존 하므로 시험판 패키지를 사용 하도록 설정 하 여 해당 릴리스를 확인 해야 합니다.
 
-버전 0.5.2022에서, 장면 이해는 언어 프로젝션을 지원 하 C# 고 C++ 응용 프로그램에서 Win32 또는 UWP 플랫폼용 응용 프로그램을 개발할 수 있도록 합니다. 이 버전부터 SceneUnderstanding는 HoloLens2와의 통신에만 사용 되는 SceneObserver를 제한 하는 unity의 unity 지원 기능을 지원 합니다. 
+버전 0.5.2022 rc에서 장면 이해는 c # 및 c + +에 대 한 언어 프로젝션을 지원 하 여 응용 프로그램에서 Win32 또는 UWP 플랫폼용 응용 프로그램을 개발할 수 있도록 합니다. 이 버전부터 SceneUnderstanding는 HoloLens2와의 통신에만 사용 되는 SceneObserver를 제한 하는 unity의 unity 지원 기능을 지원 합니다. 
 
 SceneUnderstanding에 Windows SDK 버전 18362 이상이 필요 합니다. 
 
@@ -121,8 +121,8 @@ SceneObjects에는 다음 중 하나를 사용할 수 있습니다.
 </tr>
 <tr><td>배경</td><td>SceneObject는 인식 되는 다른 종류의 장면 개체 중 하나가 <b>아닌</b> 것으로 알려져 있습니다. 이 클래스는 배경을 벽/층/천장 등이 아닌 것으로 알려진 경우 알 수 없는와 혼동 해서는 안 됩니다. unknown은 아직 분류 되지 않았습니다.</b></td></tr>
 <tr><td>벽</td><td>실제 벽입니다. 벽은 불균형 환경 구조로 간주 됩니다.</td></tr>
-<tr><td>평면</td><td>바닥은 한 번에 진행할 수 있는 모든 표면입니다. 참고: 계단은 층이 아닙니다. 또한이 층은 walkable 표면을 가정 하므로 단일 층을 명시적으로 가정 하지 않습니다. 다중 수준 구조, 경사 등 ... 모두 바닥으로 분류 되어야 합니다.</td></tr>
-<tr><td>최대값</td><td>방의 위쪽 표면입니다.</td></tr>
+<tr><td>Floor</td><td>바닥은 한 번에 진행할 수 있는 모든 표면입니다. 참고: 계단은 층이 아닙니다. 또한이 층은 walkable 표면을 가정 하므로 단일 층을 명시적으로 가정 하지 않습니다. 다중 수준 구조, 경사 등 ... 모두 바닥으로 분류 되어야 합니다.</td></tr>
+<tr><td>Ceiling</td><td>방의 위쪽 표면입니다.</td></tr>
 <tr><td>플랫폼</td><td>Holograms를 놓을 수 있는 커다란 플랫 표면입니다. 이는 테이블, 싱크대 및 기타 넓은 가로 표면을 나타내는 경향이 있습니다.</td></tr>
 <tr><td>World</td><td>레이블 지정과 무관 한 기하학적 데이터의 예약 된 레이블입니다. EnableWorldMesh 업데이트 플래그를 설정 하 여 생성 된 메시는 세계로 분류 됩니다.</td></tr>
 <tr><td>알 수 없음</td><td>이 장면 개체는 아직 분류 되어 있으며 종류를 할당 해야 합니다. 이 개체는 아무것도 될 수 있으므로 배경과 혼동 해서는 안 됩니다. 시스템은 아직 충분히 강력한 분류로 제공 되지 않습니다.</td></tr>
@@ -265,7 +265,7 @@ foreach (var mesh in firstFloor.Meshes)
 
 장면 이해는 변환을 처리할 때 일반적인 3D 장면 표현과 맞추는 시도를 만들었습니다. 따라서 각 장면은 가장 일반적인 3D 환경 표현과 마찬가지로 단일 좌표계로 한정 됩니다. SceneObjects는 각 위치를 해당 좌표계 내의 위치와 방향으로 제공 합니다. 응용 프로그램이 단일 원본에서 제공 하는 것의 제한을 스트레치 하는 장면을 처리 하는 경우 SpatialAnchors에 SceneObjects을 고정 하거나 여러 개의 장면을 생성 하 고 함께 병합할 수 있습니다. 하지만 간단 하 게 하기 위해에 의해 정의 된 하나의 NodeId로 지역화 된 자체 원본에 watertight 장면이 있다고 가정 합니다.
 
-예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 `System.Numerics.Matrix4x4`와 `UnityEngine.Matrix4x4`간 변환을 위한 `.ToUnity()` 확장 메서드는 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) and [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요.
+예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 및 `.ToUnity()` `System.Numerics.Matrix4x4` `UnityEngine.Matrix4x4`간에 변환 하는 확장 메서드에 대 한 자세한 내용은 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 및 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-각 `SceneObject`에는 포함 하는 `Scene`의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 `Position` 및 `Orientation` 속성이 있습니다. 예를 들어 다음 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 된 `SceneObject`에 맞게 로컬 위치와 회전을 할당 합니다.
+각 `SceneObject` 에는 `Position` 포함 `Orientation` `Scene`된의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 및 속성이 있습니다. 예를 들어 다음 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 `SceneObject`된에 맞게 로컬 위치와 회전을 할당 합니다.
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -343,9 +343,9 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 1-4 단계는 특정 프레임 워크/구현에 따라 달라 지지만 테마는 유사 해야 합니다. 4는 단지 공간에서 지역화 된 경계가 있는 2D 평면을 나타냅니다. 엔진/프레임 워크에서 쿼드이 무엇 인지 확인 하 고 쿼드을 기준으로 개체를 루 팅 하면 holograms는 실제 세계와 관련 하 여 정확 하 게 배치 됩니다. 자세한 내용은 특정 구현을 표시 하는 quads의 샘플을 참조 하세요.
 
-### <a name="mesh"></a>그물
+### <a name="mesh"></a>메시
 
-메시는 개체 또는 환경의 기하학적 표현을 나타냅니다. [공간 매핑](spatial-mapping.md), 메시 인덱스 및 각 공간 표면 메시와 함께 제공 되는 꼭 짓 점 데이터는 모든 최신 렌더링 api에서 삼각형 메시 렌더링에 사용 되는 꼭 짓 점 및 인덱스 버퍼와 동일한 친숙 한 레이아웃을 사용 합니다. 꼭 짓 점 위치는 `Scene`의 좌표계에서 제공 됩니다. 이 데이터를 참조 하는 데 사용 되는 특정 Api는 다음과 같습니다.
+메시는 개체 또는 환경의 기하학적 표현을 나타냅니다. [공간 매핑](spatial-mapping.md), 메시 인덱스 및 각 공간 표면 메시와 함께 제공 되는 꼭 짓 점 데이터는 모든 최신 렌더링 api에서 삼각형 메시 렌더링에 사용 되는 꼭 짓 점 및 인덱스 버퍼와 동일한 친숙 한 레이아웃을 사용 합니다. 꼭 짓 점 위치는의 좌표계에서 제공 됩니다 `Scene`. 이 데이터를 참조 하는 데 사용 되는 특정 Api는 다음과 같습니다.
 
 ```cs
 void GetTriangleIndices(int[] indices);
@@ -362,7 +362,7 @@ mesh.GetTriangleIndices(indices);
 mesh.GetVertexPositions(positions);
 ```
 
-인덱스/꼭 짓 점 버퍼는 인덱스/꼭 짓 점 수를 > 해야 합니다. 그렇지 않으면 효율적인 메모리 다시 사용을 허용 하는 크기를 임의로 지정할 수 있습니다.
+인덱스/꼭 짓 점 버퍼는 인덱스/꼭 짓 점 수를 >해야 합니다. 그렇지 않으면 효율적인 메모리 다시 사용을 허용 하는 크기를 임의로 지정할 수 있습니다.
 
 ## <a name="developing-with-scene-understandings"></a>장면 사항을 이해를 사용 하 여 개발
 
@@ -378,10 +378,10 @@ HoloLens2 있는 경우 ComputeSerializedAsync의 출력을 파일에 저장 하
 
 HoloLens2 장치가 없지만 장면 이해를 재생 하려는 경우에는 미리 캡처한 장면을 다운로드 해야 합니다. 장면 이해 샘플은 현재 사용자의 편의를 위해 다운로드 하 여 사용할 수 있는 직렬화 된 장면과 함께 제공 됩니다. 여기에서 찾을 수 있습니다.
 
-[장면 이해 샘플 장면](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+[장면 이해 샘플 장면](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
 ## <a name="see-also"></a>참고 항목
 
 * [공간 매핑](spatial-mapping.md)
 * [장면 이해](scene-understanding.md)
-* [Unity 샘플](https://github.com/sceneunderstanding-microsoft/unitysample)
+* [Unity 샘플](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)

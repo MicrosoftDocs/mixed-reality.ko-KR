@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 615da20df95f4a435216457e8b9f16bb7d7d069b
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003339"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604964"
 ---
 # <a name="scene-understanding"></a>장면 이해
 
@@ -29,13 +29,13 @@ ms.locfileid: "81003339"
 
 샘플 GitHub 사이트에서 장면 이해 샘플 앱을 다운로드할 수 있습니다.
 
-[장면 이해 샘플](https://github.com/sceneunderstanding-microsoft/unitysample)
+[장면 이해 샘플](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)
 
 장치를 사용 하지 않고 장면 이해를 시도 하기 위해 샘플 장면에 액세스 하려는 경우 샘플 자산 폴더에는 장면이 있습니다.
 
 [장면 이해 샘플 장면](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-### <a name="sdk"></a>SDK
+### <a name="sdk"></a>SDK)
 
 장면 이해를 위해 개발 하는 방법 또는 장면 이해의 작동 방식에 대 한 자세한 내용 및 개발 방법에 대 한 자세한 내용을 보려면 [장면 이해 SDK 개요](scene-understanding-SDK.md) 설명서를 참조 하세요.
 
@@ -43,7 +43,7 @@ ms.locfileid: "81003339"
 ### <a name="sample"></a>샘플
 
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
     <colgroup>
@@ -53,8 +53,8 @@ ms.locfileid: "81003339"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
+        <td><strong>기능</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (첫 번째 gen)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
     </tr>
@@ -66,7 +66,7 @@ ms.locfileid: "81003339"
     </tr>
 </table>
 
-## <a name="common-usage-scenarios"></a>일반적인 사용 시나리오
+## <a name="common-usage-scenarios"></a>일반 시나리오
 
 ![일반적인 공간 매핑 사용 시나리오의 그림: 배치, 폐색, 물리 및 탐색](images/sm-concepts-1000px.png)<br>
 *일반적인 공간 매핑 사용 시나리오: 배치, 폐색, 물리 및 탐색.*
@@ -83,11 +83,11 @@ ms.locfileid: "81003339"
 
 :::row:::
     :::column:::
-       유추를 사용 하지 않도록 설정 하 고, 스캔 된 영역에 대 한 배치 영역을 SceneQuads ![.](images/SUQuads.png)<br>
+       ![유추를 사용 하지 않도록 설정 하 고, 스캔 한 영역에 대 한 배치 영역을 SceneQuads 합니다.](images/SUQuads.png)<br>
        **이미지 #1** -유추가 사용 하지 않도록 설정 된 SceneQuads, 스캔 한 영역에 대 한 배치 영역 캡처
     :::column-end:::
         :::column:::
-       유추를 사용 하는 ![Quads는 더 이상 스캔 된 영역으로 제한 되지 않습니다.](images/SUWatertight.png)<br>
+       ![유추를 사용 하도록 설정 하면 배치가 더 이상 스캔 된 영역으로 제한 되지 않습니다.](images/SUWatertight.png)<br>
         **이미지 #2** -유추를 사용 하도록 설정 하면 배치가 더 이상 스캔 된 영역으로 제한 되지 않습니다.
     :::column-end:::
 :::row-end:::
@@ -121,7 +121,7 @@ ms.locfileid: "81003339"
 
 또한 공간 매핑에서 반환 된 총 표면 수는 내부 공간 캐시에 의해 제한 되는 반면 장면 이해의 공간 매핑 메시 버전은 캐시 되지 않은 공간 매핑 데이터에 액세스할 수 있습니다. 이로 인해 시각화 또는 추가 메시 처리를 위해 장면 이해는 단일 공간 보다 큰 공간에 대 한 메시 표현을 캡처하는 데 더 적합 합니다. EnableWorldMesh를 사용 하 여 반환 되는 세계 메시는 전체에 걸쳐 일관 된 세부 수준을 가지 며,이는 와이어 프레임으로 렌더링 되는 경우 더 많은 보기 편 시각화를 생성할 수 있습니다.
 
-### <a name="see-also"></a>관련 항목
+### <a name="see-also"></a>참고 항목
 
 * [장면 이해 SDK](scene-understanding-SDK.md)
 * [공간 매핑](spatial-mapping.md)

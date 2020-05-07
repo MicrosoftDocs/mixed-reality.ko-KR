@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 65bcef6a7c10450816d7a928302b0b266b132f0f
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: b807ac7e51e4009d2c44d3b7c67fbdf3488ccbd9
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362067"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604994"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. 3D 개체와 상호 작용
 
@@ -30,7 +30,7 @@ ms.locfileid: "80362067"
 
 다음 Unity 사용자 지정 패키지를 다운로드하여 가져옵니다.
 
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.3/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage)
 
 자습서 자산을 가져오면 [프로젝트] 창이 다음과 같이 표시됩니다.
 

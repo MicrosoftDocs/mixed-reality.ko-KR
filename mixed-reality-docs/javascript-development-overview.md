@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, windows mixed reality, 웹 vr, 웹 xr, 웹 mr, 웹 ar, 360, 360 비디오, 360 비디오, 360 photo, 360 사진, 360 콘텐츠, 몰입 형 웹, 몰입 형 웹, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278484"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835612"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>JavaScript를 사용한 혼합 현실 개발 개요
 
 ## <a name="mixed-reality-applications-on-the-web"></a>웹의 혼합 현실 응용 프로그램
 
-혼합 현실 기능은 [WebXR 장치 api](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) 및 [사용 되지 않는 WebVR api] ([WebXR Overview](webxr-overview.md)를 사용 하 여 웹에서 사용할 수 있습니다. 전체 WebXR 기능을 지원 하지 않는 브라우저의 경우 [WebXR Polyfills](https://github.com/immersive-web/webxr-polyfill) 를 웹 사이트에 추가할 수 있습니다.
+혼합 현실 기능은 [WebXR 장치 api](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) 를 사용 하 고 [더 이상 사용 되지 않는 WebVR api](webxr-overview.md)를 사용 하 여 웹에서 사용할 수 있습니다. 전체 WebXR 기능을 지원 하지 않는 브라우저의 경우 [WebXR Polyfills](https://github.com/immersive-web/webxr-polyfill) 를 웹 사이트에 추가할 수 있습니다.
 
 ## <a name="what-is-webxr-polyfill"></a>WebXR Safehtml 이란?
 
@@ -55,7 +55,7 @@ WebGL Api를 사용 하 여 WebXR 장치 Api에 직접 액세스할 수 있습�
 
 [네이티브에 반응](https://reactnative.dev/) 하는 것은 개발자가 JavaScript를 사용 하 여 빌드하고 여러 플랫폼에 배포할 수 있도록 하는 또 다른 오픈 소스 라이브러리입니다. [Github의 기본에](https://github.com/facebook/react-native) 대 한 응답을 다운로드 하 고 [네이티브 블로그 반응](https://reactnative.dev/blog/)에서 자세히 알아볼 수 있습니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 * [WebXR 개요](webxr-overview.md)
 * [WebXR 장치 API 사양](https://immersive-web.github.io/webxr/)
