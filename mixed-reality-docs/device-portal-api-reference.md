@@ -1,19 +1,19 @@
 ---
-title: 장치 포털 API 참조
+title: 디바이스 포털 API 참조
 description: HoloLens의 Windows 장치 포털에 대 한 API 참조
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows 장치 포털, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278241"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227965"
 ---
-# <a name="device-portal-api-reference"></a>장치 포털 API 참조
+# <a name="device-portal-api-reference"></a>디바이스 포털 API 참조
 
 [Windows 장치 포털](using-the-windows-device-portal.md) 의 모든 항목은 데이터에 액세스 하 고 프로그래밍 방식으로 장치를 제어 하는 데 사용할 수 있는 REST API의 맨 위에 빌드됩니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "81278241"
 매개 변수
 * package: 설치할 패키지의 파일 이름입니다.
 
-페이로드
+Payload
 * 여러 부분으로 구성 되는 http 본문
 
 **/api/app/packagemanager/packages (GET)**
@@ -112,7 +112,7 @@ ms.locfileid: "81278241"
 데이터 반환
 * 활성화 된 공급자의 ETW 이벤트
 
-## <a name="holographic-os"></a>홀로그램 OS
+## <a name="holographic-os"></a>Holographic OS
 
 **/api/holographic/os/etw/customproviders (GET)**
 
@@ -135,7 +135,7 @@ IPD를 설정 합니다.
 
 **/api/holographic/os/webmanagement/settings/https (GET)**
 
-디바이스 포털에 대한 HTTPS 요구 사항 가져오기
+장치 포털에 대 한 HTTPS 요구 사항 가져오기
 
 **/api/holographic/os/webmanagement/settings/https (POST)**
 
@@ -183,6 +183,10 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 **/api/holographic/simulation/control/stream (POST)**
 
 컨트롤 스트림 (우선 순위는 필수)을 만들거나 만든 스트림에 데이터를 게시 합니다 (streamId 필요). 게시 된 데이터는 ' 응용 프로그램/8 진수 스트림 ' 형식 이어야 합니다.
+
+**/api/holographic/simulation/display/stream (GET/WebSocket)**
+
+' 시뮬레이션 ' 모드일 때 시스템 디스플레이에 렌더링 된 콘텐츠가 포함 된 시뮬레이션 비디오 스트림을 요청 합니다.  단순 형식 설명자 헤더는 처음에 전송 되 고, 그 뒤에는 각각 눈 인덱스와 질감 크기를 나타내는 헤더가 앞에 오는, 각각에는 h.264로 인코딩된 질감이 적용 됩니다.
 
 ## <a name="perception-simulation-playback"></a>인식 시뮬레이션 재생
 
@@ -415,7 +419,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 데이터 반환
 * 시스템 정보를 포함 하는 JSON: CPU, GPU, 메모리, 네트워크, IO
 
-## <a name="power"></a>전원
+## <a name="power"></a>Power
 
 **/sh/svhhhhhs (GET)**
 
@@ -497,7 +501,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 
 WPR 프로필을 업로드 하 고 업로드 된 프로필을 사용 하 여 추적을 시작 합니다.
 
-페이로드
+Payload
 * 여러 부분으로 구성 되는 http 본문
 
 데이터 반환

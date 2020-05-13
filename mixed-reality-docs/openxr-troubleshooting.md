@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어, 문제 해결
-ms.openlocfilehash: 08ca671ded7230a4ba3cfcdc640233082af51040
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 269982596ed6162d9c2f1ec999a446bcecd6ba2a
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163367"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228008"
 ---
 # <a name="openxr-troubleshooting"></a>OpenXR 문제 해결
 
@@ -24,7 +24,7 @@ Windows Mixed Reality OpenXR 런타임을 사용 하 여 OpenXR 앱을 개발할
 
 OpenXR 앱을 실행할 때 Windows Mixed Reality를 시작 하지 않는 경우 Windows Mixed Reality OpenXR 런타임이 활성 런타임으로 설정 되지 않을 수 있습니다.  [OpenXR For Windows Mixed Reality 헤드셋 시작](openxr-getting-started.md#getting-started-with-openxr-for-windows-mixed-reality-headsets) 을 참조 하 여 런타임을 활성 상태로 만듭니다.
 
-[Windows Mixed Reality OpenXR 개발자 포털](openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-portal) 을 실행 하 여 시스템에서 Windows Mixed Reality OpenXR 런타임의 상태를 해결 하는 데 도움이 되는 추가 문제 해결 방법을 확인할 수도 있습니다.
+[Windows Mixed Reality OpenXR 개발자 도구](openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-tools) 를 실행 하 여 시스템의 Windows Mixed Reality OpenXR 런타임 상태에 대 한 추가 문제 해결 도움말을 확인할 수도 있습니다.
 
 ### <a name="mixed-reality-portal-not-showing-set-up-openxr-menu-item"></a>혼합 현실 포털에서 "OpenXR 설정" 메뉴 항목을 표시 하지 않음
 
@@ -32,4 +32,4 @@ Windows 10 10 월 2018 업데이트 (1809) 이상을 실행 하 고 있어야 �
 
 이전 버전의 Mixed Reality 포털 앱이 있는 경우 "OpenXR 설정" 메뉴 항목을 사용 하지 못할 수 있습니다.  [혼합 현실 포털 앱 업데이트](https://www.microsoft.com/p/mixed-reality-portal/9ng1h8b3zc7m) 를 확인 하 여 최신 버전이 있는지 확인 합니다.
 
-Windows Mixed Reality OpenXR 런타임이 이미 설치 되어 있고 활성 상태인 경우에는 "OpenXR 설정" 메뉴 항목이 표시 되지 않습니다.  [Windows Mixed Reality OpenXR 개발자 포털](openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-portal) 을 설치 하 여 시스템에서 OpenXR 런타임의 현재 상태를 확인할 수 있습니다.
+Windows Mixed Reality OpenXR 런타임이 이미 설치 되어 있고 활성 상태인 경우에는 "OpenXR 설정" 메뉴 항목이 표시 되지 않습니다.  [Windows Mixed Reality OpenXR 개발자 도구](openxr-getting-started.md#getting-the-windows-mixed-reality-openxr-developer-tools) 를 설치 하 여 시스템에서 OpenXR 런타임의 현재 상태를 확인할 수 있습니다.

@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604954"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228018"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
@@ -158,7 +158,7 @@ SceneUnderstanding를 사용 하는 첫 번째 단계는 응용 프로그램에�
 SceneObserver를 사용 하 여 장면을 계산 합니다. 장면을 만들기 전에 응용 프로그램은 SceneUnderstanding를 지원 하는지 확인 하 고 SceneUnderstanding에 필요한 정보에 대 한 사용자 액세스를 요청할 수 있도록 장치를 쿼리해야 합니다.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ foreach (var mesh in firstFloor.Meshes)
 
 장면 이해는 변환을 처리할 때 일반적인 3D 장면 표현과 맞추는 시도를 만들었습니다. 따라서 각 장면은 가장 일반적인 3D 환경 표현과 마찬가지로 단일 좌표계로 한정 됩니다. SceneObjects는 각 위치를 해당 좌표계 내의 위치와 방향으로 제공 합니다. 응용 프로그램이 단일 원본에서 제공 하는 것의 제한을 스트레치 하는 장면을 처리 하는 경우 SpatialAnchors에 SceneObjects을 고정 하거나 여러 개의 장면을 생성 하 고 함께 병합할 수 있습니다. 하지만 간단 하 게 하기 위해에 의해 정의 된 하나의 NodeId로 지역화 된 자체 원본에 watertight 장면이 있다고 가정 합니다.
 
-예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 및 `.ToUnity()` `System.Numerics.Matrix4x4` `UnityEngine.Matrix4x4`간에 변환 하는 확장 메서드에 대 한 자세한 내용은 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 및 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요.
+예를 들어 다음 Unity 코드는 Windows 인식 및 Unity Api를 사용 하 여 좌표계를 함께 맞추는 방법을 보여 줍니다. Unity의 세계 원본에 해당 하는 SpatialCoordinateSystem를 가져오는 방법에 [대 한](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) 자세한 내용과 및 간에 변환 하는 확장 메서드에 대 한 자세한 내용은 [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) 및 [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) 를 참조 하세요. `.ToUnity()` `System.Numerics.Matrix4x4` `UnityEngine.Matrix4x4`
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-각 `SceneObject` 에는 `Position` 포함 `Orientation` `Scene`된의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 및 속성이 있습니다. 예를 들어 다음 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 `SceneObject`된에 맞게 로컬 위치와 회전을 할당 합니다.
+각에는 `SceneObject` `Position` 포함 된 `Orientation` 의 출처를 기준으로 해당 콘텐츠를 배치 하는 데 사용할 수 있는 및 속성이 있습니다 `Scene` . 예를 들어 다음 예제에서는 게임이 장면 루트의 자식인 것으로 가정 하 고 지정 된에 맞게 로컬 위치와 회전을 할당 합니다 `SceneObject` .
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 ### <a name="mesh"></a>메시
 
-메시는 개체 또는 환경의 기하학적 표현을 나타냅니다. [공간 매핑](spatial-mapping.md), 메시 인덱스 및 각 공간 표면 메시와 함께 제공 되는 꼭 짓 점 데이터는 모든 최신 렌더링 api에서 삼각형 메시 렌더링에 사용 되는 꼭 짓 점 및 인덱스 버퍼와 동일한 친숙 한 레이아웃을 사용 합니다. 꼭 짓 점 위치는의 좌표계에서 제공 됩니다 `Scene`. 이 데이터를 참조 하는 데 사용 되는 특정 Api는 다음과 같습니다.
+메시는 개체 또는 환경의 기하학적 표현을 나타냅니다. [공간 매핑](spatial-mapping.md), 메시 인덱스 및 각 공간 표면 메시와 함께 제공 되는 꼭 짓 점 데이터는 모든 최신 렌더링 api에서 삼각형 메시 렌더링에 사용 되는 꼭 짓 점 및 인덱스 버퍼와 동일한 친숙 한 레이아웃을 사용 합니다. 꼭 짓 점 위치는의 좌표계에서 제공 됩니다 `Scene` . 이 데이터를 참조 하는 데 사용 되는 특정 Api는 다음과 같습니다.
 
 ```cs
 void GetTriangleIndices(int[] indices);

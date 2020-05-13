@@ -3,15 +3,15 @@ title: 인식 시뮬레이션
 description: 인식 시뮬레이션 라이브러리를 사용 하 여 몰입 형 응용 프로그램의 시뮬레이션 된 입력을 자동화 하는 방법에 대 한 지침
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 04/26/2019
+ms.date: 05/12/2020
 ms.topic: article
 keywords: HoloLens, 시뮬레이션, 테스트
-ms.openlocfilehash: 503533bc5a2e9307b7c5217632d42670285aac0a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 701fd39490d87b70df9bd68cc99da6482d41b676
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437550"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228028"
 ---
 # <a name="perception-simulation"></a>인식 시뮬레이션
 
@@ -23,21 +23,21 @@ ms.locfileid: "73437550"
 
 ## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>인식 시뮬레이션에 대 한 Visual Studio 프로젝트 설정
 1. 개발 PC에 [HoloLens 에뮬레이터를 설치](install-the-tools.md) 합니다. 이 에뮬레이터는 인식 시뮬레이션에 사용할 라이브러리를 포함 합니다.
-2. 새 Visual Studio C# 데스크톱 프로젝트를 만듭니다. 콘솔 프로젝트는 시작 하는 데 유용 합니다.
-3. 프로젝트에 다음 이진 파일을 참조 (프로젝트 > 추가 > 참조 ...)로 추가 합니다. HoloLens 2 에뮬레이터 의% **ProgramFiles (x86)% \ MICROSOFT xde\\10.0.18362.0** 와 같은% ProgramFiles (x86)% \ microsoft xde\\(버전)에서 해당 파일을 찾을 수 있습니다.  (참고: 이진 파일은 HoloLens 2 에뮬레이터의 일부 이지만 바탕 화면에서 Windows Mixed Reality에도 작동 합니다.) 은. 인식 시뮬레이션에 대 한 PerceptionSimulationManager 관리 C# 래퍼입니다.
+2. 새 Visual Studio c # 데스크톱 프로젝트를 만듭니다. 콘솔 프로젝트는 시작 하는 데 유용 합니다.
+3. 프로젝트에 다음 이진 파일을 참조 (프로젝트 >추가 >참조 ...)로 추가 합니다. % ProgramFiles (x86)% \ Microsoft XDE \\ (버전) (예: HoloLens 2 에뮬레이터의 경우 **% ProgramFiles (x86)% \ microsoft xde \\ 10.0.18362.0** )에서 찾을 수 있습니다.  (참고: 이진 파일은 HoloLens 2 에뮬레이터의 일부 이지만 바탕 화면에서 Windows Mixed Reality에도 작동 합니다.) 은. 인식 시뮬레이션에 대 한 PerceptionSimulationManager-관리 되는 c # 래퍼입니다.
     b. PerceptionSimulationRest-HoloLens 또는 에뮬레이터에 웹 소켓 통신 채널을 설정 하기 위한 라이브러리입니다.
     c. SimulationStream-시뮬레이션에 대 한 공유 형식입니다.
-4. 프로젝트 a에 이진 PerceptionSimulationManager 구현을 추가 합니다. 먼저 프로젝트에 이진으로 추가 합니다 (기존 항목 > 추가 >). 프로젝트 원본 폴더에 복사 하지 않도록 링크를 링크로 저장 합니다. PerceptionSimulationManager을 프로젝트에 추가 하 ![b](images/saveaslink.png) 링크로 추가 합니다. 그런 다음 빌드 시 출력 폴더에 복사 되었는지 확인 합니다. 이는 이진의 속성 시트에 있습니다. 출력 디렉터리에 복사 하는 ![표시 PerceptionSimulationManager](images/copyalways.png)
+4. 프로젝트 a에 이진 PerceptionSimulationManager 구현을 추가 합니다. 먼저 프로젝트에 이진으로 추가 합니다 (기존 항목 >추가 >). 프로젝트 원본 폴더에 복사 하지 않도록 링크를 링크로 저장 합니다. ![PerceptionSimulationManager을 프로젝트에 링크 b로 추가 합니다 ](images/saveaslink.png) . 그런 다음 빌드 시 출력 폴더에 복사 되었는지 확인 합니다. 이는 이진의 속성 시트에 있습니다. ![PerceptionSimulationManager를 출력 디렉터리에 복사 하도록 표시 합니다.](images/copyalways.png)
 5. 활성 솔루션 플랫폼을 x 64로 설정 합니다.  (아직 없는 경우 Configuration Manager를 사용 하 여 x 64에 대 한 플랫폼 항목을 만듭니다.)
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>IPerceptionSimulation Manager 개체 만들기
 
 시뮬레이션을 제어 하기 위해 IPerceptionSimulationManager 개체에서 검색 된 개체에 대 한 업데이트를 실행 합니다. 첫 번째 단계는 해당 개체를 가져와 대상 장치 또는 에뮬레이터에 연결 하는 것입니다. [도구 모음](using-the-hololens-emulator.md) 에서 장치 포털 단추를 클릭 하 여 에뮬레이터의 IP 주소를 가져올 수 있습니다.
 
-장치 포털 아이콘](images/emulator-deviceportal.png) 열기 ![장치 **포털**: 에뮬레이터에서 HoloLens OS에 대 한 Windows 장치 포털을 엽니다.  Windows Mixed Reality의 경우 "업데이트 & 보안" 아래의 설정 앱에서 "장치 포털 사용"의 "연결 사용:" 섹션에 있는 "개발자 용" 섹션에서 검색할 수 있습니다.  IP 주소와 포트를 모두 기록해 두어야 합니다.
+![장치 포털 열기 아이콘 ](images/emulator-deviceportal.png) **장치 포털**: 에뮬레이터에서 HoloLens OS에 대 한 Windows 장치 포털을 엽니다.  Windows Mixed Reality의 경우 "업데이트 & 보안" 아래의 설정 앱에서 "장치 포털 사용"의 "연결 사용:" 섹션에 있는 "개발자 용" 섹션에서 검색할 수 있습니다.  IP 주소와 포트를 모두 기록해 두어야 합니다.
 
 먼저 RestSimulationStreamSink를 호출 하 여 RestSimulationStreamSink 개체를 가져옵니다. Http 연결을 제어 하는 대상 장치 또는 에뮬레이터입니다. 명령은 장치 또는 에뮬레이터에서 실행 되는 [Windows 장치 포털](using-the-windows-device-portal.md) 에 전달 되 고 처리 됩니다. 개체를 만드는 데 필요한 네 가지 매개 변수는 다음과 같습니다.
-* Uri uri-대상 장치의 IP 주소 (예: "https://123.123.123.123" 또는 "https://123.123.123.123:50080")
+* Uri uri-대상 장치의 IP 주소 (예: " https://123.123.123.123 " 또는 " https://123.123.123.123:50080 ")
 * 시스템 .Net. NetworkCredential 자격 증명-대상 장치 또는 에뮬레이터의 [Windows 장치 포털](using-the-windows-device-portal.md) 에 연결 하기 위한 사용자 이름/암호입니다. 로컬 주소를 통해 에뮬레이터에 연결 하는 경우 (예:*168 ...* *) 같은 PC에서 모든 자격 증명이 허용 됩니다.
 * bool normal-보통 우선 순위의 경우 True, 낮은 우선 순위의 경우 false 일반적으로 테스트 시나리오의 경우이를 *true* 로 설정 하 여 테스트를 제어할 수 있도록 합니다.  에뮬레이터 및 Windows Mixed Reality 시뮬레이션에서는 낮은 우선 순위의 연결을 사용 합니다.  또한 테스트에서 낮은 우선 순위의 연결을 사용 하는 경우 가장 최근에 설정 된 연결이 제어 됩니다.
 * CancellationToken 토큰-비동기 작업을 취소 하는 토큰입니다.
@@ -46,13 +46,13 @@ ms.locfileid: "73437550"
 
 ## <a name="control-the-simulated-human"></a>시뮬레이션 된 사용자 제어
 
-IPerceptionSimulationManager에는 ISimulatedHuman 개체를 반환 하는 인적 속성이 있습니다. 시뮬레이션 된 사용자를 제어 하려면이 개체에 대 한 작업을 수행 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+IPerceptionSimulationManager에는 ISimulatedHuman 개체를 반환 하는 인적 속성이 있습니다. 시뮬레이션 된 사용자를 제어 하려면이 개체에 대 한 작업을 수행 합니다. 예:
 
 ```
 manager.Human.Move(new Vector3(0.1f, 0.0f, 0.0f))
 ```
 
-## <a name="basic-sample-c-console-application"></a>기본 샘플 C# 콘솔 응용 프로그램
+## <a name="basic-sample-c-console-application"></a>기본 샘플 c # 콘솔 응용 프로그램
 
 ```
 using System;
@@ -108,7 +108,7 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="extended-sample-c-console-application"></a>확장 된 C# 샘플 콘솔 응용 프로그램
+## <a name="extended-sample-c-console-application"></a>확장 된 샘플 c # 콘솔 응용 프로그램
 
 ```
 using System;
@@ -655,6 +655,52 @@ public struct Frustum
 
 뷰의 가로 필드와 세로 필드의 비율입니다.
 
+### <a name="microsoftperceptionsimulationsimulateddisplayconfiguration"></a>PerceptionSimulation. SimulatedDisplayConfiguration
+
+시뮬레이션 된 헤드셋 디스플레이의 구성에 대해 설명 합니다.
+
+```
+public struct SimulatedDisplayConfiguration
+{
+    public Vector3 LeftEyePosition;
+    public Rotation3 LeftEyeRotation;
+    public Vector3 RightEyePosition;
+    public Rotation3 RightEyeRotation;
+    public float Ipd;
+    public bool ApplyEyeTransforms;
+    public bool ApplyIpd;
+}
+```
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyePosition**
+
+스테레오 렌더링의 용도에 대 한 헤드의 중심에서 왼쪽으로의 변환입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. LeftEyeRotation**
+
+스테레오 렌더링의 용도에 대 한 왼쪽 눈동자의 회전입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. RightEyePosition**
+
+스테레오 렌더링의 용도에 대 한 헤드의 중심에서 오른쪽으로의 변환입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. RightEyeRotation**
+
+스테레오 렌더링의 용도에 대 한 올바른 눈동자의 회전입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. Ipd**
+
+스테레오 렌더링을 위해 시스템에서 보고 한 Ipd 값입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. ApplyEyeTransforms**
+
+왼쪽 및 오른쪽에서 변형에 대해 제공 된 값을 유효한 것으로 간주 하 고 실행 중인 시스템에 적용 해야 하는지 여부입니다.
+
+**PerceptionSimulation. SimulatedDisplayConfiguration. ApplyIpd**
+
+Ipd에 제공 된 값을 유효한 것으로 간주 하 여 실행 중인 시스템에 적용할지 여부를 지정 합니다.
+
+
 ### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>PerceptionSimulation. IPerceptionSimulationManager
 
 장치를 제어 하는 데 사용 되는 패킷을 생성 하는 루트입니다.
@@ -707,6 +753,27 @@ public interface ISimulatedDevice
 
 매개 변수
 * 유형-시뮬레이션 된 장치의 새 유형
+
+### <a name="microsoftperceptionsimulationisimulateddevice2"></a>PerceptionSimulation. ISimulatedDevice2
+
+ISimulatedDevice을 ISimulatedDevice2로 캐스팅 하 여 추가 속성을 사용할 수 있습니다.
+
+```
+public interface ISimulatedDevice2
+{
+    bool IsUserPresent { [return: MarshalAs(UnmanagedType.Bool)] get; [param: MarshalAs(UnmanagedType.Bool)] set; }
+    SimulatedDisplayConfiguration DisplayConfiguration { get; set; }
+
+};
+```
+
+**PerceptionSimulation. ISimulatedDevice2. IsUserPresent**
+
+시뮬레이션 된 사람이 헤드셋을 적극적으로 입고 있는지 여부를 검색 하거나 설정 합니다.
+
+**PerceptionSimulation. ISimulatedDevice2 구성**
+
+시뮬레이션 된 디스플레이의 속성을 검색 하거나 설정 합니다.
 
 ### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>PerceptionSimulation. ISimulatedHeadTracker
 
@@ -1226,7 +1293,7 @@ public static class PerceptionSimulationManager
 
 로드 된 기록입니다.
 
-**PerceptionSimulation (PerceptionSimulationManager, LoadPerceptionSimulationRecording (System.string, PerceptionSimulation) PerceptionSimulation. ISimulationRecordingCallback)**
+**PerceptionSimulation, PerceptionSimulationManager, LoadPerceptionSimulationRecording (System.string, PerceptionSimulation, ISimulationStreamSinkFactory, PerceptionSimulation)**
 
 지정 된 파일에서 기록을 로드 합니다.
 
@@ -1252,7 +1319,10 @@ public enum StreamDataTypes
     SpatialMapping = 0x08,
     Calibration = 0x10,
     Environment = 0x20,
-    All = None | Head | Hands | SpatialMapping | Calibration | Environment
+    SixDofControllers = 0x40,
+    Eyes = 0x80,
+    DisplayConfiguration = 0x100
+    All = None | Head | Hands | SpatialMapping | Calibration | Environment | SixDofControllers | Eyes | DisplayConfiguration
 }
 ```
 
@@ -1279,6 +1349,18 @@ public enum StreamDataTypes
 **PerceptionSimulation. 환경**
 
 장치 환경에 대 한 데이터 스트림입니다.
+
+**PerceptionSimulation. SixDofControllers**
+
+동작 컨트롤러에 대 한 데이터 스트림입니다.
+
+**PerceptionSimulation입니다.**
+
+시뮬레이션 된 사람의 눈에 대 한 데이터 스트림입니다.
+
+**PerceptionSimulation를 구성 합니다.**
+
+장치의 디스플레이 구성과 관련 된 데이터 스트림입니다.
 
 **PerceptionSimulation 데이터 형식**
 
