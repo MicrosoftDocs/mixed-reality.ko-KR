@@ -100,6 +100,7 @@
 ## [도구 및 아키텍처 알아보기](development.md)
 ## [도구 설치](install-the-tools.md)
 ## 혼합 현실 클라우드 서비스
+### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ## [자습서 및 샘플 앱](tutorials.md)
 ### Unity
