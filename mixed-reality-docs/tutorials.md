@@ -8,24 +8,26 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
-ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334466"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835652"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
 ![HoloLens 2 사용자](images/08_Tutorials.png)
 
-현재 모든 자습서와 샘플 앱은 Unity를 기반으로 합니다. 다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
+현재 모든 자습서와 샘플 앱은 Unity 또는 Unreal를 기반으로 합니다. 다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2 자습서
 
-HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다. 다음 자습서는 [MRTK(Mixed Reality Toolkit) 2.0](https://github.com/microsoft/MixedRealityToolkit-Unity)을 기반으로 합니다.
+HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다. Unity 자습서는 [Mixed Reality Toolkit 2.0(MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)를 기반으로 하며, Unreal 자습서는 [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal)을 기반으로 합니다.
 
-* 시작 자습서(총 7부) - [1 개요 및 목표](mrlearning-base.md)
+* 시작 자습서
+    * Unity(총 7부) - [1 개요 및 목표](mrlearning-base.md)
+    * Unreal(총 6부) - [1 시작](unreal-uxt-ch1.md)
 * Azure Spatial Anchors 자습서(총 3부) - [1 Azure Spatial Anchors 시작](mrlearning-asa-ch1.md)
 * Azure Speech Services 자습서(총 4부) - [1 음성 인식 및 전사 통합 및 사용](mrlearning-speechSDK-ch1.md)
 * 다중 사용자 기능 자습서(총 5부) - [1 Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
