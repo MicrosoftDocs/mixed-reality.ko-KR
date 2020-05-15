@@ -4,16 +4,16 @@ title: 도구 및 아키텍처 알아보기
 description: HoloLens 및 몰입형 헤드셋에 대한 혼합 현실 개발자 설명서입니다.
 author: grbury
 ms.author: grbury
-ms.date: 08/27/2019
+ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
-keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+keywords: Mixed Reality, 개발, 개발, HoloLens, unity, unreal, directx
+ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277728"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835292"
 ---
 # <a name="learn-the-tools-and-architecture"></a>도구 및 아키텍처 알아보기
 
@@ -36,12 +36,12 @@ ms.locfileid: "81277728"
     :::column:::    
        [![Unity](images/unity_logo.png)](development.md#unity)<br>
         **[Unity](development.md#unity)**<br>   
-        혼합 현실 앱을 구축하는 가장 빠른 경로는 Unity를 사용하는 것입니다. 
+        Unity를 사용하여 플랫폼 간 전체 기능을 갖춘 혼합 현실 앱을 빌드하세요.
     :::column-end:::    
     :::column:::    
         [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
-         **[Unreal](development.md#unreal)**<br>    
-        HoloLens 2에 대한 프로덕션 대비 지원도 Unreal Engine 4.23에 포함됩니다.    
+        **[Unreal](development.md#unreal)**<br> 
+        Unreal Engine의 프로덕션 준비 지원으로 멋진 혼합 현실 환경을 만듭니다. 
     :::column-end:::
     :::column:::    
         [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
@@ -49,8 +49,8 @@ ms.locfileid: "81277728"
         JavaScript 및 WebXR Device API는 모든 플랫폼의 브라우저에서 혼합 현실 경험을 가능하게 하는 개방형 사양입니다.    
     :::column-end:::        
     :::column:::    
-        [![Native](images/VisualStudio-small_logo.png)](development.md#native)<br>
-        **[Native](development.md#native)**<br> 
+        [![네이티브](images/VisualStudio-small_logo.png)](development.md#native)<br>
+        **[네이티브](development.md#native)**<br> 
         Windows Mixed Reality API로 직접 코딩하여 혼합 현실 앱을 만들 수 있습니다. 
     :::column-end:::    
 :::row-end:::
@@ -98,6 +98,16 @@ Unreal을 사용하여 혼합 현실 앱을 빌드하는 방법을 알아봅니�
 
 <br>
 
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[Microsoft의 Unreal용 MRTK(Mixed Reality Toolkit)](https://github.com/microsoft/MixedRealityToolkit-Unreal)
+MRTK-Unreal(Unreal용 Mixed Reality Toolkit)은 플러그인, 샘플 및 설명서의 형태로 구성된 구성 요소 세트로, Unreal Engine을 사용하여 혼합 현실 애플리케이션의 개발을 가속화하도록 설계되었습니다.
+
+<br>
+
+### <a name="open-source-sample-apps-and-a-step-by-step-tutorial"></a>[오픈 소스 샘플 앱 및 단계별 자습서](unreal-uxt-ch1.md)
+Unreal에서 혼합 현실 개발을 시작하기 위한 자습서는 [UX Tools for Unreal v0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal)을 사용하여 HoloLens 2 앱을 생성하는 엔드투엔드 프로세스를 통해 개발자를 안내합니다.
+
+<br>
+
 ---
 
 ## <a name="javascript"></a>JavaScript   
@@ -109,7 +119,7 @@ Unreal을 사용하여 혼합 현실 앱을 빌드하는 방법을 알아봅니�
 
 ---
 
-## <a name="native"></a>기본
+## <a name="native"></a>네이티브
 
 
 ### <a name="native-development-overview"></a>[네이티브 개발 개요](directx-development-overview.md)
