@@ -3,16 +3,16 @@ title: HoloLens 에뮬레이터 사용
 description: HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 혼합 현실 앱을 테스트할 수 있습니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/13/2020
+ms.date: 5/12/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278021"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227988"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -28,7 +28,7 @@ HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 홀로�
 HoloLens 에뮬레이터를 다운로드합니다.
 
 버전: 
-* [HoloLens 2 에뮬레이터(2020년 4월 업데이트)](https://go.microsoft.com/fwlink/?linkid=2126826).
+* [HoloLens 2 에뮬레이터(Windows Holographic 버전 2004)](https://go.microsoft.com/fwlink/?linkid=2129088)
 * [HoloLens 에뮬레이터(1세대) 및 홀로그램 프로젝트 템플릿](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 HoloLens 에뮬레이터의 릴리스 정보 및 이전 빌드는 [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md) 페이지에서 찾을 수 있습니다.
@@ -78,6 +78,8 @@ HoloLens(1세대)의 커서는 헤드 이동 및 회전을 따릅니다. HoloLen
 * **블룸/시스템 동작** - 키보드에서 Windows 키나 F2 키를 누르거나 Xbox 컨트롤러의 B 단추를 누릅니다.
 * **스크롤하기 위한 손 동작** - Alt 키를 누른 채로 마우스 오른쪽 단추를 누르면서 위쪽/아래쪽으로 마우스를 끌거나, Xbox 컨트롤러에서 오른쪽 트리거 및 A 단추를 아래로 유지하고 오른쪽 스틱을 위아래로 이동합니다.
 * **손 이동 및 방향**(HoloLens 2 에뮬레이터만 해당) - Alt 키를 누른 채 마우스를 위나 아래, 왼쪽이나 오른쪽으로 끌어 손을 이동하거나, 화살표 키 및 Q 또는 E를 사용하여 손을 회전하고 기울입니다. Xbox 컨트롤러의 경우 왼쪽 또는 오른쪽 범퍼를 누른 채로 왼쪽 엄지스틱을 사용하여 손을 왼쪽, 오른쪽, 앞으로, 뒤로 움직입니다. 오른쪽 엄지스틱을 사용하여 회전시키고 Dpad에서 위쪽 또는 아래쪽으로 움직여 손을 들거나 내립니다.
+
+Windows Mixed Reality 몰입형 헤드셋이 있나요?  HoloLens 2 에뮬레이터(Windows Holographic 버전 2004)부터 Windows Mixed Reality 몰입형 헤드셋 및 모션 컨트롤러를 사용하여 HoloLens 2 에뮬레이터를 제어하고 스테레오로 볼 수 있습니다.  [HoloLens 2 에뮬레이터에서 Windows Mixed Reality 몰입형 헤드셋 및 모션 컨트롤러 사용](#using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator)을 참조하세요.
 
 ## <a name="anatomy-of-the-hololens-2-emulator"></a>HoloLens 2 에뮬레이터의 구조 
 
@@ -164,6 +166,34 @@ Windows 10 2019년 5월 업데이트 이상에서 에뮬레이터를 실행하�
 
 ![HoloLens 에뮬레이터 ‘업데이트’ 탭](images/emulator-updates-500px.png)
 
+### <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>HoloLens 2 에뮬레이터에서 Windows Mixed Reality 몰입형 헤드셋 및 모션 컨트롤러 사용
+
+HoloLens 2 에뮬레이터(Windows Holographic 2004 버전)부터 Windows Mixed Reality 헤드셋 및 모션 컨트롤러를 사용하여 HoloLens 2 에뮬레이터를 스테레오로 보고 상호 작용할 수 있습니다.  따라서 HoloLens 2 디바이스 없이 머리와 손으로 더 빠르고 자연스러운 움직임을 수행할 수 있습니다.  HoloLens 2 디바이스를 완전히 대체하는 것은 아니지만 2D 데스크톱 창에서 키보드, 마우스 및 게임 패드를 사용하여 에뮬레이터와 상호 작용하는 것보다 더 향상된 환경을 제공하기 위한 것입니다.  이 기능을 사용하도록 설정하려면 다음을 수행합니다.
+
+1. Windows Mixed Reality가 PC에 구성되어 있고 Windows Mixed Reality 몰입형 헤드셋이 연결되어 있는지 확인합니다.
+2. HoloLens 2 에뮬레이터를 시작합니다.
+3. 도구 모음 단추를 클릭하거나 F7 키를 눌러 시뮬레이션 패널을 엽니다.
+4. 패널을 아래쪽으로 스크롤합니다.
+5. "시뮬레이션에 HMD 사용" 확인란을 선택합니다.
+6. Windows Mixed Reality가 시작되고 에뮬레이터 디스플레이가 약간 변경됩니다.  헤드셋을 사용하지 않는 경우 에뮬레이터에서 양쪽 눈을 머리 중심에 배치하여 하나의 눈만 표시합니다.  헤드셋을 사용하는 경우 에뮬레이터에서 진정한 스테레오 출력을 생성하지만 한쪽 눈만 데스크톱 창으로 렌더링되고 양쪽 눈은 모두 헤드셋에 렌더링됩니다.
+7. 필요에 따라 하나 또는 두 개의 모션 컨트롤러를 설정합니다.  컨트롤러 입력은 에뮬레이터의 손 입력에 매핑됩니다.  예를 들어 탭하려면 모션 컨트롤러에서 트리거를 끌어옵니다.  움직이려면 엄지 스틱을 사용합니다.  컨트롤의 전체 목록은 [고급 HoloLens 에뮬레이터 및 Mixed Reality 시뮬레이터 입력](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)을 참조하세요.
+
+헤드셋에서 콘텐츠를 보는 데 문제가 있나요?
+
+- 헤드셋과 Mixed Reality 포털 모두에서 디스플레이가 비어 있지만 데스크톱의 HoloLens 2 에뮬레이터 창에 콘텐츠가 표시되는 경우 에뮬레이터에서 하드웨어 그래픽 가속을 사용하도록 설정되어 있는지 확인합니다.  Windows Mixed Reality 몰입형 헤드셋을 지원하려면 에뮬레이터에서 하드웨어 그래픽 가속을 사용하도록 설정해야 합니다.
+- 콘텐츠가 헤드셋에 표시되지만 홀로그램이 흐리거나 이중 이미지가 표시되는 경우 다음 단계를 사용하여 스테레오 보기를 눈에 맞게 조정합니다.
+
+1. "시뮬레이션에 HMD 사용"을 일시적으로 해제합니다.
+2. 레지스트리 편집기(regedit.exe)를 시작합니다.
+3. HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation으로 이동합니다.
+4. EnableEyePoseControl이라는 새 DWORD 값을 만들고, 해당 값을 1로 설정합니다.
+5. 에뮬레이터에서 "시뮬레이션에 HMD 사용"을 사용하도록 설정합니다.
+6. 콘텐츠가 헤드셋에 표시되면 화살표 키를 사용하여 눈 회전을 조정합니다.  왼쪽 Alt 키를 누른 채 왼쪽 눈을 조정하고, 오른쪽 Alt 키를 누른 채 오른쪽 눈을 조정합니다.  'Q' 및 'E' 키를 사용하여 각 눈의 롤링을 조정하고, 다시 적절한 Alt 키를 누른 채 해당 눈을 조정합니다.  '+' 및 '-' 키를 사용하여 눈 사이의 거리를 조정합니다.  (숫자 패드의 +/-는 작동하지 않습니다.  기본 키보드의 단추를 사용하세요.)
+7. 스테레오 보기가 올바르게 표시되면 'S' 키를 눌러 변경 내용을 저장합니다.  이후 에뮬레이터를 시작할 수 있도록 새 구성이 저장됩니다.
+8. 변경을 취소하고 이전 구성으로 되돌리려면 'L' 키를 눌러 기본 구성 또는 이전 구성을 로드합니다.
+9. 레지스트리에서 "EnableEyePoseControl" 값을 0으로 변경하고 "시뮬레이션에 HMD 사용" 옵션을 반복합니다.
+
+구성을 저장하고 제거하려는 경우 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation에서 "DisplayConfiguration"이라는 값을 삭제할 수 있습니다.  에뮬레이터에서 현재 헤드셋을 사용하고 있는 경우 "시뮬레이션에 HMD 사용"을 해제하고 다시 설정하여 이 변경 내용이 적용되는지 확인해야 합니다.
 
 ## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>HoloLens(1세대) 에뮬레이터의 구조
 
@@ -218,6 +248,11 @@ Windows 10 2019년 5월 업데이트 이상에서 에뮬레이터를 실행하�
 또한 HoloLens(1세대)에서 [Windows 디바이스 포털](using-the-windows-device-portal.md)의 시뮬레이션 페이지를 사용하여 에뮬레이터에서 사용할 자신의 공간을 기록할 수 있습니다.
 
 에뮬레이터에서 렌더링하는 홀로그램만 표시됩니다. 그러나 시뮬레이션된 공간은 홀로그램 뒤에 표시 되지 않습니다. 이것은 두 가지가 함께 혼합되어 보이는 실제 HoloLens와는 대조적입니다. HoloLens 에뮬레이터에서 시뮬레이트된 공간을 보려면 장면에서 공간적 매핑 메시를 렌더링하도록 애플리케이션을 업데이트해야 합니다.
+
+## <a name="known-issues"></a>알려진 문제
+
+* HoloLens 2 에뮬레이터를 제거할 때 하드 디스크 이미지(Flash.vhdx)가 Windows Kits\10\Emulation\HoloLens\<빌드 번호> 폴더의 하드 드라이브에 남아 있을 수 있습니다.  이 파일은 삭제해도 안전합니다.
+* 하드웨어 그래픽 가속으로 인해 AMD 또는 Intel 그래픽을 사용하는 일부 시스템에서 Holographic 앱의 작동이 중단될 수 있습니다.  에뮬레이터 도구 창에서 하드웨어 그래픽 가속을 사용하지 않도록 설정하면 이 문제가 해결됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 

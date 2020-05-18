@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723252"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227998"
 ---
 # <a name="direct-manipulation-with-hands"></a>수동으로 직접 조작
 
@@ -41,7 +41,7 @@ ms.locfileid: "75723252"
      <td>수동으로 직접 조작</td>
      <td>❌ 지원 안 됨</td>
      <td>✔️ 권장</td>
-     <td>➕ 대안으로 <a href="point-and-commit.md">손으로 가리키고 커밋</a>이 권장됩니다.</td>
+     <td>➕ 지원됨.  UI의 경우 대신 <a href="point-and-commit.md">손을 사용하여 가리키고 커밋</a>하는 것이 좋습니다.</td>
     
 </tr>
 </table>
