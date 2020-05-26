@@ -7,14 +7,14 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 17f7ab1c1126c47e5ac6388d125d45cf3f2c2d87
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+ms.openlocfilehash: 2e4d26ed4e0b8199bfc629016aea688bd1c41ef8
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851554"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83520028"
 ---
-# <a name="3-making-your-scene-interactive"></a>3. 대화형 장면 만들기
+# <a name="4-making-your-scene-interactive"></a>4. 대화형 장면 만들기
 
 이 섹션에서는 대화형 장면을 쉽게 만들 수 있는 도구 세트를 제공하는 Mixed Reality Toolkit UX Tools 플러그 인을 소개합니다. 이 섹션을 마치면 체스 말이 사용자 입력에 응답합니다. 
 
