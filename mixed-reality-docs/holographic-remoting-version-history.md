@@ -6,20 +6,26 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
-ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
+ms.openlocfilehash: b128f91947fa8700502f7541cba23c726238a067
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484303"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866853"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
 
+## <a name="version-213-may-25-2020"></a>버전 2.1.3 (5 월 25 일, 2020)<a name="v2.1.3"></a>
+* [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) 이벤트의 동작이 변경 되었습니다. 이전 버전에서는 [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame)를 통해 다음 프레임을 만들 때 추가 된 [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) 도 유효한 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) 을 보장 **하지** 않았습니다. 버전 2.1.3 [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) 는 Holographic Remoting 플레이어에서 제공 되는 포즈 데이터와 동기화 되 고, 사용자는 카메라가 추가 될 때 다음 프레임에서 해당 카메라에 사용할 수 있는 유효한 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) 도 있습니다.
+* RemoteContext. ConfigureDepthVideoStream를 통해 깊이 버퍼 스트리밍을 사용 하지 않도록 설정 하는 데 사용할 수 있는 DepthBufferStreamResolution에 사용 **하지 않도록** 추가 되었습니다. HolographicCameraRenderingParameters를 사용 하는 경우 CommitDirect3D11DepthBuffer는 *E_ILLEGAL_METHOD_CALL*와 함께 실패 합니다 [.](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
+* Holographic Remoting 플레이어의 시작 화면이 다시 디자인 되었으며 이제 사용자 보기를 차단 하지 않습니다.
+* 안정성 향상 및 buf 수정.
+
 ## <a name="version-212-april-5-2020"></a>버전 2.1.2 (2020 4 월 5 일)<a name="v2.1.2"></a>
-* 2\.1.0 보다 작은 버전을 사용 하 여 최신 Holographic 원격 플레이어와 원격 앱 간에 오디오의 이전 버전과의 호환성 문제가 해결 되었습니다.
+* 2.1.0 보다 작은 버전을 사용 하 여 최신 Holographic 원격 플레이어와 원격 앱 간에 오디오의 이전 버전과의 호환성 문제가 해결 되었습니다.
 * Holographic 원격 플레이어를 예기치 않게 닫은 공간 앵커 문제를 수정 했습니다. 이 문제는 사용자 지정 플레이어에도 영향을 줍니다.
 
 ## <a name="version-211-march-20-2020"></a>버전 2.1.1 (3 월 20 일, 2020)<a name="v2.1.1"></a>
@@ -55,9 +61,9 @@ ms.locfileid: "81484303"
 
 ## <a name="version-209-september-19-2019"></a>버전 2.0.9 (2019 년 9 월 19 일)<a name="v2.0.9"></a>
 * [SpatialAnchorExporter](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter) 에 대 한 지원이 추가 됨
-* 다음 멤버를 제공 하는 새 인터페이스 ```IPlayerContext2``` (```PlayerContext```에서 구현 됨)를 추가 했습니다.
+* ```IPlayerContext2```다음 멤버를 제공 하 여에서 구현 하는 새 인터페이스를 추가 했습니다 ```PlayerContext``` .
   - [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout) 속성입니다.
-* ```Failed_RemoteFrameTooOld``` 값이에 추가 되었습니다 ```BlitResult```
+* 값 추가 됨 ```Failed_RemoteFrameTooOld``````BlitResult```
 * 안정성 및 안정성 향상
 
 ## <a name="version-208-august-20-2019"></a>버전 2.0.8 이상이 필요 (2019 년 8 월 20 일)<a name="v2.0.8"></a>
@@ -69,9 +75,9 @@ ms.locfileid: "81484303"
 
 * HoloLens 2에 대 한 Holographic 원격 작업의 첫 번째 공개 릴리스입니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)

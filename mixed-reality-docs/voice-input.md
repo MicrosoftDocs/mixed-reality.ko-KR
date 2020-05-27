@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
-ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277981"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866923"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -25,14 +25,14 @@ ms.locfileid: "81277981"
 
 ## <a name="voice-and-gaze"></a>음성 및 응시
 
-음성 명령을 사용 하는 경우 (head 또는 눈) 응시는 일반적으로 커서 ("select")를 사용 하 여 대상 메커니즘으로 사용 되거나 원하는 응용 프로그램에 명령을 암시적으로 채널 합니다. 이 경우에는 모든 응시 커서를 표시 하는 데 필요 하지 않을 수 있습니다 _("참조)_ . 물론 일부 음성 명령에는 "시작으로 이동" 또는 "안녕하세요 Cortana"와 같은 대상이 전혀 필요 하지 않습니다.
+음성 명령을 사용 하는 경우 (head 또는 눈) 응시는 일반적으로 커서 ("select")를 사용 하 여 대상 메커니즘으로 사용 되거나 원하는 응용 프로그램에 명령을 암시적으로 채널 합니다. 이 경우에는 모든 응시 커서를 표시 하는 데 필요 하지 않을 수 있습니다 _("참조)_. 물론 일부 음성 명령에는 "시작으로 이동" 또는 "안녕하세요 Cortana"와 같은 대상이 전혀 필요 하지 않습니다.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/eHMkOpNUtR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
     <colgroup>
@@ -42,7 +42,7 @@ ms.locfileid: "81277981"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
+        <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -59,7 +59,7 @@ ms.locfileid: "81277981"
 
 **HoloLens(1세대)**
 
-앱에 음성 지원을 특별히 추가 하지 않은 경우에도 사용자는 시스템 음성 명령 "select"를 통해 holograms을 활성화할 수 있습니다. 이는 HoloLens의 [공기 탭](gaze-and-commit.md#composite-gestures) , [hololens clicker](hardware-accessories.md#hololens-clicker)의 선택 단추 누르기 또는 [Windows Mixed Reality 동작 컨트롤러](motion-controllers.md)에서 트리거 누르기와 동일 하 게 작동 합니다. 소리가 들리고 "선택"이 확인으로 표시 된 도구 설명이 표시 됩니다. "선택"은 낮은 파워 키워드 검색 알고리즘에서 사용 하도록 설정 되므로 사용자가 손을 사용 하더라도 배터리 수명에 영향을 최소화 하면서 언제 든 지 항상 사용할 수 있습니다.
+앱에 음성 지원을 특별히 추가 하지 않은 경우에도 사용자는 시스템 음성 명령 "select"를 통해 holograms을 활성화할 수 있습니다. 이는 HoloLens의 [공기 탭](gaze-and-commit.md#composite-gestures) , [hololens clicker](https://docs.microsoft.com/hololens/hololens1-clicker)의 선택 단추 누르기 또는 [Windows Mixed Reality 동작 컨트롤러](motion-controllers.md)에서 트리거 누르기와 동일 하 게 작동 합니다. 소리가 들리고 "선택"이 확인으로 표시 된 도구 설명이 표시 됩니다. "선택"은 낮은 파워 키워드 검색 알고리즘에서 사용 하도록 설정 되므로 사용자가 손을 사용 하더라도 배터리 수명에 영향을 최소화 하면서 언제 든 지 항상 사용할 수 있습니다.
 
 <br>
 
@@ -84,15 +84,15 @@ ms.locfileid: "81277981"
 ---
 
 
-## <a name="hey-cortana"></a>안녕 코타나
+## <a name="hey-cortana"></a>안녕하세요. Cortana
 
 또한 언제 든 지 Cortana를 표시 하는 "안녕하세요" Cortana를 사용할 수 있습니다. 사용자의 질문을 계속 하거나 명령을 제공 하기 위해 사용자가 표시 될 때까지 기다릴 필요가 없습니다. 예를 들어 "안녕하세요? 단일 문장으로 Cortana 및 수행할 수 있는 작업에 대 한 자세한 내용은 사용자에 게 문의 하세요. "안녕하세요?" 라고 표시 됩니다. 그리고 작업 및 제안 된 명령 목록을 가져옵니다. Cortana 앱에 이미 있는 경우 **다음을 클릭 하면 됩니다** . 동일한 메뉴를 끌어올 수 있는 아이콘입니다.
 
 **HoloLens 관련 명령**
-* "이렇게 말 하세요~"
+* "무엇을 할 수 있나요?"
 * [시작 메뉴로](navigating-the-windows-mixed-reality-home.md#start-menu) 이동 하려면 [블 룸](system-gesture.md#bloom) 대신 "시작으로 이동"을 참조 하세요.
-* "시작 <app>"
-* "여기 <app> 이동"
+* "Launch <app> "
+* " <app> 여기로 이동"
 * "사진 찍기"
 * "기록 시작"
 * "기록 중지"
@@ -121,8 +121,8 @@ ms.locfileid: "81277981"
         *이미지: 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 앱의 위치를 조정할 수 있습니다.*
     :::column-end:::
         :::column:::
-        ![공간](images/spacer-20x582.png)<br>
-        ![앱 창이 나 홀로그램을 볼 때 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 전 세계의 앱 위치를 조정할 수 있습니다](images/microphone-600px.png)<br>
+        ![space](images/spacer-20x582.png)<br>
+        ![앱 창이 나 홀로그램을 볼 때 사용자가 앱 바에 표시 되는 "조정" 명령을 사용 하 여 전 세계의 앱 위치를 조정할 수 있습니다.](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -173,7 +173,7 @@ HoloLens 2에서는 참조 하는 내용에 대 한 컨텍스트 정보를 암�
 
 음성 받아쓰기는 [공기 탭](gaze-and-commit.md#composite-gestures)을 사용 하 여 입력 하는 대신 앱에 텍스트를 입력 하는 것이 더 효율적일 수 있습니다. 이렇게 하면 사용자에 대해 더 짧은 노력으로 입력 속도를 크게 높일 수 있습니다.
 
-음성 받아쓰기는 마이크 단추를 선택 하 여 시작 ![](images/micbuttonfordictation.png)<br>
+![음성 받아쓰기는 마이크 단추를 선택 하 여 시작 합니다.](images/micbuttonfordictation.png)<br>
 *음성 받아쓰기는 키보드에서 마이크 단추를 선택 하 여 시작 합니다.*
 
 Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰기 모드로 전환할 수 있습니다. 텍스트 입력 상자의 측면에서 마이크를 선택 하 여 시작 합니다.
@@ -195,7 +195,7 @@ Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰�
 * **음성 명령 일관성 유지** - "Go back"이라고 말할 경우 이전 페이지로 이동되면 애플리케이션에서 이 동작을 유지합니다.
 * **시스템 명령 사용 방지** - 다음 음성 명령은 시스템용으로 예약되어 있습니다. 따라서 애플리케이션에서 사용하지 않아야 합니다.
    * "Hey Cortana"
-   * [선택]
+   * "Select"
    * "시작으로 이동"
 
 ### <a name="advantages-of-voice-input"></a>음성 입력의 장점
@@ -240,15 +240,15 @@ Holographic 키보드가 활성화 될 때마다 입력 하는 대신 받아쓰�
 
 :::row:::
     :::column:::
-       1 ![합니다. 일반 커서 상태](images/voicefeedbackstates-regular.jpg)<br>
+       ![1. 일반 커서 상태](images/voicefeedbackstates-regular.jpg)<br>
        **1. 일반 커서 상태**<br>
     :::column-end:::
     :::column:::
-       ![2. 음성 피드백을 전달 하 고 사라지면](images/voicefeedbackstates-voice.jpg)<br>
+       ![2. 음성 피드백을 전달 하 고 사라집니다.](images/voicefeedbackstates-voice.jpg)<br>
         **2. 음성 피드백을 전달 하 고 사라집니다.**<br>
     :::column-end:::
     :::column:::
-       ![* 3입니다. 일반 커서 상태](images/voicefeedbackstates-regular.jpg)<br>
+       ![3. 일반 커서 상태](images/voicefeedbackstates-regular.jpg)<br>
        **3. 일반 커서 상태로 돌아갑니다.**<br>
     :::column-end:::
 :::row-end:::
@@ -304,7 +304,7 @@ Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연�
 
 ---
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 * [응시 및 커밋](gaze-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [MR 입력 212: 음성](holograms-212.md)

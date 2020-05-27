@@ -1,19 +1,19 @@
 ---
-title: Holographic Remoting 원격 앱 작성
+title: 홀로그램 원격 원격 앱 작성
 description: 원격 컴퓨터에서 렌더링 되는 Holographic Remoting 원격 앱 원격 콘텐츠를 만들면 HoloLens 2로 스트리밍할 수 있습니다. 이 문서에서는이를 달성할 수 있는 방법에 대해 설명 합니다.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 6c6da16d83f593d9987bf7e534f9f663f11abd01
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 53f370dc32b4fe56eb610b6e5687022e0908f7a8
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278121"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866863"
 ---
-# <a name="writing-a-holographic-remoting-remote-app"></a>Holographic Remoting 원격 앱 작성
+# <a name="writing-a-holographic-remoting-remote-app"></a>홀로그램 원격 원격 앱 작성
 
 >[!IMPORTANT]
 >이 문서에서는 HoloLens 2 용 원격 응용 프로그램을 만드는 방법을 설명 합니다. HoloLens 용 원격 응용 프로그램 **(첫 번째 gen)** 은 NuGet 패키지 **버전 1.x를 사용**해야 합니다. 즉, HoloLens 2 용으로 작성 된 원격 응용 프로그램은 HoloLens 1과 호환 되지 않으며 그 반대의 경우도 마찬가지입니다. HoloLens 1에 대 한 설명서는 [여기](add-holographic-remoting.md)에서 찾을 수 있습니다.
@@ -26,10 +26,10 @@ Holographic remoting을 사용 하면 앱이 데스크톱 PC 또는 UWP 장치 (
 
 ## <a name="prerequisites"></a>필수 조건
 
-좋은 출발점은 Windows Mixed Reality API를 대상으로 하는 작동 하는 DirectX 기반 데스크톱 또는 UWP 앱입니다. 자세한 내용은 [DirectX 개발 개요](directx-development-overview.md)를 참조 하세요. Holographic 프로젝트 템플릿이 좋은 출발점입니다. [ C++ ](creating-a-holographic-directx-project.md)
+좋은 출발점은 Windows Mixed Reality API를 대상으로 하는 작동 하는 DirectX 기반 데스크톱 또는 UWP 앱입니다. 자세한 내용은 [DirectX 개발 개요](directx-development-overview.md)를 참조 하세요. [C + + holographic 프로젝트 템플릿이](creating-a-holographic-directx-project.md) 좋은 출발점입니다.
 
 >[!IMPORTANT]
->Holographic 원격을 사용 하는 모든 앱은 [다중 스레드 아파트](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)를 사용 하도록 작성 되어야 합니다. [단일 스레드 아파트](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) 를 사용 하는 것은 지원 되지만, 재생 하는 동안 일지 성능이 저하 될 수 있습니다. /Winrt C++ [winrt:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) 사용 하는 경우 다중 스레드 아파트는 기본값입니다.
+>Holographic 원격을 사용 하는 모든 앱은 [다중 스레드 아파트](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments)를 사용 하도록 작성 되어야 합니다. [단일 스레드 아파트](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) 를 사용 하는 것은 지원 되지만, 재생 하는 동안 일지 성능이 저하 될 수 있습니다. C + +/WinRT [winrt:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) 사용 하는 경우 다중 스레드 아파트는 기본값입니다.
 
 
 
@@ -75,7 +75,7 @@ CreateRemoteContext(m_remoteContext, 20000, false, PreferredVideoCodec::Default)
 >[!WARNING]
 >Holographic Remoting은 원격 특정 런타임을 사용 하 여 Windows의 일부인 Windows Mixed Reality 런타임을 대체 하는 방식으로 작동 합니다. 이 작업은 원격 컨텍스트를 만드는 동안 수행 됩니다. 이러한 이유로 원격 컨텍스트를 만들기 전에 Windows Mixed Reality API를 호출 하면 예기치 않은 동작이 발생할 수 있습니다. 혼합 현실 API와의 상호 작용 전에 가능한 한 빨리 원격 컨텍스트를 만드는 것이 좋습니다. 이후에 만들어지거나 검색 된 개체를 사용 하 여 CreateRemoteContext를 호출 하기 전에 Windows Mixed Reality API를 통해 만들어지거나 검색 된 개체를 혼합 하지 마세요.
 
-다음으로 holographic 공간을 만들어야 합니다. CoreWindow 지정은 필요 하지 않습니다. CoreWindow 없는 데스크톱 앱은 단순히 ```nullptr```전달할 수 있습니다.
+다음으로 holographic 공간을 만들어야 합니다. CoreWindow 지정은 필요 하지 않습니다. CoreWindow 없는 데스크톱 앱은만 전달할 수 있습니다 ```nullptr``` .
 
 ```cpp
 m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::CreateForCoreWindow(nullptr);
@@ -89,7 +89,7 @@ m_holographicSpace = winrt::Windows::Graphics::Holographic::HolographicSpace::Cr
 1) 원격 앱은 장치에서 실행 중인 플레이어에 연결 합니다.
 2) 장치에서 실행 되는 플레이어가 원격 앱에 연결 합니다.
 
-원격 앱에서 HoloLens 2로의 연결을 설정 하려면 호스트 이름 및 포트를 지정 하는 원격 컨텍스트에서 ```Connect``` 메서드를 호출 합니다. Holographic Remoting 플레이어에서 사용 하는 포트는 **8265**입니다.
+원격 앱에서 HoloLens 2로의 연결을 설정 하려면 ```Connect``` 호스트 이름 및 포트를 지정 하는 원격 컨텍스트에서 메서드를 호출 합니다. Holographic Remoting 플레이어에서 사용 하는 포트는 **8265**입니다.
 
 ```cpp
 try
@@ -103,12 +103,12 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->모든 C++/WINRT API ```Connect```는 처리 해야 하는 WinRT:: hresult_error을 throw 할 수 있습니다.
+>모든 c + +/WinRT API와 마찬가지로 처리 해야 하 ```Connect``` 는 WinRT:: hresult_error을 throw 할 수 있습니다.
 
 >[!TIP]
->[ C++/Winrt](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) 언어 프로젝션을 사용 하지 않으려면 Holographic Remoting NuGet 패키지 내에 있는 파일 ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` 포함 될 수 있습니다. 여기에는 기본 COM 인터페이스의 선언이 포함 됩니다. 그러나 C++/winrt를 사용 하는 것이 좋습니다.
+>[C + +/vb](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/) 언어 프로젝션을 사용 하지 않으려면 ```build\native\include\<windows sdk version>\abi\Microsoft.Holographic.AppRemoting.h``` Holographic Remoting NuGet 패키지 내에 있는 파일을 포함할 수 있습니다. 여기에는 기본 COM 인터페이스의 선언이 포함 됩니다. 그러나 c + +/WinRT를 사용 하는 것이 좋습니다.
 
-원격 앱에서 들어오는 연결을 수신 하는 작업은 ```Listen``` 메서드를 호출 하 여 수행할 수 있습니다. 이 호출 중에 핸드셰이크 포트와 전송 포트를 모두 지정할 수 있습니다. 핸드셰이크 포트는 초기 핸드셰이크에 사용 됩니다. 그런 다음 데이터는 전송 포트를 통해 전송 됩니다. 기본적으로 **8265** 및 **8266** 이 사용 됩니다.
+원격 앱에서 들어오는 연결을 수신 하는 작업은 메서드를 호출 하 여 수행할 수 있습니다 ```Listen``` . 이 호출 중에 핸드셰이크 포트와 전송 포트를 모두 지정할 수 있습니다. 핸드셰이크 포트는 초기 핸드셰이크에 사용 됩니다. 그런 다음 데이터는 전송 포트를 통해 전송 됩니다. 기본적으로 **8265** 및 **8266** 이 사용 됩니다.
 
 ```cpp
 try
@@ -122,7 +122,7 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->NuGet 패키지 내의 ```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl``` Holographic Remoting에서 노출 하는 API에 대 한 자세한 설명서를 포함 합니다.
+>```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl```NuGet 패키지 내에는 Holographic Remoting에서 노출 하는 API에 대 한 자세한 설명서가 포함 되어 있습니다.
 
 ## <a name="handling-remoting-specific-events"></a>원격 특정 이벤트 처리
 
@@ -174,7 +174,7 @@ m_onListeningEventRevoker = m_remoteContext.OnListening(winrt::auto_revoke, [thi
 });
 ```
 
-또한 원격 컨텍스트의 ```ConnectionState``` 속성을 사용 하 여 연결 상태를 쿼리할 수 있습니다.
+또한 원격 컨텍스트의 속성을 사용 하 여 연결 상태를 쿼리할 수 있습니다 ```ConnectionState``` .
 ```cpp
 auto connectionState = m_remoteContext.ConnectionState();
 ```
@@ -199,7 +199,7 @@ if (auto remoteSpeech = m_remoteContext.GetRemoteSpeech())
 }
 ```
 
-비동기 도우미 메서드를 사용 하 여 원격 음성을 초기화할 수 있습니다. 초기화는 상당한 시간이 걸릴 수 있으므로이 작업은 비동기적으로 수행 해야 합니다. [/WinRT를 사용한 C++동시성 및 비동기 작업](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) 은/winrt. 사용 하 여 C++비동기 함수를 작성 하는 방법을 설명 합니다.
+비동기 도우미 메서드를 사용 하 여 원격 음성을 초기화할 수 있습니다. 초기화는 상당한 시간이 걸릴 수 있으므로이 작업은 비동기적으로 수행 해야 합니다. [C + +/WinRT를 사용한 동시성 및 비동기 작업](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) 은 c + +/WinRT. 사용 하 여 비동기 함수를 작성 하는 방법을 설명
 
 ```cpp
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile> LoadGrammarFileAsync()
@@ -237,7 +237,7 @@ winrt::fire_and_forget InitializeSpeechAsync(
 
 인식 될 구를 지정 하는 방법에는 두 가지가 있습니다.
 1) 음성 문법 xml 파일 내의 사양입니다. 자세한 내용은 [기본 XML 문법을 만드는 방법](https://docs.microsoft.com//previous-versions/office/developer/speech-technologies/hh361658(v=office.14)) 을 참조 하세요.
-2) ```ApplyParameters```하려면 사전 벡터 내부에 전달 하 여를 지정 합니다.
+2) 를 사전 벡터 내부에 전달 하 여 지정 ```ApplyParameters``` 합니다.
 
 OnRecognizedSpeech 콜백 내에서 음성 이벤트를 처리할 수 있습니다.
 
@@ -268,7 +268,7 @@ void SampleRemoteMain::OnRecognizedSpeech(const winrt::hstring& recognizedText)
 
 ## <a name="preview-streamed-content-locally"></a>스트리밍 콘텐츠를 로컬로 미리 봅니다.
 
-장치에 전송 되는 원격 앱에 동일한 콘텐츠를 표시 하려면 원격 컨텍스트의 ```OnSendFrame``` 이벤트를 사용할 수 있습니다. Holographic 원격 라이브러리가 현재 프레임을 원격 장치로 보낼 때마다 ```OnSendFrame``` 이벤트가 트리거됩니다. 이는 콘텐츠를 사용 하 여 데스크톱 또는 UWP 창으로 array.blit 하는 데 가장 적합 한 시간입니다.
+장치에 전송 되는 원격 앱에 동일한 콘텐츠를 표시 하려면 ```OnSendFrame``` 원격 컨텍스트의 이벤트를 사용할 수 있습니다. ```OnSendFrame```이 이벤트는 Holographic 원격 라이브러리가 현재 프레임을 원격 장치로 보낼 때마다 트리거됩니다. 이는 콘텐츠를 사용 하 여 데스크톱 또는 UWP 창으로 array.blit 하는 데 가장 적합 한 시간입니다.
 
 ```cpp
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -293,7 +293,7 @@ m_onSendFrameEventRevoker = m_remoteContext.OnSendFrame(
 
 ## <a name="depth-reprojection"></a>깊이 예측
 
-[2.1.0](holographic-remoting-version-history.md#v2.1.0)버전부터 Holographic Remoting은 [깊이 재 프로젝션을](hologram-stability.md#reprojection)지원 합니다. 이를 위해서는 색 버퍼 외에도 원격 응용 프로그램에서 HoloLens 2로 깊이 버퍼를 스트리밍할 수 있습니다. 기본적으로 깊이 버퍼는 색 버퍼의 해상도 절반으로 스트리밍됩니다. 다음과 같이 변경할 수 있습니다.
+[2.1.0](holographic-remoting-version-history.md#v2.1.0)버전부터 Holographic Remoting은 [깊이 재 프로젝션을](hologram-stability.md#reprojection)지원 합니다. 이를 위해서는 색 버퍼 외에도 원격 응용 프로그램에서 HoloLens 2로 깊이 버퍼를 스트리밍할 수 있습니다. 기본적으로 깊이 버퍼 스트리밍은 사용 하도록 설정 되 고 색 버퍼의 절반 정도를 사용 하도록 구성 됩니다. 다음과 같이 변경할 수 있습니다.
 
 ```cpp
 // class implementation
@@ -308,7 +308,14 @@ m_remoteContext.ConfigureDepthVideoStream(DepthBufferStreamResolution::Half_Reso
 
 ```
 
-HoloLens 2에 대 한 연결을 설정 하기 전에 ```ConfigureDepthVideoStream```를 호출 해야 합니다. 가장 좋은 장소는 원격 컨텍스트를 만든 직후입니다. 가능한 값은 전체, 절반 및 사분기 해상도입니다. 기본값은 반 해상도입니다. 전체 해상도 깊이 버퍼를 사용 하면 대역폭 요구 사항에도 영향을 미치므로 ```CreateRemoteContext```하는 데 제공 하는 최대 대역폭 값에서을 고려해 야 합니다.
+기본 값을 사용 하지 않아야 하는 경우 ```ConfigureDepthVideoStream``` HoloLens 2에 대 한 연결을 설정 하기 전에를 호출 해야 합니다. 가장 좋은 장소는 원격 컨텍스트를 만든 직후입니다. DepthBufferStreamResolution에 사용할 수 있는 값은 다음과 같습니다.
+
+* Full_Resolution
+* Half_Resolution
+* Quarter_Resolution
+* 사용 안 함 (버전 [2.1.3](holographic-remoting-version-history.md#v2.1.3) 가 추가 되 고 사용 되는 경우 추가 깊이 비디오 스트림이 생성 되지 않음)
+
+전체 해상도 깊이 버퍼를 사용 하면 대역폭 요구 사항에도 영향을 주며, 사용자가 제공 하는 최대 대역폭 값에서에 대해 고려해 야 ```CreateRemoteContext``` 합니다.
 
 해상도를 구성 하는 것 외에도 [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)를 통해 깊이 버퍼를 커밋해야 합니다.
 
@@ -352,10 +359,10 @@ void SampleRemoteMain::Render(HolographicFrame holographicFrame)
 
 사용자 지정 데이터 채널은 이미 설정 된 원격 연결을 통해 사용자 데이터를 전송 하는 데 사용할 수 있습니다. 자세한 내용은 [사용자 지정 데이터 채널](holographic-remoting-custom-data-channels.md) 을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 * [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [사용자 지정 홀로그램 원격 데이터 채널](holographic-remoting-custom-data-channels.md)
 * [Holographic 원격을 사용 하 여 보안 연결 설정](holographic-remoting-secure-connection.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Microsoft 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)

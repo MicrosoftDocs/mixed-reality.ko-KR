@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: 혼합 현실, 응시, 응시 대상 지정, 상호 작용, 디자인, 눈 추적, head 추적
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375850"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866893"
 ---
 # <a name="gaze-and-commit"></a>응시 및 커밋
 
@@ -33,7 +33,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
 <br>
 
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
     <colgroup>
@@ -56,9 +56,9 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
     </tr>
          <tr>
         <td>시선 응시 및 커밋</td>
-        <td>❌ 사용할 수 없음</td>
+        <td>❌사용할 수 없음</td>
         <td>✔️ 권장(세 번째 선택 - <a href="interaction-fundamentals.md">다른 옵션 보기</a>)</td>
-        <td>❌ 사용할 수 없음</td>
+        <td>❌사용할 수 없음</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
     </colgroup>
    <tr>
         <td><strong>눈동자-응시 대상 지정</strong></td>
-        <td><strong>헤드-응시 대상 지정</strong></td>
+        <td><strong>헤드 게이즈(head-gaze) 타기팅</strong></td>
     </tr>
     <tr>
         <td>빠르지!</td>
@@ -114,7 +114,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
 
 ---
 
-### <a name="cursor"></a>Cursor
+### <a name="cursor"></a>커서
 
 :::row:::
     :::column:::
@@ -123,7 +123,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
         아이 응시의 경우 일반적으로 사용자에 게 혼란을 줄 수 있으므로 커서를 표시 *하지 않는* 것이 좋습니다. 대신 시각적 대상을 미세 하 게 강조 표시 하거나 매우 희미 한 눈 커서를 사용 하 여 사용자가 상호 작용할 정보를 제공 합니다. 자세한 내용은 HoloLens 2의 [눈동자 기반 입력에 대 한 디자인 지침](eye-tracking.md) 을 확인 하세요.
     :::column-end:::
         :::column:::
-       응시를 표시 하는 예제 시각적 커서 ![](images/cursor.jpg)<br>
+       ![응시를 표시 하는 예제 시각적 커서](images/cursor.jpg)<br>
        *이미지: 응시를 표시 하는 예제 시각적 커서*
     :::column-end:::
 :::row-end:::
@@ -132,14 +132,14 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
 
 ---
 
-## <a name="commit"></a>커밋
+## <a name="commit"></a>Commit
 대상 _에 참여 하는_ 다양 한 방법에 대해 이야기 한 후에는 _응시 및 commit_의 _커밋_ 부분에 대해 좀 더 자세히 살펴보겠습니다.
 개체 또는 UI 요소를 대상으로 지정한 후에는 사용자가 보조 입력을 사용 하 여 상호 작용 하거나 클릭할 수 있습니다. 이를 입력 모델의 커밋 단계 라고 합니다. 
 
 지원되는 커밋 메서드는 다음과 같습니다.
 - 공기 탭 제스처 (즉, 사용자의 앞에 손을 올리고 인덱스 손가락 및 엄지 단추를 통합)
 - _"Select"_ 또는 대상 음성 명령 중 하나를 말합니다.
-- [HoloLens Clicker](hardware-accessories.md#hololens-clicker) 에서 단일 단추를 누릅니다.
+- [HoloLens Clicker](https://docs.microsoft.com/hololens/hololens1-clicker) 에서 단일 단추를 누릅니다.
 - Xbox 게임 패드에서 ' A ' 단추를 누릅니다.
 - Xbox 적응 컨트롤러에서 ' A ' 단추를 누릅니다.
 
@@ -149,11 +149,11 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
 
 :::row:::
     :::column:::
-       준비 위치에 손가락을 ![](images/readyandpress-ready.jpg)<br>
+       ![준비 위치의 핑거](images/readyandpress-ready.jpg)<br>
        **준비 위치의 핑거**<br>
     :::column-end:::
     :::column:::
-       손가락 아래로 ![눌러 탭 하거나 클릭](images/readyandpress-press.jpg)<br>
+       ![손가락 아래로를 눌러 탭 하거나 클릭 합니다.](images/readyandpress-press.jpg)<br>
         **손가락 아래로를 눌러 탭 하거나 클릭 합니다.**<br>
     :::column-end:::
 :::row-end:::
@@ -192,7 +192,7 @@ _응시 및 commit_ 은 간접 조작이 있는 far 입력 모델로 간주 됩�
         *이미지: HoloLens Clicker*
     :::column-end:::
         :::column:::
-       ![HoloLens Clicker](images/hololens-clicker-500px.jpg)<br>
+       ![HoloLens 클리커](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -263,7 +263,7 @@ Xbox 적응 컨트롤러는 ' A ' 단추를 사용 하 여 클릭 actuation를 �
 
 레일을 사용한 탐색은 특정 임계값에 도달할 때까지 특정 축의 움직임을 인식 하는 기능을 나타냅니다. 이는 응용 프로그램이 X, Y 축의 탐색 제스처를 인식 하도록 구성 되어 있지만 레일을 사용 하 여 X 축도 지정 하는 경우와 같이 개발자가 응용 프로그램에서 둘 이상의 축으로 이동 하는 경우에만 유용 합니다. 이 경우 Y 축에서 직접 이동이 발생 하는 경우 시스템은 x 축에서 허수 레일 (가이드) 내에 유지 되는 동안 X 축에서 직접 이동 하는 것을 인식 합니다.
 
-2D 앱에서는 사용자가 세로 탐색 제스처를 사용하여 앱 내에서 스크롤, 확대/축소 또는 끌기를 수행할 수 있습니다. 그러면 앱에 가상 손가락 터치가 삽입되어 같은 유형의 터치 제스처가 시뮬레이션됩니다. 사용자는 단추를 선택 하거나 ' < 스크롤/끌기/확대/축소 > 도구 '를 사용 하 여 응용 프로그램 위에 있는 막대의 도구 사이를 전환 하 여 수행할 작업을 선택할 수 있습니다.
+2D 앱에서는 사용자가 세로 탐색 제스처를 사용하여 앱 내에서 스크롤, 확대/축소 또는 끌기를 수행할 수 있습니다. 그러면 앱에 가상 손가락 터치가 삽입되어 같은 유형의 터치 제스처가 시뮬레이션됩니다. 사용자는 단추를 선택 하거나 ' <스크롤/끌기/확대/축소> 도구 '를 사용 하 여 응용 프로그램 위에 있는 막대의 도구 사이를 전환 하 여 수행할 작업을 선택할 수 있습니다.
 
 [복합 제스처에 대한 추가 정보](gaze-and-commit.md#composite-gestures)
 
@@ -290,7 +290,7 @@ HoloLens의 제스처의 경우이 손을 제스처 프레임 내에 있어야 �
 
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 * [시선 기반 상호 작용](eye-gaze-interaction.md)
 * [HoloLens 2의 시선 추적](eye-tracking.md)
 * [응시 및 유지](gaze-and-dwell.md)
