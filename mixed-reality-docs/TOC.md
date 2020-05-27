@@ -20,6 +20,7 @@
 ### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 ### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [위치 기반 엔터테인먼트](location-based-experiences.md)
+## [하드웨어 액세서리](hardware-accessories.md)
 ## [커뮤니티 리소스](community.md)
 # 디자인
 ## [디자인 및 프로토타입 생성 시작](design.md)
@@ -117,6 +118,7 @@
 ###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
 ###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
 ###### [3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
+###### [4. Android 및 iOS용 Azure Spatial Anchors](mrlearning-asa-ch4.md)
 ##### Azure Speech Services 자습서
 ###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
 ###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)
