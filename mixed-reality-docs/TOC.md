@@ -5,7 +5,7 @@
 ## 프로그램 및 이벤트
 ### [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
 ### [CVPR 2019 Mixed Reality 워크샵](cvpr-2019.md)
-## [현재 혼합 현실 릴리스 정보](release-notes-may-2019.md)
+## [현재 혼합 현실 릴리스 정보](release-notes-may-2020.md)
 ## [커뮤니티 리소스](community.md)
 ## [이 문서에 기고](CONTRIBUTING.md)
 # 검색
