@@ -304,7 +304,7 @@ Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연�
 
 ---
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 * [응시 및 커밋](gaze-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [MR 입력 212: 음성](holograms-212.md)

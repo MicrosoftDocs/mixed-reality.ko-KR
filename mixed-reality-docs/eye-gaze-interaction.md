@@ -1,17 +1,17 @@
 ---
-title: 눈동자-응시 기반 상호 작용
+title: 시선 응시 기반 상호 작용
 description: HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 수 있는 기능을 개발자에게 제공하여 홀로그램 환경 내에서 이해할 수 있는 새로운 수준의 컨텍스트 및 사용자를 허용합니다. 이 페이지에서는 눈동자를 입력으로 사용 하려는 개발자를 위한 디자인 권장 사항을 설명 합니다.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: 눈 추적, 혼합 현실, 입력, 눈에 응시
-ms.openlocfilehash: 93d2cfd82b5aa2a410268c5594b5772bcc0b21c7
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 2ae7723f116771986edc757f1c9d4f454b0a256f
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441103"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111035"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>HoloLens의 눈동자 기반 상호 작용 2
 
@@ -19,12 +19,12 @@ ms.locfileid: "73441103"
 
 HoloLens 2에 대 한 흥미로운 새로운 기능 중 하나는 눈 추적입니다.
 [HoloLens의 눈동자 추적 2](eye-tracking.md) 페이지에서는 몇 가지 개발자 지침을 제공 하 고 눈 추적을 위한 사용 사례를 강조 표시 하 여 각 사용자가 [보정](https://docs.microsoft.com/hololens/hololens-calibration)을 수행 해야 하는 필요성에 대해 설명 했습니다.
-눈에 보기 입력은 여전히 매우 새로운 유형의 사용자 입력 이며 많은 정보를 배울 수 있습니다. 눈에 잘 드는 입력은 Holographic Shell 환경 (HoloLens 2를 시작할 때 표시 되는 사용자 인터페이스)에서 매우 조금씩만 사용 되지만 ["MR"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)과 같은 여러 앱은 눈에 입력이 어떻게 마법에 추가 될 수 있는지에 대 한 좋은 예를 보여 줍니다. holographic 환경을 제공 합니다.
+눈에 보기 입력은 여전히 매우 새로운 유형의 사용자 입력 이며 많은 정보를 배울 수 있습니다. 눈에 잘 드는 입력은 Holographic Shell 환경 (HoloLens 2를 시작할 때 표시 되는 사용자 인터페이스)에서 매우 약간만 사용 하는 반면, ["hololens 탭"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)과 같은 몇 가지 앱은 눈에 입력이 Holographic 환경의 마법에 어떻게 추가 될 수 있는지에 대 한 좋은 예를 보여 줍니다.
 이 페이지에서는 holographic 응용 프로그램과 상호 작용 하기 위해 눈 응시 입력을 통합 하기 위한 디자인 고려 사항에 대해 설명 합니다.
 주요 이점 및 눈에 잘 맞는 입력으로 제공 되는 고유한 과제에 대해 알아봅니다.  
 이를 기반으로 하는 다양 한 디자인 권장 사항을 제공 하 여 눈길을 가진 눈길을 지 원하는 사용자 인터페이스를 만드는 데 도움을 줍니다. 
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
 <colgroup>
@@ -34,7 +34,7 @@ HoloLens 2에 대 한 흥미로운 새로운 기능 중 하나는 눈 추적입�
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>기능과</strong></td>
+     <td><strong>기능</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -105,7 +105,7 @@ HoloLens 2에 대 한 흥미로운 새로운 기능 중 하나는 눈 추적입�
 
     - **다중 모달 입력을 동기화 해야 합니다.** 긴 음성 명령 또는 핸드 제스처와 같이 보다 복잡 한 추가 입력을 사용 하 여 빠른 시각 움직임을 결합 하면 추가 입력 명령이 완료 되 고 인식 되기 전에 사용자가 이미 계속 살펴볼 위험이 있습니다. 따라서 사용자 지정 컨트롤을 직접 만드는 경우 (예: 사용자 지정 손 제스처)이 입력 또는 대략적인 기간의 하기 시작 하면을 기록 하 여 사용자가 이전에 살펴본 사용자의 상관 관계를 지정 해야 합니다.
     
-3. **눈 추적 입력에 대 한 미묘한 피드백:** 시스템이 의도 한 대로 작동 하지만 미묘한 상태로 유지 되어야 함을 나타내는 대상이 있는 경우 피드백을 제공 하는 것이 유용 합니다. 여기에는 느린 혼합, 제공 및 출력, 시각적으로 표시 되는 느린 동작 등의 미묘한 동작 (예: 대상 크기를 약간 늘리고 시스템에서 사용자가 사용자의 현재 워크플로를 불필요 하 게 중단 합니다. 
+3. **눈 추적 입력에 대 한 미묘한 피드백:** 시스템이 의도 한 대로 작동 하지만 미묘한 상태로 유지 되어야 함을 나타내는 대상이 있는 경우 피드백을 제공 하는 것이 유용 합니다. 여기에는 느린 혼합, 제공 및 출력, 시각적 효과 강조 표시 또는 대상 크기를 약간 늘리고, 사용자가 사용자의 현재 워크플로를 불필요 하 게 중단 하지 않고 대상에서 확인 하 고 있음을 나타내는 느린 동작과 같은 기타 미묘한 대상 동작을 수행할 수 있습니다. 
 
 4. **자연스럽 게 동작을 입력으로 적용 하지 마십시오.** 사용자가 응용 프로그램에서 작업을 트리거하기 위해 특정 눈 이동 (응시 제스처)을 수행 하도록 강요 하지 않습니다.
 
@@ -121,7 +121,7 @@ HoloLens 2에 대 한 흥미로운 새로운 기능 중 하나는 눈 추적입�
 * [편안함](comfort.md)
 * [눈-DirectX에서 응시](gaze-in-directx.md)
 * [눈동자-Unity에서 응시 (혼합 현실 도구 키트)](https://aka.ms/mrtk-eyes)
-* [HoloLens의 눈동자 추적 2](eye-tracking.md)
+* [HoloLens 2의 시선 추적](eye-tracking.md)
 * [응시 및 커밋](gaze-and-commit.md)
 * [응시 및 유지](gaze-and-dwell.md)
 * [음성 입력 ](voice-design.md)

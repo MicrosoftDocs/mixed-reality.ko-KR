@@ -6,14 +6,14 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 혼합 현실, 가상 현실, VR, MR, 성능, 최적화, CPU, GPU
-ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 4a0f4cd9caea5dd601ad663801e760261980c429
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277481"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111020"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>혼합 현실 성능 이해
+# <a name="understanding-performance-for-mixed-reality"></a>혼합 현실의 성능 이해
 
 이 문서에서는 혼합 현실 앱의 성능에 대 한 중요 한 개념을 소개 합니다.  최적의 프레임 속도에서 응용 프로그램이 실행 되지 않으면 사용자 환경이 크게 저하 될 수 있습니다. Holograms가 불안정 하 게 표시 되 고 환경에 대 한 헤드 추적이 부정확 하 게 표시 되어 사용자에 게 잘못 된 환경을 제공 합니다. 성능은 혼합 현실 개발의 경우 첫 번째 클래스 기능으로 간주 되어야 하며,이는 폴란드어 작업이 아닙니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "81277481"
 
 ## <a name="how-to-improve-your-application"></a>응용 프로그램을 개선 하는 방법
 
-### <a name="cpu-performance-recommendations"></a>CPU 성능 추천 사항
+### <a name="cpu-performance-recommendations"></a>CPU 성능 권장 사항
 
 일반적으로 CPU의 혼합 현실 응용 프로그램에서 대부분의 작업은 장면의 "시뮬레이션"을 수행 하 고 응용 프로그램 논리를 처리 하는 작업을 포함 합니다. 다음 영역은 일반적으로 최적화를 대상으로 합니다.
 
@@ -75,14 +75,14 @@ ms.locfileid: "81277481"
 - 메모리 할당
 - 복합 알고리즘 (예: 역 기구학, 경로 찾기)
 
-### <a name="gpu-performance-recommendations"></a>GPU 성능 추천 사항
+### <a name="gpu-performance-recommendations"></a>GPU 성능 권장 사항
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>대역폭 및 채우기 빈도 이해
 GPU에서 프레임을 렌더링 하는 경우 응용 프로그램은 일반적으로 메모리 대역폭이 나 채우기 속도로 바인딩됩니다.
 
 - **메모리 대역폭** 은 GPU에서 메모리를 통해 수행할 수 있는 읽기 및 쓰기의 률입니다.
     - 대역폭 제한을 확인 하려면 질감 품질을 줄이고 프레임 속도가 개선 되었는지 확인 합니다.
-    - Unity에서는 **편집** > **프로젝트 설정** >  **[품질 설정](https://docs.unity3d.com/Manual/class-QualitySettings.html)** 에서 **질감 품질** 을 변경 하 여이 작업을 수행할 수 있습니다.
+    - Unity에서는 **Edit** **Texture Quality**  >  **프로젝트 설정**  >  **[품질 설정](https://docs.unity3d.com/Manual/class-QualitySettings.html)** 편집에서 질감 품질을 변경 하 여이 작업을 수행할 수 있습니다.
 - **채우기 비율은** GPU에서 초당 그릴 수 있는 픽셀을 나타냅니다.
     - 채우기 속도 제한을 파악 하려면 디스플레이 해상도를 낮추고 프레임 속도가 개선 되었는지 확인 합니다. 
     - Unity에서는 *[Xrsettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* 속성을 통해이 작업을 수행할 수 있습니다.
@@ -101,7 +101,7 @@ GPU에서 프레임을 렌더링 하는 경우 응용 프로그램은 일반적�
 
 다각형 수가 높을수록 GPU에 대 한 작업이 더 많이 발생 합니다. 장면의 [다각형 수를 줄이면](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) 렌더링 시간이 줄어듭니다. 비용이 많이 들 수 있는 기 하 도형에 음영을 지정 하는 다른 요인이 있지만 polygon 수는 장면을 렌더링 하는 데 소요 되는 비용을 결정 하는 가장 간단한 메트릭입니다.
 
-#### <a name="limit-overdraw"></a>과도한 그리기 제한
+#### <a name="limit-overdraw"></a>과도 한 그리기 제한
 
 Occluding 개체에 의해 숨겨질 때 여러 개체가 렌더링 되지만 화면에 표시 되지 않는 경우에는 높은 오버 그리기가 발생 합니다. 개체 뒤에 개체를 포함 하는 벽을 살펴보겠습니다. 모든 기 하 도형은 렌더링을 위해 처리 되지만 불투명 벽만 렌더링 해야 합니다. 이로 인해 불필요 한 작업이 수행 됩니다.
 
@@ -127,13 +127,13 @@ Occluding 개체에 의해 숨겨질 때 여러 개체가 렌더링 되지만 �
 
 사후 처리 효과는 비용이 많이 들고 응용 프로그램의 채우기 비율이 높아질 수 있습니다. 여기에는 MSAA와 같은 앤티앨리어싱 기술이 포함 됩니다. HoloLens에서는 이러한 기술을 완전히 피하는 것이 좋으며 geometry, 선체 및 compute 셰이더와 같은 추가 셰이더 단계를 사용 하는 것이 좋습니다.
 
-## <a name="memory-recommendations"></a>메모리 추천 사항
+## <a name="memory-recommendations"></a>메모리 권장 사항
 
 과도 한 메모리 할당 및 할당 취소 작업을 수행 하면 일관 되지 않은 성능, 고정 된 프레임 및 기타 나쁜 동작이 발생할 수 있습니다. 메모리 관리는 가비지 수집기에 의해 제어 되므로 Unity에서 개발할 때 메모리 고려 사항을 이해 하는 것이 특히 중요 합니다.
 
 #### <a name="object-pooling"></a>개체 풀링
 
-개체 풀링은 연속 할당 및 개체 할당 해제 비용을 줄이는 인기 있는 기술입니다. 이 작업을 수행하려면 시간이 지남에 따라 개체를 지속적으로 만들고 삭제하는 대신, 동일한 개체의 대량 풀을 할당하고 이 풀에서 사용 가능한 비활성 인스턴스를 다시 사용합니다. 개체 풀은 앱 중에 수명이 가변적인 다시 사용할 수 있는 구성 요소에 적합합니다.
+개체 풀링은 연속 할당 및 개체 할당 해제 비용을 줄이는 인기 있는 기술입니다. 이 작업을 수행 하려면 시간이 지남에 따라 개체를 지속적으로 생성 및 제거 하는 대신 동일한 개체의 대량 풀을 할당 하 고이 풀에서 사용 가능한 비활성 인스턴스를 다시 사용 합니다. 개체 풀은 앱을 실행 하는 동안 변수 수명이 있는 다시 사용할 수 있는 구성 요소에 적합 합니다.
 
 ## <a name="see-also"></a>참고 항목
 - [Unity의 권장 성능](performance-recommendations-for-unity.md)
