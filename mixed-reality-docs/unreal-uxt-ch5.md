@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840402"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519995"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. 단추 추가 및 체스 말 위치 초기화
 
@@ -46,13 +46,13 @@ ms.locfileid: "82840402"
 
 ![변수 만들기](images/unreal-uxt/5-var.PNG)
 
-4.  **내 청사진 > 변수**에 있는 WhiteKing 변수를 단순 단추 이벤트 그래프로 끌어다 놓습니다. **WhiteKing 가져오기**를 선택합니다. 
+4.  **내 청사진 > 변수**에 있는 WhiteKing 변수를 초기화 단추 이벤트 그래프로 끌어다 놓습니다. **WhiteKing 가져오기**를 선택합니다. 
 
 5.  WhiteKing 출력 핀을 새 노드로 끌어다 놓습니다. **위치 초기화** 함수를 선택합니다. 마지막으로 **단추를 누를 때**의 나가는 실행 핀을 **위치 초기화**의 들어오는 실행 핀으로 끌어다 놓습니다. ResetButton 청사진을 **컴파일**하고 **저장**한 다음, 주 창으로 돌아갑니다. 
 
 ![단추를 누를 때 위치 초기화 함수 호출](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  **SimpleButton**을 뷰포트로 끌어다 놓고 위치를 X = 50, Y =-25, Z = 10으로 설정합니다. **기본값**에서 WhiteKing 변수의 값을 **WhiteKing**으로 설정합니다.
+6.  **ResetButton**을 뷰포트로 끌어다 놓고 위치를 X = 50, Y =-25, Z = 10으로 설정합니다. **기본값**에서 WhiteKing 변수의 값을 **WhiteKing**으로 설정합니다.
 
 ![변수 설정](images/unreal-uxt/5-buttonlevel.PNG)
 

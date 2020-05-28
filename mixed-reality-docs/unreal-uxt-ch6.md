@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 35b18e4bb289438f94433827846e94d1014385db
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: b3f0b5f9ca5347c337091539b1cc0e214515c989
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840382"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519972"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. 패키징 후 디바이스 또는 에뮬레이터에 배포
 
@@ -34,6 +34,10 @@ ms.locfileid: "82840382"
 4.  연결되면 UE4 편집기에서 재생 단추 오른쪽에 있는 드롭다운 화살표를 클릭하고 VR 미리 보기를 선택합니다.
 
 ## <a name="package-and-deploy-your-app"></a>앱 패키징 및 배포 
+
+>[!NOTE]
+>HoloLens용 Unreal 앱을 처음으로 패키징하는 경우 Epic Launcher에서 지원 파일을 다운로드해야 합니다. 이렇게 하려면 Epic Games Launcher에서 **라이브러리** 탭으로 이동합니다. **실행** 옆의 드롭다운 화살표를 선택하고 **옵션**을 선택합니다. **대상 플랫폼**에서 **HoloLens 2**를 선택하고 **적용**을 클릭합니다. 
+>![프로젝트 설정 - 설명](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  **편집 > 프로젝트 설정**으로 이동합니다. **프로젝트 > 설명 > 정보 > 프로젝트 이름**에서 프로젝트 이름을 부여합니다. **프로젝트 > 설명 > 게시자 > 회사 고유 이름**에서 “CN={INSERT COMPANY NAME}”을 입력합니다. 이들 필드 중 하나를 비워 두면 오류가 발생 합니다. 
 
