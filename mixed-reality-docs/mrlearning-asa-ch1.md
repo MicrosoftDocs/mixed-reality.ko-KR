@@ -7,24 +7,26 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: d0fd22ad6fbefc6889373b00847721cfc0655ce3
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2a171d601d094375a56734e8d7890c9d3e17c887
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605004"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866913"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Azure Spatial Anchors 시작
 
 ## <a name="overview"></a>개요
 
-HoloLens 2 자습서의 두 번째 시리즈를 시작합니다. 3부로 구성된 이 자습서 시리즈에서는 Azure Spatial Anchors의 기본 사항에 대해 알아봅니다.
+HoloLens 2 자습서의 두 번째 시리즈를 시작합니다. 4부로 구성된 이 자습서 시리즈에서는 Azure Spatial Anchors의 기본 사항에 대해 알아봅니다.
 
 첫 번째 자습서인 이 [Azure Spatial Anchors 시작](mrlearning-asa-ch1.md)에서는 Azure 세션을 시작 및 중지하고 단일 디바이스에서 Azure 앵커를 생성, 업로드 및 다운로드하는 데 필요한 여러 단계를 살펴봅니다.
 
 두 번째 자습서인 [Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)에서는 앵커 정보를 HoloLens 2의 스토리지에 저장하여 여러 앱 세션에서 Azure Spatial Anchors를 저장하는 방법 및 이 앵커 정보를 다른 디바이스와 공유하여 다중 디바이스 앵커 맞춤을 수행하는 방법을 알아봅니다.
 
 세 번째 자습서인 [Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)에서는 Azure Spatial Anchors를 사용할 때 앵커 이벤트 및 상태에 대한 피드백을 사용자에게 제공하는 방법을 알아봅니다.
+
+네 번째 자습서인 [Android 및 iOS용 Azure Spatial Anchors](mrlearning-asa-ch4.md)에서는 Android 및 iOS 디바이스에 프로젝트를 빌드하고 배포하는 방법을 알아봅니다.
 
 ## <a name="objectives"></a>목표
 
@@ -42,6 +44,13 @@ HoloLens 2 자습서의 두 번째 시리즈를 시작합니다. 3부로 구성�
 * [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 * Unity 2019.2.X가 설치되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
 * 다음 자습서의 [Spatial Anchors 리소스 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) 섹션을 완료합니다. [빠른 시작: Azure Spatial Anchors를 사용하는 Unity HoloLens 앱 만들기](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) 자습서.
+* Android에 배포하려는 경우
+    * Windows 또는 macOS 컴퓨터에 USB 연결을 사용하는 <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">개발자 사용</a> 및 <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">ARCore 지원 가능</a> Android 디바이스
+    * Unity 2019.2.X가 설치되고 Android 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
+* iOS에 배포하려는 경우
+    * 최신 버전의 <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> 및 <a href="https://cocoapods.org" target="_blank">CocoaPods</a>가 설치된 macOS 컴퓨터
+    * macOS 컴퓨터에 USB로 연결된 <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">ARKit 호환</a> iOS 디바이스
+    * Unity 2019.2.X가 설치되고 iOS 빌드 지원 모듈이 추가된 <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>
 
 > [!IMPORTANT]
 > 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.2.X입니다. 이 버전은 필수 구성 요소에서 설명한 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
