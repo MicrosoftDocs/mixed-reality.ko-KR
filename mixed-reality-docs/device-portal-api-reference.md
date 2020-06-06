@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows 장치 포털, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227965"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451328"
 ---
 # <a name="device-portal-api-reference"></a>디바이스 포털 API 참조
 
@@ -320,7 +320,15 @@ Websocket 업그레이드를 수락 하 고 30fps로 업데이트를 전송 하�
 
 **/api/holographic/mrc/status (GET)**
 
-기록 된 혼합 현실 상태 (실행 중, 중지 됨)를 가져옵니다.
+Windows 장치 포털 내 혼합 현실 캡처의 상태를 가져옵니다.
+
+***응답***
+
+응답에는 Windows 장치 포털이 비디오를 기록 하 고 있는지 여부를 나타내는 JSON 속성이 포함 되어 있습니다.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/api/holographic/mrc/thumbnail (GET)**
 
@@ -419,7 +427,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 데이터 반환
 * 시스템 정보를 포함 하는 JSON: CPU, GPU, 메모리, 네트워크, IO
 
-## <a name="power"></a>Power
+## <a name="power"></a>고급
 
 **/sh/svhhhhhs (GET)**
 
