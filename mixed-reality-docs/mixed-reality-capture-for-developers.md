@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc, 사진, 비디오, 캡처, 카메라
-ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375970"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451348"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>개발자를 위한 혼합 현실 캡처
 
@@ -59,9 +59,9 @@ PV 카메라에서 렌더링을 사용 하도록 설정 하는 세 가지 단계
 2. 추가 HolographicCamera render를 처리 합니다.
 3. 이 추가 HolographicCamera에서 셰이더 및 코드가 올바르게 렌더링 되는지 확인 합니다.
 
-##### <a name="enable-the-photovideocamera-holographicviewconfiguration"></a>PhotoVideoCamera HolographicViewConfiguration 사용
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-directx"></a>DirectX에서 PhotoVideoCamera HolographicViewConfiguration 사용
 
-옵트인 (opt in) 하려면 앱에서 PhotoVideoCamera의 [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)을 사용 하도록 설정 하기만 하면 됩니다.
+PV 카메라에서 렌더링 하도록 옵트인 (opt in) 하려면 앱에서 PhotoVideoCamera의 [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)을 사용 하도록 설정 하기만 하면 됩니다.
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
 var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
@@ -77,14 +77,38 @@ if (view != null)
 1. HolographicSpace의 CameraAdded 이벤트가 발생 합니다. 지금은 앱에서 카메라를 처리할 수 없는 경우이 이벤트가 지연 될 수 있습니다.
 2. 이벤트가 완료 되 면 (그리고 처리 되지 않은 지연과 없음) HolographicCamera는 다음 HolographicFrame의 Ad 카메라 목록에 표시 됩니다.
 
-혼합 현실 캡처가 중지 될 때 (또는 혼합 현실 캡처를 실행 하는 동안 앱에서 뷰 구성을 사용 하지 않도록 설정 하는 경우) HolographicCamera는 다음 HolographicFrame의 RemovedCameras 목록에 표시 되 고 HolographicSpace의 CameraRemoved 이벤트가 발생 합니다. 시키고.
+혼합 현실 캡처가 중지 될 때 (또는 혼합 현실 캡처가 실행 되는 동안 앱에서 보기 구성을 사용 하지 않도록 설정 하는 경우) HolographicCamera는 다음 HolographicFrame의 RemovedCameras 목록에 표시 되 고 HolographicSpace의 CameraRemoved 이벤트가 발생 합니다.
 
 HolographicCamera에는 카메라가 속한 구성을 식별 하는 데 도움이 되는 [Viewconfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration) 속성이 추가 되었습니다.
 
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unity"></a>Unity에서 PhotoVideoCamera HolographicViewConfiguration 사용
+
+> [!NOTE]
+> 이 경우 **unity 2018.4.13 f1**, **unity 2019.3.0 f1**또는 최신 버전이 필요 합니다.
+
+PV 카메라에서 렌더링 하도록 옵트인 하려면 [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)를 사용할 때 [Windows Mixed reality 카메라 설정](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html) 공급자를 사용 하도록 설정 하 고 **PV 카메라에서 렌더링** 설정을 선택 합니다.
+
+혼합 현실 도구 키트를 사용 하지 않는 경우 DirectX에 대해 위에서 설명한 대로 구성 요소를 사용 하 여 [수동으로 옵트인 (opt in)](#enable-the-photovideocamera-holographicviewconfiguration-in-directx) 할 수 있습니다.
+
 ##### <a name="handle-the-additional-holographiccamera-render-in-unity"></a>Unity에서 추가 HolographicCamera render를 처리 합니다.
 
->[!NOTE]
-> PV 카메라에서 렌더링 하는 Unity 지원은 개발 중 이며 아직 사용할 수 없습니다. 이 설명서는 PV 카메라의 렌더링을 지 원하는 Unity 빌드를 사용할 수 있을 때 업데이트 됩니다.
+Unity에서 자동으로 수행 됩니다.
+
+##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Unreal에서 PhotoVideoCamera HolographicViewConfiguration 사용
+
+> [!NOTE]
+> 이 경우에는 **Unreal Engine 4.25** 이상이 필요 합니다.
+
+PV 카메라에서 렌더링 하도록 옵트인 (opt in) 하려면 다음을 수행 합니다.
+
+1. **SetEnabledMixedRealityCamera** 및 **ResizeMixedRealityCamera** 호출
+    * **크기 X** 및 **Y** 값 크기를 사용 하 여 비디오 크기를 설정 합니다.
+
+![세 번째 카메라](images/unreal-camera-3rd.PNG)
+
+##### <a name="handle-the-additional-holographiccamera-render-in-unreal"></a>Unreal에서 추가 HolographicCamera 렌더링 처리
+
+이 작업은 자동으로 수행 됩니다.
 
 ##### <a name="verify-shaders-and-code-support-additional-cameras"></a>셰이더 및 코드에서 추가 카메라 지원 확인
 
@@ -190,48 +214,33 @@ Unity 응용 프로그램은 holograms를 사용 하도록 설정 하는 속성�
 
 응용 프로그램에는 효과를 추가 하는 두 가지 옵션이 있습니다.
 * 이전 API: [MediaCapture. AddEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* 새 Microsoft 권장 API (개체를 반환 하 여 동적 속성을 조작할 수 있음): [MediaCapture () / AddVideoEffectAsync (](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) ): [MediaCapture ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) : 응용 프로그램이 [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) 및 [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)의 고유한 구현을 만들도록 요구 합니다. 샘플 사용에 대해서는 MRC 효과 샘플을 참조 하세요.
+* 새 Microsoft 권장 API (개체를 반환 하 여 동적 속성을 조작할 수 있음): [MediaCapture () AddVideoEffectAsync (](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync))  /  응용 프로그램이 [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) 및 [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)의 자체 구현을 만들도록 요구 하는[MediaCapture () AddAudioEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) . 샘플 사용에 대해서는 MRC 효과 샘플을 참조 하세요.
 
 >[!NOTE]
 > MixedRealityCapture 네임 스페이스는 Visual Studio에서 인식 되지 않지만 문자열은 여전히 유효 합니다.
 
 MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  속성 이름  |  형식  |  기본값  |  설명 | 
+|  속성 이름  |  유형  |  기본값  |  Description |
 |----------|----------|----------|----------|
-|  StreamType  |  UINT32 ([Mediastreamtype](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  이 효과가 사용 되는 캡처 스트림을 설명 합니다. 오디오를 사용할 수 없습니다. | 
-|  HologramCompositionEnabled  |  boolean  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. | 
-|  VideoStabilizationBufferLength  |  UINT32  |  0  |  비디오 안정화에 사용 되는 기록 프레임의 수를 설정 합니다. 0은 전력 및 성능 측면에서 0-대기 시간 및 거의 "무료"입니다. 15는 대기 시간 및 메모리의 15 프레임에 대 한 비용으로 최고 품질을 위해 권장 됩니다. | 
-|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (모던 헤드셋)  |  홀로그램의 전역 불투명도 계수를 0.0 (완전히 투명)에서 1.0 (완전히 불투명)로 설정 합니다. | 
+|  StreamType  |  UINT32 ([Mediastreamtype](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  이 효과가 사용 되는 캡처 스트림을 설명 합니다. 오디오를 사용할 수 없습니다. |
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  홀로그램 캡처 중에 화면에서 기록 표시기를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
+|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  HoloLens 트래커에서 구동 하는 비디오 안정화를 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
+|  VideoStabilizationBufferLength  |  UINT32  |  0  |  비디오 안정화에 사용 되는 기록 프레임의 수를 설정 합니다. 0은 전력 및 성능 측면에서 0-대기 시간 및 거의 "무료"입니다. 15는 대기 시간 및 메모리의 15 프레임에 대 한 비용으로 최고 품질을 위해 권장 됩니다. |
+|  GlobalOpacityCoefficient  |  float  |  0.9 (HoloLens) 1.0 (모던 헤드셋)  |  홀로그램의 전역 불투명도 계수를 0.0 (완전히 투명)에서 1.0 (완전히 불투명)로 설정 합니다. |
 |  BlankOnProtectedContent  |  boolean  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
 |  ShowHiddenMesh  |  boolean  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
 | OutputSize | 크기 | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
-| PreferredHologramPerspective | UINT32 | 1 (PhotoVideoCamera) | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)을 설정 하면 앱에 사진/비디오 카메라에서 렌더링 하 라는 메시지가 표시 되지 않습니다. |
+| PreferredHologramPerspective | UINT32 | 0 (표시) | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)은 앱이 사진/비디오 카메라에서 렌더링 하도록 요청 하지 않음을 의미 하 고, 1 (PhotoVideoCamera)는 앱이 사진/비디오 카메라 (앱에서 지 원하는 경우)에서 렌더링 하도록 요청 합니다. |
 
 MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
-<table>
-<tr>
-<th>속성 이름</th>
-<th>형식</th>
-<th>기본값</th>
-<th>설명</th>
-</tr>
-<tr>
-<td>MixerMode</td>
-<td>UINT32</td>
-<td>2</td>
-<td>
-<ul>
-<li>0: Mic 오디오만</li>
-<li>1: 시스템 오디오만</li>
-<li>2: Mic 및 시스템 오디오</li>
-</ul>
-</td>
-</tr>
-</table>
+| 속성 이름 | 유형 | 기본값 | Description |
+|----------|----------|----------|----------|
+| MixerMode | UINT32 | 2 (Mic 및 시스템 오디오) | 사용 해야 하는 오디오 원본을 나타내는 데 사용 되는 열거형입니다. 0 (Mic 오디오 전용), 1 (시스템 오디오만), 2 (Mic 및 시스템 오디오) |
+| LoopbackGain | float | 1.0 | 시스템 오디오 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
+| MicrophoneGain | float | 1.0 | 마이크 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
 
 ### <a name="simultaneous-mrc-limitations"></a>동시 MRC 제한 사항
 
@@ -268,5 +277,8 @@ Windows 10 4 월 2018 업데이트를 사용 하면 MRC 스트림에 액세스 �
 Windows 10 4 월 2018 업데이트 이전에는 앱의 사용자 지정 MRC 레코더를 시스템 MRC와 함께 사용할 수 없습니다 (사진 캡처, 비디오 캡처 또는 Windows 장치 포털에서 스트리밍).
 
 ## <a name="see-also"></a>참고 항목
+
 * [혼합 현실 캡처](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)
+* [Unity 개발 개요](unity-development-overview.md)
+* [Unreal 개발 개요](unreal-development-overview.md)
