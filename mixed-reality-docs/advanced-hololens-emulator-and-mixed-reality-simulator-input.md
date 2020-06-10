@@ -3,15 +3,15 @@ title: 고급 HoloLens 에뮬레이터 및 Mixed Reality 시뮬레이터 입력
 description: 키보드, 마우스 및 Xbox 컨트롤러를 사용 하 여 HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 입력을 시뮬레이트하는 방법에 대 한 자세한 지침입니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 05/12/2020
+ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 시뮬레이션, Windows Mixed 현실
-ms.openlocfilehash: e9051ae9e7853924f583b6c38f6177f2f967d9f0
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 0812b1d498ea557e84eecc44142b38d86099f832
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631474"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>고급 HoloLens 에뮬레이터 및 Mixed Reality 시뮬레이터 입력
 
@@ -42,7 +42,7 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 
 시뮬레이션 된 센서 입력의 상태를 제어할 수도 있습니다.
 * **Reset**: 모든 시뮬레이션 된 센서를 기본값으로 반환 합니다.  HoloLens 2 에뮬레이터부터 다시 설정의 범위는 적절 한 보조 키 또는 단추 (왼쪽 및/또는 오른쪽 Alt 또는 게임 패드의 왼쪽 및/또는 오른쪽 범퍼)를 사용 하 여 원하는 손을 사용 하 여 한 번 또는 두 번까지 지정할 수 있습니다.
-* **추적**: 위치 추적 모드를 순환 합니다. 다음 내용이 포함됩니다.
+* **추적**: 위치 추적 모드를 순환 합니다. 여기에는 다음이 포함됩니다.
   * **기본값**: OS는 시스템의 요청에 따라 가장 적합 한 추적 모드를 선택 합니다.
    * **방향**: 시스템에 대 한 요청에 관계 없이 방향 전용 추적을 강제 적용 합니다.
    * **위치**: 시스템에 대 한 요청에 관계 없이 위치 추적을 강제 적용 합니다.
@@ -51,7 +51,7 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 
 다음 표에서는 각 유형의 입력이 키보드, 마우스 및 Xbox 컨트롤러에 매핑되는 방법을 보여 줍니다. 입력 컨트롤 모드에 따라 각 형식에 다른 매핑이 있습니다. 입력 컨트롤 모드에 대 한 자세한 내용은이 문서의 뒷부분에 제공 됩니다.
 
-|  |  Keyboard |  마우스 |  Xbox 컨트롤러 | 
+|  |  키보드 |  마우스 |  Xbox 컨트롤러 | 
 |----------|----------|----------|----------|
 |  요 |  왼쪽/오른쪽 화살표 |  왼쪽/오른쪽으로 끌기 |  오른쪽 엄지 스틱 왼쪽/오른쪽 | 
 |  피치 |  위쪽/아래쪽 화살표 |  위로/아래로 끌기 |  오른쪽 엄지 스틱 위쪽/아래쪽 | 
@@ -61,7 +61,7 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 |  Z |  W/S |  |  왼쪽 엄지 스틱 위쪽/아래쪽 | 
 |  작업 |  입력 또는 공간 |  오른쪽 단추 |  단추 또는 트리거 | 
 |  블 룸/시스템 |  F2 또는 Windows 키 |  |  B 단추 | 
-|  컨트롤러 그립 단추 |  G  |  |  | 
+|  컨트롤러 그립 단추/손 모양 |  G  |  |  | 
 |  컨트롤러 메뉴 단추 |  M  |  |  | 
 |  컨트롤러 터치 패드 touch |  U  |  |  | 
 |  컨트롤러 터치 패드 누르기 |  P  |  |  | 
@@ -108,7 +108,7 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 
 다음 컨트롤 집합은 일상적인 사용을 위해 제안 됩니다.
 
-|  연산 |  키보드 및 마우스 |  Controller | 
+|  연산 |  키보드 및 마우스 |  컨트롤러 | 
 |----------|----------|----------|
 |  본문 X |  A/D |  왼쪽 엄지 스틱 왼쪽/오른쪽 | 
 |  본문 Y |  Page up/page down |  DPad up/down | 
@@ -131,13 +131,13 @@ HoloLens 에뮬레이터 및 Windows Mixed Reality 시뮬레이터에 대 한 �
 |  더 빠르게 이동/회전 | 왼쪽 또는 오른쪽 Shift 키 | 오른쪽 엄지 스틱을 누르고 있습니다. |
 |  느리게 이동/회전 | 왼쪽 또는 오른쪽 Ctrl 키 | 왼쪽 엄지 스틱을 누르고 있습니다. |
 
-## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>HoloLens 2 에뮬레이터를 사용 하 여 Windows Mixed Reality 몰입 형 헤드셋 및 동작 컨트롤러 사용
+## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>HoloLens 2 에뮬레이터에서 Windows Mixed Reality 몰입형 헤드셋 및 모션 컨트롤러 사용
 
 Windows Mixed Reality 몰입 형 헤드셋을 HoloLens 2 에뮬레이터와 함께 사용 하는 경우 이동 및 회전이 헤드셋 이동 및 회전에 자동으로 매핑됩니다.  동작 컨트롤러 위치 및 방향은 에뮬레이터에서 직접 위치 및 방향에 자동으로 매핑됩니다.  다음 표에서는 동작 컨트롤러를 사용할 때 사용할 수 있는 추가 동작을 보여 줍니다.
 
 헤드셋을 사용 하는 경우 표준 키보드, 마우스 및 게임 패드 컨트롤이 자동으로 무시 됩니다.
 
-|  연산 |  작업 |  참고 | 
+|  연산 |  작업 |  메모 | 
 |----------|----------|----------|
 |  본문 X |  왼쪽/오른쪽 엄지 스틱 |   | 
 |  본문 Z |  엄지 스틱 앞으로/뒤로 |   | 

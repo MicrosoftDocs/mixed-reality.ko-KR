@@ -3,24 +3,26 @@ title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: e01f58783645bccd473418639d5fa495bbc7817f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 7fe48203a3670490a2ac78040ea9f0ac8e811bd5
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631490"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 에뮬레이터 보관
 
 HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드는 함께 설치 됩니다. 일반적으로 사용 가능한 최신 빌드를 사용 하는 것이 좋지만, 이전 에뮬레이터에 대해 앱을 테스트 하거나 테스트 해야 하는 경우가 있을 수 있습니다. 이 페이지에는 릴리스 버전에 대 한 링크가 포함 되어 있습니다.
 
-|  빌드 |  출시 날짜 |  참고 | 
+|  빌드 |  출시 날짜 |  메모 | 
 |----------|----------|----------|
-|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1103](https://go.microsoft.com/fwlink/?linkid=2129088) | 2020 년 5 월 12 일 | Windows Holographic 버전 2004.  Windows Mixed Reality 헤드셋 및 동작 컨트롤러를 사용 하 여 스테레오에서 HoloLens 2 에뮬레이터를 제어 하 고 볼 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
-|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1061](https://go.microsoft.com/fwlink/?linkid=2129833) | 2020 년 5 월 12 일 | Windows Holographic 버전 1903는 2020 업데이트를 할 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1106](https://go.microsoft.com/fwlink/?linkid=2132415) | 2020 년 6 월 9 일 | Windows Holographic 버전 2004 6 월 2020 업데이트  렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 합니다. 렌더링 하지 않는 화상 키보드는 표시 되지 않으며, 정상적으로 작동 하지 않는 개체는 물론, 에뮬레이터는 AMD 기반 시스템의 중첩 된 가상화에 대 한 오류와 함께 시작 하지 못합니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1064](https://go.microsoft.com/fwlink/?linkid=2132601) | 2020 년 6 월 9 일 | Windows Holographic 버전 1903 6 월 2020 업데이트  는 렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 하 고, 화상 키보드가 표시 되지 않으며, 개체가 정상적으로 작동 하지 않습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1103](https://go.microsoft.com/fwlink/?linkid=2129088) | 2020년 5월 12일 | Windows Holographic 버전 2004.  Windows Mixed Reality 헤드셋 및 동작 컨트롤러를 사용 하 여 스테레오에서 HoloLens 2 에뮬레이터를 제어 하 고 볼 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1061](https://go.microsoft.com/fwlink/?linkid=2129833) | 2020년 5월 12일 | Windows Holographic 버전 1903는 2020 업데이트를 할 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1059](https://go.microsoft.com/fwlink/?linkid=2126826) | 2020 년 4 월 13 일 | Windows Holographic 버전 1903 4 월 2020 업데이트  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1056](https://go.microsoft.com/fwlink/?linkid=2121323) | 2020년 3월 10월 | Windows Holographic 버전 1903 3 월 2020 업데이트  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1053](https://go.microsoft.com/fwlink/?linkid=2118321) | 2020년 2월 11일 | Windows Holographic 버전 1903 2 월 2020 업데이트  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -35,7 +37,7 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 ## <a name="hololens-emulator-1st-gen-archive"></a>HoloLens 에뮬레이터 (첫 번째 gen) 아카이브
 
-|  빌드 |  출시 날짜 |  참고 | 
+|  빌드 |  출시 날짜 |  메모 | 
 |----------|----------|----------|
 |  [HoloLens 에뮬레이터 빌드 10.0.17763.134](https://go.microsoft.com/fwlink/?linkid=2065980) | 2018년 11월 19일 | 최신 HoloLens (첫 번째 gen) 빌드. Windows 10 10 월 2018 업데이트 |
 |  [HoloLens 에뮬레이터 빌드 10.0.17134.80](https://go.microsoft.com/fwlink/?linkid=874531) | 2018년 5월 21일 | 
