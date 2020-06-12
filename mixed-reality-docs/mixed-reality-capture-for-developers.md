@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc, 사진, 비디오, 캡처, 카메라
-ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451348"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720419"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>개발자를 위한 혼합 현실 캡처
 
@@ -232,15 +232,25 @@ MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 |  BlankOnProtectedContent  |  boolean  |  FALSE  |  보호 된 콘텐츠를 표시 하는 2d UWP 앱이 있는 경우 빈 프레임을 반환 하거나 사용 하지 않도록 설정 하는 플래그입니다. 이 플래그가 false이 고 2d UWP 앱이 보호 된 콘텐츠를 표시 하는 경우 2d UWP 앱은 헤드셋과 혼합 현실 캡처 모두에서 보호 된 콘텐츠 질감으로 교체 됩니다. |
 |  ShowHiddenMesh  |  boolean  |  FALSE  |  Holographic 카메라의 숨겨진 영역 메시 및 인접 콘텐츠를 표시 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
 | OutputSize | 크기 | 0, 0 | 비디오 안정화를 위해 자른 후 원하는 출력 크기를 설정 합니다. 0 또는 잘못 된 출력 크기가 지정 된 경우 기본 자르기 크기가 선택 됩니다. |
-| PreferredHologramPerspective | UINT32 | 0 (표시) | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)은 앱이 사진/비디오 카메라에서 렌더링 하도록 요청 하지 않음을 의미 하 고, 1 (PhotoVideoCamera)는 앱이 사진/비디오 카메라 (앱에서 지 원하는 경우)에서 렌더링 하도록 요청 합니다. |
+| PreferredHologramPerspective | UINT32 | Windows 장치 포털의 **카메라에서 렌더링** 설정 | 캡처할 holographic 카메라 보기 구성을 나타내는 데 사용 되는 열거형입니다. 0 (표시)은 앱이 사진/비디오 카메라에서 렌더링 하도록 요청 하지 않는다는 것을 의미 합니다. 1 (PhotoVideoCamera)은 앱이 사진/비디오 카메라에서 렌더링 하도록 요청 합니다 (앱에서 지 원하는 경우). HoloLens 2 에서만 지원 됨 |
+
+>[!NOTE]
+> [혼합 현실 캡처 페이지로](using-the-windows-device-portal.md#mixed-reality-capture) 이동 하 고 **카메라에서 렌더링**을 선택을 취소 하 여 Windows 장치 포털에서 **PreferredHologramPerspective** 의 기본값을 변경할 수 있습니다. 설정의 기본값은 **1 (PhotoVideoCamera)** 이지만 선택 취소 하 여 **0 (표시)** 으로 설정할 수 있습니다.
+>
+> **PreferredHologramPerspective** 의 기본값은 6 월 2020 업데이트 (windows Holographic, 버전 2004 빌드 19041.1106 및 windows Holographic, 버전 1903 build 18362.1064) 이전의 **0 (표시)** 입니다.
 
 MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 | 속성 이름 | 유형 | 기본값 | Description |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (Mic 및 시스템 오디오) | 사용 해야 하는 오디오 원본을 나타내는 데 사용 되는 열거형입니다. 0 (Mic 오디오 전용), 1 (시스템 오디오만), 2 (Mic 및 시스템 오디오) |
-| LoopbackGain | float | 1.0 | 시스템 오디오 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
-| MicrophoneGain | float | 1.0 | 마이크 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
+| LoopbackGain | float | Windows 장치 포털의 **앱 오디오 게인** 설정 | 시스템 오디오 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
+| MicrophoneGain | float | Windows 장치 포털의 **마이크 오디오 게인** 설정 | 마이크 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
+
+>[!NOTE]
+> [혼합 현실 캡처 페이지로](using-the-windows-device-portal.md#mixed-reality-capture) 이동 하 고 해당 설정 옆에 있는 슬라이더를 조정 하 여 Windows 장치 포털에서 **LoopbackGain** 또는 **MicrophoneGain** 의 기본값을 변경할 수 있습니다. 두 설정의 기본값은 모두 **1.0**이지만 **0.0** 에서 **5.0**사이의 값으로 설정할 수 있습니다.
+>
+> Windows Device Portal을 사용 하 여 기본 획득 값을 구성 하는 것이 6 월 2020 업데이트 (Windows Holographic, 버전 2004 빌드 19041.1106 및 Windows Holographic, 버전 1903 build 18362.1064)와 함께 추가 되었습니다.
 
 ### <a name="simultaneous-mrc-limitations"></a>동시 MRC 제한 사항
 

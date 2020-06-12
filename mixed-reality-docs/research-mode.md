@@ -3,15 +3,15 @@ title: HoloLens 연구 모드
 description: 응용 프로그램은 HoloLens의 연구 모드를 사용 하 여 키 장치 센서 스트림 (깊이, 환경 추적 및 IR 반사)에 액세스할 수 있습니다.
 author: hferrone
 ms.author: v-haferr
-ms.date: 05/03/2018
+ms.date: 06/10/2020
 ms.topic: article
 keywords: 연구 모드, cv, rs4, 컴퓨터 비전, 연구, HoloLens, HoloLens 2
-ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: 62b82e3a36452d4b104bf04999e556ec19d2a5e3
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533105"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720399"
 ---
 # <a name="hololens-research-mode"></a>HoloLens 연구 모드
 
