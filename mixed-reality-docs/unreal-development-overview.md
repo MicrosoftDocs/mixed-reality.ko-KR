@@ -1,40 +1,58 @@
 ---
 title: Unreal 개발 개요
 description: Unreal Engine 4를 사용하는 혼합 현실 개발의 개요
-author: sw5813
-ms.author: suwu
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 스트리밍, 원격, 혼합 현실, 개발, 시작, 기능, 새 프로젝트, 에뮬레이터, 설명서, 가이드, 특징, 홀로그램
-ms.openlocfilehash: 08ba760acc1a35d8f47de6a7bf6cbc020c8aca3f
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 스트리밍, 원격, 혼합 현실, 개발, 시작, 기능, 새 프로젝트, 에뮬레이터, 설명서, 가이드, 특징, 홀로그램, 게임 개발
+ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851567"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330160"
 ---
 # <a name="unreal-development-overview"></a>Unreal 개발 개요
 
-이제 Unreal Engine 4는 Windows VR(Mixed Reality) 및 HoloLens 2(AR) 디바이스용 앱 개발을 완벽하게 지원합니다. Unreal 개발을 처음 접하는 경우 <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Unreal Engine 4 시작</a> 페이지를 살펴보세요. 자산이 필요한 경우 Unreal에는 포괄적인 <a href="https://www.unrealengine.com/marketplace//store" target="_blank">마켓플레이스</a>가 있습니다. 
+<a href="https://docs.microsoft.com/en-us/windows/mixed-reality" target="_blank" title="혼합 현실 문서"> 혼합 현실 애플리케이션</a>의 시작은 방대한 작업입니다. 새로운 개념, 플랫폼 및 최첨단 하드웨어가 장애물처럼 느껴질 수 있습니다. 그러나 Unreal 개발자라면 운이 좋습니다. <a href="https://www.microsoft.com/en-us/windows/windows-mixed-reality" target="_blank" title="Windows Mixed Reality 문서">Windows Mixed Reality</a>(VR) 및 <a href="https://www.microsoft.com/en-us/hololens/hardware" target="_blank" title="HoloLens 2 문서">HoloLens 2</a>(AR)에 이제 Unreal Engine의 최신 <a href="https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_25/index.html" target="_blank" title="Unreal Engine 4.25 릴리스 정보"> 릴리스</a>가 포함되었습니다. 이 업데이트의 내용은 다음과 같습니다.
+* Mixed Reality UX Tools 플러그 인 지원
+* OpenXR 지원
+* 데스크톱 앱의 앱 원격 작업
+* 성능 향상
+* 혼합 현실 캡처
+* Azure Spatial Anchors 초기 지원
 
-Unreal 개발의 기본 사항을 이해했으면 다음 섹션의 자습서를 확인하여 HoloLens에서 앱을 빌드하고 실행하는 방법을 알아보세요. <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">Unreal Mixed Reality 포럼</a>을 방문하여 Unreal에서 혼합 현실 앱을 빌드하는 커뮤니티에 참여하세요. 발생하는 문제의 해결 방법을 찾기에 가장 좋은 장소입니다.
-
-## <a name="tutorial"></a>자습서
-
-통합형 자습서를 따라 HoloLens 2용 [간단한 체스 앱을 빌드 및 배포](unreal-uxt-ch1.md)하는 방법에 대해 알아봅니다. 이 자습서에서는 UX Tools 플러그 인을 사용하여 단추와 조작자를 비롯한 대화형 UX 구성 요소를 사용하여 빠르게 앱을 개발합니다. UX Tools 플러그 인에 대한 자세한 내용은 MRTK에 대한 다음 섹션을 참조하세요. 
+Unreal 개발이 처음이라면 모르는 상태에서 넘어가지 마세요. Unreal <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">자습서 시리즈</a>를 탐색하여 필요한 지식을 갖추고 Unreal <a href="https://www.unrealengine.com/marketplace//store" target="_blank">마켓플레이스</a> 및 혼합 현실 <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">포럼</a>에서 자산 및 지원을 모색합니다. 이러한 리소스를 통해 오늘날의 혼합 현실 시장에서 구축자와 문제 해결자 커뮤니티에 연결할 수 있습니다.
 
 ## <a name="mixed-reality-toolkit-for-unreal"></a>Unreal용 Mixed Reality Toolkit
 
-[Unreal용 Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unreal)은 플러그인, 샘플 및 설명서의 형태로 구성된 구성 요소 세트로, Unreal Engine을 사용하여 혼합 현실 애플리케이션을 빠르게 개발할 수 있도록 설계되었습니다. 이 도구 키트의 일부로 출시된 첫 번째 구성 요소는 HoloLens 2 프로젝트에 추가하여 HoloLens 2 애플리케이션을 위한 UX 기능을 제공할 수 있는 플러그 인인 [Unreal용 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)입니다. Mixed Reality Toolkit 및 Unreal용 UX Tools에 대한 설명서는 각각의 GitHub 리포지토리에서 찾을 수 있습니다. 
+[Unreal용 Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unreal)는 Unreal에서의 개발 속도를 높이도록 설계된 구성 요소의 세트입니다. 각 구성 요소에는 몰입형 환경 설정을 위한 플러그 인, 샘플, 설명서가 포함되어 있습니다. 
+
+[Unreal UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)는 릴리스된 첫 번째 구성 요소이며 현재 HoloLens 2에서만 지원됩니다. 구성 요소 플러그 인에는 다음과 같은 공통 UX 기능의 코드, 청사진, 예제 자산이 들어 있습니다.
+* 입력 시뮬레이션
+* 손 조작 행위자
+* 누를 수 있는 단추 구성 요소
+* 조작자 구성 요소
+* 따르기 동작 구성 요소
+
+기능 세부 정보 및 프로젝트 설정에 대한 정보는 [Unreal용 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal) GitHub 리포지토리에서 살펴볼 수 있습니다.
+
+## <a name="tutorial"></a>자습서
+
+새 기술을 익히는 가장 좋은 방법은 직접 무언가를 구축해 보는 것입니다. UX Tools 플러그 인으로 HoloLens 2를 위한 [간단한 체스 앱을 빌드 및 배포](unreal-uxt-ch1.md)하는 방법을 배워보는 것은 좋은 출발이 될 것입니다. 
+
+이 엔드투엔드 자습서 시리즈는 공통 조작 UX 구성 요소와 시나리오에 실습 연결을 제공합니다. 프로젝트 설정, 장면에 조작 추가, 디바이스 또는 에뮬레이터 배포를 작업하게 됩니다. Windows 10, 에뮬레이터 및 Visual Studio 2019만 있으면 됩니다.
+
 
 ## <a name="performance"></a>성능
 
-홀로그램이 안정적이고 표시되고 빠르게 응답하려면 HoloLens 2 앱이 초당 60프레임으로 실행되어야 합니다. 앱에서 이 속도를 구현하려면 [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)을 따르는 것이 좋습니다. 
+혼합 현실 개발에서는 플랫폼에 따라 성능 체크포인트가 있습니다. 홀로그램이 안정적이고 표시되고 빠르게 응답하려면 HoloLens 2 앱이 초당 60프레임으로 실행되어야 합니다. 다행이 Unreal은 [성능 권장 사항](performance-recommendations-for-unreal.md)을 제공하므로 애플리케이션에서 이를 달성할 수 있습니다.
 
 ## <a name="guides-to-specific-features"></a>특정 기능에 대한 가이드
 
-Unreal의 특정 기능을 사용하는 방법을 알아보려면 아래 가이드를 확인하세요. 
+자습서 시리즈에서 다루지 않은 혼합 현실 개발의 몇 가지 핵심 기능을 제공합니다. 세부 정보 및 실제 애플리케이션은 다음 가이드를 참조하세요. 
 * [손 추적](unreal-hand-tracking.md)
 * [시선 추적](unreal-gaze-input.md)
 * [공간 매핑](unreal-spatial-mapping.md)
@@ -42,6 +60,7 @@ Unreal의 특정 기능을 사용하는 방법을 알아보려면 아래 가이�
 * [음성 입력 ](unreal-voice-input.md)
 * [HoloLens 카메라](unreal-hololens-camera.md)
 * [QR 코드](unreal-qr-codes.md)
+
 
 ## <a name="supported-features"></a>지원되는 기능
 
