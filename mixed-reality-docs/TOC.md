@@ -94,7 +94,7 @@
 ## 리소스
 ### [Unity 배우기](https://learn.unity.com/)
 ### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-### [혼합 현실 디자인 랩](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
+### [혼합 현실 디자인 랩](https://github.com/microsoft/MixedRealityDesignLabs_Unity)
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [자산 생성 프로세스](asset-creation-process.md)
 ### [사용자 고유의 몰입형 환경 디자인](add-custom-home-environments.md)
@@ -136,10 +136,14 @@
 ###### [3. 비디오에서 공간화 오디오](unity-spatial-audio-ch3.md)
 ###### [4. 런타임 시 공간 오디오 사용 및 사용 안 함](unity-spatial-audio-ch4.md)
 ###### [5. 반향 효과를 이용해 공간 오디오에 거리감 부여](unity-spatial-audio-ch5.md)
-#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
-##### [원소의 주기율표](periodic-table-of-the-elements.md)
+#### HoloLens 2 오픈 소스 샘플 앱
+##### [평면](sampleapp-surfaces.md)
+##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
+#### HoloLens(1세대) 오픈 소스 샘플 앱
+##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
+##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
 ##### [달착륙선](lunar-module.md)
-##### [갤럭시 익스플로러](galaxy-explorer.md)
 #### HoloLens(1세대) 및 몰입형 헤드셋 자습서
 ##### [MR 기본 100: Unity 시작](holograms-100.md)
 ##### [MR 기본 101: 디바이스를 사용하는 완전한 프로젝트](holograms-101.md)
