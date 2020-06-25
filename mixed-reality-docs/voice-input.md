@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
-ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866923"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345703"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -284,7 +284,7 @@ HoloLens에서 제공 하는 사용자 지정 된 오디오 입력 처리 옵션
 
 ## <a name="languages"></a>언어
 
-HoloLens 2는 추가 언어도 지원 합니다. 음성 명령은 여러 키보드가 설치 되어 있거나 앱이 다른 언어로 음성 인식기를 만들려고 하는 경우에도 항상 시스템의 표시 언어로 실행 됩니다.
+HoloLens 2는 [여러 언어를 지원](https://docs.microsoft.com/hololens/hololens2-language-support)합니다. 음성 명령은 여러 키보드가 설치 되어 있거나 앱이 다른 언어로 음성 인식기를 만들려고 하는 경우에도 항상 시스템의 표시 언어로 실행 됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -304,7 +304,7 @@ Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연�
 
 ---
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 * [응시 및 커밋](gaze-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [MR 입력 212: 음성](holograms-212.md)
