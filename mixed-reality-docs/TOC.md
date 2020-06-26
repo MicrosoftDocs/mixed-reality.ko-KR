@@ -62,14 +62,13 @@
 ### [시선 응시 기반 상호 작용](eye-gaze-interaction.md)
 ## UX 요소
 ### [개요](app-patterns-landingpage.md)
-### 스타일
+### 기본 요소
 #### [색, 광원 및 재질](color-light-and-materials.md)
 #### [크기 조정](scale.md)
 #### [입력 체계](typography.md)
-### 공간 음향
-#### [공간 음향 디자인](spatial-sound-design.md)
-#### [사례 연구: Holotour ](case-study-spatial-sound-design-for-holotour.md)
-#### [사례 연구: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
+#### [소리](spatial-sound-design.md)
+##### [사례 연구: Holotour ](case-study-spatial-sound-design-for-holotour.md)
+##### [사례 연구: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### 컨트롤 및 동작
 #### [커서](cursors.md)
@@ -81,13 +80,15 @@
 #### [손 메뉴](hand-menu.md)
 #### [Near 메뉴](near-menu.md)
 #### [개체 컬렉션](object-collection.md)
-#### [음성 명령](voice-input.md)
+#### [음성 입력 ](voice-input.md)
 #### [키보드](keyboard.md)
 #### [Tooltip](tooltip.md)
 #### [슬레이트](slate.md)
 #### [슬라이더](slider.md)
 #### [셰이더](shader.md)
+#### [대화 상자](dialog-ui.md)
 #### [핸드 코치](hand-coach.md)
+#### [공간 메시](spatial-mesh-ux.md)
 #### [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 #### [진행률 표시](progress.md)
 #### [표면 자성](surface-magnetism.md)
@@ -98,12 +99,15 @@
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [자산 생성 프로세스](asset-creation-process.md)
 ### [사용자 고유의 몰입형 환경 디자인](add-custom-home-environments.md)
+
 # 개발
 ## [도구 및 아키텍처 알아보기](development.md)
 ## [도구 설치](install-the-tools.md)
+
 ## 혼합 현실 클라우드 서비스
 ### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
+
 ## [자습서 및 샘플 앱](tutorials.md)
 ### Unity
 #### HoloLens 2 자습서
@@ -140,7 +144,7 @@
 ##### [평면](sampleapp-surfaces.md)
 ##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
-#### HoloLens(1세대) 오픈 소스 샘플 앱
+#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
 ##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
 ##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
 ##### [달착륙선](lunar-module.md)
@@ -178,6 +182,7 @@
 #### [4. 대화형 장면 만들기](unreal-uxt-ch4.md)
 #### [5. 단추 추가 및 조각 위치 재설정](unreal-uxt-ch5.md)
 #### [6. 패키징 후 디바이스 또는 에뮬레이터에 배포](unreal-uxt-ch6.md)
+
 ## Unity
 ### [Unity 개발 개요](unity-development-overview.md)
 ### 시작
@@ -209,21 +214,25 @@
 #### [HoloLens용 Unity 앱에서 Windows 네임스페이스 사용](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 #### [Unity의 혼합 현실 기본 개체](unity-xrdevice-advanced.md)
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
+
 ## Unreal
 ### [Unreal 개발 개요](unreal-development-overview.md)
 ### [Unreal의 직접 추적](unreal-hand-tracking.md)
 ### [Unreal의 응시 입력](unreal-gaze-input.md)
 ### [Unreal의 공간 매핑](unreal-spatial-mapping.md)
+### [Unreal의 공간 오디오](unreal-spatial-sound.md)
 ### [Unreal의 공간 앵커](unreal-spatial-anchors.md)
 ### [Unreal의 음성 입력](unreal-voice-input.md)
 ### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
 ### [Unreal의 QR 코드](unreal-qr-codes.md)
 ### [Unreal의 스트리밍](unreal-streaming.md)
 ### [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)
+
 ## JavaScript
 ### [JavaScript 개발 개요](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
 ### [WebVR](webvr-overview.md)
+
 ## 기본
 ### [네이티브 개발 개요](directx-development-overview.md)
 ### OpenXR
@@ -236,6 +245,7 @@
 #### [네이티브 홀로그램 프로젝트 만들기](creating-a-holographic-directx-project.md)
 #### [HolographicSpace 받기](getting-a-holographicspace.md)
 #### [네이티브 렌더링](rendering-in-directx.md)
+
 ## 플랫폼 기능 및 API
 ### 핵심 구성 요소
 #### [좌표계](coordinate-systems-in-directx.md)
@@ -286,12 +296,14 @@
 #### [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 #### [디바이스 포털 API 참조](device-portal-api-reference.md)
 #### [HoloLens 연구 모드](research-mode.md)
+
 ## 앱 포팅
 ### [HTK/MRTK를 MRTK v2로 포팅](mrtk-porting-guide.md)
 ### [몰입형 앱 포팅 가이드](porting-guides.md)
 ### [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 ### [Windows Mixed Reality용 SteamVR 애플리케이션 업데이트](updating-your-steamvr-application-for-windows-mixed-reality.md)
 ### [혼합 현실에 사용되는 2D UWP 앱 업데이트](building-2d-apps.md)
+
 # 배포
 ## [3D 앱 시작 관리자 디자인 지침](3d-app-launcher-design-guidance.md)
 ## [집에서 사용할 3D 모델 만들기](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
