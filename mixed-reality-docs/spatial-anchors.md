@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: 좌표계, 공간 좌표계, 전세계 규모, 세계, 규모, 위치, 방향, 앵커, 공간 앵커, 세계 잠금, 전세계 잠금, 지속성, 공유
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438022"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441790"
 ---
 # <a name="spatial-anchors"></a>공간 앵커
 
@@ -22,7 +22,7 @@ ms.locfileid: "73438022"
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure 공간</a> 앵커를 사용 하 여 클라우드 앵커를 만들면 응용 프로그램은 여러 HoloLens, IOS 및 Android 장치에서 공간 앵커를 공유할 수 있습니다. 각 장치가 동일한 공간 앵커를 사용 하 여 홀로그램을 렌더링 하도록 하면 홀로그램은 실제 세계의 동일한 위치에 표시 됩니다. 이렇게 실제 세계 공유 환경을 제공합니다.
 * HoloLens, iOS 및 Android 디바이스에서 비대칭 홀로그램 지속에 <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>를 사용할 수도 있습니다. 유지되는 클라우드 공간 앵커를 공유하면 여러 디바이스가 동시에 함께 존재하지 않는 경우에도 시간 경과에 따라 같은 지속형 홀로그램을 관찰할 수 있습니다.
 
-5 미터 지름 내에 유지 되는 테더 링 된 desktop 헤드셋에 대 한 대규모 또는 공간 규모의 환경을 위해 일반적으로 공간 앵커 대신 [스테이지 프레임](coordinate-systems.md#stage-frame-of-reference) 을 사용 하 여 단일 좌표계를 제공 합니다. 모든 콘텐츠를 렌더링 합니다. 그러나 응용 프로그램에서 사용자가 HoloLens에서 5 미터를 wander 수 있게 하려는 경우 건물 전체에 걸쳐 작동 하는 경우 콘텐츠를 안정적으로 유지 하려면 공간 앵커가 필요 합니다.
+5 미터 지름 내에 유지 되는 테더 링 된 desktop 헤드셋에 대 한 대규모 또는 공간 규모의 환경을 위해 일반적으로 모든 콘텐츠를 렌더링할 단일 좌표계를 제공 하는 공간 앵커 대신 [스테이지 프레임](coordinate-systems.md#stage-frame-of-reference) 을 사용할 수 있습니다. 그러나 응용 프로그램에서 사용자가 HoloLens에서 5 미터를 wander 수 있게 하려는 경우 건물 전체에 걸쳐 작동 하는 경우 콘텐츠를 안정적으로 유지 하려면 공간 앵커가 필요 합니다.
 
 공간 앵커는 세계에서 고정 상태를 유지해야 하는 홀로그램에 적합합니다. 배치된 앵커는 이동할 수 없습니다. 동적 holograms 사용자와 함께 태그를 추가 하는 데 더 적합 한 앵커에 대 한 대안이 있습니다. 고정 참조 프레임(Unity의 세계 좌표의 기초) 또는 일체형 참조 프레임을 사용하여 동적 홀로그램을 배치하는 것이 가장 좋습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "73438022"
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>로컬 공간 앵커가 아닌 고정 참조 프레임을 사용하여 매우 동적인 홀로그램 렌더링
 
-대화방을 중심으로 하는 문자 또는 사용자 근처의 벽을 따라 이어지는 부동 UI와 같은 매우 동적인 홀로그램을 사용 하는 경우 로컬 공간 앵커를 건너뛰고 해당 [holograms을에서 제공 하는 좌표계에서 직접 렌더링 하는 것이 가장 좋습니다. 고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference)입니다. 저는 WorldAnchor 없이 세계 좌표에 직접 holograms를 배치 하 여이를 달성할 수 있습니다. 고정 참조 프레임에 있는 Holograms 사용자가 홀로그램에서 멀리 떨어져 있을 때 드리프트가 발생할 수 있습니다. 그러나이는 동적 holograms 눈에 띄는 것은 아닙니다. 즉, 홀로그램은 계속 해 서 이동 하는 것입니다. 또는 해당 동작을 계속 해 서 드리프트를 최소화 하는 사용자에 게 가깝게 유지 합니다.
+대화방을 중심으로 하는 문자 또는 사용자 근처의 벽을 따라 이어지는 부동 UI와 같은 매우 동적인 홀로그램을 사용 하는 경우 로컬 공간 앵커를 건너뛰고 [고정 참조 프레임](coordinate-systems.md#stationary-frame-of-reference)에서 제공 하는 좌표계에서 직접 이러한 holograms를 렌더링 하는 것이 가장 좋습니다. Unity에서는 WorldAnchor 없이 세계 좌표에 직접 holograms를 배치 하 여이를 달성할 수 있습니다. 고정 참조 프레임에 있는 Holograms 사용자가 홀로그램에서 멀리 떨어져 있을 때 드리프트가 발생할 수 있습니다. 그러나이는 동적 holograms 눈에 띄는 것은 아닙니다. 즉, 홀로그램은 계속 해 서 이동 하는 것입니다. 또는 해당 동작을 계속 해 서 드리프트를 최소화 하는 사용자에 게 가깝게 유지 합니다.
 
 동적 홀로그램의 흥미로운 사례 하나는 고정된 좌표계 사이를 애니메이션으로 이동하는 개체입니다. 예를 들어 각각 다른 성에 cannonball 실행 하는 단일 성이 있는 고유한 공간 앵커를 사용 하 여 두 개의 성 10 미터를 가질 수 있습니다. Cannonball 발생 한 순간에는 고정 참조 프레임의 적절 한 위치에이를 렌더링 하 여 첫 번째 성의 고정 좌표계에서 대포와 일치 시킬 수 있습니다. 그런 다음, 탄환이 공중으로 10미터 날아갈 때 고정 참조 프레임의 궤도를 따를 수 있습니다. Cannonball 다른 성에 도달할 때이를 두 번째 성의 고정 좌표계로 이동 하도록 선택 하 여 해당 성의 고정 본문으로 물리 계산을 수행할 수 있습니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "73438022"
 
 클라우드 공간 앵커의 경우 상황에 따라 스토리지를 확장할 수 있습니다. 필요한 만큼 클라우드 앵커를 저장할 수 있으며, 사용자가 해당 앵커에서 holograms를 다시 찾을 필요가 없는 경우에만 릴리스를 해제할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 * [좌표계](coordinate-systems.md)
 * [혼합 현실의 공유 환경](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

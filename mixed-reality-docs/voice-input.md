@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: ggv, 음성, cortana, 음성, 입력
-ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 37364e90aa1d8a7b607a99f4c9b830972f7f80b3
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345703"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441830"
 ---
 # <a name="voice-input"></a>음성 입력
 
@@ -96,6 +96,8 @@ ms.locfileid: "85345703"
 * "사진 찍기"
 * "기록 시작"
 * "기록 중지"
+* "손 모양 표시"
+* "손 모양 숨기기"
 * "밝기 늘리기"
 * "밝기 낮추기"
 * "볼륨 증가"
@@ -304,7 +306,7 @@ Windows Mixed Reality Developer Edition 릴리스 2017에서는 초기 HMD 연�
 
 ---
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 * [응시 및 커밋](gaze-and-commit.md)
 * [Instinctual 상호 작용](interaction-fundamentals.md)
 * [MR 입력 212: 음성](holograms-212.md)

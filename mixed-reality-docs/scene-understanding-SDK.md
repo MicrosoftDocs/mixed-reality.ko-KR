@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: 장면 이해, 공간 매핑, Windows Mixed Reality, Unity
-ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 71b5509065ecf6fc700b7f448083754d330e9371
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441810"
 ---
 # <a name="scene-understanding-sdk-overview"></a>장면 이해 SDK 개요
 
@@ -311,6 +311,9 @@ Quads는 2D 배치 시나리오를 용이 하 게 하기 위해 설계 되었으
 
 Quads는 사각형 범위를 갖지만 임의의 모양의 2D 표면을 나타냅니다. 3D 환경 quads와 상호 작용 하는 이러한 2D 표면에서 배치를 사용 하도록 설정 하려면 이러한 상호 작용을 가능 하 게 하는 유틸리티를 제공 합니다. 현재 장면 이해는 **Findcentermostplacement** 및 **GetOcclusionMask**의 두 가지 함수를 제공 합니다. FindCentermostPlacement는 개체를 배치할 수 있는 쿼드에서 위치를 찾고, 제공 하는 경계 상자가 기본 화면에 상주할 수 있도록 하는 개체에 가장 적합 한 위치를 찾으려고 시도 하는 높은 수준의 API입니다.
 
+> [!NOTE]
+> 출력의 좌표는 다른 windows Rect 형식에 있는 것 처럼 (x = 0, y = 0) 왼쪽 위 모퉁이가 있는 "쿼드 공간"의 쿼드에 상대적입니다. 사용자 고유의 개체의 원본으로 작업할 때는이를 고려해 야 합니다. 
+
 다음 예에서는 가장 높은 배치 가능한 위치를 찾고 4 번째에 홀로그램을 고정 하는 방법을 보여 줍니다.
 
 ```cs
@@ -341,7 +344,12 @@ foreach (var sceneObject in myScene.SceneObjects)
 }
 ```
 
-1-4 단계는 특정 프레임 워크/구현에 따라 달라 지지만 테마는 유사 해야 합니다. 4는 단지 공간에서 지역화 된 경계가 있는 2D 평면을 나타냅니다. 엔진/프레임 워크에서 쿼드이 무엇 인지 확인 하 고 쿼드을 기준으로 개체를 루 팅 하면 holograms는 실제 세계와 관련 하 여 정확 하 게 배치 됩니다. 자세한 내용은 특정 구현을 표시 하는 quads의 샘플을 참조 하세요.
+1-4 단계는 특정 프레임 워크/구현에 따라 달라 지지만 테마는 유사 해야 합니다. 4는 단지 공간에서 지역화 된 경계가 있는 2D 평면을 나타냅니다. 엔진/프레임 워크에서 쿼드이 무엇 인지 확인 하 고 쿼드을 기준으로 개체를 루 팅 하면 holograms는 실제 세계와 관련 하 여 정확 하 게 배치 됩니다. 
+
+<!-- 
+// TODO: Add sample link when released
+For more detailed information please see our samples on quads which show specific implementations.
+-->
 
 ### <a name="mesh"></a>메시
 

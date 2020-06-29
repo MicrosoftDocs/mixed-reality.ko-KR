@@ -1,17 +1,17 @@
 ---
 title: 디바이스 포털 API 참조
 description: HoloLens의 Windows 장치 포털에 대 한 API 참조
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows 장치 포털, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451328"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441800"
 ---
 # <a name="device-portal-api-reference"></a>디바이스 포털 API 참조
 
@@ -33,7 +33,7 @@ ms.locfileid: "84451328"
 매개 변수
 * package: 설치할 패키지의 파일 이름입니다.
 
-Payload
+페이로드
 * 여러 부분으로 구성 되는 http 본문
 
 **/api/app/packagemanager/packages (GET)**
@@ -376,15 +376,15 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 
 1280x720p 30fps 5Mbit 스트림입니다.
 
-**/api/holographic/stream/live_high. mp4 (GET)**
+**/api/holographic/stream/live_high.mp4 (GET)**
 
 1280x720p 30fps 5Mbit 스트림입니다.
 
-**/api/holographic/stream/live_med. mp4 (GET)**
+**/api/holographic/stream/live_med.mp4 (GET)**
 
 854x480p 30fps 2.5 Mbit 스트림입니다.
 
-**/api/holographic/stream/live_low. mp4 (GET)**
+**/api/holographic/stream/live_low.mp4 (GET)**
 
 428x240p 15fps 0.6 Mbit 스트림입니다.
 
@@ -509,7 +509,7 @@ HoloLens는 조각화 된 mp4의 청크 다운로드를 통해 혼합 현실의 
 
 WPR 프로필을 업로드 하 고 업로드 된 프로필을 사용 하 여 추적을 시작 합니다.
 
-Payload
+페이로드
 * 여러 부분으로 구성 되는 http 본문
 
 데이터 반환
@@ -534,11 +534,11 @@ WPR (성능) 추적 세션을 중지 합니다.
 WPR (성능) 추적 세션을 시작 합니다.
 
 매개 변수
-* 프로필: 프로필 이름입니다. 사용 가능한 프로필은 perfprofiles/profile. json에 저장 됩니다.
+* 프로필: 프로필 이름입니다. 사용 가능한 프로필은 perfprofiles/profiles.js에 저장 됩니다.
 
 데이터 반환
 * 시작 시 WPR 세션 상태를 반환 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 * [Windows 디바이스 포털 사용](using-the-windows-device-portal.md)
 * [장치 포털 핵심 API 참조 (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
