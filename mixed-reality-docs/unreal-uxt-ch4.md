@@ -3,16 +3,16 @@ title: 4. 대화형 장면 만들기
 description: Unreal Engine 4와 Mixed Reality Toolkit UX Tools 플러그 인을 사용하여 간단한 체스 앱을 만드는 자습서 시리즈 4/6부
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: a9de5755ab86c96322a8d50fecd7ba2cdea866d3
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 62c0ff839718f7fda34bdc7560eae634fa37d44f
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330220"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720339"
 ---
 # <a name="4-making-your-scene-interactive"></a>4. 대화형 장면 만들기
 
