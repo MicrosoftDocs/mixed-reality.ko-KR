@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
-ms.openlocfilehash: e5961a178d571d2f71e98ff4c3c729d6feb0fd40
-ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
+ms.openlocfilehash: 57ddf1569ff87a278134eff0204942094b1cd014
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327963"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216254"
 ---
 # <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
 
@@ -36,9 +36,15 @@ HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발�
 
 오픈 소스 샘플 앱은 팀에서 만든 애플리케이션이며, 개발자가 살펴보고 프로젝트에서 익힐 수 있도록 소스 코드를 제공했습니다.
 
-* [원소의 주기율표](periodic-table-of-the-elements.md)
+### <a name="hololens-2-open-source-sample-apps"></a>HoloLens 2 오픈 소스 샘플 앱
+* [평면](sampleapp-surfaces.md)
+* [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
+
+### <a name="hololens-1st-gen-open-source-sample-apps"></a>HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
+* [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
+* [갤럭시 익스플로러 1.0](galaxy-explorer.md)
 * [달착륙선](lunar-module.md)
-* [갤럭시 익스플로러](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Mixed Reality 아카데미 자습서
 
