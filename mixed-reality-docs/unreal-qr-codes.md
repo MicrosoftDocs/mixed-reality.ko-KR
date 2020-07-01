@@ -3,16 +3,16 @@ title: Unreal의 QR 코드
 description: Unreal에서 QR 코드 사용 가이드
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 개발, 기능, 설명서, 가이드, 홀로그램, qr 코드
-ms.openlocfilehash: 90a51227ae455389168fb3262e83f34b64a7bfb5
-ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
+ms.openlocfilehash: cf6c113f6bf4a13a96f46d6420a3093966455c3b
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428742"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720389"
 ---
 # <a name="qr-codes-in-unreal"></a>Unreal의 QR 코드
 
@@ -54,7 +54,7 @@ QR 코드는 Unreal의 AR 추적 기하 도형 시스템을 통해 추적 이미
 
 ![QR 렌더링 예제](images/unreal-qr-render.PNG)
 
-다음과 같습니다.
+진행 상황은 다음과 같습니다.
 1. 먼저 추적 이미지를 **ARTrackedQRCode**에 캐스트하여 현재 업데이트된 이미지가 QR 코드인지 확인합니다.  
 2. 인코딩된 데이터는 **QRCode** 변수에서 검색합니다. **GetLocalToWorldTransform** 위치에서 QR 코드의 왼쪽 위를, **GetEstimateSize**로 크기를 가져올 수 있습니다. 
 

@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트, 핵심 개념, 상호 작용
-ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334113"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345653"
 ---
 # <a name="start-designing-and-prototyping"></a>디자인 및 프로토타입 생성 시작
 
@@ -60,7 +60,7 @@ ms.locfileid: "75334113"
 
 <br>
 
-![상호 작용 디자인 요소](images/MRTK_BoundingBox_Main.png)
+![상호 작용 디자인 요소](images/UX/UX_Hero_Manipulation.jpg)
 
 ## <a name="interaction-design-factors-to-consider"></a>고려할 상호 작용 디자인 요소
 
@@ -85,6 +85,17 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 
 <br>
 
+
+---
+
+<br>
+
+
+![UX 요소](images/UX/UX_Hero_BoundingBox.jpg)
+
+## <a name="user-experience-elements-for-mixed-reality"></a>혼합 현실용 사용자 환경 요소
+
+
 ### <a name="color-light-and-materials"></a>[색, 광원 및 재질](color,-light-and-materials.md)
 혼합 현실용 콘텐츠를 디자인하려면 환경에서 사용되는 시각적 자산 각각에 대한 색, 조명 및 재질을 신중하게 고려해야 합니다.
 
@@ -100,8 +111,11 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-reality"></a>[혼합 현실용 UX 요소](app-patterns-landingpage.md)
-혼합 현실에서 공간 상호 작용 및 UI의 기본 구성 요소에 대해 알아봅니다.
+### <a name="common-controls-and-behaviors"></a>[공용 컨트롤 및 동작](app-patterns-landingpage.md)
+혼합 현실 환경에서 자주 사용되는 일반적인 공간 상호 작용 및 UI 구성 요소에 대해 알아봅니다.
+
+
+
 <br>
 
 

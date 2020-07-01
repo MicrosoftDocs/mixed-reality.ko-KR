@@ -3,16 +3,16 @@ title: HoloLens 에뮬레이터 사용
 description: HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 혼합 현실 앱을 테스트할 수 있습니다.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227988"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631511"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -28,7 +28,7 @@ HoloLens 에뮬레이터를 사용하면 실제 HoloLens 없이 PC에서 홀로�
 HoloLens 에뮬레이터를 다운로드합니다.
 
 버전: 
-* [HoloLens 2 에뮬레이터(Windows Holographic 버전 2004)](https://go.microsoft.com/fwlink/?linkid=2129088)
+* [HoloLens 2 에뮬레이터(Windows Holographic 버전 2004, 2020년 6월 업데이트)](https://go.microsoft.com/fwlink/?linkid=2132415)
 * [HoloLens 에뮬레이터(1세대) 및 홀로그램 프로젝트 템플릿](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 HoloLens 에뮬레이터의 릴리스 정보 및 이전 빌드는 [HoloLens 에뮬레이터 아카이브](hololens-emulator-archive.md) 페이지에서 찾을 수 있습니다.
@@ -251,7 +251,7 @@ HoloLens 2 에뮬레이터(Windows Holographic 2004 버전)부터 Windows Mixed 
 
 ## <a name="known-issues"></a>알려진 문제
 
-* HoloLens 2 에뮬레이터를 제거할 때 하드 디스크 이미지(Flash.vhdx)가 Windows Kits\10\Emulation\HoloLens\<빌드 번호> 폴더의 하드 드라이브에 남아 있을 수 있습니다.  이 파일은 삭제해도 안전합니다.
+* HoloLens 2 에뮬레이터를 제거하면 하드 디스크 이미지(Flash.vhdx)가 Windows Kits\10\Emulation\HoloLens\<build number> 폴더의 하드 드라이브에 남아 있을 수 있습니다.  이 파일은 삭제해도 안전합니다.
 * 하드웨어 그래픽 가속으로 인해 AMD 또는 Intel 그래픽을 사용하는 일부 시스템에서 Holographic 앱의 작동이 중단될 수 있습니다.  에뮬레이터 도구 창에서 하드웨어 그래픽 가속을 사용하지 않도록 설정하면 이 문제가 해결됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결

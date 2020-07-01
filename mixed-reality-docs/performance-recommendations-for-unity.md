@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: 그래픽, CPU, GPU, 렌더링, 가비지 컬렉션, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277571"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216244"
 ---
 # <a name="performance-recommendations-for-unity"></a>Unity에 대한 성능 추천 사항
 
@@ -282,6 +282,8 @@ Unity의 [실시간 글로벌 조명](https://docs.unity3d.com/Manual/GIIntro.ht
 
 **편집** > **프로젝트 설정**을 선택한 다음, **품질** 범주를 선택하고, UWP 플랫폼에 대해 **낮은 품질**을 선택합니다. **섀도** 속성을 **섀도 사용 안 함**으로 설정할 수도 있습니다.
 
+Unity의 모델에서 굽기 조명을 사용하는 것이 좋습니다.
+
 ### <a name="reduce-poly-count"></a>다각형 수 감소
 
 다각형 수는 일반적으로 다음 방법 중 하나를 사용하여 줄어듭니다.
@@ -344,7 +346,7 @@ Unity는 가비지 수집기의 작동 방식 및 메모리 관리와 관련된 
 기타 빠른 팁:
 - 런타임에 복잡한 문자열을 동적으로 빌드하려면 [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) C# 클래스를 사용합니다.
 - 앱의 모든 빌드 버전에서 계속 실행되므로 더 이상 필요하지 않은 Debug.Log()에 대한 호출을 제거합니다.
-- 홀로그램 앱에 일반적으로 많은 메모리가 필요한 경우 로드 또는 전환 화면을 표시할 때와 같이 로드 단계 중에 [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2)를 호출하는 것이 좋습니다.
+- 홀로그램 앱에 일반적으로 많은 메모리가 필요한 경우 로드 또는 전환 화면을 표시할 때와 같이 로드 단계 중에 [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2)를 호출하는 것이 좋습니다.
 
 #### <a name="object-pooling"></a>개체 풀링
 

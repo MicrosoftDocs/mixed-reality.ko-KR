@@ -7,12 +7,12 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows 장치 포털, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 234f8a5f2550c4437445ec3ac2726a3588f8bdbe
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451365"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441847"
 ---
 # <a name="using-the-windows-device-portal"></a>Windows 장치 포털 사용
 
@@ -44,8 +44,12 @@ HoloLens용 Windows 장치 포털을 사용하면 Wi-Fi 또는 USB를 통해 원
 ## <a name="connecting-over-wi-fi"></a>Wi-Fi를 통한 연결
 
 1. [HoloLens를 Wi-Fi에 연결합니다](connecting-to-wi-fi-on-hololens.md).
-2. 디바이스의 IP 주소를 조회합니다.
-   * **설정 > 네트워크 및 인터넷 > Wi-Fi > 고급 옵션**에서 디바이스의 IP 주소를 찾습니다.
+2. 다음 중 하나를 수행하여 디바이스의 IP 주소를 조회합니다.
+   * **설정 > 네트워크 및 인터넷 > Wi-Fi > 고급 옵션**으로 차례로 이동합니다.
+   * **설정 > 네트워크 및 인터넷**으로 차례로 이동하고, **하드웨어 속성**을 선택합니다.
+
+![HoloLens 2 설정](images/windows-device-portal-img-16.png)
+
 3. PC의 웹 브라우저에서 https://<YOUR_HOLOLENS_IP_ADDRESS>로 이동합니다.
    * 브라우저에 다음 메시지가 표시됩니다. "이 웹 사이트의 보안 인증서에 문제가 있습니다." 이 오류는 디바이스 포털에 발행된 인증서가 테스트 인증서이기 때문에 발생합니다. 지금은 이 인증서 오류를 무시하고 계속 진행할 수 있습니다.
 
@@ -175,6 +179,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 * **비디오 및 사진**: 디바이스에서 촬영한 비디오 및 사진 캡처 목록을 표시합니다.
 
 이 페이지의 모든 설정은 Windows 장치 포털을 사용하는 캡처에 적용되지만 일부는 추가적으로 시스템 MRC(시작 메뉴, 하드웨어 단추, 글로벌 음성 명령, Miracast) 및 사용자 지정 MRC 레코더에 적용됩니다.
+
 |  설정  |  시스템 MRC에 적용  |  사용자 지정 MRC 레코더에 적용 |
 |----------|----------|----------|
 |  홀로그램  |  아니요  |  아니요 |

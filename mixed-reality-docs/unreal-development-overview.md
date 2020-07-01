@@ -3,16 +3,16 @@ title: Unreal 개발 개요
 description: Unreal Engine 4를 사용하는 혼합 현실 개발의 개요
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 스트리밍, 원격, 혼합 현실, 개발, 시작, 기능, 새 프로젝트, 에뮬레이터, 설명서, 가이드, 특징, 홀로그램, 게임 개발
-ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0e3f40c7aa05a9c5f93d7eb9dc9793b6daeb8b90
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330160"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720369"
 ---
 # <a name="unreal-development-overview"></a>Unreal 개발 개요
 
@@ -33,11 +33,14 @@ Unreal 개발이 처음이라면 모르는 상태에서 넘어가지 마세요. 
 [Unreal UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal)는 릴리스된 첫 번째 구성 요소이며 현재 HoloLens 2에서만 지원됩니다. 구성 요소 플러그 인에는 다음과 같은 공통 UX 기능의 코드, 청사진, 예제 자산이 들어 있습니다.
 * 입력 시뮬레이션
 * 손 조작 행위자
-* 누를 수 있는 단추 구성 요소
+* 누름 가능한 단추 구성 요소
 * 조작자 구성 요소
 * 따르기 동작 구성 요소
 
 기능 세부 정보 및 프로젝트 설정에 대한 정보는 [Unreal용 UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal) GitHub 리포지토리에서 살펴볼 수 있습니다.
+
+## <a name="additional-files"></a>추가 파일
+HoloLens용 Unreal 앱을 처음으로 만들거나 배포하는 경우 Epic Launcher에서 [지원 파일을 다운로드](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app)해야 합니다.
 
 ## <a name="tutorial"></a>자습서
 

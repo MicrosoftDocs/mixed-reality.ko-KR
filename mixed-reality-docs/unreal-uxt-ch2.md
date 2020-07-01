@@ -3,16 +3,16 @@ title: 2. 프로젝트 및 첫 번째 애플리케이션 초기화
 description: Unreal Engine 4와 Mixed Reality Toolkit UX Tools 플러그 인을 사용하여 간단한 체스 앱을 만드는 자습서 시리즈 2/6부
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330369"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345733"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화
 
@@ -28,7 +28,7 @@ ms.locfileid: "84330369"
 * 청사진을 사용하여 행위자 및 스크립트 수준 이벤트 만들기
 
 ## <a name="creating-a-new-unreal-project"></a>새 Unreal 프로젝트 만들기
-가장 먼저 필요한 것은 작업할 프로젝트입니다.
+가장 먼저 필요한 것은 작업할 프로젝트입니다. HoloLens용 Unreal 앱을 처음으로 만드는 경우 Epic Launcher에서 [지원 파일을 다운로드](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app)해야 합니다.
 
 1. Unreal Engine 실행
 
@@ -43,6 +43,9 @@ ms.locfileid: "84330369"
 4. **C++** , **확장 가능한 3D 또는 2D, 모바일/태블릿**을 선택하고 **프로젝트 설정**으로 **시작 콘텐츠 없음**을 선택합니다. 
     * 저장 위치를 선택하고 **프로젝트 만들기**를 클릭합니다. 
 
+> [!NOTE]
+> 나중에 섹션 4에서 설정할 UX Tools 플러그 인을 빌드하려면 Blueprint 프로젝트 대신 C++ 프로젝트를 선택해야 합니다.
+
 ![초기 프로젝트 설정](images/unreal-uxt/2-project-settings.PNG)
 
 Unreal 편집기에서 프로젝트가 자동으로 열리므로, 다음 섹션에 대한 준비가 완료되었습니다.
@@ -56,14 +59,14 @@ Unreal 편집기에서 프로젝트가 자동으로 열리므로, 다음 섹션�
 ![HoloLens 플러그 인 사용](images/unreal-uxt/2-plugins.PNG)
 
 2. 기본 제공 옵션 목록에서 **가상 현실**을 선택합니다. 
-    * **Microsoft Windows Mixed Reality**까지 아래로 스크롤하고 **사용**을 선택한 다음, 편집기를 다시 시작합니다. 
+    * **Microsoft Windows Mixed Reality**까지 아래로 스크롤하고, **사용**을 선택한 다음, 편집기를 다시 시작합니다. 
 
 ![Windows Mixed Reality 플러그 인 사용](images/unreal-uxt/2-virtual-reality-plugin.PNG)
 
 > [!NOTE]
 > 두 플러그 인은 HoloLens 2 개발에 필요합니다.
 
-이 작업을 완료하면 회사에 빈 수준을 사용할 수 있습니다.
+작업이 완료되면 회사에 대한 빈 수준이 준비됩니다.
 
 ## <a name="creating-a-level"></a>수준 만들기
 다음 작업은 참조 및 규모에 대한 시작 지점과 큐브를 사용하여 간단한 플레이어 설정을 만드는 것입니다.

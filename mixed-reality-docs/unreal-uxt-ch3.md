@@ -3,16 +3,16 @@ title: 3. 혼합 현실용 프로젝트 설정
 description: Unreal Engine 4와 Mixed Reality Toolkit UX Tools 플러그 인을 사용하여 간단한 체스 앱을 만드는 자습서 시리즈 3/6부
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879548"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. 혼합 현실용 프로젝트 설정
 
@@ -37,17 +37,21 @@ Unreal의 AR 세션은 스스로 발생하지 않습니다. 세션을 사용하�
 
 ![AR 세션 구성](images/unreal-uxt/3-arsessionconfig.PNG)
 
-이 작업 완료 후 다음 단계는 수준이 로드될 때 AR 세션이 시작되는지 확인하는 것입니다. 다행이 Unreal에는 수준 전체 글로벌 이벤트 그래프 역할을 하는 **수준 청사진**이라는 특수 청사진 종류가 있습니다. **수준 청사진**에서 ARSessionConfig 자산을 연결하면 게임 재생이 시작될 때 AR 세션이 즉시 실행됩니다.
+작업이 완료되면 다음 단계는 수준이 로드될 때 AR 세션이 시작되고 수준이 종료될 때 중지되도록 하는 것입니다. 다행이 Unreal에는 수준 전체 글로벌 이벤트 그래프 역할을 하는 **수준 청사진**이라는 특수 청사진 종류가 있습니다. **수준 청사진**에서 ARSessionConfig 자산을 연결하면 게임 재생이 시작될 때 AR 세션이 즉시 실행됩니다.
 
 1. 편집기 도구 모음에서 **청사진 > 수준 청사진 열기**를 클릭합니다. 
 
 ![수준 청사진 열기](images/unreal-uxt/3-level-blueprint.PNG)
 
-5. 실행 노드(화살표 아이콘)를 **Event BeginPlay**에 끌어다 놓습니다. **AR 세션 시작** 노드를 검색하고 Enter를 누릅니다.  
+5. 실행 노드(화살표 아이콘)를 **Event BeginPlay**에 끌어다 놓습니다. **AR 세션 시작** 노드를 검색하고 Enter 키를 누릅니다.  
     * **세션 구성**에서 **자산 선택**을 클릭하고 **ARSessionConfig** 자산을 선택합니다. 
-    * **컴파일**을 누른 다음, **저장**하고 주 창으로 돌아갑니다.
 
 ![AR 세션 시작](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. 마우스 오른쪽 단추로 EventGraph의 아무 곳을 클릭하고, 새 **Event EndPlay** 노드를 만듭니다. 실행 핀을 끌어서 놓습니다. **AR 세션 중지** 노드를 검색하고 Enter 키를 누릅니다. 수준이 종료될 때 AR 세션이 중지되지 않으면 헤드셋으로 스트림하는 동안 앱을 다시 시작할 때 특정 기능이 작동하지 않을 수 있습니다. 
+    * **컴파일**을 누른 다음, **저장**하고 주 창으로 돌아갑니다.
+
+![AR 세션 중지](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>폰 만들기
 이 시점에서 프로젝트에는 여전히 플레이어 개체가 필요합니다. Unreal에서 **폰**은 게임의 사용자를 나타내지만 여기서는 HoloLens 2 환경이 됩니다.

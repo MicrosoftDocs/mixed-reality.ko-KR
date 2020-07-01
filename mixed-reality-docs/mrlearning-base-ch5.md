@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 9a19ad59e520a2743aafd954910f43c6f51d6c8a
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376090"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441860"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. 고급 입력 옵션 탐색
 
@@ -38,10 +38,15 @@ ms.locfileid: "79376090"
 5. 음성 명령에 대한 응답 이벤트 구현
 
 ### <a name="1-clone-the-default-input-system-profile"></a>1. 기본 입력 시스템 프로필 복제
-
 [계층 구조] 창에서 **MixedRealityToolkit** 개체를 선택하고 [검사기] 창에서 **입력** 탭을 선택한 다음, **DefaultHoloLens2InputSystemProfile**을 복제하여 개발자의 사용자 지정 가능한 **입력 시스템 프로필**로 바꿉니다.
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
+
+> [!NOTE]
+> MRTK 2.4.0 이상을 사용하는 경우 다음을 수행합니다.
+> * [계층 구조] 탭에서 **MixedRealityToolkit** 개체를 선택한 다음, [검사기] 창에서 **입력** 탭을 클릭하여 **포인터** 섹션을 펼칩니다. 
+> * **DefaultMixedRealityInputPointerProfile**을 복제하고, 사용자 지정 가능한 **입력 포인터 프로필**로 바꿉니다.
+> * **응시 설정** 섹션에서 **시선 추적 사용**이 true인지 확인합니다. 
 
 > [!TIP]
 > MRTK 프로필을 복제하는 방법에 대한 자세한 내용은 [Mixed Reality Toolkit 프로필을 구성하는 방법](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) 지침을 참조하세요.

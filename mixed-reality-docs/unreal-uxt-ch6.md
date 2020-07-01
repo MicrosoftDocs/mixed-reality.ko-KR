@@ -3,16 +3,16 @@ title: 6. 패키징 후 디바이스 또는 에뮬레이터에 배포
 description: Unreal Engine 4와 Mixed Reality Toolkit UX Tools 플러그 인을 사용하여 간단한 체스 앱을 만드는 자습서 시리즈 6/6부
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 99c431920c72cf85fed5a0eec6fc72ddf9fb112c
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330244"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345693"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. 패키징 후 디바이스 또는 에뮬레이터에 배포
 
@@ -48,30 +48,40 @@ ms.locfileid: "84330244"
 
 1.  **편집 > 프로젝트 설정**으로 이동합니다. 
     * **프로젝트 > 설명 > 정보 > 프로젝트 이름**에서 프로젝트 이름을 추가합니다. 
-    * **프로젝트 > 설명 > 게시자 > 회사 고유 이름**에서 **CN={회사 이름 삽입}** 을 추가합니다.
+    * **프로젝트 > 설명 > 게시자 > 회사 고유 이름** 아래에서 **CN=YourCompanyName**을 추가합니다.
 
 > [!IMPORTANT]
-> 이들 필드 중 하나를 비워 두면 오류가 발생 합니다. 
+> 이러한 필드 중 하나를 비워 두면 3단계에서 새 인증서를 생성하려고 할 때 오류가 발생합니다. 
+
+> [!IMPORTANT]
+> 게시자의 이름은 [LADPv3 고유 이름 형식](https://www.ietf.org/rfc/rfc2253.txt)이어야 합니다. 패키지할 때 잘못된 형식의 게시자 이름으로 인해 "서명 키를 찾을 수 없습니다. 앱에 디지털 서명할 수 없습니다."라는 오류가 발생합니다.
 
 ![프로젝트 설정 - 설명](images/unreal-uxt/6-cn.PNG)
 
 2.  **플랫폼 > HoloLens**에서 **HoloLens 에뮬레이션에 대해 빌드** 및/또는 **HoloLens 디바이스에 대해 빌드**를 사용하도록 설정합니다.
 
-3.  **패키징** 섹션(**서명 인증서** 옆)에서 **새로 생성**을 클릭하고 주 창으로 돌아갑니다.
+3.  **서명 인증서** 옆의 **패키징** 섹션에서 **새로 생성**을 클릭합니다.
+
+> [!IMPORTANT]
+> 이미 생성된 인증서를 사용하는 경우 인증서의 게시자 이름은 애플리케이션의 게시자 이름과 동일해야 합니다. 그렇지 않으면 "서명 키를 찾을 수 없습니다. 앱에 디지털 서명할 수 없습니다."라는 오류가 발생합니다.
 
 ![프로젝트 설정 - 플랫폼 - HoloLens](images/unreal-uxt/6-packaging.PNG)
 
-4.  **파일 > 패키지 프로젝트**으로 이동하여 **HoloLens**를 선택합니다. 
+4. 프라이빗 키 암호를 만들라는 메시지가 표시되면 테스트 목적으로 **없음**을 클릭합니다.
+
+![새 인증서 생성](images/unreal-uxt/6-private-key-testing.png)
+
+5. **파일 > 패키지 프로젝트**으로 이동하여 **HoloLens**를 선택합니다. 
     * 새 폴더를 만들어 패키지를 저장하고 **폴더 선택**을 선택합니다. 
 
-5.  앱 패키징 후 [Windows 장치 포털](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)을 열고 **보기 > 앱**으로 이동한 다음, **앱 배포** 섹션을 찾습니다.
+6.  앱 패키징 후 [Windows 장치 포털](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)을 열고 **보기 > 앱**으로 이동한 다음, **앱 배포** 섹션을 찾습니다.
 
-6.  **찾아보기...** 를 클릭하고 **ChessApp.appxbundle** 파일로 이동한 다음, **열기**를 클릭합니다. 
+7.  **찾아보기...** 를 클릭하고 **ChessApp.appxbundle** 파일로 이동한 다음, **열기**를 클릭합니다. 
 
     * 디바이스에 앱을 처음 설치하는 경우 **프레임워크 패키지를 선택하도록 허용** 옆의 확인란을 선택합니다. 
     * 다음 대화 상자에서 적절한 **VCLibs** 및 **appx** 파일을 포함합니다(디바이스에는 arm64, 에뮬레이터에는 x64). 이 항목은 패키지를 저장한 폴더 안의 **HoloLens** 아래에 있습니다.
 
-7.  **설치**를 클릭합니다.
+8.  **설치**를 클릭합니다.
     * 이제 **모든 앱**으로 이동하고 새로 설치된 앱을 탭하여 실행하거나 **Windows 장치 포털**에서 직접 앱을 시작할 수 있습니다. 
 
 축하합니다! HoloLens 혼합 현실 애플리케이션이 완료되어 진행할 준비가 되었습니다. 그러나 모두 끝난 것은 아닙니다. MRTK에는 공간 매핑, 응시, 음성 입력을 비롯하여 QR 코드에 이르기까지, 프로젝트에 추가할 수 있는 무수한 독립 실행형 기능이 있습니다. 이러한 기능에 대한 자세한 내용은 [Unreal 개발 개요](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview)에서 확인할 수 있습니다.

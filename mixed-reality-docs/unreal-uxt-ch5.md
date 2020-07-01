@@ -3,16 +3,16 @@ title: 5. 단추 추가 및 체스 말 위치 초기화
 description: Unreal Engine 4와 Mixed Reality Toolkit UX Tools 플러그 인을 사용하여 간단한 체스 앱을 만드는 자습서 시리즈 5/6부
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330270"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720259"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. 단추 추가 및 체스 말 위치 초기화
 
@@ -54,7 +54,7 @@ ms.locfileid: "84330270"
 
 ![SimpleButton의 새 청사진을 서브클래스로 분류](images/unreal-uxt/5-subclass.PNG)
 
-2. **구성 요소** 패널에서 **PressableButton(상속)** 을 클릭하고 **세부 정보** 패널에서 **이벤트** 섹션까지 아래로 스크롤합니다. 
+2. **구성 요소** 패널에서 **누름 가능한 단추(상속)** 를 클릭하고 **세부 정보** 패널에서 **이벤트** 섹션까지 아래로 스크롤합니다. 
     * **단추를 누를 때** 옆에 있는 녹색 **+** 단추를 클릭하여 이벤트 그래프에 이벤트를 추가합니다. 단추를 누르면 이벤트가 호출됩니다. 
     
 여기에서 **WhiteKing**의 **Reset Location** 함수를 호출하게 되는데, 수준에서 **WhiteKing** 행위자에 대한 참조가 필요합니다. 
