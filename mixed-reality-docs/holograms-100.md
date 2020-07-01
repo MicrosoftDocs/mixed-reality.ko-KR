@@ -6,33 +6,31 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: 혼합 현실, Windows Mixed Reality, HoloLens, 몰입 형, vr, mr, 시작, 홀로그램, 아카데미, 자습서
-ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 58a1785ef74872c633cf65d6a32e24d517367359
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082057"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570302"
 ---
->[!NOTE]
->Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다.  따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다.  이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_** .  대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. HoloLens 2에 대한 [새로운 자습서 시리즈](mrlearning-base.md)가 게시되었습니다.
+# <a name="mr-basics-100-getting-started-with-unity"></a>MR 기본 100: Unity 시작
 
-<br>
-
-# <a name="mr-basics-100-getting-started-with-unity"></a>MR 기본 사항 100: Unity 시작
+>[!IMPORTANT]
+>Mixed Reality 아카데미 자습서는 HoloLens(1세대) 및 Mixed Reality 몰입형 헤드셋을 염두에 두고 설계되었습니다.  따라서 이러한 디바이스 개발에 대한 지침을 계속 찾고 있는 개발자를 위해 이러한 자습서를 그대로 두는 것이 중요합니다.  이러한 자습서는 HoloLens 2에 사용되는 최신 도구 집합 또는 상호 작용으로 업데이트되지 **_않습니다_**.  대신 지원되는 디바이스에서 계속 작동하도록 유지 관리됩니다. HoloLens 2에 대한 [새로운 자습서 시리즈](mrlearning-base.md)가 게시되었습니다.
 
 이 자습서에서는 Unity로 빌드된 기본 혼합 현실 앱을 만드는 과정을 안내 합니다.
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
 <tr>
 <th>과정</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td>MR 기본 사항 100: Unity 시작</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR 기본 100: Unity 시작</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 * 올바른 [도구로](install-the-tools.md)구성 된 WINDOWS 10 PC입니다.
 
@@ -40,7 +38,7 @@ ms.locfileid: "80082057"
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Unity를 사용 하 여 앱을 빌드하려면 먼저 프로젝트를 만들어야 합니다. 이 프로젝트는 몇 개의 폴더로 구성 되며 가장 중요 한 것은 자산 폴더입니다. 이 폴더는 Maya, Max 시네마, Photoshop 등의 디지털 콘텐츠 생성 도구에서 가져온 모든 자산, Visual Studio 또는 즐겨 찾는 코드 편집기를 사용 하 여 만든 모든 코드, 그리고 장면을 작성할 때 Unity가 만드는 모든 콘텐츠 파일을 포함 하는 폴더입니다. 편집기의, 애니메이션 및 기타 Unity 자산 유형입니다.
+Unity를 사용 하 여 앱을 빌드하려면 먼저 프로젝트를 만들어야 합니다. 이 프로젝트는 몇 개의 폴더로 구성 되며 가장 중요 한 것은 자산 폴더입니다. 이 폴더는 Maya, Max 시네마, Photoshop 등의 디지털 콘텐츠 생성 도구에서 가져온 모든 자산, Visual Studio 또는 즐겨 찾는 코드 편집기를 사용 하 여 만든 모든 코드 및 편집기에서 장면, 애니메이션 및 기타 Unity 자산 형식을 작성할 때 Unity에서 만드는 모든 콘텐츠 파일을 포함 하는 폴더입니다.
 
 UWP 앱을 빌드 및 배포 하기 위해 Unity는 필요한 모든 자산과 코드 파일을 포함 하는 Visual Studio 솔루션으로 프로젝트를 내보낼 수 있습니다.
 
@@ -93,7 +91,7 @@ Unity 기본 카메라는 헤드 추적 및 stereoscopic 렌더링을 처리 합
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-이 장에서는 개발을 위해 Windows Holographic SDK를 대상으로 하는 데 도움이 되는 몇 가지 Unity 프로젝트 설정을 설정 합니다. 응용 프로그램에 대 한 몇 가지 품질 설정도 설정 됩니다. 마지막으로 빌드 대상이 Windows Store로 설정 되었는지 확인 합니다.
+이 장에서는 개발을 위해 Windows Holographic SDK를 대상으로 하는 데 도움이 되는 몇 가지 Unity 프로젝트 설정을 설정 합니다. 응용 프로그램에 대 한 몇 가지 품질 설정도 설정 됩니다. 마지막으로 빌드 대상이 유니버설 Windows 플랫폼로 설정 되었는지 확인 합니다.
 
 ### <a name="unity-performance-and-quality-settings"></a>Unity 성능 및 품질 설정
 
@@ -104,7 +102,7 @@ Unity 기본 카메라는 헤드 추적 및 stereoscopic 렌더링을 처리 합
 HoloLens에서 높은 프레임 속도를 유지 하는 것이 매우 중요 하기 때문에 최상의 성능을 위해 품질 설정을 조정 하려고 합니다. 자세한 성능 정보는 [Unity에 대 한 성능 권장 사항](performance-recommendations-for-unity.md)을 제공 합니다.
 
 1. **편집 > 프로젝트 설정 > 품질** 을 선택 합니다.
-2. **Windows 스토어** 로고 아래의 **드롭다운** 을 선택 하 고 **매우 낮음**을 선택 합니다. Windows 스토어 열의 상자와 **매우 낮은** 행이 녹색 인 경우 설정이 올바르게 적용 됨을 알 수 있습니다.
+2. **유니버설 Windows 플랫폼** 로고 아래에 있는 **드롭다운** 을 선택 하 고 **매우 낮음**을 선택 합니다. 유니버설 Windows 플랫폼 열의 상자와 **매우 낮은** 행이 녹색 이면 설정이 올바르게 적용 됩니다.
 
 **폐색를 대상으로 하는 혼합 현실 응용 프로그램의 경우**품질 설정을 기본값으로 그대로 둘 수 있습니다.
 
@@ -117,21 +115,13 @@ HoloLens에서 높은 프레임 속도를 유지 하는 것이 매우 중요 하
 내보내려는 앱이 2D 보기 대신 [몰입 형 보기](app-views.md) 를 만들어야 한다고 Unity에 알려야 합니다. Windows 10 SDK를 대상으로 하는 Unity에서 가상 현실 지원을 사용 하도록 설정 하 여이 작업을 수행 합니다.
 
 1. **편집 > 프로젝트 설정 > 플레이어**로 이동 합니다.
-2. 플레이어 설정에 대 한 **검사기 패널** 에서 **Windows 스토어** 아이콘을 선택 합니다.
-3. **XR 설정** 그룹을 확장 합니다.
+2. 플레이어 설정에 대 한 **검사기 패널** 에서 **유니버설 Windows 플랫폼** 아이콘을 선택 합니다.
+3. **XR 설정** 그룹을 확장합니다.
 4. **렌더링** 섹션에서 **가상 현실 지원 됨** 확인란을 선택 하 여 새 **가상 현실 sdk** 목록을 추가 합니다.
-5. **Windows Mixed Reality** 가 목록에 나타나는지 확인 합니다. 그렇지 않은 경우 목록 맨 아래에 있는 **+** 단추를 선택 하 고 **Windows Mixed Reality**를 선택 합니다.
+5. 목록에 **Windows Mixed Reality**가 나타나는지 확인합니다. 그렇지 않은 경우 목록 아래쪽에서 **+** 단추를 선택하고 **Windows Mixed Reality**를 선택합니다.
 
 >[!NOTE]
->**Windows 스토어** 아이콘이 표시 되지 않는 경우 설치 하기 전에 windows 스토어 .Net 스크립팅 백 엔드를 선택 했는지 확인 합니다. 그렇지 않은 경우 올바른 Windows 설치를 사용 하 여 Unity를 다시 설치 해야 할 수 있습니다.
-
-**.NET 구성 확인**
-
-![.NET 구성 확인](images/configoptions-375px.png)
-
-1. **편집 > 프로젝트 설정 > 플레이어** 로 이동 합니다 (이전 단계에서이 작업을 계속 진행할 수 있음).
-2. 플레이어 설정에 대 한 **검사기 패널** 에서 **Windows 스토어** 아이콘을 선택 합니다.
-3. **기타 설정** 구성 섹션에서 **Scripting 백 엔드가** **.net** 으로 설정 되어 있는지 확인 합니다.
+>**유니버설 Windows 플랫폼** 아이콘이 표시 되지 않는 경우 설치 중에 빌드 지원 유니버설 Windows 플랫폼 선택 했는지 확인 합니다. 이 항목을 선택하지 않은 경우 올바른 Windows 설치를 사용하여 Unity를 다시 설치해야 할 수 있습니다.
 
 모든 프로젝트 설정을 적용 하기 위한 놀라운 작업입니다. 다음으로, 홀로그램을 추가 해 보겠습니다.
 
@@ -186,20 +176,19 @@ Unity 프로젝트에서 큐브를 만드는 것은 Unity에서 다른 개체를
 
 ### <a name="export-to-the-visual-studio-solution"></a>Visual Studio 솔루션으로 내보내기
 
-1.  **파일 > 빌드 설정** 창을 엽니다.
-2.  열려 있는 장면 **추가** 를 클릭 하 여 장면을 추가 합니다.
-3.  **플랫폼** 을 **유니버설 Windows 플랫폼** 로 변경 하 고 **플랫폼 전환**을 클릭 합니다.
-4.  **Windows 스토어** 설정에서 **SDK** 가 **유니버설 10**인지 확인 합니다.
-5.  대상 장치에 대해 폐색를 표시 하거나 **HoloLens**로 전환 하는 **모든 장치** 를 그대로 둡니다.
-6.  **UWP 빌드 형식은** **D3D**이어야 합니다.
-7.  **UWP SDK** 는 **설치 된 최신 버전**으로 유지할 수 있습니다.
-8.  디버깅 **중인 C# Unity 프로젝트** 를 확인 합니다.
-9.  **빌드**를 클릭한 다음
-10. 파일 탐색기에서 **새 폴더** 를 클릭 하 고 폴더 이름을 **"App"** 으로 선택 합니다.
-11. **앱** 폴더가 선택 된 상태에서 **폴더 선택** 단추를 클릭 합니다.
-12. Unity가 빌드를 완료 하면 Windows 파일 탐색기 창이 표시 됩니다.
-13. 파일 탐색기에서 **앱** 폴더를 엽니다.
-14. 생성 된 Visual Studio 솔루션 (이 예제에서는 MixedRealityIntroduction)을 엽니다.
+1. **파일 > 빌드 설정** 창을 엽니다.
+1. 열려 있는 장면 **추가** 를 클릭 하 여 장면을 추가 합니다.
+1. **플랫폼** 을 **유니버설 Windows 플랫폼** 로 변경 하 고 **플랫폼 전환**을 클릭 합니다.
+1. **유니버설 Windows 플랫폼** 설정에서 **SDK** 가 **유니버설 10**인지 확인 합니다.
+1. 대상 장치에 대해 폐색를 표시 하거나 **HoloLens**로 전환 하는 **모든 장치** 를 그대로 둡니다.
+1. **UWP 빌드 형식은** **D3D**이어야 합니다.
+1. **UWP SDK** 는 **설치 된 최신 버전**으로 유지할 수 있습니다.
+1. **빌드**를 클릭한 다음
+1. 파일 탐색기에서 **새 폴더** 를 클릭 하 고 폴더 이름을 **"App"** 으로 선택 합니다.
+1. **앱** 폴더가 선택 된 상태에서 **폴더 선택** 단추를 클릭 합니다.
+1. Unity가 빌드를 완료 하면 Windows 파일 탐색기 창이 표시 됩니다.
+1. 파일 탐색기에서 **앱** 폴더를 엽니다.
+1. 생성 된 Visual Studio 솔루션 (이 예제에서는 MixedRealityIntroduction)을 엽니다.
 
 ### <a name="compile-the-visual-studio-solution"></a>Visual Studio 솔루션 컴파일
 
@@ -238,5 +227,5 @@ USB 케이블을 통해 장치가 연결 되어 있는지 확인 합니다.
 
 * [Unity 개발 개요](unity-development-overview.md)
 * [Unity 및 Visual Studio 사용 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
-* [MR 기본 사항 101](holograms-101.md)
-* [MR 기본 사항 101E](holograms-101e.md)
+* [MR 기본 101](holograms-101.md)
+* [MR 기본 101E](holograms-101e.md)

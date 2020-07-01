@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278041"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570321"
 ---
 # <a name="porting-guides"></a>포팅 가이드
 
@@ -70,9 +70,10 @@ Windows Mixed Reality 플랫폼은 아직 활성 개발 중 이며 가장 효과
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity 4 단계: 유니버설 Windows 플랫폼에서 실행할 응용 프로그램 대상 (UWP)
 
 도구를 설치한 후에는 유니버설 Windows 앱으로 앱을 실행 해야 합니다.
+
 * Unity에서 제공 하는 [단계별 연습](https://unity3d.com/partners/microsoft/porting-guides) 을 참조 하세요. Windows MR에 대 한 최신 LTS 릴리스 (모든 20xx 릴리스)를 유지 해야 합니다.
 * UWP 개발 리소스에 대 한 자세한 내용은 [Windows 10 게임 개발 가이드](https://docs.microsoft.com/windows/uwp/gaming/e2e)를 참조 하세요.
-* Unity는 계속 해 서 IL2CPP 지원을 개선 하 고 있습니다. IL2CPP를 사용 하면 일부 UWP 포트를 훨씬 쉽게 만들 수 있습니다. 현재 .Net scripting 백 엔드를 대상으로 하는 경우 IL2CPP 백엔드를 활용 하기 위해를 변환 하는 것이 좋습니다.
+* Unity는 계속 해 서 IL2CPP 지원을 개선 하 고 있습니다. IL2CPP를 사용 하면 일부 UWP 포트를 훨씬 쉽게 만들 수 있습니다. 현재 .NET scripting 백 엔드를 대상으로 하는 경우 IL2CPP 백엔드를 활용 하기 위해를 변환 하는 것이 좋습니다.
 
 참고: 응용 프로그램에 장치 관련 서비스 (예: 스트림에서의 일치 항목)에 대 한 종속성이 있는 경우이 단계에서 사용 하지 않도록 설정 해야 합니다. 나중에 Windows에서 제공 하는 것과 동일한 서비스에 연결할 수 있습니다.
 
