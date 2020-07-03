@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: ced33a082152822779ae23a854800072bc8dfb5f
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 409959b3c73eff684585706dfde87afc5f8a5495
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80613988"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570341"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>HoloLens 2를 위한 기존 앱 준비
 
@@ -36,12 +36,11 @@ ms.locfileid: "80613988"
 
 ## <a name="migrate-project-to-the-latest-version-of-unity"></a>최신 버전의 Unity로 프로젝트 마이그레이션
 
-[MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)를 사용하는 경우 [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases)는 Unity 또는 MRTK가 획기적으로 변경되지 않는 가장 적합한 장기적인 지원 경로입니다. 또한 MRTK v2는 항상 Unity 2018 LTS를 지원하지만, Unity 2019.x 모두에 대한 지원이 반드시 보장되는 것은 아닙니다. 
+[MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)를 사용하는 경우 [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases)는 Unity 또는 MRTK가 획기적으로 변경되지 않는 가장 적합한 장기적인 지원 경로입니다. 또한 MRTK v2는 항상 Unity 2018 LTS를 지원하지만, Unity 2019.x 모두에 대한 지원이 반드시 보장되는 것은 아닙니다.
 
-[Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases)와 Unity 2019.x 간의 추가 차이점을 명확하게 하기 위해 이러한 두 버전 간의 장단점을 간략하게 설명하겠습니다. 주요 차이점은 Unity 2019에서 ARM64에 대한 컴파일 기능입니다. 
+[Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases)와 Unity 2019.x 간의 추가 차이점을 명확하게 하기 위해 이러한 두 버전 간의 장단점을 간략하게 설명하겠습니다. 주요 차이점은 Unity 2019에서 ARM64에 대한 컴파일 기능입니다.
 
-개발자는 현재 해당 프로젝트에 존재하는 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)을 평가하고 이러한 DLL을 ARM64용으로 빌드할 수 있는지 여부를 결정해야 합니다. ARM64용으로 강한 종속성 플러그 인을 빌드할 수 없는 경우 Unity 2018 LTS를 사용해야 합니다.
-
+개발자는 현재 해당 프로젝트에 존재하는 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)을 평가하고 이러한 DLL을 ARM64용으로 빌드할 수 있는지 여부를 결정해야 합니다. ARM64에 대해 하드 종속성 플러그 인을 빌드할 수 없는 경우 ARM용 앱을 계속 빌드해야 할 수 있습니다.
 
 | Unity 2018 LTS | Unity 2019.x |
 |----------|-------------------|
@@ -54,19 +53,19 @@ ms.locfileid: "80613988"
 
 [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) 또는 Unity 2019+로 업데이트한 후에는 디바이스에서 최적의 결과를 얻기 위해 Unity에서 특정 설정을 업데이트하는 것이 좋습니다. 이러한 설정은 **[Unity의 권장 설정](Recommended-settings-for-Unity.md)** 아래에서 자세히 설명되어 있습니다.
 
-[.NET 스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html)가 Unity 2018에서 더 이상 사용되지 않으며 Unity 2019에서 *제거*되었음을 다시 반복해야 합니다. 개발자는 프로젝트를 [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html)로 전환하는 것을 고려해야 합니다. 
+[.NET 스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-dotnet.html)가 Unity 2018에서 더 이상 사용되지 않으며 Unity 2019에서 *제거*되었음을 다시 반복해야 합니다. 개발자는 프로젝트를 [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html)로 전환하는 것을 고려해야 합니다.
 
 > [!NOTE]
 > IL2CPP 스크립팅 백 엔드로 인해 Unity에서 Visual Studio로의 빌드 시간이 더 오래 걸릴 수 있으므로 개발자는 [IL2CPP 빌드 시간을 최적화](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)하도록 개발자 머신을 설정해야 합니다.
 > 또한 대용량 자산(스크립트 파일 제외) 또는 지속적으로 변화하는 장면 및 자산을 포함하는 Unity 프로젝트에 맞게 [캐시 서버](https://docs.unity3d.com/Manual/CacheServer.html)를 설정하는 것도 유용할 수 있습니다. 프로젝트를 열 때 Unity는 정식 자산을 개발자 컴퓨터에 내부 캐시 형식으로 저장합니다. 따라서 항목이 수정되면 다시 가져온 후 다시 처리해야 합니다. 모든 개발자가 새 변경 내용을 로컬로 다시 가져오지 않고, 이 프로세스를 한 번 수행한 후 캐시 서버에 저장하고, 이후에 다른 개발자와 공유할 수 있으므로 시간을 절약할 수 있습니다.
 
-업데이트된 Unity 버전으로 이동한 후에 주요 변경 내용을 처리한 다음, 개발자는 HoloLens(1세대)에서 현재 애플리케이션을 빌드하고 테스트해야 합니다. 또한 이때 소스 제어에 커밋을 만들고 저장하는 것이 좋습니다. 
+업데이트된 Unity 버전으로 이동한 후에 주요 변경 내용을 처리한 다음, 개발자는 HoloLens(1세대)에서 현재 애플리케이션을 빌드하고 테스트해야 합니다. 또한 이때 소스 제어에 커밋을 만들고 저장하는 것이 좋습니다.
 
 ## <a name="compile-dependenciesplugins-for-arm-processor"></a>ARM 프로세서에 대한 종속성/플러그 인 컴파일
 
-HoloLens(1세대)는 x86 프로세서에서 애플리케이션을 실행하지만, HoloLens 2는 ARM 프로세서를 사용합니다. 따라서 ARM을 지원하도록 기존 HoloLens 애플리케이션을 이식해야 합니다. 앞에서 설명한 대로 Unity 2018 LTS는 ARM32 앱 컴파일을 지원하지만, Unity 2019.x는 ARM32 및 ARM64 앱 컴파일을 지원합니다. 구체적인 성능상 차이는 없으므로 ARM64 애플리케이션 개발이 일반적으로 선호됩니다. 그러나 이 경우 ARM64에 대해 모든 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)도 빌드해야 합니다. 
+HoloLens(1세대)는 x86 프로세서에서 애플리케이션을 실행하지만, HoloLens 2는 ARM 프로세서를 사용합니다. 따라서 ARM을 지원하도록 기존 HoloLens 애플리케이션을 이식해야 합니다. 앞에서 설명한 대로 Unity 2018 LTS는 ARM32 앱 컴파일을 지원하지만, Unity 2019.x는 ARM32 및 ARM64 앱 컴파일을 지원합니다. 구체적인 성능상 차이는 없으므로 ARM64 애플리케이션 개발이 일반적으로 선호됩니다. 그러나 이 경우 ARM64에 대해 모든 [플러그 인 종속성](https://docs.unity3d.com/Manual/Plugins.html)도 빌드해야 합니다.
 
-애플리케이션에서 모든 DLL 종속성을 검토하세요. 프로젝트에 더 이상 필요하지 않은 종속성은 모두 제거하는 것이 좋습니다. 필요한 나머지 플러그 인의 경우 해당 ARM32 또는 ARM64 이진 파일을 Unity 프로젝트로 수집합니다. 
+애플리케이션에서 모든 DLL 종속성을 검토하세요. 프로젝트에 더 이상 필요하지 않은 종속성은 모두 제거하는 것이 좋습니다. 필요한 나머지 플러그 인의 경우 해당 ARM32 또는 ARM64 이진 파일을 Unity 프로젝트로 수집합니다.
 
 관련 DLL을 수집한 후에는 Unity에서 Visual Studio 솔루션을 빌드한 후 Visual Studio에서 ARM용 AppX를 컴파일하여 ARM 프로세서용으로 애플리케이션을 빌드할 수 있는지 테스트합니다. 소스 제어 솔루션에서 커밋으로 애플리케이션을 저장하는 것도 유용합니다.
 
@@ -75,6 +74,7 @@ HoloLens(1세대)는 x86 프로세서에서 애플리케이션을 실행하지�
 [MRTK 버전 2](https://github.com/microsoft/MixedRealityToolkit-Unity)는 HoloLens(1세대) 및 HoloLens 2를 모두 지원하는 Unity 기반 새로운 툴킷입니다. 여기에는 새로운 HoloLens 2 기능(예: 손 상호 작용 및 시선 추적)도 추가되어 있습니다.
 
 MRTK 버전 2를 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.
+
 - [MRTK 방문 페이지](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 - [MRTK 시작](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 - [MRTK 손](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/HandTracking.html)
@@ -84,11 +84,11 @@ MRTK 버전 2를 사용하는 방법에 대한 자세한 내용은 다음을 참
 
 새 [MRTK v2용 *.unitypackage 파일](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)을 삽입하기 전에 **1) MRTK v1과 통합되는 사용자 지정 코드** 및 **2) 입력 상호 작용 또는 UX 구성 요소에 대한 사용자 지정 코드** 인벤토리를 만드는 것이 좋습니다. MRTK v2를 수집하는 혼합 현실 개발자에게 가장 흔하게 나타나는 충돌은 입력 및 조작과 관련된 것입니다. 먼저 [MRTK v2 입력 모델](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)을 읽고 이해하는 것이 중요합니다.
 
-마지막으로, 새 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)는 스크립트 및 장면 내 관리자 개체의 모델에서 구성 및 서비스 공급자 아키텍처로 전환되었습니다. 이로 인해 보다 명확한 장면 계층 구조 및 아키텍처 모델이 구현되지만, 새로운 구성 프로필을 이해하기 위한 학습 곡선이 필요합니다. 따라서 [Mixed Reality Toolkit 구성 가이드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html)를 읽어보고 애플리케이션 요구에 맞게 조정해야 하는 중요한 설정 및 프로필에 익숙해지도록 합니다. 
+마지막으로, 새 [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)는 스크립트 및 장면 내 관리자 개체의 모델에서 구성 및 서비스 공급자 아키텍처로 전환되었습니다. 이로 인해 보다 명확한 장면 계층 구조 및 아키텍처 모델이 구현되지만, 새로운 구성 프로필을 이해하기 위한 학습 곡선이 필요합니다. 따라서 [Mixed Reality Toolkit 구성 가이드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html)를 읽어보고 애플리케이션 요구에 맞게 조정해야 하는 중요한 설정 및 프로필에 익숙해지도록 합니다.
 
 ### <a name="perform-the-migration"></a>마이그레이션 수행
 
-[MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)를 가져온 후 Unity 프로젝트에서 많은 컴파일러 관련 오류가 나타날 수 있습니다. 새로운 네임스페이스 구조 및 새로운 구성 요소 이름 때문에 이러한 오류가 발생하는 것이 가장 일반적입니다. 새로운 네임스페이스 및 구성 요소에 맞게 스크립트를 수정하여 이러한 오류를 계속 해결합니다. 
+[MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity)를 가져온 후 Unity 프로젝트에서 많은 컴파일러 관련 오류가 나타날 수 있습니다. 새로운 네임스페이스 구조 및 새로운 구성 요소 이름 때문에 이러한 오류가 발생하는 것이 가장 일반적입니다. 새로운 네임스페이스 및 구성 요소에 맞게 스크립트를 수정하여 이러한 오류를 계속 해결합니다.
 
 HTK/MRTK와 MRTK v2 간의 특정 API 차이점에 대한 자세한 내용은 [MRTK 버전 2 wiki](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)의 이식 가이드를 참조하세요.
 
