@@ -6,21 +6,32 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 319e76efbbe1085fc9d60251a6f0f38133de6505
-ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
+ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327903"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061126"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
 
+## <a name="version-221-july-6-2020"></a>버전 2.2.1 (2020 년 7 월 6 일)<a name="v2.2.1"></a>
+> [!IMPORTANT]
+> 버전 [2.2.0](holographic-remoting-version-history.md#v2.2.0) 를 사용 하는 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/downloads/app-certification-kit/) 유효성 검사가 실패 합니다. 버전 [2.2.0](holographic-remoting-version-history.md#v2.2.0) 를 사용할 때 응용 프로그램을 Microsoft 스토어에 제출 하려면 2.2.1 버전 이상으로 업데이트 하세요.
+* [Windows 앱 인증 키트](https://developer.microsoft.com/windows/downloads/app-certification-kit/) 준수 문제를 수정 했습니다.
+
+## <a name="version-220-july-1-2020"></a>버전 2.2.0 (2020 년 7 월 1 일)<a name="v2.2.0"></a>
+* 이제 Holographic 원격 플레이어를 [Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)를 실행 하는 pc에 설치 하 여 몰입 형 헤드셋으로 스트리밍할 수 있습니다.
+* 이제 Holographic 원격에서 [동작 컨트롤러](motion-controllers.md) 를 지원 하며 [SpatialInteractionSource](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)를 통해 컨트롤러 관련 데이터를 검색할 수 있습니다.
+* 이제 [SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference) 가 지원 되며 현재 단계는 [SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)를 통해 검색할 수 있습니다. 또한 [SpatialStageFrameOfReference. RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)를 통해 새 단계를 요청할 수 있습니다.
+* 이전 버전에서는 Holographic Remoting 플레이어에 의해 플레이어 쪽에서 포즈 예측이 완전히 처리 되었습니다. 2.2.0 버전부터 Holographic Remoting은 시간 동기화를 수행 하 고 예측은 원격 응용 프로그램에 의해 완전히 수행 됩니다. 또한 사용자는 까다로운 네트워크 상황에서 홀로그램 안정성이 향상 되어야 합니다.
+
 ## <a name="version-213-may-25-2020"></a>버전 2.1.3 (5 월 25 일, 2020)<a name="v2.1.3"></a>
 * [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) 이벤트의 동작이 변경 되었습니다. 이전 버전에서는 [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame)를 통해 다음 프레임을 만들 때 추가 된 [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) 도 유효한 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) 을 보장 **하지** 않았습니다. 버전 2.1.3 [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) 는 Holographic Remoting 플레이어에서 제공 되는 포즈 데이터와 동기화 되 고, 사용자는 카메라가 추가 될 때 다음 프레임에서 해당 카메라에 사용할 수 있는 유효한 [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) 도 있습니다.
-* RemoteContext. ConfigureDepthVideoStream를 통해 깊이 버퍼 스트리밍을 사용 하지 않도록 설정 하는 데 사용할 수 있는 DepthBufferStreamResolution에 사용 **하지 않도록** 추가 되었습니다. HolographicCameraRenderingParameters를 사용 하는 경우 CommitDirect3D11DepthBuffer는 *E_ILLEGAL_METHOD_CALL*와 함께 실패 합니다 [.](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
+* RemoteContext.ConfigureDepthVideoStream를 통해 깊이 버퍼 스트리밍을 사용 하지 않도록 설정 하는 데 사용할 수 있는 DepthBufferStreamResolution에 사용 **하지 않도록** 추가 되었습니다. HolographicCameraRenderingParameters를 사용 하는 경우 CommitDirect3D11DepthBuffer는 *E_ILLEGAL_METHOD_CALL*와 함께 실패 합니다 [.](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
 * Holographic Remoting 플레이어의 시작 화면이 다시 디자인 되었으며 이제 사용자 보기를 차단 하지 않습니다.
 * 안정성 향상 및 버그 수정.
 
@@ -76,7 +87,7 @@ ms.locfileid: "84327903"
 * HoloLens 2에 대 한 Holographic 원격 작업의 첫 번째 공개 릴리스입니다.
 
 ## <a name="see-also"></a>참고 항목
-* [사용자 지정 Holographic Remoting 플레이어 앱 작성](holographic-remoting-create-player.md)
+* [사용자 지정 홀로그램 원격 플레이어 앱 작성](holographic-remoting-create-player.md)
 * [Holographic 원격 호스트 앱 작성](holographic-remoting-create-host.md)
 * [Holographic 원격 문제 해결 및 제한 사항](holographic-remoting-troubleshooting.md)
 * [홀로그램 원격 소프트웨어 사용 조건](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

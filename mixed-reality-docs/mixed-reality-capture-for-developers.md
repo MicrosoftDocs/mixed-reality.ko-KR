@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: mrc, 사진, 비디오, 캡처, 카메라
-ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: 44b853e96ab956e5ea6c03d8c23a61e91ac733d4
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720419"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061146"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>개발자를 위한 혼합 현실 캡처
 
@@ -64,10 +64,10 @@ PV 카메라에서 렌더링을 사용 하도록 설정 하는 세 가지 단계
 PV 카메라에서 렌더링 하도록 옵트인 (opt in) 하려면 앱에서 PhotoVideoCamera의 [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration)을 사용 하도록 설정 하기만 하면 됩니다.
 ```csharp
 var display = Windows.Graphics.Holographic.HolographicDisplay.GetDefault();
-var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfiguration.PhotoVideoCamera);
+var view = display.TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfigurationKind.PhotoVideoCamera);
 if (view != null)
 {
-   view.IsEnabled = true;
+    view.IsEnabled = true;
 }
 ```
 
@@ -97,12 +97,12 @@ Unity에서 자동으로 수행 됩니다.
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Unreal에서 PhotoVideoCamera HolographicViewConfiguration 사용
 
 > [!NOTE]
-> 이 경우에는 **Unreal Engine 4.25** 이상이 필요 합니다.
+> 여기에는 **Unreal Engine 4.25** 이상이 필요합니다.
 
-PV 카메라에서 렌더링 하도록 옵트인 (opt in) 하려면 다음을 수행 합니다.
+PV 카메라에서 렌더링하도록 옵트인하려면 다음을 수행합니다.
 
 1. **SetEnabledMixedRealityCamera** 및 **ResizeMixedRealityCamera** 호출
-    * **크기 X** 및 **Y** 값 크기를 사용 하 여 비디오 크기를 설정 합니다.
+    * **크기 X** 및 **크기 Y** 값을 사용하여 비디오 크기를 설정합니다.
 
 ![세 번째 카메라](images/unreal-camera-3rd.PNG)
 
@@ -173,7 +173,7 @@ MRC는 개발자의 추가 작업 없이도 작동 하지만 앱의 최상의 �
 
 ![투명 검정으로 지우는 경우 예상 결과](images/cleartransparentblack-300px.png)
 
-**해결 방법**:
+**솔루션**:
 * 알파 값이 0 인 불투명 검정으로 표시 되는 모든 콘텐츠를 변경 합니다.
 * 앱이 투명 검정으로 선택 취소 되어 있는지 확인 합니다.
 * Unity는 기본적으로 MixedRealityToolkit를 사용 하 여 자동으로 지우도록 선택을 취소 하지만 Unity가 아닌 앱 인 경우에는 ID3D11DeiceContext:: ClearRenderTargetView ()와 함께 사용 되는 색을 수정 해야 합니다. 불투명 검정 (0, 0, 0, 1)이 아닌 투명 한 검정 (0, 0, 0, 0)을 지울 수 있도록 하려고 합니다.
@@ -221,7 +221,7 @@ Unity 응용 프로그램은 holograms를 사용 하도록 설정 하는 속성�
 
 MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  속성 이름  |  유형  |  기본값  |  Description |
+|  속성 이름  |  유형  |  기본값  |  설명 |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([Mediastreamtype](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (VideoRecord)  |  이 효과가 사용 되는 캡처 스트림을 설명 합니다. 오디오를 사용할 수 없습니다. |
 |  HologramCompositionEnabled  |  boolean  |  TRUE  |  비디오 캡처에서 holograms을 사용 하거나 사용 하지 않도록 설정 하는 플래그입니다. |
@@ -241,7 +241,7 @@ MRC 비디오 효과 (**MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
 MRC 오디오 효과 (**MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
-| 속성 이름 | 유형 | 기본값 | Description |
+| 속성 이름 | 유형 | 기본값 | 설명 |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (Mic 및 시스템 오디오) | 사용 해야 하는 오디오 원본을 나타내는 데 사용 되는 열거형입니다. 0 (Mic 오디오 전용), 1 (시스템 오디오만), 2 (Mic 및 시스템 오디오) |
 | LoopbackGain | float | Windows 장치 포털의 **앱 오디오 게인** 설정 | 시스템 오디오 볼륨에 적용 됩니다. 범위는 0.0에서 5.0 사이입니다. HoloLens 2 에서만 지원 됨 |
@@ -286,7 +286,7 @@ Windows 10 4 월 2018 업데이트를 사용 하면 MRC 스트림에 액세스 �
 
 Windows 10 4 월 2018 업데이트 이전에는 앱의 사용자 지정 MRC 레코더를 시스템 MRC와 함께 사용할 수 없습니다 (사진 캡처, 비디오 캡처 또는 Windows 장치 포털에서 스트리밍).
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [혼합 현실 캡처](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)
