@@ -5,19 +5,19 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP
-ms.openlocfilehash: 5cf66ce857806ab6fcf8c94b94c7a9a540339b97
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP, Win32
+ms.openlocfilehash: a1e3cd47096d728091d62d6c038bf6b2eb6bab16
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061156"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156774"
 ---
 # <a name="porting-guides"></a>포팅 가이드
 
 ## <a name="overview"></a>개요
 
-Windows 10에는 몰입 형 및 holographic 헤드셋을 직접 지원 합니다. Rift 또는 HTC Vive와 같은 다른 장치에 대 한 콘텐츠를 빌드한 경우 운영 체제의 플랫폼 API 위에 있는 라이브러리에 대 한 종속성이 있습니다. Windows Mixed Reality에 기존 콘텐츠를 가져오는 경우에는 Windows Api에 이러한 다른 Sdk를 사용 하는 방법의 대상을 변경 해야 합니다. [혼합 현실 용 windows 플랫폼 api](https://docs.microsoft.com/uwp/api/Windows.Perception) 는 windows X86 및 UWP (유니버설 Windows 플랫폼) 앱 모델 모두에서 작동 합니다. 앱이 UWP에 대해 아직 빌드되지 않은 경우 UWP로 변경 하면 포팅 환경에 포함 됩니다.
+Windows 10에는 몰입 형 및 holographic 헤드셋을 직접 지원 합니다. Rift 또는 HTC Vive와 같은 다른 장치에 대 한 콘텐츠를 빌드한 경우 운영 체제의 플랫폼 API 위에 있는 라이브러리에 대 한 종속성이 있습니다. Windows Mixed Reality에 기존 콘텐츠를 가져오는 경우에는 Windows Api에 이러한 다른 Sdk를 사용 하는 방법의 대상을 변경 해야 합니다. [혼합 현실 용 Windows 플랫폼 api](https://docs.microsoft.com/uwp/api/Windows.Perception) 는 WIN32 및 UWP (유니버설 Windows 플랫폼) 앱 모델 모두에서 작동 합니다. 앱이 UWP에 대해 아직 빌드되지 않은 경우 UWP로 변경 하면 포팅 환경에 포함 됩니다.
 
 ## <a name="porting-overview"></a>포팅 개요
 
@@ -74,7 +74,7 @@ Windows Mixed Reality 플랫폼은 아직 개발 중입니다. Windows 참가자
 
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity 4 단계: 유니버설 Windows 플랫폼에서 실행할 응용 프로그램 대상 (UWP)
 
-Windows x 86을 대상으로 하는 경우이 단계를 건너뛰고 5 단계를 계속 진행할 수 있습니다.
+Win32를 대상으로 하는 경우이 단계를 건너뛰고 5 단계를 계속 진행할 수 있습니다.
 
 도구를 설치한 후에는 유니버설 Windows 앱으로 앱을 실행 해야 합니다.
 
@@ -84,12 +84,12 @@ Windows x 86을 대상으로 하는 경우이 단계를 건너뛰고 5 단계를
 > [!NOTE]
 > Unity는 IL2CPP 지원을 지속적으로 개선 합니다. IL2CPP를 사용 하면 일부 UWP 포트를 더 쉽게 사용할 수 있습니다. 현재 .NET scripting 백 엔드를 대상으로 하는 경우 IL2CPP 백엔드를 활용 하기 위해를 변환 하는 것이 좋습니다.
 
-* X86 대신 UWP를 대상으로 하기 때문에 "Unity 5 단계"를 건너뛸 수 있습니다.
+* Win32 대신 UWP를 대상으로 하기 때문에 "Unity 5 단계"를 건너뛸 수 있습니다.
 
 > [!NOTE] 
 > 응용 프로그램에 스트림에서의 match와 같은 장치 관련 서비스에 대 한 종속성이 있는 경우이 단계에서 사용 하지 않도록 설정 해야 합니다. Windows에서 나중에 제공 하는 것과 동일한 서비스에 연결할 수 있습니다.
 
-### <a name="unity-step-5-target-your-application-to-run-on-windows-x86"></a>Unity 5 단계: Windows x 86에서 실행할 응용 프로그램 대상
+### <a name="unity-step-5-target-your-application-to-run-on-win32"></a>Unity 5 단계: Win32에서 실행할 응용 프로그램 대상
 
 Unity 응용 프로그램 내에서:
 
@@ -171,7 +171,7 @@ Windows Mixed Reality는 하이엔드 게임 Pc부터 광범위 한 시장 메�
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) 및 [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) 에는 성능 프로파일러가 포함 되며, [Microsoft](understanding-performance-for-mixed-reality.md) 및 [Intel](https://software.intel.com/articles/vr-content-developer-guide) 은 성능 프로 파일링 및 최적화에 대 한 지침을 게시 합니다. [혼합 현실 성능을 이해](understanding-performance-for-mixed-reality.md)하는 데 사용할 수 있는 성능에 대 한 광범위 한 설명이 있습니다. Unity에 [대 한 성능 권장 사항](performance-recommendations-for-unity.md)에서 unity에 대 한 구체적인 정보를 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Windows Mixed Reality 최소 PC 하드웨어 호환성 지침](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)
