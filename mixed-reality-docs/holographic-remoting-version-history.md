@@ -6,17 +6,21 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, 원격 서비스, Holographic 원격 작업
-ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 1f4d463ab734cbb627f251486b0058fbf295d2ed
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061126"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300524"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic 원격 버전 기록
 
 > [!IMPORTANT]
 > 이 지침은 HoloLens 2의 Holographic Remoting에만 적용 됩니다.
+
+## <a name="version-222-july-10-2020"></a>버전 2.2.2 (2020 년 7 월 10 일)<a name="v2.2.2"></a>
+* Windows Mixed Reality 헤드셋에서 스트리밍할 때 숨겨진 영역 메시 꼭지점이 반환 되지 않는 [HolographicCamera viewportparameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_LeftViewportParameters) 및 [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_RightViewportParameters) 문제를 해결 했습니다.
+* 네트워크 연결 불량으로 인해 발생할 수 있는 충돌 문제를 해결 했습니다.
 
 ## <a name="version-221-july-6-2020"></a>버전 2.2.1 (2020 년 7 월 6 일)<a name="v2.2.1"></a>
 > [!IMPORTANT]
