@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: b2342e7d0d502af2787ca311d18a44f8726acf2d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 8cebe1fb203aeed9a262a2e9f482993b4775e0a6
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79028552"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303664"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. 의도 및 자연어 이해 설정
 
@@ -63,7 +63,7 @@ ms.locfileid: "79028552"
 > 이 문서를 작성하는 시점부터 다음 섹션에서 LUIS(Language Understanding Intelligent Service)를 만들 때 LUIS 내에서 작성 평가판 키가 자동으로 생성되므로 작성 리소스를 만들 필요가 없습니다.
 
 > [!TIP]
-> 다른 적합한 리소스 그룹이 Azure 계정에 이미 있는 경우(예: [Azure Spatial Anchors](mrlearning-asa-ch1.md) 자습서를 완료한 경우), 새 리소스 그룹을 만드는 대신 이 리소스 그룹을 사용할 수 있습니다.
+> 다른 적합한 리소스 그룹이 Azure 계정에 이미 있는 경우(예: [Azure Spatial Anchors](mr-learning-asa-01.md) 자습서를 완료한 경우), 새 리소스 그룹을 만드는 대신 이 리소스 그룹을 사용할 수 있습니다.
 
 [만들기] 페이지에 있는 상태에서 다음 값을 입력합니다.
 
