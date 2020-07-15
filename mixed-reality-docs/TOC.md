@@ -157,7 +157,7 @@
 ##### [평면](sampleapp-surfaces.md)
 ##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
-#### HoloLens(1세대) 오픈 소스 샘플 앱
+#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
 ##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
 ##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
 ##### [달착륙선](lunar-module.md)
@@ -230,18 +230,21 @@
 
 ## Unreal
 ### [Unreal 개발 개요](unreal-development-overview.md)
-### [Unreal의 응시 입력](unreal-gaze-input.md)
-### [Unreal의 직접 추적](unreal-hand-tracking.md)
-### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
-### [Unreal의 QR 코드](unreal-qr-codes.md)
-### [Unreal의 공간 매핑](unreal-spatial-mapping.md)
-### [Unreal의 공간 오디오](unreal-spatial-audio.md)
-### [Unreal의 공간 앵커](unreal-spatial-anchors.md)
-### [Unreal의 스트리밍](unreal-streaming.md)
-### [Unreal의 디바이스에 배포](unreal-deploying.md)
-### [Unreal의 음성 입력](unreal-voice-input.md)
-### [Unreal의 WinRT](unreal-winrt.md)
-### [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)
+### 핵심 구성 요소
+#### [Unreal의 응시 입력](unreal-gaze-input.md)
+#### [Unreal의 직접 추적](unreal-hand-tracking.md)
+#### [Unreal의 공간 매핑](unreal-spatial-mapping.md)
+#### [Unreal의 공간 오디오](unreal-spatial-audio.md)
+#### [Unreal의 공간 앵커](unreal-spatial-anchors.md)
+#### [Unreal의 음성 입력](unreal-voice-input.md)
+### 플랫폼 기능 및 API
+#### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
+#### [Unreal의 QR 코드](unreal-qr-codes.md)
+#### [Unreal의 WinRT](unreal-winrt.md)
+### 배포 및 성능
+#### [Unreal의 디바이스에 배포](unreal-deploying.md)
+#### [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)
+#### [Unreal의 스트리밍](unreal-streaming.md)
 
 ## JavaScript
 ### [JavaScript 개발 개요](javascript-development-overview.md)
