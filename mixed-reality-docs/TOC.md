@@ -112,39 +112,52 @@
 ### Unity
 #### HoloLens 2 자습서
 ##### 시작 자습서
-###### [1. 개요 및 목표](mrlearning-base.md)
-###### [2. 프로젝트 및 첫 번째 애플리케이션 초기화](mrlearning-base-ch1.md)
-###### [3. 사용자 인터페이스 만들기 및 Mixed Reality Toolkit 도구 키트 구성](mrlearning-base-ch2.md)
-###### [4. 동적 콘텐츠 배치 및 해결기 사용](mrlearning-base-ch3.md)
-###### [5. 3D 개체와 상호 작용](mrlearning-base-ch4.md)
-###### [6. 고급 입력 옵션 탐색](mrlearning-base-ch5.md)
-###### [7. 달착륙선 샘플 애플리케이션 만들기](mrlearning-base-ch6.md)
+###### [1. 소개](mr-learning-base-01.md)
+###### [2. 프로젝트 및 첫 번째 애플리케이션 초기화](mr-learning-base-02.md)
+###### [3. Mixed Reality Toolkit 프로필 구성](mr-learning-base-03.md)
+###### [4. 장면에서 개체 위치 지정](mr-learning-base-04.md)
+###### [5. 해결기를 사용하여 동적 콘텐츠 만들기](mr-learning-base-05.md)
+###### [6. 사용자 인터페이스 만들기](mr-learning-base-06.md)
+###### [7. 3D 개체와 상호 작용](mr-learning-base-07.md)
+###### [8. 시선 추적 사용](mr-learning-base-08.md)
+###### [9. 음성 명령 사용](mr-learning-base-09.md)
 ##### Azure Spatial Anchors 자습서
-###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
-###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
-###### [3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
-###### [4. Android 및 iOS용 Azure Spatial Anchors](mrlearning-asa-ch4.md)
+###### [1. 소개](mr-learning-asa-01.md)
+###### [2. Azure Spatial Anchors를 사용하여 시작](mr-learning-asa-02.md)
+###### [3. Azure Spatial Anchors 저장, 검색 및 공유](mr-learning-asa-03.md)
+###### [4. Azure Spatial Anchor 피드백 표시](mr-learning-asa-04.md)
+###### [5. Android 및 iOS용 Azure Spatial Anchors](mr-learning-asa-05.md)
+##### 다중 사용자 기능 자습서
+###### [1. 소개](mr-learning-sharing-01.md)
+###### [2. Photon Unity 네트워킹 설정](mr-learning-sharing-02.md)
+###### [3. 여러 사용자 연결](mr-learning-sharing-03.md)
+###### [4. 여러 사용자와 개체 이동 공유](mr-learning-sharing-04.md)
+###### [5. 공유 환경에 Azure Spatial Anchors 통합](mr-learning-sharing-05.md)
 ##### Azure Speech Services 자습서
 ###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
 ###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)
 ###### [3. Azure Cognition Services 음성 변환 구성 요소 추가](mrlearning-speechSDK-ch3.md)
 ###### [4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
-##### 다중 사용자 기능 자습서
-###### [1. Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
-###### [2. 여러 사용자 연결](mrlearning-sharing(photon)-ch2.md)
-###### [3. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch3.md)
-###### [4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)
 ##### 공간 오디오 자습서
 ###### [1. 프로젝트에서 공간 오디오 추가](unity-spatial-audio-ch1.md)
 ###### [2. 공간화 단추 상호 작용 소리](unity-spatial-audio-ch2.md)
 ###### [3. 비디오에서 공간화 오디오](unity-spatial-audio-ch3.md)
 ###### [4. 런타임 시 공간 오디오 사용 및 사용 안 함](unity-spatial-audio-ch4.md)
 ###### [5. 반향 효과를 이용해 공간 오디오에 거리감 부여](unity-spatial-audio-ch5.md)
+#### Azure Cloud Services 자습서
+##### [1. Azure Cloud Services for HoloLens 2](mr-learning-azure-01.md)
+##### [2. Azure Storage 통합](mr-learning-azure-02.md)
+##### [3. Azure Custom Vision 통합](mr-learning-azure-03.md)
+##### [4. Integrating Azure Spatial 통합](mr-learning-azure-04.md)
+##### [5. Azure Bot Service 통합](mr-learning-azure-05.md)
+#### PC 홀로그램 원격 자습서
+##### [1. PC 홀로그램 원격 시작](mr-learning-pc-holographic-remoting-01.md)
+##### [2. 홀로그램 원격 PC 애플리케이션 만들기](mr-learning-pc-holographic-remoting-02.md)
 #### HoloLens 2 오픈 소스 샘플 앱
 ##### [평면](sampleapp-surfaces.md)
 ##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
-#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
+#### HoloLens(1세대) 오픈 소스 샘플 앱
 ##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
 ##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
 ##### [달착륙선](lunar-module.md)
@@ -217,15 +230,17 @@
 
 ## Unreal
 ### [Unreal 개발 개요](unreal-development-overview.md)
-### [Unreal의 직접 추적](unreal-hand-tracking.md)
 ### [Unreal의 응시 입력](unreal-gaze-input.md)
+### [Unreal의 직접 추적](unreal-hand-tracking.md)
+### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
+### [Unreal의 QR 코드](unreal-qr-codes.md)
 ### [Unreal의 공간 매핑](unreal-spatial-mapping.md)
 ### [Unreal의 공간 오디오](unreal-spatial-audio.md)
 ### [Unreal의 공간 앵커](unreal-spatial-anchors.md)
-### [Unreal의 음성 입력](unreal-voice-input.md)
-### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
-### [Unreal의 QR 코드](unreal-qr-codes.md)
 ### [Unreal의 스트리밍](unreal-streaming.md)
+### [Unreal의 디바이스에 배포](unreal-deploying.md)
+### [Unreal의 음성 입력](unreal-voice-input.md)
+### [Unreal의 WinRT](unreal-winrt.md)
 ### [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)
 
 ## JavaScript
