@@ -1,17 +1,17 @@
 ---
 title: HoloLens 에뮬레이터 보관
 description: Microsoft HoloLens 에뮬레이터의 릴리스된 빌드 목록입니다.
-author: pbarnettms
-ms.author: pbarnett
+author: hamalawi
+ms.author: moelhama
 ms.date: 6/8/2020
 ms.topic: article
 keywords: HoloLens, 에뮬레이터, 빌드, 버전
-ms.openlocfilehash: 7fe48203a3670490a2ac78040ea9f0ac8e811bd5
-ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
+ms.openlocfilehash: 9471cefde26b59ef1f140e102f8da923d8e67da1
+ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84631490"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86383045"
 ---
 # <a name="hololens-2-emulator-archive"></a>HoloLens 2 에뮬레이터 보관
 
@@ -19,8 +19,10 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 
 |  빌드 |  출시 날짜 |  메모 | 
 |----------|----------|----------|
-|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1106](https://go.microsoft.com/fwlink/?linkid=2132415) | 2020 년 6 월 9 일 | Windows Holographic 버전 2004 6 월 2020 업데이트  렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 합니다. 렌더링 하지 않는 화상 키보드는 표시 되지 않으며, 정상적으로 작동 하지 않는 개체는 물론, 에뮬레이터는 AMD 기반 시스템의 중첩 된 가상화에 대 한 오류와 함께 시작 하지 못합니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
-|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1064](https://go.microsoft.com/fwlink/?linkid=2132601) | 2020 년 6 월 9 일 | Windows Holographic 버전 1903 6 월 2020 업데이트  는 렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 하 고, 화상 키보드가 표시 되지 않으며, 개체가 정상적으로 작동 하지 않습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1109](https://go.microsoft.com/fwlink/?linkid=2135188) | 2020 년 7 월 14 일 | Windows Holographic 버전 2004 7 월 2020 업데이트  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1071](https://go.microsoft.com/fwlink/?linkid=2135245) | 2020 년 7 월 14 일 | Windows Holographic 버전 1903 7 월 2020 업데이트  특정 장치에서 하드웨어 그래픽 가속을 사용 하도록 설정 된 경우 몰입 형 응용 프로그램의 실행이 중단 되는 문제를 해결 합니다. 일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1106](https://go.microsoft.com/fwlink/?linkid=2132415) | 2020년 6월 9일 | Windows Holographic 버전 2004 6 월 2020 업데이트  렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 합니다. 렌더링 하지 않는 화상 키보드는 표시 되지 않으며, 정상적으로 작동 하지 않는 개체는 물론, 에뮬레이터는 AMD 기반 시스템의 중첩 된 가상화에 대 한 오류와 함께 시작 하지 못합니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1064](https://go.microsoft.com/fwlink/?linkid=2132601) | 2020년 6월 9일 | Windows Holographic 버전 1903 6 월 2020 업데이트  는 렌더링 되지 않는 DirectX 12 응용 프로그램의 문제를 해결 하 고, 화상 키보드가 표시 되지 않으며, 개체가 정상적으로 작동 하지 않습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.19041.1103](https://go.microsoft.com/fwlink/?linkid=2129088) | 2020년 5월 12일 | Windows Holographic 버전 2004.  Windows Mixed Reality 헤드셋 및 동작 컨트롤러를 사용 하 여 스테레오에서 HoloLens 2 에뮬레이터를 제어 하 고 볼 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1061](https://go.microsoft.com/fwlink/?linkid=2129833) | 2020년 5월 12일 | Windows Holographic 버전 1903는 2020 업데이트를 할 수 있습니다.  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1059](https://go.microsoft.com/fwlink/?linkid=2126826) | 2020 년 4 월 13 일 | Windows Holographic 버전 1903 4 월 2020 업데이트  일반적인 HoloLens 2 릴리스 정보는 다음을 참조 하세요.https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -31,7 +33,7 @@ HoloLens 에뮬레이터 (첫 번째 gen) 및 HoloLens 2 에뮬레이터 빌드�
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1034](https://go.microsoft.com/fwlink/?linkid=2106649) | 2019년 10월 8일 | Windows Holographic 버전 1903 10 월 2019 업데이트  사용 가능한 최신 버전 보다 오래 된 버전을 실행 하는 경우 에뮬레이터가 새 버전으로 업데이트 하 라는 메시지를 표시 합니다.  Windows 10에서 에뮬레이터를 사용 하는 경우 Windows 10에서 업데이트 이상 2019을 사용 하는 경우 개발자는 새 NAT 구성 탭에서 개별 장치에서 실행 되는 응용 프로그램의 포트를 열어 에뮬레이터에 연결 하 고 업데이트 탭에서 사용 가능한 에뮬레이터 버전을 볼 수 있습니다.  자세한 내용은 [HoloLens 에뮬레이터 설명서](using-the-hololens-emulator.md) 를 참조 하세요. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1031](https://go.microsoft.com/fwlink/?linkid=2103724) | 2019년 9월 11일 | Windows Holographic 버전 1903 9 월 2019 업데이트  Windows 10에서 에뮬레이터를 실행할 때 네트워크 탭이 에뮬레이터 도구 창에 표시 됩니다. 2019 5 월 업데이트 또는 최신 버전. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1028](https://go.microsoft.com/fwlink/?linkid=2101019) | 2019 년 8 월 14 일 | Windows Holographic 버전 1903 8 월 2019 업데이트  Holographic 앱 템플릿은 더 이상 포함 되지 않지만 Visual Studio Marketplace에서 사용할 수 있습니다.  이제 Sdk가 사용자 지정 위치에 설치 되 면 에뮬레이터가 작동 합니다. |
-|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 2019 년 7 월 8 일 | Windows Holographic 버전 1903 7 월 2019 업데이트  DiskStream .dll의 서명 문제를 해결 합니다. |
+|  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 2019 년 7 월 8 일 | Windows Holographic 버전 1903 7 월 2019 업데이트  DiskStream.dll의 서명 문제를 해결 합니다. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 2019년 6월 11일 | Windows Holographic 버전 1903 6 월 2019 업데이트  더 이상 관리자 권한으로 실행할 필요가 없습니다.  시작 메뉴 바로 가기가 추가 되었습니다. |
 |  [HoloLens 2 에뮬레이터 빌드 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 2019년 4월 16일 |  Windows Holographic 버전 1903. |
 
