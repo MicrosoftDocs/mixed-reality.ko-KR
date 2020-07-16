@@ -5,13 +5,13 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: lbe, MixedRealitySpatialDataPackager, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: lbe, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539685"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402742"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>혼합 현실 공간 데이터 포장기 설명서
 
@@ -21,7 +21,7 @@ ms.locfileid: "74539685"
 ## <a name="download"></a>다운로드
  [여기에서 MixedRealitySpatialDataPackager](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip) 다운로드
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
     <colgroup>
@@ -31,7 +31,7 @@ ms.locfileid: "74539685"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>기능과</strong></td>
+        <td><strong>기능</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens(1세대)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>몰입형 헤드셋</strong></a></td>
@@ -44,7 +44,7 @@ ms.locfileid: "74539685"
     </tr>
 </table>
 
-## <a name="quickstart"></a>빠른
+## <a name="quickstart"></a>빠른 시작
 
 혼합 현실 공간 데이터 포장기 도구는 두 단계 내보내기 및 가져오기 프로세스를 통해 대상 앱의 공간 데이터를 한 PC에서 다른 PC로 복사 합니다. 이 도구는 관리자 권한으로 실행 해야 하며 가져올 때 기존 공간 데이터를 삭제 해야 합니다. 내보내기는 기존 공간 데이터를 그대로 유지 합니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "74539685"
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>부록 스크립트를 사용 하 여 혼합 현실 공간 데이터 패키지 실행
 
-Microsoft는 map 패키지 작성 도구를 실행 하는 MRSpatialPackagerHelperScript를 제공 했습니다. 
+Microsoft는 map 패키지 작성 도구를 실행 하는 MRSpatialPackagerHelperScript.ps1 제공 합니다. 
 
 
 스크립트 매개 변수는 아래에 정의 되어 있습니다.
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>MixedRealityPackager를 사용 하 여 내보내는 방법
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>MixedRealitySpatialDataPackager.exe를 사용 하 여 내보내는 방법
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 Maps에서 맵 내보내기는 두 개의 mapx 파일 (. mapx 및 sa. mapx)을 생성 합니다. 내보내기 프로세스 중에 지정 된 앱과 사용자가 만든 경계 (있는 경우)를 제외 하 고 모든 공간 앵커가 제거 됩니다. 원본 패키지 제품군 이름이 기존에 설치 된 앱과 일치 해야 합니다. 그렇지 않으면 exe가 실패 합니다.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>MixedRealityPackager를 사용 하 여 가져오는 방법
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>MixedRealitySpatialDataPackager.exe를 사용 하 여 가져오는 방법
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
