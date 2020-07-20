@@ -1,28 +1,26 @@
-# 새로운 기능은 무엇입니까? 
-## [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
-## [Azure 서비스 알아보기](azure-services.md)
-## [새 Microsoft Edge 준비](new-microsoft-edge.md)
-## 프로그램 및 이벤트
-### [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
-### [혼합 현실 개발자의 날](mr-dev-days.md)
-#### [세션 기록](mr-dev-days-sessions.md)
-## [현재 혼합 현실 릴리스 정보](release-notes-may-2020.md)
-## [커뮤니티 리소스](community.md)
-## [이 문서에 기고](CONTRIBUTING.md)
+<!-- Hub landing page -->
+# [혼합 현실 시작](index.yml)
+
+<!-- Discover top level folder -->
 # 검색
-## [혼합 현실 시작](index.md)
+## [혼합 현실 시작](get-started-with-mr.md)
 ## [디자인 프로세스 확장](case-study-expanding-the-design-process-for-mixed-reality.md)
-## [사례 연구 갤러리](case-studies-overview.md)
+
 ## HoloLens 하드웨어
 ### [HoloLens 2 하드웨어 세부 정보](https://docs.microsoft.com/hololens/hololens2-hardware)
 ### [HoloLens(1세대) 하드웨어 세부 정보](https://docs.microsoft.com/hololens/hololens1-hardware)
+
 ## 몰입형 헤드셋
 ### [몰입형 헤드셋 하드웨어 세부 정보](immersive-headset-hardware-details.md)
 ### [Windows Mixed Reality 홈 탐색](navigating-the-windows-mixed-reality-home.md)
 ### [전문가 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [위치 기반 엔터테인먼트](location-based-experiences.md)
-## [하드웨어 액세서리](hardware-accessories.md)
+
 ## [커뮤니티 리소스](community.md)
+## [사례 연구 갤러리](case-studies-overview.md)
+## [하드웨어 액세서리](hardware-accessories.md)
+
+<!-- Design top level folder -->
 # 디자인
 ## [디자인 및 프로토타입 생성 시작](design.md)
 ## [이 디자인 지침에 대한 정보](about-this-design-guidance.md)
@@ -60,6 +58,7 @@
 #### [시선 응시 및 커밋](gaze-and-commit-eyes.md)
 #### [헤드 게이즈 및 커밋](gaze-and-commit-head.md)
 ### [시선 응시 기반 상호 작용](eye-gaze-interaction.md)
+
 ## UX 요소
 ### [개요](app-patterns-landingpage.md)
 ### 기본 요소
@@ -92,6 +91,7 @@
 #### [빌보딩 및 태그얼롱](billboarding-and-tag-along.md)
 #### [진행률 표시](progress.md)
 #### [표면 자성](surface-magnetism.md)
+
 ## 리소스
 ### [Unity 배우기](https://learn.unity.com/)
 ### [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
@@ -100,16 +100,28 @@
 ### [자산 생성 프로세스](asset-creation-process.md)
 ### [사용자 고유의 몰입형 환경 디자인](add-custom-home-environments.md)
 
+<!-- Develop top level folder -->
 # 개발
 ## [도구 및 아키텍처 알아보기](development.md)
 ## [도구 설치](install-the-tools.md)
+## [클라우드 서비스 개요](mixed-reality-cloud-services.md)
 
-## 혼합 현실 클라우드 서비스
+<!-- Deprecated
+## Mixed reality cloud services
 ### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
+-->
 
-## [자습서 및 샘플 앱](tutorials.md)
-### Unity
+<!-- Unity section -->
+## Unity
+### [Unity 개발 개요](unity-development-overview.md)
+### 시작
+#### [Mixed Reality Toolkit v2 시작](mrtk-getting-started.md)
+#### [Windows Mixed Reality를 위한 Unity 프로젝트 구성](Configure-Unity-Project.md)
+#### [HL2에 사용할 앱 준비](mrtk-porting-guide.md)
+
+### 자습서
+#### [개요](tutorials.md)
 #### HoloLens 2 자습서
 ##### 시작 자습서
 ###### [1. 소개](mr-learning-base-01.md)
@@ -122,57 +134,43 @@
 ###### [8. 시선 추적 사용](mr-learning-base-08.md)
 ###### [9. 음성 명령 사용](mr-learning-base-09.md)
 ##### Azure Spatial Anchors 자습서
-###### [1. 소개](mr-learning-asa-01.md)
-###### [2. Azure Spatial Anchors를 사용하여 시작](mr-learning-asa-02.md)
-###### [3. Azure Spatial Anchors 저장, 검색 및 공유](mr-learning-asa-03.md)
-###### [4. Azure Spatial Anchor 피드백 표시](mr-learning-asa-04.md)
-###### [5. Android 및 iOS용 Azure Spatial Anchors](mr-learning-asa-05.md)
-##### 다중 사용자 기능 자습서
-###### [1. 소개](mr-learning-sharing-01.md)
-###### [2. Photon Unity 네트워킹 설정](mr-learning-sharing-02.md)
-###### [3. 여러 사용자 연결](mr-learning-sharing-03.md)
-###### [4. 여러 사용자와 개체 이동 공유](mr-learning-sharing-04.md)
-###### [5. 공유 환경에 Azure Spatial Anchors 통합](mr-learning-sharing-05.md)
+###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
+###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
+###### [3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
+###### [4. Android 및 iOS용 Azure Spatial Anchors](mrlearning-asa-ch4.md)
 ##### Azure Speech Services 자습서
 ###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
 ###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)
 ###### [3. Azure Cognition Services 음성 변환 구성 요소 추가](mrlearning-speechSDK-ch3.md)
 ###### [4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
+##### 다중 사용자 기능 자습서
+###### [1. Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
+###### [2. 여러 사용자 연결](mrlearning-sharing(photon)-ch2.md)
+###### [3. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch3.md)
+###### [4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)
 ##### 공간 오디오 자습서
 ###### [1. 프로젝트에서 공간 오디오 추가](unity-spatial-audio-ch1.md)
 ###### [2. 공간화 단추 상호 작용 소리](unity-spatial-audio-ch2.md)
 ###### [3. 비디오에서 공간화 오디오](unity-spatial-audio-ch3.md)
 ###### [4. 런타임 시 공간 오디오 사용 및 사용 안 함](unity-spatial-audio-ch4.md)
 ###### [5. 반향 효과를 이용해 공간 오디오에 거리감 부여](unity-spatial-audio-ch5.md)
+
 #### Azure Cloud Services 자습서
 ##### [1. Azure Cloud Services for HoloLens 2](mr-learning-azure-01.md)
 ##### [2. Azure Storage 통합](mr-learning-azure-02.md)
 ##### [3. Azure Custom Vision 통합](mr-learning-azure-03.md)
 ##### [4. Integrating Azure Spatial 통합](mr-learning-azure-04.md)
 ##### [5. Azure Bot Service 통합](mr-learning-azure-05.md)
+
 #### PC 홀로그램 원격 자습서
 ##### [1. PC 홀로그램 원격 시작](mr-learning-pc-holographic-remoting-01.md)
 ##### [2. 홀로그램 원격 PC 애플리케이션 만들기](mr-learning-pc-holographic-remoting-02.md)
-#### HoloLens 2 오픈 소스 샘플 앱
-##### [평면](sampleapp-surfaces.md)
-##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
-#### HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
-##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
-##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
-##### [달착륙선](lunar-module.md)
+
 #### HoloLens(1세대) 및 몰입형 헤드셋 자습서
 ##### [MR 기본 100: Unity 시작](holograms-100.md)
 ##### [MR 기본 101: 디바이스를 사용하는 완전한 프로젝트](holograms-101.md)
 ##### [MR 기본 101E: 에뮬레이터를 사용하는 완전한 프로젝트](holograms-101e.md)
-##### [MR 입력 210: 응시](holograms-210.md)
-##### [MR 입력 211: 제스처](holograms-211.md)
-##### [MR 입력 212: 음성](holograms-212.md)
-##### [MR 입력 213: 모션 컨트롤러](mixed-reality-213.md)
-##### [MR 공간 220: 공간 음향](holograms-220.md)
-##### [MR 공간 230: 공간 매핑](holograms-230.md)
-##### [MR 공유 240: 여러 HoloLens 디바이스](holograms-240.md)
-##### [MR 공유 250: HoloLens(1세대) 및 몰입형 헤드셋](mixed-reality-250.md)
+
 #### Mixed Reality 및 Azure Services 자습서
 ##### [MR 및 Azure 301: 언어 번역](mr-azure-301.md)
 ##### [MR 및 Azure 302: 컴퓨터 비전](mr-azure-302.md)
@@ -188,24 +186,18 @@
 ##### [MR 및 Azure 311: Microsoft Graph](mr-azure-311.md)
 ##### [MR 및 Azure 312: 봇 통합](mr-azure-312.md)
 ##### [MR 및 Azure 313: IoT Hub 서비스](mr-azure-313.md)
-### Unreal
-#### [1. 시작](unreal-uxt-ch1.md)
-#### [2. 프로젝트 및 첫 번째 애플리케이션 초기화](unreal-uxt-ch2.md)
-#### [3. 혼합 현실용 프로젝트 설정](unreal-uxt-ch3.md)
-#### [4. 대화형 장면 만들기](unreal-uxt-ch4.md)
-#### [5. 단추 추가 및 조각 위치 재설정](unreal-uxt-ch5.md)
-#### [6. 패키징 후 디바이스 또는 에뮬레이터에 배포](unreal-uxt-ch6.md)
 
-## Unity
-### [Unity 개발 개요](unity-development-overview.md)
-### 시작
-#### [Mixed Reality Toolkit v2 시작](mrtk-getting-started.md)
-#### [Windows Mixed Reality를 위한 Unity 프로젝트 구성](Configure-Unity-Project.md)
-#### [Unity 권장 설정](recommended-settings-for-unity.md)
-#### [Unity 플레이 모드](unity-play-mode.md)
-#### [Unity Visual Studio 솔루션 내보내기 및 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
-#### [Unity 및 Visual Studio 사용 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
-#### [Unity IL2CPP를 사용하여 디버깅 관리](managed-debugging-with-unity-il2cpp.md)
+<!-- Deprecated HTK tutorials
+##### [MR Input 210: Gaze](holograms-210.md)
+##### [MR Input 211: Gesture](holograms-211.md)
+##### [MR Input 212: Voice](holograms-212.md)
+##### [MR Input 213: Motion controllers](mixed-reality-213.md)
+##### [MR Spatial 220: Spatial sound](holograms-220.md)
+##### [MR Spatial 230: Spatial mapping](holograms-230.md)
+##### [MR Sharing 240: Multiple HoloLens devices](holograms-240.md)
+##### [MR Sharing 250: HoloLens (1st gen) and immersive headsets](mixed-reality-250.md)
+-->
+
 ### 핵심 구성 요소
 #### [MRTK 101: 기본 상호 작용에 Mixed Reality Toolkit Unity를 사용하는 방법](mrtk-101.md)
 #### [Unity의 카메라](camera-in-unity.md)
@@ -218,6 +210,7 @@
 #### [Unity의 음성 입력](voice-input-in-unity.md)
 #### [Unity의 공간 매핑](spatial-mapping-in-unity.md)
 #### [Unity의 공간 음향](spatial-sound-in-unity.md)
+
 ### 플랫폼 기능 및 API
 #### [Unity의 공유 환경](shared-experiences-in-unity.md)
 #### [Unity의 위치를 찾을 수 있는 카메라](locatable-camera-in-unity.md)
@@ -228,8 +221,35 @@
 #### [Unity의 혼합 현실 기본 개체](unity-xrdevice-advanced.md)
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 
+### 샘플 앱
+#### HoloLens 2 
+##### [평면](sampleapp-surfaces.md)
+##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
+#### HoloLens(1세대)
+##### [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
+##### [갤럭시 익스플로러 1.0](galaxy-explorer.md)
+##### [달착륙선](lunar-module.md)
+
+### 설정 및 디버깅
+#### [Unity IL2CPP를 사용하여 디버깅 관리](managed-debugging-with-unity-il2cpp.md)
+#### [Unity 권장 설정](recommended-settings-for-unity.md)
+#### [Unity 플레이 모드](unity-play-mode.md)
+### Visual Studio 솔루션
+#### [Unity Visual Studio 솔루션 내보내기 및 빌드](exporting-and-building-a-unity-visual-studio-solution.md)
+#### [Unity 및 Visual Studio 사용 모범 사례](best-practices-for-working-with-unity-and-visual-studio.md)
+
+<!-- Unreal section -->
 ## Unreal
 ### [Unreal 개발 개요](unreal-development-overview.md)
+### 자습서
+#### MRTK UX 도구를 사용하여 체스 앱 빌드
+##### [1. 시작](unreal-uxt-ch1.md)
+##### [2. 프로젝트 초기화](unreal-uxt-ch2.md)
+##### [3. 혼합 현실 설정](unreal-uxt-ch3.md)
+##### [4. 상호 작용 추가](unreal-uxt-ch4.md)
+##### [5. UI 및 함수](unreal-uxt-ch5.md)
+##### [6. 패키징 및 배포](unreal-uxt-ch6.md)
 ### 핵심 구성 요소
 #### [Unreal의 응시 입력](unreal-gaze-input.md)
 #### [Unreal의 직접 추적](unreal-hand-tracking.md)
@@ -246,6 +266,7 @@
 #### [Unreal을 사용하기 위한 권장 성능](performance-recommendations-for-unreal.md)
 #### [Unreal의 스트리밍](unreal-streaming.md)
 
+<!-- Javascript section -->
 ## JavaScript
 ### [JavaScript 개발 개요](javascript-development-overview.md)
 ### [WebXR](webxr-overview.md)
@@ -322,11 +343,27 @@
 ### [Windows Mixed Reality용 SteamVR 애플리케이션 업데이트](updating-your-steamvr-application-for-windows-mixed-reality.md)
 ### [혼합 현실에 사용되는 2D UWP 앱 업데이트](building-2d-apps.md)
 
+<!-- Distribute top level folder -->
 # 배포
-## [3D 앱 시작 관리자 디자인 지침](3d-app-launcher-design-guidance.md)
-## [집에서 사용할 3D 모델 만들기](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-## [3D 앱 시작 관리자(UWP 앱) 구현](implementing-3d-app-launchers.md)
-## [3D 앱 시작 관리자(Win32 앱) 구현](implementing-3d-app-launchers-win32.md)
-## [집에서 3D 모델의 배치 사용](enable-placement-of-3d-models-in-the-home.md)
+## 3D 앱 시작 관리자
+### [디자인 지침](3d-app-launcher-design-guidance.md)
+### [집에서 사용할 3D 모델 만들기](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+### 3D 앱 시작 관리자 구현
+#### [UWP 앱](implementing-3d-app-launchers.md)
+#### [Win32 앱](implementing-3d-app-launchers-win32.md)
+### [집에서 3D 모델의 배치 사용](enable-placement-of-3d-models-in-the-home.md)
 ## [앱에서 바로 구매](in-app-purchases.md)
 ## [Microsoft Store에 앱 제출](submitting-an-app-to-the-microsoft-store.md)
+
+<!-- What's new? top level folder -->
+# 새로운 기능은 무엇입니까?
+## [Azure 서비스 알아보기](azure-services.md)
+## [새 Microsoft Edge 준비](new-microsoft-edge.md)
+## 프로그램 및 이벤트
+### [San Francisco Reactor Academy 이벤트 일정](sf-academy-events.md)
+### [혼합 현실 개발자의 날](mr-dev-days.md)
+#### [세션 기록](mr-dev-days-sessions.md)
+## [현재 혼합 현실 릴리스 정보](release-notes-may-2020.md)
+## [커뮤니티 리소스](community.md)
+## [이 문서에 기고](CONTRIBUTING.md)
+## [규모에 맞게 HoloLens 배포](https://docs.microsoft.com/hololens/)
