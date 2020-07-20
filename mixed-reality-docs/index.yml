@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: 혼합 현실 시작
+summary: Windows Mixed Reality를 사용하는 혼합 현실 애플리케이션의 확장, MRTK(Mixed Reality Toolkit), Unity, Unreal, HoloLens 및 Windows 몰입형 헤드셋에 대해 알아봅니다.
+metadata:
+  title: 혼합 현실 시작
+  description: HoloLens 2와 같은 디바이스에서 혼합 현실 도구 및 기능을 사용하는 방법에 대해 알아봅니다.
+  ms.topic: landing-page
+  author: hferrone
+  ms.author: v-haferr
+  ms.date: 07/03/2020
+  ms.openlocfilehash: afb6d40c969d90af5bf1b5f6844ab357eb255f15
+  ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/17/2020
+  ms.locfileid: "86451341"
+landingContent:
+- title: 새로운 몰입형 세계의 발견
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 혼합 현실이란?
+      url: get-started-with-mr.md
+    - text: 혼합 현실 범위의 이해
+      url: case-study-expanding-the-design-process-for-mixed-reality.md
+    - text: 커뮤니티에 참여하기
+      url: community.md
+- title: 혼합 현실 디자인
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 디자인 및 프로토타입 생성 시작
+      url: design.md
+    - text: 핵심 디자인 개념 살펴보기
+      url: core-concepts-landingpage.md
+    - text: 상호 작용 기본 사항에 대해 알아보기
+      url: interaction-fundamentals.md
+    - text: UX 요소 통합
+      url: app-patterns-landingpage.md
+- title: 혼합 현실 개발
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 혼합 현실 개발 경험 선택
+      url: development.md
+    - text: 도구 설치
+      url: install-the-tools.md
+    - text: 안내 따르기
+      url: tutorials.md
+    - text: Unity 경험 시작
+      url: unity-development-overview.md
+    - text: Unreal 경험 시작
+      url: unreal-development-overview.md
+    - text: Javascript 경험 시작
+      url: javascript-development-overview.md
+    - text: 네이티브(OpenXR/WinRT) 경험 시작
+      url: directx-development-overview.md
+- title: 앱 배포
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: 3D 앱 시작 관리자 디자인 지침
+      url: 3d-app-launcher-design-guidance.md
+    - text: 앱 내 purchaches 통합
+      url: in-app-purchases.md
+    - text: Microsoft Store에 업로드
+      url: submitting-an-app-to-the-microsoft-store.md
+- title: HoloLens 살펴보기
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: HoloLens란?
+      url: https://docs.microsoft.com/hololens/
+    - text: HoloLens 2 하드웨어
+      url: https://docs.microsoft.com/hololens/hololens2-hardware
+    - text: HoloLens 2 둘러보기
+      url: https://docs.microsoft.com/hololens/hololens2-basic-usage
+    - text: 상업적 환경에서 HoloLens 배포
+      url: https://docs.microsoft.com/hololens/hololens-requirements
+- title: Azure 개발자 서비스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 클라우드 서비스 개요
+      url: mixed-reality-cloud-services.md
+    - text: Azure Spatial Anchors로 이동
+      url: https://docs.microsoft.com/azure/spatial-anchors/
+    - text: Azure Remote Rendering을 사용하여 개발
+      url: https://docs.microsoft.com/azure/remote-rendering/
+- title: 새로운 기능을 확인하세요!
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Azure 서비스 알아보기
+      url: azure-services.md
+    - text: 새로운 Microsoft Edge
+      url: new-microsoft-edge.md
+    - text: 혼합 현실 커뮤니티 참여
+      url: community.md
