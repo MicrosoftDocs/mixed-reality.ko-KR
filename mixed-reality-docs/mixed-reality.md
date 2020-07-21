@@ -7,12 +7,12 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 혼합 현실, 홀로그램, ar, vr, mr, xr, 증강 현실, 가상 현실, 설명
 ms.localizationpriority: high
-ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 541752ef32149f64f9b85616883c284b33bb8fed
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278051"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447909"
 ---
 # <a name="what-is-mixed-reality"></a>혼합 현실이란?
 
@@ -117,7 +117,7 @@ Windows Mixed Reality 환경을 제공하는 두 가지 주요 디바이스가 �
 ## <a name="see-also"></a>참고 항목
 
 * [홀로그램이란?](hologram.md)
-* [혼합 현실의 기본 사항 이해](index.md#understand-the-basics)
+* [혼합 현실의 기본 사항 이해](get-started-with-mr.md#understand-the-basics)
 * [생성 및 프로토타입 제작 시작](design.md)
 * [도구 및 아키텍처 알아보기](development.md)
 

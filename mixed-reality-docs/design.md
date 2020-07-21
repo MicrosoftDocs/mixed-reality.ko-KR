@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트, 핵심 개념, 상호 작용
-ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 708a6f83c2de149be9c221130b83f5d787f8f56a
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345653"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447919"
 ---
 # <a name="start-designing-and-prototyping"></a>디자인 및 프로토타입 생성 시작
 
@@ -156,8 +156,8 @@ HoloLens 2는 사용자가 보고 있는 대상에 대한 정보를 사용할 �
 
 :::row:::
     :::column:::
-       [![기본 사항 이해](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
-        **[기본 사항 이해](index.md#understand-the-basics)**<br>
+       [![기본 사항 이해](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
+        **[기본 사항 이해](get-started-with-mr.md#understand-the-basics)**<br>
         혼합 현실을 정의하는 것이 무엇이며, 혼합 현실이 어떻게 사용되는지에 대해 더 잘 이해합니다.
     :::column-end:::
     :::column:::
