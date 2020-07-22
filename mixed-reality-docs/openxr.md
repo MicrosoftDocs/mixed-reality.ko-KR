@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, 네이티브, 네이티브 앱, 사용자 지정 엔진, 미들웨어
-ms.openlocfilehash: 8263e530336d53020ebe35091426f0596f257805
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 170ce0b55990158940692db25b925a1e79d7cf39
+ms.sourcegitcommit: 3c32f45fd941767d408cccc5a76f1ff1cec763da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228038"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86879166"
 ---
 # <a name="openxr"></a>OpenXR
+
+<img align="right" src="images/openxr.png" alt="OpenXR logo">
 
 OpenXR는 [혼합 현실 스펙트럼](mixed-reality.md)에 걸쳐 있는 많은 공급 업체의 다양 한 장치에 대 한 기본 액세스를 엔진에 제공 하는 <a href="https://www.khronos.org/" target="_blank">Khronos</a> 의 오픈 로열티 없는 무료 API 표준입니다.
 
@@ -45,7 +47,7 @@ OpenXR 확장에는 세 가지 종류가 있습니다.
 * **교차 공급 업체 `EXT` 확장:** 여러 회사에서 정의 하 고 구현 하는 공급 업체 확장 프로그램입니다.  관심이 있는 회사 그룹은 언제 든 지 내선 내선 번호를 도입할 수 있습니다.
 * **공식 `KHR` 확장:** 공식 Khronos 확장 비준 핵심 사양 릴리스의 일부로 구성 됩니다.  KHR 확장은 코어 사양 자체와 동일한 라이선스로 적용 됩니다.
 
-2020 년 7 월까지 Windows Mixed Reality OpenXR 런타임은 `MSFT` `EXT` HoloLens 2 기능의 전체 집합을 OpenXR 응용 프로그램으로 가져오는 및 확장 집합을 지원 합니다.
+2020 7 월 Windows Mixed Reality OpenXR 런타임은 `MSFT` `EXT` HoloLens 2 기능의 전체 집합을 OpenXR 응용 프로그램으로 가져오는 및 확장 집합을 지원 합니다.
 
 | 기능 영역 | 확장 가용성 |
 |--------------|------------------------|
@@ -56,16 +58,17 @@ OpenXR 확장에는 세 가지 종류가 있습니다.
 | 컴포지션 계층<br />(프로젝션, 쿼드) | **OpenXR 1.0 코어 사양:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#compositing" target="_blank">XrCompositionLayer...</a></code> + <code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#frame-submission" target="_blank">xrEndFrame</a></code> |
 | [Input 및 haptics](interaction-fundamentals.md) | **OpenXR 1.0 코어 사양:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#input" target="_blank">XrAction...</a></code> |
 | Direct3D 11 통합 | **정식 `KHR` 확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_D3D11_enable" target="_blank">XR_KHR_D3D11_enable</a></code> |
-| Direct3D 12 통합 | **`KHR` [Preview 런타임 2003](openxr-getting-started.md#using-preview-extensions)의 공식 확장:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_D3D12_enable" target="_blank">XR_KHR_D3D12_enable</a></code><br /><p>**안정적인 런타임에 지원**: 2020 년 5 월 *(계획 됨)*</p> |
+| Direct3D 12 통합 | **정식 `KHR` 확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_D3D12_enable" target="_blank">XR_KHR_D3D12_enable</a></code> |
 | [바인딩되지 않은 참조 공간 <br /> (세계 규모가 뛰어난 환경)](coordinate-systems.md#building-a-world-scale-experience) | **`MSFT`확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_unbounded_reference_space" target="_blank">XR_MSFT_unbounded_reference_space</a></code> |
 | [공간 앵커](spatial-anchors.md) | **`MSFT`확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_anchor">XR_MSFT_spatial_anchor</a></code> |
 | [손으로 조작 <br /> (그립/aim 포즈, 공중 탭, 방법)](hands-and-tools.md)<p>*HoloLens 2만*</p> | **`MSFT`확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_hand_interaction">XR_MSFT_hand_interaction</a></code> |
-| [손 모양 articulation + 손 모양](hands-and-tools.md)<p>*HoloLens 2만*</p> | **`MSFT_preview`[preview 런타임 2001](openxr-getting-started.md#using-preview-extensions)의 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_preview">XR_MSFT_hand_tracking_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_mesh_preview">XR_MSFT_hand_tracking_mesh_preview</a></code><p>** `MSFT` 또는 `EXT` preview 런타임의 확장**: 2020 년 5 월 *(계획 됨)*</p> |
-| [응시](eye-tracking.md)<p>*HoloLens 2만*</p> | ** `EXT` [preview 런타임 2003](openxr-getting-started.md#using-preview-extensions)의 확장**:<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_eye_gaze_interaction" target="_blank">XR_EXT_eye_gaze_interaction</a></code><p>**안정적인 런타임에 지원**: 2020 년 5 월 *(계획 됨)*</p> |
-| 다른 HoloLens Sdk (예: [QR](qr-code-tracking.md))와의 상호 운용성<p>*HoloLens 2만*</p> | **`MSFT_preview`[preview 런타임 2001](openxr-getting-started.md#using-preview-extensions)의 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_spatial_graph_bridge_preview">XR_MSFT_spatial_graph_bridge_preview</a></code><p>** `MSFT` preview 런타임의 확장**: 2020 년 5 월 *(계획 됨)*</p> |
-| [혼합 현실 캡처 <br /> (PV 카메라의 세 번째 렌더링)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)<p>*HoloLens 2만*</p> | **`MSFT_preview`[preview 런타임 2003](openxr-getting-started.md#using-preview-extensions)의 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_secondary_view_configuration_preview">XR_MSFT_secondary_view_configuration_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_first_person_observer_preview">XR_MSFT_first_person_observer_preview</a></code><p>** `MSFT` preview 런타임의 확장**: 6 월 2020 *(계획 됨)*</p> |
-| [동작 컨트롤러 렌더링 모델](motion-controllers.md#rendering-the-motion-controller-model) | **`MSFT_preview`[preview 런타임 2003](openxr-getting-started.md#using-preview-extensions)의 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_controller_model_preview">XR_MSFT_controller_model_preview</a></code><p>** `MSFT` preview 런타임의 확장**: 7 월 2020 *(계획 됨)*</p> |
-| [장면 이해 (평면, 메시)](scene-understanding.md)<p>*HoloLens 2만*</p> | <p>** `MSFT_preview` preview 런타임의 확장**: 6 월 2020 *(계획 됨)*</p><p>** `MSFT` preview 런타임의 확장**: 7 월 2020 *(계획 됨)*</p> |
+| [손 모양 articulation + 손 모양](hands-and-tools.md)<p>*HoloLens 2만*</p> | <p>**`EXT`런타임 102에서 릴리스된 확장:**<code><br /><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_hand_tracking">XR_EXT_hand_tracking</a></code></p>**`MSFT`런타임 102에서 릴리스된 확장:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_hand_tracking_mesh">XR_MSFT_hand_tracking_mesh</a></code> |
+| [응시](eye-tracking.md)<p>*HoloLens 2만*</p> | **`EXT`확장 릴리스:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_eye_gaze_interaction" target="_blank">XR_EXT_eye_gaze_interaction</a></code> |
+| 다른 HoloLens Sdk와의 상호 운용성<br />(예: [QR](qr-code-tracking.md))<p>*HoloLens 2만*</p> | **`MSFT`런타임 102에서 릴리스된 확장:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code> |
+| [혼합 현실 캡처 <br /> (PV 카메라의 세 번째 렌더링)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)<p>*HoloLens 2만*</p> | **`MSFT`런타임 102에서 릴리스된 확장:**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_secondary_view_configuration">XR_MSFT_secondary_view_configuration</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_first_person_observer">XR_MSFT_first_person_observer</a></code> |
+| UWP CoreWindow API와의 상호 운용성<br />(예: 키보드/마우스) | **`MSFT_preview`[preview 런타임 102](openxr-getting-started.md#using-preview-extensions)의 확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_holographic_window_attachment_preview">XR_MSFT_holographic_window_attachment_preview</a></code><p>** `MSFT` preview 런타임의 확장**: 8 월 2020 *(계획 됨)*</p>
+| [동작 컨트롤러 렌더링 모델](motion-controllers.md#rendering-the-motion-controller-model) | **`MSFT_preview`[preview 런타임의](openxr-getting-started.md#using-preview-extensions)확장:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_controller_model_preview">XR_MSFT_controller_model_preview</a></code><p>** `MSFT` preview 런타임의 확장**: 9 월 2020 *(계획 됨)*</p> |
+| [장면 이해 (평면, 메시)](scene-understanding.md)<p>*HoloLens 2만*</p> | <p>**[Preview runtime 102](openxr-getting-started.md#using-preview-extensions):**<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code> [장면 이해 SDK](scene-understanding-sdk.md) 를 사용 하 여 사용</p><p>** `MSFT_preview` 이후 미리 보기 런타임의 확장** *(계획 됨)*</p> |
 | 기타 교차 공급 업체 확장 | <p>**정식 `KHR` 확장 릴리스:**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_depth" target="_blank">XR_KHR_composition_layer_depth</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_visibility_mask" target="_blank">XR_KHR_visibility_mask</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_win32_convert_performance_counter_time" target="_blank">XR_KHR_win32_convert_performance_counter_time</a></code><p>**`EXT`릴리스된 확장:**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_win32_appcontainer_compatible" target="_blank">XR_EXT_win32_appcontainer_compatible</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_debug_utils" target="_blank">XR_EXT_debug_utils</a></code> |
 
 이러한 확장 중 일부는 공급 업체별 확장으로 시작 될 수 있지만 `MSFT` , Microsoft 및 기타 OpenXR runtime 공급 업체는 `EXT` `KHR` 이러한 기능 영역에 대 한 교차 공급 업체 또는 확장을 설계 하기 위해 함께 작업 하 고 있습니다.  이렇게 하면 핵심 사양과 마찬가지로 해당 기능에 대해 작성 하는 코드를 런타임 공급 업체 간에 이식할 수 있습니다.
