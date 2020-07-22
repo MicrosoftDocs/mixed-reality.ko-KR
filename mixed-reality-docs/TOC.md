@@ -134,20 +134,22 @@
 ###### [8. 시선 추적 사용](mr-learning-base-08.md)
 ###### [9. 음성 명령 사용](mr-learning-base-09.md)
 ##### Azure Spatial Anchors 자습서
-###### [1. Azure Spatial Anchors를 사용하여 시작](mrlearning-asa-ch1.md)
-###### [2. Azure Spatial Anchors 저장, 검색 및 공유](mrlearning-asa-ch2.md)
-###### [3. Azure Spatial Anchor 피드백 표시](mrlearning-asa-ch3.md)
-###### [4. Android 및 iOS용 Azure Spatial Anchors](mrlearning-asa-ch4.md)
+###### [1. 소개](mr-learning-asa-01.md)
+###### [2. Azure Spatial Anchors를 사용하여 시작](mr-learning-asa-02.md)
+###### [3. Azure Spatial Anchors 저장, 검색 및 공유](mr-learning-asa-03.md)
+###### [4. Azure Spatial Anchor 피드백 표시](mr-learning-asa-04.md)
+###### [5. Android 및 iOS용 Azure Spatial Anchors](mr-learning-asa-05.md)
+##### 다중 사용자 기능 자습서
+###### [1. 소개](mr-learning-sharing-01.md)
+###### [2. Photon Unity 네트워킹 설정](mr-learning-sharing-02.md)
+###### [3. 여러 사용자 연결](mr-learning-sharing-03.md)
+###### [4. 여러 사용자와 개체 이동 공유](mr-learning-sharing-04.md)
+###### [5. 공유 환경에 Azure Spatial Anchors 통합](mr-learning-sharing-05.md)
 ##### Azure Speech Services 자습서
 ###### [1. 음성 인식 및 기록 통합 및 사용](mrlearning-speechSDK-ch1.md)
 ###### [2. 로컬 음성-텍스트 변환에 오프라인 모드 추가](mrlearning-speechSDK-ch2.md)
 ###### [3. Azure Cognition Services 음성 변환 구성 요소 추가](mrlearning-speechSDK-ch3.md)
 ###### [4. 의도 및 자연어 이해 설정](mrlearning-speechSDK-ch4.md)
-##### 다중 사용자 기능 자습서
-###### [1. Photon Unity 네트워킹 설정](mrlearning-sharing(photon)-ch1.md)
-###### [2. 여러 사용자 연결](mrlearning-sharing(photon)-ch2.md)
-###### [3. 여러 사용자와 개체 이동 공유](mrlearning-sharing(photon)-ch3.md)
-###### [4. 공유 환경에 Azure Spatial Anchors 통합](mrlearning-sharing(photon)-ch4.md)
 ##### 공간 오디오 자습서
 ###### [1. 프로젝트에서 공간 오디오 추가](unity-spatial-audio-ch1.md)
 ###### [2. 공간화 단추 상호 작용 소리](unity-spatial-audio-ch2.md)
