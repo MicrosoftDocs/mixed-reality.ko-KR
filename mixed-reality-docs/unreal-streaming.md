@@ -1,21 +1,21 @@
 ---
 title: Unreal의 스트리밍
 description: Unreal에서 HoloLens 2로 스트림하는 방법에 대한 지침입니다.
-author: suwu
+author: sw5813
 ms.author: suwu
-ms.date: 6/8/2020
+ms.date: 7/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 혼합 현실, 스트리밍, PC, 홀로그램 앱 원격, 홀로그램 원격 플레이어, 설명서
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 78a019f5b74b254c1f32ec85dc639df47648555f
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: d25efbcf83e45749cc4eb8b99581b71105c59c9d
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84888914"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303534"
 ---
 # <a name="streaming-in-unreal"></a>Unreal의 스트리밍
 
@@ -32,7 +32,8 @@ PC에서 HoloLens로 스트림하는 경우 다음과 같은 두 가지 주요 �
 스트림할 때 디바이스에서 애플리케이션을 실행할 때와 동일한 대부분의 HoloLens 기능에 액세스할 수 있습니다. 여기에는 [손 관절 추적](unreal-hand-tracking.md)(HoloLens 2에 있는 경우), [공간 매핑](unreal-spatial-mapping.md) 및 [공간 앵커](unreal-spatial-anchors.md)가 포함되지만 이 [제한 사항 목록](holographic-remoting-troubleshooting.md)에 있는 기능은 제외됩니다. 
 
 > [!NOTE]
-> 스트리밍 품질은 Wi-Fi 네트워크의 강도에 따라 크게 달라집니다.
+> * 스트리밍 품질은 Wi-Fi 네트워크의 강도에 따라 크게 달라집니다.
+> * 모든 기능은 홀로그램 원격 플레이어에 대해 자동으로 사용하도록 설정됩니다. 디바이스에서 실행되는 경우를 제외하고 사용자 권한(예: 시선 추적)을 사용해야 하는 기능을 찾는 경우 프로젝트 설정에서 적절한 기능을 사용하도록 설정했는지 확인합니다.
 
 ## <a name="device-support"></a>디바이스 지원
 
@@ -50,7 +51,7 @@ PC에서 HoloLens로 스트림하는 경우 다음과 같은 두 가지 주요 �
     </tr>
      <tr>
         <td>Unreal 편집기</td>
-        <td>✔</td>
+        <td>✔️</td>
         <td>✔️</td>
         <td>❌</td>
     </tr>

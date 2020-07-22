@@ -7,12 +7,12 @@ ms.date: 06/27/2019
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 7a0fa915a80763300eff470e29356034d6a0f841
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031616"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303674"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. 음성 인식을 사용하여 명령 실행
 
@@ -46,7 +46,7 @@ ms.locfileid: "79031616"
 > 애플리케이션에서 Azure에 연결해야 하므로 컴퓨터/디바이스가 인터넷에 연결되어 있는지 확인합니다.
 
 > [!TIP]
-> Azure에 자주 연결할 수 없는 것으로 예상되는 경우 [음성 명령 사용](mrlearning-base-ch5.md#enabling-voice-commands) 지침에 따라 MRTK를 사용하여 음성 명령을 구현할 수도 있습니다.
+> Azure에 자주 연결할 수 없는 것으로 예상되는 경우 [음성 명령 사용](mr-learning-base-09.md) 지침에 따라 MRTK를 사용하여 음성 명령을 구현할 수도 있습니다.
 
 ## <a name="congratulations"></a>축하합니다.
 

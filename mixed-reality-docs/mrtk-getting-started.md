@@ -7,24 +7,22 @@ ms.date: 05/15/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, 테스트, Mixed Reality Toolkit, MRTK 버전 2, MRTK, 도구, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: fc9638f405604bed7c7531ace0977a88509e91b5
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: a7fdd7b199530b38fb0921baa57d9783fa45672a
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74491093"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447896"
 ---
-# <a name="getting-started-with-mrtk-v2"></a>MRTK v2 시작
-
-## <a name="mrtk-getting-started-guide"></a>MRTK 시작 가이드
-MRTK V2를 시작하는 방법에 대한 자세한 내용은 [MRTK 시작 가이드](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)를 참조하세요.
+# <a name="getting-started-with-mrtk-for-unity"></a>Unity용 MRTK 시작
+![MRTK](images/UX/MRTK_UX_Hero.png)
 
 ## <a name="what-is-mixed-reality-toolkit-mrtk"></a>MRTK(Mixed Reality Toolkit)란?
 HoloLens가 처음 출시된 이후로 활성화된 MRTK는 놀라운 오픈 소스 도구 키트이며, 이에 기여한 개발자 커뮤니티의 노력이 없었으면 지금의 위치에 있지 못했을 것입니다. 가장 중요한 문제를 고려하기 위해 지난 3년간 개발자 커뮤니티의 피드백을 주의 깊게 살피면서 MRTK v2를 구축했습니다.  
 
-Unity가 포함된 MRTK v2는 혼합 현실 애플리케이션용 오픈 소스 플랫폼 간 개발 키트입니다.  MRTK 버전 2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션의 개발을 가속화하기 위한 것입니다. 이 프로젝트는 진입 장벽을 낮추고, 혼합 현실 애플리케이션을 만들고, 성장함에 따라 커뮤니티에 다시 기여하는 것을 목표로 합니다. 
+Unity용 MRTK는 혼합 현실 애플리케이션을 위한 오픈 소스 플랫폼 간 개발 키트입니다. MRTK는 플랫폼 간 입력 시스템, 기본 구성 요소 및 공간 상호 작용을 위한 공통 빌딩 블록을 제공합니다. MRTK 버전 2는 Microsoft HoloLens, Windows Mixed Reality 몰입형(VR) 헤드셋 및 OpenVR 플랫폼을 대상으로 하는 애플리케이션의 개발을 가속화하기 위한 것입니다. 이 프로젝트는 진입 장벽을 낮추고 혼합 현실 애플리케이션을 만들며 커뮤니티에 다시 기여하는 것을 목표로 합니다.
 
-자세한 내용은 [MRTK 설명서 포털](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)을 참조하세요.
+자세한 내용은 [GitHub에 대한 MRTK 설명서](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)를 참조하세요.
 
 ## <a name="new-with-mrtk-v2"></a>MRTK v2의 새로운 기능
 여기서는 이러한 플랫폼 도구에 대한 약속을 강조하려고 합니다.  실제로 MRTK 버전 2를 활용하여 설정 환경(OOBE) 및 Mixed Reality 학습 애플리케이션과 같은 받은 편지함 환경을 개발했습니다.  또한 플랫폼에서 개발하는 것이 가장 좋은 방법이라고 생각하므로 새로운 HoloLens 2 기능이 MRTK를 통해 처음 공개될 것으로 예상할 수 있습니다. 

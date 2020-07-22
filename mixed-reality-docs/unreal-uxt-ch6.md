@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: c49e2a69cb97a996da4bf601a105c2176ccf267f
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345693"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303544"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. 패키징 후 디바이스 또는 에뮬레이터에 배포
 
@@ -30,15 +30,15 @@ ms.locfileid: "85345693"
 
 체스 앱에 이 경로를 적용하려면 다음 몇 가지가 필요합니다.
 
-1.  Microsoft Store에서 HoloLens 2에 **Holographic Remoting Player**를 설치하고 앱을 실행합니다.
+1.  Microsoft Store에서 HoloLens 2에 **Holographic Remoting Player**를 설치하고 앱을 실행합니다. 앱에 표시되는 IP 주소를 확인합니다.
 
-2.  **편집 > 프로젝트 설정**으로 이동하고 **홀로그램 원격** 섹션에서 **원격 사용**을 선택합니다.
+2.  Unreal 편집기로 돌아가서 **편집 > 프로젝트 설정**으로 이동하고 **홀로그램 원격** 섹션에서 **원격 사용**을 선택합니다.
 
-3.  편집기를 다시 시작하고 [디바이스의 IP 주소](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens#connect-over-wi-fi)를 찾아 입력한 다음, **연결**을 클릭합니다.
+3.  편집기를 다시 시작한 다음, 디바이스 IP 주소(Holographic Remoting Player 앱에 표시됨)를 입력한 다음, **연결**을 클릭합니다.
 
 연결되면 **재생** 단추 오른쪽의 드롭다운 화살표를 클릭하여 **VR 미리 보기**를 선택합니다. 그러면 HoloLens 헤드셋으로 스트리밍되는 VR 미리 보기 창에 앱이 실행됩니다. 
 
-## <a name="packaging-and-deploying-the-app"></a>앱 패키징 및 배포 
+## <a name="packaging-and-deploying-the-app-via-device-portal"></a>디바이스 포털을 통해 앱 패키징 및 배포
 
 >[!NOTE]
 >HoloLens용 Unreal 앱을 처음으로 패키징하는 경우 Epic Launcher에서 지원 파일을 다운로드해야 합니다. 
@@ -63,7 +63,7 @@ ms.locfileid: "85345693"
 3.  **서명 인증서** 옆의 **패키징** 섹션에서 **새로 생성**을 클릭합니다.
 
 > [!IMPORTANT]
-> 이미 생성된 인증서를 사용하는 경우 인증서의 게시자 이름은 애플리케이션의 게시자 이름과 동일해야 합니다. 그렇지 않으면 "서명 키를 찾을 수 없습니다. 앱에 디지털 서명할 수 없습니다."라는 오류가 발생합니다.
+> 이미 생성된 인증서를 사용하는 경우 인증서의 게시자 이름은 애플리케이션의 게시자 이름과 동일해야 합니다. 그렇지 않으면 "서명 키를 찾을 수 없습니다. 앱에 디지털 서명할 수 없습니다."라는 오류로 인해 path\filename 파일을 삭제하지 못했습니다.
 
 ![프로젝트 설정 - 플랫폼 - HoloLens](images/unreal-uxt/6-packaging.PNG)
 

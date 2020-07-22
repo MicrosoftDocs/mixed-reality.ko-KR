@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, 혼합 현실, 성능, 최적화, 설정, 설명서
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533125"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303641"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Unreal을 사용하기 위한 권장 성능
 
@@ -32,10 +32,11 @@ ms.locfileid: "84533125"
     * **엔진** 섹션으로 스크롤하고 **렌더링**을 선택한 다음, **고르기** 섹션을 확장하고 **폐색 고르기**를 선택 취소합니다.
         + 렌더링되는 자세한 장면에 폐색 고르기가 필요한 경우 **엔진 > 렌더링**에서 **소프트웨어 폐색 고르기 지원**을 사용하도록 설정하는 것이 좋습니다. 이렇게 하면 Unreal이 CPU에서 작동하며, HoloLens 2에서 성능이 좋지 않은 GPU 폐색 쿼리를 방지할 수 있습니다.
 
-![모바일 대상 설정](images/unreal/performance-recommendations-img-02.png)
+![폐색 고르기 사용 안 함](images/unreal/performance-recommendations-img-02.png)
 
-3. VR 렌더링 업데이트:
-    * **엔진** 섹션으로 스크롤하고 **렌더링**을 선택한 다음, **VR** 섹션을 확장하고 **인스턴스 스테레오**와 **모바일 다중 뷰**를 모두 사용하도록 설정합니다.
-        + **모바일 다중 뷰**를 선택하려면 **모바일 후처리**를 선택 취소해야 할 수도 있습니다.
+3. 모바일 다중 보기 사용:
+    * **엔진** 섹션으로 스크롤하고 **렌더링**을 선택한 다음, **VR** 섹션을 확장하고 **인스턴스 스테레오**와 **모바일 다중 뷰**를 모두 사용하도록 설정합니다. 모바일 HDR를 선택 취소해야 합니다.
 
-![모바일 대상 설정](images/unreal/performance-recommendations-img-03.png)
+![VR 렌더링 설정](images/unreal/performance-recommendations-img-03.png)
+
+4. **렌더링할 CSM 계단식 최대 수**를 **1**로 설정하고 **최대 이동 가능한 스포트라이트/점 광원**을 **0**으로 설정합니다. 
