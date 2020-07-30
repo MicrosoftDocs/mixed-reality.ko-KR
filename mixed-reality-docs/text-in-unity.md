@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, 글꼴, 입력 체계, ui, ux
-ms.openlocfilehash: 8662ff8a8e1e99455354392d7dc852feb1fe1589
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345713"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376575"
 ---
 # <a name="text-in-unity"></a>Unity의 텍스트
 
@@ -65,14 +65,14 @@ Unity의 텍스트 메시 Pro를 사용 하 여 텍스트 렌더링 품질을 �
 *근거리 및 원거리 상호 작용 범위 콘텐츠 (근거리 및 원거리* 상호 작용 범위)
 
 ### <a name="the-minimum-legible-font-size"></a>읽을 때 최소 글꼴 크기
-| Distance | 시야각 | 텍스트 높이 | 글꼴 크기 |
+| 거리 | 시야각 | 텍스트 높이 | 글꼴 크기 |
 |---------|---------|---------|---------|
 | 45cm (직접 조작 거리) | 0.4 °-0.5 ° | 3.14 – 3.9 mm | 8.9 – 11.13 pt |
 | 2m | 0.35 °-0.4 ° | 12.21 – 13.97 mm | 34.63-39.58 pt |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>편안 하 게 읽을 때의 글꼴 크기
-| Distance | 시야각 | 텍스트 높이 | 글꼴 크기 |
+| 거리 | 시야각 | 텍스트 높이 | 글꼴 크기 |
 |---------|---------|---------|---------|
 | 45cm (직접 조작 거리) | 0.65 °-0.8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
 | 2m | 0.6 °-0.75 ° | 20.9-26.2 mm | 59.4-74.2 pt |
@@ -98,8 +98,8 @@ Unity의 기본 글꼴 재질은 폐색를 지원 하지 않습니다. 이로 �
 *폐색가 지원 되는 셰이더*
 
 
-## <a name="see-also"></a>참조
-* [MRTK의 텍스트 Prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
+## <a name="see-also"></a>참고 항목
+* [MRTK의 텍스트 Prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [입력 체계](typography.md)
 
  

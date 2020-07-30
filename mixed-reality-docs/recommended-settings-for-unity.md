@@ -3,15 +3,15 @@ title: Unity 권장 설정
 description: Unity는 프로젝트 설정을 통해 전환할 수 있는 혼합 현실에 특정 한 몇 가지 동작을 제공 합니다.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: unity, 설정, 혼합 현실
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570329"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390120"
 ---
 # <a name="recommended-settings-for-unity"></a>Unity 권장 설정
 
@@ -23,9 +23,7 @@ Unity는 일반적으로 모든 플랫폼의 평균 사례에 해당 하는 기�
 
 사용자 환경에 대 한 **Unity 품질 설정을** **매우 낮게**수정 하는 것이 중요 합니다. 그러면 응용 프로그램에서 적절 한 프레임 속도로 performantly을 실행 하는 데 도움이 됩니다. 이는 HoloLens 개발에 매우 중요 합니다. 모던 헤드셋에서 개발 하는 경우 VR 경험을 켜는 데스크톱의 사양에 따라 가장 낮은 품질의 매개 변수 없이도 프레임 속도를 달성할 수 있습니다.
 
-Unity 2018 LTS +에서는 프로젝트의 품질 수준을 다음과 같이 설정할 수 있습니다.
-
-**Edit**  >  **프로젝트 설정**  >  **품질** 편집 > 아래에서 **낮은** 품질 수준까지 아래쪽 화살표를 클릭 하 여 **기본값** 을 설정 합니다.
+Unity 2019 lts +에서는 프로젝트 설정 품질 **편집**으로 이동 하 여 프로젝트의 품질 수준을 설정 하  >  **Project Settings**  >  **Quality** 고, 아래쪽 화살표를 클릭 하 여 **기본** 을 설정 하 여 **가장 낮은** 품질 수준으로 지정할 수 있습니다.
 
 ### <a name="lighting-settings"></a>조명 설정
 
@@ -42,28 +40,28 @@ Unity 2018 LTS +에서는 프로젝트의 품질 수준을 다음과 같이 설�
 
 혼합 현실 응용 프로그램에서 장면은 사용자의 각 눈 마다 한 번씩 두 번 렌더링 됩니다. 기존의 3D 개발과 비교 하 여 계산 해야 하는 작업량을 늘리는 것이 효과적입니다. 따라서 Unity에서 가장 효율적인 렌더링 경로를 선택 하 여 CPU와 GPU 시간을 모두 저장 하는 것이 중요 합니다. 단일 패스 인스턴스 렌더링은 혼합 현실 앱에 대 한 Unity 렌더링 파이프라인을 최적화 하므로 모든 프로젝트에 대해 기본적으로이 설정을 사용 하도록 설정 하는 것이 좋습니다.
 
-Unity 프로젝트에서이 기능을 사용 하도록 설정 하려면
+Unity 프로젝트에서 이 기능을 사용하도록 설정하려면 다음을 수행합니다.
 
-1)  **플레이어 XR 설정** 열기 ( **Edit**  >  **프로젝트 설정**편집  >  **플레이어**  >  **XR 설정**으로 이동)
-2) **스테레오 렌더링 방법** 드롭다운 메뉴에서 **단일 패스 인스턴스** 를 선택 합니다 (**가상 현실 지원 됨** 확인란을 선택 해야 함).
+1)  **플레이어 XR 설정**을 엽니다(**편집** > **프로젝트 설정** > **플레이어** > **XR 설정**으로 차례로 이동).
+2) **스테레오 렌더링 방법** 드롭다운 메뉴에서 **단일 패스 인스턴스화됨**을 선택합니다(**가상 현실 지원됨** 확인란을 선택해야 함).
 
 이 렌더링 방법에 대 한 자세한 내용은 Unity에서 다음 문서를 참조 하세요.
 
-- [고급 스테레오 렌더링을 사용 하 여 AR 및 VR 성능을 최대화 하는 방법](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [단일 패스 인스턴스](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [고급 스테레오 렌더링을 사용하여 AR 및 VR 성능을 최대화하는 방법](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [단일 패스 인스턴스화](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> 단일 패스 인스턴스화된 렌더링의 일반적인 문제 중 하나는 개발자에 게 인스턴스에 대해 작성 되지 않은 기존 사용자 지정 셰이더가 이미 있는 경우 발생 합니다. 이 기능을 사용 하도록 설정한 후 개발자는 일부 Gameobject 한 눈에만 렌더링 되는 것을 알 수 있습니다. 이는 연결 된 사용자 지정 셰이더가 인스턴스에 적합 한 속성을 포함 하지 않기 때문입니다.
+> 인스턴스화된 단일 패스 렌더링의 일반적인 문제 중 하나는 개발자에게 인스턴스화에 맞게 작성되지 않은 기존 사용자 지정 셰이더가 이미 있는 경우에 발생합니다. 이 기능을 사용하도록 설정하면 개발자가 일부 GameObject를 한쪽 눈에만 렌더링한다는 것을 알 수 있습니다. 이는 인스턴스화에 적절한 속성이 연결된 사용자 지정 셰이더에 없기 때문입니다.
 >
-> 이 문제를 해결 하는 방법에 대해서는 Unity의 [HoloLens에 대 한 단일 패스 스테레오 렌더링](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) 을 참조 하세요.
+> 이 문제를 해결하는 방법은 Unity의 [HoloLens에 대한 단일 패스 스테레오 렌더링](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html)을 참조하세요.
 
 ### <a name="enable-depth-buffer-sharing"></a>깊이 버퍼 공유 사용
 
 사용자의 인식에서 가장 나은 홀로그램 안정성을 얻으려면 Unity에서 **깊이 버퍼 공유** 속성을 사용 하도록 설정 하는 것이 좋습니다. 이 기능을 켜면 Unity는 응용 프로그램에서 생성 된 깊이 맵을 Windows Mixed Reality 플랫폼과 공유 합니다. 그러면 플랫폼은 응용 프로그램에 의해 렌더링 되는 지정 된 프레임의 장면에 대해 특별히 홀로그램 안정성을 최적화 하는 데 도움이 됩니다.
 
-Unity 프로젝트에서이 기능을 사용 하도록 설정 하려면
+Unity 프로젝트에서 이 기능을 사용하도록 설정하려면 다음을 수행합니다.
 
-1) **플레이어 XR 설정** 열기 ( **Edit**  >  **프로젝트 설정**편집  >  **플레이어**  >  **XR 설정**으로 이동)
+1) **플레이어 XR 설정**을 엽니다(**편집** > **프로젝트 설정** > **플레이어** > **XR 설정**으로 차례로 이동).
 2) **가상 현실 sdk**Windows **Enable Depth Buffer Sharing**  >  **Mixed reality** 확장 (**가상 현실 지원** 확인란을 선택 해야 함)에서 깊이 버퍼 공유 사용 확인란을 선택 합니다.
 
 또한이 패널의 **깊이 서식** 설정에서 **16 비트 깊이** 를 선택 하는 것이 좋습니다 (특히 HoloLens 개발의 경우). 24 비트와 비교 하 여 16 비트를 선택 하면 데이터를 이동/처리 하지 않아도 되므로 대역폭 요구 사항이 크게 줄어듭니다.
@@ -118,8 +116,8 @@ Holographic 시작 화면을 전환 하려면:
 |----------|----------|----------|
 |  켜기  |  없음  |  5 초 동안 또는 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. |
 |  켜기  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
-|  끄기  |  없음  |  앱이 로드 될 때까지 투명 한 검정색 (없음)을 표시 합니다. |
-|  끄기  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
+|  꺼짐  |  없음  |  앱이 로드 될 때까지 투명 한 검정색 (없음)을 표시 합니다. |
+|  꺼짐  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
 
 자세한 내용은 [Unity의 시작 화면 설명서](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) 를 참조 하세요.
 
@@ -172,5 +170,5 @@ Holographic apps에 일반적으로 사용 되는 Api를 사용 하도록 설정
 ## <a name="see-also"></a>참고 항목
 
 * [Unity 개발 개요](unity-development-overview.md)
-* [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)
+* [혼합 현실의 성능 이해](understanding-performance-for-mixed-reality.md)
 * [Unity의 권장 성능](performance-recommendations-for-unity.md)
