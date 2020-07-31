@@ -156,17 +156,15 @@
 ###### [3. 비디오에서 공간화 오디오](unity-spatial-audio-ch3.md)
 ###### [4. 런타임 시 공간 오디오 사용 및 사용 안 함](unity-spatial-audio-ch4.md)
 ###### [5. 반향 효과를 이용해 공간 오디오에 거리감 부여](unity-spatial-audio-ch5.md)
-
-#### Azure Cloud Services 자습서
-##### [1. Azure Cloud Services for HoloLens 2](mr-learning-azure-01.md)
-##### [2. Azure Storage 통합](mr-learning-azure-02.md)
-##### [3. Azure Custom Vision 통합](mr-learning-azure-03.md)
-##### [4. Integrating Azure Spatial 통합](mr-learning-azure-04.md)
-##### [5. Azure Bot Service 통합](mr-learning-azure-05.md)
-
-#### PC 홀로그램 원격 자습서
-##### [1. PC 홀로그램 원격 시작](mr-learning-pc-holographic-remoting-01.md)
-##### [2. 홀로그램 원격 PC 애플리케이션 만들기](mr-learning-pc-holographic-remoting-02.md)
+##### Azure Cloud Services 자습서
+###### [1. Azure Cloud Services for HoloLens 2](mr-learning-azure-01.md)
+###### [2. Azure Storage 통합](mr-learning-azure-02.md)
+###### [3. Azure Custom Vision 통합](mr-learning-azure-03.md)
+###### [4. Integrating Azure Spatial 통합](mr-learning-azure-04.md)
+###### [5. Azure Bot Service 통합](mr-learning-azure-05.md)
+##### PC 홀로그램 원격 자습서
+###### [1. PC 홀로그램 원격 시작](mr-learning-pc-holographic-remoting-01.md)
+###### [2. 홀로그램 원격 PC 애플리케이션 만들기](mr-learning-pc-holographic-remoting-02.md)
 
 #### HoloLens(1세대) 및 몰입형 헤드셋 자습서
 ##### [MR 기본 100: Unity 시작](holograms-100.md)
@@ -224,7 +222,7 @@
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 
 ### 샘플 앱
-#### HoloLens 2 
+#### HoloLens 2
 ##### [평면](sampleapp-surfaces.md)
 ##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
@@ -257,7 +255,8 @@
 #### [Unreal의 직접 추적](unreal-hand-tracking.md)
 #### [Unreal의 공간 매핑](unreal-spatial-mapping.md)
 #### [Unreal의 공간 오디오](unreal-spatial-audio.md)
-#### [Unreal의 공간 앵커](unreal-spatial-anchors.md)
+#### [Unreal의 로컬 공간 앵커](unreal-spatial-anchors.md)
+#### [Unreal의 Azure 공간 앵커](unreal-azure-spatial-anchors.md)
 #### [Unreal의 음성 입력](unreal-voice-input.md)
 ### 플랫폼 기능 및 API
 #### [Unreal의 HoloLens 카메라](unreal-hololens-camera.md)
