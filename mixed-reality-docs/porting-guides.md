@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: 포트, 포팅, unity, 미들웨어, 엔진, UWP, Win32
-ms.openlocfilehash: ff97f843d6af62a5d49d7920abdf78fa4d1e46c9
-ms.sourcegitcommit: 2813f5b3027d47f7c6e9772338935eeccfa2aaec
+ms.openlocfilehash: ed6c613c8aa3649cffb42d08dbb18661f06b9a53
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86408201"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476935"
 ---
 # <a name="porting-guides"></a>포팅 가이드
 
@@ -33,7 +33,7 @@ Windows 10에는 몰입 형 및 holographic 헤드셋을 직접 지원 합니다
 
 ### <a name="common-step-1-make-sure-you-have-the-right-development-hardware"></a>일반적인 1 단계: 적절 한 개발 하드웨어가 있는지 확인
 
-[도구 설치](install-the-tools.md#for-immersive-vr-headset-development) 페이지에 권장 되는 개발 하드웨어가 나열 됩니다.
+[도구 설치](install-the-tools.md#immersive-vr-headset-requirements) 페이지에 권장 되는 개발 하드웨어가 나열 됩니다.
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>일반적인 2 단계: Windows 10의 최신 비행으로 업그레이드
 
@@ -154,7 +154,7 @@ Windows Mixed Reality는 하이엔드 게임 Pc부터 광범위 한 시장 메�
 
 [Unity](https://docs.unity3d.com/Manual/Profiler.html) 및 [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) 에는 성능 프로파일러가 포함 되며, [Microsoft](understanding-performance-for-mixed-reality.md) 및 [Intel](https://software.intel.com/articles/vr-content-developer-guide) 은 성능 프로 파일링 및 최적화에 대 한 지침을 게시 합니다. [혼합 현실 성능을 이해](understanding-performance-for-mixed-reality.md)하는 데 사용할 수 있는 성능에 대 한 광범위 한 설명이 있습니다. Unity에 [대 한 성능 권장 사항](performance-recommendations-for-unity.md)에서 unity에 대 한 구체적인 정보를 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 * [Unity 입력 포팅 가이드](input-porting-guide-for-unity.md)
 * [Windows Mixed Reality 최소 PC 하드웨어 호환성 지침](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [혼합 현실 성능 이해](understanding-performance-for-mixed-reality.md)

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, 디자인, 컨트롤, 글꼴, 입력 체계, ui, ux
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376575"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476945"
 ---
 # <a name="text-in-unity"></a>Unity의 텍스트
 
@@ -83,16 +83,18 @@ Unity의 텍스트 메시 Pro를 사용 하 여 텍스트 렌더링 품질을 �
 ![각도 보기 ](images/Text_In_Unity_ViewingAngle.jpg)
  *거리, 각도 및 텍스트 높이* 보기
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>적절 한 차원의 선명한 텍스트 렌더링 품질
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Mixed Reality Toolkit v 2를 사용 하는 텍스트
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>적절 한 차원의 선명한 텍스트 렌더링 품질
 
 이러한 크기 조정 요소에 따라 [UI 텍스트 및 3D 텍스트 메시를 사용 하 여 텍스트 prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)를 만들었습니다. 개발자는 이러한 prefabs를 사용 하 여 선명한 텍스트와 일관 된 글꼴 크기를 가져올 수 있습니다.
 
 ![적절 한 차원의 선명한 텍스트 렌더링 품질](images/hug-text-06-1000px.png)<br>
 *적절 한 차원의 선명한 텍스트 렌더링 품질*
 
-## <a name="shader-with-occlusion-support"></a>폐색가 지원 되는 셰이더
+### <a name="shader-with-occlusion-support"></a>폐색가 지원 되는 셰이더
 
-Unity의 기본 글꼴 재질은 폐색를 지원 하지 않습니다. 이로 인해 기본적으로 개체 뒤에 텍스트가 표시 됩니다. [폐색를 지 원하는 간단한 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader)를 포함 했습니다. 아래 이미지는 기본 글꼴 재질 (왼쪽) 및 적절 한 폐색 (오른쪽) 텍스트가 포함 된 텍스트를 보여 줍니다.
+Unity의 기본 글꼴 재질은 폐색를 지원 하지 않습니다. 이로 인해 기본적으로 개체 뒤에 텍스트가 표시 됩니다. [폐색를 지 원하는 간단한 셰이더](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader)를 포함 했습니다. 아래 이미지는 기본 글꼴 재질 (왼쪽) 및 적절 한 폐색 (오른쪽) 텍스트가 포함 된 텍스트를 보여 줍니다.
 
 ![폐색가 지원 되는 셰이더](images/hug-text-07-1000px.png)<br>
 *폐색가 지원 되는 셰이더*

@@ -3,15 +3,15 @@ title: Unity 권장 설정
 description: Unity는 프로젝트 설정을 통해 전환할 수 있는 혼합 현실에 특정 한 몇 가지 동작을 제공 합니다.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 07/07/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: unity, 설정, 혼합 현실
-ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
-ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
+ms.openlocfilehash: 414e18686926fd8105726fb3811f3eef1d365bd9
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390120"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476725"
 ---
 # <a name="recommended-settings-for-unity"></a>Unity 권장 설정
 
@@ -116,8 +116,8 @@ Holographic 시작 화면을 전환 하려면:
 |----------|----------|----------|
 |  켜기  |  없음  |  5 초 동안 또는 앱이 로드 될 때까지 기본 Unity 시작 화면을 표시 합니다. |
 |  켜기  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
-|  꺼짐  |  없음  |  앱이 로드 될 때까지 투명 한 검정색 (없음)을 표시 합니다. |
-|  꺼짐  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
+|  끄기  |  없음  |  앱이 로드 될 때까지 투명 한 검정색 (없음)을 표시 합니다. |
+|  끄기  |  사용자 지정  |  5 초 동안 또는 앱이 로드 될 때까지 사용자 지정 시작 화면을 표시 합니다. |
 
 자세한 내용은 [Unity의 시작 화면 설명서](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) 를 참조 하세요.
 
