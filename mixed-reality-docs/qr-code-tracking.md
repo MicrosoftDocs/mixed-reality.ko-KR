@@ -6,29 +6,29 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: vr, lbe, 위치 기반 엔터테인먼트, vr 아케이드, 아케이드, 모던, qr, qr 코드, hololens2
-ms.openlocfilehash: e14fe14fd76bceaf506dd7b85a57825c3f18d223
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6d3dc442c28e498cc00e14325398de2026261a17
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438112"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476765"
 ---
 # <a name="qr-code-tracking"></a>QR 코드 추적
 
 HoloLens 2는 헤드셋 주위의 환경에서 QR 코드를 검색 하 여 각 코드의 실제 위치에서 좌표계를 설정할 수 있습니다.
 
-## <a name="device-support"></a>장치 지원
+## <a name="device-support"></a>디바이스 지원
 
 <table>
 <tr>
 <th>기능</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens(1세대)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">몰입형 헤드셋</a></th>
 </tr><tr>
-<td> QR 코드 검색</td><td style="text-align: center;">‎</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">참고 참조</td>
+<td> QR 코드 검색</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
 </table>
 
 >[!NOTE]
->데스크톱 Pc의 몰입 형 Windows Mixed Reality 헤드셋 지원은 현재 아래의 NuGet 패키지에서 지원 되지 않습니다.  데스크톱 지원에 대 한 추가 업데이트를 계속 해 서 조정 하세요.
+>데스크톱 Pc의 몰입 형 Windows Mixed Reality 헤드셋을 사용한 QR 코드 추적은 Windows 10 버전 2004 이상에서 지원 됩니다. MixedReality () API를 사용 하 여 기능이 현재 장치에서 지원 되는지 여부를 확인 합니다.
 
 ## <a name="getting-the-qr-package"></a>QR 패키지 가져오기
 [여기](https://nuget.org/Packages/Microsoft.MixedReality.QR)에서 QR 코드 검색을 위한 NuGet 패키지를 다운로드할 수 있습니다.
@@ -36,31 +36,31 @@ HoloLens 2는 헤드셋 주위의 환경에서 QR 코드를 검색 하 여 각 �
 ## <a name="detecting-qr-codes"></a>QR 코드 검색
 
 ### <a name="adding-the-webcam-capability"></a>웹캠 기능 추가
-QR 코드를 검색 하려면 매니페스트에 `webcam` 기능을 추가 해야 합니다. 이 기능은 사용자 환경에서 검색 된 코드 내의 데이터에 중요 한 정보가 포함 될 수 있으므로 필요 합니다.
+`webcam`QR 코드를 검색 하려면 매니페스트에 기능을 추가 해야 합니다. 이 기능은 사용자 환경에서 검색 된 코드 내의 데이터에 중요 한 정보가 포함 될 수 있으므로 필요 합니다.
 
-`QRCodeWatcher.RequestAccessAsync()`를 호출 하 여 사용 권한을 요청할 수 있습니다.
+다음을 호출 하 여 사용 권한을 요청할 수 있습니다 `QRCodeWatcher.RequestAccessAsync()` .
 
-_C#:_
+_C #_
 ```cs
 await QRCodeWatcher.RequestAccessAsync();
 ```
 
-_C++:_
+_C_
 ```cpp
 co_await QRCodeWatcher.RequestAccessAsync();
 ```
 
 QRCodeWatcher 개체를 구성 하기 전에 사용 권한을 요청 해야 합니다.
 
-QR 코드 검색에 `webcam` 기능이 필요 하지만 장치의 추적 카메라를 사용 하 여 검색을 수행 합니다. 이를 통해 장치 사진/비디오 (PV) 카메라를 검색 하는 것과 비교 하 여 더 광범위 한 검색 FOV와 더 나은 배터리 수명을 제공 합니다.
+QR 코드 검색 `webcam` 기능을 사용 하려면 장치의 추적 카메라를 사용 하 여 검색을 수행 합니다. 이를 통해 장치 사진/비디오 (PV) 카메라를 검색 하는 것과 비교 하 여 더 광범위 한 검색 FOV와 더 나은 배터리 수명을 제공 합니다.
 
 ### <a name="detecting-qr-codes-in-unity"></a>Unity에서 QR 코드 검색
 
 MRTK에 대 한 종속성을 취하지 않고 Unity에서 QR 코드 검색 API를 사용할 수 있습니다. 이렇게 하려면 [Unity 용 nuget](https://github.com/GlitchEnzo/NuGetForUnity)을 사용 하 여 nuget 패키지를 설치 해야 합니다.
 
-Holographic square와 연결 된 데이터 (예: GUID, 실제 크기, 타임 스탬프 및 디코딩된 데이터)를 표시 하는 샘플 Unity 앱이 있습니다. 이 앱은 https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes 에서 찾을 수 있습니다.
+Holographic square와 연결 된 데이터 (예: GUID, 실제 크기, 타임 스탬프 및 디코딩된 데이터)를 표시 하는 샘플 Unity 앱이 있습니다. 이 앱은에서 찾을 수 있습니다 https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes .
 
-### <a name="detecting-qr-codes-in-c"></a>에서 QR 코드 검색C++
+### <a name="detecting-qr-codes-in-c"></a>C + +에서 QR 코드 검색
 
 ```cpp
 using namespace winrt::Windows::Foundation;
@@ -128,7 +128,7 @@ QR 코드의 SpatialCoordinateSystem은 표시 된 대로 정렬 됩니다. 이 
 
 ![QR 코드 좌표계](images/Qr-coordinatesystem.png) 
 
-QRCode 개체의 경우 다음 C++ 코드는 사각형을 만들고 QR 코드의 좌표계를 사용 하 여 삽입 하는 방법을 보여 줍니다.
+QRCode 개체의 경우 다음 c + + 코드는 사각형을 만들고 QR 코드의 좌표계를 사용 하 여 삽입 하는 방법을 보여 줍니다.
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
