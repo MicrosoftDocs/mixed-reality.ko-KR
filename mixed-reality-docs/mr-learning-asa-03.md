@@ -3,16 +3,16 @@ title: Azure Spatial Anchors 자습서 - 3. Azure Spatial Anchors 저장, 검색
 description: 이 과정을 완료하여 혼합 현실 애플리케이션 내에서 Azure Spatial Anchors를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 25676404a71daf41b6a5c7587fa9bed95ab813f6
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 274722588f156cb01fdd45525912e2e15687bc2d
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305972"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376535"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Azure Spatial Anchors 저장, 검색 및 공유
 

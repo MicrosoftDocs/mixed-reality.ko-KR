@@ -3,16 +3,16 @@ title: 시작 자습서 - 2. 프로젝트 초기화 및 첫 번째 애플리케�
 description: 이 과정에서는 MRTK(Mixed Reality Toolkit)를 사용하여 혼합 현실 애플리케이션을 만드는 방법을 보여줍니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 11/01/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4f72f70b9eaac159f7d9231e61f23d18d708d0c7
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 5cac7d6f776619cbc2a0e0891b7915b656708726
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306278"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376655"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2. 프로젝트 초기화 및 첫 번째 애플리케이션 배포
 

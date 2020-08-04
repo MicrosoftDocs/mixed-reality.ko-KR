@@ -3,16 +3,16 @@ title: Azure 클라우드 자습서 - 5. LUIS와 Azure Bot Service 통합
 description: 이 과정을 완료하여 HoloLens 2 애플리케이션 내에서 Azure Bot Service 및 자연어 이해를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Mixed Reality, Unity, 자습서, HoloLens, HoloLens 2, Azure Bot Service, LUIS, 자연어, 대화 봇
 ms.localizationpriority: high
-ms.openlocfilehash: e3a64488b1d6d22ac52f798fe90356ce8e995e26
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: daf97cde1477a84c1776a069ec5b8d1a185b63cc
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306513"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376455"
 ---
 # <a name="5-integrating-azure-bot-service"></a>5. Azure Bot Service 통합
 

@@ -3,16 +3,16 @@ title: Azure 클라우드 자습서 - 3. Azure Custom Vision 통합
 description: 이 과정을 완료하여 HoloLens 2 애플리케이션 내에서 Azure Custom Vision을 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens, HoloLens 2, Azure Custom Vision, Azure Cognitive Services
 ms.localizationpriority: high
-ms.openlocfilehash: c3ba5a715b0e77d7869d598a472341cd390c2d23
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 0fc3793315dd05f91a6193b68343205f53a3092a
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306123"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376465"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Azure Custom Vision 통합
 

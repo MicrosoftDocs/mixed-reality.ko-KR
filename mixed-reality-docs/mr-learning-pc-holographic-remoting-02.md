@@ -3,16 +3,16 @@ title: PC 홀로그램 원격 자습서 - 2. 홀로그램 원격 PC 애플리케
 description: 이 과정을 완료하여 PC에서 HoloLens 2로 혼합 현실 환경 형식을 원격화하는 방법을 알아보세요.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 32fccbaf6bae8031572ff716f3c9fc26a43849e5
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 6d11d91a0e08c48c09f676171dcb9bb8a0ff74de
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306435"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376375"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2. 홀로그램 원격 PC 애플리케이션 만들기
 

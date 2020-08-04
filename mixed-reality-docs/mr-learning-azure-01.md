@@ -3,16 +3,16 @@ title: Azure 클라우드 자습서 - 1. HoloLens 2용 Azure Cloud Services
 description: 이 과정을 완료하여 HoloLens 2 애플리케이션 내에서 다양한 Azure 서비스를 구현하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Azure, Mixed Reality, Unity, 자습서, HoloLens, HoloLens 2, Azure Blob Storage, Azure Table Storage, Azure Spatial Anchors, Azure Bot Framework
 ms.localizationpriority: high
-ms.openlocfilehash: 649046f9416c880d6e69b544866fba60d3e43f4c
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: d69ce965718e31bb5a261631f3f40217e8f7c7d6
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306003"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376485"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1. HoloLens 2용 Azure Cloud Services
 

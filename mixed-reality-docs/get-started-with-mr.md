@@ -3,16 +3,16 @@ title: Mixed Reality 시작
 description: 혼합 현실을 처음 접하는 분들이 혼합 현실이란 무엇이며 어떤 기능이 있는지 이해하는 데 도움이 됩니다.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, 검색, 배포, 인덱스, 방문 페이지, 디자인, 개발, 자습서, 샘플 앱, 기본 사항, 사례 연구, 리소스, HoloLens 방법, 오픈 소스 프로젝트
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451379"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476925"
 ---
 # <a name="get-started-with-mixed-reality"></a>Mixed Reality 시작
 
@@ -184,7 +184,7 @@ HoloLens 2는 Microsoft에서 제공하는 클라우드 및 AI 서비스의 안�
     :::column:::
        [![사용해보기](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[혼합 현실 사용해보기](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        로컬 Microsoft Store에서 혼합 현실과 HoloLens 데모를 받으세요. 
+        로컬 Microsoft Store에서 혼합 현실과 HoloLens 데모를 받으세요.
     :::column-end:::
     :::column:::
         [![개발자 되기](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ HoloLens 2는 Microsoft에서 제공하는 클라우드 및 AI 서비스의 안�
 
 
 >[!IMPORTANT]
->이 사이트의 모든 혼합 현실 개발 자료는 참조 목적으로만 제공됩니다. 애플리케이션, 애플리케이션 사용, 애플리케이션 사용이 최종 사용자에게 미치는 영향은 전적으로 애플리케이션 개발자인 여러분의 책임이며 여기에는 앱이 최종 사용자에게 불편, 부상 또는 기타 형태의 피해를 주는 일이 없도록 주의하고 적절한 경고와 법적 고지를 제공하는 것이 포함됩니다. 애플리케이션을 개발하고 게시하는 과정에서 항상 적절한 단계를 수행하여 애플리케이션을 안전하게 보호하고 [Microsoft와 맺은 앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 모든 의무를 이행해야 합니다. 
+>이 사이트의 모든 혼합 현실 개발 자료는 참조 목적으로만 제공됩니다. 애플리케이션, 애플리케이션 사용, 애플리케이션 사용이 최종 사용자에게 미치는 영향은 전적으로 애플리케이션 개발자인 여러분의 책임이며 여기에는 앱이 최종 사용자에게 불편, 부상 또는 기타 형태의 피해를 주는 일이 없도록 주의하고 적절한 경고와 법적 고지를 제공하는 것이 포함됩니다. 애플리케이션을 개발하고 게시하는 과정에서 항상 적절한 단계를 수행하여 애플리케이션을 안전하게 보호하고 [Microsoft와 맺은 앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 모든 의무를 이행해야 합니다.

@@ -3,16 +3,16 @@ title: 시작 자습서 - 9. 음성 명령 사용
 description: 이 과정에서는 MRTK(Mixed Reality Toolkit)를 사용하여 혼합 현실 애플리케이션을 만드는 방법을 보여줍니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: ed31c3b11497a0adc91b7ddc1c09b3fb4ca1c573
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: b0b9771d9569d100a354af96a34cd20ef2a3d7c4
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306117"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376595"
 ---
 # <a name="9-using-speech-commands"></a>9. 음성 명령 사용
 

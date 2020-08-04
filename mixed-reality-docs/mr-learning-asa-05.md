@@ -3,16 +3,16 @@ title: Azure Spatial Anchors 자습서 - 5. Android 및 iOS용 Azure Spatial Anc
 description: 이 과정을 완료하면 Mixed Reality Toolkit 및 Azure Spatial Anchors가 포함된 Unity 프로젝트를 Android 및 iOS에 배포하는 방법을 알아볼 수 있습니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens, Android, iOS
 ms.localizationpriority: high
-ms.openlocfilehash: e95b659eed3bfb406dcc41d5b3ad6e5e18c764a5
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 8c63204948b3e4aa3d25e5b2ca948798726f0838
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305990"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376545"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5. Android 및 iOS용 Azure Spatial Anchors
 
