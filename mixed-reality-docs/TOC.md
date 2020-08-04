@@ -102,7 +102,7 @@
 
 <!-- Develop top level folder -->
 # 개발
-## [도구 및 아키텍처 알아보기](development.md)
+## [Mixed Reality 개발 소개](development.md)
 ## [도구 설치](install-the-tools.md)
 ## [클라우드 서비스 개요](mixed-reality-cloud-services.md)
 
@@ -221,7 +221,8 @@
 #### [Unity의 혼합 현실 기본 개체](unity-xrdevice-advanced.md)
 #### [Unity에서 Vuforia 사용](vuforia-development-overview.md)
 
-### 샘플 앱
+### 방법
+#### [개요](samples.md)
 #### HoloLens 2
 ##### [평면](sampleapp-surfaces.md)
 ##### [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
