@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
-title: 자습서 및 샘플 앱
-description: 혼합 현실 개발에 대한 코드 샘플과 자습서를 제공합니다.
+title: 자습서
+description: 혼합 현실 개발에 대한 자습서를 제공합니다.
 author: keveleigh
 ms.author: kurtie
-ms.date: 10/22/2019
+ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
-ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, 아카데미, 자습서
+ms.openlocfilehash: dc446be531e2a2fa1b27cdaefbf3adfeb7814740
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303654"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477005"
 ---
-# <a name="tutorials-and-sample-apps"></a>자습서 및 샘플 앱
+# <a name="tutorials"></a>자습서 
 
 ![HoloLens 2 사용자](images/08_Tutorials.png)
 
 현재 모든 자습서와 샘플 앱은 Unity 또는 Unreal를 기반으로 합니다. 다른 엔진 및 플랫폼용 콘텐츠를 개발하는 경우 해당 콘텐츠는 목차의 관련 제목 아래에서 찾을 수 있습니다.
 
-## <a name="hololens-2-tutorials"></a>HoloLens 2 자습서
+## <a name="hololens-2"></a>HoloLens 2 
 
 HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발하기 위한 기술과 모범 사례를 모두 익힐 수 있도록 설계되었습니다. Unity 자습서는 [Mixed Reality Toolkit 2.0(MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity)를 기반으로 하며, Unreal 자습서는 [UX Tools for Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal)을 기반으로 합니다.
 
@@ -32,21 +32,7 @@ HoloLens 2 자습서는 개발자가 혼합 현실 애플리케이션을 개발�
 * 다중 사용자 기능 자습서(총 5부) - [1 소개](mr-learning-sharing-01.md)
 * Azure Speech Services 자습서(총 4부) - [1 음성 인식 및 전사 통합 및 사용](mrlearning-speechSDK-ch1.md)
 
-## <a name="open-source-sample-apps"></a>오픈 소스 샘플 앱
-
-오픈 소스 샘플 앱은 팀에서 만든 애플리케이션이며, 개발자가 살펴보고 프로젝트에서 익힐 수 있도록 소스 코드를 제공했습니다.
-
-### <a name="hololens-2-open-source-sample-apps"></a>HoloLens 2 오픈 소스 샘플 앱
-* [평면](sampleapp-surfaces.md)
-* [원소의 주기율표 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-* [갤럭시 익스플로러 2.0](galaxy-explorer-update.md)
-
-### <a name="hololens-1st-gen-open-source-sample-apps"></a>HoloLens(첫 번째 gen) 오픈 소스 샘플 앱
-* [원소의 주기율표 1.0](periodic-table-of-the-elements.md)
-* [갤럭시 익스플로러 1.0](galaxy-explorer.md)
-* [달착륙선](lunar-module.md)
-
-## <a name="mixed-reality-academy-tutorials"></a>Mixed Reality 아카데미 자습서
+## <a name="mixed-reality-academy"></a>Mixed Reality 아카데미 
 
 Mixed Reality 아카데미는 해당 프로젝트 파일을 사용하는 일단의 온라인 단계별 자습서입니다.
 

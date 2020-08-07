@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, 에뮬레이터
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383075"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376665"
 ---
 # <a name="using-the-hololens-emulator"></a>HoloLens 에뮬레이터 사용
 
@@ -253,6 +253,8 @@ HoloLens 2 에뮬레이터(Windows Holographic 2004 버전)부터 Windows Mixed 
 
 * HoloLens 2 에뮬레이터를 제거하면 하드 디스크 이미지(Flash.vhdx)가 Windows Kits\10\Emulation\HoloLens\<build number> 폴더의 하드 드라이브에 남아 있을 수 있습니다.  이 파일은 삭제해도 안전합니다.
 * 하드웨어 그래픽 가속으로 인해 AMD 또는 Intel 그래픽을 사용하는 일부 시스템에서 Holographic 앱의 작동이 중단될 수 있습니다.  에뮬레이터 도구 창에서 하드웨어 그래픽 가속을 사용하지 않도록 설정하면 이 문제가 해결됩니다.
+* 2020년 7월 현재 최신 Windows 업데이트를 설치한 후에는 HoloLens 에뮬레이터(1세대)의 하드웨어 그래픽 가속 기능을 더 이상 사용할 수 없습니다.
+하드웨어 그래픽 가속에 필요한 RemoteFX 구성 요소는 더 이상 사용되지 않으며 향후 Windows 릴리스에서 제거될 예정입니다.  하드웨어 그래픽 가속 기능을 다시 사용하도록 설정하려면 [Enable-VMRemoteFXPhysicalVideoAdapter PowerShell cmdlet](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps)을 사용하세요.  자세한 내용은 [Windows에서 RemoteFX 지원 중단 및 제거에 대한 설명서](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component)를 참조하세요. 
 
 ## <a name="troubleshooting"></a>문제 해결
 

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 1fce9c34b1d31c56eb628979089399926f3cbf51
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345733"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376512"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. 프로젝트 및 첫 번째 애플리케이션 초기화
 
@@ -40,8 +40,7 @@ ms.locfileid: "85345733"
 
 ![빈 템플릿 선택](images/unreal-uxt/2-template.PNG)
 
-4. **C++** , **확장 가능한 3D 또는 2D, 모바일/태블릿**을 선택하고 **프로젝트 설정**으로 **시작 콘텐츠 없음**을 선택합니다. 
-    * 저장 위치를 선택하고 **프로젝트 만들기**를 클릭합니다. 
+4. **C++** , **확장 가능한 3D 또는 2D, 모바일/태블릿**을 선택하고 **프로젝트 설정**으로 **시작 콘텐츠 없음**을 선택한 다음, 저장 위치를 선택하고 **프로젝트 만들기**를 클릭합니다. 
 
 > [!NOTE]
 > 나중에 섹션 4에서 설정할 UX Tools 플러그 인을 빌드하려면 Blueprint 프로젝트 대신 C++ 프로젝트를 선택해야 합니다.

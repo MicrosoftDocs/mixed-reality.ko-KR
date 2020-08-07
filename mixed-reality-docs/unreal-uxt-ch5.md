@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 자습서, 시작, mrtk, uxt, UX Tools, 설명서
-ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: e81da5a4550f258b629443df9b2b655d81108c21
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720259"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376365"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. 단추 추가 및 체스 말 위치 초기화
 
@@ -59,8 +59,8 @@ ms.locfileid: "84720259"
     
 여기에서 **WhiteKing**의 **Reset Location** 함수를 호출하게 되는데, 수준에서 **WhiteKing** 행위자에 대한 참조가 필요합니다. 
 
-1.  **세부 정보** 패널에서 **변수** 섹션으로 스크롤하고 **+** 단추를 클릭한 다음, 변수 이름을 **WhiteKing**으로 지정합니다. 
-    * **변수 유형** 옆에 있는 드롭다운을 선택하고 **WhiteKing**을 검색한 다음, **개체 참조**를 선택합니다. 
+1.  **내 청사진** 패널에서 **변수** 섹션으로 이동하고 **+** 단추를 클릭한 후 변수 이름을 **WhiteKing**으로 지정합니다. 
+    * **세부 정보** 패널에서 **변수 유형** 옆에 있는 드롭다운을 선택하고, **WhiteKing**을 검색하고, **개체 참조**를 선택합니다. 
     * **편집 가능한 인스턴스** 옆의 확인란을 선택합니다. 이렇게 하면 기본 레벨에서 변수를 설정할 수 있습니다. 
 
 ![변수 만들기](images/unreal-uxt/5-var.PNG)

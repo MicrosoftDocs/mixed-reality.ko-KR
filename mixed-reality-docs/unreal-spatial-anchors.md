@@ -1,5 +1,5 @@
 ---
-title: Unreal의 Spatial Anchors
+title: Unreal의 로컬 Spatial Anchors
 description: Unreal의 공간 앵커 사용 가이드
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, 개발, 기능, 설명서, 가이드, 홀로그램, 공간 앵커
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720319"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376051"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Unreal의 Spatial Anchors
+# <a name="local-spatial-anchors-in-unreal"></a>Unreal의 로컬 Spatial Anchors
 
 ## <a name="overview"></a>개요
 
-공간 앵커는 애플리케이션 세션 사이의 실제 공간에서 홀로그램을 저장하는 데 사용됩니다.  이는 Unreal을 통해 **ARPin**으로 표시되며 향후 세션에 로드될 HoloLens의 앵커 저장소에 저장됩니다. 
+공간 앵커는 애플리케이션 세션 사이의 실제 공간에서 홀로그램을 저장하는 데 사용됩니다. 이는 Unreal을 통해 **ARPin**으로 표시되며 향후 세션에 로드될 HoloLens의 앵커 저장소에 저장됩니다. 로컬 앵커는 인터넷에 연결되어 있지 않은 경우 대비책으로 적합합니다.
+
+> [!IMPORTANT]
+> 로컬 앵커는 디바이스에 저장되는 반면, Azure Spatial Anchors는 클라우드에 저장됩니다. Azure Cloud Services를 사용하여 앵커를 저장하려는 경우 [Azure Spatial Anchors](unreal-azure-spatial-anchors.md) 통합 과정을 안내하는 문서를 참조하세요. 로컬 및 Azure 앵커는 동일한 프로젝트에서 충돌 없이 사용할 수 있습니다.
 
 ## <a name="checking-the-anchor-store"></a>앵커 저장소 확인
 
@@ -65,5 +68,6 @@ ms.locfileid: "84720319"
 > 공간 앵커가 아직 베타 버전이므로 업데이트된 정보 및 기능을 다시 확인해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
+* [Azure Spatial Anchors](unreal-azure-spatial-anchors.md)
 * [공간 앵커](spatial-anchors.md)
 * [좌표계](coordinate-systems.md)

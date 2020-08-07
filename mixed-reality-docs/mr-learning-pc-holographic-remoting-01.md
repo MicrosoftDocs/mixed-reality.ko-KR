@@ -3,16 +3,16 @@ title: PC 홀로그램 원격 자습서 - 1. PC 홀로그램 원격 시작
 description: 이 과정을 완료하여 혼합 현실 환경을 PC에서 HoloLens 2로 원격으로 사용하는 방법을 알아봅니다.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: 혼합 현실, Unity, 자습서, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: cbbad9548abeb1b8392b99d187b5b051d5b4ddd4
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 4929634d70a082e835eb7bd6b5680719338a5e92
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306736"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476975"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. PC 홀로그램 원격 시작
 
@@ -38,10 +38,11 @@ ms.locfileid: "86306736"
 * [개발용으로 구성](using-visual-studio.md#enabling-developer-mode)된 HoloLens 2 디바이스
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a>(Unity 2019.3.X가 탑재되고 유니버설 Windows 플랫폼 빌드 지원 모듈이 추가됨)
 
->[적극 권장됨!] 시작 자습서 시리즈 또는 Unity 및 MRTK와 관련된 몇 가지 기본 사전 경험을 완료합니다.
+계속하기 전에 [시작](mr-learning-base-01.md) 자습서 시리즈 또는 Unity 및 MRTK에 대한 기본적인 사전 경험을 완료할 것을 **강력히 권장**합니다.
 
 > [!IMPORTANT]
-> 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.3.X입니다. 이는 위에서 연결된 필수 구성 요소에서 설명하는 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
+> * 이 자습서 시리즈에 추천되는 Unity 버전은 Unity 2019.3.X입니다. 이는 위에서 연결된 필수 구성 요소에서 설명하는 모든 Unity 버전 요구 사항 또는 추천 사항을 대체합니다.
+> * MRTK 프로젝트를 사용한 홀로그램 원격 접속은 레거시 XR에서만 작동합니다. 지금은 XR SDK가 지원되지 않습니다.
 
 ## <a name="creating-and-preparing-the-unity-project"></a>Unity 프로젝트 만들기 및 준비
 
@@ -172,7 +173,7 @@ ModelParent 개체의 각 자식 개체를 이러한 필드로 끌어서 놓습�
 
 [계층 구조] 창에서 ModelParent 개체를 선택합니다. ***MarsCuriosity -> Rover***를 차례로 펼쳐서 MarsCuriosityRover의 5개 주요 부품 (**POI-Camera**, **POI-Wheels**, **POI-Antena**, **POI-Spectrometer**, **POI-RUHF Antenna**)을 찾습니다.
 
-* [계층 구조] 창에서 MarsCuriosityRover 부품과 연결된 5개의 해당 도구 설명 개체를 확인합니다. 
+* [계층 구조] 창에서 MarsCuriosityRover 부품과 연결된 5개의 해당 도구 설명 개체를 확인합니다.
 * MarsCuriosityRover 부품을 살펴볼 때 환경을 강조 표시하도록 이러한 개체를 구성합니다.
 
 ![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)
